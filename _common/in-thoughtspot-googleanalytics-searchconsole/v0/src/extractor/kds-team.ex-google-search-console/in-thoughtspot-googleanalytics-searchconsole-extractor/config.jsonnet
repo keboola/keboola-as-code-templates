@@ -1,0 +1,5 @@
+{
+  authorization: {
+    oauth_api: {},
+  },
+}
