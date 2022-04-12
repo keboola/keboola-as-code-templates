@@ -1,0 +1,3 @@
+{
+  name: "[OUT-ECOMMERCE-SNOWFLAKE] Writer /10697799",
+}

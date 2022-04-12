@@ -1,4 +1,321 @@
 {
   "version": 2,
-  "templates": []
+  "templates": [
+    {
+      "id": "in-crm-hubspot",
+      "name": "IN-CRM-HUBSPOT",
+      "description": "Full workflow to ...",
+      "path": "in-crm-hubspot",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-crm-salesforce",
+      "name": "IN_CRM_SALESFORCE",
+      "description": "Full workflow to ...",
+      "path": "in-crm-salesforce",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-ecommerce-facebook",
+      "name": "IN-ECOMMERCE-FACEBOOK",
+      "description": "Full workflow to ...",
+      "path": "in-ecommerce-facebook",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-ecommerce-googleads",
+      "name": "IN-ECOMMERCE-GOOGLEADS",
+      "description": "Full workflow to ...",
+      "path": "in-ecommerce-googleads",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-ecommerce-shopify",
+      "name": "IN-ECOMMERCE_SHOPIFY",
+      "description": "Full workflow to ...",
+      "path": "in-ecommerce-shopify",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-ecommerce-shoptet",
+      "name": "IN-ECOMMERCE-SHOPTET",
+      "description": "Full workflow to ...",
+      "path": "in-ecommerce-shoptet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-ecommerce-sklik",
+      "name": "IN-ECOMMERCE-SKLIK",
+      "description": "Full workflow to ...",
+      "path": "in-ecommerce-sklik",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-thoughtspot-gaa",
+      "name": "IN-THOUGHTSPOT-GAA",
+      "description": "Full workflow to ...",
+      "path": "in-thoughtspot-gaa",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-crm-gsheet",
+      "name": "OUT-CRM-GSHEET",
+      "description": "Full workflow to ...",
+      "path": "out-crm-gsheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-crm-snowflake",
+      "name": "OUT-CRM-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "out-crm-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-ecommerce-gsheet",
+      "name": "OUT-ECOMMERCE-GSHEET",
+      "description": "Full workflow to ...",
+      "path": "out-ecommerce-gsheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-ecommerce-gsheet-marketing",
+      "name": "OUT-ECOMMERCE-GSHEET-MARKETING",
+      "description": "Full workflow to ...",
+      "path": "out-ecommerce-gsheet-marketing",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-ecommerce-snowflake",
+      "name": "OUT-ECOMMERCE-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "out-ecommerce-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-ecommerce-snowflake-marketing",
+      "name": "OUT-ECOMMERCE-SNOWFLAKE-MARKETING",
+      "description": "Full workflow to ...",
+      "path": "out-ecommerce-snowflake-marketing",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-thoughtspot-gaa-bigquery",
+      "name": "OUT-THOUGHTSPOT-GAA-BIGQUERY",
+      "description": "Full workflow to ...",
+      "path": "out-thoughtspot-gaa-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-thoughtspot-gaa-snowflake",
+      "name": "OUT-THOUGHTSPOT-GAA-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "out-thoughtspot-gaa-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "name": "test",
+      "description": "Full workflow to ...",
+      "path": "test",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "test2",
+      "name": "test2",
+      "description": "Full workflow to ...",
+      "path": "test2",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "thoughtspot-gaa-snowflake",
+      "name": "THOUGHTSPOT-GAA-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "thoughtspot-gaa-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "thoughtspot-hubspot-snowflake",
+      "name": "THOUGHTSPOT-HUBSPOT-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "thoughtspot-hubspot-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    }
+  ]
 }
