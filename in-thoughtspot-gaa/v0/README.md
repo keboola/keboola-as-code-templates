@@ -1,6 +1,6 @@
 # IN-THOUGHTSPOT-GAA
 
-This is an end to end flow for getting data from Google Analytics and visualizing them in spotapp.
+This is an end to end flow for getting data from Google Analytics and transforming them.
 
 ## Steps to make:
 1. Setup profile in extractor

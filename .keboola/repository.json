@@ -26,12 +26,6 @@
           "description": "",
           "stable": false,
           "path": "v0"
-        },
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
         }
       ]
     },
@@ -88,12 +82,6 @@
           "description": "",
           "stable": false,
           "path": "v0"
-        },
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
         }
       ]
     },
@@ -126,17 +114,25 @@
       ]
     },
     {
-      "id": "out-crm-gsheet",
-      "name": "OUT-CRM-GSHEET",
+      "id": "in-thoughtspot-hubspot",
+      "name": "IN-THOUGHTSPOT-HUBSPOT",
       "description": "Full workflow to ...",
-      "path": "out-crm-gsheet",
+      "path": "in-thoughtspot-hubspot",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
           "path": "v0"
-        },
+        }
+      ]
+    },
+    {
+      "id": "out-crm-gsheet",
+      "name": "OUT-CRM-GSHEET",
+      "description": "Full workflow to ...",
+      "path": "out-crm-gsheet",
+      "versions": [
         {
           "version": "0.0.1",
           "description": "",
@@ -240,7 +236,29 @@
           "description": "",
           "stable": false,
           "path": "v0"
-        },
+        }
+      ]
+    },
+    {
+      "id": "out-thoughtspot-hubspot-bigquery",
+      "name": "OUT-THOUGHTSPOT-HUBSPOT-BIGQUERY",
+      "description": "Full workflow to ...",
+      "path": "out-thoughtspot-hubspot-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-thoughtspot-hubspot-snowflake",
+      "name": "OUT-THOUGHTSPOT-HUBSPOT-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "out-thoughtspot-hubspot-snowflake",
+      "versions": [
         {
           "version": "0.0.1",
           "description": "",
@@ -288,13 +306,15 @@
           "description": "",
           "stable": false,
           "path": "v0"
-        },
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
-        },
+        }
+      ]
+    },
+    {
+      "id": "thoughtspot-hubspot-snowflake",
+      "name": "THOUGHTSPOT-HUBSPOT-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "thoughtspot-hubspot-snowflake",
+      "versions": [
         {
           "version": "0.0.1",
           "description": "",
@@ -304,10 +324,10 @@
       ]
     },
     {
-      "id": "thoughtspot-hubspot-snowflake",
-      "name": "THOUGHTSPOT-HUBSPOT-SNOWFLAKE",
+      "id": "keboola-crm-hubspot",
+      "name": "KEBOOLA-CRM-HUBSPOT",
       "description": "Full workflow to ...",
-      "path": "thoughtspot-hubspot-snowflake",
+      "path": "keboola-crm-hubspot",
       "versions": [
         {
           "version": "0.0.1",

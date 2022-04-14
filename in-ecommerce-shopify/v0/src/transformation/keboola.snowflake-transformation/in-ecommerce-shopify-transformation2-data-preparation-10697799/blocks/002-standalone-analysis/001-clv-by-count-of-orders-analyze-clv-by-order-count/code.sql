@@ -30,17 +30,18 @@ AS
     SELECT CASE
             WHEN ORDER_COUNT >= 14 THEN '07   15+ total orders'
             WHEN ORDER_COUNT > 9 THEN '06 10-14 total orders'
-           WHEN ORDER_COUNT > 5 THEN '05   6-9 total orders'
-           WHEN ORDER_COUNT > 3 THEN '04   4-5 total orders'
-           WHEN ORDER_COUNT = 3 THEN '03     3 total orders'
-           WHEN ORDER_COUNT = 2 THEN '02     2 total orders'
-           ELSE '01     1 order only' END                                CUSTOMER_CATEGORY_BY_ORDER_COUNT
-     , COUNT(1)                                                          ORDERS
-     , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                              UNIQUE_CUTOMERS
-     , SUM(ORDER_TOTAL_PRICE_VAT) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL) AVG_CLV
-     , SUM(ORDER_TOTAL_PRICE_VAT)                                        ORDER_TOTAL_PRICE_VAT
-     , AVG(ORDER_TOTAL_PRICE_VAT)                                        AVG_ORDER_PRICE
-FROM PREVIOUS_ORDER_CATEGORY
-GROUP BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
-ORDER BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
+            WHEN ORDER_COUNT > 5 THEN '05   6-9 total orders'
+            WHEN ORDER_COUNT > 3 THEN '04   4-5 total orders'
+            WHEN ORDER_COUNT = 3 THEN '03     3 total orders'
+            WHEN ORDER_COUNT = 2 THEN '02     2 total orders'
+            ELSE '01     1 order only' 
+        END                                                              AS CUSTOMER_CATEGORY_BY_ORDER_COUNT
+     , COUNT(1)                                                          AS ORDERS
+     , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                              AS UNIQUE_CUTOMERS
+     , SUM(ORDER_TOTAL_PRICE_VAT) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL) AS AVG_CLV
+     , SUM(ORDER_TOTAL_PRICE_VAT)                                        AS ORDER_TOTAL_PRICE_VAT
+     , AVG(ORDER_TOTAL_PRICE_VAT)                                        AS AVG_ORDER_PRICE
+    FROM PREVIOUS_ORDER_CATEGORY
+    GROUP BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
+    ORDER BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
 ;

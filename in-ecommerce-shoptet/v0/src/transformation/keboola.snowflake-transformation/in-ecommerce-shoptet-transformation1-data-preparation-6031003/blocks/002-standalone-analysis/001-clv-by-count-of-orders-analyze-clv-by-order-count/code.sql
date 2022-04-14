@@ -4,8 +4,7 @@ WITH PREVIOUS_ORDER_CATEGORY AS (
     SELECT O.ORDER_ID,
            DATEDIFF(DAY,
                     LAG(O.ORDER_DATE) OVER (PARTITION BY O.ORDER_CUSTOMER_EMAIL ORDER BY O.ORDER_DATE),
-                    O.ORDER_DATE
-               )   AS                                                                                  DIFF,
+                    O.ORDER_DATE)                                        AS DIFF,
            CASE
                WHEN DIFF > 90 THEN '110_Q+ since previous order'
                WHEN DIFF > 60 THEN '100_2M-Q since previous order'
@@ -19,8 +18,8 @@ WITH PREVIOUS_ORDER_CATEGORY AS (
                WHEN DIFF > 1 THEN '020_2D since previous order'
                WHEN DIFF > 0 THEN '010_1D since previous order'
                ELSE 'N/A'
-               END AS                                                                                  PREVIOUS_ORDER,
-           (SELECT COUNT(1) FROM "bdm_orders" IO WHERE IO.ORDER_CUSTOMER_EMAIL = O.ORDER_CUSTOMER_EMAIL) ORDER_COUNT,
+            END                                                          AS PREVIOUS_ORDER,
+           (SELECT COUNT(1) FROM "bdm_orders" IO WHERE IO.ORDER_CUSTOMER_EMAIL = O.ORDER_CUSTOMER_EMAIL) AS ORDER_COUNT,
            ORDER_CUSTOMER_EMAIL,
            ORDER_TOTAL_PRICE_VAT
     FROM "bdm_orders" O
@@ -33,12 +32,14 @@ SELECT CASE
            WHEN ORDER_COUNT > 3 THEN '04   4-5 total orders'
            WHEN ORDER_COUNT = 3 THEN '03     3 total orders'
            WHEN ORDER_COUNT = 2 THEN '02     2 total orders'
-           ELSE '01     1 order only' END                                CUSTOMER_CATEGORY_BY_ORDER_COUNT
-     , COUNT(1)                                                          ORDERS
-     , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                              UNIQUE_CUTOMERS
-     , SUM(ORDER_TOTAL_PRICE_VAT) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL) AVG_CLV
-     , SUM(ORDER_TOTAL_PRICE_VAT)                                        ORDER_TOTAL_PRICE_VAT
-     , AVG(ORDER_TOTAL_PRICE_VAT)                                        AVG_ORDER_PRICE
+           ELSE '01     1 order only' 
+        END                                                              AS CUSTOMER_CATEGORY_BY_ORDER_COUNT
+     , COUNT(1)                                                          AS ORDERS
+     , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                              AS UNIQUE_CUTOMERS
+     , SUM(ORDER_TOTAL_PRICE_VAT) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL) AS AVG_CLV
+     , SUM(ORDER_TOTAL_PRICE_VAT)                                        AS ORDER_TOTAL_PRICE_VAT
+     , AVG(ORDER_TOTAL_PRICE_VAT)                                        AS AVG_ORDER_PRICE
 FROM PREVIOUS_ORDER_CATEGORY
 GROUP BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
-ORDER BY CUSTOMER_CATEGORY_BY_ORDER_COUNT;
+ORDER BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
+;

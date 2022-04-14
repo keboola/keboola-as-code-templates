@@ -1,3 +1,7 @@
-CREATE TABLE "out_shoptet" AS
-SELECT "shop_name" NAME, "shop_base_url" BASE_URL, NULL DOMAIN
-FROM "shoptet";
+CREATE TABLE "out_shoptet" 
+AS
+    SELECT  "shop_name"         AS NAME
+            , "shop_base_url"   AS BASE_URL
+            , NULL              AS DOMAIN
+    FROM "shoptet"
+;
