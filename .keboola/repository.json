@@ -342,6 +342,34 @@
           "path": "v1"
         }
       ]
+    },
+    {
+      "id": "keboola-crm-salesforce",
+      "name": "KEBOOLA-CRM-SALESFORCE",
+      "description": "Full workflow to ...",
+      "path": "keboola-crm-salesforce",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-ecommerce-shoptet",
+      "name": "KEBOOLA-ECOMMERCE-SHOPTET",
+      "description": "Full workflow to ...",
+      "path": "keboola-ecommerce-shoptet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
     }
   ]
 }

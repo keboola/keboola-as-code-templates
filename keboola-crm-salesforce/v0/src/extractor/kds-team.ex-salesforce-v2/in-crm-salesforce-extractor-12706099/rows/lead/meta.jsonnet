@@ -1,0 +1,4 @@
+{
+  name: "Lead",
+  isDisabled: false,
+}
