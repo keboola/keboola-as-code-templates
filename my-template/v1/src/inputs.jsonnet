@@ -5,7 +5,7 @@
       required: "all",
       steps: [
         {
-          icon: "common:settings",
+          icon: "component:kds-team.ex-shopify",
           name: "Shopify",
           description: "Sell online with an ecommerce website",
           inputs: [
@@ -28,7 +28,7 @@
           ],
         },
         {
-          icon: "common:settings",
+          icon: "component:kds-team.ex-shoptet-permalink",
           name: "Shoptet",
           description: "Sell online with Shoptet",
           inputs: [

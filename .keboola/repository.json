@@ -2,8 +2,23 @@
   "version": 2,
   "templates": [
     {
-      "id": "my-template",
+      "id": "api-demo",
       "icon": "common:settings",
+      "name": "API demo",
+      "description": "Template from the examples of https://templates.keboola.com/v1/documentation/",
+      "path": "api-demo",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "my-template",
+      "icon": "common:download",
       "name": "My Template",
       "description": "Full workflow to ...",
       "path": "my-template",
