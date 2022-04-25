@@ -3,6 +3,7 @@
   "templates": [
     {
       "id": "keboola-crm-hubspot",
+      "icon": "common:settings",
       "name": "KEBOOLA-CRM-HUBSPOT",
       "description": "Full workflow to ...",
       "path": "keboola-crm-hubspot",
@@ -23,6 +24,7 @@
     },
     {
       "id": "keboola-crm-salesforce",
+      "icon": "common:settings",
       "name": "KEBOOLA-CRM-SALESFORCE",
       "description": "Full workflow to ...",
       "path": "keboola-crm-salesforce",
@@ -37,6 +39,7 @@
     },
     {
       "id": "keboola-ecommerce-shopify",
+      "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPIFY",
       "description": "Full workflow to ...",
       "path": "keboola-ecommerce-shopify",
@@ -51,6 +54,7 @@
     },
     {
       "id": "keboola-ecommerce-shoptet",
+      "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPTET",
       "description": "Full workflow to ...",
       "path": "keboola-ecommerce-shoptet",
@@ -65,6 +69,7 @@
     },
     {
       "id": "thoughtspot-analytics-googleanalytics",
+      "icon": "common:settings",
       "name": "THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS",
       "description": "Full workflow to ...",
       "path": "thoughtspot-analytics-googleanalytics",
@@ -79,6 +84,7 @@
     },
     {
       "id": "thoughtspot-crm-hubspot",
+      "icon": "common:settings",
       "name": "THOUGHTSPOT-CRM-HUBSPOT",
       "description": "Full workflow to ...",
       "path": "thoughtspot-crm-hubspot",
@@ -93,6 +99,7 @@
     },
     {
       "id": "thoughtspot-ecommerce-shopify",
+      "icon": "common:settings",
       "name": "THOUGHTSPOT-ECOMMERCE-SHOPIFY",
       "description": "Full workflow to ...",
       "path": "kthoughtspot-ecommerce-shopify",
