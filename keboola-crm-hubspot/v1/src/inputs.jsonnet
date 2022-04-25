@@ -18,8 +18,8 @@
             },
             {
               id: "ex-hubspot-crm-period-from",
-              name: "Period from date [including]",
-              description: "Date in YYYY-MM-DD format or dateparser string i.e. 5 days ago, 1 month ago, yesterday, etc. If left empty, all records are downloaded.",
+              name: "Period from date [incl.]",
+              description: "Fill from when do you want to download the data.",
               type: "string",
               kind: "input",
               default: "1 month ago",
@@ -27,7 +27,7 @@
             {
               id: "select-writer",
               name: "Select writer",
-              description: "Select where do you want to load data from this template. You can choose none, one or more options.",
+              description: "Select where do you want to load data. Choose O:N options.",
               type: "string",
               kind: "select",
               options: [
