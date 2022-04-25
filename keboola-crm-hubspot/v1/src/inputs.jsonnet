@@ -1,7 +1,7 @@
 {
   stepsGroups: [
     {
-      description: "Default Group",
+      description: "Extraction",
       required: "all",
       steps: [
         {
@@ -24,6 +24,14 @@
               kind: "input",
               default: "1 month ago",
             },
+          ]
+        }
+      ]
+    },
+    {
+      description: "Select writer",
+      required: "all",
+      steps: [
             {
               id: "select-writer",
               name: "Select writer",
@@ -41,6 +49,12 @@
                 },
               ],
             },
+          ]
+    },
+    {
+      description: "Writer",
+      required: "optional",
+      steps: [
             {
               id: "wr-snowflake-blob-storage-db-host",
               name: "Hostname",
@@ -104,8 +118,6 @@
               showif: "[select-writer] == 'snowflake-db'",
             },
           ],
-        },
-      ],
     },
   ],
 }
