@@ -32,6 +32,11 @@
       description: "Select writer",
       required: "all",
       steps: [
+                {
+          icon: "common:settings",
+          name: "Default Step",
+          description: "Default Step",
+          inputs: [
             {
               id: "select-writer",
               name: "Select writer",
@@ -50,11 +55,18 @@
               ],
             },
           ]
+        }
+      ]
     },
     {
       description: "Writer",
       required: "optional",
       steps: [
+                {
+          icon: "common:settings",
+          name: "Default Step",
+          description: "Default Step",
+          inputs: [
             {
               id: "wr-snowflake-blob-storage-db-host",
               name: "Hostname",
@@ -117,7 +129,9 @@
               default: "KEBOOLA_PROD",
               showif: "[select-writer] == 'snowflake-db'",
             },
-          ],
+          ]
+        }
+      ]
     },
   ],
 }
