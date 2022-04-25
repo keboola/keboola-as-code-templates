@@ -100,10 +100,24 @@
       ]
     },
     {
-      "id": "in-thoughtspot-gaa",
-      "name": "IN-THOUGHTSPOT-GAA",
+      "id": "in-thoughtspot-googleanalytics",
+      "name": "IN-THOUGHTSPOT-GOOGLEANALYTICS",
       "description": "Full workflow to ...",
-      "path": "in-thoughtspot-gaa",
+      "path": "in-thoughtspot-googleanalytics",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "in-thoughtspot-googleanalytics-searchconsole",
+      "name": "IN-THOUGHTSPOT-GOOGLEANALYTICS-SEARCHCONSOLE",
+      "description": "Full workflow to ...",
+      "path": "in-thoughtspot-googleanalytics-searchconsole",
       "versions": [
         {
           "version": "0.0.1",
@@ -118,6 +132,68 @@
       "name": "IN-THOUGHTSPOT-HUBSPOT",
       "description": "Full workflow to ...",
       "path": "in-thoughtspot-hubspot",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-crm-hubspot",
+      "name": "KEBOOLA-CRM-HUBSPOT",
+      "description": "Full workflow to ...",
+      "path": "keboola-crm-hubspot",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "keboola-crm-salesforce",
+      "name": "KEBOOLA-CRM-SALESFORCE",
+      "description": "Full workflow to ...",
+      "path": "keboola-crm-salesforce",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-ecommerce-shopify",
+      "name": "KEBOOLA-ECOMMERCE-SHOPIFY",
+      "description": "Full workflow to ...",
+      "path": "keboola-ecommerce-shopify",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-ecommerce-shoptet",
+      "name": "KEBOOLA-ECOMMERCE-SHOPTET",
+      "description": "Full workflow to ...",
+      "path": "keboola-ecommerce-shoptet",
       "versions": [
         {
           "version": "0.0.1",
@@ -212,10 +288,10 @@
       ]
     },
     {
-      "id": "out-thoughtspot-gaa-bigquery",
-      "name": "OUT-THOUGHTSPOT-GAA-BIGQUERY",
+      "id": "out-thoughtspot-googleanalytics-bigquery",
+      "name": "OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY",
       "description": "Full workflow to ...",
-      "path": "out-thoughtspot-gaa-bigquery",
+      "path": "out-thoughtspot-googleanalytics-bigquery",
       "versions": [
         {
           "version": "0.0.1",
@@ -226,10 +302,24 @@
       ]
     },
     {
-      "id": "out-thoughtspot-gaa-snowflake",
-      "name": "OUT-THOUGHTSPOT-GAA-SNOWFLAKE",
+      "id": "out-thoughtspot-googleanalytics-bigquery-searchconsole",
+      "name": "OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY-SEARCHCONSOLE",
       "description": "Full workflow to ...",
-      "path": "out-thoughtspot-gaa-snowflake",
+      "path": "out-thoughtspot-googleanalytics-bigquery-searchconsole",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "out-thoughtspot-googleanalytics-snowflake",
+      "name": "OUT-THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE",
+      "description": "Full workflow to ...",
+      "path": "out-thoughtspot-googleanalytics-snowflake",
       "versions": [
         {
           "version": "0.0.1",
@@ -268,10 +358,10 @@
       ]
     },
     {
-      "id": "test",
-      "name": "test",
+      "id": "thoughtspot-analytics-googleanalytics",
+      "name": "THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS",
       "description": "Full workflow to ...",
-      "path": "test",
+      "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
           "version": "0.0.1",
@@ -282,10 +372,10 @@
       ]
     },
     {
-      "id": "test2",
-      "name": "test2",
+      "id": "thoughtspot-crm-hubspot",
+      "name": "THOUGHTSPOT-CRM-HUBSPOT",
       "description": "Full workflow to ...",
-      "path": "test2",
+      "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
           "version": "0.0.1",
@@ -296,72 +386,10 @@
       ]
     },
     {
-      "id": "thoughtspot-gaa-snowflake",
-      "name": "THOUGHTSPOT-GAA-SNOWFLAKE",
+      "id": "thoughtspot-ecommerce-shopify",
+      "name": "THOUGHTSPOT-ECOMMERCE-SHOPIFY",
       "description": "Full workflow to ...",
-      "path": "thoughtspot-gaa-snowflake",
-      "versions": [
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "thoughtspot-hubspot-snowflake",
-      "name": "THOUGHTSPOT-HUBSPOT-SNOWFLAKE",
-      "description": "Full workflow to ...",
-      "path": "thoughtspot-hubspot-snowflake",
-      "versions": [
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "keboola-crm-hubspot",
-      "name": "KEBOOLA-CRM-HUBSPOT",
-      "description": "Full workflow to ...",
-      "path": "keboola-crm-hubspot",
-      "versions": [
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
-        },
-        {
-          "version": "1.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v1"
-        }
-      ]
-    },
-    {
-      "id": "keboola-crm-salesforce",
-      "name": "KEBOOLA-CRM-SALESFORCE",
-      "description": "Full workflow to ...",
-      "path": "keboola-crm-salesforce",
-      "versions": [
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "keboola-ecommerce-shoptet",
-      "name": "KEBOOLA-ECOMMERCE-SHOPTET",
-      "description": "Full workflow to ...",
-      "path": "keboola-ecommerce-shoptet",
+      "path": "kthoughtspot-ecommerce-shopify",
       "versions": [
         {
           "version": "0.0.1",
