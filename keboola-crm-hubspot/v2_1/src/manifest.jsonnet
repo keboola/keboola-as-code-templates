@@ -48,7 +48,7 @@
     if Input("google-sheet-checkbox") == true then
     {
       componentId: "keboola.wr-google-sheets",
-      id: ConfigId("in-crm-hubspot-extractor-7513249"),
+      id: ConfigId("out-crm-gsheet-writer-7513249"),
       path: "<common>/out-crm-gsheet/v0/src/writer/keboola.wr-google-sheets/out-crm-gsheet-writer-7513249",
       rows: [],
     }
