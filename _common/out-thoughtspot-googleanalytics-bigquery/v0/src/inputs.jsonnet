@@ -1,11 +1,11 @@
-{
-  inputs: [
+[
     {
       id: "wr-google-bigquery-v2-service-account-private-key",
       name: "Service account Private key",
       description: "",
       type: "string",
       kind: "hidden",
+      rules: "required",
     },
     {
       id: "wr-google-bigquery-v2-service-account-client-id",
@@ -28,5 +28,4 @@
       type: "string",
       kind: "input"
     },
-  ],
-}
+  ]
