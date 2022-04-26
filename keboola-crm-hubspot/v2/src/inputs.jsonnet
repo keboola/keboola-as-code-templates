@@ -1,7 +1,5 @@
-local gsheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
 local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
 local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
-
 {
   stepsGroups: [
     {
