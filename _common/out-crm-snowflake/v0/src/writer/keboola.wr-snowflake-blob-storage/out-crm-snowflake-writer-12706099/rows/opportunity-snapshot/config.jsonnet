@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-crm-wr-"+ConfigId("out-crm-snowflake-writer-12706099")+".opportunity_snapshot",
+    tableId: "out.c-crm-wr-"+if std.length("ex-hubspot-crm-api-token") > 0 then ConfigId("in-crm-hubspot-extractor-7513249") else if std.length("ex-salesforce-v2-username") > 0 then ConfigId("in-crm-salesforce-extractor-12706099")+".opportunity_snapshot",
     dbName: "opportunity_snapshot",
     incremental: false,
     primaryKey: [
@@ -166,8 +166,8 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-wr-"+ConfigId("out-crm-snowflake-writer-12706099")+".opportunity_snapshot",
-          destination: "out.c-crm-wr-"+ConfigId("out-crm-snowflake-writer-12706099")+".opportunity_snapshot.csv",
+          source: "out.c-crm-wr-"+if std.length("ex-hubspot-crm-api-token") > 0 then ConfigId("in-crm-hubspot-extractor-7513249") else if std.length("ex-salesforce-v2-username") > 0 then ConfigId("in-crm-salesforce-extractor-12706099")+".opportunity_snapshot",
+          destination: "out.c-crm-wr-"+if std.length("ex-hubspot-crm-api-token") > 0 then ConfigId("in-crm-hubspot-extractor-7513249") else if std.length("ex-salesforce-v2-username") > 0 then ConfigId("in-crm-salesforce-extractor-12706099")+".opportunity_snapshot.csv",
           columns: [
             "opportunity_id",
             "snapshot_date",
