@@ -19,6 +19,12 @@
           "description": "",
           "stable": false,
           "path": "v1"
+        },
+        {
+          "version": "2.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v2"
         }
       ]
     },
