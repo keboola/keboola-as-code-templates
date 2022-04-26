@@ -13,7 +13,8 @@
       name: "Login Name",
       description: "Insert your login name for Salesforce.",
       type: "string",
-      kind: "input"
+      kind: "input",
+      rules: "required",
     },
     {
       id: "ex-salesforce-v2-password",
