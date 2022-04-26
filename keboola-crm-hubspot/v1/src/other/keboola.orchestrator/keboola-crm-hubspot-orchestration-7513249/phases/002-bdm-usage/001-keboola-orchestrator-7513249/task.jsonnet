@@ -1,4 +1,4 @@
-if std.member(Input("google-sheet-checkbox"), "yes") then
+if Input("google-sheet-checkbox") == true then
 {
   name: "keboola.orchestrator-" + ConfigId("in-crm-hubspot-extractor-7513249"),
   task: {
