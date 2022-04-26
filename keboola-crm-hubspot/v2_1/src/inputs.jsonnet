@@ -32,7 +32,7 @@
     },
     {
       description: "Writer",
-      required: "exactlyOne",
+      required: "optional",
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
