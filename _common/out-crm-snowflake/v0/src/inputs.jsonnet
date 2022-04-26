@@ -1,5 +1,4 @@
-{
-  inputs: [
+[
     {
       id: "wr-snowflake-blob-storage-db-host",
       name: "Hostname",
@@ -61,5 +60,4 @@
       default: "KEBOOLA_PROD",
       showif: "[wr-snowflake-blob-storage-db-host] != ''",
     },
-  ],
-}
+  ]

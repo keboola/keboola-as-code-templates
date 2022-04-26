@@ -1,5 +1,4 @@
-{
-  inputs: [
+[
     {
       id: "ex-hubspot-crm-api-token",
       name: "API token",
@@ -15,5 +14,4 @@
       kind: "input",
       default: "1 month ago",
     },
-  ],
-}
+]
