@@ -1,4 +1,4 @@
-if std.member(Input("select-writer"), "google-sheet") then
+if std.member(Input("google-sheet-checkbox"), "yes") then
 {
   name: "keboola.orchestrator-" + ConfigId("in-crm-hubspot-extractor-7513249"),
   task: {
@@ -8,7 +8,7 @@ if std.member(Input("select-writer"), "google-sheet") then
   continueOnFailure: false,
   enabled: true,
 }
-else if std.member(Input("select-writer"), "snowflake-db") then
+else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
 {
   name: "keboola.orchestrator-" + ConfigId("in-crm-hubspot-extractor-7513249"),
   task: {

@@ -1,13 +1,15 @@
 {
   stepsGroups: [
     {
-      description: "Extraction",
+      description: "Configure your credentials for hubspot extractor.",
       required: "all",
       steps: [
         {
-          icon: "common:settings",
-          name: "Default Step",
-          description: "Default Step",
+          icon: "component:kds-team.ex-hubspot-crm",
+          name: "Hubspot",
+          description: "Hubspot - Data Source",
+          dialogName: "Authorize Hubspot Data Source", 
+          dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
           inputs: [
             {
               id: "ex-hubspot-crm-api-token",
@@ -29,43 +31,15 @@
       ]
     },
     {
-      description: "Select writer",
-      required: "all",
-      steps: [
-                {
-          icon: "common:settings",
-          name: "Default Step",
-          description: "Default Step",
-          inputs: [
-            {
-              id: "select-writer",
-              name: "Select writer",
-              description: "Select where do you want to load data. Choose O:N options.",
-              type: "string",
-              kind: "select",
-              options: [
-                {
-                  value: 'google-sheet',
-                  label: 'Google Sheet',
-                },
-                {
-                  value: 'snowflake-db',
-                  label: 'Snowflake Database',
-                },
-              ],
-            },
-          ]
-        }
-      ]
-    },
-    {
       description: "Writer",
       required: "optional",
       steps: [
-                {
-          icon: "common:settings",
-          name: "Default Step",
-          description: "Default Step",
+          {
+          icon: "component:keboola.wr-snowflake-blob-storage",
+          name: "Snowflake Data Destination",
+          description: "Load to data into snowflake",
+          dialogName: "Authorize Snowflake Data Destination", 
+          dialogDescription: "Data load to Snowflake DB.",
           inputs: [
             {
               id: "wr-snowflake-blob-storage-db-host",
@@ -73,8 +47,9 @@
               description: "Insert database hostname",
               type: "string",
               kind: "input",
+              rules: "required",
               default: "keboola.west-europe.azure.snowflakecomputing.com",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
             {
               id: "wr-snowflake-blob-storage-db-port",
@@ -83,7 +58,7 @@
               type: "string",
               kind: "input",
               default: "443",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
             {
               id: "wr-snowflake-blob-storage-db-user",
@@ -92,7 +67,7 @@
               type: "string",
               kind: "input",
               default: "KEBOOLA_WORKSPACE_12781571",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
             {
               id: "wr-snowflake-blob-storage-db-password",
@@ -100,7 +75,7 @@
               description: "Insert your password to the database.",
               type: "string",
               kind: "hidden",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
             {
               id: "wr-snowflake-blob-storage-db-database",
@@ -109,7 +84,7 @@
               type: "string",
               kind: "input",
               default: "KEBOOLA_6518",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
             {
               id: "wr-snowflake-blob-storage-db-schema",
@@ -118,7 +93,7 @@
               type: "string",
               kind: "input",
               default: "WORKSPACE_12781571",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
             {
               id: "wr-snowflake-blob-storage-db-warehouse",
@@ -127,10 +102,27 @@
               type: "string",
               kind: "input",
               default: "KEBOOLA_PROD",
-              showif: "[select-writer] == 'snowflake-db'",
+              //showif: "[select-writer] == 'snowflake-db'",
             },
           ]
-        }
+        },
+        {
+          icon: "component:keboola.wr-google-sheet",
+          name: "Google sheet Data Destination",
+          description: "Load to data into google sheet",
+          dialogName: "Google Sheet Data Destination", 
+          dialogDescription: "Data load to Google Sheet.",
+          inputs: [
+            {
+              id: "google-sheet-checkbox",
+              name: "Use google sheet as data destination",
+              description: "Do you want to load data into google sheet?",
+              type: "bool",
+              kind: "confirm",
+              rules: "required",
+            },
+          ],  
+        },
       ]
     },
   ],
