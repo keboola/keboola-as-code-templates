@@ -8,7 +8,7 @@
           icon: "component:kds-team.ex-hubspot-crm",
           name: "Hubspot",
           description: "Hubspot - Data Source",
-          dialogName: "Authorize Hubspot Data Source", 
+          dialogName: "Hubspot Data Source", 
           dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
           inputs: [
             {
@@ -36,9 +36,9 @@
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Snowflake Data Destination",
+          name: "Snowflake Destination",
           description: "Load to data into snowflake",
-          dialogName: "Authorize Snowflake Data Destination", 
+          dialogName: "Snowflake Destination", 
           dialogDescription: "Data load to Snowflake DB.",
           inputs: [
             {
@@ -108,14 +108,14 @@
         },
         {
           icon: "component:keboola.wr-google-sheet",
-          name: "Google sheet Data Destination",
+          name: "Google sheet Destination",
           description: "Load to data into google sheet",
-          dialogName: "Google Sheet Data Destination", 
+          dialogName: "Google Sheet Destination", 
           dialogDescription: "Data load to Google Sheet.",
           inputs: [
             {
               id: "google-sheet-checkbox",
-              name: "Use google sheet as data destination",
+              name: "Google sheet destination",
               description: "Do you want to load data into google sheet?",
               type: "bool",
               kind: "confirm",
