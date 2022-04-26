@@ -47,20 +47,6 @@
     },
     if Input("google-sheet-checkbox") == true then
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-crm-gsheet-orchestration-bdm-usage-7513249"),
-      path: "<common>/out-crm-gsheet/v0/src/other/keboola.orchestrator/out-crm-gsheet-orchestration-bdm-usage-7513249",
-      rows: [],
-    }
-    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-crm-snowflake-orchestration-bdm-usage-7513249"),
-      path: "other/keboola.orchestrator/out-crm-snowflake-orchestration-bdm-usage-7513249",
-      rows: [],
-    },
-    if Input("google-sheet-checkbox") == true then
-    {
       componentId: "keboola.wr-google-sheets",
       id: ConfigId("out-crm-gsheet-writer-7513249"),
       path: "<common>/out-crm-gsheet/v0/src/writer/keboola.wr-google-sheets/out-crm-gsheet-writer-7513249",
