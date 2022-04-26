@@ -51,8 +51,8 @@
       id: ConfigId("out-crm-gsheet-orchestration-bdm-usage-7513249"),
       path: "other/keboola.orchestrator/out-crm-gsheet-orchestration-bdm-usage-7513249",
       rows: [],
-    },
-    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    }
+    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("out-crm-snowflake-orchestration-bdm-usage-7513249"),
@@ -65,8 +65,8 @@
       id: ConfigId("out-crm-gsheet-writer-7513249"),
       path: "writer/keboola.wr-google-sheets/out-crm-gsheet-writer-7513249",
       rows: [],
-    },
-    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    }
+    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-crm-snowflake-writer-7513249"),
