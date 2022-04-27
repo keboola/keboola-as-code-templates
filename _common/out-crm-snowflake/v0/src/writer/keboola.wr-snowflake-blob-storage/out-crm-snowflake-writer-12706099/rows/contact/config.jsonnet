@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-crm-wr-"+if std.length(Input("ex-hubspot-crm-api-token")) > 0 then ConfigId("in-crm-hubspot-extractor-7513249") else if std.length(Input("ex-salesforce-v2-username")) > 0 then ConfigId("in-crm-salesforce-extractor-12706099")+".contact",
+    tableId: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".contact",
     dbName: "contact",
     incremental: false,
     primaryKey: [
@@ -69,8 +69,8 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-wr-"+if std.length(Input("ex-hubspot-crm-api-token")) > 0 then ConfigId("in-crm-hubspot-extractor-7513249") else if std.length(Input("ex-salesforce-v2-username")) > 0 then ConfigId("in-crm-salesforce-extractor-12706099")+".contact",
-          destination: "out.c-crm-wr-"+if std.length(Input("ex-hubspot-crm-api-token")) > 0 then ConfigId("in-crm-hubspot-extractor-7513249") else if std.length(Input("ex-salesforce-v2-username")) > 0 then ConfigId("in-crm-salesforce-extractor-12706099")+".contact.csv",
+          source: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".contact",
+          destination: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".contact.csv",
           columns: [
             "contact_id",
             "contact",
