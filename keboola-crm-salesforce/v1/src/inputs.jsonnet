@@ -40,7 +40,7 @@
               description: "Insert your Salesforce security token.",
               type: "string",
               kind: "hidden",
-              default: "token"
+              rules: "required",
             },
           ],
         },
