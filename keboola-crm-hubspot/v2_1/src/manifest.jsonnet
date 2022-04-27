@@ -17,7 +17,7 @@
       id: ConfigId("in-crm-hubspot-transformation1-input-tables-creation-7513249"),
       path: "<common>/in-crm-hubspot/v0/src/transformation/keboola.snowflake-transformation/in-crm-hubspot-transformation1-input-tables-creation-7513249",
       metadata: {
-        "KBC.configuration.folderName": "[IN-CRM-HUBSPOT]"
+        "KBC.configuration.folderName": "[KEBOOLA-CRM-HUBSPOT]"
       },
       rows: [],
     },
@@ -26,7 +26,7 @@
       id: ConfigId("in-crm-hubspot-transformation2-main-7513249"),
       path: "<common>/in-crm-hubspot/v0/src/transformation/keboola.snowflake-transformation/in-crm-hubspot-transformation2-main-7513249",
       metadata: {
-        "KBC.configuration.folderName": "[IN-CRM-HUBSPOT]"
+        "KBC.configuration.folderName": "[KEBOOLA-CRM-HUBSPOT]"
       },
       rows: [],
     },
@@ -35,7 +35,7 @@
       id: ConfigId("in-crm-hubspot-transformation3-snapshots-7513249"),
       path: "<common>/in-crm-hubspot/v0/src/transformation/keboola.snowflake-transformation/in-crm-hubspot-transformation3-snapshots-7513249",
       metadata: {
-        "KBC.configuration.folderName": "[IN-CRM-HUBSPOT]"
+        "KBC.configuration.folderName": "[KEBOOLA-CRM-HUBSPOT]"
       },
       rows: [],
     },
