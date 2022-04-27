@@ -5,7 +5,7 @@
       description: "",
       type: "string",
       kind: "hidden",
-      rules: "required",
+      rules: "required"
     },
     {
       id: "wr-google-bigquery-v2-service-account-client-id",
