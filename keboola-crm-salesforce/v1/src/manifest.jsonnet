@@ -69,14 +69,14 @@
     if Input("google-sheet-checkbox") == true then
     {
       componentId: "keboola.wr-google-sheets",
-      id: ConfigId("out-crm-gsheet-writer-12706099"),
+      id: ConfigId("out-crm-gsheet-writer-7513249"),
       path: "<common>/out-crm-gsheet/v0/src/writer/keboola.wr-google-sheets/out-crm-gsheet-writer-7513249",
       rows: [],
     },
     if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
-      id: ConfigId("out-crm-snowflake-writer-12706099"),
+      id: ConfigId("out-crm-snowflake-writer-7513249"),
       path: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer-12706099",
       rows: [
         {
