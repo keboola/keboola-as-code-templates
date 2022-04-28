@@ -1,0 +1,4 @@
+{
+  name: "Extractor",
+  dependsOn: [],
+}
