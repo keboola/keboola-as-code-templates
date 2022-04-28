@@ -9,8 +9,8 @@
     },
     {
       id: "ex-hubspot-crm-period-from",
-      name: "Period from date [including]",
-      description: "Date in YYYY-MM-DD format or dateparser string i.e. 5 days ago, 1 month ago, yesterday, etc. If left empty, all records are downloaded.",
+      name: "Period from date [incl.]",
+      description: "From when do you want to get the data?",
       type: "string",
       kind: "select",
       options: [
