@@ -12,24 +12,7 @@ local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
           description: "Hubspot - Data Source",
           dialogName: "Hubspot Data Source", 
           dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
-          inputs: [
-            {
-              id: "ex-hubspot-crm-api-token",
-              name: "API token",
-              description: "Insert your API Token.",
-              type: "string",
-              kind: "hidden",
-            },
-            {
-              id: "ex-hubspot-crm-period-from",
-              name: "Period from date [incl.]",
-              description: "Fill from when do you want to download the data.",
-              type: "string",
-              kind: "select",
-              default: "1 month ago",
-              options: hubspot,
-            },
-          ]
+          inputs: hubpot,
         }
       ]
     },
