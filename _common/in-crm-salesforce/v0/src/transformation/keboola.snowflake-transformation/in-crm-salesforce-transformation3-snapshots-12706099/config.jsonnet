@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunity_snapshot",
+          source: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity_snapshot",
           destination: "opportunity_snapshot",
           where_column: "",
           where_values: [],
@@ -16,7 +16,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunity_snapshot",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".opportunity_snapshot",
           source: "out_opportunity_snapshot",
           primary_key: [
             "opportunity_id",
@@ -29,31 +29,5 @@
         },
       ],
     },
-  },
-  processors: {
-    after: [
-      {
-        definition: {
-          component: "keboola.processor-add-metadata",
-        },
-        parameters: {
-          tables: [
-            {
-              table: "out_opportunity_snapshot",
-              metadata: [
-                {
-                  key: "bdm.scaffold.table.tag",
-                  value: "bdm.Crm.OpportunitySnapshot",
-                },
-                {
-                  key: "scaffold.id",
-                  value: "SalesforceCrm",
-                },
-              ],
-            },
-          ],
-        },
-      },
-    ],
-  },
+  }
 }

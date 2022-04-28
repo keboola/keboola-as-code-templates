@@ -1,3 +1,3 @@
 {
-  name: "[IN-CRM-SALESFORCE] Extractor /" + ConfigId("in-crm-salesforce-extractor-12706099"),
+  name: "[IN-CRM-SALESFORCE] Extractor /" + InstanceIdShort(),
 }
