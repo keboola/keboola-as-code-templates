@@ -16,20 +16,20 @@
     default: '2 months ago',
     options: [
       {
-        id: '1 day ago',
-        name: '1 day ago',
+        value: '1 day ago',
+        label: '1 day ago',
       },
       {
-        id: '7 days ago',
-        name: '7 days ago',
+        value: '7 days ago',
+        label: '7 days ago',
       },
       {
-        id: '1 month ago',
-        name: '1 month ago',
+        value: '1 month ago',
+        label: '1 month ago',
       },
       {
-        id: '2 months ago',
-        name: '2 months ago',
+        value: '2 months ago',
+        label: '2 months ago',
       },
     ],
   },
