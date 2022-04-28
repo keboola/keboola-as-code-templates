@@ -1,5 +1,5 @@
 {
-  configurations: [
+  configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("keboola-ecommerce-shoptet-orchestration-6031003"),
@@ -17,12 +17,14 @@
       id: ConfigId("in-ecommerce-shoptet-transformation1-data-preparation-6031003"),
       path: "<common>/in-ecommerce-shoptet/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shoptet-transformation1-data-preparation-6031003",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shoptet-transformation2-rfm-analysis-6031003"),
       path: "<common>/in-ecommerce-shoptet/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shoptet-transformation2-rfm-analysis-6031003",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
     if Input("google-sheet-checkbox") == true then
     {
@@ -30,8 +32,8 @@
       id: ConfigId("out-ecommerce-gsheet-writer-6031003"),
       path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
       rows: [],
-    }
-    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    },
+    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-ecommerce-snowflake-writer-6031003"),
@@ -83,5 +85,5 @@
         },
       ],
     },
-  ],
+  ],)
 }
