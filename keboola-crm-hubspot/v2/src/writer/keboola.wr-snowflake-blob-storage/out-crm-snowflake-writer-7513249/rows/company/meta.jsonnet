@@ -1,4 +1,0 @@
-{
-  name: "company",
-  isDisabled: false,
-}

@@ -1,7 +1,9 @@
+local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for hubspot extractor.",
+      description: "Extractor",
       required: "all",
       steps: [
         {
@@ -10,29 +12,25 @@
           description: "Hubspot - Data Source",
           dialogName: "Hubspot Data Source", 
           dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
-          inputs: [
-            {
-              id: "ex-hubspot-crm-api-token",
-              name: "API token",
-              description: "Insert your API Token.",
-              type: "string",
-              kind: "hidden",
-            },
-            {
-              id: "ex-hubspot-crm-period-from",
-              name: "Period from date [incl.]",
-              description: "Fill from when do you want to download the data.",
-              type: "string",
-              kind: "input",
-              default: "1 month ago",
-            },
-          ]
+          inputs: hubspot,
         }
+      ]
+    },
+    {   
+      description: "Snowflake Transformation",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformation",
+          inputs: [],
+        },
       ]
     },
     {
       description: "Writer",
-      required: "exactlyOne",
+      required: "optional",
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
@@ -40,69 +38,7 @@
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 
           dialogDescription: "Data load to Snowflake DB.",
-          inputs: [
-            {
-              id: "wr-snowflake-blob-storage-db-host",
-              name: "Hostname",
-              description: "Insert database hostname",
-              type: "string",
-              kind: "input",
-              rules: "required",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-port",
-              name: "Port",
-              description: "Insert database port number.",
-              type: "string",
-              kind: "input",
-              default: "443",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-user",
-              name: "Username",
-              description: "Insert database username.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_WORKSPACE_12781571",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-password",
-              name: "Database Password",
-              description: "Insert your password to the database.",
-              type: "string",
-              kind: "hidden",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-database",
-              name: "Database Name",
-              description: "Insert name of your database.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_6518",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-schema",
-              name: "Schema",
-              description: "Insert database schema.",
-              type: "string",
-              kind: "input",
-              default: "WORKSPACE_12781571",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-warehouse",
-              name: "Warehouse",
-              description: "Insert database warehouse.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_PROD",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-          ]
+          inputs: snowflake,
         },
         {
           icon: "component:keboola.wr-google-sheet",
