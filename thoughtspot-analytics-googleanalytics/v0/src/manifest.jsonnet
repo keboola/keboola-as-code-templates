@@ -1,5 +1,5 @@
 {
-  configurations: [
+  configurations: std.filter(function(v) v != null, [
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("thoughtspot-analytics-googleanalytics-orchestration-15471164"),
@@ -17,6 +17,7 @@
       id: ConfigId("in-thoughtspot-gaa-transformation-15471164"),
       path: "<common>/in-thoughtspot-googleanalytics/v0/src/transformation/keboola.snowflake-transformation/in-thoughtspot-gaa-transformation-15471164",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS]"}
     },
     if std.length(Input("wr-google-bigquery-v2-service-account-private-key")) > 0 then
     {
@@ -49,8 +50,8 @@
           path: "rows/ga-traffic-source",
         },
       ],
-    }
-    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    },
+    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164"),
@@ -82,5 +83,5 @@
         },
       ],
     },
-  ],
+  ],)
 }
