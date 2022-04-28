@@ -1,3 +1,5 @@
+local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -60,7 +62,7 @@
     },
     {
       description: "Writer",
-      required: "exactlyOne",
+      required: "optional",
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
