@@ -19,7 +19,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-CRM-HUBSPOT]"}
     },
-    if std.length(Input("wr-google-bigquery-v2-service-account-private-key")) > 0 then
+    if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760"),
@@ -91,7 +91,7 @@
         },
       ],
     },
-    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760"),
