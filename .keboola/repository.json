@@ -133,7 +133,7 @@
       "icon": "common:settings",
       "name": "THOUGHTSPOT-ECOMMERCE-SHOPIFY",
       "description": "Full workflow to ...",
-      "path": "kthoughtspot-ecommerce-shopify",
+      "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
           "version": "0.0.1",

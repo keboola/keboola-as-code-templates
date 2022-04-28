@@ -108,7 +108,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-107" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".deals_stage_history",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".deals_stage_history",
           destination: "deals_stage_history",
           where_column: "",
           where_values: [],
