@@ -78,6 +78,7 @@
               type: "string",
               kind: "input",
               rules: "required",
+              default: "default",
             },
             {
               id: "wr-snowflake-blob-storage-db-port",
