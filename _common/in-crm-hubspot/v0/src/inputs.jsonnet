@@ -12,6 +12,7 @@
       description: "From when do you want to get the data?",
       type: "string",
       kind: "select",
+      default: "1 month ago",
       options: [
         {
           value: '1 week ago',
@@ -30,6 +31,5 @@
           label: '2 months ago',
         },
       ],
-        default: "1 month ago",
     },
 ]
