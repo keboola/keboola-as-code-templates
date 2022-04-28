@@ -12,7 +12,7 @@ local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
           description: "Hubspot - Data Source",
           dialogName: "Hubspot Data Source", 
           dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
-          inputs: hubpot,
+          inputs: hubspot,
         }
       ]
     },
