@@ -1,3 +1,5 @@
+local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -25,24 +27,7 @@
               type: "string",
               kind: "select",
               default: "1 month ago",
-              options: [
-                {
-                  value: '1 week ago',
-                  label: '1 week ago',
-                },
-                {
-                  value: '2 weeks ago',
-                  label: '2 weeks ago',
-                },
-                {
-                  value: '1 month ago',
-                  label: '1 month ago',
-                },
-                {
-                  value: '2 months ago',
-                  label: '2 months ago',
-                },
-              ],
+              options: hubspot,
             },
           ]
         }
@@ -70,70 +55,7 @@
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 
           dialogDescription: "Data load to Snowflake DB.",
-          inputs: [
-            {
-              id: "wr-snowflake-blob-storage-db-host",
-              name: "Hostname",
-              description: "Insert database hostname",
-              type: "string",
-              kind: "input",
-              rules: "required",
-              default: "default",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-port",
-              name: "Port",
-              description: "Insert database port number.",
-              type: "string",
-              kind: "input",
-              default: "443",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-user",
-              name: "Username",
-              description: "Insert database username.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_WORKSPACE_12781571",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-password",
-              name: "Database Password",
-              description: "Insert your password to the database.",
-              type: "string",
-              kind: "hidden",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-database",
-              name: "Database Name",
-              description: "Insert name of your database.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_6518",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-schema",
-              name: "Schema",
-              description: "Insert database schema.",
-              type: "string",
-              kind: "input",
-              default: "WORKSPACE_12781571",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-            {
-              id: "wr-snowflake-blob-storage-db-warehouse",
-              name: "Warehouse",
-              description: "Insert database warehouse.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_PROD",
-              showif: "[wr-snowflake-blob-storage-db-host] != ''",
-            },
-          ]
+          inputs: snowflake,
         },
         {
           icon: "component:keboola.wr-google-sheet",

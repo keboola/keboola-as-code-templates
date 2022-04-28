@@ -6,6 +6,7 @@
     type: "string",
     kind: "input",
     rules: "required",
+    default: "keboola.west-europe.azure.snowflakecomputing.com",
   },
   {
     id: "wr-snowflake-blob-storage-db-port",
