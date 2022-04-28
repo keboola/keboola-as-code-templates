@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".opportunity_snapshot",
+    tableId: "out.c-crm-wr-"+InstanceIdShort()+".opportunity_snapshot",
     dbName: "opportunity_snapshot",
     incremental: false,
     primaryKey: [
@@ -166,8 +166,8 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".opportunity_snapshot",
-          destination: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".opportunity_snapshot.csv",
+          source: "out.c-crm-wr-"+InstanceIdShort()+".opportunity_snapshot",
+          destination: "out.c-crm-wr-"+InstanceIdShort()+".opportunity_snapshot.csv",
           columns: [
             "opportunity_id",
             "snapshot_date",

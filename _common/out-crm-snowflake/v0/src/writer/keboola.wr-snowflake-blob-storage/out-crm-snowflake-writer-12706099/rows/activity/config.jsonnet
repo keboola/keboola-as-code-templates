@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".activity",
+    tableId: "out.c-crm-wr-"+InstanceIdShort()+".activity",
     dbName: "activity",
     incremental: false,
     primaryKey: [
@@ -69,8 +69,8 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".activity",
-          destination: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".activity.csv",
+          source: "out.c-crm-wr-"+InstanceIdShort()+".activity",
+          destination: "out.c-crm-wr-"+InstanceIdShort()+".activity.csv",
           columns: [
             "activity_id",
             "employee_id",

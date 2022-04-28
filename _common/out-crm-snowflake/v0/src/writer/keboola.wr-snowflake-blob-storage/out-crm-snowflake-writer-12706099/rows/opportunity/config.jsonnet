@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".opportunity",
+    tableId: "out.c-crm-wr-"+InstanceIdShort()+".opportunity",
     dbName: "opportunity",
     incremental: false,
     primaryKey: [
@@ -141,8 +141,8 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".opportunity",
-          destination: "out.c-crm-wr-"+ConfigId("in-crm-hubspot-extractor-7513249")+".opportunity.csv",
+          source: "out.c-crm-wr-"+InstanceIdShort()+".opportunity",
+          destination: "out.c-crm-wr-"+InstanceIdShort()+".opportunity.csv",
           columns: [
             "opportunity_id",
             "company_id",

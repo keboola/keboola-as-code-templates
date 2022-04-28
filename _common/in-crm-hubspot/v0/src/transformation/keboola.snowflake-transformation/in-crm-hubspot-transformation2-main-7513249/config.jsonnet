@@ -4,7 +4,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".company",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".company",
           primary_key: [
             "company_id",
           ],
@@ -15,7 +15,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".contact",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".contact",
           source: "out_contact",
           primary_key: [
             "contact_id",
@@ -26,7 +26,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".employee",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".employee",
           source: "out_employee",
           primary_key: [
             "employee_id",
@@ -37,7 +37,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".opportunity",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".opportunity",
           source: "out_opportunity",
           primary_key: [
             "opportunity_id",
@@ -48,7 +48,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".opportunity_snapshot",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity_snapshot",
           source: "out_opportunity_snapshot",
           primary_key: [
             "opportunity_id",
@@ -60,7 +60,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".activity",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".activity",
           source: "out_activity",
           primary_key: [
             "activity_id",
@@ -71,7 +71,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".opportunity_contact",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".opportunity_contact",
           source: "out_opportunity_contact",
           primary_key: [
             "opportunity_contact_id",
@@ -82,7 +82,7 @@
     input: {
       tables: [
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".activities",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".activities",
           destination: "activities",
           where_column: "",
           where_values: [],
@@ -90,7 +90,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".companies",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".companies",
           destination: "companies",
           where_column: "",
           where_values: [],
@@ -98,7 +98,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".contacts",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".contacts",
           destination: "contacts",
           where_column: "",
           where_values: [],
@@ -106,7 +106,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".deals",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".deals",
           destination: "deals",
           where_column: "",
           where_values: [],
@@ -114,7 +114,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".deals_companies",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".deals_companies",
           destination: "deals_companies",
           where_column: "",
           where_values: [],
@@ -122,7 +122,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".deals_contacts_list",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".deals_contacts_list",
           destination: "deals_contacts_list",
           where_column: "",
           where_values: [],
@@ -130,7 +130,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".owners",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".owners",
           destination: "owners",
           where_column: "",
           where_values: [],
@@ -138,7 +138,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".pipelines",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".pipelines",
           destination: "pipelines",
           where_column: "",
           where_values: [],
@@ -146,7 +146,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".stages",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".stages",
           destination: "stages",
           where_column: "",
           where_values: [],

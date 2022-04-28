@@ -4,7 +4,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-crm-wr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".opportunity_snapshot",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".opportunity_snapshot",
           source: "out_opportunity_snapshot",
           primary_key: [
             "opportunity_id",
@@ -20,7 +20,7 @@
     input: {
       tables: [
         {
-          source: "out.c-crm-tr-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".opportunity_snapshot",
+          source: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity_snapshot",
           destination: "opportunity_snapshot",
           where_column: "",
           where_values: [],
