@@ -1,5 +1,5 @@
 {
-  configurations: [
+  configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("keboola-ecommerce-shopify-orchestration-10697799"),
@@ -17,18 +17,21 @@
       id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables-10697799"),
       path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation1-prepare-input-tables-10697799",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation-10697799"),
       path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation2-data-preparation-10697799",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis-10697799"),
       path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation3-rfm-analysis-10697799",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
     },
     if Input("google-sheet-checkbox") == true then
     {
@@ -36,8 +39,8 @@
       id: ConfigId("out-ecommerce-gsheet-writer-10697799"),
       path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
       rows: [],
-    }
-    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    },
+    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-ecommerce-snowflake-writer-10697799"),
@@ -89,5 +92,5 @@
         },
       ],
     },
-  ],
+  ],)
 }
