@@ -1,5 +1,5 @@
 {
-  configurations: [
+  configurations: std.filter(function(v) v != null, [
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("thoughtspot-crm-hubspot-orchestration-10708760"),
@@ -17,6 +17,7 @@
       id: ConfigId("in-thoughtspot-hubspot-transformation-data-preparation-10708760"),
       path: "<common>/in-thoughtspot-hubspot/v0/src/transformation/keboola.snowflake-transformation/in-thoughtspot-hubspot-transformation-data-preparation-10708760",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-CRM-HUBSPOT]"}
     },
     if std.length(Input("wr-google-bigquery-v2-service-account-private-key")) > 0 then
     {
@@ -89,8 +90,8 @@
           path: "rows/hubspot-owner",
         },
       ],
-    }
-    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    },
+    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760"),
@@ -162,5 +163,5 @@
         },
       ],
     },
-  ],
+  ],)
 }

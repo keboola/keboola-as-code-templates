@@ -48,6 +48,18 @@
         },
       ],
     },
+    {   
+      description: "Snowflake Transformation",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformation",
+          inputs: [],
+        },
+      ]
+    },
     {
       description: "Configure your credentials for writer.",
       required: "optional",
