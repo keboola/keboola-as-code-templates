@@ -5,7 +5,6 @@
       description: "Insert your API Token.",
       type: "string",
       kind: "hidden",
-      rules: "required",
     },
     {
       id: "ex-hubspot-crm-period-from",
