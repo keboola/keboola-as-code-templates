@@ -30,6 +30,5 @@
     type: "string",
     kind: "hidden",
     rules: "required",
-    default: "Security Token",
   },
 ]

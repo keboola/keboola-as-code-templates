@@ -18,7 +18,7 @@ local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
     },
     {
       description: "Writer",
-      required: "exactlyOne",
+      required: "optional",
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
