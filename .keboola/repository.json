@@ -5,7 +5,7 @@
       "id": "keboola-crm-hubspot",
       "icon": "common:settings",
       "name": "KEBOOLA-CRM-HUBSPOT",
-      "description": "This is an end to end flow which is getting data from Hubspot and transform them so you can use them for visualisation in your BI tool or anywhere you want (currently into a Google sheet and snowflake).",
+      "description": "Get your data from Hubspot and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
       "path": "keboola-crm-hubspot",
       "versions": [
         {
@@ -26,7 +26,7 @@
       "id": "keboola-crm-salesforce",
       "icon": "common:settings",
       "name": "KEBOOLA-CRM-SALESFORCE",
-      "description": "This is an end to end flow which is getting data from salesforce and transform them so you can use them for visualisation in your BI tool or anywhere you want.",
+      "description": "Get your data from Salesforce and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
       "path": "keboola-crm-salesforce",
       "versions": [
         {
@@ -47,7 +47,7 @@
       "id": "keboola-ecommerce-shopify",
       "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPIFY",
-      "description": "This is an end to end flow which is getting data from Shopify and transform them so you can use them for visualisation in your BI tool or anywhere you want. ",
+      "description": "Get your data from Shopify and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
       "path": "keboola-ecommerce-shopify",
       "versions": [
         {
@@ -69,7 +69,7 @@
       "id": "keboola-ecommerce-shoptet",
       "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPTET",
-      "description": "This is an end to end flow which is getting data from Shoptet and transform them so you can use them for visualisation in your BI tool or anywhere you want. ",
+      "description": "Get your data from Shoptet and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
       "path": "keboola-ecommerce-shoptet",
       "versions": [
         {
@@ -90,7 +90,7 @@
       "id": "thoughtspot-analytics-googleanalytics",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS",
-      "description": "This is an end to end flow for getting data from Google Analytics, transforming them and using them in SpotApp for visualisatins.",
+      "description": "Get your data from Google Analytics and transform them so you can use them for visualisation in SpotApp.",
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -105,7 +105,7 @@
       "id": "thoughtspot-crm-hubspot",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-CRM-HUBSPOT",
-      "description": "This is an end to end flow for getting data from Hubspot, transforming them and visualising them in spotApp.",
+      "description": "Get your data from Hubspot and transform them so you can use them for visualisation in SpotApp.",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -120,7 +120,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-ECOMMERCE-SHOPIFY",
-      "description": "This is an end to end flow which is getting data from Shopify and transform them so you can use them for visualisation in spotApp.",
+      "description": "Get your data from Shopify and transform them so you can use them for visualisation in SpotApp.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
