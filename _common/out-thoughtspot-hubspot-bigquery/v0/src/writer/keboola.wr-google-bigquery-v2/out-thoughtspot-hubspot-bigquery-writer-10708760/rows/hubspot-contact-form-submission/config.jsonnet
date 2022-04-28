@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_CONTACT_FORM_SUBMISSION",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_CONTACT_FORM_SUBMISSION.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CONTACT_FORM_SUBMISSION",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CONTACT_FORM_SUBMISSION.csv",
           changed_since: "",
           columns: [
             "SUBMITTED_AT",
@@ -22,7 +22,7 @@
     tables: [
       {
         dbName: "HUBSPOT_CONTACT_FORM_SUBMISSION",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_CONTACT_FORM_SUBMISSION",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CONTACT_FORM_SUBMISSION",
         incremental: false,
         items: [
           {

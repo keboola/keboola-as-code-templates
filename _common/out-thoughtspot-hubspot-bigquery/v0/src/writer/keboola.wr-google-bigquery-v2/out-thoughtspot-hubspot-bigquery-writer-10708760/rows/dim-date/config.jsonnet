@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".DIM_DATE",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".DIM_DATE.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".DIM_DATE",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".DIM_DATE.csv",
           changed_since: "",
           columns: [
             "DATE_ORDER",
@@ -18,7 +18,7 @@
     tables: [
       {
         dbName: "DIM_DATE",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".DIM_DATE",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".DIM_DATE",
         incremental: false,
         items: [
           {

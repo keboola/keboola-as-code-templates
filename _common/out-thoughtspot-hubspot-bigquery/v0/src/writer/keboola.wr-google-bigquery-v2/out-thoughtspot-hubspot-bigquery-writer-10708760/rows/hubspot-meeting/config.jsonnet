@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_MEETING",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_MEETING.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MEETING",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MEETING.csv",
           changed_since: "",
           columns: [
             "START_TIME",
@@ -29,7 +29,7 @@
     tables: [
       {
         dbName: "HUBSPOT_MEETING",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_MEETING",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MEETING",
         incremental: false,
         items: [
           {

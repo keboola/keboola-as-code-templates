@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_OWNER",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_OWNER",
     dbName: "HUBSPOT_OWNER",
     incremental: false,
     primaryKey: [],
@@ -59,8 +59,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_OWNER",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_OWNER.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_OWNER",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_OWNER.csv",
           columns: [
             "ID",
             "EMAIL",

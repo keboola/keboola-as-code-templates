@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_EMAIL",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_EMAIL.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_EMAIL",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_EMAIL.csv",
           changed_since: "",
           columns: [
             "HTML",
@@ -31,7 +31,7 @@
     tables: [
       {
         dbName: "HUBSPOT_EMAIL",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_EMAIL",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_EMAIL",
         incremental: false,
         items: [
           {

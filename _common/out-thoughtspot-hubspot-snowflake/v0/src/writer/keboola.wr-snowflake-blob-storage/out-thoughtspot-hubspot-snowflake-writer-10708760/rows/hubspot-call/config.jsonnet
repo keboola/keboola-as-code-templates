@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_CALL",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CALL",
     dbName: "HUBSPOT_CALL",
     incremental: false,
     primaryKey: [],
@@ -91,8 +91,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_CALL",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_CALL.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CALL",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CALL.csv",
           columns: [
             "BODY",
             "TITLE",

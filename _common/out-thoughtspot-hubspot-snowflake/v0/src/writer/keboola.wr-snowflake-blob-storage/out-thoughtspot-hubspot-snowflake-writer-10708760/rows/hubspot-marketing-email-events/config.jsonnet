@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
     dbName: "HUBSPOT_MARKETING_EMAIL_EVENTS",
     incremental: false,
     primaryKey: [],
@@ -235,8 +235,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS.csv",
           columns: [
             "APP_ID",
             "APP_NAME",

@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_FORMS",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_FORMS.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_FORMS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_FORMS.csv",
           changed_since: "",
           columns: [
             "GUID",
@@ -21,7 +21,7 @@
     tables: [
       {
         dbName: "HUBSPOT_FORMS",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_FORMS",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_FORMS",
         incremental: false,
         items: [
           {

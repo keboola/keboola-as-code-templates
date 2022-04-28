@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL",
     dbName: "HUBSPOT_MARKETING_EMAIL",
     incremental: false,
     primaryKey: [],
@@ -187,8 +187,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL.csv",
           columns: [
             "EMAIL_URL",
             "DATE_CREATED",

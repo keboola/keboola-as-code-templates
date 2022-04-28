@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS.csv",
           changed_since: "",
           columns: [
             "APP_ID",
@@ -44,7 +44,7 @@
     tables: [
       {
         dbName: "HUBSPOT_MARKETING_EMAIL_EVENTS",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
         incremental: false,
         items: [
           {

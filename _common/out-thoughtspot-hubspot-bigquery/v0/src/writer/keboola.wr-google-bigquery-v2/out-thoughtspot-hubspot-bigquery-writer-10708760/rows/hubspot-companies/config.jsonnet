@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_COMPANIES",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_COMPANIES.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES.csv",
           changed_since: "",
           columns: [
             "ID",
@@ -38,7 +38,7 @@
     tables: [
       {
         dbName: "HUBSPOT_COMPANIES",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760") + ".HUBSPOT_COMPANIES",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES",
         incremental: false,
         items: [
           {

@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
     dbName: "HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
     incremental: false,
     primaryKey: [],
@@ -27,8 +27,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE.csv",
           columns: [
             "CAMPAIGN_ID",
             "DATE_CAMPAIGN_SENT",

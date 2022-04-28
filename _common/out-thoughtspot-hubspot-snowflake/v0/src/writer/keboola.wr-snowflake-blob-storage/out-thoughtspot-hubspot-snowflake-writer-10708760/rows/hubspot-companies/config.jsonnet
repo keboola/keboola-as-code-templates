@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_COMPANIES",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES",
     dbName: "HUBSPOT_COMPANIES",
     incremental: false,
     primaryKey: [],
@@ -187,8 +187,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_COMPANIES",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760") + ".HUBSPOT_COMPANIES.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES.csv",
           columns: [
             "ID",
             "INDUSTRY",

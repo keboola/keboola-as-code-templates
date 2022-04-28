@@ -1,31 +1,34 @@
 [
   {
     id: "wr-google-bigquery-v2-service-account-private-key",
-    name: "Service account Private key",
-    description: "",
+    name: "Private key",
+    description: "Add your service account private key.",
     type: "string",
     kind: "hidden",
     rules: "required",
   },
   {
     id: "wr-google-bigquery-v2-service-account-client-email",
-    name: "Service account Client email",
-    description: "",
+    name: "Client email",
+    description: "Add your service account client email.",
     type: "string",
-    kind: "input"
+    kind: "input",
+    default: "email",
   },
   {
     id: "wr-google-bigquery-v2-service-account-private-key-id",
-    name: "Service account Private key id",
-    description: "",
+    name: "Private Key ID",
+    description: "Add your service account private key ID.",
     type: "string",
-    kind: "input"
+    kind: "input",
+    default: "Private key id",
   },
   {
     id: "wr-google-bigquery-v2-service-account-project-id",
-    name: "Service account Project id",
-    description: "",
+    name: "Project ID",
+    description: "Add your service account project ID.",
     type: "string",
-    kind: "input"
+    kind: "input",
+    default: "Project id",
   },
 ]

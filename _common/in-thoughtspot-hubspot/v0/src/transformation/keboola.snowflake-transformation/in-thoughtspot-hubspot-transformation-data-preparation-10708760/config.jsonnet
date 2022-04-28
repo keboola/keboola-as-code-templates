@@ -184,67 +184,67 @@
     output: {
       tables: [
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_CALL",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CALL",
           source: "CALL",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_EMAIL",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_EMAIL",
           source: "EMAIL",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_CONTACTS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CONTACTS",
           source: "CONTACTS",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_COMPANIES",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANIES",
           source: "COMPANIES",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_COMPANY_CONTACT",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_COMPANY_CONTACT",
           source: "COMPANY_CONTACT",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_MEETING",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MEETING",
           source: "MEETING",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL_EVENTS",
           source: "MARKETING_EMAIL_EVENTS",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_CAMPAIGN_SENT_DATE",
           source: "MARKETING_CAMPAIGN_SENT_DATE",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_MARKETING_EMAIL",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_MARKETING_EMAIL",
           source: "MARKETING_EMAIL",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_DEALS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_DEALS",
           source: "DEALS",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_DEAL_COMPANY",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_DEAL_COMPANY",
           source: "DEAL_COMPANY",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_DEAL_CONTACT",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_DEAL_CONTACT",
           source: "DEAL_CONTACT",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_FORMS",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_FORMS",
           source: "FORMS",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_CONTACT_FORM_SUBMISSION",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_CONTACT_FORM_SUBMISSION",
           source: "CONTACT_FORM_SUBMISSION",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".HUBSPOT_OWNER",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".HUBSPOT_OWNER",
           source: "OWNER",
         },
         {
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".DIM_DATE",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".DIM_DATE",
           source: "DIM_DATE",
           primary_key: [],
         },
