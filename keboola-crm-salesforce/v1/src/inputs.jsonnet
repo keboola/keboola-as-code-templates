@@ -16,6 +16,18 @@ local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
         },
       ],
     },
+    {   
+      description: "Snowflake Transformations",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformations",
+          inputs: [],
+        },
+      ]
+    },
     {
       description: "Writer",
       required: "optional",

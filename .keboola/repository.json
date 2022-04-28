@@ -40,12 +40,6 @@
           "description": "",
           "stable": false,
           "path": "v1"
-        },
-        {
-          "version": "1.0.2",
-          "description": "",
-          "stable": false,
-          "path": "v2"
         }
       ]
     },

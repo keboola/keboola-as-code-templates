@@ -1,5 +1,5 @@
 {
-  configurations: [
+  configurations: std.filter(function(v) v != null, [
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("keboola-crm-salesforce-orchestration-12706099"),
@@ -50,18 +50,21 @@
       id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation-12706099"),
       path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation1-input-tables-creation-12706099",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-CRM-SALESFORCE]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-crm-salesforce-transformation2-main-12706099"),
       path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main-12706099",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-CRM-SALESFORCE]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-crm-salesforce-transformation3-snapshots-12706099"),
       path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation3-snapshots-12706099",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-CRM-SALESFORCE]"}
     },
     if Input("google-sheet-checkbox") == true then
     {
@@ -70,7 +73,7 @@
       path: "<common>/out-crm-gsheet/v0/src/writer/keboola.wr-google-sheets/out-crm-gsheet-writer-7513249",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-crm-snowflake-writer-12706099"),
@@ -106,5 +109,5 @@
         },
       ],
     },
-  ],
+  ],)
 }
