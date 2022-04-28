@@ -1,6 +1,6 @@
 # THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS
 
-This is an end to end flow for getting data from Google Analytics, transforming and loading them. After that can be use BI tool for visualisationů
+This is an end to end flow for getting data from Google Analytics, transforming them and using them in SpotApp for visualisatins.
 
 ## Steps to make:
 1. Setup profile in extractor

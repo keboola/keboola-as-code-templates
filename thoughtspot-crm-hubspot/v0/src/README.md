@@ -1,6 +1,6 @@
 # THOUGHTSPOT-CRM-HUBSPOT
 
-This is an end to end flow for getting data from Hubspot and transforming them.
+This is an end to end flow for getting data from Hubspot, transforming them and visualising them in spotApp.
 
 ## Steps to make:
 1. Setup profile in extractor

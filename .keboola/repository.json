@@ -5,7 +5,7 @@
       "id": "keboola-crm-hubspot",
       "icon": "common:settings",
       "name": "KEBOOLA-CRM-HUBSPOT",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow which is getting data from Hubspot and transform them so you can use them for visualisation in your BI tool or anywhere you want (currently into a Google sheet and snowflake).",
       "path": "keboola-crm-hubspot",
       "versions": [
         {
@@ -26,7 +26,7 @@
       "id": "keboola-crm-salesforce",
       "icon": "common:settings",
       "name": "KEBOOLA-CRM-SALESFORCE",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow which is getting data from salesforce and transform them so you can use them for visualisation in your BI tool or anywhere you want.",
       "path": "keboola-crm-salesforce",
       "versions": [
         {
@@ -47,7 +47,7 @@
       "id": "keboola-ecommerce-shopify",
       "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPIFY",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow which is getting data from Shopify and transform them so you can use them for visualisation in your BI tool or anywhere you want. ",
       "path": "keboola-ecommerce-shopify",
       "versions": [
         {
@@ -69,7 +69,7 @@
       "id": "keboola-ecommerce-shoptet",
       "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPTET",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow which is getting data from Shoptet and transform them so you can use them for visualisation in your BI tool or anywhere you want. ",
       "path": "keboola-ecommerce-shoptet",
       "versions": [
         {
@@ -90,7 +90,7 @@
       "id": "thoughtspot-analytics-googleanalytics",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow for getting data from Google Analytics, transforming them and using them in SpotApp for visualisatins.",
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -105,7 +105,7 @@
       "id": "thoughtspot-crm-hubspot",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-CRM-HUBSPOT",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow for getting data from Hubspot, transforming them and visualising them in spotApp.",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -120,7 +120,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-ECOMMERCE-SHOPIFY",
-      "description": "Full workflow to ...",
+      "description": "This is an end to end flow which is getting data from Shopify and transform them so you can use them for visualisation in spotApp.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
