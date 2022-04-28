@@ -1,3 +1,0 @@
-{
-  name: "COMPANY_CONTACT",
-}

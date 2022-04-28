@@ -1,48 +1,28 @@
 {
   configurations: [
     {
-      componentId: "keboola.ex-google-analytics-v4",
-      id: ConfigId("in-thoughtspot-gaa-extractor-15471164"),
-      path: "extractor/keboola.ex-google-analytics-v4/in-thoughtspot-gaa-extractor-15471164",
-      rows: [],
-    },
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("in-thoughtspot-gaa-orchestration-bdm-creation-15471164"),
-      path: "other/keboola.orchestrator/in-thoughtspot-gaa-orchestration-bdm-creation-15471164",
-      rows: [],
-    },
-    {
       componentId: "keboola.orchestrator",
       id: ConfigId("thoughtspot-analytics-googleanalytics-orchestration-15471164"),
       path: "other/keboola.orchestrator/thoughtspot-analytics-googleanalytics-orchestration-15471164",
       rows: [],
     },
     {
+      componentId: "keboola.ex-google-analytics-v4",
+      id: ConfigId("in-thoughtspot-gaa-extractor-15471164"),
+      path: "<common>/in-thoughtspot-googleanalytics/v0/src/extractor/keboola.ex-google-analytics-v4/in-thoughtspot-gaa-extractor-15471164",
+      rows: [],
+    },
+    {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-thoughtspot-gaa-transformation-15471164"),
-      path: "transformation/keboola.snowflake-transformation/in-thoughtspot-gaa-transformation-15471164",
+      path: "<common>/in-thoughtspot-googleanalytics/v0/src/transformation/keboola.snowflake-transformation/in-thoughtspot-gaa-transformation-15471164",
       rows: [],
     },
-    if std.member(Input("select-writer"), "big-query") then
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-thoughtspot-gaa-bigquery-orchestration-bdm-usage-15471164"),
-      path: "other/keboola.orchestrator/out-thoughtspot-gaa-bigquery-orchestration-bdm-usage-15471164",
-      rows: [],
-    }
-    else if std.member(Input("select-writer"), "snowflake-db") then
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-thoughtspot-gaa-snowflake-orchestration-bdm-usage-15471164"),
-      path: "other/keboola.orchestrator/out-thoughtspot-gaa-snowflake-orchestration-bdm-usage-15471164",
-      rows: [],
-    },
-    if std.member(Input("select-writer"), "big-query") then
+    if std.length(Input("wr-google-bigquery-v2-service-account-private-key")) > 0 then
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164"),
-      path: "writer/keboola.wr-google-bigquery-v2/out-thoughtspot-gaa-bigquery-writer-15471164",
+      path: "<common>/out-thoughtspot-googleanalytics-bigquery/v0/src/writer/keboola.wr-google-bigquery-v2/out-thoughtspot-gaa-bigquery-writer-15471164",
       rows: [
         {
           id: ConfigRowId("ga-ad-analytics"),
@@ -70,11 +50,11 @@
         },
       ],
     }
-    else if std.member(Input("select-writer"), "snowflake-db") then
+    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer-15471164",
+      path: "<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer-15471164",
       rows: [
         {
           id: ConfigRowId("ga-ad-analytics"),

@@ -1,67 +1,40 @@
 {
   configurations: [
-    {
-      componentId: "kds-team.ex-shopify",
-      id: ConfigId("in-ecommerce-shopify-extractor-10697799"),
-      path: "extractor/kds-team.ex-shopify/in-ecommerce-shopify-extractor-10697799",
-      rows: [],
-    },
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("in-ecommerce-shopify-orchestration-bdm-creation-10697799"),
-      path: "other/keboola.orchestrator/in-ecommerce-shopify-orchestration-bdm-creation-10697799",
-      rows: [],
-    },
-    if std.member(Input("select-writer"), "google-sheet") then
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-gsheet-orchestration-bdm-usage-10697799"),
-      path: "other/keboola.orchestrator/out-ecommerce-gsheet-orchestration-bdm-usage-10697799",
-      rows: [],
-    }
-    else if std.member(Input("select-writer"), "big-query") then
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-bigquery-orchestration-bdm-usage-10697799"),
-      path: "other/keboola.orchestrator/out-ecommerce-bigquery-orchestration-bdm-usage-10697799",
-      rows: [],
-    }
-    else if std.member(Input("select-writer"), "snowflake-db") then
-    {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-snowflake-orchestration-bdm-usage-10697799"),
-      path: "other/keboola.orchestrator/out-ecommerce-snowflake-orchestration-bdm-usage-10697799",
-      rows: [],
-    },
-    {
+     {
       componentId: "keboola.orchestrator",
       id: ConfigId("thoughtspot-ecommerce-shopify-orchestration-10697799"),
       path: "other/keboola.orchestrator/thoughtspot-ecommerce-shopify-orchestration-10697799",
       rows: [],
     },
     {
+      componentId: "kds-team.ex-shopify",
+      id: ConfigId("in-ecommerce-shopify-extractor-10697799"),
+      path: "<common>/in-ecommerce-shopify/v0/src/extractor/kds-team.ex-shopify/in-ecommerce-shopify-extractor-10697799",
+      rows: [],
+    },
+    {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables-10697799"),
-      path: "transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation1-prepare-input-tables-10697799",
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation1-prepare-input-tables-10697799",
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation-10697799"),
-      path: "transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation2-data-preparation-10697799",
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation2-data-preparation-10697799",
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis-10697799"),
-      path: "transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation3-rfm-analysis-10697799",
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation3-rfm-analysis-10697799",
       rows: [],
     },
-    if std.member(Input("select-writer"), "big-query") then
+    if std.length(Input("wr-google-bigquery-v2-service-account-private-key")) > 0 then
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-ecommerce-bigquery-writer-10697799"),
-      path: "writer/keboola.wr-google-bigquery-v2/out-ecommerce-bigquery-writer-10697799",
+      path: "<common>/out-ecommerce-bigquery/v0/src/writer/keboola.wr-google-bigquery-v2/out-ecommerce-bigquery-writer-10697799",
       rows: [
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count"),
@@ -109,18 +82,18 @@
         },
       ],
     }
-    else if std.member(Input("select-writer"), "google-sheet") then
+    else if Input("google-sheet-checkbox") == true then
     {
       componentId: "keboola.wr-google-sheets",
       id: ConfigId("out-ecommerce-gsheet-writer-10697799"),
-      path: "writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
+      path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
       rows: [],
     }
-    else if std.member(Input("select-writer"), "snowflake-db") then
+    else if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-ecommerce-snowflake-writer-10697799"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer-10697799",
+      path: "<common>/out-ecommerce-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer-10697799",
       rows: [
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count-001"),

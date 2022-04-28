@@ -1,3 +1,0 @@
-{
-  name: "HS_CONTACTS",
-}
