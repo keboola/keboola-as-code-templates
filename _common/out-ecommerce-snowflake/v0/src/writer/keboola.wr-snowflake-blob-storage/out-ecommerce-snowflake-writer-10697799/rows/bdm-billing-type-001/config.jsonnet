@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.bdm_billing_type",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_billing_type",
     dbName: "bdm_billing_type",
     incremental: false,
     primaryKey: [
@@ -29,8 +29,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.bdm_billing_type",
-          destination: "out.c-ecommerce-wr-10697799.bdm_billing_type.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_billing_type",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_billing_type.csv",
           columns: [
             "BILLING_TYPE_ID",
             "NAME",

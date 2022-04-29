@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.bdm_orders",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_orders",
     dbName: "bdm_orders",
     incremental: false,
     primaryKey: [
@@ -229,8 +229,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.bdm_orders",
-          destination: "out.c-ecommerce-wr-10697799.bdm_orders.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_orders",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_orders.csv",
           columns: [
             "ORDER_ID",
             "ORDER_DATE",

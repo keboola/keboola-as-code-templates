@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_products",
-          destination: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_products.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_products",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_products.csv",
           changed_since: "",
           columns: [
             "PRODUCT_ID",
@@ -35,7 +35,7 @@
     tables: [
       {
         dbName: "bdm_products",
-        tableId: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_products",
+        tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_products",
         incremental: false,
         items: [
           {

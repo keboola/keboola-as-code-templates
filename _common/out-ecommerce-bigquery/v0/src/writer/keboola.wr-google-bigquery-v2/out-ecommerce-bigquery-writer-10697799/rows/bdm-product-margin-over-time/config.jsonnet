@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_product_margin_over_time",
-          destination: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_product_margin_over_time.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_product_margin_over_time",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_product_margin_over_time.csv",
           changed_since: "",
           columns: [
             "ORDER_DATE",
@@ -19,7 +19,7 @@
     tables: [
       {
         dbName: "bdm_product_margin_over_time",
-        tableId: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_product_margin_over_time",
+        tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_product_margin_over_time",
         incremental: false,
         items: [
           {

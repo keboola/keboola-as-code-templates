@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_analyze_clv_by_order_count",
-          destination: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_analyze_clv_by_order_count.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_order_count",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_order_count.csv",
           changed_since: "",
           columns: [
             "CUSTOMER_CATEGORY_BY_ORDER_COUNT",
@@ -22,7 +22,7 @@
     tables: [
       {
         dbName: "bdm_analyze_clv_by_order_count",
-        tableId: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_analyze_clv_by_order_count",
+        tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_order_count",
         incremental: false,
         items: [
           {

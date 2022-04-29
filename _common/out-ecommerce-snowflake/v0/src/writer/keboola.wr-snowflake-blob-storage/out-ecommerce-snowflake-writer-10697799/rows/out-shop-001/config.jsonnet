@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.out_shop",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop",
     dbName: "out_shop",
     incremental: false,
     primaryKey: [],
@@ -35,8 +35,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.out_shop",
-          destination: "out.c-ecommerce-wr-10697799.out_shop.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop.csv",
           columns: [
             "NAME",
             "BASE_URL",

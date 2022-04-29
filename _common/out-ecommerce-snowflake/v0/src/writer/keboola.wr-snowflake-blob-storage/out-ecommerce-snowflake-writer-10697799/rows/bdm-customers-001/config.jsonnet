@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.bdm_customers",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_customers",
     dbName: "bdm_customers",
     incremental: false,
     primaryKey: [
@@ -93,8 +93,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.bdm_customers",
-          destination: "out.c-ecommerce-wr-10697799.bdm_customers.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_customers",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_customers.csv",
           columns: [
             "CUSTOMER_ID",
             "CUSTOMER_EMAIL_HASH",

@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.bdm_product_margin_over_time",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_product_margin_over_time",
     dbName: "bdm_product_margin_over_time",
     incremental: false,
     primaryKey: [],
@@ -35,8 +35,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.bdm_product_margin_over_time",
-          destination: "out.c-ecommerce-wr-10697799.bdm_product_margin_over_time.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_product_margin_over_time",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_product_margin_over_time.csv",
           columns: [
             "ORDER_DATE",
             "PRODUCT_ID",

@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-tr-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".bdm_orders",
+          source: "out.c-ecommerce-tr-" + InstanceIdShort() + ".bdm_orders",
           destination: "bdm_orders",
           where_column: "",
           where_values: [],
@@ -16,7 +16,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-ecommerce-wr-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".bdm_rfm",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_rfm",
           source: "RFM_FINAL",
         },
       ],

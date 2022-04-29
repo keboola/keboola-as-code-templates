@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPIFY] Extractor /" + ConfigId("in-ecommerce-shopify-extractor-10697799"),
+  name: "[IN-ECOMMERCE-SHOPIFY] Extractor /" + InstanceIdShort(),
 }

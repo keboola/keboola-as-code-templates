@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.bdm_shipping_type",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_shipping_type",
     dbName: "bdm_shipping_type",
     incremental: false,
     primaryKey: [
@@ -29,8 +29,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.bdm_shipping_type",
-          destination: "out.c-ecommerce-wr-10697799.bdm_shipping_type.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_shipping_type",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_shipping_type.csv",
           columns: [
             "SHIPPING_TYPE_ID",
             "NAME",

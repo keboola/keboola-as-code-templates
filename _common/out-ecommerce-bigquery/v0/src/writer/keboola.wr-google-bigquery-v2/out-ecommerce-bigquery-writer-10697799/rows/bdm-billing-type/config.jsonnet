@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_billing_type",
-          destination: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_billing_type.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_billing_type",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_billing_type.csv",
           changed_since: "",
           columns: [
             "BILLING_TYPE_ID",
@@ -18,7 +18,7 @@
     tables: [
       {
         dbName: "bdm_billing_type",
-        tableId: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_billing_type",
+        tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_billing_type",
         incremental: false,
         items: [
           {

@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-10697799.bdm_analyze_clv_by_order_count",
+    tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_order_count",
     dbName: "bdm_analyze_clv_by_order_count",
     incremental: false,
     primaryKey: [],
@@ -59,8 +59,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-10697799.bdm_analyze_clv_by_order_count",
-          destination: "out.c-ecommerce-wr-10697799.bdm_analyze_clv_by_order_count.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_order_count",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_order_count.csv",
           columns: [
             "CUSTOMER_CATEGORY_BY_ORDER_COUNT",
             "ORDERS",

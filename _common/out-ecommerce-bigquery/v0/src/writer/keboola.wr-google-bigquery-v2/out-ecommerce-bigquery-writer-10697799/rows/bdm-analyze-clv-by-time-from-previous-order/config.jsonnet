@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_analyze_clv_by_time_from_previous_order",
-          destination: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_analyze_clv_by_time_from_previous_order.csv",
+          source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_time_from_previous_order",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_time_from_previous_order.csv",
           changed_since: "",
           columns: [
             "TIME_FROM_PREVIOUS_ORDER",
@@ -22,7 +22,7 @@
     tables: [
       {
         dbName: "bdm_analyze_clv_by_time_from_previous_order",
-        tableId: "out.c-ecommerce-wr-" + ConfigId("out-ecommerce-bigquery-writer-10697799") + ".bdm_analyze_clv_by_time_from_previous_order",
+        tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_analyze_clv_by_time_from_previous_order",
         incremental: false,
         items: [
           {

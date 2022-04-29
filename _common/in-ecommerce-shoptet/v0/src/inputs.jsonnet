@@ -6,6 +6,7 @@
     type: "string",
     kind: "input",
     rules: "required",
+    deafult: "shop name"
   },
   {
     id: "ex-shoptet-permalink-base-url",
@@ -13,6 +14,8 @@
     description: "Your shop url. e.g. https://www.myshop.cz",
     type: "string",
     kind: "input",
+    rules: "required",
+    default: " base url"
   },
   {
     id: "ex-shoptet-permalink-orders-url",
@@ -20,6 +23,8 @@
     description: "e.g. https://www.myshop.cz/export/orders.csv?hash=XXXXX",
     type: "string",
     kind: "input",
+    rules: "required",
+    default: "order url"
   },
   {
     id: "ex-shoptet-permalink-products-url",
@@ -27,6 +32,8 @@
     description: "e.g. https://www.myshop.cz/export/products.csv?hash=XXXXX",
     type: "string",
     kind: "input",
+    rules: "required",
+    default: "products url"
   },
   {
     id: "ex-shoptet-permalink-customers-url",
@@ -34,20 +41,25 @@
     description: "e.g. https://www.myshop.cz/export/customers.csv?hash=XXXXX",
     type: "string",
     kind: "input",
+    rules: "required",
+    default: "customers url"
   },
   {
     id: "ex-shoptet-permalink-stock-url",
     name: "Stock URL",
-    description: "e.g. https://www.myshop.cz/export/stockStatistics.csv?hash=XXXXX",
+    description: "e.g. https://www.myshop.cz/export/stockStatistics.csv?hash=X",
     type: "string",
     kind: "input",
+    rules: "required",
+    default: "stock url"
   },
   {
     id: "ex-shoptet-permalink-src-charset",
     name: "File charset",
-    description: "Determines the source file charset. All files will be converted to UTF-8.",
+    description: "Source file charset. All files will be converted to UTF-8.",
     type: "string",
     kind: "input",
+    rules: "required",
     default: "windows-1250"
   },
   {
@@ -56,11 +68,12 @@
     description: "Insert source file delimiter.",
     type: "string",
     kind: "input",
+    rules: "required",
     default: ";"
   },
   {
     id: "ex-shoptet-permalink-from-date",
-    name: "Period from date [including]",
+    name: "Period from date [incl.]",
     description: "Select period from which you want to get the data.",
     type: "string",
     kind: "select",
@@ -86,7 +99,7 @@
   },
   {
     id: "ex-shoptet-permalink-to-date",
-    name: "Period to date [excluding]",
+    name: "Period to date [excl.]",
     description: "Select period to date you want to get the data.",
     type: "string",
     kind: "select",
