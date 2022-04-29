@@ -1,4 +1,8 @@
 {
+  mainConfig: {
+    componentId: "keboola.snowflake-transformation",
+    id: ConfigId("transformation"),
+  },
   configurations: [
     {
       componentId: "kds-team.ex-shopify",
