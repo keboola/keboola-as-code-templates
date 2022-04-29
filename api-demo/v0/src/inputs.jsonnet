@@ -18,6 +18,7 @@
               Type:        "string",
               Kind:        "input",
               Default:     "john",
+              Rules:       "required",
             },
             {
               Id:          "api-token",
@@ -26,6 +27,7 @@
               Type:        "string",
               Kind:        "hidden",
               Default:     "",
+              Rules:       "required,min=10",
             },
             {
               Id:          "export-description",
