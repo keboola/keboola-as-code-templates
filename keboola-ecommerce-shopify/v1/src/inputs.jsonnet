@@ -40,8 +40,6 @@ local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
           dialogName: "Snowflake Destination", 
           dialogDescription: "Data load to Snowflake DB.",
           inputs: snowflake
-          }
-        ]
         },
         {
           icon: "component:keboola.wr-google-sheet",
@@ -62,3 +60,5 @@ local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
         },
       ]
     }
+  ]
+}
