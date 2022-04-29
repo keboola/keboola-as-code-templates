@@ -33,7 +33,7 @@
       path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
       rows: [],
     },
-    if std.length(Input("wr-snowflake-blob-storage-db-host")) > 0 then
+    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-ecommerce-snowflake-writer-6031003"),
