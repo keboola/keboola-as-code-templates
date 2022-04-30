@@ -1,3 +1,3 @@
 {
-  name: "[THOUGHTSPOT-CRM-HUBSPOT] Orchestration /" + ConfigId("in-thoughtspot-hubspot-extractor-10708760"),
+  name: "[THOUGHTSPOT-CRM-HUBSPOT] Orchestration /" + InstanceIdShort(),
 }
