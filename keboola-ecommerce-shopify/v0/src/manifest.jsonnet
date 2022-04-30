@@ -180,6 +180,19 @@
       path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation-15228151",
       rows: [],
     },
-
+    if InputIsAvailable("ex-sklik-token") then
+    {
+      componentId: "keboola.ex-sklik",
+      id: ConfigId("in-ecommerce-sklik-extractor-6031007"),
+      path: "<common>/in-ecommerce-sklik/v0/src/extractor/keboola.ex-sklik/in-ecommerce-sklik-extractor-6031007",
+      rows: [],
+    },
+    if InputIsAvailable("ex-sklik-token") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-sklik-transformation-6031007"),
+      path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation-6031007",
+      rows: [],
+    },
   ],)
 }

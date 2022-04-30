@@ -5,6 +5,7 @@ local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet"
 local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
 local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
 local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet";
+local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -40,6 +41,14 @@ local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet
           dialogName: "Google Ads Data Source", 
           dialogDescription: "This extractor is getting data about Google ads insights.",
           inputs: googleads
+        },
+        {
+          icon: "component:keboola.ex-sklik",
+          name: "Sklik",
+          description: "Sklik - Data Source",
+          dialogName: "Sklik Data Source", 
+          dialogDescription: "This extractor is getting data about Sklik monthly insights and insights for the last day.",
+          inputs: sklik
         }
       ]
     },
