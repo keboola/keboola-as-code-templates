@@ -64,6 +64,7 @@ local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet"
               type: "bool",
               kind: "confirm",
               rules: "required",
+              default: true,
             },
           ],  
         },
