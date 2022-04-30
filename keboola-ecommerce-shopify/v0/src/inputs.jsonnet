@@ -17,14 +17,6 @@ local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
           dialogName: "Shopify Data Source", 
           dialogDescription: "Extractor collects data from Shopify about orders, products, inventory and customers. Use Admin API access token of your Shopify custom app. and shop id found in url, e.g. [shop_id].myshopify.com",
           inputs: shopify
-        },
-        {
-          icon: "component:keboola.ex-facebook-ads",
-          name: "Facebook Ads",
-          description: "Facebook - Data Source",
-          dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
-          inputs: facebook
         }
       ]
     },
