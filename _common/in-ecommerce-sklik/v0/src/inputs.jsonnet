@@ -2,15 +2,15 @@
   {
     id: "ex-sklik-token",
     name: "Sklik API token",
-    description: "Fill your Sklik API token. You will find it under the Account settings in Sklik.",
+    description: "Fill your Sklik API token.",
     type: "string",
     kind: "hidden",
     rules: "required",
   },
   {
     id: "ex-sklik-accounts",
-    name: "Comma separated list of accounts ids to download.",
-    description: "Fill comma separated list of accounts ids to download. You will get all accounts if empty.",
+    name: "List of accounts IDs.",
+    description: "Fill comma separated ids. Leave empty for all.",
     type: "string",
     kind: "input",
   },
