@@ -2,8 +2,8 @@
     componentId: "keboola.orchestrator",
     id: ConfigId("thoughtspot-ecommerce-shopify-orchestration-10697799"),
   },
-  configurations: std.filter(function(v) v != null, [
-     {
+  configurations: std.filter(function(v) v != null,[
+    {
       componentId: "keboola.orchestrator",
       id: ConfigId("thoughtspot-ecommerce-shopify-orchestration-10697799"),
       path: "other/keboola.orchestrator/thoughtspot-ecommerce-shopify-orchestration-10697799",
@@ -88,13 +88,6 @@
         },
       ],
     },
-    if Input("google-sheet-checkbox") == true then
-    {
-      componentId: "keboola.wr-google-sheets",
-      id: ConfigId("out-ecommerce-gsheet-writer-10697799"),
-      path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
-      rows: [],
-    },
     if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
@@ -147,5 +140,79 @@
         },
       ],
     },
-  ],)
+    if InputIsAvailable("ex-facebook-ads-api-version") then
+    {
+      componentId: "keboola.ex-facebook-ads",
+      id: ConfigId("in-ecommerce-facebook-extractor-6031001"),
+      path: "<common>/in-ecommerce-facebook/v0/src/extractor/keboola.ex-facebook-ads/in-ecommerce-facebook-extractor-6031001",
+      rows: [],
+    },
+    if InputIsAvailable("ex-facebook-ads-api-version") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-facebook-transformation-6031001"),
+      path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation-6031001",
+      rows: [],
+    },
+    if InputIsAvailable("ex-google-ads-customer-id") then
+    {
+      componentId: "keboola.ex-google-ads",
+      id: ConfigId("in-ecommerce-googleads-extractor-15228151"),
+      path: "<common>/in-ecommerce-googleads/v0/src/extractor/keboola.ex-google-ads/in-ecommerce-googleads-extractor-15228151",
+      rows: [
+        {
+          id: ConfigRowId("campaign"),
+          path: "rows/campaign",
+        },
+      ],
+    },
+    if InputIsAvailable("ex-google-ads-customer-id") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-googleads-transformation-15228151"),
+      path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation-15228151",
+      rows: [],
+    },
+    if InputIsAvailable("ex-sklik-token") then
+    {
+      componentId: "keboola.ex-sklik",
+      id: ConfigId("in-ecommerce-sklik-extractor-6031007"),
+      path: "<common>/in-ecommerce-sklik/v0/src/extractor/keboola.ex-sklik/in-ecommerce-sklik-extractor-6031007",
+      rows: [],
+    },
+    if InputIsAvailable("ex-sklik-token") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-sklik-transformation-6031007"),
+      path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation-6031007",
+      rows: [],
+    },
+    if Input("google-sheet-checkbox") == true then
+      if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("ex-facebook-ads-api-version") then
+      {
+      componentId: "keboola.wr-google-sheets",
+      id: ConfigId("out-ecommerce-gsheet-marketing-writer-6031001"),
+      path: "<common>/out-ecommerce-gsheet-marketing/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-marketing-writer-6031001",
+      rows: [],
+      }
+    ,
+    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+      if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("ex-facebook-ads-api-version") then
+        {
+          componentId: "keboola.wr-snowflake-blob-storage",
+          id: ConfigId("out-ecommerce-snowflake-marketing-writer-6031001"),
+          path: "<common>/out-ecommerce-snowflake-marketing/v0/src/writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-marketing-writer-6031001",
+          rows: [
+            {
+              id: ConfigRowId("bdm-marketing-campaign-costs"),
+              path: "rows/bdm-marketing-campaign-costs",
+            },
+            {
+              id: ConfigRowId("bdm-marketing-campaign-costs-monthly"),
+              path: "rows/bdm-marketing-campaign-costs-monthly",
+            },
+          ],
+        },
+    ],
+  )
 }
