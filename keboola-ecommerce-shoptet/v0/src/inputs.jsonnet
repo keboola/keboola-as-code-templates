@@ -1,189 +1,56 @@
+local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
+local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet";
+local shoptet = import "/<common>/in-ecommerce-shoptet/v0/src/inputs.jsonnet";
+local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
 {
-  inputs: [
+  stepsGroups: [
     {
-      id: "ex-shoptet-permalink-shop-name",
-      name: "Shop Name",
-      description: "Insert name of your shop.",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shoptet-permalink-base-url",
-      name: "Base URL",
-      description: "Your shop url. e.g. https://www.myshop.cz",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shoptet-permalink-orders-url",
-      name: "Orders URL",
-      description: "e.g. https://www.myshop.cz/export/orders.csv?hash=XXXXX",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shoptet-permalink-products-url",
-      name: "Products URL",
-      description: "e.g. https://www.myshop.cz/export/products.csv?hash=XXXXX",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shoptet-permalink-customers-url",
-      name: "Customers URL",
-      description: "e.g. https://www.myshop.cz/export/customers.csv?hash=XXXXX",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shoptet-permalink-stock-url",
-      name: "Stock URL",
-      description: "e.g. https://www.myshop.cz/export/stockStatistics.csv?hash=XXXXX",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shoptet-permalink-src-charset",
-      name: "File charset",
-      description: "Determines the source file charset. All files will be converted to UTF-8.",
-      type: "string",
-      kind: "input",
-      default: "windows-1250"
-    },
-    {
-      id: "ex-shoptet-permalink-delimiter",
-      name: "Source file delimiter",
-      description: "Insert source file delimiter.",
-      type: "string",
-      kind: "input",
-      default: ";"
-    },
-    {
-      id: "ex-shoptet-permalink-from-date",
-      name: "Period from date [including]",
-      description: "Select period from which you want to get the data.",
-      type: "string",
-      kind: "select",
-      default: '2 months ago',
-      options: [
+      description: "Configure your credentials for Shoptet extractor.",
+      required: "all",
+      steps: [
         {
-          id: '1 week ago',
-          name: '1 week ago',
+          icon: "component:kds-team.ex-shoptet",
+          name: "Shoptet",
+          description: "Shoptet - Data Source",
+          dialogName: "Shoptet Data Source", 
+          dialogDescription: "Extractor collects data from Shoptet about orders, products, inventory, and customers.",
+          inputs: shoptet
+        }
+      ]
+    },
+    {   
+      description: "Snowflake Transformations",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformations",
+          inputs: [],
+        },
+      ]
+    },
+    {
+      description: "Configure your credentials for writer.",
+      required: "optional",
+      steps: [
+        {
+          icon: "component:keboola.wr-snowflake-blob-storage",
+          name: "Snowflake Destination",
+          description: "Load to data into snowflake",
+          dialogName: "Snowflake Destination", 
+          dialogDescription: "Data load to Snowflake DB.",
+          inputs: snowflake
         },
         {
-          id: '2 weeks ago',
-          name: '2 weeks ago',
+          icon: "component:keboola.wr-google-sheet",
+          name: "Google sheet Destination",
+          description: "Load to data into google sheet",
+          dialogName: "Google Sheet Destination", 
+          dialogDescription: "Data load to Google Sheet.",
+          inputs: googlesheet,  
         },
-        {
-          id: '1 month ago',
-          name: '1 month ago',
-        },
-        {
-          id: '2 months ago',
-          name: '2 months ago',
-        },
-      ],
-    },
-    {
-      id: "ex-shoptet-permalink-to-date",
-      name: "Period to date [excluding]",
-      description: "Select period to date you want to get the data.",
-      type: "string",
-      kind: "select",
-      default: 'now',
-      options: [
-        {
-          id: 'now',
-          name: 'now',
-        },
-        {
-          id: '1 day ago',
-          name: '1 day ago',
-        },
-        {
-          id: '1 week ago',
-          name: '1 week ago',
-        },
-      ],
-    },
-    {
-      id: "select-writer",
-      name: "Select writer",
-      description: "Select where do you want to load data from this template. You can choose none, one or more options.",
-      type: "string",
-      kind: "select",
-      options: [
-        {
-          id: 'google-sheet',
-          name: 'Google Sheet',
-        },
-        {
-          id: 'snowflake-db',
-          name: 'Snowflake Database',
-        },
-      ],
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-host",
-      name: "Hostname",
-      description: "Insert database hostname.",
-      type: "string",
-      kind: "input",
-      default: "keboola.west-europe.azure.snowflakecomputing.com",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-port",
-      name: "Port",
-      description: "Insert database port number.",
-      type: "string",
-      kind: "input",
-      default: "443",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-user",
-      name: "Username",
-      description: "Insert database username.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_WORKSPACE_13631041",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-password",
-      name: "Password",
-      description: "Insert your password to the database.",
-      type: "string",
-      kind: "hidden",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-database",
-      name: "Database Name",
-      description: "Insert name of your database.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_6518",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-schema",
-      name: "Schema",
-      description: "Insert database schema.",
-      type: "string",
-      kind: "input",
-      default: "WORKSPACE_13631041",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-warehouse",
-      name: "Warehouse",
-      description: "Insert database warehouse.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_PROD",
-      showif: "[select-writer] == 'snowflake-db'",
+      ]
     },
   ],
 }

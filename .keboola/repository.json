@@ -62,12 +62,6 @@
           "description": "",
           "stable": false,
           "path": "v0"
-        },
-        {
-          "version": "1.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v1"
         }
       ]
     },
