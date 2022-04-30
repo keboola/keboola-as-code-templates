@@ -1,13 +1,13 @@
 {
   parameters: {
-    domain: "https://www.lantzmetall.se/",
-    date_to: "1 day ago",
+    domain: Input("gsc-domain"),
+    date_to: Input("gsc-to"),
     date_range: "Custom",
     out_table_name: "raw_search_console",
     search_type: "web",
     endpoint: "Search analytics",
     filter_groups: [],
-    date_from: "1.1.2022",
+    date_from: Input("gsc-from"),
     loading_options: {
       incremental: 0,
     },

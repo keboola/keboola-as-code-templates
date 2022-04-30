@@ -86,7 +86,7 @@
         },
       ],
     },
-    if InputIsAvailable("google-search-console-checkbox") then
+    if InputIsAvailable("gsc-domain") then
     {
       componentId: "kds-team.ex-google-search-console",
       id: ConfigId("in-thoughtspot-googleanalytics-searchconsole-extractor-16240909"),
@@ -98,7 +98,7 @@
         },
       ],
     },
-    if InputIsAvailable("google-search-console-checkbox") then
+    if InputIsAvailable("gsc-domain") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-thoughtspot-googleanalytics-searchconsole-transformation-16240909"),
