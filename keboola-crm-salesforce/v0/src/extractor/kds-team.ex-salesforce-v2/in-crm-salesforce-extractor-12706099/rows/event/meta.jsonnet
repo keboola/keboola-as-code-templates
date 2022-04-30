@@ -1,4 +1,0 @@
-{
-  name: "Event",
-  isDisabled: false,
-}

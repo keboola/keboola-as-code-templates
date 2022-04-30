@@ -1,112 +1,63 @@
+local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
 {
-  inputs: [
+  stepsGroups: [
     {
-      id: "ex-salesforce-v2-api-version",
-      name: "API version",
-      description: "Specify the version of API you want to extract data from.",
-      type: "string",
-      kind: "input",
-      default: "42.0"
-    },
-    {
-      id: "ex-salesforce-v2-username",
-      name: "Login Name",
-      description: "Insert your login name for Salesforce.",
-      type: "string",
-      kind: "input"
-    },
-    {
-      id: "ex-salesforce-v2-password",
-      name: "Password",
-      description: "Insert your Salesforce password.",
-      type: "string",
-      kind: "hidden",
-    },
-    {
-      id: "ex-salesforce-v2-security-token",
-      name: "Security token",
-      description: "Insert your Salesforce security token.",
-      type: "string",
-      kind: "hidden",
-    },
-    {
-      id: "select-writer",
-      name: "Select writer",
-      description: "Select where do you want to load data from this template. You can choose none, one or more options.",
-      type: "string",
-      kind: "select",
-      options: [
+      description: "Configure your credentials for Salesforce extractor.",
+      required: "all",
+      steps: [
         {
-          id: 'google-sheet',
-          name: 'Google Sheet',
-        },
-        {
-          id: 'snowflake-db',
-          name: 'Snowflake Database',
+          icon: "component:kds-team.ex-salesforce-v2",
+          name: "Salesforce",
+          description: "Salesforce - Data Source",
+          dialogName: "Salesforce Data Source", 
+          dialogDescription: "This extractor is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.",
+          inputs: salesforce,
         },
       ],
     },
-    {
-      id: "wr-snowflake-blob-storage-db-host",
-      name: "Hostname",
-      description: "Insert database hostname",
-      type: "string",
-      kind: "input",
-      default: "keboola.west-europe.azure.snowflakecomputing.com",
-      showif: "[select-writer] == 'snowflake-db'",
+    {   
+      description: "Snowflake Transformations",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformations",
+          inputs: [],
+        },
+      ]
     },
     {
-      id: "wr-snowflake-blob-storage-db-port",
-      name: "Port",
-      description: "Insert database port number.",
-      type: "string",
-      kind: "input",
-      default: "443",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-user",
-      name: "Username",
-      description: "Insert database username.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_WORKSPACE_12781571",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-password",
-      name: "Database Password",
-      description: "Insert your password to the database.",
-      type: "string",
-      kind: "hidden",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-database",
-      name: "Database Name",
-      description: "Insert name of your database.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_6518",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-schema",
-      name: "Schema",
-      description: "Insert database schema.",
-      type: "string",
-      kind: "input",
-      default: "WORKSPACE_12781571",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-warehouse",
-      name: "Warehouse",
-      description: "Insert database warehouse.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_PROD",
-      showif: "[select-writer] == 'snowflake-db'",
+      description: "Writer",
+      required: "optional",
+      steps: [
+          {
+          icon: "component:keboola.wr-snowflake-blob-storage",
+          name: "Snowflake Destination",
+          description: "Load to data into snowflake",
+          dialogName: "Snowflake Destination", 
+          dialogDescription: "Data load to Snowflake DB.",
+          inputs: snowflake,
+        },
+        {
+          icon: "component:keboola.wr-google-sheet",
+          name: "Google sheet Destination",
+          description: "Load to data into google sheet",
+          dialogName: "Google Sheet Destination", 
+          dialogDescription: "Data load to Google Sheet.",
+          inputs: [
+            {
+              id: "google-sheet-checkbox",
+              name: "Google sheet destination",
+              description: "Do you want to load data into google sheet?",
+              type: "bool",
+              kind: "confirm",
+              rules: "required",
+            },
+          ],  
+        },
+      ],
     },
   ],
 }
