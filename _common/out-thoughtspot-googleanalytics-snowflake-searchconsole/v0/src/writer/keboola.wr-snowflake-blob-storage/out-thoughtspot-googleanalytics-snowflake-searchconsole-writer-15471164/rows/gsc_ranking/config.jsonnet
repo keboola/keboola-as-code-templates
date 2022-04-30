@@ -38,7 +38,7 @@
       tables: [
         {
           source: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
-          destination: "out.c-thoughtspot-bdm-" + ConfigId("out-thoughtspot-googleanalytics-snowflake-writer-searchconsole-15471164") + ".gsc_ranking.csv",
+          destination: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
           columns: [
             "page",
             "gsc_date",
