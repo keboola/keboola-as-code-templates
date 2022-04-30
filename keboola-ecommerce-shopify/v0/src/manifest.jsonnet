@@ -147,5 +147,19 @@
         },
       ],
     },
+    if InputIsAvailable("ex-facebook-ads-api-version") then
+    {
+      componentId: "keboola.ex-facebook-ads",
+      id: ConfigId("in-ecommerce-facebook-extractor-6031001"),
+      path: "<common>/in-ecommerce-facebook/v0/src/extractor/keboola.ex-facebook-ads/in-ecommerce-facebook-extractor-6031001",
+      rows: [],
+    },
+    if InputIsAvailable("ex-facebook-ads-api-version") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-facebook-transformation-6031001"),
+      path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation-6031001",
+      rows: [],
+    },
   ],)
 }

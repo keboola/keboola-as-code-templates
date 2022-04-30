@@ -3,10 +3,11 @@ local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonne
 local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
 local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
+local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Shopify extractor.",
+      description: "Extractor",
       required: "all",
       steps: [
         {
@@ -16,6 +17,14 @@ local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
           dialogName: "Shopify Data Source", 
           dialogDescription: "Extractor collects data from Shopify about orders, products, inventory and customers. Use Admin API access token of your Shopify custom app. and shop id found in url, e.g. [shop_id].myshopify.com",
           inputs: shopify
+        },
+        {
+          icon: "component:keboola.ex-facebook-ads",
+          name: "Facebook Ads",
+          description: "Facebook - Data Source",
+          dialogName: "Facebook Ads Data Source", 
+          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
+          inputs: facebook
         }
       ]
     },
