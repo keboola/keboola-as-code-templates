@@ -1,6 +1,7 @@
 local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet";
 local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
 local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
+local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -40,6 +41,14 @@ local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
           dialogName: "Snowflake Destination", 
           dialogDescription: "Data load to Snowflake DB.",
           inputs: snowflake
+        },
+        {
+          icon: "component:keboola.wr-google-bigquery-v2",
+          name: "Google Big Query",
+          description: "Big Query - Destination",
+          dialogName: "Big Query Destination", 
+          dialogDescription: "Data load to Google Big Query",
+          inputs: bigquery
         },
         {
           icon: "component:keboola.wr-google-sheet",

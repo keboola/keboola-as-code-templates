@@ -49,8 +49,8 @@ local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet
           dialogName: "Big Query Destination", 
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
-      },
-      {
+        },
+        {
           icon: "component:keboola.wr-google-sheet",
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
