@@ -15,7 +15,6 @@
     type: "string",
     kind: "input",
     default: "443",
-    rules: "required",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -25,7 +24,6 @@
     type: "string",
     kind: "input",
     default: "KEBOOLA_WORKSPACE_12781571",
-    rules: "required",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -34,7 +32,6 @@
     description: "Insert your password to the database.",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
     type: "string",
-    rules: "required",
     kind: "hidden",
   },
   {
@@ -44,7 +41,6 @@
     type: "string",
     kind: "input",
     default: "KEBOOLA_6518",
-    rules: "required",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -54,7 +50,6 @@
     type: "string",
     kind: "input",
     default: "WORKSPACE_12781571",
-    rules: "required",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -64,7 +59,6 @@
     type: "string",
     kind: "input",
     default: "KEBOOLA_PROD",
-    rules: "required",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
 ]
