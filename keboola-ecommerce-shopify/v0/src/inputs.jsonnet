@@ -1,145 +1,64 @@
+local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
+local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
 {
-  inputs: [
+  stepsGroups: [
     {
-      id: "ex-shopify-api-token",
-      name: "Admin API access token",
-      description: "Admin API access token of your Shopify custom app.",
-      type: "string",
-      kind: "hidden",
-    },
-    {
-      id: "ex-shopify-shop",
-      name: "Shop name",
-      description: "Insert your shop id found in url, e.g. [shop_id].myshopify.com.",
-      type: "string",
-      kind: "input",
-    },
-    {
-      id: "ex-shopify-period-from-date",
-      name: "Period from date [including]",
-      description: "Select period from which you want to get the data.",
-      type: "string",
-      kind: "select",
-      default: '2 months ago',
-      options: [
+      description: "Configure your credentials for Shopify extractor.",
+      required: "all",
+      steps: [
         {
-          id: '1 week ago',
-          name: '1 week ago',
+          icon: "component:kds-team.ex-shopify",
+          name: "Shopify",
+          description: "Shopify - Data Source",
+          dialogName: "Shopify Data Source", 
+          dialogDescription: "Extractor collects data from Shopify about orders, products, inventory and customers. Use Admin API access token of your Shopify custom app. and shop id found in url, e.g. [shop_id].myshopify.com",
+          inputs: shopify
+        }
+      ]
+    },
+    {   
+      description: "Snowflake Transformations",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformations",
+          inputs: [],
+        },
+      ]
+    },
+    {
+      description: "Configure your credentials for writer.",
+      required: "optional",
+      steps: [
+          {
+          icon: "component:keboola.wr-snowflake-blob-storage",
+          name: "Snowflake Destination",
+          description: "Load to data into snowflake",
+          dialogName: "Snowflake Destination", 
+          dialogDescription: "Data load to Snowflake DB.",
+          inputs: snowflake
         },
         {
-          id: '2 weeks ago',
-          name: '2 weeks ago',
+          icon: "component:keboola.wr-google-sheet",
+          name: "Google sheet Destination",
+          description: "Load to data into google sheet",
+          dialogName: "Google Sheet Destination", 
+          dialogDescription: "Data load to Google Sheet.",
+          inputs: [
+            {
+              id: "google-sheet-checkbox",
+              name: "Google sheet destination",
+              description: "Do you want to load data into google sheet?",
+              type: "bool",
+              kind: "confirm",
+              rules: "required",
+            },
+          ],  
         },
-        {
-          id: '1 month ago',
-          name: '1 month ago',
-        },
-        {
-          id: '2 months ago',
-          name: '2 months ago',
-        },
-      ],
-    },
-    {
-      id: "ex-shopify-period-to-date",
-      name: "Period to date [excluding]",
-      description: "Select period to date you want to get the data.",
-      type: "string",
-      kind: "select",
-      default: 'now',
-      options: [
-        {
-          id: 'now',
-          name: 'now',
-        },
-        {
-          id: '1 day ago',
-          name: '1 day ago',
-        },
-        {
-          id: '1 week ago',
-          name: '1 week ago',
-        },
-      ],
-    },
-    {
-      id: "select-writer",
-      name: "Select writer",
-      description: "Select where do you want to load data from this template. You can choose none, one or more options.",
-      type: "string",
-      kind: "select",
-      options: [
-        {
-          id: 'google-sheet',
-          name: 'Google Sheet',
-        },
-        {
-          id: 'snowflake-db',
-          name: 'Snowflake Database',
-        },
-      ],
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-host",
-      name: "Hostname",
-      description: "Insert database hostname.",
-      type: "string",
-      kind: "input",
-      default: "keboola.west-europe.azure.snowflakecomputing.com",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-port",
-      name: "Port",
-      description: "Insert database port number.",
-      type: "string",
-      kind: "input",
-      default: "443",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-user",
-      name: "Username",
-      description: "Insert database username.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_WORKSPACE_13631041",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-password",
-      name: "Password",
-      description: "Insert your password to the database.",
-      type: "string",
-      kind: "hidden",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-database",
-      name: "Database Name",
-      description: "Insert name of your database.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_6518",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-schema",
-      name: "Schema",
-      description: "Insert database schema.",
-      type: "string",
-      kind: "input",
-      default: "WORKSPACE_13631041",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-    {
-      id: "wr-snowflake-blob-storage-db-warehouse",
-      name: "Warehouse",
-      description: "Insert database warehouse.",
-      type: "string",
-      kind: "input",
-      default: "KEBOOLA_PROD",
-      showif: "[select-writer] == 'snowflake-db'",
-    },
-  ],
+      ]
+    }
+  ]
 }
