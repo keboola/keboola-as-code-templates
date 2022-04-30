@@ -1,1 +1,0 @@
-Lantz Metall report

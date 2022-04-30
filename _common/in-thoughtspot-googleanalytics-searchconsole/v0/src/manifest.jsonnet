@@ -6,8 +6,8 @@
       path: "extractor/kds-team.ex-google-search-console/in-thoughtspot-googleanalytics-searchconsole-extractor-16240909",
       rows: [
         {
-          id: ConfigRowId("gsc-lantz-metall"),
-          path: "rows/gsc-lantz-metall",
+          id: ConfigRowId("google-search-console"),
+          path: "rows/google-search-console",
         },
       ],
     },

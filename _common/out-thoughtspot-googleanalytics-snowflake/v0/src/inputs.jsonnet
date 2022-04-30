@@ -6,7 +6,7 @@
     type: "string",
     kind: "input",
     rules: "required",
-    default: "keboola.west-europe.azure.snowflakecomputing.com",
+    default: "keboola.west-europe.azure.snowflakecomputing.com"
   },
   {
     id: "wr-snowflake-blob-storage-db-port",
@@ -15,7 +15,6 @@
     type: "string",
     kind: "input",
     default: "443",
-    rules: "required",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -24,7 +23,6 @@
     description: "Insert database username.",
     type: "string",
     kind: "input",
-    rules: "required",
     default: "KEBOOLA_WORKSPACE_12781571",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
@@ -34,7 +32,6 @@
     description: "Insert your password to the database.",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
     type: "string",
-    rules: "required",
     kind: "hidden",
   },
   {
@@ -43,7 +40,6 @@
     description: "Insert name of your database.",
     type: "string",
     kind: "input",
-    rules: "required",
     default: "KEBOOLA_6518",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
@@ -53,7 +49,6 @@
     description: "Insert database schema.",
     type: "string",
     kind: "input",
-    rules: "required",
     default: "WORKSPACE_12781571",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
@@ -63,7 +58,6 @@
     description: "Insert database warehouse.",
     type: "string",
     kind: "input",
-    rules: "required",
     default: "KEBOOLA_PROD",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
