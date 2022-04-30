@@ -161,5 +161,25 @@
       path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation-6031001",
       rows: [],
     },
+    if InputIsAvailable("ex-google-ads-customer-id") then
+    {
+      componentId: "keboola.ex-google-ads",
+      id: ConfigId("in-ecommerce-googleads-extractor-15228151"),
+      path: "<common>/in-ecommerce-googleads/v0/src/extractor/keboola.ex-google-ads/in-ecommerce-googleads-extractor-15228151",
+      rows: [
+        {
+          id: ConfigRowId("campaign"),
+          path: "rows/campaign",
+        },
+      ],
+    },
+    if InputIsAvailable("ex-google-ads-customer-id") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-googleads-transformation-15228151"),
+      path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation-15228151",
+      rows: [],
+    },
+
   ],)
 }

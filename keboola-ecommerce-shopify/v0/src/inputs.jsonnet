@@ -4,6 +4,7 @@ local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
 local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
 local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
+local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -27,10 +28,18 @@ local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
         {
           icon: "component:keboola.ex-facebook-ads",
           name: "Facebook Ads",
-          description: "Facebook - Data Source",
+          description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
           dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
           inputs: facebook
+        },
+        {
+          icon: "component:keboola.ex-google-ads",
+          name: "Google Ads",
+          description: "Google Ads - Data Source",
+          dialogName: "Google Ads Data Source", 
+          dialogDescription: "This extractor is getting data about Google ads insights.",
+          inputs: googleads
         }
       ]
     },
