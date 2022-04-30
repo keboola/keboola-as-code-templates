@@ -26,7 +26,7 @@ local searchconsole = import "/<common>/in-thoughtspot-googleanalytics-searchcon
           icon: "component:kds_team.ex-google-search-console",
           name: "Google Search Console",
           description: "Google Search Console",
-          dialogName: "Google Search Console Data Source", 
+          dialogName: "Google Search Console Source", 
           dialogDescription: "This extractor is getting data from Google Search Console.",
           inputs: searchconsole
         }
