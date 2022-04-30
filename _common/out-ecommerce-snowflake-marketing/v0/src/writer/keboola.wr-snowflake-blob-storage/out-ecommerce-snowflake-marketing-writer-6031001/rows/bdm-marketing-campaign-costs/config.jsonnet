@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ecommerce-wr-"+ConfigId("out-ecommerce-snowflake-marketing-writer-6031001")+".bdm_marketing_campaign_costs",
+    tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs",
     dbName: "bdm_marketing_campaign_costs",
     incremental: false,
     primaryKey: [
@@ -69,8 +69,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ecommerce-wr-"+ConfigId("out-ecommerce-snowflake-marketing-writer-6031001")+".bdm_marketing_campaign_costs",
-          destination: "out.c-ecommerce-wr-"+ConfigId("out-ecommerce-snowflake-marketing-writer-6031001")+".bdm_marketing_campaign_costs.csv",
+          source: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs",
+          destination: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs.csv",
           columns: [
             "MARKETING_CAMPAIGN_COSTS_ID",
             "SOURCE",

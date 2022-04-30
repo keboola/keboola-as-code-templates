@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SKLIK] Extractor /" + ConfigId("in-ecommerce-sklik-extractor-6031007"),
+  name: "[IN-ECOMMERCE-SKLIK] Extractor /" + InstanceIdShort(),
 }

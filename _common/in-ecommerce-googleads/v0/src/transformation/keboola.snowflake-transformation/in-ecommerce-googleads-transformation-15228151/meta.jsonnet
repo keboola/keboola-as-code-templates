@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-GOOGLEADS] Transformation /" + ConfigId("in-ecommerce-googleads-extractor-15228151"),
+  name: "[IN-ECOMMERCE-GOOGLEADS] Transformation /" + InstanceIdShort(),
 }

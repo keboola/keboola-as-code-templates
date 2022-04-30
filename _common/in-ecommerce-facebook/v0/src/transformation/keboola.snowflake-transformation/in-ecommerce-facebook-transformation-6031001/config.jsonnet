@@ -24,7 +24,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-ecommerce-wr-" + ConfigId("in-ecommerce-facebook-extractor-6031001") + ".bdm_marketing_campaign_costs",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_marketing_campaign_costs",
           source: "bdm_marketing_campaign_costs",
           incremental: true,
           delete_where_column: "",
@@ -35,7 +35,7 @@
           ],
         },
         {
-          destination: "out.c-ecommerce-wr-" + ConfigId("in-ecommerce-facebook-extractor-6031001") + ".bdm_marketing_campaign_costs_monthly",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_marketing_campaign_costs_monthly",
           source: "bdm_marketing_campaign_costs_monthly",
           incremental: true,
           delete_where_column: "",

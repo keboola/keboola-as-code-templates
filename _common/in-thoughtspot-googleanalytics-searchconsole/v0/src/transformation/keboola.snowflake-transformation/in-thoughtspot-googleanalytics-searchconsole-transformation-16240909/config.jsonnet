@@ -20,7 +20,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-bdm-" + ConfigId("in-thoughtspot-googleanalytics-searchconsole-extractor-16240909") + ".gsc_ranking",
+          destination: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
           incremental: true,
           primary_key: [
             "id_TBE",

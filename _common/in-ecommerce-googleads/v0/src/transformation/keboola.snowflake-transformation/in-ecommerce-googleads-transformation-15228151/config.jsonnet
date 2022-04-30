@@ -16,7 +16,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-ecommerce-wr-" + ConfigId("in-ecommerce-googleads-extractor-15228151") + ".bdmMarketingCampaignCosts",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdmMarketingCampaignCosts",
           source: "bdm_marketing_campaign_costs",
           primary_key: [
             "MARKETING_CAMPAIGN_COSTS_ID",
@@ -27,7 +27,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-ecommerce-wr-" + ConfigId("in-ecommerce-googleads-extractor-15228151") + ".bdmMarketingCampaignCostsMonthly",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdmMarketingCampaignCostsMonthly",
           source: "bdm_marketing_campaign_costs_monthly",
           primary_key: [
             "MARKETING_CAMPAIGN_COSTS_ID",

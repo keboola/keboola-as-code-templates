@@ -3,7 +3,7 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-bdm-" + ConfigId("out-thoughtspot-googleanalytics-bigquery-searchconsole-writer-16240909") + ".gsc_ranking",
+          source: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
           changed_since: "-7 days",
           columns: ["page", "gsc_date", "gsc_average_ranking"],
         },
@@ -14,7 +14,7 @@
     tables: [
       {
         dbName: "gsc_ranking",
-        tableId: "out.c-thoughtspot-bdm-" + ConfigId("out-thoughtspot-googleanalytics-bigquery-searchconsole-writer-16240909") + ".gsc_ranking",
+        tableId: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
         incremental: false,
         items: [
           {

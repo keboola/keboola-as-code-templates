@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-FACEBOOK] Extractor /" + ConfigId("in-ecommerce-facebook-extractor-6031001"),
+  name: "[IN-ECOMMERCE-FACEBOOK] Extractor /" + InstanceIdShort(),
 }

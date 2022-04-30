@@ -65,7 +65,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-gaa-extractor-15471164") + ".ga_traffic_source",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source",
           incremental: true,
           primary_key: [
             "id_TBE",
@@ -76,7 +76,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-gaa-extractor-15471164") + ".ga_geo_audience",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_geo_audience",
           incremental: true,
           primary_key: [
             "id_TBE",
@@ -87,7 +87,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-gaa-extractor-15471164") + ".ga_demographic_audience",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort()+ ".ga_demographic_audience",
           incremental: true,
           primary_key: [
             "id_TBE",
@@ -98,7 +98,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-gaa-extractor-15471164") + ".ga_page_behaviour",
+          destination: "out.c-thoughtspot-wr-" +InstanceIdShort() + ".ga_page_behaviour",
           incremental: true,
           primary_key: [
             "id_TBE",
@@ -109,7 +109,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-gaa-extractor-15471164") + ".ga_site_statistics",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics",
           incremental: true,
           primary_key: [
             "id_TBE",
@@ -120,7 +120,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-wr-" + ConfigId("in-thoughtspot-gaa-extractor-15471164") + ".ga_ad_analytics",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics",
           incremental: true,
           primary_key: [
             "id_TBE",

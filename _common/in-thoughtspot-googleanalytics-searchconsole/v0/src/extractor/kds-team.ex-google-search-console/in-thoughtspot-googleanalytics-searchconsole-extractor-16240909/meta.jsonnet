@@ -1,3 +1,3 @@
 {
-  name: "[IN-THOUGHTSPOT-GOOGLEANALYTICS-SEARCHCONSOLE] Extractor /" + ConfigId("in-thoughtspot-googleanalytics-searchconsole-extractor-16240909"),
+  name: "[IN-THOUGHTSPOT-GOOGLEANALYTICS-SEARCHCONSOLE] Extractor /" +InstanceIdShort(),
 }

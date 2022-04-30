@@ -72,7 +72,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".account",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".account",
           source: "out_account",
           primary_key: [
             "Id",
@@ -83,7 +83,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".contact",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".contact",
           source: "out_contact",
           primary_key: [
             "Id",
@@ -94,7 +94,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".lead",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".lead",
           source: "out_lead",
           primary_key: [
             "Id",
@@ -105,7 +105,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".user",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".user",
           source: "out_user",
           primary_key: [
             "Id",
@@ -116,7 +116,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunity",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity",
           source: "out_opportunity",
           primary_key: [
             "Id",
@@ -127,7 +127,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunity_contact_role",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity_contact_role",
           source: "out_opportunitycontactrole",
           primary_key: [
             "Id",
@@ -138,7 +138,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".event",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".event",
           source: "out_event",
           primary_key: [
             "Id",
@@ -149,7 +149,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-crm-tr-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunity_stage",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity_stage",
           source: "out_opportunitystage",
           primary_key: [
             "Id",
