@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164") + ".ga_geo_audience",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_geo_audience",
     dbName: "ga_geo_audience",
     incremental: false,
     primaryKey: [
@@ -133,8 +133,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164") + ".ga_geo_audience",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164") + ".ga_geo_audience.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_geo_audience",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_geo_audience.csv",
           columns: [
             "id_TBE",
             "ga_date",

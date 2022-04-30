@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164") + ".ga_demographic_audience",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164") + ".ga_demographic_audience.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_demographic_audience",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_demographic_audience.csv",
           changed_since: "",
           columns: [
             "id_TBE",
@@ -30,7 +30,7 @@
     tables: [
       {
         dbName: "ga_demographic_audience",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164") + ".ga_demographic_audience",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_demographic_audience",
         incremental: false,
         items: [
           {

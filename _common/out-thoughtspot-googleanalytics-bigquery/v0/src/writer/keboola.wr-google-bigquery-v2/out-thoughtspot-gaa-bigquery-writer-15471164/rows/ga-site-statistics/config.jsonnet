@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164") + ".ga_site_statistics",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164") + ".ga_site_statistics.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics.csv",
           changed_since: "",
           columns: [
             "id_TBE",
@@ -34,7 +34,7 @@
     tables: [
       {
         dbName: "ga_site_statistics",
-        tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-bigquery-writer-15471164") + ".ga_site_statistics",
+        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics",
         incremental: false,
         items: [
           {

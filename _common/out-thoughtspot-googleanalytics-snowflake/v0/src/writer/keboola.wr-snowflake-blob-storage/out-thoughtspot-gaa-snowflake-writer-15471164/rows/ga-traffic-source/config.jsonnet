@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164") + ".ga_traffic_source",
+    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source",
     dbName: "ga_traffic_source",
     incremental: false,
     primaryKey: [
@@ -141,8 +141,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164") + ".ga_traffic_source",
-          destination: "out.c-thoughtspot-wr-" + ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164") + ".ga_traffic_source.csv",
+          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source",
+          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source.csv",
           columns: [
             "id_TBE",
             "ga_userType",
