@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("thoughtspot-crm-hubspot-orchestration-10708760"),
+  },
   configurations: std.filter(function(v) v != null, [
     {
       componentId: "keboola.orchestrator",

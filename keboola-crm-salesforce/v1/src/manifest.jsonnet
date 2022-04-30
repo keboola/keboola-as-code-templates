@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("keboola-crm-salesforce-orchestration-12706099"),
+  },
   configurations: std.filter(function(v) v != null, [
     {
       componentId: "keboola.orchestrator",

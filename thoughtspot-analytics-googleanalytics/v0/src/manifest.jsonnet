@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("thoughtspot-analytics-googleanalytics-orchestration-15471164"),
+  },
   configurations: std.filter(function(v) v != null, [
     {
       componentId: "keboola.orchestrator",

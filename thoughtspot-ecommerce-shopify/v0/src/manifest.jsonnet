@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("thoughtspot-ecommerce-shopify-orchestration-10697799"),
+  },
   configurations: std.filter(function(v) v != null, [
      {
       componentId: "keboola.orchestrator",

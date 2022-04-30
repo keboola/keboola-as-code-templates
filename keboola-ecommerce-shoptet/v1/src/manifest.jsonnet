@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("keboola-ecommerce-shoptet-orchestration-6031003"),
+  },
   configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.orchestrator",
