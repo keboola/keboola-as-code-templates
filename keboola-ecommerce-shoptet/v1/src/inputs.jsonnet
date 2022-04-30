@@ -1,6 +1,7 @@
 local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
 local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet";
 local shoptet = import "/<common>/in-ecommerce-shoptet/v0/src/inputs.jsonnet";
+local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -47,16 +48,7 @@ local shoptet = import "/<common>/in-ecommerce-shoptet/v0/src/inputs.jsonnet";
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
           dialogDescription: "Data load to Google Sheet.",
-          inputs: [
-            {
-              id: "google-sheet-checkbox",
-              name: "Google sheet destination",
-              description: "Do you want to load data into google sheet?",
-              type: "bool",
-              kind: "confirm",
-              rules: "required",
-            },
-          ],  
+          inputs: googlesheet,  
         },
       ]
     },
