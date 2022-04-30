@@ -1,22 +1,55 @@
-local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
-local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
-local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
 local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
+local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
+local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
+local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
+local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet";
+local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Shopify extractor.",
+      description: "Extractor",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.ex-shopify",
           name: "Shopify",
-          description: "Shopify Data Source",
+          description: "Shopify - Data Source",
           dialogName: "Shopify Data Source", 
           dialogDescription: "Extractor collects data from Shopify about orders, products, inventory and customers. Use Admin API access token of your Shopify custom app. and shop id found in url, e.g. [shop_id].myshopify.com",
           inputs: shopify
+        }
+      ]
+    },
+    {
+      description: "Extractor",
+      required: "optional",
+      steps: [
+        {
+          icon: "component:keboola.ex-facebook-ads",
+          name: "Facebook Ads",
+          description: "Facebook Ads - Data Source",
+          dialogName: "Facebook Ads Data Source", 
+          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
+          inputs: facebook
         },
-      ],
+        {
+          icon: "component:keboola.ex-google-ads",
+          name: "Google Ads",
+          description: "Google Ads - Data Source",
+          dialogName: "Google Ads Data Source", 
+          dialogDescription: "This extractor is getting data about Google ads insights.",
+          inputs: googleads
+        },
+        {
+          icon: "component:keboola.ex-sklik",
+          name: "Sklik",
+          description: "Sklik - Data Source",
+          dialogName: "Sklik Data Source", 
+          dialogDescription: "This extractor is getting data about Sklik monthly insights and insights for the last day.",
+          inputs: sklik
+        }
+      ]
     },
     {   
       description: "Snowflake Transformations",
@@ -34,12 +67,12 @@ local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet
       description: "Configure your credentials for writer.",
       required: "optional",
       steps: [
-        {
+          {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Snowflake",
-          description: "Snowflake - Destination",
+          name: "Snowflake Destination",
+          description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake database.",
+          dialogDescription: "Data load to Snowflake DB.",
           inputs: snowflake
         },
         {
@@ -50,24 +83,7 @@ local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
         },
-        {
-          icon: "component:keboola.wr-google-sheet",
-          name: "Google sheet Destination",
-          description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Data load to Google Sheet.",
-          inputs: [
-            {
-              id: "google-sheet-checkbox",
-              name: "Google sheet destination",
-              description: "Do you want to load data into google sheet?",
-              type: "bool",
-              kind: "confirm",
-              rules: "required",
-            },
-          ],  
-        },
-    ],
-  },
-  ],
+      ]
+    }
+  ]
 }
