@@ -203,6 +203,23 @@
       rows: [],
       }
     ,
+    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+      if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("ex-facebook-ads-api-version") then
+    {
+      componentId: "keboola.wr-snowflake-blob-storage",
+      id: ConfigId("out-ecommerce-snowflake-marketing-writer-6031001"),
+      path: "<common>/out-ecommerce-snowflake-marketing/v0/src/writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-marketing-writer-6031001",
+      rows: [
+        {
+          id: ConfigRowId("bdm-marketing-campaign-costs"),
+          path: "rows/bdm-marketing-campaign-costs",
+        },
+        {
+          id: ConfigRowId("bdm-marketing-campaign-costs-monthly"),
+          path: "rows/bdm-marketing-campaign-costs-monthly",
+        },
+      ],
+    },
 
   ],)
 }
