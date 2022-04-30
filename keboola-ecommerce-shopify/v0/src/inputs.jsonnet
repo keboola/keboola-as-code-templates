@@ -28,6 +28,20 @@ local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
         }
       ]
     },
+    {
+      description: "Extractor",
+      required: "optional",
+      steps: [
+        {
+          icon: "component:keboola.ex-facebook-ads",
+          name: "Facebook Ads",
+          description: "Facebook - Data Source",
+          dialogName: "Facebook Ads Data Source", 
+          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
+          inputs: facebook
+        }
+      ]
+    },
     {   
       description: "Snowflake Transformations",
       required: "all",
