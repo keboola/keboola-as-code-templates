@@ -13,7 +13,15 @@
     description: "Add your service account client email.",
     type: "string",
     kind: "input",
-    default: "email",
+    default: "templates@keboola-shopify.iam.gserviceaccount.com",
+  },
+  {
+    id: "wr-google-bigquery-v2-service-account-client-id",
+    name: "Client ID",
+    description: "Add your service account client id.",
+    type: "string",
+    kind: "input",
+    default: "ID",
   },
   {
     id: "wr-google-bigquery-v2-service-account-private-key-id",
