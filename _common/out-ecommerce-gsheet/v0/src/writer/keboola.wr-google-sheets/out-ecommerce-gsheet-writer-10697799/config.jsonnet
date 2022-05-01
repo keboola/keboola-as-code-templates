@@ -3,7 +3,7 @@
     oauth_api: {},
   },
   parameters: {
-    tables: [
+    tables: std.filter(function(v) v != null,[
       {
         id: 87348,
         action: "update",
@@ -114,11 +114,33 @@
         fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
         sheetId: 1475609669,
       },
-    ],
+      if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+      {
+        id: 50961,
+        action: "update",
+        sheetTitle: "bdm_marketing_campaign_costs",
+        enabled: true,
+        tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs",
+        title: "OUT-ECOMMERCE",
+        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        sheetId: 1234856577,
+      },
+      if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+      {
+        id: 70402,
+        action: "update",
+        sheetTitle: "bdm_marketing_campaign_costs_monthly",
+        enabled: true,
+        tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly",
+        title: "OUT-ECOMMERCE",
+        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        sheetId: 2070371591,
+      },
+    ]),
   },
   storage: {
     input: {
-      tables: [
+      tables: std.filter(function(v) v != null,[
         {
           source: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_rfm",
           destination: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_rfm.csv",
@@ -207,7 +229,25 @@
           where_operator: "eq",
           columns: [],
         },
-      ],
+        if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+        {
+          source: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs",
+          destination: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs.csv",
+          where_column: "",
+          where_values: [],
+          where_operator: "eq",
+          columns: [],
+        },
+        if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+        {
+          source: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly",
+          destination: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly.csv",
+          where_column: "",
+          where_values: [],
+          where_operator: "eq",
+          columns: [],
+        },
+      ]),
     },
   },
 }
