@@ -52,6 +52,11 @@
           id: ConfigRowId("ga-traffic-source"),
           path: "rows/ga-traffic-source",
         },
+        if InputIsAvailable("gsc-domain") then
+        {
+          id: ConfigRowId("gsc_ranking"),
+          path: "rows/gsc_ranking",
+        },
       ]),
     },
     if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
@@ -59,7 +64,7 @@
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-thoughtspot-gaa-snowflake-writer-15471164"),
       path: "<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer-15471164",
-      rows: [
+      rows: std.filter(function(v) v != null, [
         {
           id: ConfigRowId("ga-ad-analytics"),
           path: "rows/ga-ad-analytics",
@@ -89,7 +94,7 @@
           id: ConfigRowId("gsc_ranking"),
           path: "rows/gsc_ranking",
         },
-      ],
+      ]),
     },
     if InputIsAvailable("gsc-domain") then
     {
@@ -110,18 +115,5 @@
       path: "<common>/in-thoughtspot-googleanalytics-searchconsole/v0/src/transformation/keboola.snowflake-transformation/in-thoughtspot-googleanalytics-searchconsole-transformation-16240909",
       rows: [],
     },
-    if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
-      if InputIsAvailable("gsc-domain") then
-        {
-          componentId: "keboola.wr-google-bigquery-v2",
-          id: ConfigId("out-thoughtspot-googleanalytics-bigquery-searchconsole-writer-16240909"),
-          path: "<common>/out-thoughtspot-googleanalytics-bigquery-searchconsole/v0/src/writer/keboola.wr-google-bigquery-v2/out-thoughtspot-googleanalytics-bigquery-searchconsole-writer-16240909",
-          rows: [
-            {
-              id: ConfigRowId("gsc_ranking"),
-              path: "rows/gsc_ranking",
-            },
-          ],
-        },
     ],)
 }
