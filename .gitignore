@@ -1,3 +1,5 @@
 keboola-dft-main.code-workspace
 XXX-keboola-dft-main.code-workspace
-*.DS_Store
+*/.DS_Store
+_common/.DS_Store
+.DS_Store
