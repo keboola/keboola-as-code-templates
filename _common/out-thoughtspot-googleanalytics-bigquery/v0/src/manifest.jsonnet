@@ -35,6 +35,10 @@
           id: ConfigRowId("ga-traffic-source"),
           path: "rows/ga-traffic-source",
         },
+        {
+          id: ConfigRowId("gsc_ranking"),
+          path: "rows/gsc_ranking",
+        },
       ],
     },
   ],

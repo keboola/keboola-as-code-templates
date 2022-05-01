@@ -55,6 +55,14 @@
           id: ConfigRowId("out-shop-001"),
           path: "rows/out-shop-001",
         },
+        {
+          id: ConfigRowId("bdm-marketing-campaign-costs"),
+          path: "rows/bdm-marketing-campaign-costs",
+        },
+        {
+          id: ConfigRowId("bdm-marketing-campaign-costs-monthly"),
+          path: "rows/bdm-marketing-campaign-costs-monthly",
+        },
       ],
     },
   ],

@@ -1,3 +1,0 @@
-{
-  name: "[OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY-SEARCHCONSOLE] Writer /" + InstanceIdShort(),
-}
