@@ -81,6 +81,21 @@
       ]
     },
     {
+      "id": "keboola-analytics-googleanalytics",
+      "icon": "common:settings",
+      "name": "KEBOOLA-ANALYTICS-GOOGLEANALYTICS",
+      "description": "Get your data from Google Analytics and transform them so you can use them for visualisation in SpotApp.",
+      "path": "keboola-analytics-googleanalytics",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "thoughtspot-crm-hubspot",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-CRM-HUBSPOT",
