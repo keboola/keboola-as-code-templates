@@ -9,7 +9,7 @@
       "id": "keboola-crm-hubspot",
       "icon": "common:settings",
       "name": "KEBOOLA-CRM-HUBSPOT",
-      "description": "Get your data from Hubspot and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
+      "description": "Transform your Hubspot data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-crm-hubspot",
       "versions": [
         {
@@ -24,7 +24,7 @@
       "id": "keboola-crm-salesforce",
       "icon": "common:settings",
       "name": "KEBOOLA-CRM-SALESFORCE",
-      "description": "Get your data from Salesforce and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
+      "description": "Transform Salesforce data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-crm-salesforce",
       "versions": [
         {
@@ -39,7 +39,7 @@
       "id": "keboola-ecommerce-shopify",
       "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPIFY",
-      "description": "Get your data from Shopify and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
+      "description": "Transform your Shopify data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-ecommerce-shopify",
       "versions": [
         {
@@ -54,23 +54,8 @@
       "id": "keboola-ecommerce-shoptet",
       "icon": "common:settings",
       "name": "KEBOOLA-ECOMMERCE-SHOPTET",
-      "description": "Get your data from Shoptet and transform them so you can use them for visualisation. You can either choose predefined writer or create your own.",
+      "description": "Transform your Shoptet data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-ecommerce-shoptet",
-      "versions": [
-        {
-          "version": "0.0.1",
-          "description": "",
-          "stable": false,
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "thoughtspot-analytics-googleanalytics",
-      "icon": "common:settings",
-      "name": "THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS",
-      "description": "Get your data from Google Analytics and transform them so you can use them for visualisation in SpotApp.",
-      "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
           "version": "0.0.1",
@@ -84,8 +69,23 @@
       "id": "keboola-analytics-googleanalytics",
       "icon": "common:settings",
       "name": "KEBOOLA-ANALYTICS-GOOGLEANALYTICS",
-      "description": "Get your data from Google Analytics and transform them so you can use them for visualisation in SpotApp.",
+      "description": "Transform Google Analytics data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-analytics-googleanalytics",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "thoughtspot-analytics-googleanalytics",
+      "icon": "common:settings",
+      "name": "THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS",
+      "description": "Transform Google Analytics data so it can be visualized in SpotApp.",
+      "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
           "version": "0.0.1",
@@ -99,7 +99,7 @@
       "id": "thoughtspot-crm-hubspot",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-CRM-HUBSPOT",
-      "description": "Get your data from Hubspot and transform them so you can use them for visualisation in SpotApp.",
+      "description": "Transform your Hubspot data so it can be visualized in SpotApp.",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -114,7 +114,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "icon": "common:settings",
       "name": "THOUGHTSPOT-ECOMMERCE-SHOPIFY",
-      "description": "Get your data from Shopify and transform them so you can use them for visualisation in SpotApp.",
+      "description": "Transform your Shopify data so it can be visualized in SpotApp.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
