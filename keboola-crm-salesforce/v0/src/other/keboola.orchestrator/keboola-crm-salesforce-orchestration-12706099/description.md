@@ -1,2 +1,2 @@
 ## Description:
-Salesforce CRM extractor and 3 snowflake transformations.
+Whole pipeline to CRM Salesforce.
