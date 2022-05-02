@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kds-team-ex-google-search-console-" + ConfigId("in-thoughtspot-googleanalytics-searchconsole-extractor-16240909") + ".raw_search_console",
+          source: "in.c-kds-team-ex-google-search-console-" + ConfigId("in-googleanalytics-searchconsole-extractor-16240909") + ".raw_search_console",
           destination: "raw_search_console",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           delete_where_column: "",
           delete_where_operator: "eq",
           delete_where_values: [],
-          destination: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
           incremental: true,
           primary_key: [
             "id_TBE",

@@ -3,7 +3,7 @@
     oauth_api: {},
   },
   parameters: {
-    outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-thoughtspot-gaa-extractor-15471164"),
+    outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-googleanalytics-extractor-15471164"),
     profiles: [
       {
         accountId: "172648109",

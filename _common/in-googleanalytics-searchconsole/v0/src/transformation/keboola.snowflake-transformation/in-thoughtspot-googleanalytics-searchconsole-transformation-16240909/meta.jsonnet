@@ -1,3 +1,3 @@
 {
-  name: "[IN-THOUGHTSPOT-GOOGLEANALYTICS-SEARCHCONSOLE] Transformation /" + InstanceIdShort(),
+  name: "[IN-GOOGLEANALYTICS-SEARCHCONSOLE] Transformation /" + InstanceIdShort(),
 }
