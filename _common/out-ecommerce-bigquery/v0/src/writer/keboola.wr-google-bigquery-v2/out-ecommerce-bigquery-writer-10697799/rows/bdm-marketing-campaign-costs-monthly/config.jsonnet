@@ -1,70 +1,4 @@
 {
-  parameters: {
-    tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly",
-    dbName: "bdm_marketing_campaign_costs_monthly",
-    incremental: false,
-    primaryKey: [
-      "MARKETING_CAMPAIGN_COSTS_ID",
-    ],
-    items: [
-      {
-        name: "MARKETING_CAMPAIGN_COSTS_ID",
-        dbName: "MARKETING_CAMPAIGN_COSTS_ID",
-        type: "varchar",
-        nullable: true,
-        default: "",
-        size: "16777216",
-      },
-      {
-        name: "SOURCE",
-        dbName: "SOURCE",
-        type: "varchar",
-        nullable: true,
-        default: "",
-        size: "8",
-      },
-      {
-        name: "DATE",
-        dbName: "DATE",
-        type: "varchar",
-        nullable: true,
-        default: "",
-        size: "16777216",
-      },
-      {
-        name: "CAMPAIGN",
-        dbName: "CAMPAIGN",
-        type: "varchar",
-        nullable: true,
-        default: "",
-        size: "16777216",
-      },
-      {
-        name: "IMPRESSIONS",
-        dbName: "IMPRESSIONS",
-        type: "float",
-        nullable: true,
-        default: "",
-        size: "",
-      },
-      {
-        name: "CLICKS",
-        dbName: "CLICKS",
-        type: "float",
-        nullable: true,
-        default: "",
-        size: "",
-      },
-      {
-        name: "COST",
-        dbName: "COST",
-        type: "float",
-        nullable: true,
-        default: "",
-        size: "",
-      },
-    ],
-  },
   storage: {
     input: {
       tables: [
@@ -80,8 +14,55 @@
             "CLICKS",
             "COST",
           ],
+          changed_since: "",
         },
       ],
     },
+  },
+  parameters: {
+    tables: [
+      {
+        tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly",
+        dbName: "bdm_marketing_campaign_costs_monthly",
+        incremental: false,
+        items: [
+          {
+            name: "MARKETING_CAMPAIGN_COSTS_ID",
+            dbName: "MARKETING_CAMPAIGN_COSTS_ID",
+            type: "STRING",
+          },
+          {
+            name: "SOURCE",
+            dbName: "SOURCE",
+            type: "STRING",
+          },
+          {
+            name: "DATE",
+            dbName: "DATE",
+            type: "STRING",
+          },
+          {
+            name: "CAMPAIGN",
+            dbName: "CAMPAIGN",
+            type: "STRING",
+          },
+          {
+            name: "IMPRESSIONS",
+            dbName: "IMPRESSIONS",
+            type: "STRING",
+          },
+          {
+            name: "CLICKS",
+            dbName: "CLICKS",
+            type: "STRING",
+          },
+          {
+            name: "COST",
+            dbName: "COST",
+            type: "STRING",
+          },
+        ],
+      },
+    ],
   },
 }
