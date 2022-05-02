@@ -4,6 +4,6 @@
   enabled: true,
   task: {
     mode: "run",
-    configPath: "<common>/in-thoughtspot-googleanalytics/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics-transformation-15471164",
+    configPath: "<common>/in-googleanalytics/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics-transformation-15471164",
   },
 }
