@@ -1,4 +1,8 @@
 {
+  mainConfig: {
+    componentId: "keboola.snowflake-transformation",
+    id: ConfigId("snowflake-transformation"),
+  },
   configurations: [
     {
       componentId: "ex-generic-v2",
