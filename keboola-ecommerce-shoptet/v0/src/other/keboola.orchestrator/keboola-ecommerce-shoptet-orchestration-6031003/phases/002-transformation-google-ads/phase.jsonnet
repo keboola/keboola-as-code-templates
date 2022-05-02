@@ -1,6 +1,6 @@
 {
   name: "Transformation",
   dependsOn: [
-    "001-extraction-google-ads",
+    "001-extraction-googleads",
   ],
 }
