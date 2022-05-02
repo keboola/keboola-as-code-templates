@@ -86,8 +86,8 @@
           path: "rows/ga-traffic-source",
         },
         {
-          id: ConfigRowId("raw-page-behaviour"),
-          path: "rows/raw-page-behaviour",
+          id: ConfigRowId("ga-page-behaviour"),
+          path: "rows/ga-page-behaviour",
         },
         if InputIsAvailable("gsc-domain") then
         {
