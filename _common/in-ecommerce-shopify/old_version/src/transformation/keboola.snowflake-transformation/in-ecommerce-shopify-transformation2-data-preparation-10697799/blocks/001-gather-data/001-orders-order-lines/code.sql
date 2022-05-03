@@ -117,7 +117,6 @@ AS
         FROM "order"
         )t;
 
-/* payment_details__credit_card_company is mostly unavailable - we are still working on this part of template.
 CREATE OR REPLACE TABLE "bdm_billing_type" 
 AS
     SELECT 
@@ -128,6 +127,29 @@ AS
                        CASE WHEN "payment_details__credit_card_company" <> '' THEN CONCAT(', Credit Card Provider: ', "payment_details__credit_card_company")
                        ELSE '' END) AS NAME
         FROM "order") AS t;
+
+/*
+CREATE OR REPLACE TABLE "bdm_billing_type" 
+AS
+    SELECT 
+        ROW_NUMBER() OVER (ORDER BY NAME) AS BILLING_TYPE_ID, 
+        NAME 
+    FROM (
+            SELECT DISTINCT 
+                CASE 
+                    WHEN "payment_details__credit_card_company" IN ('Mastercard', 'Visa') AND "processing_method" = 'direct' AND "gateway" = 'stripe' 
+                        THEN concat('On-line platba kartou - ', "payment_details__credit_card_company")
+                    WHEN "payment_details__credit_card_company" IN ('Mastercard', 'Visa') AND "processing_method" = 'manual' AND "gateway" = 'Bank Deposit' 
+                        THEN concat('Dobírka - platba kartou (',"payment_details__credit_card_company",')')
+                    WHEN "payment_details__credit_card_company" = '' AND "processing_method" = 'manual' AND "gateway" = 'Bank Deposit' 
+                        THEN 'Dobírka - hotově'
+                    WHEN "payment_details__credit_card_company" = '' AND "processing_method" = 'manual' AND "gateway" = 'stripe' 
+                        THEN 'On-line bankovní převod'
+                    ELSE '' 
+                END AS NAME
+            FROM "order"
+         ) AS t;
+*/
 
 --- assign shipping, billing to order level
 
@@ -140,21 +162,6 @@ AS
                     WHEN "payment_details__credit_card_company" <> '' THEN CONCAT(', Credit Card Provider: ', "payment_details__credit_card_company")
                     ELSE '' 
                 END)            AS BILLING_TYPE
-    FROM "order";
-*/
-CREATE OR REPLACE TABLE "bdm_billing_type" 
-AS
-    SELECT 
-        1 AS BILLING_TYPE_ID, 
-        'Billing Types not specified' as NAME;
-
---- assign shipping, billing to order level
-
-CREATE TABLE "order_billing_types" 
-AS
-    SELECT DISTINCT 
-        "id"                    AS ORDER_ID,
-        'Specify billing types in payment_details__credit_card_company' AS BILLING_TYPE
     FROM "order";
 
 CREATE TABLE "order_shipping_types" 
