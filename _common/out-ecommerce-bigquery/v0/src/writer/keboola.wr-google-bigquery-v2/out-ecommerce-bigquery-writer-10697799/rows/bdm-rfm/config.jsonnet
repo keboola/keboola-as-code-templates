@@ -42,7 +42,7 @@
           {
             name: "SNAPSHOT_DATE",
             dbName: "SNAPSHOT_DATE",
-            type: "TIMESTAMP",
+            type: "STRING",
           },
           {
             name: "R_RAW",
@@ -107,7 +107,7 @@
           {
             name: "FIRST_SUCCEEDED_TRANSACTION_DATE",
             dbName: "FIRST_SUCCEEDED_TRANSACTION_DATE",
-            type: "TIMESTAMP",
+            type: "STRING",
           },
         ],
       },
