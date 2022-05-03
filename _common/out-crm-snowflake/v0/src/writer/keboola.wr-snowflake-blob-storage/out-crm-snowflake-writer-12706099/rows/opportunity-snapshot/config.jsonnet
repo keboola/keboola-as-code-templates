@@ -14,7 +14,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "snapshot_date",
@@ -30,7 +30,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "company_id",
@@ -38,7 +38,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "pipeline",
@@ -46,7 +46,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "previous_pipeline",
@@ -54,7 +54,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "pipeline_change",
@@ -62,7 +62,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "stage",
@@ -70,7 +70,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "stage_order",
@@ -86,7 +86,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "previous_stage_order",
@@ -110,7 +110,7 @@
         type: "number",
         nullable: true,
         default: "",
-        size: "12,5",
+        size: "30,10",
       },
       {
         name: "previous_opportunity_value",
@@ -118,7 +118,7 @@
         type: "number",
         nullable: true,
         default: "",
-        size: "12,5",
+        size: "30,10",
       },
       {
         name: "opportunity_value_change",
@@ -126,7 +126,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "probability",
@@ -134,7 +134,7 @@
         type: "number",
         nullable: true,
         default: "",
-        size: "12,5",
+        size: "30,10",
       },
       {
         name: "previous_probability",
@@ -142,7 +142,7 @@
         type: "number",
         nullable: true,
         default: "",
-        size: "12,5",
+        size: "30,10",
       },
       {
         name: "probability_change",
@@ -150,7 +150,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
       {
         name: "max_date_in_month",
@@ -158,7 +158,7 @@
         type: "varchar",
         nullable: false,
         default: "",
-        size: "255",
+        size: "3000",
       },
     ],
   },
