@@ -24,7 +24,7 @@
           {
             name: "SHIPPING_TYPE_ID",
             dbName: "SHIPPING_TYPE_ID",
-            type: "FLOAT",
+            type: "STRING",
           },
           {
             name: "NAME",
