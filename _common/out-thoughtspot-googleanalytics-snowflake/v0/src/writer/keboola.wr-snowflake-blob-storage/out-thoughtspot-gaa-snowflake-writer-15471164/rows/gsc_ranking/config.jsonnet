@@ -3,9 +3,7 @@
     tableId: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
     dbName: "gsc_ranking",
     incremental: false,
-    primaryKey: [
-      "id_TBE",
-    ],
+    primaryKey: [],
     items: [
       {
         name: "page",
