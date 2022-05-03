@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE "analyze_clv_by_time_FROM_previous_order" 
+CREATE OR REPLACE TABLE "analyze_clv_by_time_from_previous_order" 
 AS
      WITH previous_order_category 
      AS (
