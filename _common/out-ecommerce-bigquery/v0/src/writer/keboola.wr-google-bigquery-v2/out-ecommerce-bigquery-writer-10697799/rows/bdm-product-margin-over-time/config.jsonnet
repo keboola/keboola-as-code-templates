@@ -25,7 +25,7 @@
           {
             name: "ORDER_DATE",
             dbName: "ORDER_DATE",
-            type: "TIMESTAMP",
+            type: "STRING",
           },
           {
             name: "PRODUCT_ID",
