@@ -4,7 +4,8 @@
       tables: [
         {
           source: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
-          changed_since: "-7 days",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
+          changed_since: "",
           columns: ["page", "gsc_date", "gsc_average_ranking"],
         },
       ],
