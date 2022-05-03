@@ -22,5 +22,4 @@ CREATE TABLE "ga_ad_analytics" AS
     ,"pageviews" AS "ga_pageviews"
   FROM
     "raw_ad_analytics"
-  WHERE date("date") = current_date - interval '{{ DaysToPast }} days'
 );

@@ -23,5 +23,4 @@ CREATE TABLE "ga_site_statistics" AS
     ,"serverResponseTime"AS "ga_serverResponseTime"
   FROM
     "raw_site_statistics"
-  WHERE date(TO_CHAR(TO_DATE(left("dateHourMinute",8)::string,'YYYYMMDD'),'YYYY-MM-DD')) = current_date - interval '{{ DaysToPast }} days'
 );

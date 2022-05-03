@@ -19,5 +19,4 @@ CREATE TABLE "ga_demographic_audience" AS
     ,"pageviews" AS "ga_pageviews"
   FROM
     "raw_demographic_audience"
-  WHERE date("date") = current_date - interval '{{ DaysToPast }} days'
 );

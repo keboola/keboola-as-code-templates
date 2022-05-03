@@ -21,5 +21,4 @@ CREATE TABLE "ga_page_behaviour" AS
     ,"pageValue" AS "ga_pageValue"
   FROM
     "raw_page_behaviour"
-  WHERE date("date") = current_date - interval '{{ DaysToPast }} days'
 );

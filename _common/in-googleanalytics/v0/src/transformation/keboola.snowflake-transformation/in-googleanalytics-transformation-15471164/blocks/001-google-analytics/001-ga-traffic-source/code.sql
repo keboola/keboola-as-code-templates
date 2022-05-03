@@ -21,5 +21,4 @@ CREATE TABLE "ga_traffic_source" AS
     ,"organicSearches" AS "ga_organicSearches"
   FROM
     "raw_traffic_source"
-  WHERE date("date") = current_date - interval '{{ DaysToPast }} days'
 );
