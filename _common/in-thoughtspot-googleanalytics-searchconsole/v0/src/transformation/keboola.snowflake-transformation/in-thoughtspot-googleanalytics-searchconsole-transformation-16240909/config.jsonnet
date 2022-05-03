@@ -10,7 +10,6 @@
           where_values: [],
           where_operator: "eq",
           columns: [],
-          changed_since: "-7 days",
         },
       ],
     },
@@ -22,9 +21,7 @@
           delete_where_values: [],
           destination: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
           incremental: true,
-          primary_key: [
-            "id_TBE",
-          ],
+          primary_key: [],
           source: "search_console_grouped_ranking",
         },
       ],
