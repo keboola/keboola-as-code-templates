@@ -9,7 +9,7 @@
           columns: [
             "TIME_FROM_PREVIOUS_ORDER",
             "ORDERS",
-            "UNIQUE_CUTOMERS",
+            "UNIQUE_CUSTOMERS",
             "AVG_CLV",
             "ORDER_TOTAL_PRICE_VAT",
             "AVG_ORDER_PRICE",
@@ -36,8 +36,8 @@
             type: "FLOAT",
           },
           {
-            name: "UNIQUE_CUTOMERS",
-            dbName: "UNIQUE_CUTOMERS",
+            name: "UNIQUE_CUSTOMERS",
+            dbName: "UNIQUE_CUSTOMERS",
             type: "FLOAT",
           },
           {
