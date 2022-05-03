@@ -22,8 +22,8 @@
         size: "18,0",
       },
       {
-        name: "UNIQUE_CUTOMERS",
-        dbName: "UNIQUE_CUTOMERS",
+        name: "UNIQUE_CUSTOMERS",
+        dbName: "UNIQUE_CUSTOMERS",
         type: "number",
         nullable: true,
         default: "",
