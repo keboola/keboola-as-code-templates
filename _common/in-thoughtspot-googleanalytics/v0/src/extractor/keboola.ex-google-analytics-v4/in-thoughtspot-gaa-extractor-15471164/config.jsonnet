@@ -5,14 +5,7 @@
   parameters: {
     outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-thoughtspot-gaa-extractor-15471164"),
     profiles: [
-      {
-        accountId: "172648109",
-        accountName: "Cross-domain Keboola",
-        id: "223968976",
-        name: "All Web Site Data",
-        webPropertyId: "UA-172648109-1",
-        webPropertyName: "Cross domain set up",
-      },
+      {},
     ],
     queries: [
       {
