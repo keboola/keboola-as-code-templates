@@ -24,7 +24,7 @@
           {
             name: "BILLING_TYPE_ID",
             dbName: "BILLING_TYPE_ID",
-            type: "FLOAT",
+            type: "STRING",
           },
           {
             name: "NAME",
