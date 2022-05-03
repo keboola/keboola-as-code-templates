@@ -1,13 +1,6 @@
 {
   parameters: {
     accounts: {
-      act_361744628296290: {
-        account_id: "361744628296290",
-        id: "act_361744628296290",
-        business_name: "Keboola Czech s.r.o.",
-        name: "Keboola G+S",
-        currency: "EUR",
-      },
     },
     "api-version": Input("ex-facebook-ads-api-version"),
     queries: [
