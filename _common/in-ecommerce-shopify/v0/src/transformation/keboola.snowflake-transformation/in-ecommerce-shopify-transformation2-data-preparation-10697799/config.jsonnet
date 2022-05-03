@@ -223,7 +223,7 @@
         },
         {
           destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop",
-          source: "out_shopify",
+          source: "out_shop",
         },
       ],
     },
