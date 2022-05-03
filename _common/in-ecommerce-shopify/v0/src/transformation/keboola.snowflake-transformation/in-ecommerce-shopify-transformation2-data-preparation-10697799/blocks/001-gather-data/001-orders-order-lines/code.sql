@@ -63,7 +63,8 @@ AS
         LI."id"                                                       AS ORDER_LINE_ID,
         O."created_at"                                                AS ORDER_DATE,
         LI."product_id"                                               AS ORDER_LINE_PRODUCT_ID,
-        LI."name"                                                     AS itemName,
+        LI."name"                                                     AS ITEMNAME,
+        '' AS	ORDER_ITEM_TYPE,
         ODA."value"                                                   AS DISCOUNT_PERCENT,
         CASE
             WHEN LI."quantity" = '' THEN 0 

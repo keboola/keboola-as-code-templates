@@ -103,6 +103,14 @@
         default: "",
         size: "18,5",
       },
+      {
+        name: "ORDER_ITEM_TYPE",
+        dbName: "ORDER_ITEM_TYPE",
+        type: "varchar",
+        nullable: true,
+        default: "",
+        size: "16777216",
+      },
     ],
   },
   storage: {
@@ -124,6 +132,7 @@
             "ORDER_LINE_PRICE_VAT",
             "ORDER_LINE_VAT_RATE",
             "LINE_PURCHASE_PRICE",
+            "ORDER_ITEM_TYPE",
           ],
         },
       ],

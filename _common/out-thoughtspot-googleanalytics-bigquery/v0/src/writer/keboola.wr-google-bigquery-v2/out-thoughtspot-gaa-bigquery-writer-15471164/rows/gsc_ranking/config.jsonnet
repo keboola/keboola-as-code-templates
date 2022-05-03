@@ -4,6 +4,7 @@
       tables: [
         {
           source: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
+          destination: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
           changed_since: "",
           columns: ["page", "gsc_date", "gsc_average_ranking"],
         },
