@@ -14,18 +14,4 @@
     type: "string",
     kind: "input",
   },
-  {
-    id: "ex-sklik-username",
-    name: "Username",
-    description: "Fill your Sklik username.",
-    type: "string",
-    kind: "input",
-  },
-    {
-    id: "ex-sklik-password",
-    name: "Password",
-    description: "Fill your Sklik password.",
-    type: "string",
-    kind: "hidden",
-  },
 ]

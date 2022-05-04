@@ -17,8 +17,6 @@
         restrictionFilter: '{ "dateFrom": "2018-01-01" }',
       },
     ],
-    accounts: Input("ex-sklik-accounts"),
-    username: Input("ex-sklik-username"),
-    "#password": Input("ex-sklik-password"),
+    accounts: Input("ex-sklik-accounts")
   },
 }
