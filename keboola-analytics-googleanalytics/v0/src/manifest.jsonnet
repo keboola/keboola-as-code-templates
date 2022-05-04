@@ -114,6 +114,7 @@
       id: ConfigId("in-googleanalytics-searchconsole-transformation-16240909"),
       path: "<common>/in-googleanalytics-searchconsole/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics-searchconsole-transformation-16240909",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ANALYTICS-GOOGLEANALYTICS]"}
     },
     ],)
 }

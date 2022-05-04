@@ -114,6 +114,7 @@
       id: ConfigId("in-thoughtspot-googleanalytics-searchconsole-transformation-16240909"),
       path: "<common>/in-thoughtspot-googleanalytics-searchconsole/v0/src/transformation/keboola.snowflake-transformation/in-thoughtspot-googleanalytics-searchconsole-transformation-16240909",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS]"}
     },
     ],)
 }

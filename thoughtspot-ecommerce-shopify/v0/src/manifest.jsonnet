@@ -173,6 +173,7 @@
       id: ConfigId("in-ecommerce-facebook-transformation-6031001"),
       path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation-6031001",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("ex-google-ads-customer-id") then
     {
@@ -192,6 +193,7 @@
       id: ConfigId("in-ecommerce-googleads-transformation-15228151"),
       path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation-15228151",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("ex-sklik-token") then
     {
@@ -206,6 +208,7 @@
       id: ConfigId("in-ecommerce-sklik-transformation-6031007"),
       path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation-6031007",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-ECOMMERCE-SHOPIFY]"}
     },
     ],
   )
