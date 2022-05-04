@@ -1,33 +1,30 @@
 # THOUGHTSPOT-CRM-HUBSPOT
 
-This is an end to end flow for getting data from Hubspot, transforming them and visualising them in spotApp.
+By using this end-to-end flow you can extract data from HubSpot and transform it using the SpottApp for visualizations.
 
-## Steps to make:
-1. Setup profile in extractor
-2. Run orchestration
+## Steps to take:
+1. Authorize extractor with Hubspot API TOKEN and select date range
+2. Optionaly select and authorize writers
+3. Run the orchestration
 
 ## Included components' configurations:
 EX -> TR –> WR -> ORCH
 
 ### EX: [IN-THOUGHTSPOT-HUBSPOT] Extractor
 
-This extractor is getting data from Hubspot. It's an incremental update.
+The extractor gets the data from HubSpot.
 
 ### TR: [IN-THOUGHTSPOT-HUBSPOT] Transformation
 
-This transformation is forming data from Hubspot into requested shape.
-
-### ORCH: [IN-THOUGHTSPOT-HUBSPOT] Orchestration: BDM Creation
-
-This orchestration includes Extractor and one transformation which prepare data for BDM model.
+Within this transformation, data is transformed. In this transformation, data is gathered from HubSpot, and is shaped into the requested shape.
 
 ### WR: [OUT-THOUGHTSPOT-HUBSPOT-BIGQUERY] Writer OR WR: [OUT-THOUGHTSPOT-HUBSPOT-SNOWFLAKE] Writer
 
-Writer load data into a Google BigQuery or Snowflake database.
+The writer loads data into a Google BigQuery or a Snowflake database.
 
-### ORCH: [OUT-THOUGHTSPOT-HUBSPOT-BIGQUERY] Orchestration: BDM Usage OR [OUT-THOUGHTSPOT-HUBSPOT-SNOWFLAKE] Orchestration: BDM Usage
+### ORCH: [THOUGHTSPOT-CRM-HUBSPOT] Orchestration
 
-This orchestration use writer to load created BDM to Google BigQuery or Snowflake database.
+The Orchestrator runs the Extractor and one transformation and optionally selected writers.
 
 ## Business Data Model
 

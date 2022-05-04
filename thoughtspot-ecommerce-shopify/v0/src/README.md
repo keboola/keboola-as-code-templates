@@ -1,10 +1,11 @@
 # THOUGHTSPOT-ECOMMERCE-SHOPIFY
 
-This is an end to end flow which is getting data from Shopify and transform them so you can use them for visualisation in spotApp.
+By using this end-to-end flow you can extract data from Shopify and transform it using the SpottApp for visualizations.
 
-## Steps to make:
-1. Setting up shopify extractor: adding credentials
-2. Run orchestration
+## Steps to take:
+1. Fill out your credentials in the Shopify extractor
+2. Optionaly select and authorize writers
+3. Run the orchestration
 
 ## Included components' configurations:
 
@@ -13,31 +14,27 @@ Shopify EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
 
 ### EX: [IN-ECOMMERCE-SHOPIFY] Extractor
 
-Extractor collect data from Shopify about orders, products, inventory, and customers.
+Shopify extractor collects data from Shopify about the orders, products, inventory and customers.
 
 ### TR1: [IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables
 
-The first transformation pre-create tables which don't have to be downloaded from extractor, but are needed for transformation, even if they don't contain any data.
+In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
 
 ### TR2: [IN-ECOMMERCE-SHOPIFY] Transformation2: Data Preparation
 
-Data are transformed within this transformation. This transformation is gathering the data, doing stand alone analysis, healts check and creates output tables.
+Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
 
 ### TR3: [IN-ECOMMERCE-SHOPIFY] Transformation3: RFM Analysis
 
-Basic RFM analysis is done in this transformation.
-
-### ORCH: [IN-ECOMMERCE-SHOPIFY] Orchestration: BDM Creation
-
-This orchestrator gets data from Shopify Extractor, transform them, run RFM analysis and write data into Snowflake database. 
+A basic RFM analysis is performed during this transformation.
 
 ### WR: [OUT-ECOMMERCE-GSHEET] Writer OR WR: [OUT-ECOMMERCE-SNOWFLAKE] Writer OR [OUT-ECOMMERCE-BIGQUERY] Writer 
 
-Writer loads data into a Google sheet, Snowflake database or BigQuery.
+The writer loads data into Google Sheets, Snowflake database or BigQuery.
 
-### ORCH: [OUT-ECOMMERCE-GSHEET] Orchestration: BDM Usage OR [OUT-ECOMMERCE-SNOWFLAKE] Orchestration: BDM Usage OR [OUT-ECOMMERCE-BIGQUERY] Orchestration: BDM Usage
+### ORCH: [IN-ECOMMERCE-SHOPIFY] Orchestration: BDM Creation
 
-This orchestration use writer to load created BDM into Google sheet, Snowflake database or Google BigQuery.
+The Orchestrator gets the data from Shopify Extractor, transforms the data, runs the RFM analysis and writes the data into Google sheet, Snowflake database or Google BigQuery.
 
 ## Business Data Model
 

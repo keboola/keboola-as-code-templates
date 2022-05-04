@@ -1,33 +1,37 @@
 # THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS
 
-This is an end to end flow for getting data from Google Analytics, transforming them and using them in SpotApp for visualisatins.
+By using this end-to-end flow you can extract data from Google Analytics and transform it using the SpottApp for visualizations.
 
-## Steps to make:
-1. Setup profile in extractor
-2. Run orchestration
+## Steps to take:
+1. Authorize extractor and setup profile
+2. Optionaly select and authorize writers
+3. Run the orchestration
 
 ## Included components' configurations:
-EX -> TR –> ORCH
+EX -> TR –> WR -> ORCH
 
-### EX: [IN-THOUGHTSPOT-GAA] Extractor
+### EX: [IN-THOUGHTSPOT-GOOGLEANALYTICS] Extractor
 
-This extractor is getting data from Google Analytics. It's an incremental update.
+The extractor gets the data from Google Analytics.
 
-### TR: [IN-THOUGHTSPOT-GAA] Transformation
+### TR: [IN-THOUGHTSPOT-GOOGLEANALYTICS] Transformation
 
-This transformation is forming data from Google Analytics into requested shape.
+Within this transformation, data is transformed. In this transformation, data is gathered from Google Analytics, and is shaped into the requested shape.
 
-### ORCH: [IN-THOUGHTSPOT-GAA] Orchestration: BDM Creation
+### EX: [IN-THOUGHTSPOT-GOOGLEANALYTICS-SEARCHCONSOLE] Extractor
 
-This orchestration includes Extractor and one transformation which prepare data for BDM model.
+This extractor is getting data from Google Search Console.
 
-### WR: [OUT-THOUGHTSPOT-GAA-BIGQUERY] Writer OR WR: [OUT-THOUGHTSPOT-GAA-SNOWFLAKE] Writer
+### TR: [IN-THOUGHTSPOT-GOOGLEANALYTICS-SEARCHCONSOLE] Transformation
 
-Writer load data into a Google BigQuery or Snowflake database.
+Data from Google search console results are grouped by URL and date. 
 
-### ORCH: [OUT-THOUGHTSPOT-GAA-BIGQUERY] Orchestration: BDM Usage OR [OUT-THOUGHTSPOT-GAA-SNOWFLAKE] Orchestration: BDM Usage
+### WR: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Writer OR WR: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE] Writer
 
-This orchestration use writer to load created BDM to Google BigQuery or Snowflake database.
+The writer loads data into a Google BigQuery or a Snowflake database or a google sheet.
+
+### ORCH: [THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS] Orchestration
+The Orchestrator runs the Extractor and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases.
 
 ## Business Data Model
 

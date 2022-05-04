@@ -1,44 +1,40 @@
 # KEBOOLA-CRM-SALESFORCE
 
-This is an end to end flow which is getting data from salesforce and transform them so you can use them for visualisation in your BI tool or anywhere you want.
+By using this end-to-end flow you can extract data from Salesforce and transform it into visualizations in your BI tool or anywhere else you prefer.
 
-## Steps to make:
-1. Fill password and security token in Salesforce extractor
-2. Run orchestration
+## Steps to take:
+1. Fill out your password and security token in the Salesforce extractor
+2. Optionaly select and authorize writers
+3. Run the orchestration
 
-## Included components' configurations:
+## All possible Included components' configurations:
 
-Salesforce EX -> TR1 -> TR2 -> TR3 -> ORCH
+Salesforce EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
 
 
 ### EX: [IN-CRM-SALESFORCE] Extractor
 
-This extractor is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.
+Salesforce data is extracted with this extractor. The extractor will be taking the following data: accounts, contacts, events, leads, opportunities, opportunity contact roles, opportunity stages and user information.
 
 ### TR1: [IN-CRM-SALESFORCE] Transformation1: Input Tables Creation
 
-This Transformation checks for missing columns needed in the following Transformations, adding them to the output tables and populating them with NULL values if missing.
+In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
 
 ### TR2: [IN-CRM-SALESFORCE] Transformation2: Main
 
-This transformation creates output CRM data model (set of the output tables) from data which were extracted from Salesforce. It is divided into 3 phases. The first phase creates 3 tables (out_company, out_contact, out_employee). The second phase creates opportunity table by joining the other tables (out_employee, out_company, opportunity_stage). And the third phase creates out_activity table using the first contact/opportunity/employee ID in array from activities table for joins. And also output paring table for opportunities and contacts is created.
+From Salesforce data, the second transformation creates an output CRM data model (set of output tables). There are three phases to the transformation. In the first phase of the process, 3 tables are created (out_company, out_contact, out_employee). Second phase creates an opportunity table by combining other tables (out_employee, out_company, opportunity_stage). The third phase then creates the out_activity table using the first contact/opportunity/employee IDs from the activities by joining the table; this also outputs a pairing table for opportunities and contacts are created.
 
 ### TR3: [IN-CRM-SALESFORCE] Transformation3: Snapshots
 
-Creation of final snapshots from the auxiliary tables.
-
-### ORCH: [IN-CRM-SALESFORCE] Orchestration: BDM Creation
-
-This orchestrator runs Salesforce CRM extractor and 3 Snowflake transformations.
+The final snapshots are generated from the auxiliary tables.
 
 ### WR: [OUT-CRM-GSHEET] Writer OR WR: [OUT-CRM-SNOWFLAKE] Writer
 
-Writer load data into a Google sheet or Snowflake database.
+The writer loads data into a Google sheet or a Snowflake database.
 
-### ORCH: [OUT-CRM-GSHEET] Orchestration: BDM Usage OR [OUT-CRM-SNOWFLAKE] Orchestration: BDM Usage
+### ORCH: [IN-CRM-SALESFORCE] Orchestration: BDM Creation
 
-This orchestration use writer to load created CRM BDM to Google sheet or Snowflake database.
-
+The Orchestrator runs Salesforce CRM extractor, three snowflake transformations and optionally selected writers.
 
 ## Business Data Model
 
