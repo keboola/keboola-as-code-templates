@@ -1,4 +1,8 @@
-{
+{ storage: {
+    output: {
+      default_bucket: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249")
+    }
+  },
   parameters: {
     include_contact_list_membership: true,
     property_attributes: {
