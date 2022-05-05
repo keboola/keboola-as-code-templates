@@ -1,4 +1,4 @@
 {
   name: "Transformation Facebook Ads",
-  dependsOn: [],
+  dependsOn: ["<previous>"],
 }

@@ -1,4 +1,4 @@
 {
   name: "Transformation Sklik",
-  dependsOn: [],
+  dependsOn: ["<previous>"],
 }
