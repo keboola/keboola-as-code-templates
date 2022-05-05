@@ -13,8 +13,9 @@ SELECT
   , REPLACE(NULLIF(P."price", ''), ',', '.')::DECIMAL(19, 2)                                     AS PRODUCT_PRICE
   , REPLACE(NULLIF(P."standardPrice", ''), ',', '.')::DECIMAL(19, 2)                             AS PRODUCT_STANDARD_PRICE
   , REPLACE(NULLIF(P."purchasePrice", ''), ',', '.')::DECIMAL(19, 2)                             AS PRODUCT_PURCHASE_PRICE
-  , P."variantBarva"                                                                             AS PRODUCT_COLOR
-  , P."variantVelikost"                                                                          AS PRODUCT_SIZE
+  , P."variantBarva"                                                                             AS PRODUCT_OPTION1
+  , P."variantVelikost"                                                                          AS PRODUCT_OPTION2
+  , 'Insert another varinat for product option'                                                  AS PRODUCT_OPTION3
   , S."stock"                                                                                    AS PRODUCT_STOCK_AMOUNT
   , P."defaultCategory"                                                                          AS CATEGORY
   , P."categoryText"                                                                             AS CATEGORY_TEXT
@@ -38,8 +39,9 @@ SELECT 'BILLING'      AS PRODUCT_ID
      , NULL           AS PRODUCT_PRICE
      , NULL           AS PRODUCT_STANDARD_PRICE
      , NULL           AS PRODUCT_PURCHASE_PRICE
-     , 'N/A'          AS PRODUCT_COLOR
-     , 'N/A'          AS PRODUCT_SIZE
+     , 'N/A'          AS PRODUCT_OPTION1
+     , 'N/A'          AS PRODUCT_OPTION2
+     , 'N/A'          AS PRODUCT_OPTION3
      , NULL           AS PRODUCT_STOCK_AMOUNT
      , 'N/A'          AS CATEGORY
      , 'N/A'          AS CATEGORY_TEXT
@@ -58,8 +60,9 @@ SELECT 'SHIPPING'      AS PRODUCT_ID
      , NULL            AS PRODUCT_PRICE
      , NULL            AS PRODUCT_STANDARD_PRICE
      , NULL            AS PRODUCT_PURCHASE_PRICE
-     , 'N/A'           AS PRODUCT_COLOR
-     , 'N/A'           AS PRODUCT_SIZE
+     , 'N/A'          AS PRODUCT_OPTION1
+     , 'N/A'          AS PRODUCT_OPTION2
+     , 'N/A'          AS PRODUCT_OPTION3
      , NULL            AS PRODUCT_STOCK_AMOUNT
      , 'N/A'           AS CATEGORY
      , 'N/A'           AS CATEGORY_TEXT
@@ -92,8 +95,9 @@ SELECT DP.PRODUCT_ID   AS PRODUCT_ID
      , NULL            AS PRODUCT_PRICE
      , NULL            AS PRODUCT_STANDARD_PRICE
      , NULL            AS PRODUCT_PURCHASE_PRICE
-     , 'N/A'           AS PRODUCT_COLOR
-     , 'N/A'           AS PRODUCT_SIZE
+     , 'N/A'          AS PRODUCT_OPTION1
+     , 'N/A'          AS PRODUCT_OPTION2
+     , 'N/A'          AS PRODUCT_OPTION3
      , NULL            AS PRODUCT_STOCK_AMOUNT
      , 'N/A'           AS CATEGORY
      , 'N/A'           AS CATEGORY_TEXT
