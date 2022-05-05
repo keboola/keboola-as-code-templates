@@ -6,6 +6,36 @@
   },
   "templates": [
     {
+      "id": "api-demo",
+      "icon": "common:settings",
+      "name": "API demo (UI dev)",
+      "description": "Template from the examples of https://templates.keboola.com/v1/documentation/",
+      "path": "api-demo",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "my-template",
+      "icon": "common:download",
+      "name": "My Template (UI dev)",
+      "description": "Full workflow to ...",
+      "path": "my-template",
+      "versions": [
+        {
+          "version": "1.2.3",
+          "description": "",
+          "stable": true,
+          "path": "v1"
+        }
+      ]
+    },
+    {
       "id": "keboola-crm-hubspot",
       "icon": "component:kds-team.ex-hubspot-crm",
       "name": "Keboola CRM Hubspot", 
