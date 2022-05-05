@@ -1,3 +1,3 @@
 {
-  name: "[ANALYTICS-GOOGLEANALYTICS] Orchestration /" + InstanceIdShort(),
+  name: "[THOUGHTSPOT-ANALYTICS-GOOGLEANALYTICS] Orchestration /" + InstanceIdShort(),
 }
