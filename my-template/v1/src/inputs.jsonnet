@@ -1,7 +1,7 @@
 {
   stepsGroups: [
     {
-      description: "Choose one of the eshop platforms",
+      description: "Configure both eshop platforms.",
       required: "all",
       steps: [
         {
