@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".meetings",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".meetings",
           destination: "meetings",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".email_events",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".email_events",
           destination: "email_events",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".contacts_identity_profiles",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".contacts_identity_profiles",
           destination: "contacts_identity_profiles",
           where_column: "",
           where_values: [],
@@ -28,7 +28,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".owners",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".owners",
           destination: "owners",
           where_column: "",
           where_values: [],
@@ -36,7 +36,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".pipelines",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".pipelines",
           destination: "pipelines",
           where_column: "",
           where_values: [],
@@ -44,7 +44,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".deals_contacts_list",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".deals_contacts_list",
           destination: "deals_contacts_list",
           where_column: "",
           where_values: [],
@@ -52,7 +52,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".pipeline_stages",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".pipeline_stages",
           destination: "pipeline_stages",
           where_column: "",
           where_values: [],
@@ -60,7 +60,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".deals_assoc_companies_list",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".deals_assoc_companies_list",
           destination: "deals_assoc_companies_list",
           where_column: "",
           where_values: [],
@@ -68,7 +68,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".calls",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".calls",
           destination: "calls",
           where_column: "",
           where_values: [],
@@ -76,7 +76,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".lists",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".lists",
           destination: "lists",
           where_column: "",
           where_values: [],
@@ -84,7 +84,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".contacts_identity_profile_identities",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".contacts_identity_profile_identities",
           destination: "contacts_identity_profile_identities",
           where_column: "",
           where_values: [],
@@ -92,7 +92,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".contacts_form_submissions",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".contacts_form_submissions",
           destination: "contacts_form_submissions",
           where_column: "",
           where_values: [],
@@ -100,7 +100,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".contacts_lists",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".contacts_lists",
           destination: "contacts_lists",
           where_column: "",
           where_values: [],
@@ -108,7 +108,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".deals_stage_history",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".deals_stage_history",
           destination: "deals_stage_history",
           where_column: "",
           where_values: [],
@@ -116,7 +116,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".companies",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".companies",
           destination: "companies",
           where_column: "",
           where_values: [],
@@ -124,7 +124,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".activities",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".activities",
           destination: "activities",
           where_column: "",
           where_values: [],
@@ -132,7 +132,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".contacts",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".contacts",
           destination: "contacts",
           where_column: "",
           where_values: [],
@@ -140,7 +140,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".campaigns",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".campaigns",
           destination: "campaigns",
           where_column: "",
           where_values: [],
@@ -148,7 +148,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".deals",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".deals",
           destination: "deals",
           where_column: "",
           where_values: [],
@@ -156,7 +156,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".emails",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".emails",
           destination: "emails",
           where_column: "",
           where_values: [],
@@ -164,7 +164,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".forms",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".forms",
           destination: "forms",
           where_column: "",
           where_values: [],
@@ -172,7 +172,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor-10708760") + ".marketing_email_statistics",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".marketing_email_statistics",
           destination: "marketing_email_statistics",
           where_column: "",
           where_values: [],

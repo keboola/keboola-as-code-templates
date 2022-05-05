@@ -6,7 +6,7 @@
         {
           columns: [],
           destination: "contacts",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".contacts",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".contacts",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -14,7 +14,7 @@
         {
           columns: [],
           destination: "pipelines",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".pipelines",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".pipelines",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -22,7 +22,7 @@
         {
           columns: [],
           destination: "pipeline_stages",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".pipeline_stages",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".pipeline_stages",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -30,7 +30,7 @@
         {
           columns: [],
           destination: "deals_contacts_list",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".deals_contacts_list",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".deals_contacts_list",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -38,7 +38,7 @@
         {
           columns: [],
           destination: "companies",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".companies",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".companies",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -46,7 +46,7 @@
         {
           columns: [],
           destination: "owners",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".owners",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".owners",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -54,7 +54,7 @@
         {
           columns: [],
           destination: "deals",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".deals",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".deals",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -62,7 +62,7 @@
         {
           columns: [],
           destination: "activities",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".activities",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".activities",
           where_column: "",
           where_operator: "eq",
           where_values: [],
@@ -70,7 +70,7 @@
         {
           columns: [],
           destination: "deals_assoc_companies_list",
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor-7513249") + ".deals_assoc_companies_list",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".deals_assoc_companies_list",
           where_column: "",
           where_operator: "eq",
           where_values: [],

@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".account",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".account",
           destination: "account",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".contact",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".contact",
           destination: "contact",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".lead",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".lead",
           destination: "lead",
           where_column: "",
           where_values: [],
@@ -28,7 +28,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".event",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".event",
           destination: "event",
           where_column: "",
           where_values: [],
@@ -36,7 +36,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunity",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".opportunity",
           destination: "opportunity",
           where_column: "",
           where_values: [],
@@ -44,7 +44,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunitycontactrole",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".opportunitycontactrole",
           destination: "opportunitycontactrole",
           where_column: "",
           where_values: [],
@@ -52,7 +52,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".opportunitystage",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".opportunitystage",
           destination: "opportunitystage",
           where_column: "",
           where_values: [],
@@ -60,7 +60,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor-12706099") + ".user",
+          source: "in.c-kds-team-ex-salesforce-v2-" + ConfigId("in-crm-salesforce-extractor") + ".user",
           destination: "user",
           where_column: "",
           where_values: [],

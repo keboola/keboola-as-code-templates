@@ -2,14 +2,14 @@
   configurations: [
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("out-crm-snowflake-orchestration-bdm-usage-7513249"),
-      path: "other/keboola.orchestrator/out-crm-snowflake-orchestration-bdm-usage-7513249",
+      id: ConfigId("out-crm-snowflake-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-crm-snowflake-orchestration-bdm-usage",
       rows: [],
     },
     {
       componentId: "keboola.wr-snowflake-blob-storage",
-      id: ConfigId("out-crm-snowflake-writer-12706099"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer-12706099",
+      id: ConfigId("out-crm-snowflake-writer"),
+      path: "writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("activity"),

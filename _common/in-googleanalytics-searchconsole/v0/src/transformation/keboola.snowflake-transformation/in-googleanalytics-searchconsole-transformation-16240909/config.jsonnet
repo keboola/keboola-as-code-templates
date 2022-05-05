@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kds-team-ex-google-search-console-" + ConfigId("in-googleanalytics-searchconsole-extractor-16240909") + ".raw_search_console",
+          source: "in.c-kds-team-ex-google-search-console-" + ConfigId("in-googleanalytics-searchconsole-extractor") + ".raw_search_console",
           destination: "raw_search_console",
           where_column: "",
           where_values: [],

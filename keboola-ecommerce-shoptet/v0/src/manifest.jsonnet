@@ -1,46 +1,46 @@
 { mainConfig: {
     componentId: "keboola.orchestrator",
-    id: ConfigId("keboola-ecommerce-shoptet-orchestration-6031003"),
+    id: ConfigId("keboola-ecommerce-shoptet-orchestration"),
   },
   configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("keboola-ecommerce-shoptet-orchestration-6031003"),
-      path: "other/keboola.orchestrator/keboola-ecommerce-shoptet-orchestration-6031003",
+      id: ConfigId("keboola-ecommerce-shoptet-orchestration"),
+      path: "other/keboola.orchestrator/keboola-ecommerce-shoptet-orchestration",
       rows: [],
     },
     {
       componentId: "kds-team.ex-shoptet-permalink",
-      id: ConfigId("in-ecommerce-shoptet-extractor-6031003"),
-      path: "<common>/in-ecommerce-shoptet/v0/src/extractor/kds-team.ex-shoptet-permalink/in-ecommerce-shoptet-extractor-6031003",
+      id: ConfigId("in-ecommerce-shoptet-extractor"),
+      path: "<common>/in-ecommerce-shoptet/v0/src/extractor/kds-team.ex-shoptet-permalink/in-ecommerce-shoptet-extractor",
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-ecommerce-shoptet-transformation1-data-preparation-6031003"),
-      path: "<common>/in-ecommerce-shoptet/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shoptet-transformation1-data-preparation-6031003",
+      id: ConfigId("in-ecommerce-shoptet-transformation1-data-preparation"),
+      path: "<common>/in-ecommerce-shoptet/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shoptet-transformation1-data-preparation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-ecommerce-shoptet-transformation2-rfm-analysis-6031003"),
-      path: "<common>/in-ecommerce-shoptet/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shoptet-transformation2-rfm-analysis-6031003",
+      id: ConfigId("in-ecommerce-shoptet-transformation2-rfm-analysis"),
+      path: "<common>/in-ecommerce-shoptet/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shoptet-transformation2-rfm-analysis",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
     if Input("google-sheet-checkbox") == true then
     {
       componentId: "keboola.wr-google-sheets",
-      id: ConfigId("out-ecommerce-gsheet-writer-6031003"),
-      path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer-10697799",
+      id: ConfigId("out-ecommerce-gsheet-writer"),
+      path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer",
       rows: [],
     },
     if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
-      id: ConfigId("out-ecommerce-snowflake-writer-10697799"),
-      path: "<common>/out-ecommerce-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer-10697799",
+      id: ConfigId("out-ecommerce-snowflake-writer"),
+      path: "<common>/out-ecommerce-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer",
       rows: std.filter(function(v) v != null,[
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count-001"),
@@ -101,8 +101,8 @@
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",
-      id: ConfigId("out-ecommerce-bigquery-writer-10697799"),
-      path: "<common>/out-ecommerce-bigquery/v0/src/writer/keboola.wr-google-bigquery-v2/out-ecommerce-bigquery-writer-10697799",
+      id: ConfigId("out-ecommerce-bigquery-writer"),
+      path: "<common>/out-ecommerce-bigquery/v0/src/writer/keboola.wr-google-bigquery-v2/out-ecommerce-bigquery-writer",
       rows: std.filter(function(v) v != null,[
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count"),
@@ -163,23 +163,23 @@
     if InputIsAvailable("ex-facebook-ads-api-version") then
     {
       componentId: "keboola.ex-facebook-ads",
-      id: ConfigId("in-ecommerce-facebook-extractor-6031001"),
-      path: "<common>/in-ecommerce-facebook/v0/src/extractor/keboola.ex-facebook-ads/in-ecommerce-facebook-extractor-6031001",
+      id: ConfigId("in-ecommerce-facebook-extractor"),
+      path: "<common>/in-ecommerce-facebook/v0/src/extractor/keboola.ex-facebook-ads/in-ecommerce-facebook-extractor",
       rows: [],
     },
     if InputIsAvailable("ex-facebook-ads-api-version") then
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-ecommerce-facebook-transformation-6031001"),
-      path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation-6031001",
+      id: ConfigId("in-ecommerce-facebook-transformation"),
+      path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
     if InputIsAvailable("ex-google-ads-customer-id") then
     {
       componentId: "keboola.ex-google-ads",
-      id: ConfigId("in-ecommerce-googleads-extractor-15228151"),
-      path: "<common>/in-ecommerce-googleads/v0/src/extractor/keboola.ex-google-ads/in-ecommerce-googleads-extractor-15228151",
+      id: ConfigId("in-ecommerce-googleads-extractor"),
+      path: "<common>/in-ecommerce-googleads/v0/src/extractor/keboola.ex-google-ads/in-ecommerce-googleads-extractor",
       rows: [
         {
           id: ConfigRowId("campaign"),
@@ -190,23 +190,23 @@
     if InputIsAvailable("ex-google-ads-customer-id") then
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-ecommerce-googleads-transformation-15228151"),
-      path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation-15228151",
+      id: ConfigId("in-ecommerce-googleads-transformation"),
+      path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
     if InputIsAvailable("ex-sklik-token") then
     {
       componentId: "keboola.ex-sklik",
-      id: ConfigId("in-ecommerce-sklik-extractor-6031007"),
-      path: "<common>/in-ecommerce-sklik/v0/src/extractor/keboola.ex-sklik/in-ecommerce-sklik-extractor-6031007",
+      id: ConfigId("in-ecommerce-sklik-extractor"),
+      path: "<common>/in-ecommerce-sklik/v0/src/extractor/keboola.ex-sklik/in-ecommerce-sklik-extractor",
       rows: [],
     },
     if InputIsAvailable("ex-sklik-token") then
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-ecommerce-sklik-transformation-6031007"),
-      path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation-6031007",
+      id: ConfigId("in-ecommerce-sklik-transformation"),
+      path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },

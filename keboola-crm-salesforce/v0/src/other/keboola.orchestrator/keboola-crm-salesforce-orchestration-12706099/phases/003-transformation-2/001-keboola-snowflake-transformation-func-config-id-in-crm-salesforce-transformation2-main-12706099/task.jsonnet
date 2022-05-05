@@ -1,8 +1,8 @@
 {
-  name: "keboola.snowflake-transformation-" + ConfigId("in-crm-salesforce-transformation2-main-12706099"),
+  name: "keboola.snowflake-transformation-" + ConfigId("in-crm-salesforce-transformation2-main"),
   task: {
     mode: "run",
-    configPath: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main-12706099",
+    configPath: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main",
   },
   continueOnFailure: false,
   enabled: true,

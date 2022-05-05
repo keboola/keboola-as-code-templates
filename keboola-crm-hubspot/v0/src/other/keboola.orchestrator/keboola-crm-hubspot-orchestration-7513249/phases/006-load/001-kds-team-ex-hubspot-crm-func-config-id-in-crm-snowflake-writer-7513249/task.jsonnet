@@ -1,8 +1,8 @@
 {
-  name: "keboola.wr-snowflake-blob-storage-" + ConfigId("out-crm-snowflake-writer-7513249"),
+  name: "keboola.wr-snowflake-blob-storage-" + ConfigId("out-crm-snowflake-writer"),
   task: {
     mode: "run",
-    configPath: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer-12706099",
+    configPath: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer",
   },
   continueOnFailure: false,
   enabled: true,

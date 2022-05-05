@@ -2,8 +2,8 @@
   configurations: [
     {
       componentId: "kds-team.ex-salesforce-v2",
-      id: ConfigId("in-crm-salesforce-extractor-12706099"),
-      path: "extractor/kds-team.ex-salesforce-v2/in-crm-salesforce-extractor-12706099",
+      id: ConfigId("in-crm-salesforce-extractor"),
+      path: "extractor/kds-team.ex-salesforce-v2/in-crm-salesforce-extractor",
       rows: [
         {
           id: ConfigRowId("account"),
@@ -41,26 +41,26 @@
     },
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("in-crm-salesforce-orchestration-bdm-creation-12706099"),
-      path: "other/keboola.orchestrator/in-crm-salesforce-orchestration-bdm-creation-12706099",
+      id: ConfigId("in-crm-salesforce-orchestration-bdm-creation"),
+      path: "other/keboola.orchestrator/in-crm-salesforce-orchestration-bdm-creation",
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation-12706099"),
-      path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation1-input-tables-creation-12706099",
+      id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation"),
+      path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation1-input-tables-creation",
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-crm-salesforce-transformation2-main-12706099"),
-      path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main-12706099",
+      id: ConfigId("in-crm-salesforce-transformation2-main"),
+      path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main",
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-crm-salesforce-transformation3-snapshots-12706099"),
-      path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation3-snapshots-12706099",
+      id: ConfigId("in-crm-salesforce-transformation3-snapshots"),
+      path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation3-snapshots",
       rows: [],
     },
   ],

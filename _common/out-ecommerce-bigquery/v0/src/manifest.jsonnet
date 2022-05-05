@@ -2,14 +2,14 @@
   configurations: [
      {
       componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-bigquery-orchestration-bdm-usage-10697799"),
-      path: "other/keboola.orchestrator/out-ecommerce-bigquery-orchestration-bdm-usage-10697799",
+      id: ConfigId("out-ecommerce-bigquery-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-ecommerce-bigquery-orchestration-bdm-usage",
       rows: [],
     },
     {
       componentId: "keboola.wr-google-bigquery-v2",
-      id: ConfigId("out-ecommerce-bigquery-writer-10697799"),
-      path: "writer/keboola.wr-google-bigquery-v2/out-ecommerce-bigquery-writer-10697799",
+      id: ConfigId("out-ecommerce-bigquery-writer"),
+      path: "writer/keboola.wr-google-bigquery-v2/out-ecommerce-bigquery-writer",
       rows: [
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count"),

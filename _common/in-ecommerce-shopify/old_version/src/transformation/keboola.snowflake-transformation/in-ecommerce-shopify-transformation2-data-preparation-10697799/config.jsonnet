@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".fulfillment_line_item_discount_allocations",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".fulfillment_line_item_discount_allocations",
           destination: "fulfillment_line_item_discount_allocations",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".fulfillment_line_item_tax_lines",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".fulfillment_line_item_tax_lines",
           destination: "fulfillment_line_item_tax_lines",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".line_item_tax_lines",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line_item_tax_lines",
           destination: "line_item_tax_lines",
           where_column: "",
           where_values: [],
@@ -28,7 +28,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".order_discount_codes",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_discount_codes",
           destination: "order_discount_codes",
           where_column: "",
           where_values: [],
@@ -36,7 +36,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".product_options",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product_options",
           destination: "product_options",
           where_column: "",
           where_values: [],
@@ -44,7 +44,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".order",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order",
           destination: "order",
           where_column: "",
           where_values: [],
@@ -52,7 +52,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".product",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product",
           destination: "product",
           where_column: "",
           where_values: [],
@@ -60,7 +60,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".customer",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".customer",
           destination: "customer",
           where_column: "",
           where_values: [],
@@ -68,7 +68,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".order_discount_applications",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_discount_applications",
           destination: "order_discount_applications",
           where_column: "",
           where_values: [],
@@ -76,7 +76,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".product_variant",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product_variant",
           destination: "product_variant",
           where_column: "",
           where_values: [],
@@ -84,7 +84,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".order_fulfillments",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_fulfillments",
           destination: "order_fulfillments",
           where_column: "",
           where_values: [],
@@ -92,7 +92,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".order_tax_lines",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_tax_lines",
           destination: "order_tax_lines",
           where_column: "",
           where_values: [],
@@ -100,7 +100,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".product_images",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product_images",
           destination: "product_images",
           where_column: "",
           where_values: [],
@@ -108,7 +108,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".inventory_items",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".inventory_items",
           destination: "inventory_items",
           where_column: "",
           where_values: [],
@@ -116,7 +116,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".fulfillment_line_item",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".fulfillment_line_item",
           destination: "fulfillment_line_item",
           where_column: "",
           where_values: [],
@@ -124,7 +124,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".locations",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".locations",
           destination: "locations",
           where_column: "",
           where_values: [],
@@ -132,7 +132,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".line_item",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line_item",
           destination: "line_item",
           where_column: "",
           where_values: [],
@@ -140,7 +140,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".inventory_levels",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".inventory_levels",
           destination: "inventory_levels",
           where_column: "",
           where_values: [],
@@ -148,7 +148,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".line_item_discount_allocations",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line_item_discount_allocations",
           destination: "line_item_discount_allocations",
           where_column: "",
           where_values: [],
@@ -156,7 +156,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor-10697799") + ".customer_addresses",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".customer_addresses",
           destination: "customer_addresses",
           where_column: "",
           where_values: [],

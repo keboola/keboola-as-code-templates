@@ -2,14 +2,14 @@
   configurations: [
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("out-thoughtspot-hubspot-snowflake-orchestration-bdm-usage-10708760"),
-      path: "other/keboola.orchestrator/out-thoughtspot-hubspot-snowflake-orchestration-bdm-usage-10708760",
+      id: ConfigId("out-thoughtspot-hubspot-snowflake-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-thoughtspot-hubspot-snowflake-orchestration-bdm-usage",
       rows: [],
     },
     {
       componentId: "keboola.wr-snowflake-blob-storage",
-      id: ConfigId("out-thoughtspot-hubspot-snowflake-writer-10708760"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-hubspot-snowflake-writer-10708760",
+      id: ConfigId("out-thoughtspot-hubspot-snowflake-writer"),
+      path: "writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-hubspot-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("dim-date"),

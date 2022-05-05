@@ -71,11 +71,11 @@
           ],
         },
       },
-    ],  
+    ],
   },
   authorization: {
     oauth_api: {
-      id: ConfigId("in-ecommerce-facebook-extractor-6031001"),
+      id: ConfigId("in-ecommerce-facebook-extractor"),
       version: 3,
     },
   },

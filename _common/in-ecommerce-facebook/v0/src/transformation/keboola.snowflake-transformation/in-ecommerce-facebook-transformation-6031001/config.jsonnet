@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-keboola-ex-facebook-ads-" + ConfigId("in-ecommerce-facebook-extractor-6031001") + ".facebook_ads_insights_last_90d_insights",
+          source: "in.c-keboola-ex-facebook-ads-" + ConfigId("in-ecommerce-facebook-extractor") + ".facebook_ads_insights_last_90d_insights",
           destination: "facebook_ads_insights_last_90d_insights",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-facebook-ads-" + ConfigId("in-ecommerce-facebook-extractor-6031001") + ".facebook_ads_insights_monthly_insights",
+          source: "in.c-keboola-ex-facebook-ads-" + ConfigId("in-ecommerce-facebook-extractor") + ".facebook_ads_insights_monthly_insights",
           destination: "facebook_ads_insights_monthly_insights",
           where_column: "",
           where_values: [],

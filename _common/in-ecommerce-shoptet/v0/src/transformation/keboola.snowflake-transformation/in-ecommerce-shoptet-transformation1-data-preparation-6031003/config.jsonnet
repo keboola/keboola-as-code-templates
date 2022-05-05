@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".customers",
+          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor") + ".customers",
           destination: "customers",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".orders",
+          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor") + ".orders",
           destination: "orders",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".products",
+          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor") + ".products",
           destination: "products",
           where_column: "",
           where_values: [],
@@ -28,7 +28,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".shoptet",
+          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor") + ".shoptet",
           destination: "shoptet",
           where_column: "",
           where_values: [],
@@ -36,7 +36,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor-6031003") + ".stocks",
+          source: "in.c-kds-team-ex-shoptet-permalink-" + ConfigId("in-ecommerce-shoptet-extractor") + ".stocks",
           destination: "stocks",
           where_column: "",
           where_values: [],

@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor-6031007") + ".accounts",
+          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor") + ".accounts",
           destination: "accounts",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor-6031007") + ".sklik-campaigns",
+          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor") + ".sklik-campaigns",
           destination: "sklik-campaigns",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor-6031007") + ".sklik-campaigns-monthly",
+          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor") + ".sklik-campaigns-monthly",
           destination: "sklik-campaigns-monthly",
           where_column: "",
           where_values: [],
@@ -28,7 +28,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor-6031007") + ".sklik-campaigns-monthly-stats",
+          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor") + ".sklik-campaigns-monthly-stats",
           destination: "sklik-campaigns-monthly-stats",
           where_column: "",
           where_values: [],
@@ -36,7 +36,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor-6031007") + ".sklik-campaigns-stats",
+          source: "in.c-keboola-ex-sklik-" + ConfigId("in-ecommerce-sklik-extractor") + ".sklik-campaigns-stats",
           destination: "sklik-campaigns-stats",
           where_column: "",
           where_values: [],

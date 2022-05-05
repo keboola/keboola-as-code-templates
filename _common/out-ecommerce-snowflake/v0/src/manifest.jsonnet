@@ -2,14 +2,14 @@
   configurations: [
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-snowflake-orchestration-bdm-usage-10697799"),
-      path: "other/keboola.orchestrator/out-ecommerce-snowflake-orchestration-bdm-usage-10697799",
+      id: ConfigId("out-ecommerce-snowflake-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-ecommerce-snowflake-orchestration-bdm-usage",
       rows: [],
     },
     {
       componentId: "keboola.wr-snowflake-blob-storage",
-      id: ConfigId("out-ecommerce-snowflake-writer-10697799"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer-10697799",
+      id: ConfigId("out-ecommerce-snowflake-writer"),
+      path: "writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count-001"),

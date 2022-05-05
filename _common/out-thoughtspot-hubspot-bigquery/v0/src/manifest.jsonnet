@@ -2,14 +2,14 @@
   configurations: [
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("out-thoughtspot-hubspot-bigquery-orchestration-bdm-usage-10708760"),
-      path: "other/keboola.orchestrator/out-thoughtspot-hubspot-bigquery-orchestration-bdm-usage-10708760",
+      id: ConfigId("out-thoughtspot-hubspot-bigquery-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-thoughtspot-hubspot-bigquery-orchestration-bdm-usage",
       rows: [],
     },
     {
       componentId: "keboola.wr-google-bigquery-v2",
-      id: ConfigId("out-thoughtspot-hubspot-bigquery-writer-10708760"),
-      path: "writer/keboola.wr-google-bigquery-v2/out-thoughtspot-hubspot-bigquery-writer-10708760",
+      id: ConfigId("out-thoughtspot-hubspot-bigquery-writer"),
+      path: "writer/keboola.wr-google-bigquery-v2/out-thoughtspot-hubspot-bigquery-writer",
       rows: [
         {
           id: ConfigRowId("dim-date"),

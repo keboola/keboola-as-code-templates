@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-keboola-ex-google-ads-" + ConfigId("in-ecommerce-googleads-extractor-15228151") + ".report-campaign",
+          source: "in.c-keboola-ex-google-ads-" + ConfigId("in-ecommerce-googleads-extractor") + ".report-campaign",
           destination: "report-campaign",
           where_column: "",
           where_values: [],

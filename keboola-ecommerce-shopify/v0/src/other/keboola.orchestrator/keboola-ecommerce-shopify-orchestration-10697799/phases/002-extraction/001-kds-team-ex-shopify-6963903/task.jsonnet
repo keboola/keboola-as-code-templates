@@ -1,8 +1,8 @@
 {
-  name: "kds-team.ex-shopify-"+ ConfigId("in-ecommerce-shopify-extractor-10697799"),
+  name: "kds-team.ex-shopify-"+ ConfigId("in-ecommerce-shopify-extractor"),
   task: {
     mode: "run",
-    configPath: "<common>/in-ecommerce-shopify/v0/src/extractor/kds-team.ex-shopify/in-ecommerce-shopify-extractor-10697799",
+    configPath: "<common>/in-ecommerce-shopify/v0/src/extractor/kds-team.ex-shopify/in-ecommerce-shopify-extractor",
   },
   continueOnFailure: false,
   enabled: true,

@@ -2,14 +2,14 @@
   configurations: [
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("out-googleanalytics-bigquery-orchestration-bdm-usage-15471164"),
-      path: "other/keboola.orchestrator/out-googleanalytics-bigquery-orchestration-bdm-usage-15471164",
+      id: ConfigId("out-googleanalytics-bigquery-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-googleanalytics-bigquery-orchestration-bdm-usage",
       rows: [],
     },
     {
       componentId: "keboola.wr-google-bigquery-v2",
-      id: ConfigId("out-googleanalytics-bigquery-writer-15471164"),
-      path: "writer/keboola.wr-google-bigquery-v2/out-googleanalytics-bigquery-writer-15471164",
+      id: ConfigId("out-googleanalytics-bigquery-writer"),
+      path: "writer/keboola.wr-google-bigquery-v2/out-googleanalytics-bigquery-writer",
       rows: [
         {
           id: ConfigRowId("ga-ad-analytics"),
