@@ -22,16 +22,8 @@
     description: "Select period from which you want to get the data.",
     type: "string",
     kind: "select",
-    default: '2 months ago',
+    default: '6 months ago',
     options: [
-      {
-        value: '1 week ago',
-        label: '1 week ago',
-      },
-      {
-        value: '2 weeks ago',
-        label: '2 weeks ago',
-      },
       {
         value: '1 month ago',
         label: '1 month ago',
@@ -39,6 +31,14 @@
       {
         value: '2 months ago',
         label: '2 months ago',
+      },
+      {
+        value: '3 months ago',
+        label: '3 months ago',
+      },
+      {
+        value: '6 months ago',
+        label: '6 months ago',
       },
     ],
   },
