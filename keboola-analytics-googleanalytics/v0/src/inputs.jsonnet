@@ -12,9 +12,9 @@ local searchconsole = import "/<common>/in-thoughtspot-googleanalytics-searchcon
           icon: "component:keboola.ex-google-analytics-v4",
           name: "Google Analytics",
           description: "Google Analytics Data Source",
-          dialogName: "Analytics Data Source", 
+          dialogName: "Analytics Data Source",
           dialogDescription: "This extractor is getting data from Google Analytics. It's an incremental update.",
-          inputs: googleanalytics  
+          inputs: googleanalytics
         },
       ],
     },
@@ -23,16 +23,16 @@ local searchconsole = import "/<common>/in-thoughtspot-googleanalytics-searchcon
       required: "optional",
       steps: [
         {
-          icon: "component:kds_team.ex-google-search-console",
+          icon: "component:kds-team.ex-google-search-console",
           name: "Google Search Console",
           description: "Google Search Console",
-          dialogName: "Google Search Console", 
+          dialogName: "Google Search Console",
           dialogDescription: "This extractor is getting data from Google Search Console.",
           inputs: searchconsole
         }
       ]
     },
-    {   
+    {
       description: "Snowflake Transformation",
       required: "all",
       steps: [
@@ -52,7 +52,7 @@ local searchconsole = import "/<common>/in-thoughtspot-googleanalytics-searchcon
           icon: "component:keboola.wr-snowflake-blob-storage",
           name: "Snowflake",
           description: "Snowflake - Destination",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Data load to Snowflake database.",
           inputs: snowflake
         },
@@ -60,7 +60,7 @@ local searchconsole = import "/<common>/in-thoughtspot-googleanalytics-searchcon
           icon: "component:keboola.wr-google-bigquery-v2",
           name: "Google Big Query",
           description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
+          dialogName: "Big Query Destination",
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
         }
