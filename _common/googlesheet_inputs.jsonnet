@@ -5,7 +5,6 @@
         description: "Do you want to load data into google sheet?",
         type: "bool",
         kind: "confirm",
-        rules: "required",
         default: true,
     },
 ]
