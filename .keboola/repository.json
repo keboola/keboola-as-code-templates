@@ -8,7 +8,7 @@
     {
       "id": "keboola-crm-hubspot",
       "icon": "component:kds-team.ex-hubspot-crm",
-      "name": "Keboola CRM Hubspot",
+      "name": "Keboola CRM Hubspot", 
       "description": "Transform your Hubspot data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-crm-hubspot",
       "versions": [
