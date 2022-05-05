@@ -1,4 +1,4 @@
 {
-  name: "Load",
+  name: "Load: Google Sheet",
   dependsOn: ["<previous>"],
 }

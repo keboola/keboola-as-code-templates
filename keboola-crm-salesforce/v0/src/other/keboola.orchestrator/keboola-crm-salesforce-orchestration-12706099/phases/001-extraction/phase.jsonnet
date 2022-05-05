@@ -1,4 +1,4 @@
 {
-  name: "Extraction",
+  name: "Extraction: Salesforce",
   dependsOn: ["<previous>"],
 }

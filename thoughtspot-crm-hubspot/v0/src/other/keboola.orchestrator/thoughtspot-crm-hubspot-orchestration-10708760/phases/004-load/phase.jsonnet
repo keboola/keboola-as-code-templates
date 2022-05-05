@@ -1,4 +1,4 @@
 {
-  name: "Load",
+  name: "Load: Snowflake Database",
   dependsOn: ["<previous>"],
 }

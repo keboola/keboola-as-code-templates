@@ -1,4 +1,4 @@
 {
-  name: "Extractor",
+  name: "Extractor: Hubspot",
   dependsOn: ["<previous>"],
 }

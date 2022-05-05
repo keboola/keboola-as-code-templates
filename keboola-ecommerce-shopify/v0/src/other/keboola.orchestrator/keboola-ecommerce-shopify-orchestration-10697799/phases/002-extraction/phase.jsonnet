@@ -1,4 +1,4 @@
 {
-  name: "Extraction",
+  name: "Extraction: Shopify",
   dependsOn: ["<previous>"],
 }
