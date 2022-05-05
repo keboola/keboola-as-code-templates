@@ -71,42 +71,7 @@
           ],
         },
       },
-      {
-        definition: {
-          component: "keboola.processor-add-metadata",
-        },
-        parameters: {
-          tables: [
-            {
-              table: "facebook_ads_insights_last_90d_insights",
-              metadata: [
-                {
-                  key: "bdm.scaffold.table.tag",
-                  value: "ShoptetEcommerce.internal.inKeboolaExFacebookAdsFacebookAdsInsightsLast90dInsights",
-                },
-                {
-                  key: "scaffold.id",
-                  value: "ShoptetEcommerce",
-                },
-              ],
-            },
-            {
-              table: "facebook_ads_insights_monthly_insights",
-              metadata: [
-                {
-                  key: "bdm.scaffold.table.tag",
-                  value: "ShoptetEcommerce.internal.inKeboolaExFacebookAdsFacebookAdsInsightsMonthlyInsights",
-                },
-                {
-                  key: "scaffold.id",
-                  value: "ShoptetEcommerce",
-                },
-              ],
-            },
-          ],
-        },
-      },
-    ],
+    ],  
   },
   authorization: {
     oauth_api: {
