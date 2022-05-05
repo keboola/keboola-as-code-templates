@@ -80,7 +80,7 @@ SELECT O."code"                                                                 
      , O."date"                                                                          AS ORDER_DATE
      , O."itemCode"                                                                      AS ORDER_LINE_PRODUCT_ID
      , O."orderItemType"                                                                 AS ORDER_ITEM_TYPE
-     , "itemName"
+     , "itemName" as ITEMNAME
      , O."orderItemDiscountPercent"                                                      AS DISCOUNT_PERCENT
      , REPLACE(IFNULL(NULLIF(O."itemAmount", ''), '0'), ',',
                '.')::DECIMAL(22, 5)                                                      AS ORDER_LINE_AMOUNT
