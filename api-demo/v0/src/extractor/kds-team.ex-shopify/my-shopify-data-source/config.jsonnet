@@ -1,7 +1,7 @@
 {
   parameters: {
     user: Input("user"),
-    "#api-token": Input("api-token"),
+    "#api_token": Input("api-token"),
     "export-description": Input("export-description"),
     "country": Input("country"),
     "limit": Input("limit"),
