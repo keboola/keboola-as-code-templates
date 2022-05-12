@@ -6,7 +6,7 @@ local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
 local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
 local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet";
 local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
-local datastudio = import "/<common>/datastudio_inputs.jsonnet";
+local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inputs.jsonnet";
 
 {
   stepsGroups: [
