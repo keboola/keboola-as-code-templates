@@ -96,10 +96,6 @@
           source: "bdmProductsEnrich"
         },
         {
-          destination: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmOrderLinesMargin",
-          source: "bdmOrderLinesMargin"
-        },
-        {
           destination: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmOrdersEnrich",
           source: "bdmOrdersEnrich"
         },

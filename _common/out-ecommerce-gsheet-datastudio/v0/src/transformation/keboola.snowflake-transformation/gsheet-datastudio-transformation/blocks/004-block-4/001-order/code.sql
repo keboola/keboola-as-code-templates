@@ -5,7 +5,7 @@ SELECT
         "bdmO"."SOURCE",
         "bdmO"."ORDER_ID",
         "bdmO"."BILLING_TYPE",
-        "bdmO"."ORDER_DATE",
+        date("bdmO"."ORDER_DATE") as "ORDER_DATE",
         "bdmO"."ORDER_STATUS",
         "bdmO"."ORDER_PACKAGE_NUMBER",
         "bdmO"."CHANNEL",
