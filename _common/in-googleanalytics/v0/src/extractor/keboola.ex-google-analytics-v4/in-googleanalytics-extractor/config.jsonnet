@@ -4,9 +4,7 @@
   },
   parameters: {
     outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-googleanalytics-extractor"),
-    profiles: [
-      {},
-    ],
+    profiles: [],
     queries: [
       {
         enabled: true,
