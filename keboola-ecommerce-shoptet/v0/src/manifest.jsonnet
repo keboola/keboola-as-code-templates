@@ -29,7 +29,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
     },
-    if Input("google-sheet-checkbox") == true then
+    if InputIsAvailable("google-sheet-id") then
     {
       componentId: "keboola.wr-google-sheets",
       id: ConfigId("out-ecommerce-gsheet-writer"),
@@ -209,6 +209,21 @@
       path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPTET]"}
+    },
+    if InputIsAvailable("data-studio-gsheet-id") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("gsheet-datastudio-transformation"),
+      path: "<common>/out-ecommerce-gsheet-datastudio/v0/src/transformation/keboola.snowflake-transformation/gsheet-datastudio-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+    },
+    if InputIsAvailable("data-studio-gsheet-id") then
+    {
+      componentId: "keboola.wr-google-sheets",
+      id: ConfigId("gsheet-datastudio"),
+      path: "<common>/out-ecommerce-gsheet-datastudio/v0/src/writer/keboola.wr-google-sheets/gsheet-datastudio",
+      rows: []
     },
   ],)
 }
