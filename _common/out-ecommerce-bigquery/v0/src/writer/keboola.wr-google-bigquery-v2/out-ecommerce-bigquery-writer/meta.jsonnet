@@ -1,3 +1,3 @@
 {
-  name: "[OUT-ECOMMERCE-BIGQUERY] Writer /" + InstanceIdShort(),
+  name: "[OUT-ECOMMERCE-BIGQUERY] Data Destination /" + InstanceIdShort(),
 }

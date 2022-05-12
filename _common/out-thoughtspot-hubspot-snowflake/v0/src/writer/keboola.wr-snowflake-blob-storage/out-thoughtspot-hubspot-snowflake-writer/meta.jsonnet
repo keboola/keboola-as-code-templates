@@ -1,3 +1,3 @@
 {
-  name: "[OUT-THOUGHTSPOT-HUBSPOT-SNOWFLAKE] Writer /" + InstanceIdShort(),
+  name: "[OUT-THOUGHTSPOT-HUBSPOT-SNOWFLAKE] Data Destination /" + InstanceIdShort(),
 }

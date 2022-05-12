@@ -1,3 +1,3 @@
 {
-  name: "[OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Writer /" + InstanceIdShort(),
+  name: "[OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Data Destination /" + InstanceIdShort(),
 }

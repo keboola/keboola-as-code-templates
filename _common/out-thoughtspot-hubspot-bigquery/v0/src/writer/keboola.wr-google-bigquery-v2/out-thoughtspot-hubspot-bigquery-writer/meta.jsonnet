@@ -1,3 +1,3 @@
 {
-  name: "[OUT-THOUGHTSPOT-HUBSPOT-BIGQUERY] Writer /" + InstanceIdShort(),
+  name: "[OUT-THOUGHTSPOT-HUBSPOT-BIGQUERY] Data Destination /" + InstanceIdShort(),
 }
