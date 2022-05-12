@@ -99,7 +99,7 @@ local datastudio = import "/<common>/datastudio_inputs.jsonnet";
           name: "Data Studio Dashboard",
           description: "Load to google sheet for DataStudio Dashboard",
           dialogName: "Dashboard in Data Studio", 
-          dialogDescription: "Data load to Google Sheet in a specific form for Google Data Studio Dashboard. https://datastudio.google.com/reporting/382d43b1-f83f-425a-a1d6-a81259aa6ebb/page/nM3kC",
+          dialogDescription: "Data load to Google Sheet in a specific form for Google Data Studio Dashboard. Make a copy of this (https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s/) google sheet into your Google Drive. Then copy text between 'spreadsheets/d/' and 'P'/edit#' and paste it below. https://datastudio.google.com/reporting/382d43b1-f83f-425a-a1d6-a81259aa6ebb/page/nM3kC",
           inputs: datastudio,  
         },
       ]

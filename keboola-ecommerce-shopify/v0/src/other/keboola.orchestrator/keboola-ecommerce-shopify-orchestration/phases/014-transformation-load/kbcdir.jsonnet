@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("data-studio-checkbox") == false,
+  isIgnored: InputIsAvailable("data-studio-gsheet-id") == false,
 }
