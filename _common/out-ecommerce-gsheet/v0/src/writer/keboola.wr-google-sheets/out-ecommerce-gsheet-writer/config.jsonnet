@@ -114,7 +114,7 @@
         fileId: Input("google-sheet-id"),
         sheetId: 1475609669,
       },
-      if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+      if InputIsAvailable("google-sheet-id") && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
       {
         id: 50961,
         action: "update",
@@ -125,7 +125,7 @@
         fileId: Input("google-sheet-id"),
         sheetId: 1234856577,
       },
-      if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+      if InputIsAvailable("google-sheet-id") && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
       {
         id: 70402,
         action: "update",
