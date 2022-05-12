@@ -113,7 +113,7 @@
         },
         {
           source: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop",
-          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop.csv",
           where_column: "",
           where_values: [],
           where_operator: "eq",
