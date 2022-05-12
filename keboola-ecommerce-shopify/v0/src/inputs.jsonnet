@@ -33,7 +33,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
+          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days. This is a component with OAuth and has to be authorized later from flow.",
           inputs: facebook
         },
         {
@@ -41,7 +41,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Google Ads",
           description: "Google Ads - Data Source",
           dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data about Google ads insights.",
+          dialogDescription: "This extractor is getting data about Google ads insights. This is a component with OAuth and has to be authorized later from flow.",
           inputs: googleads
         },
         {
