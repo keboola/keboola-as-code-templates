@@ -17,8 +17,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -81,8 +81,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -206,8 +206,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -273,8 +273,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -340,8 +340,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
