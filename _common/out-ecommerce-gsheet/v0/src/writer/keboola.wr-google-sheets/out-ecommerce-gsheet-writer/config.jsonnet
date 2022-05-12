@@ -12,7 +12,7 @@
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_rfm",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
         sheetId: 0,
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
       },
       {
         id: 30117,
@@ -21,7 +21,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_analyze_clv_by_order_count",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1565755790,
       },
       {
@@ -31,7 +31,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_billing_type",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1432016757,
       },
       {
@@ -41,7 +41,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_order_lines",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1216474645,
       },
       {
@@ -51,7 +51,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_analyze_clv_by_time_from_previous_order",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1192599832,
       },
       {
@@ -61,7 +61,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_customers",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 407642174,
       },
       {
@@ -71,7 +71,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_orders",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1046492550,
       },
       {
@@ -81,7 +81,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_products",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1347502385,
       },
       {
@@ -91,7 +91,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_shipping_type",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1680130464,
       },
       {
@@ -101,7 +101,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_product_margin_over_time",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1698336177,
       },
       {
@@ -111,7 +111,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".out_shop",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1475609669,
       },
       if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
@@ -122,7 +122,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 1234856577,
       },
       if Input("google-sheet-checkbox") == true && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
@@ -133,7 +133,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly",
         title: "OUT-ECOMMERCE-"+InstanceIdShort(),
-        fileId: "1be-kZT_AbCVcREFD0hFSl9v6KpgwRj76doLDeuPMtdM",
+        fileId: InstanceId(),
         sheetId: 2070371591,
       },
     ]),

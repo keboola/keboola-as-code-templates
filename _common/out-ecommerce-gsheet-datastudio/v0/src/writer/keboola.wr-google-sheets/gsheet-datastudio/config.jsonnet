@@ -12,7 +12,7 @@
         tableId: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmOrderLinesEnrich",
         title: "Ecommerce-"+ InstanceIdShort(),
         sheetId: 0,
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s"
+        fileId: InstanceId()
       },
       {
         id: 92020,
@@ -21,7 +21,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmProductsEnrich",
         title: "Ecommerce-"+ InstanceIdShort(),
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s",
+        fileId: InstanceId(),
         sheetId: 72132448
       },
       {
@@ -31,7 +31,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmOrdersEnrich",
         title: "Ecommerce-"+ InstanceIdShort(),
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s",
+        fileId: InstanceId(),
         sheetId: 1319559754
       },
       {
@@ -41,7 +41,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-" + InstanceIdShort() + ".out_shop",
         title: "Ecommerce-"+ InstanceIdShort(),
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s",
+        fileId: InstanceId(),
         sheetId: 81153094
       },
       {
@@ -51,7 +51,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmRfmEnrich",
         title: "Ecommerce-"+ InstanceIdShort(),
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s",
+        fileId: InstanceId(),
         sheetId: 100102089
       },
       {
@@ -61,7 +61,7 @@
         enabled: true,
         tableId: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmCustomerEnrich",
         title: "Ecommerce-"+ InstanceIdShort(),
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s",
+        fileId: InstanceId(),
         sheetId: 388560759
       }
     ]
