@@ -217,6 +217,21 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
     },
+    if InputIsAvailable("data-studio-checkbox") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("gsheet-datastudio-transformation"),
+      path: "<common>/out-ecommerce-gsheet-datastudio/v0/src/transformation/keboola.snowflake-transformation/gsheet-datastudio-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+    },
+    if InputIsAvailable("data-studio-checkbox") then
+    {
+      componentId: "keboola.wr-google-sheets",
+      id: ConfigId("gsheet-datastudio"),
+      path: "<common>/out-ecommerce-gsheet-datastudio/v0/src/writer/keboola.wr-google-sheets/gsheet-datastudio",
+      rows: []
+    },
     ],
   )
 }
