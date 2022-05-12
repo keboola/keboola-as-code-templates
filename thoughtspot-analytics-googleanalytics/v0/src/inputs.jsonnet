@@ -1,7 +1,7 @@
 local snowflake = import "/<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-thoughtspot-googleanalytics-bigquery/v0/src/inputs.jsonnet";
-local googleanalytics = import "/<common>/in-thoughtspot-googleanalytics/v0/src/inputs.jsonnet";
-local searchconsole = import "/<common>/in-thoughtspot-googleanalytics-searchconsole/v0/src/inputs.jsonnet";
+local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonnet";
+local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
