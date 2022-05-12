@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-GOOGLEADS] Extractor /" + InstanceIdShort(),
+  name: "[IN-ECOMMERCE-GOOGLEADS] Data Source /" + InstanceIdShort(),
 }

@@ -1,3 +1,3 @@
 {
-  name: "[IN-THOUGHTSPOT-GOOGLEANALYTICS] Extractor /" + InstanceIdShort(),
+  name: "[IN-THOUGHTSPOT-GOOGLEANALYTICS] Data Source /" + InstanceIdShort(),
 }
