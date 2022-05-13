@@ -1,6 +1,6 @@
 local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
 local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
-local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
+local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -46,7 +46,7 @@ local googlesheet = import "/<common>/googlesheet_inputs.jsonnet";
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
-          dialogDescription: "Data load to Google Sheet.",
+          dialogDescription: "Make a copy of this sheet https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U into your Drive. Then copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: googlesheet,  
         },
       ]
