@@ -12,7 +12,7 @@
         tableId: "out.c-ecommerce-wr-ds" + InstanceIdShort() + ".bdmOrderLinesEnrich",
         title: "Ecommerce-"+ InstanceIdShort(),
         sheetId: 808566483,
-        fileId: "1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s"
+        fileId: Input("data-studio-gsheet-id")
       },
       {
         id: 92020,
