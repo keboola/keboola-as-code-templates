@@ -3,25 +3,25 @@
 This template enriches the ecommerce template with marketing data.
 
 ## Steps to make:
-1. Authorise extractor account
-2. Run orchestration
+1. Authorise data source account
+2. Run flow
 
 ## Included components' configurations:
 
-Google ads EX -> TR -> ORCH
+Google ads SOURCE -> TRANSFORMATION -> FLOW
 
 
-### EX: [IN-ECOMMERCE-GOOGLEADS] Extractor
+### SOURCE: [IN-ECOMMERCE-GOOGLEADS] Data Source
 
-This extractor is getting data about Google ads insights.
+This data source is getting data about Google ads insights.
 
-### TR: [IN-ECOMMERCE-GOOGLEADS] Transformation
+### TRANSFORMATION: [IN-ECOMMERCE-GOOGLEADS] Transformation
 
 Within this transformation is prepared Google ads data into BDM marketing format.
 
-### ORCH: [IN-ECOMMERCE-GOOGLEADS] Orchestration: BDM Creation
+### FLOW: [IN-ECOMMERCE-GOOGLEADS] Flow: BDM Creation
 
-This orchestration includes Google ads extractor and one transformation.
+This flow includes Google ads data source and one transformation.
 
 
 

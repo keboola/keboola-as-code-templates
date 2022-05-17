@@ -3,18 +3,18 @@
 By using this end-to-end flow you can extract data from Salesforce and transform it into visualizations in your BI tool or anywhere else you prefer.
 
 ## Steps to take:
-1. Fill out your password and security token in the Salesforce extractor
+1. Fill out your password and security token in the Salesforce data source
 2. Optionaly select and authorize writers
-3. Run the orchestration
+3. Run the flow
 
 ## All possible Included components' configurations:
 
-Salesforce EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
+Salesforce SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
 
 
-### EX: [IN-CRM-SALESFORCE] Extractor
+### SOURCE: [IN-CRM-SALESFORCE] Data Source
 
-Salesforce data is extracted with this extractor. The extractor will be taking the following data: accounts, contacts, events, leads, opportunities, opportunity contact roles, opportunity stages and user information.
+Salesforce data is extracted with this data source. The data source will be taking the following data: accounts, contacts, events, leads, opportunities, opportunity contact roles, opportunity stages and user information.
 
 ### TR1: [IN-CRM-SALESFORCE] Transformation1: Input Tables Creation
 
@@ -28,13 +28,13 @@ From Salesforce data, the second transformation creates an output CRM data model
 
 The final snapshots are generated from the auxiliary tables.
 
-### WR: [OUT-CRM-GSHEET] Writer OR WR: [OUT-CRM-SNOWFLAKE] Writer
+### DESTINATION: [OUT-CRM-GSHEET] Data Destination OR DESTINATION: [OUT-CRM-SNOWFLAKE] Data Destination
 
-The writer loads data into a Google sheet or a Snowflake database.
+The data destination loads data into a Google sheet or a Snowflake database.
 
-### ORCH: [IN-CRM-SALESFORCE] Orchestration: BDM Creation
+### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-The Orchestrator runs Salesforce CRM extractor, three snowflake transformations and optionally selected writers.
+The Orchestrator runs Salesforce CRM data source, three snowflake transformations and optionally selected writers.
 
 ## Business Data Model
 

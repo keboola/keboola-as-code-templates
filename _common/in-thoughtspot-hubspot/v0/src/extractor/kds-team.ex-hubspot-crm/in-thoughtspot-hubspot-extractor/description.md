@@ -1,5 +1,5 @@
 ## Description:
-This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.
+This data source is getting data from HubSpot. It's an incremental update and the data source is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.
 
 ## Credentials:
 Fill API token and click on _SAVE_.

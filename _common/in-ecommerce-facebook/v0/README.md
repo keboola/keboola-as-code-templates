@@ -3,24 +3,24 @@
 This template enriches the ecommerce template with marketing data.
 
 ## Steps to make:
-1. Authorise extractor account
-2. Run orchestration
+1. Authorise data source account
+2. Run flow
 
 ## Included components' configurations:
 
-Facebook ads EX -> TR -> ORCH
+Facebook ads SOURCE -> TRANSFORMATION -> FLOW
 
 
-### EX: [IN-ECOMMERCE-FACEBOOK] Extractor
+### SOURCE: [IN-ECOMMERCE-FACEBOOK] Data Source
 
-This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.
+This data source is getting data about facebook ads monthly insights and insights for the last 90 days.
 
-### TR: [IN-ECOMMERCE-FACEBOOK] Transformation
+### TRANSFORMATION: [IN-ECOMMERCE-FACEBOOK] Transformation
 
 Within this transformation is prepared facebook ads data into BDM marketing format.
 
-### ORCH: [IN-ECOMMERCE-FACEBOOK] Orchestration: BDM Creation
+### FLOW: [IN-ECOMMERCE-FACEBOOK] Flow: BDM Creation
 
-This orchestration includes Facebook ads extractor and one transformation.
+This flow includes Facebook ads data source and one transformation.
 
 

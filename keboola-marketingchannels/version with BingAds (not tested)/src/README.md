@@ -42,7 +42,7 @@ Google Analytics transformation enriches the output table with sessions (new and
 
 ### DD: [KEBOOLA-MARKETINGCHANNELS-BIGQUERY] OR [KEBOOLA-MARKETINGCHANNELS-GOOGLESHEET] OR [KEBOOLA-MARKETINGCHANNELS-SNOWFLAKE] Data destination
 
-The writer loads data into a BigQuery database or a Google sheet or a Snowflake database.
+The data destination loads data into a BigQuery database or a Google sheet or a Snowflake database.
 
 ### FLOW: [KEBOOLA-MARKETINGCHANNELS] Flow
 

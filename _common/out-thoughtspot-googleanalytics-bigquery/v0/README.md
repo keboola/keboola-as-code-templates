@@ -5,18 +5,18 @@ This template is useful for writing transformed Google analytics data into a Big
 
 ## Steps to make:
 
-1. Run orchestration
+1. Run flow
 
 ## Included components' configurations:
-WR –> ORCH
+DESTINATION –> FLOW
 
-### WR: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Writer
+### DESTINATION: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Data Destination
 
-Writer loads transformed data to a BigQuery dataset.
+Data Destination loads transformed data to a BigQuery dataset.
 
-### ORCH: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Orchestration: BDM Usage
+### FLOW: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-BIGQUERY] Flow: BDM Usage
 
-This orchestration uses writer to load created BDM model to a BigQuery.
+This flow uses data destination to load created BDM model to a BigQuery.
 
 ## Business Data Model
 

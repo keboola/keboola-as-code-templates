@@ -1,2 +1,2 @@
 ## Description:
-Writer loads transformed data into Snowflake database.
+Data Destination loads transformed data into Snowflake database.

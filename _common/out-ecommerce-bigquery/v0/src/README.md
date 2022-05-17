@@ -3,21 +3,21 @@
 This is an end to end flow which is getting data from Shopify and transform them so you can use them for visualisation in your BI tool or anywhere you want. 
 
 ## Steps to make:
-1. Setting up shopify extractor: adding credentials
-2. Run orchestration
+1. Setting up shopify data source: adding credentials
+2. Run flow
 
 ## Included components' configurations:
 
-Shopify EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
+Shopify SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
 
 
-### EX: [IN-ECOMMERCE-SHOPIFY] Extractor
+### SOURCE: [IN-ECOMMERCE-SHOPIFY] Data Source
 
-Extractor collect data from Shopify about orders, products, inventory, and customers.
+Data Source collect data from Shopify about orders, products, inventory, and customers.
 
 ### TR1: [IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables
 
-The first transformation pre-create tables which don't have to be downloaded from extractor, but are needed for transformation, even if they don't contain any data.
+The first transformation pre-create tables which don't have to be downloaded from data source, but are needed for transformation, even if they don't contain any data.
 
 ### TR2: [IN-ECOMMERCE-SHOPIFY] Transformation2: Data Preparation
 
@@ -27,17 +27,17 @@ Data are transformed within this transformation. This transformation is gatherin
 
 Basic RFM analysis is done in this transformation.
 
-### ORCH: [IN-ECOMMERCE-SHOPIFY] Orchestration: BDM Creation
+### FLOW: [IN-ECOMMERCE-SHOPIFY] Flow: BDM Creation
 
-This orchestrator gets data from Shopify Extractor, transform them, run RFM analysis and write data into Snowflake database. 
+This orchestrator gets data from Shopify Data Source, transform them, run RFM analysis and write data into Snowflake database. 
 
-### WR: [OUT-ECOMMERCE-GSHEET] Writer OR WR: [OUT-ECOMMERCE-SNOWFLAKE] Writer OR [OUT-ECOMMERCE-BIGQUERY] Writer 
+### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR [OUT-ECOMMERCE-BIGQUERY] Data Destination 
 
-Writer loads data into a Google sheet, Snowflake database or BigQuery.
+Data Destination loads data into a Google sheet, Snowflake database or BigQuery.
 
-### ORCH: [OUT-ECOMMERCE-GSHEET] Orchestration: BDM Usage OR [OUT-ECOMMERCE-SNOWFLAKE] Orchestration: BDM Usage OR [OUT-ECOMMERCE-BIGQUERY] Orchestration: BDM Usage
+### FLOW: [OUT-ECOMMERCE-GSHEET] Flow: BDM Usage OR [OUT-ECOMMERCE-SNOWFLAKE] Flow: BDM Usage OR [OUT-ECOMMERCE-BIGQUERY] Flow: BDM Usage
 
-This orchestration use writer to load created BDM into Google sheet, Snowflake database or Google BigQuery.
+This flow use data destination to load created BDM into Google sheet, Snowflake database or Google BigQuery.
 
 ## Business Data Model
 

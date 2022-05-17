@@ -3,18 +3,18 @@
 By using this end-to-end flow you can extract data from Shopify and transform it using the SpottApp for visualizations.
 
 ## Steps to take:
-1. Fill out your credentials in the Shopify extractor
+1. Fill out your credentials in the Shopify data source
 2. Optionaly select and authorize writers
-3. Run the orchestration
+3. Run the flow
 
 ## Included components' configurations:
 
-Shopify EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
+Shopify SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
 
 
-### EX: [IN-ECOMMERCE-SHOPIFY] Extractor
+### SOURCE: [IN-ECOMMERCE-SHOPIFY] Data Source
 
-Shopify extractor collects data from Shopify about the orders, products, inventory and customers.
+Shopify data source collects data from Shopify about the orders, products, inventory and customers.
 
 ### TR1: [IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables
 
@@ -28,13 +28,13 @@ Within this transformation, data is transformed. In this transformation, data is
 
 A basic RFM analysis is performed during this transformation.
 
-### WR: [OUT-ECOMMERCE-GSHEET] Writer OR WR: [OUT-ECOMMERCE-SNOWFLAKE] Writer OR [OUT-ECOMMERCE-BIGQUERY] Writer 
+### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR [OUT-ECOMMERCE-BIGQUERY] Data Destination 
 
-The writer loads data into Google Sheets, Snowflake database or BigQuery.
+The data destination loads data into Google Sheets, Snowflake database or BigQuery.
 
-### ORCH: [IN-ECOMMERCE-SHOPIFY] Orchestration: BDM Creation
+### FLOW: [IN-ECOMMERCE-SHOPIFY] Flow: BDM Creation
 
-The Orchestrator gets the data from Shopify Extractor, transforms the data, runs the RFM analysis and writes the data into Google sheet, Snowflake database or Google BigQuery.
+The Orchestrator gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Google sheet, Snowflake database or Google BigQuery.
 
 ## Business Data Model
 

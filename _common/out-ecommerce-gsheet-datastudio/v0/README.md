@@ -4,16 +4,16 @@ This template is useful for writing transformed e-commerce data into a Google sh
 
 ## Steps to make:
 
-1.  Run orchestration
+1.  Run flow
 
 ## Included components' configurations:
 
-Google sheet WR -> ORCH
+Google sheet DESTINATION -> FLOW
 
-### WR: [OUT-ECOMMERCE-GSHEET] Writer
+### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination
 
-Writer load data into a Google sheet.
+Data Destination load data into a Google sheet.
 
-### ORCH: [OUT-ECOMMERCE-GSHEET] Orchestration: BDM Usage
+### FLOW: [OUT-ECOMMERCE-GSHEET] Flow: BDM Usage
 
-This orchestration use writer to load created e-commerce BDM to Google sheet.
+This flow use data destination to load created e-commerce BDM to Google sheet.

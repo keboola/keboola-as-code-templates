@@ -3,18 +3,18 @@
 By using this end-to-end flow you can extract data from Shoptet and transform it into visualizations in your BI tool or anywhere else you prefer.
 
 ## Steps to take:
-1. Fill out your credentials in the Shoptet extractor
+1. Fill out your credentials in the Shoptet data source
 2. Optionaly select and authorize writers
-3. Run the orchestration
+3. Run the flow
 
 ## Included components' configurations:
 
-Shoptet EX -> TR1 -> TR2 -> WR -> ORCH
+Shoptet SOURCE -> TR1 -> TR2 -> DESTINATION -> FLOW
 
 
-### EX: [IN-ECOMMERCE-SHOPTET] Extractor
+### SOURCE: [IN-ECOMMERCE-SHOPTET] Data Source
 
-Shoptet extractor collects data from Shoptet about the orders, products, inventory and customers.
+Shoptet data source collects data from Shoptet about the orders, products, inventory and customers.
 
 ### TR1: [IN-ECOMMERCE-SHOPTET] Transformation1: Data Preparation
 
@@ -24,13 +24,13 @@ Within this transformation, data is transformed. In this transformation, data is
 
 A basic RFM analysis is performed during this transformation.
 
-### WR: [OUT-ECOMMERCE-GSHEET] Writer OR WR: [OUT-ECOMMERCE-SNOWFLAKE] Writer OR WR: [OUT-ECOMMERCE-BIGQUERY] Writer
+### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR DESTINATION: [OUT-ECOMMERCE-BIGQUERY] Data Destination
 
-The writer loads data into a Google sheet or a Snowflake database or a BigQuery database.
+The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
 
-### ORCH: [KEBOOLA-ECOMMERCE-SHOPTET] Orchestration
+### FLOW: [KEBOOLA-ECOMMERCE-SHOPTET] Flow
 
-The Orchestrator gets the data from Shoptet Extractor, transforms the data, runs the RFM analysis and optionally writes data into selected writers.
+The Orchestrator gets the data from Shoptet Data Source, transforms the data, runs the RFM analysis and optionally writes data into selected writers.
 
 
 ## Business Data Model

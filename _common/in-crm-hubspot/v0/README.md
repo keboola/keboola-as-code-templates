@@ -3,18 +3,18 @@
 This is an end to end flow which is getting data from Hubspot and transform them so you can use them for visualisation in your BI tool or anywhere you want. 
 
 ## Steps to make:
-1. Authorise extractor with API TOKEN
+1. Authorise data source with API TOKEN
 2. Select date range
-3. Run orchestration
+3. Run flow
 
 ## Included components' configurations:
 
-Hubspot EX -> TR1 -> TR2 -> TR3 -> ORCH
+Hubspot SOURCE -> TR1 -> TR2 -> TR3 -> FLOW
 
 
-### EX: [IN-CRM-HUBSPOT] Extractor
+### SOURCE: [IN-CRM-HUBSPOT] Data Source
 
-This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.
+This data source is getting data from HubSpot. It's an incremental update and the data source is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.
 
 ### TR1: [IN-CRM-HUBSPOT] Transformation1: Input Tables Creation
 
@@ -30,9 +30,9 @@ And the third phase creates out_activity table using the first contact/opportuni
 
 Creation of final snapshots from the auxiliary tables.
 
-### ORCH: [IN-CRM-SALESFORCE] Orchestration: BDM Creation
+### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-Orchestrator runs HubSpot CRM extractor and 3 snowflake transformations.
+Orchestrator runs HubSpot CRM data source and 3 snowflake transformations.
 
 ## Business Data Model
 
