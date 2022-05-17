@@ -42,7 +42,7 @@
     type: "int",
     kind: "input",
     rules: "min=1,max=12",
-    default: 1,
+    default: 5,
   },
   {
     id: "ex-linkedin-end-year",
