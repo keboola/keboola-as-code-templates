@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPIFY] Extractor /" + InstanceIdShort(),
+  name: "[IN-ECOMMERCE-SHOPIFY] Data Source /" + InstanceIdShort(),
 }

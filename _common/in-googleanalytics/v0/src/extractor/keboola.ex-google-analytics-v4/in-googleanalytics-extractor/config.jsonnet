@@ -4,9 +4,7 @@
   },
   parameters: {
     outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-googleanalytics-extractor"),
-    profiles: [
-      {},
-    ],
+    profiles: [],
     queries: [
       {
         enabled: true,
@@ -17,8 +15,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -81,8 +79,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -206,8 +204,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -273,8 +271,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [
@@ -340,8 +338,8 @@
         query: {
           dateRanges: [
             {
-              endDate: "-1 days",
-              startDate: "-7 days",
+              endDate: Input("ga-to"),
+              startDate: Input("ga-from"),
             },
           ],
           dimensions: [

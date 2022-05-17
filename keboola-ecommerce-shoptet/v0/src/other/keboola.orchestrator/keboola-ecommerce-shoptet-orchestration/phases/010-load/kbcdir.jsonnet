@@ -1,3 +1,3 @@
 {
-  isIgnored: Input("google-sheet-checkbox") == false,
+  isIgnored: InputIsAvailable("google-sheet-id")  == false,
 }

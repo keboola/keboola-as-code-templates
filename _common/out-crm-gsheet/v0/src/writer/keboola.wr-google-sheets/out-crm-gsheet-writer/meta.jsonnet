@@ -1,3 +1,3 @@
 {
-  name: "[OUT-CRM-GSHEET] Writer /"+ InstanceIdShort(),
+  name: "[OUT-CRM-GSHEET] Data Destination /"+ InstanceIdShort(),
 }

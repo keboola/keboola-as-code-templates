@@ -1,3 +1,3 @@
 {
-  name: "[IN-CRM-HUBSPOT] Extractor /" + InstanceIdShort(),
+  name: "[IN-CRM-HUBSPOT] Data Source /" + InstanceIdShort(),
 }

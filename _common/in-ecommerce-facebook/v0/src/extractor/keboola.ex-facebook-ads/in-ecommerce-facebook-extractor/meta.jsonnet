@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-FACEBOOK] Extractor /" + InstanceIdShort(),
+  name: "[IN-ECOMMERCE-FACEBOOK] Data Source /" + InstanceIdShort(),
 }

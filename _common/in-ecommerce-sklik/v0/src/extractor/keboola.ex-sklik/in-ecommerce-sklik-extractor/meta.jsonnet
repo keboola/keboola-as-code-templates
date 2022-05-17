@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SKLIK] Extractor /" + InstanceIdShort(),
+  name: "[IN-ECOMMERCE-SKLIK] Data Source /" + InstanceIdShort(),
 }

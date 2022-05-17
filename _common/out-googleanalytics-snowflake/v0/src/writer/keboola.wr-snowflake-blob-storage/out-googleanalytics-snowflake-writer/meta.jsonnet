@@ -1,3 +1,3 @@
 {
-  name: "[OUT-GOOGLEANALYTICS-SNOWFLAKE] Writer /" + InstanceIdShort(),
+  name: "[OUT-GOOGLEANALYTICS-SNOWFLAKE] Data Destination /" + InstanceIdShort(),
 }

@@ -1,3 +1,3 @@
 {
-  name: "[OUT-CRM-SNOWFLAKE] Writer /"+ InstanceIdShort(),
+  name: "[OUT-CRM-SNOWFLAKE] Data Destination /"+ InstanceIdShort(),
 }

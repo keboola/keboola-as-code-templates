@@ -1,3 +1,3 @@
 {
-  name: "[IN-CRM-SALESFORCE] Extractor /" + InstanceIdShort(),
+  name: "[IN-CRM-SALESFORCE] Data Source /" + InstanceIdShort(),
 }

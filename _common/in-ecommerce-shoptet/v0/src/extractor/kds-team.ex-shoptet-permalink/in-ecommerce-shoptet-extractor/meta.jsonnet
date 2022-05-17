@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPTET] Extractor /" + InstanceIdShort(),
+  name: "[IN-ECOMMERCE-SHOPTET] Data Source /" + InstanceIdShort(),
 }

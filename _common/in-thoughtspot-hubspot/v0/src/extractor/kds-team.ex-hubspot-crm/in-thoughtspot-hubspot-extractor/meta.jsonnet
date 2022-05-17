@@ -1,3 +1,3 @@
 {
-  name: "[IN-THOUGHTSPOT-HUBSPOT] Extractor /" + InstanceIdShort(),
+  name: "[IN-THOUGHTSPOT-HUBSPOT] Data Source /" + InstanceIdShort(),
 }
