@@ -52,7 +52,8 @@
   },
   storage: {
     input: {
-      tables: [
+      tables: std.filter(function(v) v != null,[
+        if InputIsAvailable("ga-from") then
         {
           source: "out.c-marketing-bdm.keywords_adgroup",
           destination: "out.c-marketing-bdm-" + InstanceIdShort() + ".keywords_adgroup.csv",
@@ -61,6 +62,7 @@
           where_operator: "eq",
           columns: [],
         },
+        if InputIsAvailable("ga-from") then
         {
           source: "out.c-marketing-bdm.online_marketing_traffic",
           destination: "out.c-marketing-bdm-" + InstanceIdShort() + ".online_marketing_traffic.csv",
@@ -69,6 +71,7 @@
           where_operator: "eq",
           columns: [],
         },
+        if InputIsAvailable("ga-from") then
         {
           source: "out.c-marketing-bdm.online_marketing_transactions",
           destination: "out.c-marketing-bdm-" + InstanceIdShort() + ".online_marketing_transactions.csv",
@@ -77,6 +80,7 @@
           where_operator: "eq",
           columns: [],
         },
+        if InputIsAvailable("ga-from") == false then
         {
           source: "out.c-marketing-tr.online_marketing",
           destination: "out.c-marketing-tr-" + InstanceIdShort() + ".online_marketing.csv",
@@ -85,7 +89,7 @@
           where_operator: "eq",
           columns: [],
         },
-      ],
+      ]),
     },
   },
 }
