@@ -12,6 +12,6 @@
       client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/templates%40keboola-shopify.iam.gserviceaccount.com",
       type: "service_account",
     },
-    dataset: "keboola",
+    dataset: "keboola-husbpot",
   },
 }
