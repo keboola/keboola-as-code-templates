@@ -154,6 +154,21 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "keboola-marketingchannels",
+      "icon": "common:settings",
+      "name": "KEBOOLA-MARKETINGCHANNELS",
+      "description": "Full workflow to ...",
+      "path": "keboola-marketingchannels",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
