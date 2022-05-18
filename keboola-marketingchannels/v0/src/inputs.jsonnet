@@ -76,7 +76,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           inputs: snowflake
         },
         {
-          icon: "component:keboola.wr-google-sheet",
+          icon: "component:keboola.wr-google-sheets",
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
