@@ -159,7 +159,7 @@
       "id": "keboola-marketingchannels",
       "icon": "common:settings",
       "name": "KEBOOLA-MARKETINGCHANNELS",
-      "description": "Full workflow to ...",
+      "description": "Transform data from marketing channels into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-marketingchannels",
       "versions": [
         {
