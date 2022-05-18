@@ -5,17 +5,17 @@ This template is useful for writing transformed E-COMMERCE data to a Snowflake d
 ## Steps to make:
 
 1. Fill credentials
-2. Run orchestration
+2. Run flow
 
 ## Included components' configurations:
 
-Snowflake WR -> ORCH
+Snowflake DESTINATION -> FLOW
 
-### WR: [OUT-ECOMMERCE-SNOWFLAKE] Writer
+### DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination
 
-Writer load data into a Snowflake database.
+Data Destination load data into a Snowflake database.
 
-### ORCH: [OUT-ECOMMERCE-SNOWFLAKE] Orchestration: BDM Usage
+### FLOW: [OUT-ECOMMERCE-SNOWFLAKE] Flow: BDM Usage
 
-This orchestration use writer to load created E-commerce BDM to Snowflake database.
+This flow use data destination to load created E-commerce BDM to Snowflake database.
 

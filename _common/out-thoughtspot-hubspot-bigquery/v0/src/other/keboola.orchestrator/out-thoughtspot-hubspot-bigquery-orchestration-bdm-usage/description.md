@@ -1,4 +1,4 @@
 ## Description:
 
-This orchestration uses writer to load created BDM model to a BigQuery.
+This flow uses data destination to load created BDM model to a BigQuery.
 

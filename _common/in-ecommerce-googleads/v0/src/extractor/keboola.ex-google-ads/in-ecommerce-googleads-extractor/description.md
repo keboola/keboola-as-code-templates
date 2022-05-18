@@ -4,4 +4,4 @@ Authorize Google Ads account.
 
 ## Description:
 
-This extractor is getting data about Google ads insights.
+This data source is getting data about Google ads insights.

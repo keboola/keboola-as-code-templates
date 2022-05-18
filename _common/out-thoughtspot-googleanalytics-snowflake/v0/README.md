@@ -5,18 +5,18 @@ This template is useful for writing transformed Google analytics data to a Snowf
 
 ## Steps to make:
 
-1. Run orchestration
+1. Run flow
 
 ## Included components' configurations:
-WR –> ORCH
+DESTINATION –> FLOW
 
-### WR: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE] Writer
+### DESTINATION: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE] Data Destination
 
-Writer loads transformed data to a Snowflake database.
+Data Destination loads transformed data to a Snowflake database.
 
-### ORCH: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE] Orchestration: BDM Usage
+### FLOW: [OUT-THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE] Flow: BDM Usage
 
-This orchestration uses writer to load created BDM model to a Snowflake database.
+This flow uses data destination to load created BDM model to a Snowflake database.
 
 ## Business Data Model
 

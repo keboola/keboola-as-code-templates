@@ -3,17 +3,17 @@
 This is an end to end flow which is getting data from salesforce and transform them so you can use them for visualisation in your BI tool or anywhere you want. 
 
 ## Steps to make:
-1. Fill password and security token in Salesforce extractor
-2. Run orchestration
+1. Fill password and security token in Salesforce data source
+2. Run flow
 
 ## Included components' configurations:
 
-Salesforce EX -> TR1 -> TR2 -> TR3 -> ORCH
+Salesforce SOURCE -> TR1 -> TR2 -> TR3 -> FLOW
 
 
-### EX: [IN-CRM-SALESFORCE] Extractor
+### SOURCE: [IN-CRM-SALESFORCE] Data Source
 
-This extractor is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.
+This data source is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.
 
 ### TR1: [IN-CRM-SALESFORCE] Transformation1: Input Tables Creation
 
@@ -27,9 +27,9 @@ This transformation creates output CRM data model (set of the output tables) fro
 
 Creation of final snapshots from the auxiliary tables.
 
-### ORCH: [IN-CRM-SALESFORCE] Orchestration: BDM Creation
+### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-This orchestrator runs Salesforce CRM extractor and 3 snowflake transformations.
+This orchestrator runs Salesforce CRM data source and 3 snowflake transformations.
 
 ## Business Data Model
 

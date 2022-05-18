@@ -5,5 +5,5 @@ Also there is a possibility to choose period from date and period to date you wa
 
 ## Description:
 
-Extractor collects data from Shoptet about orders, products, inventory, and customers.
+Data Source collects data from Shoptet about orders, products, inventory, and customers.
 

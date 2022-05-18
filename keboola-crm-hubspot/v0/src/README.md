@@ -3,18 +3,18 @@
 By using this end-to-end flow you can extract data from Hubspot and transform it into visualizations in your BI tool or anywhere else (currently into a Google sheet and snowflake).
 
 ## Steps to take:
-1. Authorize extractor with Hubspot API TOKEN and select date range
+1. Authorize data source with Hubspot API TOKEN and select date range
 2. Optionaly select and authorize writers
-3. Run the orchestration
+3. Run the flow
 
 ## All possible included components' configurations:
 
-Hubspot EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
+Hubspot SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
 
 
-### EX: [IN-CRM-HUBSPOT] Extractor
+### SOURCE: [IN-CRM-HUBSPOT] Data Source
 
-HubSpot data is extracted with this extractor. In this incremental update the extractor is taking the following data: companies, activities, lists, owners, contacts, deals and pipelines.
+HubSpot data is extracted with this data source. In this incremental update the data source is taking the following data: companies, activities, lists, owners, contacts, deals and pipelines.
 
 ### TR1: [IN-CRM-HUBSPOT] Transformation1: Input Tables Creation
 
@@ -28,17 +28,17 @@ From Hubspot data, the second transformation creates an output CRM data model (s
 
 The final snapshots are generated from the auxiliary tables.
 
-### ORCH: [IN-CRM-SALESFORCE] Orchestration: BDM Creation
+### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-Orchestrator runs HubSpot CRM extractor and 3 snowflake transformations.
+Orchestrator runs HubSpot CRM data source and 3 snowflake transformations.
 
-### WR: [OUT-CRM-GSHEET] Writer OR WR: [OUT-CRM-SNOWFLAKE] Writer
+### DESTINATION: [OUT-CRM-GSHEET] Data Destination OR DESTINATION: [OUT-CRM-SNOWFLAKE] Data Destination
 
-The writer loads data into a Google sheet or a Snowflake database.
+The data destination loads data into a Google sheet or a Snowflake database.
 
-### ORCH: [KEBOOLA-CRM-HUBSPOT] Orchestration
+### FLOW: [KEBOOLA-CRM-HUBSPOT] Flow
 
-The Orchestrator runs HubSpot CRM extractor, three snowflake transformations and optionally selected writers.
+The Orchestrator runs HubSpot CRM data source, three snowflake transformations and optionally selected writers.
 
 
 ## Business Data Model

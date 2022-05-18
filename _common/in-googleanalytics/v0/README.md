@@ -3,23 +3,23 @@
 This is an end to end flow for getting data from Google Analytics and transforming them.
 
 ## Steps to make:
-1. Setup profile in extractor
-2. Run orchestration
+1. Setup profile in data source
+2. Run flow
 
 ## Included components' configurations:
-EX -> TR –> ORCH
+SOURCE -> TRANSFORMATION –> FLOW
 
-### EX: [IN-GOOGLEANALYTICS] Extractor
+### SOURCE: [IN-GOOGLEANALYTICS] Data Source
 
-This extractor is getting data from Google Analytics. It's an incremental update.
+This data source is getting data from Google Analytics. It's an incremental update.
 
-### TR: [IN-GOOGLEANALYTICS] Transformation
+### TRANSFORMATION: [IN-GOOGLEANALYTICS] Transformation
 
 This transformation is forming data from Google Analytics into requested shape.
 
-### ORCH: [IN-GOOGLEANALYTICS] Orchestration: BDM Creation
+### FLOW: [IN-GOOGLEANALYTICS] Flow: BDM Creation
 
-This orchestration includes Extractor and one transformation which prepare data for BDM model.
+This flow includes Data Source and one transformation which prepare data for BDM model.
 
 ## Business Data Model
 

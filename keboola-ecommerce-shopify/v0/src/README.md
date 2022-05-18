@@ -3,18 +3,18 @@
 By using this end-to-end flow you can extract data from Shopify and transform it into visualizations in your BI tool or anywhere else you prefer.
 
 ## Steps to take:
-1. Fill out your credentials in the Shopify extractor
+1. Fill out your credentials in the Shopify data source
 2. Optionaly select and authorize writers
-3. Run the orchestration
+3. Run the flow
 
 ## Included components' configurations:
 
-Shopify EX -> TR1 -> TR2 -> TR3 -> WR -> ORCH
+Shopify SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
 
 
-### EX: [IN-ECOMMERCE-SHOPIFY] Extractor
+### SOURCE: [IN-ECOMMERCE-SHOPIFY] Data Source
 
-Shopify extractor collects data from Shopify about the orders, products, inventory and customers.
+Shopify data source collects data from Shopify about the orders, products, inventory and customers.
 
 ### TR1: [IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables
 
@@ -28,13 +28,13 @@ Within this transformation, data is transformed. In this transformation, data is
 
 A basic RFM analysis is performed during this transformation.
 
-### WR: [OUT-ECOMMERCE-GSHEET] Writer OR WR: [OUT-ECOMMERCE-SNOWFLAKE] Writer OR WR: [OUT-ECOMMERCE-BIGQUERY] Writer
+### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR DESTINATION: [OUT-ECOMMERCE-BIGQUERY] Data Destination
 
-The writer loads data into a Google sheet or a Snowflake database or a BigQuery database.
+The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
 
-### ORCH: [KEBOOLA-ECOMMERCE-SHOPIFY] Orchestration
+### FLOW: [KEBOOLA-ECOMMERCE-SHOPIFY] Flow
 
-The Orchestrator gets the data from Shopify Extractor, transforms the data, runs the RFM analysis and optionally writes the data into selected writers.
+The Orchestrator gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and optionally writes the data into selected writers.
 
 ## Business Data Model
 

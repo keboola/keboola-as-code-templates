@@ -1,4 +1,4 @@
 
 ## Description:
 
-This writer loads data into a Google BigQuery.
+This data destination loads data into a Google BigQuery.

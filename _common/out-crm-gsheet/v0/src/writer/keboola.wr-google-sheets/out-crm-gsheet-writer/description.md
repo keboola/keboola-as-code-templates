@@ -1,3 +1,3 @@
 ## Description:
 
-This writer loads transformed data into Google sheet.
+This data destination loads transformed data into Google sheet.

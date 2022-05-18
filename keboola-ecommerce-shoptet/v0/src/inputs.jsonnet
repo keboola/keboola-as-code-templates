@@ -15,7 +15,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
       required: "all",
       steps: [
         {
-          icon: "component:kds-team.ex-shoptet",
+          icon: "component:kds-team.ex-shoptet-permalink",
           name: "Shoptet",
           description: "Shoptet - Data Source",
           dialogName: "Shoptet Data Source", 
@@ -87,7 +87,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           inputs: bigquery
         },
         {
-          icon: "component:keboola.wr-google-sheet",
+          icon: "component:keboola.wr-google-sheets",
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
@@ -95,7 +95,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           inputs: googlesheet,  
         },
         {
-          icon: "component:keboola.wr-google-sheet",
+          icon: "component:keboola.wr-google-sheets",
           name: "Data Studio Dashboard",
           description: "Load to google sheet for DataStudio Dashboard",
           dialogName: "Dashboard in Data Studio", 

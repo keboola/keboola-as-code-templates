@@ -4,17 +4,17 @@ This template is useful for writing transformed CRM data into a Google sheet.
 
 ## Steps to make:
 
-1.  Run orchestration
+1.  Run flow
 
 ## Included components' configurations:
 
-Google sheet WR -> ORCH
+Google sheet DESTINATION -> FLOW
 
-### WR: [OUT-CRM-GSHEET] Writer
+### DESTINATION: [OUT-CRM-GSHEET] Data Destination
 
-Writer load data into a Google sheet.
+Data Destination load data into a Google sheet.
 
-### ORCH: [OUT-CRM-GSHEET] Orchestration: BDM Usage
+### FLOW: [OUT-CRM-GSHEET] Flow: BDM Usage
 
-This orchestration use writer to load created CRM BDM to Google sheet.
+This flow use data destination to load created CRM BDM to Google sheet.
 
