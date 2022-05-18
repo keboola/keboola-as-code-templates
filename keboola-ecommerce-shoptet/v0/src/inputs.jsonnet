@@ -15,7 +15,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
       required: "all",
       steps: [
         {
-          icon: "component:kds-team.ex-shoptet",
+          icon: "component:kds-team.ex-shoptet-permalink",
           name: "Shoptet",
           description: "Shoptet - Data Source",
           dialogName: "Shoptet Data Source", 
