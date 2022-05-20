@@ -34,12 +34,8 @@
         {
           id: ConfigRowId("raw-page-behaviour"),
           path: "rows/raw-page-behaviour",
-        },
-        {
-          id: ConfigRowId("gsc_ranking"),
-          path: "rows/gsc_ranking",
-        },
-      ],
-    },
-  ],
+        }
+      ]
+    }
+  ]
 }
