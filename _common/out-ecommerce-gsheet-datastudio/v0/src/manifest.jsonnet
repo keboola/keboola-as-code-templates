@@ -11,6 +11,6 @@
       id: ConfigId("gsheet-datastudio-transformation"),
       path: "transformation/keboola.snowflake-transformation/gsheet-datastudio-transformation",
       rows: []
-    },
-  ],
+    }
+  ]
 }
