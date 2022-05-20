@@ -1,9 +1,11 @@
 [
     {
-        id: "data-studio-gsheet-id",
-        name: "DataStudio Sheet ID",
-        description: "Insert ID of the google sheet destination",
+        id: "google-sheet-id",
+        name: "DataStudio gSheet File ID",
+        description: "Insert file ID of the google sheet destination",
         type: "string",
         kind: "input",
+        rules: "required",
+        default: "XXXXXXX"
     },
 ]

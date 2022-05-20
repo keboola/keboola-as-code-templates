@@ -1,9 +1,11 @@
 [
     {
         id: "google-sheet-id",
-        name: "CRM Sheet ID",
-        description: "Insert ID of the google sheet destination",
+        name: "CRM gSheet File ID",
+        description: "Insert file ID of the google sheet destination",
         type: "string",
         kind: "input",
+        rules: "required",
+        default: "XXXXXXX"
     },
 ]
