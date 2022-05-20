@@ -32,7 +32,7 @@ Creation of final snapshots from the auxiliary tables.
 
 ### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-Orchestrator runs HubSpot CRM data source and 3 snowflake transformations.
+Flow runs HubSpot CRM data source and 3 snowflake transformations.
 
 ## Business Data Model
 

@@ -4,7 +4,7 @@ By using this end-to-end flow you can extract data from Shopify and transform it
 
 ## Steps to take:
 1. Fill out your credentials in the Shopify data source
-2. Optionaly select and authorize writers
+2. Optionaly select and authorize data destinations
 3. Run the flow
 
 ## Included components' configurations:
@@ -34,7 +34,7 @@ The data destination loads data into a Google sheet or a Snowflake database or a
 
 ### FLOW: [KEBOOLA-ECOMMERCE-SHOPIFY] Flow
 
-The Orchestrator gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and optionally writes the data into selected writers.
+The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and optionally writes the data into selected data destinations.
 
 ## Business Data Model
 
