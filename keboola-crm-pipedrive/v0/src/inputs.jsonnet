@@ -1,3 +1,7 @@
+local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local pipedrive = import "/<common>/in-crm-pipedrive/inputs.jsonnet";
+local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
+
 {
   stepsGroups: [
     {
@@ -9,34 +13,46 @@
           name: "Pipedrive",
           description: "Pipedrive - Data Source",
           dialogName: "Pipedrive Data Source", 
-          dialogDescription: "This extractor is getting data from Pipedrive. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
-          inputs: [
-            {
-              id: "ex-pipedrive-api-authentication-query-api-token-attr",
-              name: "Api token",
-              description: "",
-              type: "string",
-              kind: "input",
-              default: "#apiToken",
-            },
-            {
-              id: "ex-pipedrive-api-base-url-args-1-attr",
-              name: "Api BaseUrl Args Attr",
-              description: "",
-              type: "string",
-              kind: "input",
-              default: "companyDomain",
-            },
-            {
-              id: "ex-pipedrive-config-api-token",
-              name: "API token",
-              description: "",
-              type: "string",
-              kind: "hidden",
-            },
-          ],
+          dialogDescription: "This data source is getting data from Pipedrive. It's an incremental update and it is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
+          inputs: pipedrive
         },
       ],
     },
+    {   
+      description: "Snowflake Transformation",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformation",
+          inputs: [],
+        },
+      ]
+    },
+    {
+      description: "Data Destination",
+      required: "optional",
+      steps: [
+          {
+          icon: "component:keboola.wr-snowflake-blob-storage",
+          name: "Snowflake Destination",
+          description: "Load to data into snowflake",
+          dialogName: "Snowflake Destination", 
+          dialogDescription: "Data load to Snowflake DB.",
+          inputs: snowflake,
+        },
+        {
+          icon: "component:keboola.wr-google-sheet",
+          name: "Google sheet Destination",
+          description: "Load to data into google sheet",
+          dialogName: "Google Sheet Destination", 
+          dialogDescription: "Data load to Google Sheet.",
+          inputs: googlesheet,  
+        },
+      ]
+    },
   ],
 }
+
+

@@ -42,7 +42,7 @@
         "KBC.configuration.folderName": "[KEBOOLA-CRM-PIPEDRIVE]"
       },
     },
-    if Input("google-sheet-checkbox") == true then
+    if InputIsAvailable("google-sheet-id") then
     {
       componentId: "keboola.wr-google-sheets",
       id: ConfigId("out-crm-gsheet-writer"),
