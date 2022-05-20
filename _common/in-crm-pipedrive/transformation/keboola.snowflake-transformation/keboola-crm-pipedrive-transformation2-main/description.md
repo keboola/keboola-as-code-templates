@@ -1,1 +1,2 @@
-Creates output CRM data model (set of the output tables) from data extracted from Pipedrive.
+## Description:
+From Pipedrive data, the second transformation creates an output CRM data model (set of output tables). There are two phases to the transformation. In the first phase of the process, 3 tables are created (out_company, out_contact, out_employee). Second phase creates an out_opportunity table by combining other tables (pipelines, stages, out_employee, deals_companies, out_company) and there is also created snapshot of the output table to track changes throughout time.

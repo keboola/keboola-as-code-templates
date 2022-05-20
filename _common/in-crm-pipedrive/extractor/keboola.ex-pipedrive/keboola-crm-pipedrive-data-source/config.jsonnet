@@ -6,7 +6,7 @@
         args: [
           "https://",
           {
-            attr: Input("ex-pipedrive-api-base-url-args-1-attr"),
+            attr: "companyDomain",
           },
           ".pipedrive.com/v1/",
         ],
@@ -15,7 +15,7 @@
         type: "url.query",
         query: {
           api_token: {
-            attr: Input("ex-pipedrive-api-authentication-query-api-token-attr"),
+            attr: "#apiToken",
           },
         },
       },
@@ -28,7 +28,7 @@
     },
     config: {
       "#apiToken": Input("ex-pipedrive-config-api-token"),
-      companyDomain: "fcgvuzbihj",
+      companyDomain: Input("ex-pipedrive-company-domain"),
       incrementalOutput: true,
       jobs: [
         {

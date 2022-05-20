@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".organizations",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".organizations",
           destination: "organizations",
           column_types: [],
           where_column: "",
@@ -13,7 +13,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".persons",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".persons",
           destination: "persons",
           column_types: [],
           where_column: "",
@@ -22,7 +22,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".person_emails",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".person_emails",
           destination: "person_emails",
           column_types: [],
           where_column: "",
@@ -31,7 +31,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".users",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".users",
           destination: "users",
           column_types: [],
           where_column: "",
@@ -40,7 +40,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".pipelines",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".pipelines",
           destination: "pipelines",
           where_column: "",
           where_values: [],
@@ -48,7 +48,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".stages",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".stages",
           destination: "stages",
           where_column: "",
           where_values: [],
@@ -56,7 +56,7 @@
           columns: [],
         },
         {
-          source: "in.c-crm-tr" + InstanceIdShort() + ".deals",
+          source: "in.c-crm-tr-" + InstanceIdShort() + ".deals",
           destination: "deals",
           where_column: "",
           where_values: [],
@@ -68,35 +68,35 @@
     output: {
       tables: [
         {
-          destination: "out.c-crm-wr" + InstanceIdShort() + ".company",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".company",
           source: "out_company",
           primary_key: [
             "company_id",
           ],
         },
         {
-          destination: "out.c-crm-wr" + InstanceIdShort() + ".contact",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".contact",
           source: "out_contact",
           primary_key: [
             "contact_id",
           ],
         },
         {
-          destination: "out.c-crm-wr" + InstanceIdShort() + ".employee",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".employee",
           source: "out_employee",
           primary_key: [
             "employee_id",
           ],
         },
         {
-          destination: "out.c-crm-wr" + InstanceIdShort() + ".opportunity",
+          destination: "out.c-crm-wr-" + InstanceIdShort() + ".opportunity",
           source: "out_opportunity",
           primary_key: [
             "opportunity_id",
           ],
         },
         {
-          destination: "out.c-crm-tr" + InstanceIdShort() + ".opportunity_snapshot",
+          destination: "out.c-crm-tr-" + InstanceIdShort() + ".opportunity_snapshot",
           source: "out_opportunity_snapshot",
           primary_key: [
             "snapshot_date",
