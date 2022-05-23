@@ -1,5 +1,5 @@
-local snowflake = import "/<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/inputs.jsonnet";
-local bigquery = import "/<common>/out-thoughtspot-googleanalytics-bigquery/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/out-googleanalytics-snowflake/v0/src/inputs.jsonnet";
+local bigquery = import "/<common>/out-googleanalytics-bigquery/v0/src/inputs.jsonnet";
 local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonnet";
 local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/inputs.jsonnet";
 {

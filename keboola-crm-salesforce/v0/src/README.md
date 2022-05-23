@@ -4,7 +4,7 @@ By using this end-to-end flow you can extract data from Salesforce and transform
 
 ## Steps to take:
 1. Fill out your password and security token in the Salesforce data source
-2. Optionaly select and authorize writers
+2. Optionaly select and authorize data destinations
 3. Run the flow
 
 ## All possible Included components' configurations:
@@ -34,7 +34,7 @@ The data destination loads data into a Google sheet or a Snowflake database.
 
 ### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-The Orchestrator runs Salesforce CRM data source, three snowflake transformations and optionally selected writers.
+The Flow runs Salesforce CRM data source, three snowflake transformations and optionally selected data destinations.
 
 ## Business Data Model
 

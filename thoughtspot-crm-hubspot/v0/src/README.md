@@ -4,7 +4,7 @@ By using this end-to-end flow you can extract data from HubSpot and transform it
 
 ## Steps to take:
 1. Authorize data source with Hubspot API TOKEN and select date range
-2. Optionaly select and authorize writers
+2. Optionaly select and authorize data destinations
 3. Run the flow
 
 ## Included components' configurations:
@@ -24,7 +24,7 @@ The data destination loads data into a Google BigQuery or a Snowflake database.
 
 ### FLOW: [THOUGHTSPOT-CRM-HUBSPOT] Flow
 
-The Orchestrator runs the Data Source and one transformation and optionally selected writers.
+The Flow runs the Data Source and one transformation and optionally selected data destinations.
 
 ## Business Data Model
 

@@ -4,7 +4,7 @@ By using this end-to-end flow you can extract data from Hubspot and transform it
 
 ## Steps to take:
 1. Authorize data source with Hubspot API TOKEN and select date range
-2. Optionaly select and authorize writers
+2. Optionaly select and authorize data destinations
 3. Run the flow
 
 ## All possible included components' configurations:
@@ -30,7 +30,7 @@ The final snapshots are generated from the auxiliary tables.
 
 ### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-Orchestrator runs HubSpot CRM data source and 3 snowflake transformations.
+Flow runs HubSpot CRM data source and 3 snowflake transformations.
 
 ### DESTINATION: [OUT-CRM-GSHEET] Data Destination OR DESTINATION: [OUT-CRM-SNOWFLAKE] Data Destination
 
@@ -38,7 +38,7 @@ The data destination loads data into a Google sheet or a Snowflake database.
 
 ### FLOW: [KEBOOLA-CRM-HUBSPOT] Flow
 
-The Orchestrator runs HubSpot CRM data source, three snowflake transformations and optionally selected writers.
+The Flow runs HubSpot CRM data source, three snowflake transformations and optionally selected data destinations.
 
 
 ## Business Data Model

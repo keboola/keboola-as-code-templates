@@ -4,7 +4,7 @@ By using this end-to-end flow you can extract data from Google Analytics and tra
 
 ## Steps to take:
 1. Authorize data source and setup profile
-2. Optionaly select and authorize writers
+2. Optionaly select and authorize data destinations
 3. Run the flow
 
 ## Included components' configurations:
@@ -31,7 +31,7 @@ Data from Google search console results are grouped by URL and date.
 The data destination loads data into a Google BigQuery or a Snowflake database or a google sheet.
 
 ### FLOW: [KEBOOLA-ANALYTICS-GOOGLEANALYTICS] Flow
-The Orchestrator runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases or a google sheet.
+The Flow runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases or a google sheet.
 
 ## Business Data Model
 

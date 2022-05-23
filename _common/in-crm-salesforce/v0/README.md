@@ -29,7 +29,7 @@ Creation of final snapshots from the auxiliary tables.
 
 ### FLOW: [IN-CRM-SALESFORCE] Flow: BDM Creation
 
-This orchestrator runs Salesforce CRM data source and 3 snowflake transformations.
+This flow runs Salesforce CRM data source and 3 snowflake transformations.
 
 ## Business Data Model
 

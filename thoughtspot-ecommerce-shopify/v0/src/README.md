@@ -4,7 +4,7 @@ By using this end-to-end flow you can extract data from Shopify and transform it
 
 ## Steps to take:
 1. Fill out your credentials in the Shopify data source
-2. Optionaly select and authorize writers
+2. Optionaly select and authorize data destinations
 3. Run the flow
 
 ## Included components' configurations:
@@ -34,7 +34,7 @@ The data destination loads data into Google Sheets, Snowflake database or BigQue
 
 ### FLOW: [IN-ECOMMERCE-SHOPIFY] Flow: BDM Creation
 
-The Orchestrator gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Google sheet, Snowflake database or Google BigQuery.
+The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Google sheet, Snowflake database or Google BigQuery.
 
 ## Business Data Model
 

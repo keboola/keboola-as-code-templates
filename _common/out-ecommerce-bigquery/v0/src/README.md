@@ -29,7 +29,7 @@ Basic RFM analysis is done in this transformation.
 
 ### FLOW: [IN-ECOMMERCE-SHOPIFY] Flow: BDM Creation
 
-This orchestrator gets data from Shopify Data Source, transform them, run RFM analysis and write data into Snowflake database. 
+This flow gets data from Shopify Data Source, transform them, run RFM analysis and write data into Snowflake database. 
 
 ### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR [OUT-ECOMMERCE-BIGQUERY] Data Destination 
 
