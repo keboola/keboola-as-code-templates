@@ -20,21 +20,21 @@
       id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
       path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation1-prepare-input-tables",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation"),
       path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation2-data-preparation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis"),
       path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation3-rfm-analysis",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("google-sheet-id") then
     {
@@ -180,7 +180,7 @@
       id: ConfigId("in-ecommerce-facebook-transformation"),
       path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("ex-google-ads-customer-id") then
     {
@@ -200,7 +200,7 @@
       id: ConfigId("in-ecommerce-googleads-transformation"),
       path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("ex-sklik-token") then
     {
@@ -215,7 +215,7 @@
       id: ConfigId("in-ecommerce-sklik-transformation"),
       path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("data-studio-gsheet-id") then
     {
@@ -223,7 +223,7 @@
       id: ConfigId("gsheet-datastudio-transformation"),
       path: "<common>/out-ecommerce-gsheet-datastudio/v0/src/transformation/keboola.snowflake-transformation/gsheet-datastudio-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ECOMMERCE-SHOPIFY]"}
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("data-studio-gsheet-id") then
     {

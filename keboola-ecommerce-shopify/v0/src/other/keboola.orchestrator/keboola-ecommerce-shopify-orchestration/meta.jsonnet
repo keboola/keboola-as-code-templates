@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-ECOMMERCE-SHOPIFY] Orchestration /" + InstanceIdShort(),
+  name: "Flow [ECOMM-SHOPIFY] /" + InstanceIdShort(),
 }

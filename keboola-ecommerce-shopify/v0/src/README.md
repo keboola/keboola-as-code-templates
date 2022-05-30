@@ -9,30 +9,34 @@ By using this end-to-end flow you can extract data from Shopify and transform it
 
 ## Included components' configurations:
 
-Shopify SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
+Shopify DS -> (marketing DS) -> TR1 -> TR2 -> TR3 -> DD -> FLOW
 
 
-### SOURCE: [IN-ECOMMERCE-SHOPIFY] Data Source
+### DS: Data Source [IN-ECOMM-SHOPIFY]
 
 Shopify data source collects data from Shopify about the orders, products, inventory and customers.
 
-### TR1: [IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables
+### DS: Data Source [IN-ECOMM-FACEBOOK] OR [IN-ECOMM-GOOGLEADS] OR [IN-ECOMM-SKLIK]
+
+Facebook ads, GoogleAds and Sklik are optionally data sources and can enrich Shopify data with marketing data.
+
+### TR1: Transformation1: Prepare Input Tables [IN-ECOMM-SHOPIFY] 
 
 In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
 
-### TR2: [IN-ECOMMERCE-SHOPIFY] Transformation2: Data Preparation
+### TR2: Transformation2: Data Preparation [IN-ECOMM-SHOPIFY]
 
 Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
 
-### TR3: [IN-ECOMMERCE-SHOPIFY] Transformation3: RFM Analysis
+### TR3: Transformation3: RFM Analysis [IN-ECOMM-SHOPIFY]
 
 A basic RFM analysis is performed during this transformation.
 
-### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR DESTINATION: [OUT-ECOMMERCE-BIGQUERY] Data Destination
+### DD: Data Destination [OUT-ECOMM-GSHEET]  OR [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY]
 
 The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
 
-### FLOW: [KEBOOLA-ECOMMERCE-SHOPIFY] Flow
+### FLOW: Flow [ECOMM-SHOPIFY] 
 
 The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and optionally writes the data into selected data destinations.
 
