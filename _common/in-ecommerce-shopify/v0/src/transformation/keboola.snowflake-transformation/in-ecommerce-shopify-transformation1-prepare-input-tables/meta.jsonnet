@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables /" + InstanceIdShort(),
+  name: "Transformation1: Prepare Input Tables [IN-ECOMM-SHOPIFY] /" + InstanceIdShort(),
 }

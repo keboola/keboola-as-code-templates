@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPIFY] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-ECOMM-SHOPIFY] /" + InstanceIdShort(),
 }
