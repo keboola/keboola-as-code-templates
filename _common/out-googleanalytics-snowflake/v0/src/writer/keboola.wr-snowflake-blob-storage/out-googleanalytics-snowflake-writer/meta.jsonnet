@@ -1,3 +1,3 @@
 {
-  name: "[OUT-GOOGLEANALYTICS-SNOWFLAKE] Data Destination /" + InstanceIdShort(),
+  name: "Data Destination [OUT-GA-SNOWFLAKE] /" + InstanceIdShort(),
 }
