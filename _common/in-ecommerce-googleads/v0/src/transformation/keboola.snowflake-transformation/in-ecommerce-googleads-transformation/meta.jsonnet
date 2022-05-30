@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-GOOGLEADS] Transformation /" + InstanceIdShort(),
+  name: "Transformation [IN-ECOMM-GOOGLEADS] /" + InstanceIdShort(),
 }
