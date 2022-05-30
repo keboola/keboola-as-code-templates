@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SKLIK] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-ECOMM-SKLIK] /" + InstanceIdShort(),
 }
