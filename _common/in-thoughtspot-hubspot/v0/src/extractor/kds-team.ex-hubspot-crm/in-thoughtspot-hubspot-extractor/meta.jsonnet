@@ -1,3 +1,3 @@
 {
-  name: "[IN-THOUGHTSPOT-HUBSPOT] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-TS-HUBSPOT] /" + InstanceIdShort(),
 }
