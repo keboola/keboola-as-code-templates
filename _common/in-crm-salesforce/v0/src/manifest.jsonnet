@@ -40,12 +40,6 @@
       ],
     },
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("in-crm-salesforce-orchestration-bdm-creation"),
-      path: "other/keboola.orchestrator/in-crm-salesforce-orchestration-bdm-creation",
-      rows: [],
-    },
-    {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation"),
       path: "transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation1-input-tables-creation",
