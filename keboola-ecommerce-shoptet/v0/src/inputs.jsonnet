@@ -25,7 +25,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
       ]
     },
     {
-      description: "Extractor",
+      description: "Marketing data source",
       required: "optional",
       steps: [
         {

@@ -9,26 +9,30 @@ By using this end-to-end flow you can extract data from Shoptet and transform it
 
 ## Included components' configurations:
 
-Shoptet SOURCE -> TR1 -> TR2 -> DESTINATION -> FLOW
+Shoptet DS -> (marketing DS) -> TR1 -> TR2 -> DD -> FLOW
 
 
-### SOURCE: [IN-ECOMMERCE-SHOPTET] Data Source
+### DS: Data Source [IN-ECOMM-SHOPTET]
 
 Shoptet data source collects data from Shoptet about the orders, products, inventory and customers.
 
-### TR1: [IN-ECOMMERCE-SHOPTET] Transformation1: Data Preparation
+### DS: Data Source [IN-ECOMM-FACEBOOK] OR [IN-ECOMM-GOOGLEADS] OR [IN-ECOMM-SKLIK]
+
+Facebook ads, GoogleAds and Sklik are optionally data sources and can enrich Shoptet data with marketing data.
+
+### TR1: Transformation1: Data Preparation [IN-ECOMM-SHOPTET]
 
 Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
 
-### TR2: [IN-ECOMMERCE-SHOPTET] Transformation2: RFM Analysis
+### TR2: Transformation2: RFM Analysis [IN-ECOMM-SHOPTET] 
 
 A basic RFM analysis is performed during this transformation.
 
-### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR DESTINATION: [OUT-ECOMMERCE-BIGQUERY] Data Destination
+### DD: Data Destination [OUT-ECOMM-GSHEET] OR [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY]
 
 The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
 
-### FLOW: [KEBOOLA-ECOMMERCE-SHOPTET] Flow
+### FLOW: Flow [ECOMM-SHOPTET]
 
 The Flow gets the data from Shoptet Data Source, transforms the data, runs the RFM analysis and optionally writes data into selected data destinations.
 
