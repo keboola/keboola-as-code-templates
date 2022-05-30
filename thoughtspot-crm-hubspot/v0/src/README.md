@@ -8,21 +8,21 @@ By using this end-to-end flow you can extract data from HubSpot and transform it
 3. Run the flow
 
 ## Included components' configurations:
-SOURCE -> TRANSFORMATION –> DESTINATION -> FLOW
+DS -> TR –> DD -> FLOW
 
-### SOURCE: [IN-THOUGHTSPOT-HUBSPOT] Data Source
+### DS: Data Source [IN-TS-HUBSPOT]
 
 The data source gets the data from HubSpot.
 
-### TRANSFORMATION: [IN-THOUGHTSPOT-HUBSPOT] Transformation
+### TR: Transformation [IN-TS-HUBSPOT] 
 
 Within this transformation, data is transformed. In this transformation, data is gathered from HubSpot, and is shaped into the requested shape.
 
-### DESTINATION: [OUT-THOUGHTSPOT-HUBSPOT-BIGQUERY] Data Destination OR DESTINATION: [OUT-THOUGHTSPOT-HUBSPOT-SNOWFLAKE] Data Destination
+### DD: Data Destination [OUT-TS-HUBSPOT-BIGQUERY] OR [OUT-TS-HUBSPOT-SNOWFLAKE]
 
 The data destination loads data into a Google BigQuery or a Snowflake database.
 
-### FLOW: [THOUGHTSPOT-CRM-HUBSPOT] Flow
+### FLOW: Flow [TS-CRM-HUBSPOT] 
 
 The Flow runs the Data Source and one transformation and optionally selected data destinations.
 
