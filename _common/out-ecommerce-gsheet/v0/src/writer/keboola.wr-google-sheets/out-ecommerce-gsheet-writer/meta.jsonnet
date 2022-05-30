@@ -1,3 +1,3 @@
 {
-  name: "[OUT-ECOMMERCE-GSHEET] Data Destination  /" + InstanceIdShort(),
+  name: "Data Destination [OUT-ECOMM-GSHEET] /" + InstanceIdShort(),
 }
