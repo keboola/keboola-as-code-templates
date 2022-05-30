@@ -9,38 +9,41 @@ By using this end-to-end flow you can choose any marketing channel (Facebook Ads
 
 ## All possible Included components' configurations:
 
-DS -> TR1 -> TR2 -> DD -> FLOW
+marketing DS -> TR1 -> TR2 -> DD -> FLOW
 
+### DS: Data Source [IN-MKT-BINGADS] 
 
-### DS: [KEBOOLA-MARKETINGCHANNELS-FACEBOOK] Data Source
+This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.
+
+### DS: Data Source [IN-MKT-FACEBOOK]
 
 Facebook Ads data is extracted with this data source. The data source is getting data about Facebook campaigns, ads, adsets and ads insights for the last day.
 
-### DS: [KEBOOLA-MARKETINGCHANNELS-LINKEDIN] Data Source
+### DS: Data Source [IN-MKT-LINKEDIN]
 
 LinkedIn Ads data is extracted with this data source. The data source is getting data about Linkedin campaigns for the last day.
 
-### DS: [KEBOOLA-MARKETINGCHANNELS-GOOGLEADS] Data Source
+### DS: Data Source [IN-MKT-GOOGLEADS]
 
 Google Ads data is extracted with this data source. The data source is getting data about Google Ads campaigns for the last day.
 
-### DS: [KEBOOLA-MARKETINGCHANNELS-GOOGLEANALYTICS] Data Source
+### DS: Data Source [IN-MKT-GOOGLEANALYTICS]
 
 Google Analytics data is extracted with this data source. The data source is getting data about basic sessions and transactions. It's an incremental upload. This data will enrich the marketing model with keywords adgroup and marketing transactions.
 
-### TR1: [KEBOOLA-MARKETINCHANNELS-FACEBOOK] OR [KEBOOLA-MARKETINCHANNELS-LINKEDIN] OR [KEBOOLA-MARKETINCHANNELS-GOOGLEADS]  Transformation
+### TR1: Transformation [IN-MKT-BINGADS] OR [IN-MKT-FACEBOOK] OR [IN-MKT-LINKEDIN] OR [IN-MKT-GOOGLEADS]
 
 The extracted data is transformed into one output table, which contains basic information about campaigns and also data about impressions, clicks, costs and costs conversions.
 
-### TR2: [KEBOOLA-MARKETINGCHANNELS-GOOGLEANALYTICS] Transformation
+### TR2: Transformation [IN-MKT-GOOGLEANALYTICS]
 
 Google Analytics transformation enriches the output table with sessions (new and returns), pageviews and bounces. With this tranformation are also created two new tables: ga transactions and keyword ad group.
 
-### DD: [KEBOOLA-MARKETINGCHANNELS-BIGQUERY] OR [KEBOOLA-MARKETINGCHANNELS-GOOGLESHEET] OR [KEBOOLA-MARKETINGCHANNELS-SNOWFLAKE] Data destination
+### DD: Data destination [OUT-MKT-BIGQUERY] OR [OUT-MKT-GOOGLESHEET] OR [OUT-MKT-SNOWFLAKE] 
 
 The data destination loads data into a BigQuery database or a Google sheet or a Snowflake database.
 
-### FLOW: [KEBOOLA-MARKETINGCHANNELS] Flow
+### FLOW: Flow [MKT]
 
 The flow runs marketing channels data source(s), snowflake transformation(s) and optionally selected data destination(s).
 
