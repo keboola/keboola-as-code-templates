@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-FACEBOOK] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-ECOMM-FACEBOOK] /" + InstanceIdShort(),
 }
