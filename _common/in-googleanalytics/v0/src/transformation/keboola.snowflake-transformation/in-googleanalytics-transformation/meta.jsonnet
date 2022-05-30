@@ -1,3 +1,3 @@
 {
-  name: "[IN-GOOGLEANALYTICS] Transformation /" + InstanceIdShort(),
+  name: "Transformation [IN-GA-GOOGLEANALYTICS] /" + InstanceIdShort(),
 }
