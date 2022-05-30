@@ -7,12 +7,6 @@
       rows: [],
     },
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("in-ecommerce-shopify-orchestrator-bdm-creation"),
-      path: "other/keboola.orchestrator/in-ecommerce-shopify-orchestrator-bdm-creation",
-      rows: [],
-    },
-    {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
       path: "transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation1-prepare-input-tables",

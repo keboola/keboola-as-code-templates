@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-FACEBOOK] Transformation /" + InstanceIdShort(),
+  name: "Transformation [IN-ECOMM-FACEBOOK] /" + InstanceIdShort(),
 }

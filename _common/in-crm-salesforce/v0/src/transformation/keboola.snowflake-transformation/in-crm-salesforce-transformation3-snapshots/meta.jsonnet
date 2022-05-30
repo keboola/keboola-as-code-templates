@@ -1,3 +1,3 @@
 {
-  name: "[IN-CRM-SALESFORCE] Transformation3: Snapshots /" + InstanceIdShort(),
+  name: "Transformation3: Snapshots [IN-CRM-SALESFORCE] /" + InstanceIdShort(),
 }

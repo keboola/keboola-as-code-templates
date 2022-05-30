@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SKLIK] Transformation /" + InstanceIdShort(),
+  name: "Transformation [IN-ECOMM-SKLIK] /" + InstanceIdShort(),
 }

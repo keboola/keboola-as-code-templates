@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-GOOGLEADS] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-ECOMM-GOOGLEADS] /" + InstanceIdShort(),
 }

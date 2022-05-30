@@ -1,3 +1,3 @@
 {
-  name: "[IN-CRM-HUBSPOT] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-CRM-HUBSPOT] /" + InstanceIdShort(),
 }

@@ -20,7 +20,7 @@
       id: ConfigId("in-googleanalytics-transformation"),
       path: "<common>/in-googleanalytics/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ANALYTICS-GOOGLEANALYTICS]"}
+      metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS]"}
     },
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
@@ -114,7 +114,7 @@
       id: ConfigId("in-googleanalytics-searchconsole-transformation"),
       path: "<common>/in-googleanalytics-searchconsole/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics-searchconsole-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-ANALYTICS-GOOGLEANALYTICS]"}
+      metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS]"}
     },
     ],)
 }

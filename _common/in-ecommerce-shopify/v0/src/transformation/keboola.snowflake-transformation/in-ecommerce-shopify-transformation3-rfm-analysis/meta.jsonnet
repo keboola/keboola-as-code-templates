@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPIFY] Transformation3: RFM Analysis /" + InstanceIdShort(),
+  name: "Transformation3: RFM Analysis [IN-ECOMM-SHOPIFY] /" + InstanceIdShort(),
 }

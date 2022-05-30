@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-CRM-SALESFORCE] Orchestration /" + InstanceIdShort(),
+  name: "Flow [CRM-SALESFORCE] /" + InstanceIdShort(),
 }

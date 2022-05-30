@@ -22,7 +22,7 @@
       id: ConfigId("keboola-marketingchannels-googleanalytics-transformation"),
       path: "transformation/keboola.snowflake-transformation/keboola-marketingchannels-googleanalytics-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[KEBOOLA-MARKETINGCHANNELS]"}
+      metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
     },
   ]),
 }

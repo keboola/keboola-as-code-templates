@@ -1,12 +1,6 @@
 {
   configurations: [
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-googleanalytics-snowflake-orchestration-bdm-usage"),
-      path: "other/keboola.orchestrator/out-googleanalytics-snowflake-orchestration-bdm-usage",
-      rows: [],
-    },
-    {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-googleanalytics-snowflake-writer"),
       path: "writer/keboola.wr-snowflake-blob-storage/out-googleanalytics-snowflake-writer",

@@ -1,3 +1,3 @@
 {
-  name: "[IN-ECOMMERCE-SHOPIFY] Transformation2: Data Preparation /" + InstanceIdShort(),
+  name: "Transformation2: Data Preparation [IN-ECOMM-SHOPIFY] /" + InstanceIdShort(),
 }

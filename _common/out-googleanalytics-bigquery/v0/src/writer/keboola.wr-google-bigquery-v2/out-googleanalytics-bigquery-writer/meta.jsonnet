@@ -1,3 +1,3 @@
 {
-  name: "[OUT-GOOGLEANALYTICS-BIGQUERY] Data Destination /" + InstanceIdShort(),
+  name: "Data Destination [OUT-GA-BIGQUERY] /" + InstanceIdShort(),
 }

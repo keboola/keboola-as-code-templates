@@ -1,12 +1,6 @@
 {
   configurations: [
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-googleanalytics-bigquery-orchestration-bdm-usage"),
-      path: "other/keboola.orchestrator/out-googleanalytics-bigquery-orchestration-bdm-usage",
-      rows: [],
-    },
-    {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-googleanalytics-bigquery-writer"),
       path: "writer/keboola.wr-google-bigquery-v2/out-googleanalytics-bigquery-writer",

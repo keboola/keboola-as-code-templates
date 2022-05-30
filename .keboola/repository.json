@@ -190,6 +190,21 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "keboola-mgmt-asana",
+      "icon": "component:leochan.ex-asana",
+      "name": "KEBOOLA-MGMT-ASANA",
+      "description": "Transform you project management data from Asana into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "path": "keboola-mgmt-asana",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "path": "v0"
+        }
+      ]
     }
   ]
 }

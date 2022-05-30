@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-MARKETINGCHANNELS-GOOGLESHEET] Data Destination /" + InstanceIdShort(),
+  name: "Data Destination [OUT-MKT-GOOGLESHEET] /" + InstanceIdShort(),
 }

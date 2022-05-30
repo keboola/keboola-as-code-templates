@@ -1,3 +1,3 @@
 {
-  name: "[THOUGHTSPOT-CRM-HUBSPOT] Orchestration /" + InstanceIdShort(),
+  name: "Flow [TS-CRM-HUBSPOT] /" + InstanceIdShort(),
 }

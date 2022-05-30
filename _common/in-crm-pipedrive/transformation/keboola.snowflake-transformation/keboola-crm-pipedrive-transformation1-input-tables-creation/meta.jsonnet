@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-CRM-PIPEDRIVE] Transformation1: Input Tables Creation /" + InstanceIdShort(),
+  name: "Transformation1: Input Tables Creation [IN-CRM-PIPEDRIVE] /" + InstanceIdShort(),
 }

@@ -1,3 +1,3 @@
 {
-  name: "[OUT-ECOMMERCE-SNOWFLAKE] Data Destination /" + InstanceIdShort(),
+  name: "Data Destination [OUT-ECOMM-SNOWFLAKE] /" + InstanceIdShort(),
 }

@@ -1,3 +1,3 @@
 {
-  name: "[IN-THOUGHTSPOT-HUBSPOT] Transformation: Data Preparation /" + InstanceIdShort(),
+  name: "Transformation: Data Preparation [IN-TS-HUBSPOT] /" + InstanceIdShort(),
 }

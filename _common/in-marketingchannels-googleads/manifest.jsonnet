@@ -22,7 +22,7 @@ configurations: std.filter(function(v) v != null,[
         id: ConfigId("keboola-marketingchannels-googleads-transformation"),
         path: "transformation/keboola.snowflake-transformation/keboola-marketingchannels-googleads-transformation",
         rows: [],
-        metadata: { "KBC.configuration.folderName": "[KEBOOLA-MARKETINGCHANNELS]"}
+        metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
     },
   ]),
 }

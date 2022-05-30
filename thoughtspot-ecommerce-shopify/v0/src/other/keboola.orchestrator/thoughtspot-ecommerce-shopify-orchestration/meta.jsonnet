@@ -1,3 +1,3 @@
 {
-  name: "[THOUGHTSPOT-ECOMMERCE-SHOPIFY] Orchestration /" + InstanceIdShort(),
+  name: "Flow [TS-ECOMM-SHOPIFY] /" + InstanceIdShort(),
 }
