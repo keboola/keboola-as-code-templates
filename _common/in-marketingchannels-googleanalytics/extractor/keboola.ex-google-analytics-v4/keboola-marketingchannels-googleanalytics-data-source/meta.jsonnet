@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-MARKETINGCHANNELS-GOOGLEANALYTICS] Data Source /" + InstanceIdShort(),
+  name: "Data Source [IN-MKT-GOOGLEANALYTICS] /" + InstanceIdShort(),
 }
