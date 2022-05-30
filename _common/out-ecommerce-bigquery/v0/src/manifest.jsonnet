@@ -1,11 +1,5 @@
 {
   configurations: [
-     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-bigquery-orchestration-bdm-usage"),
-      path: "other/keboola.orchestrator/out-ecommerce-bigquery-orchestration-bdm-usage",
-      rows: [],
-    },
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-ecommerce-bigquery-writer"),
