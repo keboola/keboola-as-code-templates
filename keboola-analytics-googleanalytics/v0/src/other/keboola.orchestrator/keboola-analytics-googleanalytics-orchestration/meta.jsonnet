@@ -1,3 +1,3 @@
 {
-  name: "[ANALYTICS-GOOGLEANALYTICS] Orchestration /" + InstanceIdShort(),
+  name: "Flow [GA-GOOGLEANALYTICS] /" + InstanceIdShort(),
 }
