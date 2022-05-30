@@ -1,3 +1,3 @@
 {
-  name: "[OUT-ECOMMERCE-GSHEET-DATASTUDIO] Transformation /" + InstanceIdShort(),
+  name: "Transformation [OUT-ECOMM-GSHEET-DATASTUDIO] /" + InstanceIdShort(),
 }
