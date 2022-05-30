@@ -1,3 +1,3 @@
 {
-  name: "[IN-GOOGLEANALYTICS-SEARCHCONSOLE] Data Source /" +InstanceIdShort(),
+  name: "Data Source [IN-GA-SEARCHCONSOLE] /" +InstanceIdShort(),
 }
