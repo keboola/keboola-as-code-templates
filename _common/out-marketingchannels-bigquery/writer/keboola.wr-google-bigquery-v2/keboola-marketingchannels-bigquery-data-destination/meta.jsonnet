@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-MARKETINGCHANNELS-BIGQUERY] Data Destination /" + InstanceIdShort(),
+  name: "Data Destination [OUT-MKT-BIGQUERY] /" + InstanceIdShort(),
 }
