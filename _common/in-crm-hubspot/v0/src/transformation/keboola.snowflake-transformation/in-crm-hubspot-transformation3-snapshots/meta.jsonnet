@@ -1,3 +1,3 @@
 {
-  name: "[IN-CRM-HUBSPOT] Transformation3: Snapshots /" + InstanceIdShort(),
+  name: "Transformation3: Snapshots [IN-CRM-HUBSPOT] /" + InstanceIdShort(),
 }
