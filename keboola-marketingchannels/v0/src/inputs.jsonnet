@@ -1,4 +1,5 @@
 local facebookads = import "/<common>/in-marketingchannels-facebookads/inputs.jsonnet";
+local bingads = import "/<common>/in-marketingchannels-bingads/inputs.jsonnet";
 local googleads = import "/<common>/in-marketingchannels-googleads/inputs.jsonnet";
 local googleanalytics = import "/<common>/in-marketingchannels-googleanalytics/inputs.jsonnet";
 local linkedin = import "/<common>/in-marketingchannels-linkedinads/inputs.jsonnet";
@@ -18,6 +19,14 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           dialogName: "Facebook Ads Data Source", 
           dialogDescription: "This extractor is getting data about facebook campaigns, ads, adsets and ads insights for the last day.",
           inputs: facebookads
+        },
+        {
+          icon: "component:esnerda.ex-bingads",
+          name: "BingAds Data Source",
+          description: "BingAds - Data Source",
+          dialogName: "BingAds Data Source", 
+          dialogDescription: "This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.",
+          inputs: bingads
         },
         {
           icon: "component:leochan.ex-linkedin",
