@@ -1,12 +1,6 @@
 {
   configurations: [
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-thoughtspot-gaa-bigquery-orchestration-bdm-usage"),
-      path: "other/keboola.orchestrator/out-thoughtspot-gaa-bigquery-orchestration-bdm-usage",
-      rows: [],
-    },
-    {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-thoughtspot-gaa-bigquery-writer"),
       path: "writer/keboola.wr-google-bigquery-v2/out-thoughtspot-gaa-bigquery-writer",
