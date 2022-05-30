@@ -9,30 +9,30 @@ By using this end-to-end flow you can extract data from Shopify and transform it
 
 ## Included components' configurations:
 
-Shopify SOURCE -> TR1 -> TR2 -> TR3 -> DESTINATION -> FLOW
+Shopify DS -> TR1 -> TR2 -> TR3 -> DD -> FLOW
 
 
-### SOURCE: [IN-ECOMMERCE-SHOPIFY] Data Source
+### DS: Data Source [IN-ECOMM-SHOPIFY]
 
 Shopify data source collects data from Shopify about the orders, products, inventory and customers.
 
-### TR1: [IN-ECOMMERCE-SHOPIFY] Transformation1: Prepare Input Tables
+### TR1: Transformation1: Prepare Input Tables [IN-ECOMM-SHOPIFY]
 
-In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
+In this transformation, NULL values are populated in the output tables in case there are missing columns required for the following transformations. If these columns are not present, they are added to the output tables.
 
-### TR2: [IN-ECOMMERCE-SHOPIFY] Transformation2: Data Preparation
+### TR2: Transformation2: Data Preparation [IN-ECOMM-SHOPIFY]
 
 Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
 
-### TR3: [IN-ECOMMERCE-SHOPIFY] Transformation3: RFM Analysis
+### TR3: Transformation3: RFM Analysis [IN-ECOMM-SHOPIFY]
 
 A basic RFM analysis is performed during this transformation.
 
-### DESTINATION: [OUT-ECOMMERCE-GSHEET] Data Destination OR DESTINATION: [OUT-ECOMMERCE-SNOWFLAKE] Data Destination OR [OUT-ECOMMERCE-BIGQUERY] Data Destination 
+### DD: Data Destination [OUT-ECOMM-GSHEET] OR [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY]
 
 The data destination loads data into Google Sheets, Snowflake database or BigQuery.
 
-### FLOW: [IN-ECOMMERCE-SHOPIFY] Flow: BDM Creation
+### FLOW: Flow [TS-ECOMM-SHOPIFY]
 
 The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Google sheet, Snowflake database or Google BigQuery.
 
