@@ -1,12 +1,6 @@
 {
   configurations: [
     {
-      componentId: "keboola.orchestrator",
-      id: ConfigId("out-ecommerce-snowflake-orchestration-bdm-usage"),
-      path: "other/keboola.orchestrator/out-ecommerce-snowflake-orchestration-bdm-usage",
-      rows: [],
-    },
-    {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-ecommerce-snowflake-writer"),
       path: "writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer",
