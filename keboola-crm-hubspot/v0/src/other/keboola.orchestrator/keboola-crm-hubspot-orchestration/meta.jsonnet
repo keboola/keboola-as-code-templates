@@ -1,3 +1,3 @@
 {
-  name: "[KEBOOLA-CRM-HUBSPOT] Orchestration /" + InstanceIdShort(),
+  name: "Flow [CRM-HUBSPOT] /" + InstanceIdShort(),
 }
