@@ -1,4 +1,4 @@
 {
-  name: "Extraction: BingAds",
+  name: "Transformation",
   dependsOn: ["<previous>"],
 }
