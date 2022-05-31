@@ -10,7 +10,7 @@
   {
     id: "ex-bingads-account-id",
     name: "Account ID",
-    description: "Account identifier of your BingAds account (if empty, all accounts are downloaded)",
+    description: "Account identifier of your BingAds account.",
     type: "string",
     kind: "input",
     default: "XXXXXXXX",
