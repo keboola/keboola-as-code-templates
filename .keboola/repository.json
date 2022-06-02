@@ -43,7 +43,6 @@
     },
     {
       "id": "keboola-crm-hubspot",
-      "icon": "component:kds-team.ex-hubspot-crm",
       "name": "CRM Hubspot",
       "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
       "path": "keboola-crm-hubspot",
@@ -52,13 +51,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-hubspot-crm","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-crm-salesforce",
-      "icon": "component:kds-team.ex-salesforce-v2",
       "name": "CRM Salesforce",
       "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
       "path": "keboola-crm-salesforce",
@@ -67,13 +66,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-salesforce-v2","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-ecommerce-shopify",
-      "icon": "component:kds-team.ex-shopify",
       "name": "Shopify and Ecommerce",
       "description": "Sync your updated Shopify data into Keboola and build your analytics for better business decisions.",
       "path": "keboola-ecommerce-shopify",
@@ -82,13 +81,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-ecommerce-shoptet",
-      "icon": "component:kds-team.ex-shoptet",
       "name": "Shoptet and Ecommerce",
       "description": "Sync your Shoptet order's data with Keboola and build your analytics for better business decisions.",
       "path": "keboola-ecommerce-shoptet",
@@ -97,13 +96,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-shoptet", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-analytics-googleanalytics",
-      "icon": "component:keboola.ex-google-analytics-v4",
       "name": "Google Analytics",
       "description": "Transform Google Analytics data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-analytics-googleanalytics",
@@ -112,13 +111,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "thoughtspot-analytics-googleanalytics",
-      "icon": "component:keboola.ex-google-analytics-v4",
       "name": "Google Analytics to SpotApp",
       "description": "Load or automate updates of your Google Analytics data.",
       "path": "thoughtspot-analytics-googleanalytics",
@@ -127,13 +126,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "thoughtspot-crm-hubspot",
-      "icon": "component:kds-team.ex-hubspot-crm",
       "name": "Hubspot to SpotApp",
       "description": "Load or automate updates of your Hubspot data to Snowflake or Big Query.",
       "path": "thoughtspot-crm-hubspot",
@@ -142,13 +141,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-hubspot-crm","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "thoughtspot-ecommerce-shopify",
-      "icon": "component:kds-team.ex-shopify",
       "name": "Shopify and Ecommerce to SpotApp",
       "description": "Load or automate updates of your Shopify eshop to predefined data warehouse  visualized.",
       "path": "thoughtspot-ecommerce-shopify",
@@ -157,13 +156,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-marketingchannels",
-      "icon": "common:settings",
       "name": "Ads Platform",
       "description": "Sync data from different Ads platforms for visualization. You can use a predefined destination or create your own.",
       "path": "keboola-marketingchannels",
@@ -172,13 +171,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-crm-pipedrive",
-      "icon": "component:keboola.ex-pipedrive",
       "name": "CRM PipeDrive",
       "description": "Load and synchronize Pipedrive data from different sources and data structures to your preferred data warehouse.",
       "path": "keboola-crm-pipedrive",
@@ -187,13 +186,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-pipedrive","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-mgmt-asana",
-      "icon": "component:leochan.ex-asana",
       "name": "Project Management Asana",
       "description": "Transform your project management data from Asana into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-mgmt-asana",
@@ -202,13 +201,13 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["leochan.ex-asana","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-git-github",
-      "icon": "component:keboola.ex-github",
       "name": "Git GutHub",
       "description": "Transform your GitHub data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-git-github",
@@ -217,6 +216,7 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-github","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
@@ -224,7 +224,6 @@
     {
       "id": "hubspot-to-snowflake",
       "name": "Hubspot to Snowflake",
-      "icon": "component:kds-team.ex-hubspot-crm",
       "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
       "path": "hubspot-to-snowflake",
       "versions": [
@@ -240,7 +239,6 @@
     {
       "id": "hubspot-to-googlesheet",
       "name": "Hubspot to GoogleSheet",
-      "icon": "component:kds-team.ex-hubspot-crm",
       "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
       "path": "hubspot-to-googlesheet",
       "versions": [
@@ -255,7 +253,6 @@
     },
     {
       "id": "pipedrive-to-snowflake",
-      "icon": "component:keboola.ex-pipedrive",
       "name": "PipeDrive to Snowflake",
       "description": "Load and synchronize Pipedrive data from different sources and data structures to your preferred data warehouse.",
       "path": "pipedrive-to-snowflake",
@@ -271,7 +268,6 @@
     },
     {
       "id": "pipedrive-to-googlesheet",
-      "icon": "component:keboola.ex-pipedrive",
       "name": "PipeDrive to GoogleSheet",
       "description": "Load and synchronize Pipedrive data from different sources and data structures to your preferred data warehouse.",
       "path": "pipedrive-to-googlesheet",
@@ -287,7 +283,6 @@
     },
     {
       "id": "salesforce-to-snowflake",
-      "icon": "component:kds-team.ex-salesforce-v2",
       "name": "Salesforce to Snowflake",
       "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
       "path": "salesforce-to-snowflake",
@@ -303,7 +298,6 @@
     },
     {
       "id": "salesforce-to-googlesheet",
-      "icon": "component:kds-team.ex-salesforce-v2",
       "name": "Salesforce to GoogleSheet",
       "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
       "path": "salesforce-to-googlesheet",
@@ -319,7 +313,6 @@
     },
     {
       "id": "shopify-to-bigquery",
-      "icon": "component:kds-team.ex-shopify",
       "name": "Shopify to BigQuery",
       "description": "Sync your updated Shopify data into Keebola and build your analytics for better business decisions.",
       "path": "shopify-to-bigquery",
