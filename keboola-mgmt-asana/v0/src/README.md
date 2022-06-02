@@ -16,11 +16,11 @@ Asana DS -> TR1 -> TR2 -> TR3 -> DD -> FLOW
 
 Asana data source gathers data about projects and tasks.
 
-### TR1: Transformation1: First phase [IN-MGMT-ASANA] 
+### TR1: Transformation1: User, Project [IN-MGMT-ASANA] 
 
 In this Transformation, output table with projects is created and snapshot project table is done to be able to track progress in time.
 
-### TR2: Transformation2: Second phase [IN-MGMT-ASANA]
+### TR2: Transformation2: Tasks [IN-MGMT-ASANA]
 
 Within this transformation, output table with tasks is created and snapshot task table is done to be able to track progress in time.
 
