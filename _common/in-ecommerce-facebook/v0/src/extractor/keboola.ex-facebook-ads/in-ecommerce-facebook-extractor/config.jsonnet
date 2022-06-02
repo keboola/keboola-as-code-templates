@@ -74,9 +74,6 @@
     ],
   },
   authorization: {
-    oauth_api: {
-      id: ConfigId("in-ecommerce-facebook-extractor"),
-      version: 3,
-    },
+    oauth_api: {},
   },
 }

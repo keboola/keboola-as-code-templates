@@ -1,9 +1,6 @@
 {
   authorization: {
-    oauth_api: {
-      id: ConfigId("data-source-in-git-github"),
-      version: 3,
-    },
+    oauth_api: {},
   },
   parameters: {
     api: {
