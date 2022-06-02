@@ -16,7 +16,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdmMarketingCampaignCosts",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_marketing_campaign_costs",
           source: "bdm_marketing_campaign_costs",
           primary_key: [
             "MARKETING_CAMPAIGN_COSTS_ID",
@@ -27,7 +27,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdmMarketingCampaignCostsMonthly",
+          destination: "out.c-ecommerce-wr-" + InstanceIdShort() + ".bdm_marketing_campaign_costs_monthly",
           source: "bdm_marketing_campaign_costs_monthly",
           primary_key: [
             "MARKETING_CAMPAIGN_COSTS_ID",

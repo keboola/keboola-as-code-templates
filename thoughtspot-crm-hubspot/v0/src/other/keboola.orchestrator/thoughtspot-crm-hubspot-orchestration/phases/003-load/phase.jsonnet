@@ -1,4 +1,4 @@
 {
-  name: "Load: Big Query Database",
+  name: "Load",
   dependsOn: ["<previous>"],
 }

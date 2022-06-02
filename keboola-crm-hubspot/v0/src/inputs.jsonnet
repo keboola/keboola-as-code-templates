@@ -12,7 +12,7 @@ local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
           name: "Hubspot",
           description: "Hubspot - Data Source",
           dialogName: "Hubspot Data Source", 
-          dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
+          dialogDescription: "Get data such as companies, deals, activities, and more by connecting to Hubspot. With your Hubspot Super Admin account, enter your Hubspot API token to start syncing your data.",
           inputs: hubspot,
         }
       ]

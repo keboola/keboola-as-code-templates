@@ -43,67 +43,66 @@
     },
     {
       "id": "keboola-crm-hubspot",
-      "icon": "component:kds-team.ex-hubspot-crm",
       "name": "CRM Hubspot",
-      "description": "Transform your Hubspot data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
       "path": "keboola-crm-hubspot",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-hubspot-crm","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-crm-salesforce",
-      "icon": "component:kds-team.ex-salesforce-v2",
       "name": "CRM Salesforce",
-      "description": "Transform Salesforce data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
       "path": "keboola-crm-salesforce",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-salesforce-v2","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-ecommerce-shopify",
-      "icon": "component:kds-team.ex-shopify",
       "name": "Shopify and Ecommerce",
-      "description": "Transform your Shopify data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "description": "Sync your updated Shopify data into Keboola and build your analytics for better business decisions.",
       "path": "keboola-ecommerce-shopify",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-ecommerce-shoptet",
-      "icon": "component:kds-team.ex-shoptet",
       "name": "Shoptet and Ecommerce",
-      "description": "Transform your Shoptet data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "description": "Sync your Shoptet order's data with Keboola and build your analytics for better business decisions.",
       "path": "keboola-ecommerce-shoptet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-shoptet", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-analytics-googleanalytics",
-      "icon": "component:keboola.ex-google-analytics-v4",
       "name": "Google Analytics",
       "description": "Transform Google Analytics data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-analytics-googleanalytics",
@@ -112,96 +111,217 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "thoughtspot-analytics-googleanalytics",
-      "icon": "component:keboola.ex-google-analytics-v4",
-      "name": "Load Google Analytics to SpotApp",
-      "description": "Transform Google Analytics data so it can be visualized in SpotApp.",
+      "name": "Google Analytics to SpotApp",
+      "description": "Load or automate updates of your Google Analytics data.",
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "thoughtspot-crm-hubspot",
-      "icon": "component:kds-team.ex-hubspot-crm",
-      "name": "Load Hubspot to SpotApp",
-      "description": "Transform your Hubspot data so it can be visualized in SpotApp.",
+      "name": "Hubspot to SpotApp",
+      "description": "Load or automate updates of your Hubspot data to Snowflake or Big Query.",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-hubspot-crm","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "thoughtspot-ecommerce-shopify",
-      "icon": "component:kds-team.ex-shopify",
-      "name": "Load Shopify and Ecommerce to SpotApp",
-      "description": "Transform your Shopify data so it can be visualized in SpotApp.",
+      "name": "Shopify and Ecommerce to SpotApp",
+      "description": "Load or automate updates of your Shopify eshop to predefined data warehouse  visualized.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-marketingchannels",
-      "icon": "common:settings",
-      "name": "Marketing Channels",
-      "description": "Transform data from marketing channels into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "name": "Ads Platform",
+      "description": "Sync data from different Ads platforms for visualization. You can use a predefined destination or create your own.",
       "path": "keboola-marketingchannels",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-crm-pipedrive",
-      "icon": "component:keboola.ex-pipedrive",
       "name": "CRM PipeDrive",
-      "description": "Transform your PipeDrive data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "description": "Load and synchronize Pipedrive data from different sources and data structures to your preferred data warehouse.",
       "path": "keboola-crm-pipedrive",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["keboola.ex-pipedrive","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
     },
     {
       "id": "keboola-mgmt-asana",
-      "icon": "component:leochan.ex-asana",
-      "name": "KEBOOLA-MGMT-ASANA",
-      "description": "Transform you project management data from Asana into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "name": "Project Management Asana",
+      "description": "Transform your project management data from Asana into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-mgmt-asana",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["leochan.ex-asana","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-git-github",
+      "name": "Git GutHub",
+      "description": "Transform your GitHub data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "path": "keboola-git-github",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.ex-github","keboola.wr-google-bigquery-v2","keboola.wr-snowflake-blob-storage","keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "hubspot-to-snowflake",
+      "name": "Hubspot to Snowflake",
+      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "path": "hubspot-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-hubspot-crm", "keboola.wr-snowflake-blob-storage"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "hubspot-to-googlesheet",
+      "name": "Hubspot to GoogleSheet",
+      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "path": "hubspot-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-hubspot-crm", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-snowflake",
+      "name": "PipeDrive to Snowflake",
+      "description": "Load and synchronize Pipedrive data from different sources and data structures to your preferred data warehouse.",
+      "path": "pipedrive-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.ex-pipedrive", "keboola.wr-snowflake-blob-storage"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-googlesheet",
+      "name": "PipeDrive to GoogleSheet",
+      "description": "Load and synchronize Pipedrive data from different sources and data structures to your preferred data warehouse.",
+      "path": "pipedrive-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.ex-pipedrive", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-snowflake",
+      "name": "Salesforce to Snowflake",
+      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "path": "salesforce-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-salesforce-v2", "keboola.wr-snowflake-blob-storage"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-googlesheet",
+      "name": "Salesforce to GoogleSheet",
+      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "path": "salesforce-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-salesforce-v2", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-bigquery",
+      "name": "Shopify to BigQuery",
+      "description": "Sync your updated Shopify data into Keebola and build your analytics for better business decisions.",
+      "path": "shopify-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2"],
           "path": "v0"
         }
       ]
