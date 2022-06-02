@@ -7,7 +7,6 @@
   "templates": [
     {
       "id": "api-demo",
-      "icon": "common:settings",
       "name": "API demo (UI dev)",
       "description": "Template from the examples of https://templates.keboola.com/v1/documentation/",
       "path": "api-demo",
@@ -16,19 +15,20 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
+          "components": ["common:settings"],
           "path": "v0"
         },
         {
           "version": "1.0.0",
           "description": "",
           "stable": false,
+          "components": ["common:settings"],
           "path": "v1"
         }
       ]
     },
     {
       "id": "my-template",
-      "icon": "common:download",
       "name": "My Template (UI dev)",
       "description": "Full workflow to ...",
       "path": "my-template",
@@ -37,6 +37,7 @@
           "version": "1.2.3",
           "description": "",
           "stable": true,
+          "components": ["common:download"],
           "path": "v1"
         }
       ]
