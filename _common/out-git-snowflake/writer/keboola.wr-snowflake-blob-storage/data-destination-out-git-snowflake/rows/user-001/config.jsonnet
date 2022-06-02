@@ -27,7 +27,7 @@
         name: "created_on",
         dbName: "CREATED_ON",
         type: "string",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "255",
       },
