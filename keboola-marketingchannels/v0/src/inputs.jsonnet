@@ -14,18 +14,18 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
       steps: [
         {
           icon: "component:keboola.ex-facebook-ads",
-          name: "Facebook Ads Data Source",
+          name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook campaigns, ads, adsets and ads insights for the last day.",
+          dialogDescription: "Export your Facebook Ads manager data such as campaigns, adsets, ads insights and more.",
           inputs: facebookads
         },
         {
           icon: "component:esnerda.ex-bingads",
-          name: "BingAds Data Source",
+          name: "Bing Ads",
           description: "BingAds - Data Source",
           dialogName: "BingAds Data Source", 
-          dialogDescription: "This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.",
+          dialogDescription: "Export data from Bing Ads.",
           inputs: bingads
         },
         {
@@ -33,7 +33,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           name: "LinkedIn Ads",
           description: "LinkedIn Ads - Data Source",
           dialogName: "LinkedIn Ads Data Source", 
-          dialogDescription: "This extractor is incremental. It is necessary to input start time range and end time range of the analytics.",
+          dialogDescription: "Export data from Linked In such as advertising spend, ad and campaign performance. Generate effective performance insights by entering the start and end time and date below.",
           inputs: linkedin
         },
         {
@@ -41,7 +41,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           name: "Google Ads",
           description: "Google Ads - Data Source",
           dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data from Google Ads about campaigns for the last day.",
+          dialogDescription: "Export data from Google Ads such as advertising spend, ad and campaign performance. To link your Google Ads data, fill in your Google Ads Customer ID below.",
           inputs: googleads
         }
       ]
@@ -55,7 +55,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           name: "Google Analytics",
           description: "Google Analytics - Data Source",
           dialogName: "Analytics Data Source", 
-          dialogDescription: "This extractor is getting data from Google Analytics. It's an incremental update. This data will enrich the marketing model with keywords adgroup and marketing transactions. ",
+          dialogDescription: "Export data from multiple Ads platform into Google Analytics to provide you a bigger picture of your customer journeys.",
           inputs: googleanalytics
         }
       ]

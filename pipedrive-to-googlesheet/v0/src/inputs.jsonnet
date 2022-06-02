@@ -12,7 +12,7 @@ local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
           name: "Pipedrive",
           description: "Pipedrive - Data Source",
           dialogName: "Pipedrive Data Source", 
-          dialogDescription: "This data source is getting data from Pipedrive. It's an incremental update and it is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
+          dialogDescription: "Build custom data such as companies, deals, activities, and more by connecting to Pipedrive. With your Pipedrive admin account, enter your Pipedrive API token to start syncing your data.",
           inputs: pipedrive
         },
       ],
