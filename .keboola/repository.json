@@ -209,7 +209,7 @@
     },
     {
       "id": "keboola-git-github",
-      "name": "Git GutHub",
+      "name": "Git GitHub",
       "description": "Transform your GitHub data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-git-github",
       "versions": [
@@ -315,7 +315,7 @@
     {
       "id": "shopify-to-bigquery",
       "name": "Shopify to BigQuery",
-      "description": "Sync your updated Shopify data into Keebola and build your analytics for better business decisions.",
+      "description": "Sync your updated Shopify data into Keboola and build your analytics for better business decisions.",
       "path": "shopify-to-bigquery",
       "versions": [
         {
@@ -323,6 +323,96 @@
           "description": "",
           "stable": false,
           "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-bigquery-v2"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-snowflake",
+      "name": "Shopify to Snowflake",
+      "description": "Sync your updated Shopify data into Keboola and build your analytics for better business decisions.",
+      "path": "shopify-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-snowflake-blob-storage"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-googlesheet",
+      "name": "Shopify to GoogleSheet",
+      "description": "Sync your updated Shopify data into Keboola and build your analytics for better business decisions.",
+      "path": "shopify-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-datastudio",
+      "name": "Shopify to Datastudio",
+      "description": "Sync your updated Shopify data into Keboola, use Google Sheet as destination and load outputs into a copy of Google Data Studio Dashboard template, which we have prepared for you.",
+      "path": "shopify-to-datastudio",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-snowflake",
+      "name": "Ads Platform to Snowflake",
+      "description": "Sync data from different Ads platforms to Snowflake database.",
+      "path": "adsplatform-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-snowflake-blob-storage"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-bigquery",
+      "name": "Ads Platform to BigQuery",
+      "description": "Sync data from different Ads platforms to BigQuery database.",
+      "path": "adsplatform-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-google-bigquery-v2"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-googlesheet",
+      "name": "Ads Platform to GoogleSheet",
+      "description": "Sync data from different Ads platforms to Google Sheet",
+      "path": "adsplatform-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-google-sheets"],
           "path": "v0"
         }
       ]
