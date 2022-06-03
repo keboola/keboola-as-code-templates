@@ -72,7 +72,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
     },
     {
       description: "Data Destination",
-      required: "optional",
+      required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
