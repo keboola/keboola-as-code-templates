@@ -416,8 +416,7 @@
           "path": "v0"
         }
       ]
-    }
-    ,    
+    },    
     {
       "id": "ts-googleanalytics-to-snowflake",
       "name": "Google Analytics to Snowflake & SpotApp",
