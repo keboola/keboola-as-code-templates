@@ -1,3 +1,0 @@
-{
-  name: "HS_DEALS_PIPELINE_STAGES",
-}

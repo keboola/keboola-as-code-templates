@@ -1,3 +1,0 @@
-{
-  name: "HS_DEAL_CONTACT_ASSOCIATION",
-}

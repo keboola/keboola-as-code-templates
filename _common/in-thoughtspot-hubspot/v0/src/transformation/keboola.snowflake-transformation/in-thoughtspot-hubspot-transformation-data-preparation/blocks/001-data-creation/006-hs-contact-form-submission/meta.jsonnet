@@ -1,3 +1,0 @@
-{
-  name: "HS_CONTACT_FORM_SUBMISSION",
-}
