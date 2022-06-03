@@ -26,7 +26,6 @@ The data destination loads data into a Google BigQuery or a Snowflake database.
 
 The Flow runs the Data Source and one transformation and optionally selected data destinations.
 
-## Business Data Model
 
 
 

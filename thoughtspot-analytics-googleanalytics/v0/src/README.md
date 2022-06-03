@@ -19,13 +19,13 @@ The data source gets the data from Google Analytics.
 
 Within this transformation, data is transformed. In this transformation, data is gathered from Google Analytics, and is shaped into the requested shape.
 
-### DD: Data Destination [OUT-GA-BIGQUERY] OR [OUT-GA-SNOWFLAKE] OR [OUT-GA-GSHEET]
+### DD: Data Destination [OUT-GA-BIGQUERY] OR [OUT-GA-SNOWFLAKE]
 
-The data destination loads data into a Google BigQuery or a Snowflake database or a google sheet.
+The data destination loads data into a Google BigQuery or a Snowflake database.
 
 ### FLOW: Flow [TS-GA-GOOGLEANALYTICS]
 
-The Flow runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases or a google sheet.
+The Flow runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases.
 
 ## Business Data Model
 
