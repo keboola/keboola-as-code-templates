@@ -209,7 +209,7 @@
     },
     {
       "id": "keboola-git-github",
-      "name": "Git GutHub",
+      "name": "Git GitHub",
       "description": "Transform your GitHub data into a form you can use for visualization. You can either choose predefined writer or create your own.",
       "path": "keboola-git-github",
       "versions": [
