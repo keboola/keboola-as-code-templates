@@ -36,9 +36,16 @@
         {
           "version": "1.2.3",
           "description": "",
-          "stable": true,
+          "stable": false,
           "components": ["common:download"],
           "path": "v1"
+        },
+        {
+          "version": "2.3.4",
+          "description": "New version!",
+          "stable": true,
+          "components": ["common:download"],
+          "path": "v2"
         }
       ]
     },
@@ -416,7 +423,7 @@
           "path": "v0"
         }
       ]
-    },    
+    },
     {
       "id": "ts-googleanalytics-to-snowflake",
       "name": "Google Analytics to Snowflake & SpotApp",
@@ -431,7 +438,7 @@
           "path": "v0"
         }
       ]
-    },    
+    },
     {
       "id": "ts-shopify-to-snowflake",
       "name": "Shopify to Snowflake & SpotApp",
@@ -446,7 +453,7 @@
           "path": "v0"
         }
       ]
-    },    
+    },
     {
       "id": "ts-hubspot-to-snowflake",
       "name": "HubSpot to Snowflake & SpotApp",
