@@ -123,6 +123,14 @@
               Default:     "example.com",
             },
             {
+              Id:          "port",
+              Name:        "Service Port",
+              Description: "NEW! Port",
+              Type:        "int",
+              Kind:        "input",
+              Rules:       "required,min=1",
+            },
+            {
               Id:          "token",
               Name:        "Service Token",
               Description: "Service API token.",
@@ -219,12 +227,11 @@
           dialogDescription: "Some external service.",
           inputs: [
             {
-              Id:          "g3s5-host",
-              Name:        "Service Host",
-              Description: "Base path of the Service API.",
+              Id:          "g3s5-token",
+              Name:        "Service Token",
+              Description: "Service API token.",
               Type:        "string",
-              Kind:        "input",
-              Default:     "example.com",
+              Kind:        "hidden",
             },
           ],
         },

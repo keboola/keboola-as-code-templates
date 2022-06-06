@@ -1,5 +1,6 @@
 {
   parameters: {
-    host: Input("g3s5-host"),
+    host: "my host",
+    token: Input("g3s5-token"),
   },
 }

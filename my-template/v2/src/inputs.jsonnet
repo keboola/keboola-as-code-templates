@@ -1,0 +1,84 @@
+{
+  stepsGroups: [
+    {
+      description: "Configure transformation",
+      required: "all",
+      steps: [
+        {
+          icon: "common:settings",
+          name: "Python",
+          description: "Description for Python parameters",
+          inputs: [
+            {
+              id: "python-parameter",
+              name: "Python Parameter",
+              description: "Please enter Python Parameter",
+              type: "string",
+              kind: "input",
+              rules: "required",
+            },
+          ],
+        },
+        {
+          icon: "common:settings",
+          name: "Snowflake",
+          description: "Description for Snowflake parameters",
+          inputs: [
+            {
+              id: "snowflake-parameter",
+              name: "Snowflake Parameter",
+              description: "Please enter Snowflake Parameter",
+              type: "string",
+              kind: "input",
+              rules: "required",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      description: "Configure both eshop platforms.",
+      required: "all",
+      steps: [
+        {
+          icon: "component:kds-team.ex-shopify",
+          name: "Shopify",
+          description: "Sell online with an ecommerce website",
+          inputs: [
+            {
+              id: "shopify-token",
+              name: "Shopify token",
+              description: "Please enter Shopify token",
+              type: "string",
+              kind: "hidden",
+              rules: "required",
+            },
+            {
+              id: "shopify-shop-name",
+              name: "Shop name",
+              description: "Please enter Shop name",
+              type: "string",
+              kind: "input",
+              rules: "required",
+            },
+          ],
+        },
+        {
+          icon: "component:kds-team.ex-shoptet-permalink",
+          name: "Shoptet",
+          description: "Sell online with Shoptet",
+          inputs: [
+            {
+              id: "shoptet-token",
+              name: "Shoptet Token",
+              description: "Please enter Shoptet token",
+              type: "string",
+              kind: "hidden",
+              rules: "required",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
