@@ -28,13 +28,13 @@ Within this transformation, data is transformed. In this transformation, data is
 
 A basic RFM analysis is performed during this transformation.
 
-### DD: Data Destination [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY]
+### DD: Data Destination [OUT-ECOMM-SNOWFLAKE]
 
-The data destination loads data into Snowflake database or BigQuery.
+The data destination loads data into snowflake database.
 
-### FLOW: Flow [TS-ECOMM-SHOPIFY]
+### FLOW: Flow [TS-SHOPIFY-TO-SNOWFLAKE]
 
-The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Snowflake database or Google BigQuery.
+The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Snowflake DB.
 
 
 

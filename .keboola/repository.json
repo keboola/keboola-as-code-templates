@@ -416,6 +416,51 @@
           "path": "v0"
         }
       ]
+    },    
+    {
+      "id": "ts-googleanalytics-to-snowflake",
+      "name": "Google Analytics to Snowflake & SpotApp",
+      "description": "Load or automate updates of your Google Analytics data into Snowflake DB and use it for reporting in SpotApp.",
+      "path": "ts-googleanalytics-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.ex-google-analytics-v4","keboola.wr-snowflake-blob-storage","keboola.wr-thoughtspot"],
+          "path": "v0"
+        }
+      ]
+    },    
+    {
+      "id": "ts-shopify-to-snowflake",
+      "name": "Shopify to Snowflake & SpotApp",
+      "description": "Sync your updated Shopify data into Snowflake DB and use SpotApp for better business decisions.",
+      "path": "ts-shopify-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik","keboola.wr-snowflake-blob-storage","keboola.wr-thoughtspot"],
+          "path": "v0"
+        }
+      ]
+    },    
+    {
+      "id": "ts-hubspot-to-snowflake",
+      "name": "HubSpot to Snowflake & SpotApp",
+      "description": "Load or automate updates of your Hubspot data to Snowflake and use it for reporting on SpotApp.",
+      "path": "ts-hubspot-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["kds-team.ex-hubspot-crm","keboola.wr-snowflake-blob-storage","keboola.wr-thoughtspot"],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
