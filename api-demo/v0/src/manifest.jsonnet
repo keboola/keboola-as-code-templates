@@ -51,7 +51,7 @@
       path: "writer/keboola.wr-snowflake-blob-storage/my-snowflake-data-destination",
       rows: [],
     },
-    if InputIsAvailable("g3s5-token") then
+    if InputIsAvailable("g3s5-host") then
     {
       componentId: "tde-exporter",
       id: ConfigId("my-tableau-tde-data-destination"),
