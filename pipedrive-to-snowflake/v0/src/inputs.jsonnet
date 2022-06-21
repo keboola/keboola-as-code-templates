@@ -9,7 +9,7 @@ local pipedrive = import "/<common>/in-crm-pipedrive/inputs.jsonnet";
       steps: [
         {
           icon: "component:keboola.ex-pipedrive",
-          name: "Pipedrive",
+          name: "PipeDrive",
           description: "Pipedrive - Data Source",
           dialogName: "Pipedrive Data Source", 
           dialogDescription: "Build custom data such as companies, deals, activities, and more by connecting to Pipedrive. With your Pipedrive admin account, enter your Pipedrive API token to start syncing your data.",

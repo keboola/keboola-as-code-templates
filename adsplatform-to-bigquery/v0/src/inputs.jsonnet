@@ -12,7 +12,7 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
       steps: [
         {
           icon: "component:keboola.ex-facebook-ads",
-          name: "Facebook Ads Data Source",
+          name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
           dialogDescription: "Export your Facebook Ads manager data such as campaigns, adsets, ads insights and more.",
@@ -20,7 +20,7 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
         },
         {
           icon: "component:esnerda.ex-bingads",
-          name: "BingAds Data Source",
+          name: "Bing Ads",
           description: "BingAds - Data Source",
           dialogName: "BingAds Data Source", 
           dialogDescription: "This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.",
