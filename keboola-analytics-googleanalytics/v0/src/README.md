@@ -26,12 +26,12 @@ This data source is getting data from Google Search Console.
 
 Data from Google search console results are grouped by URL and date. 
 
-### DD: Data Destination [OUT-GA-BIGQUERY]  OR [OUT-GA-SNOWFLAKE] OR [OUT-GA-GSHEET]
+### DD: Data Destination [OUT-GA-BIGQUERY]  OR [OUT-GA-SNOWFLAKE]
 
-The data destination loads data into a Google BigQuery or a Snowflake database or a google sheet.
+The data destination loads data into a Google BigQuery or a Snowflake database.
 
 ### FLOW: Flow [GA-GOOGLEANALYTICS]
-The Flow runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases or a google sheet.
+The Flow runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases.
 
 ## Business Data Model
 
