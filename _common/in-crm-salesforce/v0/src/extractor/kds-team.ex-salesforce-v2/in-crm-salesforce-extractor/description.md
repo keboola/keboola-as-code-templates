@@ -2,4 +2,4 @@
 Fill password and Salesforce security token and click on SAVE.
 
 ## Description:
-This data source is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.
+Get data such as accounts, contacts, events, and more by connecting to Salesforce. With your Salesforce admin account, enter your Salesforce security token and login credentials to start syncing your data.
