@@ -1,54 +1,13 @@
-# ADSPLATFORM-TO-GOOGLESHEET
+## Advertising Platforms to Google Sheets 
+With this end-to-end flow you can bring into Keboola Connection data from one or more marketing channels of your choice (Facebook Ads, LinkedIn Ads, Google Ads, and Bing Ads). After all the necessary tasks are performed on the data, you load the results into Google Sheets. You can also enrich the data with Google Analytics.
+ 
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the data destination.
 
-By using this end-to-end flow you can choose any marketing channel (Facebook Ads, LinkedIn Ads, Google Ads, BingAds) and get its data for transforming and loading into a Google sheet. You can also enrich this data with Google Analytics, it is optional.
+### The flow, in a nutshell
 
-## Steps to take:
-1. Authorize your data source account
-2. Authorize data destination
-3. Run the flow
-
-## All possible Included components' configurations:
-
-marketing DS -> TR1 -> TR2 -> DD -> FLOW
-
-### DS: Data Source [IN-MKT-BINGADS] 
-
-This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.
-
-### DS: Data Source [IN-MKT-FACEBOOK]
-
-Facebook Ads data is extracted with this data source. The data source is getting data about Facebook campaigns, ads, adsets and ads insights for the last day.
-
-### DS: Data Source [IN-MKT-LINKEDIN]
-
-LinkedIn Ads data is extracted with this data source. The data source is getting data about Linkedin campaigns for the last day.
-
-### DS: Data Source [IN-MKT-GOOGLEADS]
-
-Google Ads data is extracted with this data source. The data source is getting data about Google Ads campaigns for the last day.
-
-### DS: Data Source [IN-MKT-GOOGLEANALYTICS]
-
-Google Analytics data is extracted with this data source. The data source is getting data about basic sessions and transactions. It's an incremental upload. This data will enrich the marketing model with keywords adgroup and marketing transactions.
-
-### TR1: Transformation [IN-MKT-BINGADS] OR [IN-MKT-FACEBOOK] OR [IN-MKT-LINKEDIN] OR [IN-MKT-GOOGLEADS]
-
-The extracted data is transformed into one output table, which contains basic information about campaigns and also data about impressions, clicks, costs and costs conversions.
-
-### TR2: Transformation [IN-MKT-GOOGLEANALYTICS]
-
-Google Analytics transformation enriches the output table with sessions (new and returns), pageviews and bounces. With this tranformation are also created two new tables: ga transactions and keyword ad group.
-
-### DD: Data destination [OUT-MKT-GOOGLESHEET]
-
-The data destination loads data into a Google sheet.
-
-### FLOW: Flow [ADSPLATFORM-TO-GOOGLESHEET]
-
-The flow runs marketing channels data source(s), snowflake transformation(s) and Google sheet data destination.
-
-## Business Data Model
-
-
-
-
+First, you will select one or multiple data source components that will provide all your available data about your campaigns. 
+To enrich the marketing model with keywords, ad groups, and marketing transactions, you can also bring in your Google Analytics data (data about basic sessions and transactions). 
+The data extracted from the ad platform or platforms will be placed into one output table containing basic information about campaigns, impressions, clicks, costs, and cost conversions.
+Then, optionally, Google Analytics sessions (new and returns), page views, and bounces will be added to the output table, and two new tables will be created for transactions and keyword ad groups.
+The data will be written into a Google Sheets account via the Google Sheets data destination component.
+Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). All your selected data source components, all data manipulations, and the Google Sheets data destination component, will be processed.
