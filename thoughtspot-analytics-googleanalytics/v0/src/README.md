@@ -1,6 +1,6 @@
 # Google Analytics to ThoughtSpot
 
-By using this end-to-end flow you can extract data from Google Analytics and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.
+With this end-to-end flow you can extract data from Google Analytics and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.
 
 The process is simple. We will guide you through it, and, when needed, ask you to set up your profile and authorize the data source and data destination components.
 
