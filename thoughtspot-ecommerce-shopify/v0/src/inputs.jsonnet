@@ -76,7 +76,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
         },
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
+          name: "Google BigQuery",
           description: "Load data into BigQuery",
           dialogName: "BigQuery Destination", 
           dialogDescription: "This destination component loads data into a Google BigQuery dataset.",
