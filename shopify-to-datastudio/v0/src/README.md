@@ -1,46 +1,11 @@
-# SHOPIFY-TO-DATASTUDIO
+## Shopify to Data Studio
+With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in a prepared Google Data Studio Dashboard template.
+ 
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the data destination.
 
-By using this end-to-end flow you can extract data from Shopify and transform it into visualizations in your BI tool or anywhere else you prefer.
+### The flow, in a nutshell 
 
-## Steps to take:
-1. Fill out your credentials in the Shopify data source
-2. Authorize data destination
-3. Run the flow
-
-## Included components' configurations:
-
-Shopify DS -> (marketing DS) -> TR1 -> TR2 -> TR3 -> DD -> FLOW
-
-
-### DS: Data Source [IN-ECOMM-SHOPIFY]
-
-Shopify data source collects data from Shopify about the orders, products, inventory and customers.
-
-### DS: Data Source [IN-ECOMM-FACEBOOK] OR [IN-ECOMM-GOOGLEADS] OR [IN-ECOMM-SKLIK]
-
-Facebook ads, GoogleAds and Sklik are optionally data sources and can enrich Shopify data with marketing data.
-
-### TR1: Transformation1: Prepare Input Tables [IN-ECOMM-SHOPIFY] 
-
-In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
-
-### TR2: Transformation2: Data Preparation [IN-ECOMM-SHOPIFY]
-
-Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
-
-### TR3: Transformation3: RFM Analysis [IN-ECOMM-SHOPIFY]
-
-A basic RFM analysis is performed during this transformation.
-
-### DD: Data Destination [OUT-ECOMM-GSHEET-DATASTUDIO]
-
-The data destination loads data into a Google sheet.
-
-### FLOW: Flow [SHOPIFY-TO-DATASTUDIO] 
-
-The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and optionally writes the data into Google sheet.
-
-## Business Data Model
-
-
-
+First, the Shopify data source component will collect data from your Shopify account (data about orders, products, inventory, and customers). You can also bring in marketing data from your Facebook Ads, Google Ads, and/or Sklik accounts.
+We then create the output tables. We add NULL values if any columns are missing. We also check the data, and perform an RFM analysis. 
+The data is then written into a Google Sheets account via the Google Sheets data destination component. It is then mapped to data in Data Studio so that the dashboard provided by Keboola works.
+Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Shopify data source component, all data manipulations and analyses, and the Google Sheets data destination component, will be processed.

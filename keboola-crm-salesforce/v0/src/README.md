@@ -14,7 +14,7 @@ Salesforce DS -> TR1 -> TR2 -> TR3 -> DD -> FLOW
 
 ### DS: Data Source [IN-CRM-SALESFORCE]
 
-Salesforce data is extracted with this data source. The data source will be taking the following data: accounts, contacts, events, leads, opportunities, opportunity contact roles, opportunity stages and user information.
+Get data such as accounts, contacts, events, and more by connecting to Salesforce. With your Salesforce admin account, enter your Salesforce security token and login credentials to start syncing your data.
 
 ### TR1: Transformation1: Input Tables Creation [IN-CRM-SALESFORCE]
 
