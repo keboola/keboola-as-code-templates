@@ -63,7 +63,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for the destination component.",
+      description: "Provide credentials for the destination component.",
       required: "optional",
       steps: [
           {
