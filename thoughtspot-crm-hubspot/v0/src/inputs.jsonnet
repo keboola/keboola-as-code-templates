@@ -30,7 +30,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for the source component.",
+      description: "Configure your credentials for the destination component.",
       required: "optional",
       steps: [
         {
