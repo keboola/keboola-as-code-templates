@@ -4,7 +4,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for the Hubspot source component.",
+      description: "Provide credentials for the Hubspot source component.",
       required: "all",
       steps: [
         {
@@ -30,7 +30,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for the destination component.",
+      description: "Provide credentials for the destination component.",
       required: "optional",
       steps: [
         {
