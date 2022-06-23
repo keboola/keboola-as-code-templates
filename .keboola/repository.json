@@ -92,7 +92,7 @@
     {
       "id": "keboola-ecommerce-shopify",
       "name": "Shopify and Ecommerce",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "keboola-ecommerce-shopify",
       "versions": [
         {
@@ -410,7 +410,7 @@
     {
       "id": "shopify-to-bigquery",
       "name": "Shopify to BigQuery",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-bigquery",
       "versions": [
         {
@@ -432,7 +432,7 @@
     {
       "id": "shopify-to-snowflake",
       "name": "Shopify to Snowflake",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-snowflake",
       "versions": [
         {
@@ -453,7 +453,7 @@
     {
       "id": "shopify-to-googlesheet",
       "name": "Shopify to GoogleSheet",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-googlesheet",
       "versions": [
         {
@@ -474,7 +474,7 @@
     {
       "id": "shopify-to-datastudio",
       "name": "Shopify to Datastudio",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-datastudio",
       "versions": [
         {
@@ -495,7 +495,7 @@
     {
       "id": "adsplatform-to-snowflake",
       "name": "Ads Platform to Snowflake",
-      "description": "Sync data from different Ads platforms to Snowflake database.",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-snowflake",
       "versions": [
         {
@@ -517,7 +517,7 @@
     {
       "id": "adsplatform-to-bigquery",
       "name": "Ads Platform to BigQuery",
-      "description": "Sync data from different Ads platforms to BigQuery database.",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-bigquery",
       "versions": [
         {
@@ -539,7 +539,7 @@
     {
       "id": "adsplatform-to-googlesheet",
       "name": "Ads Platform to GoogleSheet",
-      "description": "Sync data from different Ads platforms to Google Sheet",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-googlesheet",
       "versions": [
         {
