@@ -13,9 +13,9 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
         {
           icon: "component:kds-team.ex-shopify",
           name: "Shopify",
-          description: "Shopify - Data Source",
+          description: "Shopify — Data Source",
           dialogName: "Shopify Data Source", 
-          dialogDescription: "Extractor collects data from Shopify about orders, products, inventory and customers. Use Admin API access token of your Shopify custom app. and shop id found in url, e.g. [shop_id].myshopify.com",
+          dialogDescription: "This data source component extracts data from Shopify about orders, products, inventory, and customers. Use the Admin API access token from your Shopify custom app, and the Shopify ID found in the URL, e.g., [shop_id].myshopify.com",
           inputs: shopify
         }
       ]
@@ -27,25 +27,25 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
         {
           icon: "component:keboola.ex-facebook-ads",
           name: "Facebook Ads",
-          description: "Facebook Ads - Data Source",
+          description: "Facebook Ads — Data Source",
           dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This data source component extracts data from Facebook Ads (monthly insights, and insights for the last 90 days).",
           inputs: facebook
         },
         {
           icon: "component:keboola.ex-google-ads",
           name: "Google Ads",
-          description: "Google Ads - Data Source",
+          description: "Google Ads — Data Source",
           dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data about Google ads insights. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This data source component extracts data from Google Ads Insights.",
           inputs: googleads
         },
         {
           icon: "component:keboola.ex-sklik",
           name: "Sklik",
-          description: "Sklik - Data Source",
+          description: "Sklik — Data Source",
           dialogName: "Sklik Data Source", 
-          dialogDescription: "This extractor is getting data about Sklik monthly insights and insights for the last day.",
+          dialogDescription: "This data source component extracts data from Sklik (monthly insights, and insights for the last day).",
           inputs: sklik
         }
       ]
@@ -68,18 +68,18 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Snowflake Destination",
-          description: "Load to data into snowflake",
-          dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake DB.",
+          name: "Snowflake",
+          description: "Load data into Snowflake",
+          dialogName: "Snowflake Data Destination", 
+          dialogDescription: "Loading data into Snowflake DB",
           inputs: snowflake
         },
         {
           icon: "component:keboola.wr-google-bigquery-v2",
           name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          description: "Big Query — data destination",
+          dialogName: "Big Query Data Destination", 
+          dialogDescription: "Loading data to Google BigQuery",
           inputs: bigquery
         },
       ]
