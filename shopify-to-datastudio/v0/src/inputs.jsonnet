@@ -68,11 +68,23 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Data Studio Dashboard",
+          name: "Google Sheet",
           description: "Load to google sheet for DataStudio Dashboard",
-          dialogName: "Dashboard in Data Studio", 
+          dialogName: "Google Sheet Destination", 
           dialogDescription: "Make a copy of this sheet https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s/ into your Drive. Then copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: datastudio,  
+        },
+      ]
+    },
+    {
+      description: "Set up Dashboard in Google DataStudio",
+      required: "all",
+      steps: [
+        {
+          icon: "component:jakub-bartel.wr-data-studio",
+          name: "Google Data Studio",
+          description: "Set up Dashboard in Google DataStudio",
+          inputs: [], 
         },
       ]
     }

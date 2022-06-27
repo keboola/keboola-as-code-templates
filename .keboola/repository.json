@@ -8,7 +8,7 @@
     {
       "id": "shopify-to-datastudio",
       "name": "Shopify to Datastudio",
-      "description": "Sync your updated Shopify data into Keboola, use Google Sheet as destination and load outputs into a copy of Google Data Studio Dashboard template, which we have prepared for you.",
+      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
       "path": "shopify-to-datastudio",
       "versions": [
         {
