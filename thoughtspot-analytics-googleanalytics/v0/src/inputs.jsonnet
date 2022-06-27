@@ -4,15 +4,15 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Google Analytics extractor.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-google-analytics-v4",
           name: "Google Analytics",
-          description: "Google Analytics Data Source",
-          dialogName: "Analytics Data Source",
-          dialogDescription: "Connect with Google Analytics and sync data from it. You'll need to authorize your Google Analytics account later in the Flow section.",
+          description: "Import data from Google Analytics",
+          dialogName: "Google Analytics Source",
+          dialogDescription: "This source component imports data from Google Analytics. You'll be asked to authorize your Google Analytics account later, in the Flow section.",
           inputs: googleanalytics
         },
       ],
@@ -30,23 +30,23 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
       ]
     },
     {
-      description: "Configure your credentials for writer.",
+      description: "Provide credentials for the destination component.",
       required: "optional",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
           name: "Snowflake",
-          description: "Snowflake - Destination",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",
-          dialogDescription: "Data load to Snowflake database.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake
         },
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination",
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into BigQuery",
+          dialogName: "BigQuery Destination",
+          dialogDescription: "This destination component loads data into a BigQuery dataset.",
           inputs: bigquery
         }
       ]

@@ -1,31 +1,18 @@
-# THOUGHTSPOT-CRM-HUBSPOT
+# HubSpot to ThoughtSpot
 
-By using this end-to-end flow you can extract data from HubSpot and transform it using the SpottApp for visualizations.
+With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.
 
-## Steps to take:
-1. Authorize data source with Hubspot API TOKEN and select date range
-2. Optionaly select and authorize data destinations
-3. Run the flow
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the source and destination components.
 
-## Included components' configurations:
-DS -> TR –> DD -> FLOW
+## The flow, in a nutshell
 
-### DS: Data Source [IN-TS-HUBSPOT]
+First, the HubSpot source component will collect data from your HubSpot account (companies, deals, activities, etc.). 
 
-The data source gets the data from HubSpot.
+Then we will put your data into the requested shape, and you will select a destination component that will load the results either into a Snowflake database or into a Google BigQuery dataset.
 
-### TR: Transformation [IN-TS-HUBSPOT] 
+Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The source component, all data manipulations, and the Snowflake or Google BigQuery destination components, will be processed.
 
-Within this transformation, data is transformed. In this transformation, data is gathered from HubSpot, and is shaped into the requested shape.
-
-### DD: Data Destination [OUT-TS-HUBSPOT-BIGQUERY] OR [OUT-TS-HUBSPOT-SNOWFLAKE]
-
-The data destination loads data into a Google BigQuery or a Snowflake database.
-
-### FLOW: Flow [TS-CRM-HUBSPOT] 
-
-The Flow runs the Data Source and one transformation and optionally selected data destinations.
-
+At this point, your data will be prepared to be loaded into SpotApps as a reporting source. Once you are in SpotApps, enter the credentials of the database where you store your newly created data, and you can start using your reporting right away.
 
 
 

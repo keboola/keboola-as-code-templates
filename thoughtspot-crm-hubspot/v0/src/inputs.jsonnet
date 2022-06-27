@@ -4,15 +4,15 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Hubspot extractor.",
+      description: "Provide credentials for the Hubspot source component.",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.ex-hubspot-crm",
           name: "Hubspot",
-          description: "Hubspot Data Source",
-          dialogName: "Hubspot Data Source", 
-          dialogDescription: "Get data such as companies, deals, activities, and more by connecting to Hubspot. With your Hubspot Super Admin account, enter your Hubspot API token to start syncing your data.",
+          description: "Import data from Hubspot",
+          dialogName: "Hubspot Source", 
+          dialogDescription: "This source component imports data from HubSpot (companies, deals, activities, etc.). With your Hubspot Super Admin account, enter your Hubspot API token and start syncing your data.",
           inputs: hubspot,  
         },
       ],
@@ -30,23 +30,23 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for writer.",
+      description: "Provide credentials for the destination component.",
       required: "optional",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
           name: "Snowflake",
-          description: "Snowflake - Destination",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake database.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake,
         },
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into BigQuery",
+          dialogName: "BigQuery Destination", 
+          dialogDescription: "This destination component loads data into a BigQuery dataset.",
           inputs: bigquery,  
         },
       ],
