@@ -9,7 +9,7 @@
           name: "Super Ecommerce",
           description: "Sell online with the Super E-commerce website.",
           dialogName: "Other Ecommerce",
-          dialogDescription: "Please configure credentials to your Super Ecommerce account.",
+          dialogDescription: "Please configure **credentials** to your Super Ecommerce account.",
           inputs: [
             {
               id:          "user",
