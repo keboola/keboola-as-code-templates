@@ -34,6 +34,25 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "ts-googleanalytics-to-snowflake",
+      "name": "Google Analytics to Snowflake & SpotApp",
+      "description": "Load or automate updates of your Google Analytics data into Snowflake DB and use it for reporting in SpotApp.",
+      "path": "ts-googleanalytics-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-thoughtspot"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
