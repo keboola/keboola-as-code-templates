@@ -1,9 +1,15 @@
 {
   configurations: [
     {
+      componentId: "keboola.orchestrator",
+      id: ConfigId("out-thoughtspot-gaa-snowflake-orchestration-bdm-usage"),
+      path: "other/keboola.orchestrator/out-thoughtspot-gaa-snowflake-orchestration-bdm-usage",
+      rows: [],
+    },
+    {
       componentId: "keboola.wr-snowflake-blob-storage",
-      id: ConfigId("out-googleanalytics-snowflake-writer"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-googleanalytics-snowflake-writer",
+      id: ConfigId("out-thoughtspot-gaa-snowflake-writer"),
+      path: "writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("ga-ad-analytics"),
@@ -28,12 +34,8 @@
         {
           id: ConfigRowId("raw-page-behaviour"),
           path: "rows/raw-page-behaviour",
-        },
-        {
-          id: ConfigRowId("gsc_ranking"),
-          path: "rows/gsc_ranking",
-        },
-      ],
-    },
-  ],
+        }
+      ]
+    }
+  ]
 }
