@@ -72,6 +72,28 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "ts-shopify-to-snowflake",
+      "name": "Shopify to Snowflake & SpotApp",
+      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "path": "ts-shopify-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-thoughtspot"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
