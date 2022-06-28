@@ -26,7 +26,7 @@
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("out-googleanalytics-bigquery-writer"),
-      path: "<common>/out-googleanalytics-bigquery/v0/src/writer/keboola.wr-google-bigquery-v2/out-googleanalytics-bigquery-writer",
+      path: "<common>/out-thoughtspot-googleanalytics-bigquery/v0/src/writer/keboola.wr-google-bigquery-v2/out-thoughtspot-gaa-bigquery-writer",
       rows: std.filter(function(v) v != null, [
         {
           id: ConfigRowId("ga-ad-analytics"),
@@ -58,7 +58,7 @@
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-googleanalytics-snowflake-writer"),
-      path: "<common>/out-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-googleanalytics-snowflake-writer",
+      path: "<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer",
       rows: std.filter(function(v) v != null, [
         {
           id: ConfigRowId("ga-ad-analytics"),
