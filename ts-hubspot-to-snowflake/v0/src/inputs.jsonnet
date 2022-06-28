@@ -8,7 +8,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
       steps: [
         {
           icon: "component:kds-team.ex-hubspot-crm",
-          name: "Hubspot",
+          name: "HubSpot",
           description: "Load data from HubSpot",
           dialogName: "HubSpot Source", 
           dialogDescription: "This source component imports data from HubSpot (companies, deals, activities, etc.). Enter your HubSpot API token from your HubSpot Super Admin account and start loading.",
