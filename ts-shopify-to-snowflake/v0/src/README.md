@@ -1,43 +1,19 @@
-# THOUGHTSPOT-ECOMMERCE-SHOPIFY
+# Shopify to Snowflake and SpotApps
 
-By using this end-to-end flow you can extract data from Shopify and transform it using the SpottApp for visualizations.
+With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.
 
-## Steps to take:
-1. Fill out your credentials in the Shopify data source
-2. Optionaly select and authorize data destinations
-3. Run the flow
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the destination component.
 
-## Included components' configurations:
+## The flow, in a nutshell
+First, the Shopify source component will collect data from your Shopify account (data about orders, products, inventory, and customers). You can also bring in marketing data from your Facebook Ads, Google Ads, and/or Sklik accounts.
 
-Shopify DS -> TR1 -> TR2 -> TR3 -> DD -> FLOW
+We then create the output tables. We add NULL values if any columns are missing, check the data, and perform a stand-alone analysis and then an RFM analysis. 
 
+The Snowflake destination component will then load your data into a Snowflake database.
 
-### DS: Data Source [IN-ECOMM-SHOPIFY]
+Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Shopify source component, all data manipulations and analyses, and the Snowflake destination component, will be processed.
 
-Shopify data source collects data from Shopify about the orders, products, inventory and customers.
-
-### TR1: Transformation1: Prepare Input Tables [IN-ECOMM-SHOPIFY]
-
-In this transformation, NULL values are populated in the output tables in case there are missing columns required for the following transformations. If these columns are not present, they are added to the output tables.
-
-### TR2: Transformation2: Data Preparation [IN-ECOMM-SHOPIFY]
-
-Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
-
-### TR3: Transformation3: RFM Analysis [IN-ECOMM-SHOPIFY]
-
-A basic RFM analysis is performed during this transformation.
-
-### DD: Data Destination [OUT-ECOMM-SNOWFLAKE]
-
-The data destination loads data into snowflake database.
-
-### FLOW: Flow [TS-SHOPIFY-TO-SNOWFLAKE]
-
-The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and writes the data into Snowflake DB.
-
-
-
+At this point, your data will be prepared to be loaded into SpotApps as a reporting source. Once you are in SpotApps, enter the credentials of the Snowflake database where you store your newly created data, and you can start using your reporting right away.
 
 
 
