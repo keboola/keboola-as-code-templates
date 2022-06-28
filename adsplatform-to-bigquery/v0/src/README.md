@@ -1,54 +1,20 @@
-# ADSPLATFORM-TO-BIGQUERY
+# Advertising Platforms to BigQuery
 
-By using this end-to-end flow you can choose any marketing channel (Facebook Ads, LinkedIn Ads, Google Ads, BingAds) and get its data for transforming and loading into a BigQuery database. You can also enrich this data with Google Analytics, it is optional.
+With this end-to-end flow you can bring into Keboola Connection data from one or more marketing channels of your choice (Facebook Ads, LinkedIn Ads, Google Ads, and Bing Ads). After all the necessary tasks are performed on the data, you load the results into BigQuery. You can also enrich the data with Google Analytics.
 
-## Steps to take:
-1. Authorize your data source account
-2. Authorize data destination
-3. Run the flow
+The process is simple. We will guide you through it, and, when needed, ask you to authorize the source and destination components.
 
-## All possible Included components' configurations:
+## The flow, in a nutshell
+First, you will select one or multiple source components that will provide all your available data about your campaigns. 
 
-marketing DS -> TR1 -> TR2 -> DD -> FLOW
+To enrich the marketing model with keywords, ad groups, and marketing transactions, you can also bring in your Google Analytics data (data about basic sessions and transactions). 
 
-### DS: Data Source [IN-MKT-BINGADS] 
+The data extracted from the ad platform or platforms will be placed into one output table containing basic information about campaigns, impressions, clicks, costs, and cost conversions.
 
-This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.
+Then, optionally, Google Analytics sessions (new and returns), page views, and bounces will be added to the output table, and two new tables will be created for transactions and keyword ad groups.
 
-### DS: Data Source [IN-MKT-FACEBOOK]
+The data will be written into a BigQuery dataset via the BigQuery destination component.
 
-Facebook Ads data is extracted with this data source. The data source is getting data about Facebook campaigns, ads, adsets and ads insights for the last day.
-
-### DS: Data Source [IN-MKT-LINKEDIN]
-
-LinkedIn Ads data is extracted with this data source. The data source is getting data about Linkedin campaigns for the last day.
-
-### DS: Data Source [IN-MKT-GOOGLEADS]
-
-Google Ads data is extracted with this data source. The data source is getting data about Google Ads campaigns for the last day.
-
-### DS: Data Source [IN-MKT-GOOGLEANALYTICS]
-
-Google Analytics data is extracted with this data source. The data source is getting data about basic sessions and transactions. It's an incremental upload. This data will enrich the marketing model with keywords adgroup and marketing transactions.
-
-### TR1: Transformation [IN-MKT-BINGADS] OR [IN-MKT-FACEBOOK] OR [IN-MKT-LINKEDIN] OR [IN-MKT-GOOGLEADS]
-
-The extracted data is transformed into one output table, which contains basic information about campaigns and also data about impressions, clicks, costs and costs conversions.
-
-### TR2: Transformation [IN-MKT-GOOGLEANALYTICS]
-
-Google Analytics transformation enriches the output table with sessions (new and returns), pageviews and bounces. With this tranformation are also created two new tables: ga transactions and keyword ad group.
-
-### DD: Data destination [OUT-MKT-BIGQUERY]
-
-The data destination loads data into a BigQuery database.
-
-### FLOW: Flow [ADSPLATFORM-TO-BIGQUERY]
-
-The flow runs marketing channels data source(s), snowflake transformation(s) and BigQuery data destination.
-
-## Business Data Model
-
-
+Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). All your selected source components, all data manipulations, and the BigQuery destination component, will be processed.
 
 
