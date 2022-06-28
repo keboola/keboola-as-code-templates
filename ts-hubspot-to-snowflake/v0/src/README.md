@@ -2,7 +2,7 @@
 
 With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps. 
 
-The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, select a date range, and authorize the data source and data destination component.
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, select a date range, and authorize the data source and data destination components.
 
 ## The flow, in a nutshell
 
