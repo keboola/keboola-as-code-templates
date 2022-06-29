@@ -53,7 +53,7 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
           name: "Google Analytics",
           description: "Import data from Google Analytics",
           dialogName: "Google Analytics Source", 
-          dialogDescription: "This source component imports data from multiple ads platforms into Google Analytics to give you a bigger picture of your customer journeys.",
+          dialogDescription: "This source component imports data from Google Analytics (transactions and their values) to give you a bigger picture of your customer journeys.",
           inputs: googleanalytics
         }
       ]
