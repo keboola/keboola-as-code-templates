@@ -55,7 +55,7 @@ local googlesheet = import "/<common>/out-git-gsheet/inputs.jsonnet";
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of the sheet https://docs.google.com/spreadsheets/d/15Zylb18Kv2lIMD891-6pO1Diu0W6C-J_RHdrIbxX-qI/edit#gid=0 into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below",
+          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/15Zylb18Kv2lIMD891-6pO1Diu0W6C-J_RHdrIbxX-qI) into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below",
           inputs: googlesheet,  
         },
       ],

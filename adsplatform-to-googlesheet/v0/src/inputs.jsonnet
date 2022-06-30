@@ -79,7 +79,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           name: "Google Sheet",
           description: "Load data into Google Sheet",
           dialogName: "Google Sheet Destination", 
-          dialogDescription: "Copy this sheet https://docs.google.com/spreadsheets/d/1KkIjJqU7wrOdfy3zJA8RSEDCtFoE5Szg9aUInL7XCB0 into your Drive. Then copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1KkIjJqU7wrOdfy3zJA8RSEDCtFoE5Szg9aUInL7XCB0) into your Drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: gsheet
         },
       ]

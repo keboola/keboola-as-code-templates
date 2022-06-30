@@ -13,7 +13,7 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
           name: "Google Analytics",
           description: "Google Analytics Data Source",
           dialogName: "Analytics Data Source",
-          dialogDescription: "Connect with Google Analytics and sync data from it. You'll need to authorize your Google Analytics account later in the Flow section.",
+          dialogDescription: "Connect with Google Analytics and sync data from it.",
           inputs: googleanalytics
         },
       ],
@@ -27,7 +27,7 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
           name: "Google Search Console",
           description: "Google Search Console",
           dialogName: "Google Search Console",
-          dialogDescription: "This extractor is getting data from Google Search Console. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This extractor is getting data from Google Search Console.",
           inputs: searchconsole
         }
       ]

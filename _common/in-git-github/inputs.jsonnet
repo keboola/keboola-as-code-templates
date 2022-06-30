@@ -28,5 +28,14 @@
       label: '- 180 days',
     },
   ],
-}
+},
+{
+    id:          "g3s2-oauth-github",
+    name:        "Google oAuth",
+    description: "Authorization for GitHub",
+    type:        "object",
+    kind:        "oauth",
+    deafult:      {},
+    componentId: "keboola.ex-github",
+  }
 ]

@@ -74,6 +74,6 @@
     ],
   },
   authorization: {
-    oauth_api: {},
+    oauth_api: Input("g3s2-oauth-facebookads"),
   },
 }

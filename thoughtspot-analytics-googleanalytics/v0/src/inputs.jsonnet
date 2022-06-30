@@ -12,7 +12,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           name: "Google Analytics",
           description: "Import data from Google Analytics",
           dialogName: "Google Analytics Source",
-          dialogDescription: "This source component imports data from Google Analytics. You'll be asked to authorize your Google Analytics account later, in the Flow section.",
+          dialogDescription: "This source component imports data from Google Analytics.",
           inputs: googleanalytics
         },
       ],

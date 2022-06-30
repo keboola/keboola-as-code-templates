@@ -8,4 +8,13 @@
     default: "XXX-XXX-XXXX",
     rules: "required",
   },
+  {
+    id:          "g3s2-oauth-googleads",
+    name:        "Google oAuth",
+    description: "Authorization for Google Ads",
+    type:        "object",
+    kind:        "oauth",
+    deafult:      {},
+    componentId: "keboola.ex-google-ads",
+  }
 ]

@@ -71,7 +71,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Google Sheets",
           description: "Load data to Google Sheets for Data Studio Dashboard",
           dialogName: "Google Sheets Destination", 
-          dialogDescription: "Copy this sheet https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s/ into your Drive. Then copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s) into your Drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: datastudio,  
         },
       ]

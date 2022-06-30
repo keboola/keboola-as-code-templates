@@ -55,7 +55,7 @@ local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of the sheet https://docs.google.com/spreadsheets/d/1zpBB_3HbD2ofXGtPYEabuHeIPVrAYpC1vllpJO5fjIA/edit#gid=0 into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below",
+          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1zpBB_3HbD2ofXGtPYEabuHeIPVrAYpC1vllpJO5fjIA) into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below",
           inputs: googlesheet,  
         },
       ],

@@ -52,4 +52,13 @@
         },
       ],
     },
+    {
+    id:          "g3s2-oauth-googlesearch",
+    name:        "Google oAuth",
+    description: "Authorization for Google Search Console",
+    type:        "object",
+    kind:        "oauth",
+    deafult:      {},
+    componentId: "kds-team.ex-google-search-console",
+  }
 ]
