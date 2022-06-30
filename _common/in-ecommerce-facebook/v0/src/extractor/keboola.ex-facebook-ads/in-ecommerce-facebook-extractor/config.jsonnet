@@ -2,7 +2,7 @@
   parameters: {
     accounts: {
     },
-    "api-version": Input("ex-facebook-ads-api-version"),
+    "api-version": "v12.0",
     queries: [
       {
         id: 25200,
@@ -74,6 +74,6 @@
     ],
   },
   authorization: {
-    oauth_api: {},
+    oauth_api: Input("g3s2-oauth-facebookads"),
   },
 }
