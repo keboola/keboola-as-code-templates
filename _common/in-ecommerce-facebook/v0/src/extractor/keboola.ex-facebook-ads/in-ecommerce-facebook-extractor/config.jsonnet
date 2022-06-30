@@ -2,7 +2,7 @@
   parameters: {
     accounts: {
     },
-    "api-version": "v12.0",
+    "api-version": Input("ex-facebook-ads-api-version"),
     queries: [
       {
         id: 25200,
