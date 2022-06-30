@@ -29,7 +29,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
           inputs: facebook
         },
         {
@@ -37,7 +37,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           name: "Google Ads",
           description: "Google Ads - Data Source",
           dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data about Google ads insights. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This extractor is getting data about Google ads insights.",
           inputs: googleads
         },
         {
@@ -45,7 +45,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           name: "Sklik",
           description: "Sklik - Data Source",
           dialogName: "Sklik Data Source", 
-          dialogDescription: "This extractor is getting data about Sklik monthly insights and insights for the last day.",
+          dialogDescription: "This extractor is getting data about Sklik monthly and daily insights.",
           inputs: sklik
         }
       ]
@@ -71,7 +71,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
           dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of this sheet https://docs.google.com/spreadsheets/d/1y-p5GHgsQ20kjxqLcT7hYEsUDdbQHoPJi4dMoaGAFBM into your Drive. Then copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1y-p5GHgsQ20kjxqLcT7hYEsUDdbQHoPJi4dMoaGAFBM) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: googlesheet,  
         },
       ]

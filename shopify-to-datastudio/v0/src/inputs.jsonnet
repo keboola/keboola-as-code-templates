@@ -29,7 +29,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
           inputs: facebook
         },
         {
@@ -37,7 +37,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Google Ads",
           description: "Google Ads - Data Source",
           dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data about Google ads insights. This is a component with OAuth and has to be authorized later from flow.",
+          dialogDescription: "This extractor is getting data about Google ads insights.",
           inputs: googleads
         },
         {
@@ -45,7 +45,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Sklik",
           description: "Sklik - Data Source",
           dialogName: "Sklik Data Source", 
-          dialogDescription: "This extractor is getting data about Sklik monthly insights and insights for the last day.",
+          dialogDescription: "This extractor is getting data about Sklik monthly and daily insights.",
           inputs: sklik
         }
       ]
@@ -71,7 +71,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Google Sheet",
           description: "Load to google sheet for DataStudio Dashboard",
           dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of this sheet https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s/ into your Drive. Then copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: datastudio,  
         },
       ]
