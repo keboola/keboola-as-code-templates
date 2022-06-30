@@ -3,15 +3,15 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Hubspot extractor.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.ex-hubspot-crm",
-          name: "Hubspot",
-          description: "Hubspot Data Source",
-          dialogName: "Hubspot Data Source", 
-          dialogDescription: "This extractor is getting data from HubSpot. It's an incremental update and the extractor is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.",
+          name: "HubSpot",
+          description: "Import data from HubSpot",
+          dialogName: "HubSpot Source", 
+          dialogDescription: "This source component imports data from HubSpot (companies, deals, activities, etc.). Enter your HubSpot API token from your HubSpot Super Admin account and start loading.",
           inputs: hubspot,  
         },
       ],
@@ -29,15 +29,15 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for writer.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
           name: "Snowflake",
-          description: "Snowflake - Destination",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake database.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake,
         },
       ],

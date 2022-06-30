@@ -12,7 +12,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           name: "Hubspot",
           description: "Import data from Hubspot",
           dialogName: "Hubspot Source", 
-          dialogDescription: "This source component imports data from HubSpot (companies, deals, activities, etc.). With your Hubspot Super Admin account, enter your Hubspot API token and start syncing your data.",
+          dialogDescription: "This source component imports data from HubSpot (companies, deals, activities, etc.). Enter your HubSpot API token from your HubSpot Super Admin account and start loading.",
           inputs: hubspot,  
         },
       ],

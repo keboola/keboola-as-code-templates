@@ -1,46 +1,16 @@
-# KEBOOLA-ECOMMERCE-SHOPIFY
+# Shopify to BigQuery
 
-By using this end-to-end flow you can extract data from Shopify and transform it into visualizations in your BI tool or anywhere else you prefer.
+With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice. 
 
-## Steps to take:
-1. Fill out your credentials in the Shopify data source
-2. Optionaly select and authorize data destinations
-3. Run the flow
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the destination component.
 
-## Included components' configurations:
+## The flow, in a nutshell 
+First, the Shopify source component will collect data from your Shopify account (data about orders, products, inventory, and customers). You can also bring in marketing data from your Facebook Ads, Google Ads, and/or Sklik accounts.
 
-Shopify DS -> (marketing DS) -> TR1 -> TR2 -> TR3 -> DD -> FLOW
+We then create the output tables. We add NULL values if any columns are missing, check the data, and perform a stand-alone analysis and then an RFM analysis. 
 
+Then the BigQuery destination component will load your data into a Google BigQuery dataset.
 
-### DS: Data Source [IN-ECOMM-SHOPIFY]
-
-Shopify data source collects data from Shopify about the orders, products, inventory and customers.
-
-### DS: Data Source [IN-ECOMM-FACEBOOK] OR [IN-ECOMM-GOOGLEADS] OR [IN-ECOMM-SKLIK]
-
-Facebook ads, GoogleAds and Sklik are optionally data sources and can enrich Shopify data with marketing data.
-
-### TR1: Transformation1: Prepare Input Tables [IN-ECOMM-SHOPIFY] 
-
-In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
-
-### TR2: Transformation2: Data Preparation [IN-ECOMM-SHOPIFY]
-
-Within this transformation, data is transformed. In this transformation, data is gathered, a stand-alone analysis is performed, a health check is run, and output tables are created.
-
-### TR3: Transformation3: RFM Analysis [IN-ECOMM-SHOPIFY]
-
-A basic RFM analysis is performed during this transformation.
-
-### DD: Data Destination [OUT-ECOMM-GSHEET]  OR [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY]
-
-The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
-
-### FLOW: Flow [ECOMM-SHOPIFY] 
-
-The Flow gets the data from Shopify Data Source, transforms the data, runs the RFM analysis and optionally writes the data into selected data destinations.
-
-## Business Data Model
-
+Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Shopify source component, all data manipulations and analyses, and the BigQuery destination component, will be processed.
 
 

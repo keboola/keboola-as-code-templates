@@ -1,30 +1,18 @@
-# THOUGHTSPOT-CRM-HUBSPOT
+# HubSpot to Snowflake and SpotApps
 
-By using this end-to-end flow you can extract data from HubSpot and transform it using the SpottApp for visualizations.
+With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps. 
 
-## Steps to take:
-1. Authorize data source with Hubspot API TOKEN and select date range
-2. Optionaly select and authorize data destinations
-3. Run the flow
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, select a date range, and authorize the data source and data destination components.
 
-## Included components' configurations:
-DS -> TR –> DD -> FLOW
+## The flow, in a nutshell
 
-### DS: Data Source [IN-TS-HUBSPOT]
+First, the HubSpot data source component will collect data from your HubSpot account (companies, deals, activities, etc.). 
 
-The data source gets the data from HubSpot.
+Then we will put your data into the requested shape, and the Snowflake data destination component will load the results into a Snowflake database.
 
-### TR: Transformation [IN-TS-HUBSPOT] 
+Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The data source component, all data manipulations, and the Snowflake data destination component, will be processed.
 
-Within this transformation, data is transformed. In this transformation, data is gathered from HubSpot, and is shaped into the requested shape.
-
-### DD: Data Destination [OUT-TS-HUBSPOT-SNOWFLAKE]
-
-The data destination loads data into a Snowflake database.
-
-### FLOW: Flow [TS-HUBSPOT-TO-SNOWFLAKE] 
-
-The Flow runs the Data Source and one transformation and load to a snowflake database.
+At this point, your data will be prepared to be loaded into SpotApps as a reporting source. Once you are in SpotApps, enter the credentials of the database where you store your newly created data, and you can start using your reporting right away.
 
 
 

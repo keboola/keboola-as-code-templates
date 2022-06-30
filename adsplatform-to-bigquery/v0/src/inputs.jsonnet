@@ -7,39 +7,39 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for marketing channels.",
+      description: "Provide credentials for the source components.",
       required: "atLeastOne",
       steps: [
         {
           icon: "component:keboola.ex-facebook-ads",
           name: "Facebook Ads",
-          description: "Facebook Ads - Data Source",
-          dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "Export your Facebook Ads manager data such as campaigns, adsets, ads insights and more.",
+          description: "Import data from Facebook Ads",
+          dialogName: "Facebook Ads Source", 
+          dialogDescription: "This source component imports your Facebook Ads Manager data, such as campaigns, adsets, ads insights, and more.",
           inputs: facebookads
         },
         {
           icon: "component:esnerda.ex-bingads",
           name: "Bing Ads",
-          description: "BingAds - Data Source",
-          dialogName: "BingAds Data Source", 
-          dialogDescription: "This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.",
+          description: "Import data from Bing Ads",
+          dialogName: "Bing Ads Source", 
+          dialogDescription: "This source component imports data about Bing Ads campaigns.",
           inputs: bingads
         },
         {
           icon: "component:leochan.ex-linkedin",
           name: "LinkedIn Ads",
-          description: "LinkedIn Ads - Data Source",
-          dialogName: "LinkedIn Ads Data Source", 
-          dialogDescription: "Export data from Linked In such as advertising spend, ad and campaign performance. Generate effective performance insights by entering the start and end time and date below.",
+          description: "Import data from LinkedIn Ads",
+          dialogName: "LinkedIn Ads Source", 
+          dialogDescription: "This source component imports data from LinkedIn Ads (e.g., advertising spend). Enter the start and end times and dates below to generate instant performance insights.",
           inputs: linkedin
         },
         {
           icon: "component:keboola.ex-google-ads",
           name: "Google Ads",
-          description: "Google Ads - Data Source",
-          dialogName: "Google Ads Data Source", 
-          dialogDescription: "Export data from Google Ads such as advertising spend, ad and campaign performance. To link your Google Ads data, fill in your Google Ads Customer ID below.",
+          description: "Import data from Google Ads",
+          dialogName: "Google Ads Source", 
+          dialogDescription: "This source component imports data from Google Ads (e.g., advertising spend, ad and campaign performance). Fill in your Google Ads Customer ID below.",
           inputs: googleads
         }
       ]
@@ -51,9 +51,9 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
         {
           icon: "component:keboola.ex-google-analytics-v4",
           name: "Google Analytics",
-          description: "Google Analytics - Data Source",
-          dialogName: "Analytics Data Source", 
-          dialogDescription: "Export data from multiple Ads platform into Google Analytics to provide you a bigger picture of your customer journeys.",
+          description: "Import data from Google Analytics",
+          dialogName: "Google Analytics Source", 
+          dialogDescription: "This source component imports data from Google Analytics (transactions and their values) to give you a bigger picture of your customer journeys.",
           inputs: googleanalytics
         }
       ]
@@ -71,15 +71,15 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
       ]
     },
     {
-      description: "Data Destination",
+      description: "Data destination",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into BigQuery",
+          dialogName: "BigQuery Destination", 
+          dialogDescription: "This destination component loads data into a Google BigQuery dataset.",
           inputs: bigquery
         }
       ]
