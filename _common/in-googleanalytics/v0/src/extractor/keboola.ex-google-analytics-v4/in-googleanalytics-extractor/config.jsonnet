@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: {},
+    oauth_api: Input("g3s2-oauth"),
   },
   parameters: {
     outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-googleanalytics-extractor"),

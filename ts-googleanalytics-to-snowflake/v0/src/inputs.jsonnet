@@ -11,7 +11,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           name: "Google Analytics",
           description: "Google Analytics Data Source",
           dialogName: "Analytics Data Source",
-          dialogDescription: "Connect with Google Analytics and sync data from it. You'll need to authorize your Google Analytics account later in the Flow section.",
+          dialogDescription: "Connect with Google Analytics and sync data from it.",
           inputs: googleanalytics
         },
       ],
