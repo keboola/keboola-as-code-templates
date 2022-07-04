@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source",
+    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_traffic_source",
     dbName: "GA_TRAFFIC_SOURCE",
     incremental: false,
     primaryKey: [],
@@ -128,8 +128,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source",
-          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_traffic_source.csv",
+          source: "out.c-wr-" + InstanceIdShort() + ".ga_traffic_source",
+          destination: "out.c-wr-" + InstanceIdShort() + ".ga_traffic_source.csv",
           columns: [
             "id_TBE",
             "ga_userType",

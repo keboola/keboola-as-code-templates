@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics",
+    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics",
     dbName: "GA_SITE_STATISTICS",
     incremental: false,
     primaryKey: [],
@@ -143,8 +143,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics",
-          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_site_statistics.csv",
+          source: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics",
+          destination: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics.csv",
           columns: [
             "id_TBE",
             "ga_date",

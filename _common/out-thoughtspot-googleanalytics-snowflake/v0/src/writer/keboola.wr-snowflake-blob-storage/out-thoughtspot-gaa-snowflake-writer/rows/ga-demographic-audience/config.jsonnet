@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_demographic_audience",
+    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_demographic_audience",
     dbName: "GA_DEMOGRAPHIC_AUDIENCE",
     incremental: false,
     primaryKey: [],
@@ -113,8 +113,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_demographic_audience",
-          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_demographic_audience.csv",
+          source: "out.c-wr-" + InstanceIdShort() + ".ga_demographic_audience",
+          destination: "out.c-wr-" + InstanceIdShort() + ".ga_demographic_audience.csv",
           columns: [
             "id_TBE",
             "ga_date",
