@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics",
+    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
     dbName: "GA_AD_ANALYTICS",
     incremental: false,
     primaryKey: [],
@@ -133,8 +133,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics",
-          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics.csv",
+          source: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
+          destination: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics.csv",
           columns: [
             "id_TBE",
             "ga_date",

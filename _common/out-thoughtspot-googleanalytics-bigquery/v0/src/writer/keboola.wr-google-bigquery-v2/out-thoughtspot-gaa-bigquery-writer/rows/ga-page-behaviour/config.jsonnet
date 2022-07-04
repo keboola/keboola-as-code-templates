@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_page_behaviour",
-          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_page_behaviour.csv",
+          source: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour",
+          destination: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour.csv",
           changed_since: "",
           columns: [
             "id_TBE",
@@ -32,7 +32,7 @@
     tables: [
       {
         dbName: "ga_page_behaviour",
-        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_page_behaviour",
+        tableId: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour",
         incremental: false,
         items: [
           {
