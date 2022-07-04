@@ -51,6 +51,6 @@
     type:        "object",
     kind:        "oauth",
     default:      {},
-    componentId: "keboola.ex-google-analytics",
+    componentId: "keboola.ex-google-analytics-v4",
   }
 ]
