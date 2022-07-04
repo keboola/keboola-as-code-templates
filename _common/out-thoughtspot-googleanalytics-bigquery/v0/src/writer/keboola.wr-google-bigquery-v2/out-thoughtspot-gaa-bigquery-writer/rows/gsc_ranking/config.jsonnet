@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
-          destination: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
           changed_since: "",
           columns: ["page", "gsc_date", "gsc_average_ranking"],
         },
@@ -15,7 +15,7 @@
     tables: [
       {
         dbName: "gsc_ranking",
-        tableId: "out.c-thoughtspot-bdm-" + InstanceIdShort() + ".gsc_ranking",
+        tableId: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
         incremental: false,
         items: [
           {

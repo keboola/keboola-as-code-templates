@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics",
-          destination: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics.csv",
+          source: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
+          destination: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics.csv",
           changed_since: "",
           columns: [
             "id_TBE",
@@ -33,7 +33,7 @@
     tables: [
       {
         dbName: "ga_ad_analytics",
-        tableId: "out.c-thoughtspot-wr-" + InstanceIdShort() + ".ga_ad_analytics",
+        tableId: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
         incremental: false,
         items: [
           {
