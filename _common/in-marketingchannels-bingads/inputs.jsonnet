@@ -1,5 +1,14 @@
 [
   {
+    id:          "g3s2-oauth-bingads",
+    name:        "Google oAuth",
+    description: "Authorization for Bing Ads",
+    type:        "object",
+    kind:        "oauth",
+    default:      {},
+    componentId: "esnerda.ex-bingads",
+  },
+  {
     id: "ex-bingads-dev-key",
     name: "Developer Token",
     description: "Your developer token of your BingAds account.",
@@ -22,14 +31,5 @@
     type: "string",
     kind: "input",
     default: "XXXXXXXX",
-  },
-  {
-    id:          "g3s2-oauth-bingads",
-    name:        "Google oAuth",
-    description: "Authorization for Bing Ads",
-    type:        "object",
-    kind:        "oauth",
-    default:      {},
-    componentId: "esnerda.ex-bingads",
   }
 ]

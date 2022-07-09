@@ -21,7 +21,7 @@
         type: "varchar",
         nullable: true,
         default: "",
-        size: "8",
+        size: "20",
       },
       {
         name: "DATE",

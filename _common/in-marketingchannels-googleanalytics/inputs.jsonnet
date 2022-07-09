@@ -1,5 +1,14 @@
 [
   {
+    id:          "g3s2-oauth-googleanalytics",
+    name:        "Google oAuth",
+    description: "Authorization for Google Analytics",
+    type:        "object",
+    kind:        "oauth",
+    default:      {},
+    componentId: "keboola.ex-google-analytics-v4",
+  },
+  {
     id: "ga-from",
     name: "Period from date",
     description: "From when do you want to get the data?",
@@ -43,14 +52,5 @@
         label: '1 week ago',
       },
     ],
-  },
-  {
-    id:          "g3s2-oauth-googleanalytics",
-    name:        "Google oAuth",
-    description: "Authorization for Google Analytics",
-    type:        "object",
-    kind:        "oauth",
-    default:      {},
-    componentId: "keboola.ex-google-analytics-v4",
   }
 ]

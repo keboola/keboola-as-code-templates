@@ -6,10 +6,6 @@
     primaryKey: [],
     items: [
       {
-        name: "id_TBE",
-        type: "IGNORE",
-      },
-      {
         name: "ga_date",
         dbName: "ga:date",
         type: "date",
@@ -124,7 +120,6 @@
           source: "out.c-wr-" + InstanceIdShort() + ".ga_geo_audience",
           destination: "out.c-wr-" + InstanceIdShort() + ".ga_geo_audience.csv",
           columns: [
-            "id_TBE",
             "ga_date",
             "ga_country",
             "ga_region",

@@ -1,5 +1,14 @@
 [
   {
+    id:          "g3s2-oauth-github",
+    name:        "Google oAuth",
+    description: "Authorization for GitHub",
+    type:        "object",
+    kind:        "oauth",
+    deafult:      {},
+    componentId: "keboola.ex-github",
+  },
+  {
   id: "ex-github-start-date",
   name: "Start date",
   description: "Select day from which you want to get the data.",
@@ -28,14 +37,5 @@
       label: '- 180 days',
     },
   ],
-},
-{
-    id:          "g3s2-oauth-github",
-    name:        "Google oAuth",
-    description: "Authorization for GitHub",
-    type:        "object",
-    kind:        "oauth",
-    deafult:      {},
-    componentId: "keboola.ex-github",
-  }
+}
 ]

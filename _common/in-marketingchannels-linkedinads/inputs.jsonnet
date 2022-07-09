@@ -1,5 +1,14 @@
 [
   {
+    id:          "g3s2-oauth-linkedinads",
+    name:        "Google oAuth",
+    description: "Authorization for LinkedIn Ads",
+    type:        "object",
+    kind:        "oauth",
+    default:      {},
+    componentId: "leochan.ex-linkedin",
+  },
+  {
     id: "ex-linkedin-start-day",
     name: "Start Day",
     description: "Start time range of the analytics",
@@ -52,14 +61,5 @@
     kind: "input",
     rules: "min=2000,max=2100",
     default: 2022,
-  },
-  {
-    id:          "g3s2-oauth-linkedinads",
-    name:        "Google oAuth",
-    description: "Authorization for LinkedIn Ads",
-    type:        "object",
-    kind:        "oauth",
-    default:      {},
-    componentId: "leochan.ex-linkedin",
   }
 ]

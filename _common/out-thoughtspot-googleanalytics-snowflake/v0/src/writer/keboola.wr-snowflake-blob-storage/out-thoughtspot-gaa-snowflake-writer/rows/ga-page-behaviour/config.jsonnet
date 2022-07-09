@@ -6,10 +6,6 @@
     primaryKey: [],
     items: [
       {
-        name: "id_TBE",
-        type: "IGNORE",
-      },
-      {
         name: "ga_date",
         dbName: "ga:date",
         type: "date",
@@ -131,7 +127,6 @@
           source: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour",
           destination: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour.csv",
           columns: [
-            "id_TBE",
             "ga_date",
             "ga_hostname",
             "ga_pagePath",
