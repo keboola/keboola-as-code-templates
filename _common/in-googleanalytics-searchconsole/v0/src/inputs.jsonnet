@@ -1,5 +1,14 @@
 [
   {
+    id:          "g3s2-oauth-googlesearch",
+    name:        "Google oAuth",
+    description: "Authorization for Google Search Console",
+    type:        "object",
+    kind:        "oauth",
+    deafult:      {},
+    componentId: "kds-team.ex-google-search-console",
+  },
+  {
     id: "gsc-domain",
     name: "Domain",
     description: "Insert your domain.",
@@ -51,14 +60,5 @@
           label: '1 week ago',
         },
       ],
-    },
-    {
-    id:          "g3s2-oauth-googlesearch",
-    name:        "Google oAuth",
-    description: "Authorization for Google Search Console",
-    type:        "object",
-    kind:        "oauth",
-    deafult:      {},
-    componentId: "kds-team.ex-google-search-console",
-  }
+    }  
 ]
