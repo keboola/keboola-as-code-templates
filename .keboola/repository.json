@@ -325,7 +325,7 @@
       "id": "hubspot-to-snowflake",
       "name": "Hubspot to Snowflake",
       "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
-      "longDescription": "",
+      "longDescription": "By using this end-to-end flow you can extract data from Hubspot, transform it and load it into snowflake database.",
       "path": "hubspot-to-snowflake",
       "versions": [
         {
