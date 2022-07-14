@@ -1,12 +1,3 @@
-# HUBSPOT-TO-SNOWFLAKE
-
-By using this end-to-end flow you can extract data from Hubspot, transform it and load it into snowflake database.
-
-## Steps to take:
-1. Authorize data source with Hubspot API TOKEN and select date range
-2. Authorize data destination
-3. Run the flow
-
 ## All possible included components' configurations:
 
 Hubspot DS -> TR1 -> TR2 -> TR3 -> DD -> FLOW
