@@ -323,8 +323,8 @@
     },
     {
       "id": "hubspot-to-snowflake",
-      "name": "Hubspot to Snowflake",
-      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "name": "HubSpot to Snowflake",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "longDescription": "By using this end-to-end flow you can extract data from Hubspot, transform it and load it into snowflake database. \\n## Steps to take: \\n1. Authorize data source with Hubspot API TOKEN and select date range \\n2. Authorize data destination \\n3. Run the flow",
       "path": "hubspot-to-snowflake",
       "versions": [
@@ -342,9 +342,9 @@
     },
     {
       "id": "hubspot-to-googlesheet",
-      "name": "Hubspot to GoogleSheet",
-      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
-      "longDescription": "",
+      "name": "HubSpot to Google Sheets",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
+      "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into Google Sheets.",
       "path": "hubspot-to-googlesheet",
       "versions": [
         {
