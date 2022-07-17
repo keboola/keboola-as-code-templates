@@ -1,5 +1,3 @@
-# HubSpot to Google Sheets
-
 The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, select a date range, and authorize the source and destination components.
  
 ## The flow, in a nutshell
