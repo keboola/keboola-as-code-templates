@@ -3,15 +3,15 @@ local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Salesforce extractor.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.ex-salesforce-v2",
           name: "Salesforce",
-          description: "Salesforce - Data Source",
-          dialogName: "Salesforce Data Source", 
-          dialogDescription: "This extractor is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.",
+          description: "Import data from Salesforce",
+          dialogName: "Salesforce Source", 
+          dialogDescription: "This source component imports data from your Salesforce account (accounts, contacts, events, leads, opportunities, opportunity contact roles, opportunity stages, and users.",
           inputs: salesforce,
         },
       ],
@@ -29,15 +29,15 @@ local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Data Destination",
+      description: "Destination component",
       required: "all",
       steps: [
           {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Snowflake Destination",
-          description: "Load to data into snowflake",
+          name: "Snowflake",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake DB.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake,
         },
       ],
