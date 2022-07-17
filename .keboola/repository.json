@@ -403,7 +403,7 @@
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Salesforce and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "kds-team.ex-salesforce-v2",
@@ -415,14 +415,14 @@
     },
     {
       "id": "salesforce-to-googlesheet",
-      "name": "Salesforce to GoogleSheet",
+      "name": "Salesforce to Google Sheets",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
       "path": "salesforce-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Salesforce and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "kds-team.ex-salesforce-v2",
