@@ -1,6 +1,3 @@
-## Shopify to Data Studio
-With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in a prepared Google Data Studio Dashboard template.
- 
 The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the data destination.
 
 ### The flow, in a nutshell 
