@@ -397,7 +397,7 @@
     {
       "id": "salesforce-to-snowflake",
       "name": "Salesforce to Snowflake",
-      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
       "path": "salesforce-to-snowflake",
       "versions": [
         {
@@ -416,7 +416,7 @@
     {
       "id": "salesforce-to-googlesheet",
       "name": "Salesforce to GoogleSheet",
-      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
       "path": "salesforce-to-googlesheet",
       "versions": [
         {
