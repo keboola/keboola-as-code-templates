@@ -1,34 +1,14 @@
-## All possible included components' configurations:
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, select a date range, and authorize the source and destination components.
+ 
+## The flow, in a nutshell
+First, the HubSpot CRM source component will collect data from your HubSpot account (companies, deals, activities, lists, owners, contacts, and pipelines). 
 
-Hubspot DS -> TR1 -> TR2 -> TR3 -> DD -> FLOW
+We then add NULL values if any columns are missing, and create an output CRM data model (a set of output tables). 
 
+The data will be written into a Snowflake database via the Snowflake destination component.
+ 
+Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The source component, all data manipulations, and the Snowflake destination component, will be processed.
 
-### DS: Data Source [IN-CRM-HUBSPOT]
-
-HubSpot data is extracted with this data source. In this incremental update the data source is taking the following data: companies, activities, lists, owners, contacts, deals and pipelines.
-
-### TR1: Transformation1: Input Tables Creation [IN-CRM-HUBSPOT]
-
-In this Transformation, NULL values are populated in the output tables in case there are missing columns required for the following Transformations. If these columns are not present, they are added to the output tables.
-
-### TR2: Transformation2: Main [IN-CRM-HUBSPOT]
-
-From Hubspot data, the second transformation creates an output CRM data model (set of output tables). There are three phases to the transformation. In the first phase of the process, 3 tables are created (out_company, out_contact, out_employee). Second phase creates an opportunity table by combining other tables (pipelines, stages, out_employee, deals_companies, out_company). The third phase then creates the out_activity table using the first contact/opportunity/employee IDs from the activities by joining the table; this also outputs a pairing table for opportunities and contacts are created.
-
-### TR3: Transformation3: Snapshots [IN-CRM-HUBSPOT]
-
-The final snapshots are generated from the auxiliary tables.
-
-### DD: Data Destination [OUT-CRM-SNOWFLAKE]
-
-The data destination loads data into a Snowflake database.
-
-### FLOW: Flow [HUBSPOT-TO-SNOWFLAKE]
-
-The Flow runs HubSpot CRM data source, three snowflake transformations and snowflake data destination.
-
-
-## Business Data Model
 
 
 
