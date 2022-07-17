@@ -59,7 +59,7 @@
     {
       "id": "keboola-crm-hubspot",
       "name": "CRM Hubspot",
-      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "keboola-crm-hubspot",
       "versions": [
         {
@@ -149,7 +149,7 @@
     {
       "id": "keboola-analytics-googleanalytics",
       "name": "Google Analytics",
-      "description": "Transform Google Analytics data into a form you can use for visualization. You can either choose predefined writer or create your own.",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "keboola-analytics-googleanalytics",
       "versions": [
         {
@@ -170,7 +170,7 @@
     {
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics to SpotApp",
-      "description": "Load or automate updates of your Google Analytics data.",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -190,8 +190,8 @@
     },
     {
       "id": "thoughtspot-crm-hubspot",
-      "name": "Hubspot to SpotApp",
-      "description": "Load or automate updates of your Hubspot data to Snowflake or Big Query.",
+      "name": "HubSpot to SpotApp",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -212,7 +212,7 @@
     {
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify and Ecommerce to SpotApp",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
@@ -235,8 +235,8 @@
     },
     {
       "id": "keboola-marketingchannels",
-      "name": "Ads Platform",
-      "description": "Sync data from different Ads platforms for visualization. You can use a predefined destination or create your own.",
+      "name": "Advertising Platforms",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "keboola-marketingchannels",
       "versions": [
         {
@@ -330,7 +330,7 @@
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "By using this end-to-end flow you can extract data from Hubspot, transform it and load it into snowflake database. \\n## Steps to take: \\n1. Authorize data source with Hubspot API TOKEN and select date range \\n2. Authorize data destination \\n3. Run the flow",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into a Snowflake database.",
           "stable": false,
           "components": [
             "kds-team.ex-hubspot-crm",
@@ -441,7 +441,7 @@
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "kds-team.ex-shopify",
@@ -501,14 +501,14 @@
     },
     {
       "id": "shopify-to-datastudio",
-      "name": "Shopify to Datastudio",
+      "name": "Shopify to Data Studio",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-datastudio",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in a prepared Google Data Studio Dashboard template.",
           "stable": false,
           "components": [
             "kds-team.ex-shopify",
@@ -523,7 +523,7 @@
     },
     {
       "id": "adsplatform-to-snowflake",
-      "name": "Ads Platform to Snowflake",
+      "name": "Advertising Platforms to Snowflake",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-snowflake",
       "versions": [
@@ -546,14 +546,14 @@
     },
     {
       "id": "adsplatform-to-bigquery",
-      "name": "Ads Platform to BigQuery",
+      "name": "Adveritins Platforms to BigQuery",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-bigquery",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can bring into Keboola Connection data from one or more marketing channels of your choice (Facebook Ads, LinkedIn Ads, Google Ads, and Bing Ads). After all the necessary tasks are performed on the data, you load the results into BigQuery. You can also enrich the data with Google Analytics.",
           "stable": false,
           "components": [
             "esnerda.ex-bingads",
@@ -569,7 +569,7 @@
     },
     {
       "id": "adsplatform-to-googlesheet",
-      "name": "Ads Platform to GoogleSheet",
+      "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-googlesheet",
       "versions": [
@@ -592,14 +592,14 @@
     },
     {
       "id": "ts-googleanalytics-to-snowflake",
-      "name": "Google Analytics to Snowflake & SpotApp",
-      "description": "Load or automate updates of your Google Analytics data into Snowflake DB and use it for reporting in SpotApp.",
+      "name": "Google Analytics to Snowflake and SpotApps",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "ts-googleanalytics-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract data from Google Analytics and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.",
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
@@ -612,14 +612,15 @@
     },
     {
       "id": "ts-shopify-to-snowflake",
-      "name": "Shopify to Snowflake & SpotApp",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "name": "Shopify to Snowflake and SpotApps",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.
+.",
       "path": "ts-shopify-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.",
           "stable": false,
           "components": [
             "kds-team.ex-shopify",
@@ -635,14 +636,14 @@
     },
     {
       "id": "ts-hubspot-to-snowflake",
-      "name": "HubSpot to Snowflake & SpotApp",
-      "description": "Load or automate updates of your Hubspot data to Snowflake and use it for reporting on SpotApp.",
+      "name": "HubSpot to Snowflake and SpotApps",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "ts-hubspot-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.",
           "stable": false,
           "components": [
             "kds-team.ex-hubspot-crm",
@@ -677,7 +678,7 @@
     },
     {
       "id": "shoptet-to-datastudio",
-      "name": "Shoptet to Datastudio",
+      "name": "Shoptet to Data Studio",
       "description": "Sync your Shoptet order's data with Keboola, use Google Sheet as destination and load outputs into a copy of Google Data Studio Dashboard template, which we have prepared for you.",
       "path": "shoptet-to-datastudio",
       "versions": [
@@ -699,7 +700,7 @@
     },
     {
       "id": "shoptet-to-googlesheet",
-      "name": "Shoptet to GoogleSheet",
+      "name": "Shoptet to Google Sheets",
       "description": "Sync your Shoptet order's data with Keboola and build your analytics for better business decisions.",
       "path": "shoptet-to-googlesheet",
       "versions": [
@@ -762,7 +763,7 @@
     },
     {
       "id": "asana-to-googlesheet",
-      "name": "Asana to Google Sheet",
+      "name": "Asana to Google Sheets",
       "description": "Transform your project management data from Asana into a form you can use for visualization and load them to a Google Sheet.",
       "path": "asana-to-googlesheet",
       "versions": [
@@ -819,7 +820,7 @@
     },
     {
       "id": "github-to-googlesheet",
-      "name": "GitHub to GoogleSheet",
+      "name": "GitHub to Google Sheets",
       "description": "Transform your GitHub data into a form you can use for visualization and load them to Google sheet.",
       "path": "github-to-googlesheet",
       "versions": [
@@ -858,7 +859,7 @@
     {
       "id": "googleanalytics-to-bigquery",
       "name": "Google Analytics to BigQuery",
-      "description": "Transform Google Analytics data into a form you can use for visualization and load them to BigQuery database.",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "googleanalytics-to-bigquery",
       "versions": [
         {
@@ -877,7 +878,7 @@
     {
       "id": "googleanalytics-to-snowflake",
       "name": "Google Analytics to Snowflake",
-      "description": "Transform Google Analytics data into a form you can use for visualization and load them to Snowflake database.",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "googleanalytics-to-snowflake",
       "versions": [
         {
