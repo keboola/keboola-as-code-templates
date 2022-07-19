@@ -29,9 +29,9 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
         {
           icon: "component:leochan.ex-linkedin",
           name: "LinkedIn Ads",
-          description: "LinkedIn Ads - Data Source",
-          dialogName: "LinkedIn Ads Data Source", 
-          dialogDescription: "This source component imports data from LinkedIn (e.g., advertising spend, ad and campaign performance).  Enter the start and end times and dates below to generate instant performance insights.",
+          description: "Import data from LinkedIn Ads",
+          dialogName: "LinkedIn Ads Source", 
+          dialogDescription: "This source component imports data from LinkedIn (e.g., advertising spend, ad and campaign performance). Enter the start and end times and dates below to generate instant performance insights.",
           inputs: linkedin
         },
         {
