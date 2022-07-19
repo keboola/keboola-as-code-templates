@@ -744,13 +744,13 @@
     {
       "id": "asana-to-bigquery",
       "name": "Asana to BigQuery",
-      "description": "Transform your project management data from Asana into a form you can use for visualization and load them to a BigQuery database.",
+      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
       "path": "asana-to-bigquery",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Asana and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "leochan.ex-asana",
@@ -763,13 +763,13 @@
     {
       "id": "asana-to-googlesheet",
       "name": "Asana to Google Sheets",
-      "description": "Transform your project management data from Asana into a form you can use for visualization and load them to a Google Sheet.",
+      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
       "path": "asana-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Asana and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "leochan.ex-asana",
@@ -782,13 +782,13 @@
     {
       "id": "asana-to-snowflake",
       "name": "Asana to Snowflake",
-      "description": "Transform your project management data from Asana into a form you can use for visualization and load them to a Snowflake database.",
+      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
       "path": "asana-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Asana and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "leochan.ex-asana",
