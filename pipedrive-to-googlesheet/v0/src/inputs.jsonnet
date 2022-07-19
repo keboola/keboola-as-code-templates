@@ -4,15 +4,15 @@ local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Pipedrive data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-pipedrive",
-          name: "PipeDrive",
-          description: "Pipedrive - Data Source",
-          dialogName: "Pipedrive Data Source", 
-          dialogDescription: "Build custom data such as companies, deals, activities, and more by connecting to Pipedrive. With your Pipedrive admin account, enter your Pipedrive API token to start syncing your data.",
+          name: "Pipedrive",
+          description: "Import data from Pipedrive",
+          dialogName: "Pipedrive Source", 
+          dialogDescription: "This source component imports data from Pipedrive (companies, deals, activities, etc.). Enter your Pipedrive API token from your Pipedrive admin account to start loading.",
           inputs: pipedrive
         },
       ],
@@ -30,15 +30,15 @@ local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Data Destination",
+      description: "Destination component",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-sheet",
-          name: "Google sheet Destination",
-          description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          name: "Google Sheets",
+          description: "Load data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U) into your drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: googlesheet,  
         },
       ]
