@@ -1,39 +1,14 @@
-# GITHUB-TO-GOOGLESHEET
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, and authorize the source and destination components.
+ 
+The flow, in a nutshell:
 
-By using this end-to-end flow you can extract data from GitHub and transform it into visualizations in your BI tool or anywhere else you prefer.
+- First, the GitHub source component will collect data from your GitHub account (organizations, teams, members, repositories, commits, issues, and pull requests).
 
-## Steps to take:
-1. Authorize GitHub data source
-2. Authorize data destination
-3. Run the flow
+- We then prepare tables containing organizations and users, and use them to create the output tables.
 
-## Included components' configurations:
+- The data is then written into a Google sheet via the Google Sheets destination component.
 
-GitHub DS -> TR1 -> TR2 -> DD -> FLOW
-
-
-### DS: Data Source [IN-GIT-GITHUB]
-
-GitHub data source collects data about organizations, teams, members, repositories, commits, issues and pull requests.
-
-### TR1: Transformation1: Organization, User [IN-GIT-GITHUB] 
-
-In this transformation, tables with organizations and users are created. These tables are used in the second transformation.
-
-### TR2: Transformation2: Output Tables Creation [IN-GIT-GITHUB]
-
-Within this transformation, output tables are done to be able to do simple visualization.
-
-### DD: Data Destination [OUT-GIT-GSHEET]
-
-The data destination loads data into a Google sheet.
-
-### FLOW: Flow [GITHUB-TO-GOOGLESHEET] 
-
-The Flow gets the data from GitHub Data Source, transforms the data and optionally writes the data into Google sheet data destination.
-
-## Business Data Model
-
+- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The GitHub source component, all data manipulations, and the Google Sheets destination component, will be processed.
 
 
 
