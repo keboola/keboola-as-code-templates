@@ -3,15 +3,15 @@ local bigquery = import "/<common>/out-mgmt-bigquery/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Asana data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:leochan.ex-asana",
           name: "Asana",
-          description: "Asana - Data Source",
-          dialogName: "Asana Data Source", 
-          dialogDescription: "Extractor collects data from Asana about projects and tasks.",
+          description: "Import data from Asana",
+          dialogName: "Asana Source", 
+          dialogDescription: "This source component imports data about projects and tasks from Asana.",
           inputs: asana
         }
       ]
@@ -29,15 +29,15 @@ local bigquery = import "/<common>/out-mgmt-bigquery/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for data destination.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into BigQuery",
+          dialogName: "BigQuery Destination", 
+          dialogDescription: "This destination component loads data into a Google BigQuery database.",
           inputs: bigquery
         },
       ],
