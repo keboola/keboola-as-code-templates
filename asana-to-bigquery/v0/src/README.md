@@ -4,7 +4,7 @@ The flow, in a nutshell:
 
 - First, the Asana source component will collect data from your Asana account about projects and tasks.
 
-- We then create the output tables.
+- We then create the output tables and snapshots.
 
 - The data is then written into a BigQuery database via the BigQuery destination component.
 
