@@ -58,7 +58,7 @@
     },
     {
       "id": "keboola-crm-hubspot",
-      "name": "CRM Hubspot",
+      "name": "CRM HubSpot",
       "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "keboola-crm-hubspot",
       "versions": [
