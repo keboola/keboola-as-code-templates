@@ -1,53 +1,19 @@
-# ADSPLATFORM-TO-SNOWFLAKE
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the destination component.
+ 
+The flow, in a nutshell:
+ 
+- First, you will select one or multiple source components that will provide all your available data about your campaigns. 
+ 
+- To enrich the marketing model with keywords, ad groups, and marketing transactions, you can also bring in your Google Analytics data (data about basic sessions and transactions). 
+ 
+- The data extracted from the ad platform or platforms will be placed into one output table containing basic information about campaigns, impressions, clicks, costs, and cost conversions.
+ 
+- Then, optionally, Google Analytics sessions (new and returns), page views, and bounces will be added to the output table, and two new tables will be created for transactions and keyword ad groups.
+ 
+- The data will be written into a Snowflake database via the Snowflake destination component.
 
-By using this end-to-end flow you can choose any marketing channel (Facebook Ads, LinkedIn Ads, Google Ads, BingAds) and get its data for transforming and loading into Snowflake database. You can also enrich this data with Google Analytics, it is optional.
+- Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). All your selected source components, all data manipulations, and the Snowflake destination component, will be processed.
 
-## Steps to take:
-1. Authorize your data source account
-2. Authorize data destination
-3. Run the flow
-
-## All possible Included components' configurations:
-
-marketing DS -> TR1 -> TR2 -> DD -> FLOW
-
-### DS: Data Source [IN-MKT-BINGADS] 
-
-This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.
-
-### DS: Data Source [IN-MKT-FACEBOOK]
-
-Facebook Ads data is extracted with this data source. The data source is getting data about Facebook campaigns, ads, adsets and ads insights for the last day.
-
-### DS: Data Source [IN-MKT-LINKEDIN]
-
-LinkedIn Ads data is extracted with this data source. The data source is getting data about Linkedin campaigns for the last day.
-
-### DS: Data Source [IN-MKT-GOOGLEADS]
-
-Google Ads data is extracted with this data source. The data source is getting data about Google Ads campaigns for the last day.
-
-### DS: Data Source [IN-MKT-GOOGLEANALYTICS]
-
-Google Analytics data is extracted with this data source. The data source is getting data about basic sessions and transactions. It's an incremental upload. This data will enrich the marketing model with keywords adgroup and marketing transactions.
-
-### TR1: Transformation [IN-MKT-BINGADS] OR [IN-MKT-FACEBOOK] OR [IN-MKT-LINKEDIN] OR [IN-MKT-GOOGLEADS]
-
-The extracted data is transformed into one output table, which contains basic information about campaigns and also data about impressions, clicks, costs and costs conversions.
-
-### TR2: Transformation [IN-MKT-GOOGLEANALYTICS]
-
-Google Analytics transformation enriches the output table with sessions (new and returns), pageviews and bounces. With this tranformation are also created two new tables: ga transactions and keyword ad group.
-
-### DD: Data destination [OUT-MKT-SNOWFLAKE] 
-
-The data destination loads data into a Snowflake database.
-
-### FLOW: Flow [ADSPLATFORM-TO-SNOWFLAKE]
-
-The flow runs marketing channels data source(s), snowflake transformation(s) and Snowflake data destination.
-
-## Business Data Model
 
 
 
