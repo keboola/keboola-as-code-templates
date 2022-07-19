@@ -37,7 +37,7 @@ local bigquery = import "/<common>/out-git-bigquery/inputs.jsonnet";
           name: "Google BigQuery",
           description: "Load data into BigQuery",
           dialogName: "BigQuery Destination", 
-          dialogDescription: "This destination component loads data into a Google BigQuery dataset",
+          dialogDescription: "This destination component loads data into a Google BigQuery database.",
           inputs: bigquery
         },
       ],
