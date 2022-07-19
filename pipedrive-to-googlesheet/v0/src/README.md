@@ -2,7 +2,7 @@ The process is simple. We will guide you through it, and, when needed, ask you t
  
 The flow, in a nutshell:
 
-- First, the Pipedrive source component will collect data from your HubSpot account (companies, deals, activities, lists, owners, contacts, and pipelines). 
+- First, the Pipedrive source component will collect data from your Pipedrive account (companies, deals, activities, lists, owners, contacts, and pipelines). 
 
 - We then add NULL values if any columns are missing, and create an output CRM data model (a set of output tables). 
 
