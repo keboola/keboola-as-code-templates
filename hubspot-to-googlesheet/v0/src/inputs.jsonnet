@@ -34,7 +34,7 @@ local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
       steps: [
           {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google Sheets Destination",
+          name: "Google Sheets",
           description: "Load data into Google Sheets",
           dialogName: "Google Sheets Destination", 
           dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U) into your Drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
