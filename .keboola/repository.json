@@ -464,7 +464,7 @@
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "kds-team.ex-shopify",
@@ -479,14 +479,14 @@
     },
     {
       "id": "shopify-to-googlesheet",
-      "name": "Shopify to GoogleSheet",
+      "name": "Shopify to Google Sheets",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
-          "longDescription": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
           "stable": false,
           "components": [
             "kds-team.ex-shopify",
