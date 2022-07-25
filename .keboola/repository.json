@@ -69,6 +69,117 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "hubspot-to-snowflake",
+      "name": "HubSpot to Snowflake",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
+      "path": "hubspot-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into a Snowflake database.",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "hubspot-to-googlesheet",
+      "name": "HubSpot to Google Sheets",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
+      "path": "hubspot-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into Google Sheets.",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-snowflake",
+      "name": "Pipedrive to Snowflake",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Pipedrive and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into a Snowflake database.",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-googlesheet",
+      "name": "Pipedrive to Google Sheets",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Pipedrive and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into Google Sheets.",
+          "stable": false,
+          "components": ["keboola.ex-pipedrive", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-snowflake",
+      "name": "Salesforce to Snowflake",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "path": "salesforce-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Salesforce and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-googlesheet",
+      "name": "Salesforce to Google Sheets",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "path": "salesforce-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Salesforce and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
