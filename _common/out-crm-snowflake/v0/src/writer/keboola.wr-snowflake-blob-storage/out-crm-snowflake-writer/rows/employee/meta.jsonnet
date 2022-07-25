@@ -1,0 +1,4 @@
+{
+  name: "employee",
+  isDisabled: false,
+}

@@ -1,0 +1,4 @@
+{
+  name: "opportunity",
+  isDisabled: false,
+}
