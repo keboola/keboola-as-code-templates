@@ -52,13 +52,14 @@
     },
     {
       "id": "ts-hubspot-to-snowflake",
-      "name": "HubSpot to Snowflake & SpotApp",
-      "description": "Load or automate updates of your Hubspot data to Snowflake and use it for reporting on SpotApp.",
+      "name": "HubSpot to Snowflake and SpotApps",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "ts-hubspot-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.",
           "stable": false,
           "components": [
             "kds-team.ex-hubspot-crm",
