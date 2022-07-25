@@ -7,15 +7,22 @@
   "templates": [
     {
       "id": "shopify-to-datastudio",
-      "name": "Shopify to Datastudio",
-      "description": "Shopify template connects all your data into actionable insight for inventory optimization, product category performance, measurement of the effectiveness of sales campaigns and much more.",
+      "name": "Shopify to Data Studio",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-datastudio",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from Shopify and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in a prepared Google Data Studio Dashboard template.",
           "stable": false,
-          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-sheets"],
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-sheets"
+          ],
           "path": "v0"
         }
       ]
