@@ -14,7 +14,7 @@
     description: "Start time range of the analytics",
     type: "int",
     kind: "input",
-    rules: "min=1,max=31,required",
+    rules: "min=1,max=31",
     default: 1,
   },
   {
@@ -42,7 +42,7 @@
     type: "int",
     kind: "input",
     rules: "min=1,max=31",
-    default: 1,
+    default: 30,
   },
   {
     id: "ex-linkedin-end-month",
@@ -51,7 +51,7 @@
     type: "int",
     kind: "input",
     rules: "min=1,max=12",
-    default: 5,
+    default: 6,
   },
   {
     id: "ex-linkedin-end-year",

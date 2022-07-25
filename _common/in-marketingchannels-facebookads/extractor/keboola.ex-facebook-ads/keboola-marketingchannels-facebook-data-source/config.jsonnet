@@ -14,8 +14,8 @@
           fields: "id,name,account_id",
           ids: "",
           limit: "100",
-          since: "2022-01-01",
-          until: "1 day ago",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
         },
       },
       {

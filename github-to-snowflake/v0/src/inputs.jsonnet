@@ -3,15 +3,15 @@ local snowflake = import "/<common>/out-git-snowflake/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for GitHub data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-github",
           name: "GitHub",
-          description: "GitHub - Data Source",
-          dialogName: "GitHub Data Source", 
-          dialogDescription: "Extractor collects data from GitHub about organizations, teams, members, repositories, commits, issues and pull requests.",
+          description: "Import data from GitHub",
+          dialogName: "GitHub Source", 
+          dialogDescription: "This source component imports data from GitHub (organizations, teams, members, repositories, commits, issues, and pull requests).",
           inputs: github
         }
       ]
@@ -29,15 +29,15 @@ local snowflake = import "/<common>/out-git-snowflake/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for data destination.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Snowflake Destination",
-          description: "Load to data into snowflake",
+          name: "Snowflake",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake DB.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake
         },
       ],

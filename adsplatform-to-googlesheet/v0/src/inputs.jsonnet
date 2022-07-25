@@ -22,16 +22,16 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           icon: "component:esnerda.ex-bingads",
           name: "Bing Ads",
           description: "Import data from Bing Ads",
-          dialogName: "BingAds Source", 
+          dialogName: "Bing Ads Source", 
           dialogDescription: "This source component imports data about Bing Ads campaigns for the last day. It is an incremental update.",
           inputs: bingads
         },
         {
           icon: "component:leochan.ex-linkedin",
           name: "LinkedIn Ads",
-          description: "LinkedIn Ads - Data Source",
-          dialogName: "LinkedIn Ads Data Source", 
-          dialogDescription: "This source component imports data from LinkedIn (e.g., advertising spend, ad and campaign performance).  Enter the start and end times and dates below to generate instant performance insights.",
+          description: "Import data from LinkedIn Ads",
+          dialogName: "LinkedIn Ads Source", 
+          dialogDescription: "This source component imports data from LinkedIn (e.g., advertising spend, ad and campaign performance). Enter the start and end times and dates below to generate instant performance insights.",
           inputs: linkedin
         },
         {
@@ -76,10 +76,10 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google Sheet",
-          description: "Load data into Google Sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1KkIjJqU7wrOdfy3zJA8RSEDCtFoE5Szg9aUInL7XCB0) into your Drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          name: "Google Sheets",
+          description: "Load data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1KkIjJqU7wrOdfy3zJA8RSEDCtFoE5Szg9aUInL7XCB0) into your drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: gsheet
         },
       ]

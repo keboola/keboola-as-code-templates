@@ -31,5 +31,31 @@
     type: "string",
     kind: "input",
     default: "XXXXXXXX",
+  },
+  {
+    id: "ex-bingads-report-period",
+    name: "Report Period",
+    description: ".",
+    type: "string",
+    kind: "select",
+    default: "LastSixMonths",
+    options: [
+      {
+        value: "LastWeek",
+        label: "Last Week"
+      },
+      {
+        value: "LastMonth",
+        label: "Last Month"
+      },
+      {
+        value: "LastThreeMonths",
+        label: "Last Three Months"
+      },
+      {
+        value: "LastSixMonths",
+        label: "Last Six Months"
+      },
+    ],
   }
 ]

@@ -3,15 +3,15 @@ local bigquery = import "/<common>/out-git-bigquery/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for GitHub data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-github",
           name: "GitHub",
-          description: "GitHub - Data Source",
-          dialogName: "GitHub Data Source", 
-          dialogDescription: "Extractor collects data from GitHub about organizations, teams, members, repositories, commits, issues and pull requests.",
+          description: "Import data from GitHub",
+          dialogName: "GitHub Source", 
+          dialogDescription: "This source component imports data from GitHub (organizations, teams, members, repositories, commits, issues, and pull requests).",
           inputs: github
         }
       ]
@@ -29,15 +29,15 @@ local bigquery = import "/<common>/out-git-bigquery/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for data destination.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into BigQuery",
+          dialogName: "BigQuery Destination", 
+          dialogDescription: "This destination component loads data into a Google BigQuery database.",
           inputs: bigquery
         },
       ],

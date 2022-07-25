@@ -3,15 +3,15 @@ local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Asana data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:leochan.ex-asana",
           name: "Asana",
-          description: "Asana - Data Source",
-          dialogName: "Asana Data Source", 
-          dialogDescription: "Extractor collects data from Asana about projects and tasks.",
+          description: "Import data from Asana",
+          dialogName: "Asana Source", 
+          dialogDescription: "This source component imports data about projects and tasks from Asana.",
           inputs: asana
         }
       ]
@@ -29,15 +29,15 @@ local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for data destination.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google sheet Destination",
-          description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1zpBB_3HbD2ofXGtPYEabuHeIPVrAYpC1vllpJO5fjIA) into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below.",
+          name: "Google Sheets",
+          description: "Load data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1zpBB_3HbD2ofXGtPYEabuHeIPVrAYpC1vllpJO5fjIA) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
           inputs: googlesheet,  
         },
       ],
