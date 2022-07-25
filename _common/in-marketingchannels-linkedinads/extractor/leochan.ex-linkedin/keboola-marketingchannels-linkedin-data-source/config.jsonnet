@@ -7,9 +7,9 @@
         format: "json",
         headers: {
           Authorization: {
-            "function": "concat",
-            args: [
-              "Bearer ",
+          "function": "concat",
+          args: [
+            "Bearer ",
               {
                 authorization: "data.access_token",
               },
@@ -63,7 +63,6 @@
               dataField: "elements",
               dataType: "ads_inmail_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
@@ -71,40 +70,23 @@
                   attr: "pivot",
                 },
                 "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_year"
                 },
+                "dateRange.end.day": {
+                  attr: "end_day"
+                },
+                "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
                 "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_day"
                 },
                 "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,actionClicks,adUnitClicks,leadGenerationMailContactInfoShares,leadGenerationMailInterestedClicks,opens,sends,textUrlClicks",
               },
@@ -117,7 +99,6 @@
               dataField: "elements",
               dataType: "ads_basic_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
@@ -125,40 +106,23 @@
                   attr: "pivot",
                 },
                 "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_year"
                 },
+                "dateRange.end.day": {
+                  attr: "end_day"
+                },
+                "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
                 "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_day"
                 },
                 "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,clicks,commentLikes,comments,companyPageClicks,follows,impressions,landingPageClicks,likes,otherEngagements,reactions,shares,totalEngagements",
               },
@@ -166,12 +130,11 @@
             {
               endpoint: "adAnalyticsV2?campaigns[0]=urn:li:sponsoredCampaign:{campaign_id}",
               placeholders: {
-                campaign_id: "id",
+                campaign_id: "id"
               },
               dataField: "elements",
               dataType: "ads_cost",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
@@ -179,40 +142,23 @@
                   attr: "pivot",
                 },
                 "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_year"
                 },
+                "dateRange.end.day": {
+                  attr: "end_day"
+                },
+                "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
                 "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_day"
                 },
                 "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,conversionValueInLocalCurrency,costInLocalCurrency,costInUsd",
               },
@@ -225,7 +171,6 @@
               dataField: "elements",
               dataType: "ads_other_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
@@ -233,40 +178,23 @@
                   attr: "pivot",
                 },
                 "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  attr: "start_year"
                 },
-                "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                "dateRange.end.day": {
+                  attr: "end_day"
                 },
-                "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                  "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
+                  "dateRange.start.day": {
+                  attr: "start_day"
+                },
+                  "dateRange.start.month": {
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,externalWebsiteConversions,externalWebsitePostClickConversions,externalWebsitePostViewConversions,oneClickLeadFormOpens,oneClickLeads",
               },
@@ -279,48 +207,30 @@
               dataField: "elements",
               dataType: "ads_video_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
                 pivot: {
                   attr: "pivot",
                 },
-                "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.start.year": {
+                  attr: "start_year"
                 },
-                "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.day": {
+                  attr: "end_day"
                 },
-                "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                  "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
+                  "dateRange.start.day": {
+                  attr: "start_day"
+                },
+                  "dateRange.start.month": {
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,fullScreenPlays,videoCompletions,videoFirstQuartileCompletions,videoMidpointCompletions,videoStarts,videoThirdQuartileCompletions,videoViews",
               },
@@ -333,48 +243,30 @@
               dataField: "elements",
               dataType: "ads_basic_viral_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
                 pivot: {
                   attr: "pivot",
                 },
-                "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.start.year": {
+                  attr: "start_year"
                 },
-                "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.day": {
+                  attr: "end_day"
                 },
-                "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                  "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
+                  "dateRange.start.day": {
+                  attr: "start_day"
+                },
+                  "dateRange.start.month": {
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,viralClicks,viralCommentLikes,viralComments,viralCompanyPageClicks,viralFollows,viralImpressions,viralLandingPageClicks,viralLikes,viralOtherEngagements,viralReactions,viralShares,viralTotalEngagements",
               },
@@ -387,48 +279,30 @@
               dataField: "elements",
               dataType: "ads_other_viral_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
                 pivot: {
                   attr: "pivot",
                 },
-                "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.start.year": {
+                  attr: "start_year"
                 },
-                "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.day": {
+                  attr: "end_day"
                 },
-                "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                  "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
+                  "dateRange.start.day": {
+                  attr: "start_day"
+                },
+                  "dateRange.start.month": {
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,viralExternalWebsiteConversions,viralExternalWebsitePostClickConversions,viralExternalWebsitePostViewConversions,viralOneClickLeadFormOpens,viralOneClickLeads",
               },
@@ -441,48 +315,30 @@
               dataField: "elements",
               dataType: "ads_video_viral_stats",
               params: {
-                q: "analytics",
                 timeGranularity: {
                   attr: "timeGranularity",
                 },
                 pivot: {
                   attr: "pivot",
                 },
-                "dateRange.start.year": {
-                  "function": "date",
-                  args: [
-                    "Y",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.start.year": {
+                  attr: "start_year"
                 },
-                "dateRange.start.day": {
-                  "function": "date",
-                  args: [
-                    "d",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.day": {
+                  attr: "end_day"
                 },
-                "dateRange.start.month": {
-                  "function": "date",
-                  args: [
-                    "m",
-                    {
-                      "function": "strtotime",
-                      args: [
-                        "-7 days",
-                      ],
-                    },
-                  ],
+                  "dateRange.end.month": {
+                  attr: "end_month"
+                },
+                  "dateRange.end.year": {
+                  attr: "end_year"
+                },
+                q: "analytics",
+                  "dateRange.start.day": {
+                  attr: "start_day"
+                },
+                  "dateRange.start.month": {
+                  attr: "start_month"
                 },
                 fields: "dateRange,pivotValue,pivot,viralFullScreenPlays,viralVideoCompletions,viralVideoFirstQuartileCompletions,viralVideoMidpointCompletions,viralVideoStarts,viralVideoThirdQuartileCompletions,viralVideoViews",
               },

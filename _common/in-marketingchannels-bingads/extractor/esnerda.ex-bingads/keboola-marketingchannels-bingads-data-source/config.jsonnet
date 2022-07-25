@@ -43,7 +43,7 @@
         startDate: "",
         incremental: true,
         completeData: false,
-        reportPeriod: "ThisYear",
+        reportPeriod: Input ("ex-bingads-report-period"),
         aggregationPeriod: "Daily",
       },
       {
