@@ -22,15 +22,23 @@
     },
     {
       "id": "adsplatform-to-googlesheet",
-      "name": "Ads Platform to GoogleSheet",
-      "description": "Sync data from different Ads platforms to Google Sheet",
+      "name": "Advertising Platforms to Google Sheets",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "With this end-to-end flow you can bring into Keboola Connection data from one or more marketing channels of your choice (Facebook Ads, LinkedIn Ads, Google Ads, and Bing Ads). After all the necessary tasks are performed on the data, you load the results into Google Sheets. You can also enrich the data with Google Analytics.",
           "stable": false,
-          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-google-sheets"],
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
+          ],
           "path": "v0"
         }
       ]
