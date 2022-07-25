@@ -180,6 +180,63 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "github-to-bigquery",
+      "name": "GitHub to BigQuery",
+      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "path": "github-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from GitHub and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-googlesheet",
+      "name": "GitHub to Google Sheets",
+      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "path": "github-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from GitHub and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-snowflake",
+      "name": "GitHub to Snowflake",
+      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "path": "github-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from GitHub and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
