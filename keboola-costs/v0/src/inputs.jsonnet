@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/out-activity-center-project/inputs.jsonnet";
+local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
 local googlesheet = import "/<common>/out-keboola-costs-gsheet/inputs.jsonnet";
 {
   stepsGroups: [
