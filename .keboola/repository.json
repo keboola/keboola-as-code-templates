@@ -920,6 +920,7 @@
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "fisa.ex-typeform",
@@ -933,13 +934,14 @@
     },
     {
       "id": "typeform-to-snowflake",
-      "name": "TYPEFORM-TO-SNOWFLAKE",
+      "name": "Typeform to Snowflake",
       "description": "Full workflow to ...",
       "path": "typeform-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "fisa.ex-typeform",
@@ -951,13 +953,14 @@
     },
     {
       "id": "typeform-to-bigquery",
-      "name": "TYPEFORM-TO-BIGQUERY",
+      "name": "Typeform to BigQuery",
       "description": "Full workflow to ...",
       "path": "typeform-to-bigquery",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "fisa.ex-typeform",
@@ -969,13 +972,14 @@
     },
     {
       "id": "typeform-to-googlesheet",
-      "name": "TYPEFORM-TO-GOOGLESHEET",
+      "name": "Typeform to GoogleSheet",
       "description": "Full workflow to ...",
       "path": "typeform-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "fisa.ex-typeform",
@@ -994,6 +998,7 @@
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "keboola.ex-telemetry-data",
@@ -1007,13 +1012,14 @@
     },
     {
       "id": "keboola-costs-to-googlesheet",
-      "name": "KEBOOLA-COSTS-TO-GOOGLESHEET",
+      "name": "Keboola Costs to GoogleSheet",
       "description": "Full workflow to ...",
       "path": "keboola-costs-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "keboola.ex-telemetry-data",
@@ -1026,13 +1032,14 @@
     },
     {
       "id": "keboola-costs-to-snowflake",
-      "name": "KEBOOLA-COSTS-TO-SNOWFLAKE",
+      "name": "Keboola Costs to Snowflake",
       "description": "Full workflow to ...",
       "path": "keboola-costs-to-snowflake",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
+          "longDescription": "",
           "stable": false,
           "components": [
             "keboola.ex-telemetry-data",
