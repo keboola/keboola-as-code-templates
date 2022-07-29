@@ -744,7 +744,7 @@
     {
       "id": "asana-to-bigquery",
       "name": "Asana to BigQuery",
-      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-bigquery",
       "versions": [
         {
@@ -763,7 +763,7 @@
     {
       "id": "asana-to-googlesheet",
       "name": "Asana to Google Sheets",
-      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-googlesheet",
       "versions": [
         {
@@ -782,7 +782,7 @@
     {
       "id": "asana-to-snowflake",
       "name": "Asana to Snowflake",
-      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-snowflake",
       "versions": [
         {
@@ -801,7 +801,7 @@
     {
       "id": "github-to-bigquery",
       "name": "GitHub to BigQuery",
-      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-bigquery",
       "versions": [
         {
@@ -820,7 +820,7 @@
     {
       "id": "github-to-googlesheet",
       "name": "GitHub to Google Sheets",
-      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-googlesheet",
       "versions": [
         {
@@ -839,7 +839,7 @@
     {
       "id": "github-to-snowflake",
       "name": "GitHub to Snowflake",
-      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-snowflake",
       "versions": [
         {
