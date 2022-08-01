@@ -14,7 +14,7 @@
     description: "Insert database port number.",
     type: "string",
     kind: "input",
-    default: "443",
+    default: "XXX",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -23,7 +23,7 @@
     description: "Insert database username.",
     type: "string",
     kind: "input",
-    default: "KEBOOLA_WORKSPACE_12781571",
+    default: "XXXXXXXX",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -40,7 +40,7 @@
     description: "Insert name of your database.",
     type: "string",
     kind: "input",
-    default: "KEBOOLA_6518",
+    default: "XXXX",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -49,7 +49,7 @@
     description: "Insert database schema.",
     type: "string",
     kind: "input",
-    default: "WORKSPACE_12781571",
+    default: "XXXXXXXX",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -58,7 +58,7 @@
     description: "Insert database warehouse.",
     type: "string",
     kind: "input",
-    default: "KEBOOLA_PROD",
+    default: "XXXXXXXXXX",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
 ]
