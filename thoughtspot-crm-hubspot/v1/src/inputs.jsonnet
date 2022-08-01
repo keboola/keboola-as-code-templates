@@ -61,7 +61,15 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           description: "Reporting in ThoughSpot",
           dialogName: "ThoughtSpot",
           dialogDescription: "Set up the connection in Thoughtspot and, if you haven’t done so yet, install the [Hubspot Analytics TML](https://developers.thoughtspot.com/codespot/jira-tmp-finish) from CodeSpot.",
-          inputs: [],
+          inputs: [
+            {
+              id: "thoughtspot",
+              name: "Set up the connection in Thoughtspot",
+              description: "",
+              type: "string",
+              kind: "input",
+            },
+          ],
         },
       ]
     },
