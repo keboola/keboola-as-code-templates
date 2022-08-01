@@ -1,4 +1,0 @@
-### KEBOOLA-TYPEFORM
-
-Extended description
-

@@ -1,4 +1,0 @@
-### KEBOOLA-COSTS
-
-Extended description
-
