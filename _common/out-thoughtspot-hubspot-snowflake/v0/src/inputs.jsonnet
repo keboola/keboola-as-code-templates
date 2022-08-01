@@ -6,7 +6,7 @@
     type: "string",
     kind: "input",
     rules: "required",
-    default: "keboola.west-europe.azure.snowflakecomputing.com",
+    default: "hostname.com",
   },
   {
     id: "wr-snowflake-blob-storage-db-port",
@@ -23,7 +23,7 @@
     description: "Insert database username.",
     type: "string",
     kind: "input",
-    default: "XXXXXXXX",
+    default: "userName",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -40,7 +40,7 @@
     description: "Insert name of your database.",
     type: "string",
     kind: "input",
-    default: "XXXX",
+    default: "DatabaseName",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -49,7 +49,7 @@
     description: "Insert database schema.",
     type: "string",
     kind: "input",
-    default: "XXXXXXXX",
+    default: "Schema",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
@@ -58,7 +58,7 @@
     description: "Insert database warehouse.",
     type: "string",
     kind: "input",
-    default: "XXXXXXXXXX",
+    default: "Warehouse",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
 ]
