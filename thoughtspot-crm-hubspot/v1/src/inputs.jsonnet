@@ -64,7 +64,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           inputs: [
             {
               id: "thoughtspot",
-              name: "Set up the connection in Thoughtspot",
+              name: "Continue in Thoughtspot",
               description: "",
               type: "string",
               kind: "input",
