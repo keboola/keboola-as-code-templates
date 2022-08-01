@@ -190,8 +190,8 @@
     },
     {
       "id": "thoughtspot-crm-hubspot",
-      "name": "HubSpot to SpotApps",
-      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
+      "name": "HubSpot Analytics for Thoughtspot",
+      "description": "In a few clicks, set up a flow to supply Hubspot data to Thoughtspot in a format compatible with the [TML block](https://developers.thoughtspot.com/codespot/jira-tmp-finish).",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -206,6 +206,17 @@
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-thoughtspot"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -744,7 +755,7 @@
     {
       "id": "asana-to-bigquery",
       "name": "Asana to BigQuery",
-      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-bigquery",
       "versions": [
         {
@@ -763,7 +774,7 @@
     {
       "id": "asana-to-googlesheet",
       "name": "Asana to Google Sheets",
-      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-googlesheet",
       "versions": [
         {
@@ -782,7 +793,7 @@
     {
       "id": "asana-to-snowflake",
       "name": "Asana to Snowflake",
-      "description": "Aggregate all your Asana data to dramatically improve your team’s collaboration and work management.",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-snowflake",
       "versions": [
         {
@@ -801,7 +812,7 @@
     {
       "id": "github-to-bigquery",
       "name": "GitHub to BigQuery",
-      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-bigquery",
       "versions": [
         {
@@ -820,7 +831,7 @@
     {
       "id": "github-to-googlesheet",
       "name": "GitHub to Google Sheets",
-      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-googlesheet",
       "versions": [
         {
@@ -839,7 +850,7 @@
     {
       "id": "github-to-snowflake",
       "name": "GitHub to Snowflake",
-      "description": "Aggregate all your GitHub data to successfully manage your team members and security.",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-snowflake",
       "versions": [
         {
@@ -935,7 +946,7 @@
     {
       "id": "typeform-to-snowflake",
       "name": "Typeform to Snowflake",
-      "description": "Full workflow to ...",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
       "path": "typeform-to-snowflake",
       "versions": [
         {
@@ -954,7 +965,7 @@
     {
       "id": "typeform-to-bigquery",
       "name": "Typeform to BigQuery",
-      "description": "Full workflow to ...",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
       "path": "typeform-to-bigquery",
       "versions": [
         {
@@ -972,8 +983,8 @@
     },
     {
       "id": "typeform-to-googlesheet",
-      "name": "Typeform to GoogleSheet",
-      "description": "Full workflow to ...",
+      "name": "Typeform to Google Sheets",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
       "path": "typeform-to-googlesheet",
       "versions": [
         {
@@ -991,8 +1002,8 @@
     },
     {
       "id": "keboola-costs",
-      "name": "KEBOOLA-COSTS",
-      "description": "Full workflow to ...",
+      "name": "Keboola Costs",
+      "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
       "path": "keboola-costs",
       "versions": [
         {
@@ -1012,8 +1023,8 @@
     },
     {
       "id": "keboola-costs-to-googlesheet",
-      "name": "Keboola Costs to GoogleSheet",
-      "description": "Full workflow to ...",
+      "name": "Keboola Costs to Google Sheets",
+      "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
       "path": "keboola-costs-to-googlesheet",
       "versions": [
         {
@@ -1033,7 +1044,7 @@
     {
       "id": "keboola-costs-to-snowflake",
       "name": "Keboola Costs to Snowflake",
-      "description": "Full workflow to ...",
+      "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
       "path": "keboola-costs-to-snowflake",
       "versions": [
         {
