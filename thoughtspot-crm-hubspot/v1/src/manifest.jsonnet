@@ -10,6 +10,19 @@
       rows: [],
     },
     {
+      componentId: "keboola.scheduler",
+      id: ConfigId("thoughtspot-crm-hubspot-orchestration"),
+      path: "other/keboola.orchestrator/thoughtspot-crm-hubspot-orchestration/schedules/scheduler",
+      relations: [
+        {
+          componentId: "keboola.orchestrator",
+          configId: ConfigId("thoughtspot-crm-hubspot-orchestration"),
+          type: "schedulerFor"
+        }
+      ],
+      rows: []
+    },
+    {
       componentId: "kds-team.ex-hubspot-crm",
       id: ConfigId("in-thoughtspot-hubspot-extractor"),
       path: "<common>/in-thoughtspot-hubspot/v0/src/extractor/kds-team.ex-hubspot-crm/in-thoughtspot-hubspot-extractor",
