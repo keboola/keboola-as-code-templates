@@ -190,8 +190,8 @@
     },
     {
       "id": "thoughtspot-crm-hubspot",
-      "name": "HubSpot to SpotApps",
-      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
+      "name": "HubSpot Analytics for Thoughtspot",
+      "description": "In a few clicks, set up a flow to supply Hubspot data to Thoughtspot in a format compatible with the [TML block](https://developers.thoughtspot.com/codespot/jira-tmp-finish).",
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -206,6 +206,17 @@
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "longDescription": "With this end-to-end flow you can extract your updated data from HubSpot and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you can transform the results into visualizations in ThoughtSpot’s SpotApps.",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-thoughtspot"
+          ],
+          "path": "v1"
         }
       ]
     },
