@@ -12,7 +12,7 @@
     {
       componentId: "keboola.scheduler",
       id: ConfigId("scheduler"),
-      path: "schedules/scheduler-for-"+ConfigId("thoughtspot-crm-hubspot-orchestration"),
+      path: "schedules/scheduler",
       relations: [
         {
           componentId: "keboola.orchestrator",
