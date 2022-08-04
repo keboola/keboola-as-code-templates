@@ -505,6 +505,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
@@ -673,6 +674,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
