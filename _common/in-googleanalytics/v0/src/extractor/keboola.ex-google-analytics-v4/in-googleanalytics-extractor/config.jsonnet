@@ -1,10 +1,9 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth"),
+    oauth_api: Input("ga-oauth"),
   },
-  parameters: {
+  parameters: Input("ga-oauth-accounts") + {
     outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-googleanalytics-extractor"),
-    profiles: [],
     queries: [
       {
         enabled: true,
