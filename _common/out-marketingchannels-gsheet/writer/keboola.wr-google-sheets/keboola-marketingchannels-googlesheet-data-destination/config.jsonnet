@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth-googlesheet"),
+    oauth_api: Input("oauth-google-sheets"),
   },
   parameters: {
     tables: std.filter(function(v) v != null,[

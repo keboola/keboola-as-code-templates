@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth"),
+    oauth_api: Input("oauth-google-sheets"),
   },
   parameters: {
     tables: [

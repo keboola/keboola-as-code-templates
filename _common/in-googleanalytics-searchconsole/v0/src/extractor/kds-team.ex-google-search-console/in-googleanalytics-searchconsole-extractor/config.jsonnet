@@ -1,5 +1,5 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth-googlesearch"),
+    oauth_api: Input("oauth-googlesearch"),
   },
 }

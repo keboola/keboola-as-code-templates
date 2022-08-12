@@ -1,12 +1,12 @@
 [
   {
-    id:          "g3s2-oauth-linkedinads",
+    id:          "oauth-linkedinads",
     name:        "Google oAuth",
     description: "Authorization for LinkedIn Ads",
     type:        "object",
     kind:        "oauth",
-    default:      {},
     componentId: "leochan.ex-linkedin",
+    rules:       "required",
   },
   {
     id: "ex-linkedin-start-day",

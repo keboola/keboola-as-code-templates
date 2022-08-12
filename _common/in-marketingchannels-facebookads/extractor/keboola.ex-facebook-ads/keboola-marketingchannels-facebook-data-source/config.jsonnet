@@ -1,8 +1,8 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth-facebookads"),
+    oauth_api: Input("oauth-facebookads"),
   },
-  parameters: {
+  parameters: Input("oauth-facebookads-accounts") + {
     "api-version": Input("ex-facebook-ads-api-version"),
     queries: [
       {

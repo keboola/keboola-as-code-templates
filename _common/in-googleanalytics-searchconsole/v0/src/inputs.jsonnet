@@ -1,6 +1,6 @@
 [
   {
-    id:          "g3s2-oauth-googlesearch",
+    id:          "oauth-googlesearch",
     name:        "Google oAuth",
     description: "Authorization for Google Search Console",
     type:        "object",
@@ -60,5 +60,5 @@
           label: '1 week ago',
         },
       ],
-    }  
+    }
 ]

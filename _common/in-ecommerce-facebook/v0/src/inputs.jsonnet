@@ -1,12 +1,21 @@
 [
   {
-    id:          "g3s2-oauth-facebookads",
+    id:          "oauth-facebookads",
     name:        "Google oAuth",
     description: "Authorization for Facebook Ads",
     type:        "object",
     kind:        "oauth",
-    deafult:      {},
     componentId: "keboola.ex-facebook-ads",
+    rules:       "required",
+  },
+  {
+    id:           "oauth-facebookads-accounts",
+    name:         "Facebook Ads Accounts",
+    description:  "Accounts for Facebook Ads",
+    type:         "object",
+    kind:         "oauthAccounts",
+    oauthInputId: "oauth-facebookads",
+    rules:        "required",
   },
   {
     id: "ex-facebook-ads-api-version",

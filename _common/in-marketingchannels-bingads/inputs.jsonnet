@@ -1,6 +1,6 @@
 [
   {
-    id:          "g3s2-oauth-bingads",
+    id:          "oauth-bingads",
     name:        "Google oAuth",
     description: "Authorization for Bing Ads",
     type:        "object",

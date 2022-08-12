@@ -1,6 +1,6 @@
 [
   {
-    id:          "g3s2-oauth-github",
+    id:          "oauth-github",
     name:        "Google oAuth",
     description: "Authorization for GitHub",
     type:        "object",

@@ -1,4 +1,7 @@
 {
+  authorization: {
+    oauth_api: Input("oauth-linkedinads"),
+  },
   parameters: {
     api: {
       baseUrl: "https://api.linkedin.com/v2/",
@@ -1284,8 +1287,5 @@
         },
       },
     },
-  },
-  authorization: {
-    oauth_api: Input("g3s2-oauth-linkedinads"),
   },
 }
