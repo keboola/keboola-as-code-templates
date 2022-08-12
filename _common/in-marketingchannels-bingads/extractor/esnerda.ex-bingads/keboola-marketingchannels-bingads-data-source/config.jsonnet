@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth-bingads"),
+    oauth_api: Input("oauth-bingads"),
   },
   parameters: {
     bucket: "in.c-bing_ads-"+ConfigId("keboola-marketingchannels-bingads-data-source"),
