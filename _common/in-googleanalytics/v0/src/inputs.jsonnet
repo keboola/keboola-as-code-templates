@@ -1,6 +1,6 @@
 [
   {
-      id:           "oauth-ga",
+      id:           "oauth-google-analytics",
       name:         "Google oAuth",
       description:  "Authorization for Google Analytics",
       type:         "object",
@@ -9,12 +9,12 @@
       rules:        "required",
   },
   {
-      id:           "oauth-ga-accounts",
+      id:           "oauth-google-analytics-accounts",
       name:         "Google oAuth Accounts",
       description:  "Accounts for Google Analytics",
       type:         "object",
       kind:         "oauthAccounts",
-      oauthInputId: "oauth-ga",
+      oauthInputId: "oauth-google-analytics",
       rules:        "required",
   },
   {

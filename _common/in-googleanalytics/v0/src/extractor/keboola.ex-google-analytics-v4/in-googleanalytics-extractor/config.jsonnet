@@ -1,8 +1,8 @@
 {
   authorization: {
-    oauth_api: Input("oauth-ga"),
+    oauth_api: Input("oauth-google-analytics"),
   },
-  parameters: Input("oauth-ga-accounts") + {
+  parameters: Input("oauth-google-analytics-accounts") + {
     outputBucket: "in.c-kds-team-ex-google-analytics-" + ConfigId("in-googleanalytics-extractor"),
     queries: [
       {
