@@ -1,12 +1,21 @@
 [
   {
-    id:          "g3s2-oauth-googleanalytics",
+    id:          "oauth-googleanalytics",
     name:        "Google oAuth",
     description: "Authorization for Google Analytics",
     type:        "object",
     kind:        "oauth",
     default:      {},
     componentId: "keboola.ex-google-analytics-v4",
+  },
+  {
+    id:           "oauth-googleanalytics-profiles",
+    name:         "Google Analytics Profiles",
+    description:  "Profiles or Properties for Google Analytics",
+    type:         "object",
+    kind:         "oauthAccounts",
+    oauthInputId: "oauth-googleanalytics",
+    rules:        "required",
   },
   {
     id: "ga-from",
