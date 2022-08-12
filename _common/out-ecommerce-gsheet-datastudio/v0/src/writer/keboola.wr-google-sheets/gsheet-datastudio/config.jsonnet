@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth-datastudio"),
+    oauth_api: Input("oauth-datastudio"),
   },
   parameters: {
     tables: [

@@ -9,13 +9,13 @@
         default: "XXXXXXX"
     },
     {
-      id:          "g3s2-oauth-datastudio",
+      id:          "oauth-datastudio",
       name:        "Google oAuth",
       description: "Authorization for DataStudio Google Sheets",
       type:        "object",
       kind:        "oauth",
-      default:      {},
       componentId: "keboola.wr-google-sheets",
+      rules:       "required",
     }
 
 ]
