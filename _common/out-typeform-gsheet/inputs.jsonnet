@@ -9,12 +9,12 @@
     default: "XXXXXXX"
   },
   {
-    id:          "g3s2-oauth-googlesheet",
+    id:          "oauth-google-sheets",
     name:        "Google oAuth",
     description: "Authorization for Google Sheets",
     type:        "object",
     kind:        "oauth",
-    default:      {},
     componentId: "keboola.wr-google-sheets",
+    rules:       "required",
   }
 ]
