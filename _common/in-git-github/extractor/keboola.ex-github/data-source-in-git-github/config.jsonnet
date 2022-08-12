@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: Input("g3s2-oauth-github"),
+    oauth_api: Input("oauth-github"),
   },
   parameters: {
     api: {
