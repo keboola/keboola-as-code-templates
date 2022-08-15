@@ -1116,6 +1116,24 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "hubspot-to-bigquery",
+      "name": "Hubspot to BigQuery",
+      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "path": "hubspot-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
