@@ -1,0 +1,1 @@
+In a few clicks, set up a flow to process and supply Google Analytics data to Thoughtspot in a format compatible with the Thoughtspot Spotapp.
