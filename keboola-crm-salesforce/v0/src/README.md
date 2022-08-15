@@ -28,9 +28,9 @@ From Salesforce data, the second transformation creates an output CRM data model
 
 The final snapshots are generated from the auxiliary tables.
 
-### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE]
+### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE] OR [OUT-CRM-BIGQUERY]
 
-The data destination loads data into a Google sheet or a Snowflake database.
+The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
 
 ### FLOW: Flow [CRM-SALESFORCE]
 

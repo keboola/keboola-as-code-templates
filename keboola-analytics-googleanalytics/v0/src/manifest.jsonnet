@@ -96,6 +96,13 @@
         },
       ]),
     },
+    if InputIsAvailable("google-sheet-id") then
+    {
+      componentId: "keboola.wr-google-sheets",
+      id: ConfigId("data-destination-out-googleanalytics-gsheet"),
+      path: "<common>/out-googleanalytics-gsheet/v0/src/writer/keboola.wr-google-sheets/data-destination-out-googleanalytics-gsheet",
+      rows: [],
+    },
     if InputIsAvailable("gsc-domain") then
     {
       componentId: "kds-team.ex-google-search-console",

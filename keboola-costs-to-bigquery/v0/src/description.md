@@ -1,0 +1,1 @@
+By using this end-to-end flow you can extract data from Telemetry data about all your Keboola project. This data is transformed for vizualization in your BI tool and loaded into a BigQuery database.

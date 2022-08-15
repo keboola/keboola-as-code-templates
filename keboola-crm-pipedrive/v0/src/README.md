@@ -1,6 +1,6 @@
 # KEBOOLA-CRM-PIPEDRIVE
 
-By using this end-to-end flow you can extract data from Pipedrive and transform it into visualizations in your BI tool or anywhere else (currently into a Google sheet and Snowflake).
+By using this end-to-end flow you can extract data from Pipedrive and transform it into visualizations in your BI tool or anywhere else (currently into a Google sheet, Snowflake or BigQuery database).
 
 ## Steps to take:
 1. Authorize data source with Pipedrive API TOKEN and fill company domain
@@ -29,9 +29,9 @@ From Pipedrive data, the second transformation creates an output CRM data model 
 The third transformation then creates the out_activity table using the first contact/opportunity/employee IDs from the activities by joining the table; this also outputs a pairing table for opportunities and contacts are created.
 The final snapshots are generated from the auxiliary tables.
 
-### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE]
+### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE] OR [OUT-CRM-BIGQUERY]
 
-The writer loads data into a Google sheet or a Snowflake database.
+The writer loads data into a Google sheet or a Snowflake database or a BigQuery database.
 
 ### FLOW: Flow [CRM-PIPEDRIVE]
 

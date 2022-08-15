@@ -164,8 +164,8 @@
     },
     {
       "id": "thoughtspot-analytics-googleanalytics",
-      "name": "Google Analytics to SpotApps",
-      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "name": "Google Analytics for Thoughtspot",
+      "description": "In a few clicks, set up a flow to process and supply Google Analytics data to Thoughtspot in a format compatible with the Thoughtspot Spotapp.",
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -179,6 +179,18 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -216,8 +228,8 @@
     },
     {
       "id": "thoughtspot-ecommerce-shopify",
-      "name": "Shopify and Ecommerce to SpotApps",
-      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "name": "Shopify Analytics for Thoughtspot",
+      "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
@@ -234,6 +246,21 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -505,6 +532,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
@@ -673,6 +701,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
@@ -1009,6 +1038,170 @@
             "keboola.ex-telemetry-data",
             "keboola.snowflake-transformation",
             "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-mailchimp",
+      "name": "KEBOOLA MAILCHIMP",
+      "description": "Create a BDM from your Mailchimo marketing data.",
+      "path": "keboola-mailchimp",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "mailchimp-to-bigquery",
+      "name": "Mailchimp to BigQuery",
+      "description": "Create a BDM from your Mailchimo marketing data and load them to BigQuery.",
+      "path": "mailchimp-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "mailchimp-to-googlesheet",
+      "name": "Mailchimp to GoogleSheet",
+      "description": "Create a BDM from your Mailchimo marketing data and load them to google sheet.",
+      "path": "mailchimp-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "mailchimp-to-snowflake",
+      "name": "Mailchimp to Snowflake",
+      "description": "Create a BDM from your Mailchimo marketing data and load them to snowflake DB.",
+      "path": "mailchimp-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "hubspot-to-bigquery",
+      "name": "Hubspot to BigQuery",
+      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "path": "hubspot-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-bigquery",
+      "name": "Salesforce to BigQuery",
+      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "path": "salesforce-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-bigquery",
+      "name": "PipeDrive to BigQuery",
+      "description": "Load and synchronize Pipedrive data from different sources and data structures to BigQuery.",
+      "path": "pipedrive-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-costs-to-bigquery",
+      "name": "Keboola costs to BQ",
+      "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
+      "path": "keboola-costs-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics-to-googlesheet",
+      "name": "Google Analytics to Google Sheet",
+      "description": "Transform Google Analytics data into a form you can use for visualization and load them to Google Sheet.",
+      "path": "googleanalytics-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
           ],
           "path": "v0"
         }

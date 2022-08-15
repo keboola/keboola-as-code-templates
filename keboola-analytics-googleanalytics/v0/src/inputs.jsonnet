@@ -2,6 +2,7 @@ local snowflake = import "/<common>/out-googleanalytics-snowflake/v0/src/inputs.
 local bigquery = import "/<common>/out-googleanalytics-bigquery/v0/src/inputs.jsonnet";
 local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonnet";
 local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/inputs.jsonnet";
+local googlesheet = import "/<common>/out-googleanalytics-gsheet/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -63,6 +64,14 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
           dialogName: "Big Query Destination",
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
+        },
+        {
+          icon: "component:keboola.wr-google-sheets",
+          name: "Google sheet Destination",
+          description: "Load to data into google sheet",
+          dialogName: "Google Sheet Destination", 
+          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/19IUIjgwmnBOLaAB8t8kf7PmkpH7jRjFsxLlsOyrBsdo) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          inputs: googlesheet
         }
       ]
     }

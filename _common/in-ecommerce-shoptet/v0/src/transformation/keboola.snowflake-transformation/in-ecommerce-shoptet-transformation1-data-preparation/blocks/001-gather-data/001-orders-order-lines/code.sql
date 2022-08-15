@@ -2,10 +2,10 @@
 
 CREATE TABLE "order_totals" AS
 SELECT O."code"                                             AS ORDER_ID
-     , SUM(REPLACE(O."itemTotalPriceWithVat", ',', '.'))    AS ORDER_LINE_PRICE_WITH_VAT
-     , SUM(REPLACE(O."itemTotalPriceWithoutVat", ',', '.')) AS ORDER_LINE_PRICE_WITHOUT_VAT
-     , SUM(REPLACE(O."itemTotalPriceVat", ',', '.'))        AS ORDER_LINE_PRICE_VAT
-     , SUM(REPLACE(O."itemVatRate", ',', '.'))              AS ORDER_LINE_VAT_RATE
+     , SUM(REPLACE(O."itemTotalPriceWithVat", ',', '.'))    AS ORDER_LINE_PRICE_WITH_TAXES
+     , SUM(REPLACE(O."itemTotalPriceWithoutVat", ',', '.')) AS ORDER_LINE_PRICE_WITHOUT_TAXES
+     , SUM(REPLACE(O."itemTotalPriceVat", ',', '.'))        AS ORDER_LINE_PRICE_TAXES
+     , SUM(REPLACE(O."itemVatRate", ',', '.'))              AS ORDER_LINE_TAXES_RATE
 FROM "orders" O
 GROUP BY 1;
 
@@ -56,17 +56,17 @@ SELECT DISTINCT O."code"                                       AS ORDER_ID
               -- to be added later
               , ''::STRING                                     AS BILLING_TYPE
               , ''::STRING                                     AS SHIPPING_TYPE
-              , REPLACE(O."totalPriceWithVat", ',', '.')       AS ORDER_TOTAL_PRICE_WITH_WAT
-              , REPLACE(O."totalPriceWithoutVat", ',', '.')    AS ORDER_TOTAL_PRICE_WITHOUT_WAT
-              , REPLACE(O."totalPriceVat", ',', '.')           AS ORDER_TOTAL_PRICE_VAT
+              , REPLACE(O."totalPriceWithVat", ',', '.')       AS ORDER_TOTAL_PRICE_WITH_TAXES
+              , REPLACE(O."totalPriceWithoutVat", ',', '.')    AS ORDER_TOTAL_PRICE_WITHOUT_TAXES
+              , REPLACE(O."totalPriceVat", ',', '.')           AS ORDER_TOTAL_PRICE_TAXES
               , REPLACE(O."rounding", ',', '.')                AS ORDER_PRICE_ROUNDING
               , REPLACE(O."priceToPay", ',', '.')              AS ORDER_TOTAL_PRICE_TO_PAY
               , REPLACE(O."paid", ',', '.')                    AS ORDER_TOTAL_PRICE_PAID
 
-              , OT.ORDER_LINE_PRICE_WITH_VAT                   AS ORDER_LINE_PRICE_WITH_VAT
-              , OT.ORDER_LINE_PRICE_WITHOUT_VAT                AS ORDER_LINE_PRICE_WITHOUT_VAT
-              , OT.ORDER_LINE_PRICE_VAT                        AS ORDER_LINE_PRICE_VAT
-              , OT.ORDER_LINE_VAT_RATE                         AS ORDER_LINE_VAT_RATE
+              , OT.ORDER_LINE_PRICE_WITH_TAXES                   AS ORDER_LINE_PRICE_WITH_TAXES
+              , OT.ORDER_LINE_PRICE_WITHOUT_TAXES                AS ORDER_LINE_PRICE_WITHOUT_TAXES
+              , OT.ORDER_LINE_PRICE_TAXES                        AS ORDER_LINE_PRICE_TAXES
+              , OT.ORDER_LINE_TAXES_RATE                         AS ORDER_LINE_TAXES_RATE
 FROM "orders" O
          JOIN "order_totals" OT ON O."code" = OT.ORDER_ID;
 
@@ -85,11 +85,11 @@ SELECT O."code"                                                                 
      , REPLACE(IFNULL(NULLIF(O."itemAmount", ''), '0'), ',',
                '.')::DECIMAL(22, 5)                                                      AS ORDER_LINE_AMOUNT
      , REPLACE(IFNULL(NULLIF(O."itemTotalPriceWithVat", ''), '0'), ',',
-               '.')::DECIMAL(22, 5)                                                      AS ORDER_LINE_PRICE_WITH_VAT
+               '.')::DECIMAL(22, 5)                                                      AS ORDER_LINE_PRICE_WITH_TAXES
      , REPLACE(IFNULL(NULLIF(O."itemTotalPriceWithoutVat", ''), '0'), ',',
-               '.')::DECIMAL(22, 5)                                                      AS ORDER_LINE_PRICE_WITHOUT_VAT
-     , REPLACE(IFNULL(NULLIF(O."itemTotalPriceVat", ''), '0'), ',', '.')::DECIMAL(22, 5) AS ORDER_LINE_PRICE_VAT
-     , REPLACE(IFNULL(NULLIF(O."itemVatRate", ''), '0'), ',', '.')::DECIMAL(22, 5)       AS ORDER_LINE_VAT_RATE
+               '.')::DECIMAL(22, 5)                                                      AS ORDER_LINE_PRICE_WITHOUT_TAXES
+     , REPLACE(IFNULL(NULLIF(O."itemTotalPriceVat", ''), '0'), ',', '.')::DECIMAL(22, 5) AS ORDER_LINE_PRICE_TAXES
+     , REPLACE(IFNULL(NULLIF(O."itemVatRate", ''), '0'), ',', '.')::DECIMAL(22, 5)       AS ORDER_LINE_TAXES_RATE
      , REPLACE(IFNULL(NULLIF(O."orderItemTotalPurchasePrice", ''), '0'), ',',
                '.')::DECIMAL(22, 5)                                                      AS LINE_PURCHASE_PRICE
 FROM "orders" O;
