@@ -1,10 +1,10 @@
 # KEBOOLA-CRM-HUBSPOT
 
-By using this end-to-end flow you can extract data from Hubspot and transform it into visualizations in your BI tool or anywhere else (currently into a Google sheet,  Snowflake or BigQuery database).
+By using this end-to-end flow you can extract data from Hubspot and transform it into visualizations in your BI tool or anywhere else (currently into a BigQuery database).
 
 ## Steps to take:
 1. Authorize data source with Hubspot API TOKEN and select date range
-2. Optionaly select and authorize data destinations
+2. Authorize data destination
 3. Run the flow
 
 ## All possible included components' configurations:
@@ -28,13 +28,13 @@ From Hubspot data, the second transformation creates an output CRM data model (s
 
 The final snapshots are generated from the auxiliary tables.
 
-### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE] OR [OUT-CRM-BIGQUERY]
+### DD: Data Destination [OUT-CRM-BIGQUERY]
 
-The data destination loads data into a Google sheet or a Snowflake database or BigQuery database.
+The data destination loads data into a BigQuery database.
 
 ### FLOW: Flow [CRM-HUBSPOT]
 
-The Flow runs HubSpot CRM data source, three snowflake transformations and optionally selected data destinations.
+The Flow runs HubSpot CRM data source, three snowflake transformations and BigQuery data destination.
 
 
 ## Business Data Model
