@@ -1170,6 +1170,42 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "keboola-costs-to-bigquery",
+      "name": "Keboola costs to BQ",
+      "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
+      "path": "keboola-costs-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics-to-googlesheet",
+      "name": "Google Analytics to Google Sheet",
+      "description": "Transform Google Analytics data into a form you can use for visualization and load them to Google Sheet.",
+      "path": "googleanalytics-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
