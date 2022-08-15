@@ -1134,6 +1134,42 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "salesforce-to-bigquery",
+      "name": "Salesforce to BigQuery",
+      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "path": "salesforce-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-bigquery",
+      "name": "PipeDrive to BigQuery",
+      "description": "Load and synchronize Pipedrive data from different sources and data structures to BigQuery.",
+      "path": "pipedrive-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
