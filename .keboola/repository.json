@@ -164,8 +164,8 @@
     },
     {
       "id": "thoughtspot-analytics-googleanalytics",
-      "name": "Google Analytics to SpotApps",
-      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "name": "Google Analytics for Thoughtspot",
+      "description": "In a few clicks, set up a flow to process and supply Google Analytics data to Thoughtspot in a format compatible with the Thoughtspot Spotapp.",
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -228,8 +228,8 @@
     },
     {
       "id": "thoughtspot-ecommerce-shopify",
-      "name": "Shopify and Ecommerce to SpotApps",
-      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "name": "Shopify Analytics for Thoughtspot",
+      "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
