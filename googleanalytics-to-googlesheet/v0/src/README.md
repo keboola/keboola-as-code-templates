@@ -1,10 +1,10 @@
-# KEBOOLA-ANALYTICS-GOOGLEANALYTICS
+# GOOGLEANALYTICS-TO-GOOGLESHEET
 
 By using this end-to-end flow you can extract data from Google Analytics and transform it using the SpottApp for visualizations.
 
 ## Steps to take:
 1. Authorize data source and setup profile
-2. Optionaly select and authorize data destinations
+2. Authorize data destination
 3. Run the flow
 
 ## Included components' configurations:
@@ -26,12 +26,12 @@ This data source is getting data from Google Search Console.
 
 Data from Google search console results are grouped by URL and date. 
 
-### DD: Data Destination [OUT-GA-BIGQUERY]  OR [OUT-GA-SNOWFLAKE] OR [OUT-GA-GSHEET]
+### DD: Data Destination [OUT-GA-GSHEET]
 
-The data destination loads data into a Google BigQuery or a Snowflake database or a Google Sheet.
+The data destination loads data into a Google Sheet.
 
-### FLOW: Flow [GA-GOOGLEANALYTICS]
-The Flow runs the Data Source and one transformation and optionally writes data into a Google BigQuery or a Snowflake databases or a Google Sheet.
+### FLOW: Flow [GOOGLEANALYTICS-TO-GOOGLESHEET]
+The Flow runs the Data Source and one transformation and writes data into a Google Sheet.
 
 ## Business Data Model
 
