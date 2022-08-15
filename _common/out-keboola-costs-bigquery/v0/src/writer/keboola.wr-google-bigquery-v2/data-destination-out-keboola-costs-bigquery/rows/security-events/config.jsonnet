@@ -62,7 +62,7 @@
           {
             name: "event_created_date",
             dbName: "event_created_date",
-            type: "TIMESTAMP",
+            type: "STRING",
           },
           {
             name: "token_context",

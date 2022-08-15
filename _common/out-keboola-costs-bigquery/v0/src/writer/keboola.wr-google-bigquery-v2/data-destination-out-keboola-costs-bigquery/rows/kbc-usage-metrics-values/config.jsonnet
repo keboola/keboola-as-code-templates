@@ -63,7 +63,7 @@
           {
             name: "date",
             dbName: "date",
-            type: "TIMESTAMP",
+            type: "STRING",
           },
           {
             name: "value",

@@ -50,7 +50,7 @@
           {
             name: "snowflake_job_created_date",
             dbName: "snowflake_job_created_date",
-            type: "TIMESTAMP",
+            type: "STRING",
           },
           {
             name: "dwh_size",
