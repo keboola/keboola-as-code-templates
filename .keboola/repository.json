@@ -179,6 +179,18 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -234,6 +246,21 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     },
