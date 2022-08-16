@@ -607,7 +607,7 @@
     },
     {
       "id": "ts-googleanalytics-to-snowflake",
-      "name": "Google Analytics to Snowflake & SpotApps",
+      "name": "Google Analytics to Snowflake and SpotApps",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "ts-googleanalytics-to-snowflake",
       "versions": [
