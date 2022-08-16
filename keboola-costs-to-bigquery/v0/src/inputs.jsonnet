@@ -8,7 +8,7 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
         {
           icon: "component:keboola.ex-telemetry-data",
           name: "Telemetry",
-          description: "Import Telemetry data",
+          description: "Import data from Telemetry",
           dialogName: "Telemetry Source",
           dialogDescription: "This source component imports Telemetry data about your Keboola project.",
           inputs: [],
