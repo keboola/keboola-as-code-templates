@@ -2,15 +2,15 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Telemetry data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-telemetry-data",
-          name: "Telemetry data",
-          description: "Telemetry data - Data Source",
-          dialogName: "Telemetry - Data Source",
-          dialogDescription: "This data source is getting data about your Keboola project.",
+          name: "Telemetry",
+          description: "Import Telemetry data",
+          dialogName: "Telemetry Source",
+          dialogDescription: "This source component imports Telemetry data about your Keboola project.",
           inputs: [],
         },
       ],
@@ -28,15 +28,15 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
       ]
     },
     {
-      description: "Configure your credentials for data destination.",
+      description: "Provie credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into a BigQuery database",
+          dialogName: "BigQuery Destination", 
+          dialogDescription: "This destination component loads data into a Google BigQuery database.",
           inputs: bigquery
         },
       ]
