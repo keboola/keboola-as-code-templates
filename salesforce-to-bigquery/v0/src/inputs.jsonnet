@@ -3,15 +3,15 @@ local bigquery = import "/<common>/out-crm-bigquery/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Salesforce extractor.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.ex-salesforce-v2",
           name: "Salesforce",
-          description: "Salesforce - Data Source",
-          dialogName: "Salesforce Data Source", 
-          dialogDescription: "This extractor is getting data about account, contact, event, lead, opportunity, opportunity contact role, opportunity stage and user from Salesforce.",
+          description: "Import data from Salesforce",
+          dialogName: "Salesforce Source", 
+          dialogDescription: "This source component imports data from Salesforce: account, contact, event, lead, opportunity, opportunity contact role, opportunity stage, and user.",
           inputs: salesforce,
         },
       ],
@@ -29,15 +29,15 @@ local bigquery = import "/<common>/out-crm-bigquery/v0/src/inputs.jsonnet";
       ]
     },
     {
-      description: "Writer",
+      description: "Destination component",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-bigquery-v2",
-          name: "Google Big Query",
-          description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
-          dialogDescription: "Data load to Google Big Query",
+          name: "Google BigQuery",
+          description: "Load data into BigQuery",
+          dialogName: "BigQuery Destination", 
+          dialogDescription: "This destination component loads data into a Google BigQuery database.",
           inputs: bigquery
         },
       ],
