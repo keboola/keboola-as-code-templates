@@ -1,38 +1,9 @@
-# GOOGLEANALYTICS-TO-GOOGLESHEET
+The process is simple. We will guide you through it, and, when needed, ask you to set up your profile and authorize the source and destination components.
+ 
+The flow, in a nutshell:
+ 
+- First, the Google Analytics source component will collect data from your Google Analytics account, and the Google Search Console source component (if selected) will get your Google Search Console data. 
 
-By using this end-to-end flow you can extract data from Google Analytics and transform it using the SpottApp for visualizations.
+- Then we will put your data into the requested shape, and the Google Sheets destination component will load the results into a Google Sheets database.
 
-## Steps to take:
-1. Authorize data source and setup profile
-2. Authorize data destination
-3. Run the flow
-
-## Included components' configurations:
-DS -> TR –> DD -> FLOW
-
-### DS: Data Source [IN-GA-GOOGLEANALYTICS] 
-
-The data source gets the data from Google Analytics.
-
-### TR: Transformation [IN-GA-GOOGLEANALYTICS] 
-
-Within this transformation, data is transformed. In this transformation, data is gathered from Google Analytics, and is shaped into the requested shape.
-
-### DS: Data Source [IN-GA-SEARCHCONSOLE]
-
-This data source is getting data from Google Search Console.
-
-### TR: Transformation [IN-GA-SEARCHCONSOLE]
-
-Data from Google search console results are grouped by URL and date. 
-
-### DD: Data Destination [OUT-GA-GSHEET]
-
-The data destination loads data into a Google Sheet.
-
-### FLOW: Flow [GOOGLEANALYTICS-TO-GOOGLESHEET]
-The Flow runs the Data Source and one transformation and writes data into a Google Sheet.
-
-## Business Data Model
-
-
+- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Google Analytics or Google Search Console source components (if selected), all data manipulations, and the Google Sheets destination component, will be processed.
