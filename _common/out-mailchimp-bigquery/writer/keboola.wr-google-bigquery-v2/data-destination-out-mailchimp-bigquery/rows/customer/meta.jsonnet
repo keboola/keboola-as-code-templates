@@ -1,4 +1,0 @@
-{
-  name: "customer",
-  isDisabled: false,
-}

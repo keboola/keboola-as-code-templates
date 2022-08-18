@@ -1,3 +1,0 @@
-{
-  name: "Opportunity & auxiliary snapshot",
-}

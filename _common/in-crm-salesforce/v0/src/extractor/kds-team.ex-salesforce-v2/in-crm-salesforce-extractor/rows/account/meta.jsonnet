@@ -1,4 +1,0 @@
-{
-  name: "Account",
-  isDisabled: false,
-}

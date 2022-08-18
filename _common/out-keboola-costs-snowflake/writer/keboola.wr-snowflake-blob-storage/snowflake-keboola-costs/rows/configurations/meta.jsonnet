@@ -1,4 +1,0 @@
-{
-  name: "configurations",
-  isDisabled: false,
-}
