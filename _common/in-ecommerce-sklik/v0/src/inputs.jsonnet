@@ -17,7 +17,7 @@
    {
     id: "ex-sklik-from-date-daily",
     name: "Period from date [incl.]",
-    description: "Select period from which you want to get the data for daily statistics.",
+    description: "Select period from daily statistics.",
     type: "string",
     kind: "select",
     default: '2 months ago',
@@ -47,7 +47,7 @@
   {
     id: "ex-sklik-to-date-daily",
     name: "Period to date [excl.]",
-    description: "Select period to date you want to get the data for daily statistics.",
+    description: "Select period from daily statistics.",
     type: "string",
     kind: "select",
     options: [
