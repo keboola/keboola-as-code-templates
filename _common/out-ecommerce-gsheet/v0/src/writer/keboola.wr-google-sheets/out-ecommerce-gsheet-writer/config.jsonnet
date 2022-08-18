@@ -114,7 +114,7 @@
         fileId: Input("google-sheet-id"),
         sheetId: 1475609669,
       },
-      if InputIsAvailable("google-sheet-id") && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+      if InputIsAvailable("google-sheet-id") && (InputIsAvailable("oauth-facebookads") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
       {
         id: 50961,
         action: "update",
@@ -125,7 +125,7 @@
         fileId: Input("google-sheet-id"),
         sheetId: 1234856577,
       },
-      if InputIsAvailable("google-sheet-id") && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+      if InputIsAvailable("google-sheet-id") && (InputIsAvailable("oauth-facebookads") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
       {
         id: 70402,
         action: "update",
@@ -229,7 +229,7 @@
           where_operator: "eq",
           columns: [],
         },
-        if InputIsAvailable("google-sheet-id") && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+        if InputIsAvailable("google-sheet-id") && (InputIsAvailable("oauth-facebookads") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
         {
           source: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs",
           destination: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs.csv",
@@ -238,7 +238,7 @@
           where_operator: "eq",
           columns: [],
         },
-        if InputIsAvailable("google-sheet-id") && (InputIsAvailable("ex-facebook-ads-api-version") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
+        if InputIsAvailable("google-sheet-id") && (InputIsAvailable("oauth-facebookads") || InputIsAvailable("ex-google-ads-customer-id") || InputIsAvailable("ex-sklik-token")) then
         {
           source: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly",
           destination: "out.c-ecommerce-wr-"+InstanceIdShort()+".bdm_marketing_campaign_costs_monthly.csv",
