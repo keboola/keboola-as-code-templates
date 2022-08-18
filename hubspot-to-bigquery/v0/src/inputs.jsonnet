@@ -11,7 +11,8 @@ local bigquery = import "/<common>/out-crm-bigquery/v0/src/inputs.jsonnet";
           name: "HubSpot",
           description: "Import data from HubSpot",
           dialogName: "HubSpot Source", 
-          dialogDescription: "This source component imports data from HubSpot: companies, deals, activities, etc. Enter your HubSpot API token from your HubSpot Super Admin account to start loading.",
+          dialogDescription: "This source component imports data from HubSpot. Enter your HubSpot API token from your HubSpot Super Admin account. Please note that API key authentication will be deprecated starting 10/2022.",
+          #"This source component imports data from HubSpot (companies, deals, activities, etc.). Enter your HubSpot API token from your HubSpot Super Admin account and start loading.",
           inputs: hubspot,
         }
       ]
