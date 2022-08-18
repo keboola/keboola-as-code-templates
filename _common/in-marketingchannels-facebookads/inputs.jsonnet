@@ -18,15 +18,6 @@
     rules:        "required",
   },
   {
-    id: "ex-facebook-ads-api-version",
-    name: "Api version",
-    description: "Set Facebook Api version",
-    type: "string",
-    kind: "input",
-    default: "v12.0",
-    rules: "required",
-  },
-  {
     id: "ex-facebook-ads-since",
     name: "Period from date [incl.]",
     description: "Select period from which you want to get the data.",

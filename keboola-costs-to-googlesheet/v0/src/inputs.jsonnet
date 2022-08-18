@@ -2,15 +2,15 @@ local googlesheet = import "/<common>/out-keboola-costs-gsheet/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Extractor",
+      description: "Source component",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-telemetry-data",
-          name: "Telemetry data",
-          description: "Telemetry data - Data Source",
-          dialogName: "Telemetry - Data Source",
-          dialogDescription: "This data source is getting data about your Keboola project.",
+          name: "Telemetry",
+          description: "Import data from Telemetry",
+          dialogName: "Telemetry Source",
+          dialogDescription: "This source component imports Telemetry data about your Keboola project.",
           inputs: [],
         },
       ],
@@ -28,15 +28,15 @@ local googlesheet = import "/<common>/out-keboola-costs-gsheet/inputs.jsonnet";
       ]
     },
     {
-      description: "Writer",
+      description: "Destination component",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google Sheet Destination",
-          description: "Load to data into Google Sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/12N1rL9EkISZ_cFTEp7RdMGkSnV2n4QWhxmzCh9JMmfI) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          name: "Google Sheets",
+          description: "Load data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/12N1rL9EkISZ_cFTEp7RdMGkSnV2n4QWhxmzCh9JMmfI) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
           inputs: googlesheet,
         },
       ]

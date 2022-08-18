@@ -3,15 +3,15 @@ local googlesheet = import "/<common>/out-typeform-gsheet/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Typeform data source.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:fisa.ex-typeform",
           name: "Typeform",
-          description: "Typeform - Data Source",
-          dialogName: "Typeform Data Source", 
-          dialogDescription: "Get data such as list of forms, basic form statistics, list of questions, responses. Enter your Typeform API token to start syncing your data.",
+          description: "Import data from Typeform",
+          dialogName: "Typeform Source", 
+          dialogDescription: "This source component imports data from Typeform (list of forms, basic form statistics, list of questions and responses). Enter your Typeform API token to start loading.",
           inputs: typeform,
         }
       ]
@@ -29,15 +29,15 @@ local googlesheet = import "/<common>/out-typeform-gsheet/inputs.jsonnet";
       ]
     },
     {
-      description: "Configure your credentials for data destination.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google sheet Destination",
-          description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          name: "Google Sheets",
+          description: "Load to data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
           inputs: googlesheet,  
         },
       ]

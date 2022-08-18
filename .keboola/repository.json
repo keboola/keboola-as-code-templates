@@ -585,7 +585,7 @@
     },
     {
       "id": "adsplatform-to-googlesheet",
-      "name": "Ads Platforms to Google Sheets",
+      "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-googlesheet",
       "versions": [
@@ -1045,7 +1045,7 @@
     },
     {
       "id": "keboola-mailchimp",
-      "name": "KEBOOLA MAILCHIMP",
+      "name": "Mailchimp",
       "description": "Create a BDM from your Mailchimo marketing data.",
       "path": "keboola-mailchimp",
       "versions": [
@@ -1120,7 +1120,7 @@
     {
       "id": "hubspot-to-bigquery",
       "name": "Hubspot to BigQuery",
-      "description": "Manage and streamline your Hubspot data seamlessly and align it to all your marketing and business insights.",
+      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "hubspot-to-bigquery",
       "versions": [
         {
@@ -1138,7 +1138,7 @@
     {
       "id": "salesforce-to-bigquery",
       "name": "Salesforce to BigQuery",
-      "description": "Load and synchronize your Salesforce data to data warehouses then connect to your BI tools to derive meaningful business insights.",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
       "path": "salesforce-to-bigquery",
       "versions": [
         {
@@ -1156,7 +1156,7 @@
     {
       "id": "pipedrive-to-bigquery",
       "name": "PipeDrive to BigQuery",
-      "description": "Load and synchronize Pipedrive data from different sources and data structures to BigQuery.",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
       "path": "pipedrive-to-bigquery",
       "versions": [
         {
@@ -1173,7 +1173,7 @@
     },
     {
       "id": "keboola-costs-to-bigquery",
-      "name": "Keboola costs to BQ",
+      "name": "Keboola costs to BigQuery",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
       "path": "keboola-costs-to-bigquery",
       "versions": [
@@ -1191,8 +1191,8 @@
     },
     {
       "id": "googleanalytics-to-googlesheet",
-      "name": "Google Analytics to Google Sheet",
-      "description": "Transform Google Analytics data into a form you can use for visualization and load them to Google Sheet.",
+      "name": "Google Analytics to Google Sheets",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "path": "googleanalytics-to-googlesheet",
       "versions": [
         {

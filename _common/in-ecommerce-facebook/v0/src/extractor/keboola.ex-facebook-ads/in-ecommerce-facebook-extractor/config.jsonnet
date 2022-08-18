@@ -3,7 +3,6 @@
     oauth_api: Input("oauth-facebookads"),
   },
   parameters: Input("oauth-facebookads-accounts") + {
-    "api-version": Input("ex-facebook-ads-api-version"),
     queries: [
       {
         id: 25200,
@@ -14,6 +13,8 @@
           fields: "insights.level(ad).action_breakdowns(action_type).date_preset(last_90d).time_increment(1){ad_id,ad_name,impressions,reach,clicks,spend}",
           ids: "",
           limit: "5",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
         },
       },
       {
@@ -25,6 +26,8 @@
           fields: "insights.level(ad).action_breakdowns(action_type).date_preset(maximum).time_increment(monthly){ad_id,ad_name,impressions,reach,clicks,spend}",
           ids: "",
           limit: "25",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
         },
       },
     ],

@@ -2,15 +2,15 @@ local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Extractor",
+      description: "Data source",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-telemetry-data",
-          name: "Telemetry data",
-          description: "Telemetry data - Data Source",
-          dialogName: "Telemetry - Data Source",
-          dialogDescription: "This data source is getting data about your Keboola project.",
+          name: "Telemetry",
+          description: "Import data from Telemetry",
+          dialogName: "Telemetry Source",
+          dialogDescription: "This source component imports Telemetry data about your Keboola project.",
           inputs: [],
         },
       ],
@@ -28,15 +28,15 @@ local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
       ]
     },
     {
-      description: "Writer",
+      description: "Destination component",
       required: "optional",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Snowflake Destination",
-          description: "Load to data into Snowflake",
+          name: "Snowflake",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake DB.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake,
         },
       ]

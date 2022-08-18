@@ -1,1 +1,1 @@
-By using this end-to-end flow you can extract data from Pipedrive and transform it into visualizations in your BI tool or anywhere else (currently into a BigQuery database).
+With this end-to-end flow you can extract your updated data from Pipedrive and bring it into Keboola Connection. After all the necessary tasks are performed on the data, you load the results into a Google BigQuery database.

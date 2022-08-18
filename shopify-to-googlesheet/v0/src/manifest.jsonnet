@@ -43,14 +43,14 @@
       path: "<common>/out-ecommerce-gsheet/v0/src/writer/keboola.wr-google-sheets/out-ecommerce-gsheet-writer",
       rows: [],
     },
-    if InputIsAvailable("ex-facebook-ads-api-version") then
+    if InputIsAvailable("oauth-facebookads") then
     {
       componentId: "keboola.ex-facebook-ads",
       id: ConfigId("in-ecommerce-facebook-extractor"),
       path: "<common>/in-ecommerce-facebook/v0/src/extractor/keboola.ex-facebook-ads/in-ecommerce-facebook-extractor",
       rows: [],
     },
-    if InputIsAvailable("ex-facebook-ads-api-version") then
+    if InputIsAvailable("oauth-facebookads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-facebook-transformation"),

@@ -3,7 +3,6 @@
     oauth_api: Input("oauth-facebookads"),
   },
   parameters: Input("oauth-facebookads-accounts") + {
-    "api-version": Input("ex-facebook-ads-api-version"),
     queries: [
       {
         id: 70382,
@@ -27,8 +26,8 @@
           fields: "id,name,adset_id,targeting{geo_locations{countries}}",
           ids: "",
           limit: "100",
-          since: "2022-01-01",
-          until: "1 day ago",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
         },
       },
       {
@@ -40,8 +39,8 @@
           fields: "id,name,campaign_id",
           ids: "",
           limit: "100",
-          since: "2022-01-01",
-          until: "1 day ago",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
         },
       },
       {
@@ -53,8 +52,8 @@
           fields: "insights.action_breakdowns(action_type).date_preset(last_7d).time_increment(1){ad_id,impressions,reach,inline_link_clicks,spend},adcreatives{id,object_story_spec{page_id,link_data{link}},url_tags}",
           ids: "",
           limit: "100",
-          since: "2022-01-01",
-          until: "1 day ago",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
         },
       },
     ],

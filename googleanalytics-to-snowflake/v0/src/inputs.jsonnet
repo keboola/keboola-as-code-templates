@@ -4,29 +4,29 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Google Analytics extractor.",
+      description: "Provide credentials for the source component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-google-analytics-v4",
           name: "Google Analytics",
-          description: "Google Analytics Data Source",
-          dialogName: "Analytics Data Source",
-          dialogDescription: "Connect with Google Analytics and sync data from it.",
+          description: "Import data from Google Analytics",
+          dialogName: "Google Analytics Source",
+          dialogDescription: "This source component imports data from your Google Analytics account.",
           inputs: googleanalytics
         },
       ],
     },
     {
-      description: "Extractor",
+      description: "Source component",
       required: "optional",
       steps: [
         {
           icon: "component:kds-team.ex-google-search-console",
           name: "Google Search Console",
-          description: "Google Search Console",
+          description: "Import data from Google Search Console",
           dialogName: "Google Search Console",
-          dialogDescription: "This extractor is getting data from Google Search Console.",
+          dialogDescription: "This source component imports data from your Google Search Console.",
           inputs: searchconsole
         }
       ]
@@ -44,15 +44,15 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
       ]
     },
     {
-      description: "Configure your credentials for writer.",
+      description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
           name: "Snowflake",
-          description: "Snowflake - Destination",
+          description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",
-          dialogDescription: "Data load to Snowflake database.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: snowflake
         },
       ]

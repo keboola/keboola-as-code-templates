@@ -9,7 +9,7 @@
       path: "other/keboola.orchestrator/keboola-marketingchannels-flow",
       rows: [],
     },
-    if InputIsAvailable("ex-facebook-ads-api-version") then
+    if InputIsAvailable("oauth-facebookads") then
     {
       componentId: "keboola.ex-facebook-ads",
       id: ConfigId("keboola-marketingchannels-facebook-data-source"),
@@ -62,7 +62,7 @@
       path: "<common>/in-marketingchannels-linkedinads/extractor/leochan.ex-linkedin/keboola-marketingchannels-linkedin-data-source",
       rows: [],
     },
-    if InputIsAvailable("ex-facebook-ads-api-version") then
+    if InputIsAvailable("oauth-facebookads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("keboola-marketingchannels-facebookads-transformation"),

@@ -1,42 +1,11 @@
-# KEBOOLA-COSTS
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, and authorize the source and destination components.
+ 
+The flow, in a nutshell: 
+ 
+- First, the Telemetry source component will collect data only from this Keboola Connection project.
 
-By using this end-to-end flow you can extract data from Telemetry data about all your Keboola project. This data is transformed for vizualization in your BI tool and loaded into a Snowflake database or Google Sheets.
+- Then we prepare the data for visualization.
 
-## Steps to take:
-1. Authorize data destination(s)
-2. Run the flow
+- The data is then written into a Snowflake database via the Snowflake destination component or into a Google sheet via the Google Sheets destination component.
 
-## All possible included components' configurations:
-
-DS -> TR -> DD -> FLOW
-
-
-### DS: Telemetry Keboola Costs
-
-The data is extracted from this Keboola project only.
-
-### TR: Transformation Keboola Costs
-
-Data from Telemetry is prepared to be used for vizualization, within this transformation.
-
-### DD: Snowflake Keboola Costs
-
-The writer loads data into a Snowflake database.
-
-### DD: Google Sheet Keboola Costs
-
-The writer loads data into a Google Sheets.
-
-### FLOW: Flow [KEBOOLA-COSTS]
-
-The flow runs Telemetry data source, one snowflake transformation and Snowflake or Google Sheets data destination.
-
-
-## Business Data Model
-
-
-
-
-
-
-
+- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Telemetry source component, all data manipulations, and the Snowflake or Google Sheets destination components (if selected), will be processed.
