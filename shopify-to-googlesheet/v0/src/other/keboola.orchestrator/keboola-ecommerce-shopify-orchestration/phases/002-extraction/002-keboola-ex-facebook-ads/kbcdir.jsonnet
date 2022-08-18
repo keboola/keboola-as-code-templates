@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-facebook-ads-api-version") == false,
+  isIgnored: InputIsAvailable("oauth-facebookads") == false,
 }

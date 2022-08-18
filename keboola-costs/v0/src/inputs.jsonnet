@@ -1,5 +1,6 @@
 local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
 local googlesheet = import "/<common>/out-keboola-costs-gsheet/inputs.jsonnet";
+local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -47,6 +48,14 @@ local googlesheet = import "/<common>/out-keboola-costs-gsheet/inputs.jsonnet";
           dialogName: "Google Sheets Destination", 
           dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1y-p5GHgsQ20kjxqLcT7hYEsUDdbQHoPJi4dMoaGAFBM) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
           inputs: googlesheet,
+        },
+        {
+          icon: "component:keboola.wr-google-bigquery-v2",
+          name: "Google Big Query",
+          description: "Big Query - Destination",
+          dialogName: "Big Query Destination", 
+          dialogDescription: "Data load to Google Big Query",
+          inputs: bigquery
         },
       ]
     }
