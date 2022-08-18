@@ -14,4 +14,64 @@
     type: "string",
     kind: "input",
   },
+   {
+    id: "ex-sklik-from-date-daily",
+    name: "Period from date [incl.]",
+    description: "Select period from daily statistics.",
+    type: "string",
+    kind: "select",
+    default: '2 months ago',
+    options: [
+      {
+        value: '1 day ago',
+        label: '1 day ago',
+      },
+      {
+        value: '1 week ago',
+        label: '1 week ago',
+      },
+      {
+        value: '1 month ago',
+        label: '1 month ago',
+      },
+      {
+        value: '2 months ago',
+        label: '2 months ago',
+      },
+      {
+        value: '3 months ago',
+        label: '3 months ago',
+      },
+    ],
+  },
+  {
+    id: "ex-sklik-to-date-daily",
+    name: "Period to date [excl.]",
+    description: "Select period from daily statistics.",
+    type: "string",
+    kind: "select",
+    options: [
+      {
+        value: 'now',
+        label: 'now',
+      },
+      {
+        value: '1 day ago',
+        label: '1 day ago',
+      },
+      {
+        value: '1 week ago',
+        label: '1 week ago',
+      },
+    ],
+    default: '1 day ago',
+  },
+  {
+    id: "ex-sklik-from-date-monthly",
+    name: "Period from date [incl.]",
+    description: "Select period from monthly statistics.",
+    type: "string",
+    kind: "input",
+    default: "2020-01-01"
+  }
 ]

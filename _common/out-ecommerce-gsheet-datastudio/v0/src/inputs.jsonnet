@@ -8,4 +8,14 @@
         rules: "required",
         default: "XXXXXXX"
     },
+    {
+      id:          "oauth-datastudio",
+      name:        "Google oAuth",
+      description: "Authorization for DataStudio Google Sheets",
+      type:        "object",
+      kind:        "oauth",
+      componentId: "keboola.wr-google-sheets",
+      rules:       "required",
+    }
+
 ]

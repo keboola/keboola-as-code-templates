@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: {}
+    oauth_api: Input("oauth-datastudio"),
   },
   parameters: {
     tables: [

@@ -8,4 +8,13 @@
     rules: "required",
     default: "XXXXXXX"
   },
+  {
+      id:          "oauth-google-sheets",
+      name:        "Google oAuth",
+      description: "Authorization for Google Sheets",
+      type:        "object",
+      kind:        "oauth",
+      componentId: "keboola.wr-google-sheets",
+      rules:       "required",
+    }
 ]

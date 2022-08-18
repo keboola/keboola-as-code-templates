@@ -1,8 +1,8 @@
 {
   authorization: {
-    oauth_api: {},
+    oauth_api: Input("oauth-googleads"),
   },
-  parameters: {
+  parameters: Input("oauth-googleads-accounts") + {
     customerId: Input("ex-google-ads-customer-id"),
   },
 }
