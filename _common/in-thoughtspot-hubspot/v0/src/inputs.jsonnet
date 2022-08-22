@@ -5,6 +5,7 @@
       description: "Select authentication type: key/token.",
       type: "string",
       kind: "select",
+      rules: "required",
       options: [
         {
           value: 'Private App Token',
