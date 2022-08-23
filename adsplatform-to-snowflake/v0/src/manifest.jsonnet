@@ -35,16 +35,7 @@
       componentId: "keboola.ex-google-analytics-v4",
       id: ConfigId("keboola-marketingchannels-googleanalytics-data-source"),
       path: "<common>/in-marketingchannels-googleanalytics/extractor/keboola.ex-google-analytics-v4/keboola-marketingchannels-googleanalytics-data-source",
-      rows: [
-        {
-          id: ConfigRowId("mkt-ga-basic-sessions"),
-          path: "rows/mkt-ga-basic-sessions",
-        },
-        {
-          id: ConfigRowId("mkt-ga-basic-transactions"),
-          path: "rows/mkt-ga-basic-transactions",
-        },
-      ],
+      rows: [],
     },
     if InputIsAvailable("ex-linkedin-start-day") then
     {
