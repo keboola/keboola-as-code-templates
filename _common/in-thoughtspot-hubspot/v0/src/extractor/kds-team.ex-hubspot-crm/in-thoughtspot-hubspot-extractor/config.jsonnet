@@ -1,11 +1,10 @@
-std.filter(function(v) v != null,[
-if Input("hubspot-auth-type") == "API Key" then
 { storage: {
     output: {
       default_bucket: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor")
     }
   },
   parameters: 
+  if Input("hubspot-auth-type") == "API Key" then
     {
     authentication_type: Input("hubspot-auth-type"),
     include_contact_list_membership: true,
@@ -48,15 +47,8 @@ if Input("hubspot-auth-type") == "API Key" then
       "email_events-OPEN",
       "email_events-CLICK",
     ],
-  },
-},
-if Input("hubspot-auth-type") == "Private App Token" then
-{ storage: {
-    output: {
-      default_bucket: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor")
-    }
-  },
-  parameters: 
+  }
+  else
     {
     authentication_type: Input("hubspot-auth-type"),
     include_contact_list_membership: true,
@@ -101,4 +93,3 @@ if Input("hubspot-auth-type") == "Private App Token" then
     ],
   },
 }
-])
