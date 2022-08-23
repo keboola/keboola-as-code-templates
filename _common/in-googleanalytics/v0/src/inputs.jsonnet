@@ -1,7 +1,7 @@
 [
   {
       id:           "oauth-google-analytics",
-      name:         "Google oAuth",
+      name:         "Google OAuth",
       description:  "Authorization for Google Analytics",
       type:         "object",
       kind:         "oauth",

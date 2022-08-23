@@ -186,7 +186,7 @@
           inputs: [
             {
               id:          "g3s2-oauth",
-              name:        "Google oAuth",
+              name:        "Google OAuth",
               description: "Authorization for Google Drive Writer",
               type:        "object",
               kind:        "oauth",

@@ -27,7 +27,7 @@
         },
         {
           "version": "2.0.0",
-          "description": "With Google Drive Writer oAuth",
+          "description": "With Google Drive Writer OAuth",
           "stable": false,
           "components": ["common:settings"],
           "path": "v2"
