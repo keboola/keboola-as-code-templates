@@ -31,7 +31,7 @@
       {
         name: "ga_latitude",
         dbName: "ga:latitude",
-        type: "string",
+        type: "double",
         nullable: true,
         default: "",
         size: "255",
@@ -39,7 +39,7 @@
       {
         name: "ga_longitude",
         dbName: "ga:longitude",
-        type: "string",
+        type: "double",
         nullable: true,
         default: "",
         size: "255",
@@ -55,7 +55,7 @@
       {
         name: "ga_userType",
         dbName: "ga:userType",
-        type: "string",
+        type: "boolean",
         nullable: true,
         default: "",
         size: "255",

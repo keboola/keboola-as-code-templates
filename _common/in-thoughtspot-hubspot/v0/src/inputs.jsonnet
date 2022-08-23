@@ -35,7 +35,7 @@
     },
     {
       id: "ex-hubspot-crm-period-from",
-      name: "Period from date",
+      name: "Period from date [incl.]",
       description: "From when do you want to get the data?",
       type: "string",
       kind: "select",

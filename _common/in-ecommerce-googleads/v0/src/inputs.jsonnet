@@ -1,7 +1,7 @@
 [
   {
     id:          "oauth-googleads",
-    name:        "Google oAuth",
+    name:        "Google OAuth",
     description: "Authorization for Google Ads",
     type:        "object",
     kind:        "oauth",

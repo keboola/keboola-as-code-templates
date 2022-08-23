@@ -1,7 +1,7 @@
 [
   {
       id:           "oauth-google-analytics",
-      name:         "Google oAuth",
+      name:         "Google OAuth",
       description:  "Authorization for Google Analytics",
       type:         "object",
       kind:         "oauth",
@@ -10,8 +10,8 @@
   },
   {
       id:           "oauth-google-analytics-accounts",
-      name:         "Google oAuth Accounts",
-      description:  "Accounts for Google Analytics",
+      name:         "Google OAuth Accounts",
+      description:  "Select accounts for Google Analytics",
       type:         "object",
       kind:         "oauthAccounts",
       oauthInputId: "oauth-google-analytics",

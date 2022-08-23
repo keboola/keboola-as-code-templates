@@ -1,7 +1,7 @@
 [
   {
     id:          "oauth-bingads",
-    name:        "Google oAuth",
+    name:        "Google OAuth",
     description: "Authorization for Bing Ads",
     type:        "object",
     kind:        "oauth",
