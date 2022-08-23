@@ -129,7 +129,7 @@
       {
         name: "ga_serverResponseTime",
         dbName: "ga:serverResponseTime",
-        type: "double",
+        type: "integer",
         nullable: true,
         default: "",
       },
