@@ -10,7 +10,7 @@
   },
   {
       id:           "oauth-google-analytics-accounts",
-      name:         "Google oAuth Accounts",
+      name:         "Google OAuth Accounts",
       description:  "Accounts for Google Analytics",
       type:         "object",
       kind:         "oauthAccounts",
