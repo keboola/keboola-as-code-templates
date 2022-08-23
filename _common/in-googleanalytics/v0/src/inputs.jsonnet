@@ -11,7 +11,7 @@
   {
       id:           "oauth-google-analytics-accounts",
       name:         "Google OAuth Accounts",
-      description:  "Accounts for Google Analytics",
+      description:  "Select accounts for Google Analytics",
       type:         "object",
       kind:         "oauthAccounts",
       oauthInputId: "oauth-google-analytics",
