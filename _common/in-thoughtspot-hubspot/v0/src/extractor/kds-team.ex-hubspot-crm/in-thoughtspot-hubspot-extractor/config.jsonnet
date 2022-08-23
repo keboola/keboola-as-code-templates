@@ -3,7 +3,7 @@
       default_bucket: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor")
     }
   },
-  parameters: std.filter(function(v) v != null,[
+  parameters: std.filter(function(v) v != null,
     if Input("hubspot-auth-type") == "API Key" then
     {
     authentication_type: Input("hubspot-auth-type"),
@@ -92,5 +92,5 @@
       "email_events-CLICK",
     ],
   },
-  ])
+  )
 }
