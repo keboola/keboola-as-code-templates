@@ -1,7 +1,7 @@
 [
   {
     id:          "oauth-github",
-    name:        "Google oAuth",
+    name:        "Google OAuth",
     description: "Authorization for GitHub",
     type:        "object",
     kind:        "oauth",

@@ -3,7 +3,7 @@
       default_bucket: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor")
     }
   },
-  parameters: std.filter(function(v) v != null,[
+  parameters:
     if Input("hubspot-auth-type") == "API Key" then
     {
     authentication_type: Input("hubspot-auth-type"),
@@ -32,8 +32,8 @@
       "deals",
       "pipelines",
     ],
-  },
-  if Input("hubspot-auth-type") == "Private App Token" then
+  }
+  else
     {
     authentication_type: Input("hubspot-auth-type"),
     include_contact_list_membership: true,
@@ -62,5 +62,4 @@
       "pipelines",
     ],
   },
-  ])
 }

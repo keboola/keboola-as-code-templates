@@ -38,7 +38,7 @@ local pipedrive = import "/<common>/in-crm-pipedrive/inputs.jsonnet";
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "This destination component loads data into a Snowflake database.",
+          dialogDescription: "Fill your database credentials. Don’t have your own data warehouse? No worries, follow [these instructions](https://docs.google.com/document/d/1aWZw4s0NGK1nFaZ6DK8H_DQIEzAR9pg-u8eGtFaS4XA).",
           inputs: snowflake,
         },
       ]
