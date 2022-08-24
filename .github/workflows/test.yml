@@ -1,0 +1,21 @@
+name: Template Tests
+on: [ push ]
+
+env:
+  KBC_TEMPLATES_PRIVATE_BETA: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Install kbc binary
+        run: |
+          sudo wget -P /etc/apt/trusted.gpg.d https://cli-dist.keboola.com/deb/keboola.gpg
+          echo "deb https://cli-dist.keboola.com/deb /" | sudo tee /etc/apt/sources.list.d/keboola.list
+          sudo apt-get update
+          sudo apt-get install keboola-cli
+      - name: Run the tests
+        run: |
+          kbc template test
