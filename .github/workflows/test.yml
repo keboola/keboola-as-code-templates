@@ -17,5 +17,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install keboola-cli
       - name: Run the tests
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
         run: |
+          echo $SECRETS_CONTEXT | jq -r '. as $o | keys[] | select(. | startswith("KBC_SECRET_")) | . + "=\"" + $o[.] + "\""' > env.txt
+          while read -r line; do
+            export "$line"
+          done < env.txt
           kbc template test
