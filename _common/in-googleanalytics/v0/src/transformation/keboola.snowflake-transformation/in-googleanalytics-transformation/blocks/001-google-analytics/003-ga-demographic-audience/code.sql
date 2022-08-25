@@ -9,8 +9,8 @@ CREATE TABLE "ga_demographic_audience" AS
     ,"interestAffinityCategory" AS "ga_interestAffinityCategory"
     ,"channelGrouping" AS "ga_channelGrouping"
     ,"userType" AS "ga_userType"
-    ,"source" AS "ga_source"
-    ,"medium" AS "ga_medium" 
+    ,'' AS "ga_source"
+    ,'' AS "ga_medium" 
     -- metrics
     ,"sessions" AS "ga_sessions"
     ,"users" AS "ga_users"
