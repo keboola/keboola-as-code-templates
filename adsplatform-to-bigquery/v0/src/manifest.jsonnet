@@ -23,7 +23,7 @@
       path: "<common>/in-marketingchannels-bingads/extractor/esnerda.ex-bingads/keboola-marketingchannels-bingads-data-source",
       rows: [],
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.ex-google-ads",
       id: ConfigId("keboola-marketingchannels-googleads-data-source"),
@@ -69,7 +69,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("keboola-marketingchannels-googleads-transformation"),

@@ -44,7 +44,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPTET]"}
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.ex-google-ads",
       id: ConfigId("in-ecommerce-googleads-extractor"),
@@ -56,7 +56,7 @@
         },
       ],
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-googleads-transformation"),

@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-google-ads-customer-id") == false,
+  isIgnored: InputIsAvailable("oauth-googleads") == false,
 }
