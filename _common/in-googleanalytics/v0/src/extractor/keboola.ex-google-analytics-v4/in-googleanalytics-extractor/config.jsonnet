@@ -360,12 +360,6 @@
             {
               name: "ga:userType",
             },
-            {
-              name: "ga:source",
-            },
-            {
-              name: "ga:medium",
-            },
           ],
           metrics: [
             {
