@@ -55,7 +55,7 @@
       {
         name: "ga_userType",
         dbName: "ga:userType",
-        type: "boolean",
+        type: "string",
         nullable: true,
         default: "",
         size: "255",
