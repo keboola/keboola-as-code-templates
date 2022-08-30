@@ -38,7 +38,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",
-          dialogDescription: "This destination component loads data into a Snowflake database.",
+          dialogDescription: "Fill your database credentials. Don’t have your own data warehouse? No worries, follow [these instructions](https://docs.google.com/document/d/1aWZw4s0NGK1nFaZ6DK8H_DQIEzAR9pg-u8eGtFaS4XA).",
           inputs: snowflake
         },
         {
@@ -64,10 +64,20 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           inputs: [
             {
               id: "thoughtspot",
-              name: "Continue in Thoughtspot",
-              description: "",
+              name: "All good?",
+              description: "Continue in Thoughtspot",
               type: "string",
-              kind: "input",
+              kind: "select",
+              options: [
+                {
+                  value: "0",
+                  label: "Yes."
+                },
+                {
+                  value: "1",
+                  label: "I may need help with this."
+                }
+              ],
             },
           ],
         },
