@@ -2,8 +2,8 @@ CREATE TABLE "ga_traffic_source" AS
 (
   SELECT 
     -- dimensions
-    "id" AS "id_TBE",
-    "userType" AS "ga_userType"
+    "id" AS "id_TBE"
+    ,CASE WHEN "userType" = 'Returning Visitor' THEN 0 ELSE 1 END AS "ga_userType"
     ,"date" AS "ga_date"
     ,"campaign" AS "ga_campaign"
     ,"source" AS "ga_source"

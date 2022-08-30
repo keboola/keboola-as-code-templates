@@ -107,7 +107,7 @@
       {
         name: "ga_pageviews",
         dbName: "ga:pageviews",
-        type: "double",
+        type: "integer",
         nullable: true,
         default: "",
       },
