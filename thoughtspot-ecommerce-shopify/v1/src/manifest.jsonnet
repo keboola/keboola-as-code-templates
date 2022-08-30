@@ -99,12 +99,12 @@
           id: ConfigRowId("out-shop"),
           path: "rows/out-shop",
         },
-        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("oauth-facebookads") then
+        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("oauth-googleads")||InputIsAvailable("oauth-facebookads") then
         {
           id: ConfigRowId("bdm-marketing-campaign-costs"),
           path: "rows/bdm-marketing-campaign-costs",
         },
-        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("oauth-facebookads") then
+        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("oauth-googleads")||InputIsAvailable("oauth-facebookads") then
         {
           id: ConfigRowId("bdm-marketing-campaign-costs-monthly"),
           path: "rows/bdm-marketing-campaign-costs-monthly",
@@ -161,12 +161,12 @@
           id: ConfigRowId("out-shop-001"),
           path: "rows/out-shop-001",
         },
-        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("oauth-facebookads") then
+        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("oauth-googleads")||InputIsAvailable("oauth-facebookads") then
         {
           id: ConfigRowId("bdm-marketing-campaign-costs"),
           path: "rows/bdm-marketing-campaign-costs",
         },
-        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("ex-google-ads-customer-id")||InputIsAvailable("oauth-facebookads") then
+        if InputIsAvailable("ex-sklik-token")|| InputIsAvailable("oauth-googleads")||InputIsAvailable("oauth-facebookads") then
         {
           id: ConfigRowId("bdm-marketing-campaign-costs-monthly"),
           path: "rows/bdm-marketing-campaign-costs-monthly",
@@ -188,7 +188,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-ECOMMERCE-SHOPIFY]"}
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.ex-google-ads",
       id: ConfigId("in-ecommerce-googleads-extractor"),
@@ -200,7 +200,7 @@
         },
       ],
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-googleads-transformation"),
