@@ -54,7 +54,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
     },
     {   
       description: "ThoughtSpot",
-      required: "optional",
+      required: "all",
       steps: [
         {
           icon: "component:keboola.wr-thoughtspot",

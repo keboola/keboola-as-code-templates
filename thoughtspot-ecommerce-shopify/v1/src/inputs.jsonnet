@@ -86,7 +86,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
     },
     {   
       description: "ThoughtSpot",
-      required: "optional",
+      required: "all",
       steps: [
         {
           icon: "component:keboola.wr-thoughtspot",
