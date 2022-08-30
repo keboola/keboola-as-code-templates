@@ -24,7 +24,10 @@
         {
           destination: "in.c-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".fulfillment_line_item_tax_lines",
           source: "fulfillment_line_item_tax_lines",
-          primary_key: [],
+          primary_key: [
+            "row_nr",
+            "line_item_id",
+          ],
           incremental: true,
           delete_where_column: "",
           delete_where_operator: "eq",
