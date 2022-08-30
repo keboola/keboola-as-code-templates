@@ -1,3 +1,3 @@
 {
-  name: "Flow [TS-CRM-HUBSPOT] /" + InstanceIdShort(),
+  name: "Flow [THOUGHTSPOT-HUBSPOT]["+Input("thoughtspot")+"] /" + InstanceIdShort(),
 }
