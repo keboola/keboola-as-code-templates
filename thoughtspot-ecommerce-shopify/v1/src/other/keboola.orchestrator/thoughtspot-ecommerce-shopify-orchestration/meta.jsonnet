@@ -1,3 +1,3 @@
 {
-  name: "Flow [TS-ECOMM-SHOPIFY] /" + InstanceIdShort(),
+  name: "Flow [THOUGHTSPOT-SHOPIFY]["+Input("thoughtspot")+"] /" + InstanceIdShort(),
 }

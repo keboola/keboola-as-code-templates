@@ -68,7 +68,17 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
               name: "Continue in Thoughtspot",
               description: "",
               type: "string",
-              kind: "input",
+              kind: "select",
+              options: [
+                {
+                  value: "0",
+                  label: "Yes."
+                },
+                {
+                  value: "1",
+                  label: "I may need help with this."
+                }
+              ],
             },
           ],
         },

@@ -100,7 +100,17 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
               name: "Continue in Thoughtspot",
               description: "",
               type: "string",
-              kind: "input",
+              kind: "select",
+              options: [
+                {
+                  value: "0",
+                  label: "Yes."
+                },
+                {
+                  value: "1",
+                  label: "I may need help with this."
+                }
+              ],
             },
           ],
         },

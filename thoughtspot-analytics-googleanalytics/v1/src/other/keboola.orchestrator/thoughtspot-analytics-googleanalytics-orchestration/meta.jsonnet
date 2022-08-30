@@ -1,3 +1,3 @@
 {
-  name: "Flow [TS-GA-GOOGLEANALYTICS] /" + InstanceIdShort(),
+  name: "Flow [THOUGHTSPOT-GOOGLEANALYTICS]["+Input("thoughtspot")+"] /" + InstanceIdShort(),
 }
