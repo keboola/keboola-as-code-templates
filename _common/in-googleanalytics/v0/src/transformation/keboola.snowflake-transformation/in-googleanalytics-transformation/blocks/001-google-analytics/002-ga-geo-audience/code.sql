@@ -9,7 +9,7 @@ CREATE TABLE "ga_geo_audience" AS
     ,"latitude"  AS "ga_latitude"
     ,"longitude" AS "ga_longitude"
     ,"channelGrouping" AS "ga_channelGrouping"
-    ,"userType" AS "ga_userType"
+    ,CASE WHEN "userType" = 'Returning Visitor' THEN 0 ELSE 1 END AS "ga_userType"
     ,"source" AS "ga_source"
     ,"medium" AS "ga_medium" 
     -- metrics
