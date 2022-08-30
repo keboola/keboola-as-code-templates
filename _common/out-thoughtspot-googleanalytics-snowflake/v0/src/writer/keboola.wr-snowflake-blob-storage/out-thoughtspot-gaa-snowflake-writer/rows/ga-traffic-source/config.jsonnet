@@ -8,7 +8,7 @@
       {
         name: "ga_userType",
         dbName: "ga:userType",
-        type: "varchar",
+        type: "boolean",
         nullable: true,
         default: "",
         size: "255",
@@ -107,7 +107,7 @@
       {
         name: "ga_pageviews",
         dbName: "ga:pageviews",
-        type: "double",
+        type: "integer",
         nullable: true,
         default: "",
       },
