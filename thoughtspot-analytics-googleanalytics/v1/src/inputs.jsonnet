@@ -53,7 +53,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
     },
     {   
       description: "ThoughtSpot",
-      required: "optional",
+      required: "all",
       steps: [
         {
           icon: "component:keboola.wr-thoughtspot",
