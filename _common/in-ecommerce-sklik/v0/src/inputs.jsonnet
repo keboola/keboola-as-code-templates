@@ -20,12 +20,8 @@
     description: "Select period FROM for daily statistics.",
     type: "string",
     kind: "select",
-    default: '2 months ago',
+    default: '6 months ago',
     options: [
-      {
-        value: '1 day ago',
-        label: '1 day ago',
-      },
       {
         value: '1 week ago',
         label: '1 week ago',
@@ -35,12 +31,12 @@
         label: '1 month ago',
       },
       {
-        value: '2 months ago',
-        label: '2 months ago',
-      },
-      {
         value: '3 months ago',
         label: '3 months ago',
+      },
+      {
+        value: '6 months ago',
+        label: '6 months ago',
       },
     ],
   },
