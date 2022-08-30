@@ -64,10 +64,20 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           inputs: [
             {
               id: "thoughtspot",
-              name: "Continue in Thoughtspot",
-              description: "",
+              name: "All good?",
+              description: "Continue in Thoughtspot",
               type: "string",
-              kind: "input",
+              kind: "select",
+              options: [
+                {
+                  value: "0",
+                  label: "Yes."
+                },
+                {
+                  value: "1",
+                  label: "I may need help with this."
+                }
+              ],
             },
           ],
         },
