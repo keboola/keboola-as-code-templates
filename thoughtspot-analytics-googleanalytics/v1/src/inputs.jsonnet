@@ -60,7 +60,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           name: "ThoughtSpot",
           description: "Reporting in ThoughtSpot",
           dialogName: "ThoughtSpot",
-          dialogDescription: "To set up the TML block in Thoughtspot, please [follow instructions](https://developers.thoughtspot.com/codespot/google-analytics-tml-blocks). If you don't have a Thoughtspot account running yet, you can get a free trial [here](https://go.thoughtspot.com/trial-pm.html).",
+          dialogDescription: "Set up the connection in Thoughtspot and, if you haven't done so yet, install the [Google Analytics TML](https://developers.thoughtspot.com/codespot/google-analytics-tml-blocks) from CodeSpot.",
           inputs: [
             {
               id: "thoughtspot",
