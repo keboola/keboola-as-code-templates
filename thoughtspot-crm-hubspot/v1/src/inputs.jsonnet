@@ -12,7 +12,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           name: "Hubspot",
           description: "Import data from Hubspot",
           dialogName: "Hubspot Source", 
-          dialogDescription: "This source component imports data from HubSpot. Enter your HubSpot API token from your HubSpot Super Admin account. Please note that API key authentication will be deprecated starting 10/2022.",
+          dialogDescription: "Import data from HubSpot. Enter your HubSpot token and set the scopes based on [this manual](https://docs.google.com/document/d/1jmnQ5Hazu4rmaTGxHwI0EybBmzpIadlpPHc6gN_kTU8).",
           #"This source component imports data from HubSpot (companies, deals, activities, etc.). Enter your HubSpot API token from your HubSpot Super Admin account and start loading.",
           inputs: hubspot,  
         },
@@ -65,18 +65,18 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           inputs: [
             {
               id: "thoughtspot",
-              name: "Continue in Thoughtspot",
-              description: "",
+              name: "All good?",
+              description: "If you need help, we'll let our friends at ThoughtSpot know!",
               type: "string",
               kind: "select",
               options: [
                 {
                   value: "0",
-                  label: "Yes."
+                  label: "I'm all good."
                 },
                 {
                   value: "1",
-                  label: "I may need help with this."
+                  label: "I may need help."
                 }
               ],
             },

@@ -97,18 +97,18 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           inputs: [
             {
               id: "thoughtspot",
-              name: "Continue in Thoughtspot",
-              description: "",
+              name: "All good?",
+              description: "If you need help, we'll let our friends at ThoughtSpot know!",
               type: "string",
               kind: "select",
               options: [
                 {
                   value: "0",
-                  label: "Yes."
+                  label: "I'm all good."
                 },
                 {
                   value: "1",
-                  label: "I may need help with this."
+                  label: "I may need help."
                 }
               ],
             },

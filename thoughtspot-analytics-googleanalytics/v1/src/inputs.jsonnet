@@ -65,17 +65,17 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
             {
               id: "thoughtspot",
               name: "All good?",
-              description: "Continue in Thoughtspot",
+              description: "If you need help, we'll let our friends at ThoughtSpot know!",
               type: "string",
               kind: "select",
               options: [
                 {
                   value: "0",
-                  label: "Yes."
+                  label: "I'm all good."
                 },
                 {
                   value: "1",
-                  label: "I may need help with this."
+                  label: "I may need help."
                 }
               ],
             },
