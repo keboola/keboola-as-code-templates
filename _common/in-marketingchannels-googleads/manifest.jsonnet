@@ -1,6 +1,6 @@
 { 
 configurations: std.filter(function(v) v != null,[
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
         componentId: "keboola.ex-google-ads",
         id: ConfigId("keboola-marketingchannels-googleads-data-source"),
@@ -16,7 +16,7 @@ configurations: std.filter(function(v) v != null,[
         },
         ],
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
         componentId: "keboola.snowflake-transformation",
         id: ConfigId("keboola-marketingchannels-googleads-transformation"),

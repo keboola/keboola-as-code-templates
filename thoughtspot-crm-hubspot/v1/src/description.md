@@ -1,0 +1,1 @@
+In a few clicks, set up a flow to supply Hubspot data to Thoughtspot in a format compatible with the [TML block](https://developers.thoughtspot.com/codespot/jira-tmp-finish).

@@ -1,6 +1,6 @@
 {
   authorization: {
-    oauth_api: {},
+    oauth_api: Input("oauth-bingads"),
   },
   parameters: {
     bucket: "in.c-bing_ads-"+ConfigId("keboola-marketingchannels-bingads-data-source"),
@@ -43,7 +43,7 @@
         startDate: "",
         incremental: true,
         completeData: false,
-        reportPeriod: "ThisYear",
+        reportPeriod: Input ("ex-bingads-report-period"),
         aggregationPeriod: "Daily",
       },
       {
