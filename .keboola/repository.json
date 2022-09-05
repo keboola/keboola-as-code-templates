@@ -7,31 +7,107 @@
   "templates": [
     {
       "id": "shopify-to-datastudio",
-      "name": "Shopify to Datastudio",
-      "description": "Sync your updated Shopify data into Keboola, use Google Sheet as destination and load outputs into a copy of Google Data Studio Dashboard template, which we have prepared for you.",
+      "name": "Shopify to Data Studio",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
       "path": "shopify-to-datastudio",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
-          "components": ["kds-team.ex-shopify", "keboola.ex-facebook-ads", "keboola.ex-google-ads", "keboola.ex-sklik", "keboola.wr-google-sheets"],
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
+            "keboola.wr-google-sheets"
+          ],
           "path": "v0"
         }
       ]
     },
     {
       "id": "adsplatform-to-googlesheet",
-      "name": "Ads Platform to GoogleSheet",
-      "description": "Sync data from different Ads platforms to Google Sheet",
+      "name": "Advertising Platforms to Google Sheets",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-googlesheet",
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
-          "components": ["esnerda.ex-bingads","leochan.ex-linkedin","keboola.ex-facebook-ads", "keboola.ex-google-ads","keboola.ex-google-analytics-v4","keboola.wr-google-sheets"],
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
+          ],
           "path": "v0"
+        }
+      ]
+    },{
+      "id": "thoughtspot-analytics-googleanalytics",
+      "name": "Google Analytics for Thoughtspot",
+      "description": "In a few clicks, set up a flow to process and supply Google Analytics data to Thoughtspot in a format compatible with the Thoughtspot Spotapp.",
+      "path": "thoughtspot-analytics-googleanalytics",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "thoughtspot-crm-hubspot",
+      "name": "HubSpot Analytics for Thoughtspot",
+      "description": "In a few clicks, set up a flow to supply Hubspot data to Thoughtspot in a format compatible with the TML block.",
+      "path": "thoughtspot-crm-hubspot",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "thoughtspot-ecommerce-shopify",
+      "name": "Shopify Analytics for Thoughtspot",
+      "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
+      "path": "thoughtspot-ecommerce-shopify",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     }
