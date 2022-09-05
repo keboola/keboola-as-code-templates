@@ -1,4 +1,4 @@
 /.env.local
 .idea
 .DS_Store
-_common/in-googleanalytics/v0/tests/.gitkeep
+.gitkeep
