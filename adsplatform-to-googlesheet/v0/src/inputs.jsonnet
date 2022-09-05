@@ -7,39 +7,39 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for marketing channels.",
+      description: "Provide credentials for the source components.",
       required: "atLeastOne",
       steps: [
         {
           icon: "component:keboola.ex-facebook-ads",
-          name: "Facebook Ads Data Source",
-          description: "Facebook Ads - Data Source",
-          dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook campaigns, ads, adsets and ads insights for the last day.",
+          name: "Facebook Ads",
+          description: "Import data from Facebook Ads",
+          dialogName: "Facebook Ads Source", 
+          dialogDescription: "This source component imports your Facebook Ads Manager data, e.g., campaigns, adsets, ads insights, and more.",
           inputs: facebookads
         },
         {
           icon: "component:esnerda.ex-bingads",
-          name: "BingAds Data Source",
-          description: "BingAds - Data Source",
-          dialogName: "BingAds Data Source", 
-          dialogDescription: "This data source is getting data about Bing Ads campaigns for the last day. It is incremental update.",
+          name: "Bing Ads",
+          description: "Import data from Bing Ads",
+          dialogName: "Bing Ads Source", 
+          dialogDescription: "This source component imports data about Bing Ads campaigns for the last day. It is an incremental update.",
           inputs: bingads
         },
         {
           icon: "component:leochan.ex-linkedin",
           name: "LinkedIn Ads",
-          description: "LinkedIn Ads - Data Source",
-          dialogName: "LinkedIn Ads Data Source", 
-          dialogDescription: "This extractor is incremental. It is necessary to input start time range and end time range of the analytics.",
+          description: "Import data from LinkedIn Ads",
+          dialogName: "LinkedIn Ads Source", 
+          dialogDescription: "This source component imports data from LinkedIn (e.g., advertising spend, ad and campaign performance). Enter the start and end times and dates below to generate instant performance insights.",
           inputs: linkedin
         },
         {
           icon: "component:keboola.ex-google-ads",
           name: "Google Ads",
-          description: "Google Ads - Data Source",
-          dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data from Google Ads about campaigns for the last day.",
+          description: "Import data from Google Ads",
+          dialogName: "Google Ads Source", 
+          dialogDescription: "This source component imports data from Google Ads (advertising spend, ad and campaign performance, etc.). Fill in your Google Ads Customer ID below.",
           inputs: googleads
         }
       ]
@@ -51,9 +51,9 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
         {
           icon: "component:keboola.ex-google-analytics-v4",
           name: "Google Analytics",
-          description: "Google Analytics - Data Source",
-          dialogName: "Analytics Data Source", 
-          dialogDescription: "This extractor is getting data from Google Analytics. It's an incremental update. This data will enrich the marketing model with keywords adgroup and marketing transactions. ",
+          description: "Import data from Google Analytics",
+          dialogName: "Analytics Source", 
+          dialogDescription: "This source component imports data from multiple ad platforms into Google Analytics to give you a bigger picture of your customer journeys.",
           inputs: googleanalytics
         }
       ]
@@ -71,15 +71,15 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
       ]
     },
     {
-      description: "Data Destination",
+      description: "Data destination",
       required: "all",
       steps: [
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google sheet Destination",
-          description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of this sheet https://docs.google.com/spreadsheets/d/1KkIjJqU7wrOdfy3zJA8RSEDCtFoE5Szg9aUInL7XCB0 into your Drive. Then copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          name: "Google Sheets",
+          description: "Load data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1KkIjJqU7wrOdfy3zJA8RSEDCtFoE5Szg9aUInL7XCB0) into your drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: gsheet
         },
       ]
