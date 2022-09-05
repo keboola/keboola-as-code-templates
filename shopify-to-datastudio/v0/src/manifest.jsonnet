@@ -36,14 +36,14 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
-    if InputIsAvailable("ex-facebook-ads-api-version") then
+    if InputIsAvailable("oauth-facebookads") then
     {
       componentId: "keboola.ex-facebook-ads",
       id: ConfigId("in-ecommerce-facebook-extractor"),
       path: "<common>/in-ecommerce-facebook/v0/src/extractor/keboola.ex-facebook-ads/in-ecommerce-facebook-extractor",
       rows: [],
     },
-    if InputIsAvailable("ex-facebook-ads-api-version") then
+    if InputIsAvailable("oauth-facebookads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-facebook-transformation"),
@@ -51,7 +51,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.ex-google-ads",
       id: ConfigId("in-ecommerce-googleads-extractor"),
@@ -63,7 +63,7 @@
         },
       ],
     },
-    if InputIsAvailable("ex-google-ads-customer-id") then
+    if InputIsAvailable("oauth-googleads") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-googleads-transformation"),
