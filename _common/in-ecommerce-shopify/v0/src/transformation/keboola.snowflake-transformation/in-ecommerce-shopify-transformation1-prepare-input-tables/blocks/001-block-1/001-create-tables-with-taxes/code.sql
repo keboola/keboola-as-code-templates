@@ -49,8 +49,7 @@ CREATE OR REPLACE TABLE "fulfillment_line_item_discount_allocations" (
 	"discount_application_index"	VARCHAR(16777216),
 	"extraction_time"	VARCHAR(16777216),
 	"line_item_id"	VARCHAR(16777216),
-	"row_nr"	VARCHAR(16777216),
-	"title" VARCHAR(16777216)	
+	"row_nr"	VARCHAR(16777216)
 );
 
 CREATE OR REPLACE TABLE "line_item_discount_allocations" (

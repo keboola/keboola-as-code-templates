@@ -4,10 +4,10 @@ CREATE OR REPLACE TABLE "order_totals"
 AS
     SELECT 
         O."id"                                                AS ORDER_ID,
-        O."total_price"                                       AS ORDER_LINE_PRICE_WITH_VAT,
-        O."total_price" - O."total_tax"                       AS ORDER_LINE_PRICE_WITHOUT_VAT,
-        O."total_tax"                                         AS ORDER_LINE_PRICE_VAT,
-        AVG(OTL."rate")                                     AS ORDER_LINE_VAT_RATE
+        O."total_price"                                       AS ORDER_LINE_PRICE_WITH_TAXES,
+        O."total_price" - O."total_tax"                       AS ORDER_LINE_PRICE_WITHOUT_TAXES,
+        O."total_tax"                                         AS ORDER_LINE_PRICE_TAXES,
+        AVG(OTL."rate")                                     AS ORDER_LINE_TAXES_RATE
     FROM "order" O
         LEFT JOIN "order_tax_lines" OTL 
                 ON O."id" = OTL."order_id"
@@ -73,21 +73,21 @@ AS
         CASE 
             WHEN LI."price" = '' THEN 0 
             ELSE LI."price" 
-        END                                                           AS ORDER_LINE_PRICE_WITH_VAT,
+        END                                                           AS ORDER_LINE_PRICE_WITH_TAXES,
         CASE 
             WHEN LI."price" = '' AND LITL."price" = '' THEN 0 
             WHEN LI."price" <> '' AND LITL."price" = '' THEN LI. "price"
             WHEN LI."price" = '' AND LITL."price" <> '' THEN - LITL."price"
             ELSE LI."price" - LITL."price" 
-        END                                                           AS ORDER_LINE_PRICE_WITHOUT_VAT,
+        END                                                           AS ORDER_LINE_PRICE_WITHOUT_TAXES,
         CASE 
             WHEN LITL."price" = '' THEN 0 
             ELSE LITL."price" 
-        END                                                           AS ORDER_LINE_PRICE_VAT,
+        END                                                           AS ORDER_LINE_PRICE_TAXES,
         CASE 
             WHEN LITL."rate" = '' THEN 0 
             ELSE LITL."rate" 
-        END                                                           AS ORDER_LINE_VAT_RATE,
+        END                                                           AS ORDER_LINE_TAXES_RATE,
         CASE 
             WHEN II."cost" = '' THEN 0 
             ELSE II."cost" 
