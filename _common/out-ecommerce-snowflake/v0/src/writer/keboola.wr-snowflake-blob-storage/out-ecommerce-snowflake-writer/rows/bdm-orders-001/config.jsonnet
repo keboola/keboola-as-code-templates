@@ -18,10 +18,10 @@
       {
         name: "ORDER_DATE",
         dbName: "ORDER_DATE",
-        type: "varchar",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "",
+        type: "timestamp_tz"
       },
       {
         name: "ORDER_STATUS",
