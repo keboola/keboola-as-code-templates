@@ -23,19 +23,3 @@ replace(F.value,'""','') AS "CAMPAIGN_ID"
 FROM "marketing_email_statistics", 
 Table(Flatten(strtok_to_array(replace(replace("marketing_email_statistics"."allEmailCampaignIds",'[',''),']',''),', '))) F;
 
-/*
-CREATE OR REPLACE TABLE HEVO_MARKETING_EMAILS_API AS
-SELECT 
-"id" AS "campaign_id",
-"name" AS "campaign_name",
-"subject" AS "campaign_subject",
-"type" AS "campaign_type",
-"appName" AS "app_name",
-sum(case when "counters_processed" = 'nan' then 0 else "counters_processed" end) AS "total_proceseed",
-sum(case when "counters_sent" = 'nan' then 0 else "counters_sent" end) AS "total_sent",
-sum(case when "counters_delivered" = 'nan' then 0 else "counters_delivered" end) AS "total_delivered",
-sum(case when "counters_open" = 'nan' then 0 else "counters_open" end) AS "total_opened",
-sum(case when "counters_click" = 'nan' then 0 else "counters_click" end) AS "total_clicked"
-FROM "campaigns"
-GROUP BY "id","name","subject","type","appName";
-*/
