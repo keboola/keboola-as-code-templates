@@ -140,14 +140,6 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".campaigns",
-          destination: "campaigns",
-          where_column: "",
-          where_values: [],
-          where_operator: "eq",
-          columns: [],
-        },
-        {
           source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-thoughtspot-hubspot-extractor") + ".deals",
           destination: "deals",
           where_column: "",

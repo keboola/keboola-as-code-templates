@@ -1,3 +1,0 @@
-{
-  name: "Orders, Order lines",
-}
