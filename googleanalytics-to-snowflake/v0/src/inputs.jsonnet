@@ -52,7 +52,7 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",
-          dialogDescription: "Fill your database credentials. Don’t have your own data warehouse? No worries, follow [these instructions](https://docs.google.com/document/d/1aWZw4s0NGK1nFaZ6DK8H_DQIEzAR9pg-u8eGtFaS4XA).",
+          dialogDescription: "Fill your database credentials. Don’t have your own data warehouse? No worries, follow [these instructions](https://docs.google.com/document/d/1_7DRa7KdeXT1ZZ22ENDxW4fDO1BL_n8uTqhiSQms2pE).",
           inputs: snowflake
         },
       ]

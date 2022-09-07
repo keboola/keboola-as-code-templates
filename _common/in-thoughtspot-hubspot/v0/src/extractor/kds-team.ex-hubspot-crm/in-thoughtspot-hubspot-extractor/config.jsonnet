@@ -25,7 +25,6 @@
     meeting_properties: "id, created_at, created_by, start_time, end_time, title, body, meeting_outcome, location, engagement_id, external_url",
     endpoints: [
       "companies",
-      "campaigns",
       "activities",
       "lists",
       "owners",
@@ -69,7 +68,6 @@
     meeting_properties: "id, created_at, created_by, start_time, end_time, title, body, meeting_outcome, location, engagement_id, external_url",
     endpoints: [
       "companies",
-      "campaigns",
       "activities",
       "lists",
       "owners",
