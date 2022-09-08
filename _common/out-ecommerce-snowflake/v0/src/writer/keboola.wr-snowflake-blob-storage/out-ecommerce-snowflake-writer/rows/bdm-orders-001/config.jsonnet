@@ -18,10 +18,10 @@
       {
         name: "ORDER_DATE",
         dbName: "ORDER_DATE",
-        type: "timestamp_tz",
         nullable: true,
         default: "",
         size: "",
+        type: "timestamp_tz"
       },
       {
         name: "ORDER_STATUS",
@@ -178,10 +178,10 @@
       {
         name: "ORDER_TOTAL_PRICE_WITH_WAT",
         dbName: "ORDER_TOTAL_PRICE_WITH_WAT",
-        type: "varchar",
+        type: "double",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "",
       },
       {
         name: "ORDER_TOTAL_PRICE_WITHOUT_WAT",
