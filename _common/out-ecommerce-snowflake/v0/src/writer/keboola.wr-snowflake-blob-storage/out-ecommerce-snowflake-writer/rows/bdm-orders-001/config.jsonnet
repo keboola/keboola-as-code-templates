@@ -178,10 +178,10 @@
       {
         name: "ORDER_TOTAL_PRICE_WITH_WAT",
         dbName: "ORDER_TOTAL_PRICE_WITH_WAT",
-        type: "varchar",
+        type: "double",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "",
       },
       {
         name: "ORDER_TOTAL_PRICE_WITHOUT_WAT",
