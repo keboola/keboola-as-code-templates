@@ -72,10 +72,10 @@
       {
         name: "FINAL_SCORE",
         dbName: "FINAL_SCORE",
-        type: "varchar",
+        type: "number",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "19,2",
       },
       {
         name: "SEGMENT",
