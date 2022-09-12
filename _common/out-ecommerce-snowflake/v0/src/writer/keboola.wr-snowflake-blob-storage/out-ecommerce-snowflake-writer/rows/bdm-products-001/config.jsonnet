@@ -122,10 +122,10 @@
       {
         name: "PRODUCT_STOCK_AMOUNT",
         dbName: "PRODUCT_STOCK_AMOUNT",
-        type: "varchar",
+        type: "number",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "19,2",
       },
       {
         name: "CATEGORY",

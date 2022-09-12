@@ -50,10 +50,10 @@
       {
         name: "DISCOUNT_PERCENT",
         dbName: "DISCOUNT_PERCENT",
-        type: "varchar",
+        type: "number",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "19,5",
       },
       {
         name: "ORDER_LINE_AMOUNT",
