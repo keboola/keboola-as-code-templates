@@ -70,9 +70,9 @@
     },
     {
       "id": "thoughtspot-crm-hubspot",
-      "name": "HubSpot Analytics for Thoughtspot",
-      "description": "In a few clicks, set up a flow to supply Hubspot data to Thoughtspot in a format compatible with the TML block.",
-      "path": "thoughtspot-crm-hubspot",
+      "name": "HubSpot Analytics for ThoughtSpot",
+      "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
+            "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
           "version": "1.0.1",
