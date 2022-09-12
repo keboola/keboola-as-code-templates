@@ -125,6 +125,14 @@
         default: "",
         size: "",
       },
+      {
+        name: "ACTUAL_STATE",
+        dbName: "ACTUAL_STATE",
+        type: "boolean",
+        nullable: true,
+        default: "",
+        size: "",
+      },
     ],
   },
   storage: {
@@ -149,6 +157,7 @@
             "PRE_SEG_NUMBER_1",
             "TIME_AS",
             "FIRST_SUCCEEDED_TRANSACTION_DATE",
+            "ACTUAL_STATE",
           ],
         },
       ],
