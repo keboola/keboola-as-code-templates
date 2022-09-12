@@ -6,4 +6,4 @@ Don’t have your own data warehouse? No worries, follow [these instructions](ht
 
 The resulting flow will contain the Google Analytics data Source component that connects to your instance, set of transformations to create the data model, and a database writer to populate the data warehouse of your choice. 
 
-All that is left then is to set up the connection in Thoughtspot and, if you haven’t done so yet, install the Google Analytics Spotapp or TML block.
+All that is left then is to set up the connection in Thoughtspot and, if you haven’t done so yet, install the Google Analytics Spotapp or [TML block](https://developers.thoughtspot.com/codespot/google-analytics-tml-blocks).
