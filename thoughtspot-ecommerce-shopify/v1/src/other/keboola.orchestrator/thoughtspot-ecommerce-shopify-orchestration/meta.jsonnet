@@ -1,3 +1,3 @@
 {
-  name: "Flow [THOUGHTSPOT-SHOPIFY]["+Input("thoughtspot")+"] /" + InstanceIdShort(),
+  name: "Flow [THOUGHTSPOT-SHOPIFY] /" + InstanceIdShort(),
 }
