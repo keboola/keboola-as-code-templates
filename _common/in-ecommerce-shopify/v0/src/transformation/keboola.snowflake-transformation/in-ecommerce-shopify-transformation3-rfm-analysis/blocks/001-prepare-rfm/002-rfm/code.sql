@@ -108,11 +108,15 @@ SELECT CUSTOMER_ID
               CURRENT_DATE - SNAPSHOT_DATE) AS TIME_AS
      , FIRST_SUCCEEDED_TRANSACTION_DATE
 FROM RFM;
+
 -- adding info about actual status
-ALTER TABLE RFM_FINAL ADD COLUMN actual_state Boolean;
+ALTER TABLE RFM_FINAL ADD COLUMN actual_state boolean;
 
 UPDATE RFM_FINAL
-SET actual_state = CASE WHEN act.customer_id is not null THEN TRUE ELSE FALSE END
+SET actual_state = false;
+
+UPDATE RFM_FINAL
+SET actual_state = CASE WHEN act.customer_id is not null THEN true ELSE false END
 FROM
     (SELECT active.customer_id, active.max_date, min(segment_nr) as segment
      FROM RFM_FINAL rfm 
