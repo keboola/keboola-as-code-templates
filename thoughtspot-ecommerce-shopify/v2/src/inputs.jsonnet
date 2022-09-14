@@ -1,4 +1,5 @@
 local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
+local snowflakeV2 = import "/<common>/inputs/snowflake.jsonnet";
 local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
 local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
@@ -72,7 +73,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
           dialogDescription: "Fill your database credentials. Don’t have your own data warehouse? No worries, follow [these instructions](https://docs.google.com/document/d/1_7DRa7KdeXT1ZZ22ENDxW4fDO1BL_n8uTqhiSQms2pE).",
-          inputs: snowflake
+          inputs: snowflakeV2
         },
         {
           icon: "component:keboola.wr-google-bigquery-v2",
