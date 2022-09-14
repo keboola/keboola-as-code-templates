@@ -77,7 +77,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
         },
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Keboola Provided Snowflake",
+          name: "Keboola Provided Database",
           description: "Keboola Provided Snowflake Database",
           dialogName: "Snowflake Destination", 
           dialogDescription: "Don’t have your own data warehouse? No worries, we got you covered!",
