@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
 local googlesheet = import "/<common>/out-ecommerce-gsheet/v0/src/inputs.jsonnet";
 local shoptet = import "/<common>/in-ecommerce-shoptet/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";

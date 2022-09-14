@@ -1,5 +1,5 @@
 local mailchimp = import "/<common>/in-mailchimp/inputs.jsonnet";
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-mailchimp-snowflake/inputs.jsonnet";
 {
   stepsGroups: [
     {

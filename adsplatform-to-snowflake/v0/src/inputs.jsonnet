@@ -3,7 +3,7 @@ local bingads = import "/<common>/in-marketingchannels-bingads/inputs.jsonnet";
 local googleads = import "/<common>/in-marketingchannels-googleads/inputs.jsonnet";
 local googleanalytics = import "/<common>/in-marketingchannels-googleanalytics/inputs.jsonnet";
 local linkedin = import "/<common>/in-marketingchannels-linkedinads/inputs.jsonnet";
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-marketingchannels-snowflake/inputs.jsonnet";
 {
   stepsGroups: [
     {

@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-googleanalytics-snowflake/v0/src/inputs.jsonnet";
 local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonnet";
 local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/inputs.jsonnet";
 {

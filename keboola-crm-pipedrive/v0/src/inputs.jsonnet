@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
 local pipedrive = import "/<common>/in-crm-pipedrive/inputs.jsonnet";
 local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-crm-bigquery/v0/src/inputs.jsonnet";

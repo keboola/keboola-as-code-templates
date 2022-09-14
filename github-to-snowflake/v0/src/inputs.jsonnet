@@ -1,5 +1,5 @@
 local github = import "/<common>/in-git-github/inputs.jsonnet";
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-git-snowflake/inputs.jsonnet";
 {
   stepsGroups: [
     {

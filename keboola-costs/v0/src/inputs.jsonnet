@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
 local googlesheet = import "/<common>/out-keboola-costs-gsheet/inputs.jsonnet";
 local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.jsonnet";
 {

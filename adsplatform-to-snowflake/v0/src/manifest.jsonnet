@@ -84,7 +84,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
     },
-    if InputIsAvailable("wr-snowflake-selection") then
+    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),

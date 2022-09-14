@@ -84,7 +84,7 @@
       path: "<common>/out-git-gsheet/writer/keboola.wr-google-sheets/data-destination-out-git-gsheet",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-selection") then
+    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("data-destination-out-git-snowflake"),

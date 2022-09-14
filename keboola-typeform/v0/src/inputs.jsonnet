@@ -1,5 +1,5 @@
 local typeform = import "/<common>/in-typeform/inputs.jsonnet";
-local snowflake = import "/<common>/inputs/snowflake.jsonnet";
+local snowflake = import "/<common>/out-typeform-snowflake/inputs.jsonnet";
 local googlesheet = import "/<common>/out-typeform-gsheet/inputs.jsonnet";
 local bigquery = import "/<common>/out-typeform-bigquery/inputs.jsonnet";
 {
