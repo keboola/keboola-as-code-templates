@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/out-ecommerce-snowflake/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/inputs/snowflake.jsonnet";
 local shopify = import "/<common>/in-ecommerce-shopify/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-ecommerce-bigquery/v0/src/inputs.jsonnet";
 local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
