@@ -28,9 +28,15 @@ AS
             LS."shipping_address__city"         AS CUSTOMER_SHIPPING_CITY,
             LS."shipping_address__country"      AS CUSTOMER_SHIPPING_COUNTRY,
             ''::STRING                          AS CUSTOMER_PRICE_LIST,
-            ''::STRING                          AS CUSTOMER_GROUP
+            ''::STRING                          AS CUSTOMER_GROUP,
+            C."accepts_marketing"			AS ACCEPTS_MARKETING,
+            C."marketing_opt_in_level"		AS MARKETING_OPT_IN_LEVEL,
+            C."orders_count"				AS ORDERS_COUNT,
+            C."total_spent"				AS TOTAL_SPEND,
+            C."verified_email"			AS VERIFIED_EMAIL,
+            C."state"					AS STATE
       FROM "customer" C
-            JOIN "last_shipping_address" LS 
+            LEFT JOIN "last_shipping_address" LS 
                   ON LS."customer_id"=C."id";
 
 --- try to match customers based on email
