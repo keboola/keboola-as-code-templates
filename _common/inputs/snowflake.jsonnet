@@ -6,7 +6,7 @@
     type: "bool",
     kind: "confirm",
     rules: "required",
-    default: "false",
+    default: false,
   },
   {
     id: "wr-snowflake-blob-storage-db-host",
@@ -15,7 +15,7 @@
     type: "string",
     kind: "input",
     default: "hostname.com",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
   },
   {
     id: "wr-snowflake-blob-storage-db-port",
@@ -24,7 +24,7 @@
     type: "string",
     kind: "input",
     default: "XXX",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
   },
   {
     id: "wr-snowflake-blob-storage-db-user",
@@ -33,13 +33,13 @@
     type: "string",
     kind: "input",
     default: "userName",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
   },
   {
     id: "wr-snowflake-blob-storage-db-password",
     name: "Database Password",
     description: "Insert your password to the database.",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
     type: "string",
     kind: "hidden",
   },
@@ -50,7 +50,7 @@
     type: "string",
     kind: "input",
     default: "DatabaseName",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
   },
   {
     id: "wr-snowflake-blob-storage-db-schema",
@@ -59,7 +59,7 @@
     type: "string",
     kind: "input",
     default: "Schema",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
   },
   {
     id: "wr-snowflake-blob-storage-db-warehouse",
@@ -68,6 +68,6 @@
     type: "string",
     kind: "input",
     default: "Warehouse",
-    showif: "[wr-snowflake-selection] != 'false'",
+    showif: "[wr-snowflake-selection] != false",
   },
 ]
