@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
+local snowflake = import "/<common>/inputs/snowflake.jsonnet";
 {
   stepsGroups: [
     {

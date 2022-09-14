@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/inputs/snowflake.jsonnet";
 local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
 {
   stepsGroups: [

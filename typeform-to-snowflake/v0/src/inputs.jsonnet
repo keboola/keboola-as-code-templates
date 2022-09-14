@@ -1,5 +1,5 @@
 local typeform = import "/<common>/in-typeform/inputs.jsonnet";
-local snowflake = import "/<common>/out-typeform-snowflake/inputs.jsonnet";
+local snowflake = import "/<common>/inputs/snowflake.jsonnet";
 {
   stepsGroups: [
     {

@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/inputs/snowflake.jsonnet";
 local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
 {
   stepsGroups: [

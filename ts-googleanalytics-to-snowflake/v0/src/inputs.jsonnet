@@ -1,4 +1,4 @@
-local snowflake = import "/<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/inputs.jsonnet";
+local snowflake = import "/<common>/inputs/snowflake.jsonnet";
 local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
