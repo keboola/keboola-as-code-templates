@@ -32,7 +32,7 @@
     showif: "[wr-snowflake-selection] != false",
   },
   {
-    id: "wr-snowflake-set-credentials",
+    id: "wr-snowflake-set-keboola-database",
     name: "Got it!",
     description: "Select KEBOOLA SNOWFLAKE DATABASE.",
     type: "bool",
