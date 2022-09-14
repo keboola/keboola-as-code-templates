@@ -128,7 +128,7 @@
       path: "<common>/out-marketingchannels-gsheet/writer/keboola.wr-google-sheets/keboola-marketingchannels-googlesheet-data-destination",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-selection") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),

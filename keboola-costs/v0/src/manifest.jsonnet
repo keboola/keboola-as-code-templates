@@ -28,7 +28,7 @@
       path: "<common>/out-keboola-costs-gsheet/writer/keboola.wr-google-sheets/google-sheets-keboola-costs",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-selection") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("snowflake-keboola-costs"),
