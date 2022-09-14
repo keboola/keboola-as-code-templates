@@ -1,11 +1,10 @@
 [
   {
     id: "wr-snowflake-selection",
-    name: "Snowflake Database",
+    name: "Yes, I do have my own DB.",
     description: "Do you have your own snowflake database?",
     type: "bool",
     kind: "confirm",
-    rules: "required",
     default: false,
   },
   {
