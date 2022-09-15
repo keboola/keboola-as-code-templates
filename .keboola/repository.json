@@ -85,6 +85,18 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
+        },
+        {
+          "version": "1.0.2",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v2"
         }
       ]
     },
