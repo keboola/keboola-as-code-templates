@@ -77,10 +77,10 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
         },
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
-          name: "Keboola Provided Database",
-          description: "Keboola Provided Snowflake Database",
-          dialogName: "Snowflake Destination", 
-          dialogDescription: "Don’t have your own data warehouse? No worries, we got you covered!",
+          name: "DWH provided by Keboola",
+          description: "Keboola - managed Snowflake",
+          dialogName: "Keboola - managed Snowflake", 
+          dialogDescription: "You don't need your own DWH. After setting up the use case, go to configuration of Snowflake Data Destination and select Keboola provided database when setting up credentials. If needed, click the Support Button!",
           inputs: kbc_snowflake
         },
         {
