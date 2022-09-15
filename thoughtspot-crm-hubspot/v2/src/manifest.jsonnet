@@ -107,7 +107,7 @@
         },
       ],
     },
-    if InputIsAvailable("wr-snowflake-selection") then
+    if InputIsAvailable("wr-snowflake-selection") || InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("out-thoughtspot-hubspot-snowflake-writer"),
