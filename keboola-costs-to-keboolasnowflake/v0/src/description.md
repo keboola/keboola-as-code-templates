@@ -1,0 +1,1 @@
+With this end-to-end flow you can extract your data about your Keboola Connection project from Telemetry. After all the necessary tasks are performed on the data, you can load it into a Snowflake database, and transform the results into visualizations in any BI tool of your choice.
