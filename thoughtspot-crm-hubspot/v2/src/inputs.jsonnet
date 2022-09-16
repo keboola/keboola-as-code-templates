@@ -33,7 +33,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
     },
     {
       description: "Provide credentials for the destination component.",
-      required: "exactlyOne",
+      required: "optional",
       steps: [
         {
           icon: "component:keboola.wr-snowflake-blob-storage",
