@@ -83,6 +83,28 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           inputs: bigquery
         },
       ]
-    }
+    },
+    {   
+      description: "ThoughtSpot",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.wr-thoughtspot",
+          name: "ThoughtSpot",
+          description: "Reporting in ThoughtSpot",
+          dialogName: "ThoughtSpot",
+          dialogDescription: "To set up your connection in Thoughtspot, log in to your account there and make sure you have the database credentials handy. If you don't have ThoughtSpot account yet, get your free trial [here](https://www.thoughtspot.com/trial).",
+          inputs: [
+            {
+              id: "thoughtspot",
+              name: "Got it!",
+              description: "",
+              type: "bool",
+              kind: "confirm",
+            },
+          ],
+        },
+      ]
+    },
   ]
 }
