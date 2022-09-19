@@ -70,7 +70,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           name: "ThoughtSpot",
           description: "Reporting in ThoughSpot",
           dialogName: "ThoughtSpot",
-          dialogDescription: "To set up your connection in Thoughtspot, log in to your account there and make sure you have the database credentials handy. If you don't have ThoughtSpot account yet, get your free trial [here](https://www.thoughtspot.com/trial).",
+          dialogDescription: "To set up your connection in Thoughtspot, log in to your account there and make sure you have the database credentials handy. If you don't have ThoughtSpot account yet, get your free trial [here](https://go.thoughtspot.com/trial-pm.html?tsref=keboola&utm_medium=partner&utm_source=keboola&utm_campaign=free-trial).",
           inputs: [
             {
               id: "thoughtspot",
