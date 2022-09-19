@@ -1,11 +1,20 @@
 [
   {
+    id:          "oauth-linkedinads",
+    name:        "Google OAuth",
+    description: "Authorization for LinkedIn Ads",
+    type:        "object",
+    kind:        "oauth",
+    componentId: "leochan.ex-linkedin",
+    rules:       "required",
+  },
+  {
     id: "ex-linkedin-start-day",
     name: "Start Day",
     description: "Start time range of the analytics",
     type: "int",
     kind: "input",
-    rules: "min=1,max=31,required",
+    rules: "min=1,max=31",
     default: 1,
   },
   {
@@ -33,7 +42,7 @@
     type: "int",
     kind: "input",
     rules: "min=1,max=31",
-    default: 1,
+    default: 30,
   },
   {
     id: "ex-linkedin-end-month",
@@ -42,7 +51,7 @@
     type: "int",
     kind: "input",
     rules: "min=1,max=12",
-    default: 5,
+    default: 6,
   },
   {
     id: "ex-linkedin-end-year",
@@ -52,5 +61,5 @@
     kind: "input",
     rules: "min=2000,max=2100",
     default: 2022,
-  },
+  }
 ]

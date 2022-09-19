@@ -1,28 +1,46 @@
 [
   {
+    id:          "oauth-googleanalytics",
+    name:        "Google OAuth",
+    description: "Authorization for Google Analytics",
+    type:        "object",
+    kind:        "oauth",
+    default:      {},
+    componentId: "keboola.ex-google-analytics-v4",
+  },
+  {
+    id:           "oauth-googleanalytics-profiles",
+    name:         "Google Analytics Profiles",
+    description:  "Profiles or Properties for Google Analytics",
+    type:         "object",
+    kind:         "oauthAccounts",
+    oauthInputId: "oauth-googleanalytics",
+    rules:        "required",
+  },
+  {
     id: "ga-from",
     name: "Period from date",
     description: "From when do you want to get the data?",
     type: "string",
     kind: "select",
     rules: "required",
-    default: "-1 month",
+    default: "-6 months",
     options: [
       {
         value: '-1 week',
         label: '1 week ago',
       },
       {
-        value: '-2 weeks',
-        label: '2 weeks ago',
-      },
-      {
         value: '-1 month',
         label: '1 month ago',
       },
       {
-        value: '-2 months',
-        label: '2 months ago',
+        value: '-3 months',
+        label: '3 months ago',
+      },
+      {
+        value: '-6 months',
+        label: '6 months ago',
       },
     ],
   },
@@ -43,5 +61,5 @@
         label: '1 week ago',
       },
     ],
-  },
+  }
 ]

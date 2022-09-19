@@ -1,5 +1,14 @@
 [
   {
+    id:          "oauth-bingads",
+    name:        "Google OAuth",
+    description: "Authorization for Bing Ads",
+    type:        "object",
+    kind:        "oauth",
+    default:      {},
+    componentId: "esnerda.ex-bingads",
+  },
+  {
     id: "ex-bingads-dev-key",
     name: "Developer Token",
     description: "Your developer token of your BingAds account.",
@@ -23,4 +32,30 @@
     kind: "input",
     default: "XXXXXXXX",
   },
+  {
+    id: "ex-bingads-report-period",
+    name: "Report Period",
+    description: ".",
+    type: "string",
+    kind: "select",
+    default: "LastSixMonths",
+    options: [
+      {
+        value: "LastWeek",
+        label: "Last Week"
+      },
+      {
+        value: "LastMonth",
+        label: "Last Month"
+      },
+      {
+        value: "LastThreeMonths",
+        label: "Last Three Months"
+      },
+      {
+        value: "LastSixMonths",
+        label: "Last Six Months"
+      },
+    ],
+  }
 ]

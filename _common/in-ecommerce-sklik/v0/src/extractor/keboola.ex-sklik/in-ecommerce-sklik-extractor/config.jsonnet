@@ -7,14 +7,14 @@
         resource: "campaigns",
         displayColumns: "id, name, clicks, impressions, totalMoney, createDate, budget.name, budget.name, startDate",
         displayOptions: '{ "statGranularity": "daily" }',
-        restrictionFilter: '{ "dateFrom": "2020-01-01" }',
+        restrictionFilter: '{ "dateFrom": "' + Input("ex-sklik-from-date-daily") + '", "dateTo": "' + Input("ex-sklik-to-date-daily") + '"}',
       },
       {
         name: "sklik-campaigns-monthly",
         resource: "campaigns",
         displayColumns: "id, name, clicks, impressions, totalMoney, createDate, budget.name, budget.name, startDate",
         displayOptions: '{ "statGranularity": "monthly" }',
-        restrictionFilter: '{ "dateFrom": "2018-01-01" }',
+        restrictionFilter: '{ "dateFrom": "' + Input("ex-sklik-from-date-monthly") + '"}',
       },
     ],
     accounts: Input("ex-sklik-accounts")

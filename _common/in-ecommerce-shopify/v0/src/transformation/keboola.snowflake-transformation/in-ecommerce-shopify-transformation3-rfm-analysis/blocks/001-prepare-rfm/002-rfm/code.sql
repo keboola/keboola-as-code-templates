@@ -61,7 +61,7 @@ WITH SC AS
 
           FROM "bdm_orders" MA
                    INNER JOIN CALENDAR_DAILY SNAP
-                              ON MA.ORDER_CUSTOMER_EMAIL = SNAP.CUSTOMER_ID AND MA.ORDER_DATE::DATE < SNAP.SNAPSHOT_DATE
+                              ON (MA.ORDER_CUSTOMER_EMAIL = SNAP.CUSTOMER_ID OR MA.CUSTOMER_ID = SNAP.CUSTOMER_ID) AND MA.ORDER_DATE::DATE < SNAP.SNAPSHOT_DATE
           GROUP BY SNAP.CUSTOMER_ID, SNAP.SNAPSHOT_DATE
           HAVING LAST_SUCCEEDED_TRANSACTION_DATE >= DATEADD(MONTH, $R_MONTHS, SNAP.SNAPSHOT_DATE)
          )
@@ -108,3 +108,24 @@ SELECT CUSTOMER_ID
               CURRENT_DATE - SNAPSHOT_DATE) AS TIME_AS
      , FIRST_SUCCEEDED_TRANSACTION_DATE
 FROM RFM;
+
+-- adding info about actual status
+ALTER TABLE RFM_FINAL ADD COLUMN actual_state boolean;
+
+UPDATE RFM_FINAL
+SET actual_state = false;
+
+UPDATE RFM_FINAL
+SET actual_state = CASE WHEN act.customer_id is not null THEN true ELSE false END
+FROM
+    (SELECT active.customer_id, active.max_date, min(segment_nr) as segment
+     FROM RFM_FINAL rfm 
+        INNER JOIN (
+        select customer_id, max(snapshot_date) as max_date
+        from RFM_FINAL
+        where snapshot_date <= current_date()
+        group by customer_id) AS active
+        ON active.customer_id = rfm.customer_id AND active.max_date = rfm.snapshot_date
+     GROUP BY active.customer_id, active.max_date) act   
+WHERE act.customer_id = RFM_FINAL.customer_id AND act.max_date = RFM_FINAL.snapshot_date
+    AND act.segment = RFM_FINAL.segment_nr;
