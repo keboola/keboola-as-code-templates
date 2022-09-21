@@ -1,6 +1,5 @@
 { 
-  configurations: std.filter(function(v) v != null,[
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+  configurations:
     {
       componentId: "keboola.wr-snowflake-blob-storage",
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),
@@ -28,5 +27,4 @@
         },
       ]),
     },
-  ]),
 }
