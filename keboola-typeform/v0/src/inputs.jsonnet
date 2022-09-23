@@ -12,13 +12,13 @@ local bigquery = import "/<common>/out-typeform-bigquery/inputs.jsonnet";
           icon: "component:fisa.ex-typeform",
           name: "Typeform",
           description: "Typeform - Data Source",
-          dialogName: "Typeform Data Source", 
+          dialogName: "Typeform Data Source",
           dialogDescription: "Get data such as list of forms, basic form statistics, list of questions, responses. Enter your Typeform API token to start syncing your data.",
           inputs: typeform,
         }
       ]
     },
-    {   
+    {
       description: "Snowflake Transformation",
       required: "all",
       steps: [
@@ -35,10 +35,10 @@ local bigquery = import "/<common>/out-typeform-bigquery/inputs.jsonnet";
       required: "optional",
       steps: [
           {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Data load to Snowflake DB.",
           inputs: snowflake,
         },
@@ -46,15 +46,15 @@ local bigquery = import "/<common>/out-typeform-bigquery/inputs.jsonnet";
           icon: "component:keboola.wr-google-sheets",
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
+          dialogName: "Google Sheet Destination",
           dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1uETGeTPzooCiFD9Wi2tKSyRjtH2CLXlBVBWZuWIQ88w) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
-          inputs: googlesheet,  
+          inputs: googlesheet,
         },
         {
           icon: "component:keboola.wr-google-bigquery-v2",
           name: "Google Big Query",
           description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
+          dialogName: "Big Query Destination",
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
         },

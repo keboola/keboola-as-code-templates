@@ -10,13 +10,13 @@ local snowflake = import "/<common>/out-mailchimp-snowflake/inputs.jsonnet";
           icon: "component:keboola.ex-mailchimp",
           name: "Mailchimp",
           description: "Mailchimp - Data Source",
-          dialogName: "Mailchimp Data Source", 
+          dialogName: "Mailchimp Data Source",
           dialogDescription: "Extractor collects data from Mailchimp about campaigns, lists and members.",
           inputs: mailchimp
         }
       ]
     },
-    {   
+    {
       description: "Snowflake Transformations",
       required: "all",
       steps: [
@@ -33,10 +33,10 @@ local snowflake = import "/<common>/out-mailchimp-snowflake/inputs.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Data load to Snowflake DB.",
           inputs: snowflake
         },

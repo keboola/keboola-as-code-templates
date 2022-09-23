@@ -48,7 +48,7 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",

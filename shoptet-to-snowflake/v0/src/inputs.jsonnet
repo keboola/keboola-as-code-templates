@@ -14,7 +14,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:kds-team.ex-shoptet-permalink",
           name: "Shoptet",
           description: "Shoptet - Data Source",
-          dialogName: "Shoptet Data Source", 
+          dialogName: "Shoptet Data Source",
           dialogDescription: "Extractor collects data from Shoptet about orders, products, inventory, and customers.",
           inputs: shoptet
         }
@@ -28,7 +28,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.ex-facebook-ads",
           name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
-          dialogName: "Facebook Ads Data Source", 
+          dialogName: "Facebook Ads Data Source",
           dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
           inputs: facebook
         },
@@ -36,7 +36,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.ex-google-ads",
           name: "Google Ads",
           description: "Google Ads - Data Source",
-          dialogName: "Google Ads Data Source", 
+          dialogName: "Google Ads Data Source",
           dialogDescription: "This extractor is getting data about Google ads insights.",
           inputs: googleads
         },
@@ -44,13 +44,13 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.ex-sklik",
           name: "Sklik",
           description: "Sklik - Data Source",
-          dialogName: "Sklik Data Source", 
+          dialogName: "Sklik Data Source",
           dialogDescription: "This extractor is getting data about Sklik monthly and daily insights.",
           inputs: sklik
         }
       ]
     },
-    {   
+    {
       description: "Snowflake Transformations",
       required: "all",
       steps: [
@@ -67,10 +67,10 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Data load to Snowflake DB.",
           inputs: snowflake
         },

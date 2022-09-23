@@ -34,7 +34,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
       required: "optional",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",
@@ -51,7 +51,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
         }
       ]
     },
-    {   
+    {
       description: "ThoughtSpot",
       required: "all",
       steps: [

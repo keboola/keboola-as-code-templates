@@ -10,13 +10,13 @@ local snowflake = import "/<common>/out-mgmt-snowflake/inputs.jsonnet";
           icon: "component:leochan.ex-asana",
           name: "Asana",
           description: "Import data from Asana",
-          dialogName: "Asana Source", 
+          dialogName: "Asana Source",
           dialogDescription: "This source component collects data about projects and tasks from Asana.",
           inputs: asana
         }
       ]
     },
-    {   
+    {
       description: "Snowflake Transformations",
       required: "all",
       steps: [
@@ -33,10 +33,10 @@ local snowflake = import "/<common>/out-mgmt-snowflake/inputs.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load data into Snowflake",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Fill your database credentials.",
           inputs: snowflake
         },

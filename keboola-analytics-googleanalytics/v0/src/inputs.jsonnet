@@ -50,7 +50,7 @@ local googlesheet = import "/<common>/out-googleanalytics-gsheet/v0/src/inputs.j
       required: "optional",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Snowflake - Destination",
           dialogName: "Snowflake Destination",
@@ -69,7 +69,7 @@ local googlesheet = import "/<common>/out-googleanalytics-gsheet/v0/src/inputs.j
           icon: "component:keboola.wr-google-sheets",
           name: "Google sheet Destination",
           description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
+          dialogName: "Google Sheet Destination",
           dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/19IUIjgwmnBOLaAB8t8kf7PmkpH7jRjFsxLlsOyrBsdo) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: googlesheet
         }

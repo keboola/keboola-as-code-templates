@@ -15,7 +15,7 @@ local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
         },
       ],
     },
-    {   
+    {
       description: "Snowflake Transformation",
       required: "all",
       steps: [
@@ -32,10 +32,10 @@ local snowflake = import "/<common>/out-keboola-costs-snowflake/inputs.jsonnet";
       required: "optional",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load data into Snowflake",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Fill your database credentials.",
           inputs: snowflake,
         },

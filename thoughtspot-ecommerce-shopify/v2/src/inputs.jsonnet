@@ -15,7 +15,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:kds-team.ex-shopify",
           name: "Shopify",
           description: "Import data from Shopify",
-          dialogName: "Shopify Source", 
+          dialogName: "Shopify Source",
           dialogDescription: "The source component loads Shopify data: orders, products, inventory, customers. Use the Admin API access token from the Shopify custom app, and Shopify ID from the URL, e.g., [shop_id].myshopify.com",
           inputs: shopify
         }
@@ -29,7 +29,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.ex-facebook-ads",
           name: "Facebook Ads",
           description: "Import data from Facebook Ads",
-          dialogName: "Facebook Ads Source", 
+          dialogName: "Facebook Ads Source",
           dialogDescription: "This source component imports data from Facebook Ads (monthly insights, and insights for the last 90 days).",
           inputs: facebook
         },
@@ -37,7 +37,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.ex-google-ads",
           name: "Google Ads",
           description: "Import data from Google Ads",
-          dialogName: "Google Ads Source", 
+          dialogName: "Google Ads Source",
           dialogDescription: "This source component imports data from Google Ads Insights.",
           inputs: googleads
         },
@@ -45,13 +45,13 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.ex-sklik",
           name: "Sklik",
           description: "Import data from Sklik",
-          dialogName: "Sklik Source", 
+          dialogName: "Sklik Source",
           dialogDescription: "This source component imports data from Sklik (monthly and daily insights).",
           inputs: sklik
         }
       ]
     },
-    {   
+    {
       description: "Snowflake Transformations",
       required: "all",
       steps: [
@@ -68,18 +68,18 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       required: "optional",
       steps: [
           {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Your Snowflake Database",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Fill your database credentials.",
           inputs: snowflake
         },
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
-          dialogName: "DWH provided by Keboola", 
+          dialogName: "DWH provided by Keboola",
           dialogDescription: "You don't need your own DWH. After setting up the use case, go to configuration of Snowflake Data Destination and select Keboola provided database when setting up credentials.",
           inputs: kbc_snowflake
         },
@@ -87,13 +87,13 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.wr-google-bigquery-v2",
           name: "Google BigQuery",
           description: "Load data into BigQuery",
-          dialogName: "BigQuery Destination", 
+          dialogName: "BigQuery Destination",
           dialogDescription: "This destination component loads data into a Google BigQuery dataset.",
           inputs: bigquery
         },
       ]
     },
-    {   
+    {
       description: "ThoughtSpot",
       required: "all",
       steps: [

@@ -203,7 +203,7 @@
           inputs: [],
         },
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Service 4",
           description: "Some external service.",
           dialogName: "Service 4",

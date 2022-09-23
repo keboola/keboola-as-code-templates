@@ -17,7 +17,7 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
         },
       ],
     },
-    {   
+    {
       description: "Snowflake Transformation",
       required: "all",
       steps: [
@@ -34,10 +34,10 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
       required: "optional",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load to data into Snowflake",
-          dialogName: "Snowflake Destination", 
+          dialogName: "Snowflake Destination",
           dialogDescription: "Fill your database credentials. Don’t have your own data warehouse? No worries, follow [these instructions](https://docs.google.com/document/d/1_7DRa7KdeXT1ZZ22ENDxW4fDO1BL_n8uTqhiSQms2pE).",
           inputs: snowflake,
         },
@@ -45,7 +45,7 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
           icon: "component:keboola.wr-google-sheets",
           name: "Google Sheets",
           description: "Load data into Google Sheets",
-          dialogName: "Google Sheets Destination", 
+          dialogName: "Google Sheets Destination",
           dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1y-p5GHgsQ20kjxqLcT7hYEsUDdbQHoPJi4dMoaGAFBM) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
           inputs: googlesheet,
         },
@@ -53,7 +53,7 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
           icon: "component:keboola.wr-google-bigquery-v2",
           name: "Google Big Query",
           description: "Big Query - Destination",
-          dialogName: "Big Query Destination", 
+          dialogName: "Big Query Destination",
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
         },
