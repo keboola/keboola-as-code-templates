@@ -7,7 +7,7 @@
       rows: [],
     },
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-thoughtspot-gaa-snowflake-writer"),
       path: "writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer",
       rows: [

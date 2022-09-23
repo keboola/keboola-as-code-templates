@@ -109,7 +109,7 @@
     },
     if InputIsAvailable("wr-snowflake-selection") || InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-thoughtspot-hubspot-snowflake-writer"),
       path: "<common>/out-thoughtspot-hubspot-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-hubspot-snowflake-writer",
       rows: [

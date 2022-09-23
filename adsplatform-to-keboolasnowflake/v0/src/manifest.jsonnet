@@ -85,7 +85,7 @@
       metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
     },
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),
       path: "<common>/out-marketingchannels-snowflake/writer/keboola.wr-snowflake-blob-storage/keboola-marketingchannels-snowflake-data-destination",
       rows: std.filter(function(v) v != null,[
@@ -104,7 +104,7 @@
           id: ConfigRowId("online-marketing-transactions-001"),
           path: "rows/online-marketing-transactions-001",
         },
-        if InputIsAvailable("ga-from") == false then         
+        if InputIsAvailable("ga-from") == false then
         {
           id: ConfigRowId("online-marketing"),
           path: "rows/online-marketing",

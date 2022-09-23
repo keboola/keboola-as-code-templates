@@ -1,7 +1,7 @@
 {
   configurations: [
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-crm-snowflake-writer"),
       path: "writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer",
       rows: [

@@ -23,7 +23,7 @@
       metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-GOOGLEANALYTICS-SNOWFLAKE]"}
     },
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-googleanalytics-snowflake-writer"),
       path: "<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer",
       rows: std.filter(function(v) v != null, [

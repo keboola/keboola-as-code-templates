@@ -61,7 +61,7 @@
     },
     if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-googleanalytics-snowflake-writer"),
       path: "<common>/out-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-googleanalytics-snowflake-writer",
       rows: std.filter(function(v) v != null, [

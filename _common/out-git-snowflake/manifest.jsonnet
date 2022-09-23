@@ -1,7 +1,7 @@
-{ 
+{
   configurations: [
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-git-snowflake"),
       path: "writer/keboola.wr-snowflake-blob-storage/data-destination-out-git-snowflake",
       rows: [

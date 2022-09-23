@@ -46,7 +46,7 @@
     },
     if InputIsAvailable("g3s4-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("my-snowflake-data-destination"),
       path: "writer/keboola.wr-snowflake-blob-storage/my-snowflake-data-destination",
       rows: [],
