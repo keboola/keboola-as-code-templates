@@ -70,7 +70,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         },
@@ -82,7 +82,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v1"
         },
@@ -94,7 +94,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v2"
         }
@@ -114,7 +114,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         },
@@ -126,7 +126,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v1"
         },
@@ -138,7 +138,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v2"
         }
@@ -161,7 +161,7 @@
             "keboola.ex-sklik",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         },
@@ -176,7 +176,7 @@
             "keboola.ex-sklik",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v1"
         },
@@ -191,7 +191,7 @@
             "keboola.ex-sklik",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v2"
         }
@@ -209,7 +209,7 @@
           "stable": false,
           "components": [
             "kds-team.ex-hubspot-crm",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -245,7 +245,7 @@
           "stable": false,
           "components": [
             "keboola.ex-pipedrive",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -278,7 +278,7 @@
           "stable": false,
           "components": [
             "kds-team.ex-salesforce-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -323,7 +323,7 @@
         }
       ]
     },
-    
+
     {
       "id": "shopify-to-snowflake",
       "name": "Shopify to Snowflake",
@@ -339,7 +339,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -404,7 +404,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -533,7 +533,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -587,7 +587,7 @@
           "stable": false,
           "components": [
             "leochan.ex-asana",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -641,7 +641,7 @@
           "stable": false,
           "components": [
             "keboola.ex-github",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -677,7 +677,7 @@
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -712,7 +712,7 @@
           "stable": false,
           "components": [
             "fisa.ex-typeform",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -786,7 +786,7 @@
           "components": [
             "keboola.ex-telemetry-data",
             "keboola.snowflake-transformation",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -840,7 +840,7 @@
           "stable": false,
           "components": [
             "keboola.ex-mailchimp",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -952,7 +952,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -970,7 +970,7 @@
           "stable": false,
           "components": [
             "leochan.ex-asana",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -988,7 +988,7 @@
           "stable": false,
           "components": [
             "keboola.ex-github",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1006,7 +1006,7 @@
           "stable": false,
           "components": [
             "kds-team.ex-hubspot-crm",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1024,7 +1024,7 @@
           "stable": false,
           "components": [
             "keboola.ex-mailchimp",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1042,7 +1042,7 @@
           "stable": false,
           "components": [
             "keboola.ex-pipedrive",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1060,7 +1060,7 @@
           "stable": false,
           "components": [
             "kds-team.ex-salesforce-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1081,7 +1081,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1102,7 +1102,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1120,7 +1120,7 @@
           "stable": false,
           "components": [
             "fisa.ex-typeform",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1139,7 +1139,7 @@
           "components": [
             "keboola.ex-telemetry-data",
             "keboola.snowflake-transformation",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
@@ -1157,7 +1157,7 @@
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
+            "<keboola.wr-snowflake>"
           ],
           "path": "v0"
         }
