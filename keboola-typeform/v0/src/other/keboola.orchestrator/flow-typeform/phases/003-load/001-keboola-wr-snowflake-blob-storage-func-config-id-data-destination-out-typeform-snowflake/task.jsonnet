@@ -1,5 +1,5 @@
 {
-  name: "keboola.wr-snowflake-blob-storage-" + ConfigId("data-destination-out-typeform-snowflake"),
+  name: "keboola.wr-snowflake-" + ConfigId("data-destination-out-typeform-snowflake"),
   task: {
     mode: "run",
     configPath: "<common>/out-typeform-snowflake/writer/keboola.wr-snowflake/data-destination-out-typeform-snowflake",

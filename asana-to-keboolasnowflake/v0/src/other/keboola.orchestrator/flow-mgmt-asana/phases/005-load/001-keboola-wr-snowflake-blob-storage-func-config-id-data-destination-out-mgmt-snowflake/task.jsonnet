@@ -1,5 +1,5 @@
 {
-  name: "keboola.wr-snowflake-blob-storage-" + ConfigId("data-destination-out-mgmt-snowflake"),
+  name: "keboola.wr-snowflake-" + ConfigId("data-destination-out-mgmt-snowflake"),
   task: {
     mode: "run",
     configPath: "<common>/out-mgmt-snowflake/writer/keboola.wr-snowflake/data-destination-out-mgmt-snowflake",
