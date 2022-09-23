@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "in.c-keboola-ex-telemetry-data-19488507.kbc_usage_metrics_values",
-          destination: "in.c-keboola-ex-telemetry-data-19488507.kbc_usage_metrics_values.csv",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values",
+          destination: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values.csv",
           changed_since: "adaptive",
           columns: [
             "metrics_values_id",
@@ -32,7 +32,7 @@
     tables: [
       {
         dbName: "kbc_usage_metrics_values",
-        tableId: "in.c-keboola-ex-telemetry-data-19488507.kbc_usage_metrics_values",
+        tableId: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values",
         incremental: true,
         items: [
           {
