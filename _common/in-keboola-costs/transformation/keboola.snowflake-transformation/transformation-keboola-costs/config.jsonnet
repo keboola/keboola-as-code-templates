@@ -131,44 +131,8 @@
           ],
         },
         {
-          destination: "out.c-keboola-costs.tables",
-          source: "out_tables",
-          primary_key: [
-            "table_project_id",
-          ],
-        },
-        {
-          destination: "out.c-keboola-costs.tables_metrics",
-          source: "out_tables_metrics",
-          primary_key: [
-            "table_snapshot_id",
-          ],
-        },
-        {
-          destination: "out.c-keboola-costs.buckets",
-          source: "out_buckets",
-          primary_key: [
-            "bucket_project_id",
-          ],
-        },
-        {
-          destination: "out.c-keboola-costs.buckets_metrics",
-          source: "out_buckets_metrics",
-          primary_key: [
-            "bucket_snapshot_id",
-          ],
-        },
-        {
-          destination: "out.c-keboola-costs.users",
-          source: "out_users",
-        },
-        {
           destination: "out.c-keboola-costs.projects",
           source: "out_projects",
-        },
-        {
-          destination: "out.c-keboola-costs.security_events",
-          source: "out_security_events",
         },
       ],
     },

@@ -1,4 +1,0 @@
-{
-  name: "buckets",
-  isDisabled: false,
-}
