@@ -774,6 +774,25 @@
       ]
     },
     {
+      "id": "keboola-costs",
+      "name": "Keboola Costs to Google Sheets",
+      "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
+      "path": "keboola-costs",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "keboola.snowflake-transformation",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "keboola-costs-to-snowflake",
       "name": "Keboola Costs to Snowflake",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
