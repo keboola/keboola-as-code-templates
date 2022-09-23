@@ -80,7 +80,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-crm-snowflake-writer"),
-      path: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer",
+      path: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake/out-crm-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("activity"),

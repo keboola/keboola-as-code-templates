@@ -3,7 +3,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),
-      path: "writer/keboola.wr-snowflake-blob-storage/keboola-marketingchannels-snowflake-data-destination",
+      path: "writer/keboola.wr-snowflake/keboola-marketingchannels-snowflake-data-destination",
       rows: std.filter(function(v) v != null,[
         if InputIsAvailable("ga-from") then
         {

@@ -3,7 +3,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-googleanalytics-snowflake-writer"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-googleanalytics-snowflake-writer",
+      path: "writer/keboola.wr-snowflake/out-googleanalytics-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("ga-ad-analytics"),

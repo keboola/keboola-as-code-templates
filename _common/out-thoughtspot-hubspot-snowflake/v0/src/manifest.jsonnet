@@ -9,7 +9,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-thoughtspot-hubspot-snowflake-writer"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-hubspot-snowflake-writer",
+      path: "writer/keboola.wr-snowflake/out-thoughtspot-hubspot-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("dim-date"),

@@ -88,7 +88,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-git-snowflake"),
-      path: "<common>/out-git-snowflake/writer/keboola.wr-snowflake-blob-storage/data-destination-out-git-snowflake",
+      path: "<common>/out-git-snowflake/writer/keboola.wr-snowflake/data-destination-out-git-snowflake",
       rows: [
         {
           id: ConfigRowId("event-001"),

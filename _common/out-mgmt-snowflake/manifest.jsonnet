@@ -3,7 +3,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-mgmt-snowflake"),
-      path: "writer/keboola.wr-snowflake-blob-storage/data-destination-out-mgmt-snowflake",
+      path: "writer/keboola.wr-snowflake/data-destination-out-mgmt-snowflake",
       rows: [
         {
           id: ConfigRowId("project-001"),

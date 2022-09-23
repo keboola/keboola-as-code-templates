@@ -3,7 +3,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-ecommerce-snowflake-writer"),
-      path: "writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer",
+      path: "writer/keboola.wr-snowflake/out-ecommerce-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count-001"),

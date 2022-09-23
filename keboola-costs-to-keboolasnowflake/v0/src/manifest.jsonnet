@@ -24,7 +24,7 @@
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("snowflake-keboola-costs"),
-      path: "<common>/out-keboola-costs-snowflake/writer/keboola.wr-snowflake-blob-storage/snowflake-keboola-costs",
+      path: "<common>/out-keboola-costs-snowflake/writer/keboola.wr-snowflake/snowflake-keboola-costs",
       rows: [
         {
           id: ConfigRowId("buckets"),
