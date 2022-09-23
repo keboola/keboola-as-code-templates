@@ -91,7 +91,7 @@
       path: "<common>/out-mgmt-gsheet/writer/keboola.wr-google-sheets/data-destination-out-mgmt-gsheet",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-mgmt-snowflake"),

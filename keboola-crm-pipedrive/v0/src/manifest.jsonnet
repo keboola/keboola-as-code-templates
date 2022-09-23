@@ -49,7 +49,7 @@
       path: "<common>/out-crm-gsheet/v0/src/writer/keboola.wr-google-sheets/out-crm-gsheet-writer",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-crm-snowflake-writer"),

@@ -1,6 +1,6 @@
 [
   {
-    id: "wr-snowflake-blob-storage-db-host",
+    id: "wr-snowflake-db-host",
     name: "Hostname",
     description: "Insert database hostname",
     type: "string",
@@ -9,7 +9,7 @@
     default: "hostname.com",
   },
   {
-    id: "wr-snowflake-blob-storage-db-port",
+    id: "wr-snowflake-db-port",
     name: "Port",
     description: "Insert database port number.",
     type: "string",
@@ -18,7 +18,7 @@
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
-    id: "wr-snowflake-blob-storage-db-user",
+    id: "wr-snowflake-db-user",
     name: "Username",
     description: "Insert database username.",
     type: "string",
@@ -27,7 +27,7 @@
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
-    id: "wr-snowflake-blob-storage-db-password",
+    id: "wr-snowflake-db-password",
     name: "Database Password",
     description: "Insert your password to the database.",
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
@@ -35,7 +35,7 @@
     kind: "hidden",
   },
   {
-    id: "wr-snowflake-blob-storage-db-database",
+    id: "wr-snowflake-db-database",
     name: "Database Name",
     description: "Insert name of your database.",
     type: "string",
@@ -44,7 +44,7 @@
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
-    id: "wr-snowflake-blob-storage-db-schema",
+    id: "wr-snowflake-db-schema",
     name: "Schema",
     description: "Insert database schema.",
     type: "string",
@@ -53,7 +53,7 @@
     showif: "[wr-snowflake-blob-storage-db-host] != ''",
   },
   {
-    id: "wr-snowflake-blob-storage-db-warehouse",
+    id: "wr-snowflake-db-warehouse",
     name: "Warehouse",
     description: "Insert database warehouse.",
     type: "string",

@@ -107,7 +107,7 @@
         },
       ],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-thoughtspot-hubspot-snowflake-writer"),

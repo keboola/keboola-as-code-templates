@@ -67,7 +67,7 @@
         },
       ]),
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") || InputIsAvailable("wr-snowflake-selection") then
+    if InputIsAvailable("wr-snowflake-db-host") || InputIsAvailable("wr-snowflake-selection") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-googleanalytics-snowflake-writer"),

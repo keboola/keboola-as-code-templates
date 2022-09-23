@@ -62,7 +62,7 @@
       path: "<common>/out-mailchimp-googlesheet/writer/keboola.wr-google-sheets/data-destination-out-mailchimp-gsheet",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-mailchimp-snowflake"),

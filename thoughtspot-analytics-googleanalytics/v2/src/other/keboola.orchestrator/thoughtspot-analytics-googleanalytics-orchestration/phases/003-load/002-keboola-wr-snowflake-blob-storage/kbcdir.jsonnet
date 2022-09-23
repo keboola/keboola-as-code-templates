@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("wr-snowflake-blob-storage-db-host") == false && InputIsAvailable("wr-snowflake-selection") == false,
+  isIgnored: InputIsAvailable("wr-snowflake-db-host") == false && InputIsAvailable("wr-snowflake-selection") == false,
 }
