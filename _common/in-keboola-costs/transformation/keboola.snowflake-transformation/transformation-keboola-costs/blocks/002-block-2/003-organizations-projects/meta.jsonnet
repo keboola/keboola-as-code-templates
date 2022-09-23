@@ -1,3 +1,3 @@
 {
-  name: "Organizations & Projects",
+  name: "Projects",
 }

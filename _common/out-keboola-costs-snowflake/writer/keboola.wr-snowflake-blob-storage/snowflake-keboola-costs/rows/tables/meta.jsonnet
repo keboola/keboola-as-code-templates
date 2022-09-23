@@ -1,4 +1,0 @@
-{
-  name: "tables",
-  isDisabled: false,
-}
