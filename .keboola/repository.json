@@ -110,6 +110,90 @@
           "path": "v1"
         }
       ]
+    },
+    {
+      "id": "shopify-to-bigquery",
+      "name": "Shopify to BigQuery",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "path": "shopify-to-bigquery",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-snowflake",
+      "name": "Shopify to Snowflake",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "path": "shopify-to-snowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-googlesheet",
+      "name": "Shopify to Google Sheets",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "path": "shopify-to-googlesheet",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-keboolasnowflake",
+      "name": "Shopify to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Shopify data and change it into actionable insights.",
+      "path": "shopify-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
