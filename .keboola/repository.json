@@ -12,7 +12,7 @@
       "path": "shopify-to-datastudio",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -34,7 +34,7 @@
       "path": "adsplatform-to-googlesheet",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -55,7 +55,7 @@
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -75,7 +75,7 @@
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -95,7 +95,7 @@
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -118,7 +118,7 @@
       "path": "shopify-to-bigquery",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -139,7 +139,7 @@
       "path": "shopify-to-snowflake",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -160,7 +160,7 @@
       "path": "shopify-to-googlesheet",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -181,7 +181,7 @@
       "path": "shopify-to-keboolasnowflake",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
