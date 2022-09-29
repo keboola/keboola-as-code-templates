@@ -12,7 +12,7 @@
       "path": "shopify-to-datastudio",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -23,7 +23,7 @@
             "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -34,7 +34,7 @@
       "path": "adsplatform-to-googlesheet",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -45,7 +45,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-google-sheets"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },{
@@ -55,7 +55,7 @@
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -75,7 +75,7 @@
             "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -95,7 +95,7 @@
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -118,7 +118,7 @@
       "path": "shopify-to-bigquery",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -128,7 +128,7 @@
             "keboola.ex-sklik",
             "keboola.wr-google-bigquery-v2"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -139,7 +139,7 @@
       "path": "shopify-to-snowflake",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -149,7 +149,7 @@
             "keboola.ex-sklik",
             "keboola.wr-snowflake-blob-storage"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -160,7 +160,7 @@
       "path": "shopify-to-googlesheet",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -170,7 +170,7 @@
             "keboola.ex-sklik",
             "keboola.wr-google-sheets"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -181,7 +181,7 @@
       "path": "shopify-to-keboolasnowflake",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -191,7 +191,73 @@
             "keboola.ex-sklik",
             "keboola.wr-snowflake-blob-storage"
           ],
-          "path": "v0"
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-bigquery",
+      "name": "Advertising Platforms to BigQuery",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "path": "adsplatform-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-snowflake",
+      "name": "Advertising Platforms to Snowflake",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "path": "adsplatform-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-keboolasnowflake",
+      "name": "Advertising Platforms to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "path": "adsplatform-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     }
