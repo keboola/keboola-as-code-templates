@@ -23,7 +23,7 @@
             "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -45,7 +45,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-google-sheets"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },{
@@ -128,7 +128,7 @@
             "keboola.ex-sklik",
             "keboola.wr-google-bigquery-v2"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -149,7 +149,7 @@
             "keboola.ex-sklik",
             "keboola.wr-snowflake-blob-storage"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -170,7 +170,7 @@
             "keboola.ex-sklik",
             "keboola.wr-google-sheets"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -191,7 +191,7 @@
             "keboola.ex-sklik",
             "keboola.wr-snowflake-blob-storage"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     }
