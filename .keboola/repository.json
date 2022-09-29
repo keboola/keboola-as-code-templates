@@ -775,7 +775,7 @@
     },
     {
       "id": "keboola-costs",
-      "name": "Keboola Costs to Google Sheets",
+      "name": "Keboola Costs",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
       "path": "keboola-costs",
       "versions": [
