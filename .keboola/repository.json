@@ -194,6 +194,72 @@
           "path": "v1"
         }
       ]
+    },
+    {
+      "id": "adsplatform-to-bigquery",
+      "name": "Advertising Platforms to BigQuery",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "path": "adsplatform-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-snowflake",
+      "name": "Advertising Platforms to Snowflake",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "path": "adsplatform-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-keboolasnowflake",
+      "name": "Advertising Platforms to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "path": "adsplatform-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
     }
   ]
 }
