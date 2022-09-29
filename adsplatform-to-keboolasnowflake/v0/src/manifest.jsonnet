@@ -28,7 +28,16 @@
       componentId: "keboola.ex-google-ads",
       id: ConfigId("keboola-marketingchannels-googleads-data-source"),
       path: "<common>/in-marketingchannels-googleads/extractor/keboola.ex-google-ads/keboola-marketingchannels-googleads-data-source",
-      rows: [],
+      rows: [
+        {
+          id: ConfigRowId("ad-groups"),
+          path: "rows/ad-groups",
+        },
+        {
+          id: ConfigRowId("url-adwords"),
+          path: "rows/url-adwords",
+        },
+      ],
     },
     if InputIsAvailable("ga-from") then
     {
