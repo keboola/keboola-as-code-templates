@@ -786,7 +786,9 @@
           "components": [
             "keboola.ex-telemetry-data",
             "keboola.snowflake-transformation",
-            "keboola.wr-google-sheets"
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-google-bigquery-v2"
           ],
           "path": "v0"
         }
