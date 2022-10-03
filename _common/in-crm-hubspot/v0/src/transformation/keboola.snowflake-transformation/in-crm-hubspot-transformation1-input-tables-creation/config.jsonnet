@@ -96,9 +96,7 @@
           delete_where_values: [],
           destination: "in.c-crm-tr-" + InstanceIdShort() + ".contacts",
           incremental: true,
-          primary_key: [
-            "canonical_vid",
-          ],
+          primary_key: [],
           source: "out_contacts",
         },
         {
