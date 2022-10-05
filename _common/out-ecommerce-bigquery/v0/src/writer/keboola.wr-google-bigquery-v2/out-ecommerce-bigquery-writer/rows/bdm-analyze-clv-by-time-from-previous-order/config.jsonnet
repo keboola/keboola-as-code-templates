@@ -11,7 +11,7 @@
             "ORDERS",
             "UNIQUE_CUSTOMERS",
             "AVG_CLV",
-            "ORDER_TOTAL_PRICE_VAT",
+            "ORDER_TOTAL_PRICE_TAXES",
             "AVG_ORDER_PRICE",
           ],
         },
@@ -46,8 +46,8 @@
             type: "FLOAT",
           },
           {
-            name: "ORDER_TOTAL_PRICE_VAT",
-            dbName: "ORDER_TOTAL_PRICE_VAT",
+            name: "ORDER_TOTAL_PRICE_TAXES",
+            dbName: "ORDER_TOTAL_PRICE_TAXES",
             type: "FLOAT",
           },
           {
