@@ -46,7 +46,7 @@ WITH SC AS
                , SUM(CASE
                          WHEN MA.ORDER_DATE::DATE >= ADD_MONTHS(SNAPSHOT_DATE, $M_REVENUE_MONTHS) AND
                               (MA.ORDER_DATE::DATE < SNAPSHOT_DATE)
-                             THEN MA.ORDER_TOTAL_PRICE_WITHOUT_WAT
+                             THEN MA.ORDER_TOTAL_PRICE_WITHOUT_TAXES
                          ELSE 0
                  END)                                                                AS REVENUE_SUM_3M
 
@@ -108,3 +108,24 @@ SELECT CUSTOMER_ID
               CURRENT_DATE - SNAPSHOT_DATE) AS TIME_AS
      , FIRST_SUCCEEDED_TRANSACTION_DATE
 FROM RFM;
+
+-- adding info about actual status
+ALTER TABLE RFM_FINAL ADD COLUMN actual_state boolean;
+
+UPDATE RFM_FINAL
+SET actual_state = false;
+
+UPDATE RFM_FINAL
+SET actual_state = CASE WHEN act.customer_id is not null THEN true ELSE false END
+FROM
+    (SELECT active.customer_id, active.max_date, min(segment_nr) AS segment
+     FROM RFM_FINAL rfm 
+        INNER JOIN (
+        SELECT customer_id, max(snapshot_date) AS max_date
+        FROM RFM_FINAL
+        WHERE snapshot_date <= current_date()
+        GROUP BY customer_id) AS active
+        ON active.customer_id = rfm.customer_id AND active.max_date = rfm.snapshot_date
+     GROUP BY active.customer_id, active.max_date) act   
+WHERE act.customer_id = RFM_FINAL.customer_id AND act.max_date = RFM_FINAL.snapshot_date
+    AND act.segment = RFM_FINAL.segment_nr;

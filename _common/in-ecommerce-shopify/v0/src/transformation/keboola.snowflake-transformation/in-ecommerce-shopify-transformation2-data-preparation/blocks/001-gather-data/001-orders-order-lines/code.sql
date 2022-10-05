@@ -43,9 +43,9 @@ AS
         O."shipping_address__zip"                             AS SHIPPING_ZIP,
         ''::STRING                                            AS BILLING_TYPE,
         ''::STRING                                            AS SHIPPING_TYPE,
-        O."total_price"                                       AS ORDER_TOTAL_PRICE_WITH_WAT,
-        O."total_price" - O."total_tax"                       AS ORDER_TOTAL_PRICE_WITHOUT_WAT,
-        O."total_tax"                                         AS ORDER_TOTAL_PRICE_VAT,
+        O."total_price"                                       AS ORDER_TOTAL_PRICE_WITH_TAXES,
+        O."total_price" - O."total_tax"                       AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
+        O."total_tax"                                         AS ORDER_TOTAL_PRICE_TAXES,
         ''::TEXT                                              AS CUSTOMER_ID,
         ''::TEXT                                              AS CUSTOMER_REGULARITY_TYPE,
         0::INT                                                AS DAYS_SINCE_PREVIOUS_ORDER

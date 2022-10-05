@@ -22,7 +22,7 @@ AS
             END                                                                                                                 AS PREVIOUS_ORDER
            , (SELECT COUNT(1) FROM "bdm_orders" IO WHERE IO.ORDER_CUSTOMER_EMAIL = O.ORDER_CUSTOMER_EMAIL)                      AS ORDER_COUNT
            , ORDER_CUSTOMER_EMAIL
-           , ORDER_TOTAL_PRICE_WITH_WAT                                                                                         AS ORDER_TOTAL_PRICE_VAT
+           , ORDER_TOTAL_PRICE_WITH_TAXES                                                                                         AS ORDER_TOTAL_PRICE_TAXES
         FROM "bdm_orders" O
         WHERE ORDER_CUSTOMER_EMAIL <> ''
         )
@@ -37,10 +37,10 @@ AS
             ELSE '01     1 order only' 
         END                                                              AS CUSTOMER_CATEGORY_BY_ORDER_COUNT
      , COUNT(1)                                                          AS ORDERS
-     , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                              AS UNIQUE_CUTOMERS
-     , SUM(ORDER_TOTAL_PRICE_VAT) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL) AS AVG_CLV
-     , SUM(ORDER_TOTAL_PRICE_VAT)                                        AS ORDER_TOTAL_PRICE_VAT
-     , AVG(ORDER_TOTAL_PRICE_VAT)                                        AS AVG_ORDER_PRICE
+     , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                              AS UNIQUE_CUSTOMERS
+     , SUM(ORDER_TOTAL_PRICE_TAXES) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL) AS AVG_CLV
+     , SUM(ORDER_TOTAL_PRICE_TAXES)                                        AS ORDER_TOTAL_PRICE_TAXES
+     , AVG(ORDER_TOTAL_PRICE_TAXES)                                        AS AVG_ORDER_PRICE
     FROM PREVIOUS_ORDER_CATEGORY
     GROUP BY CUSTOMER_CATEGORY_BY_ORDER_COUNT
     ORDER BY CUSTOMER_CATEGORY_BY_ORDER_COUNT

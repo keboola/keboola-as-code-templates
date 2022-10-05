@@ -10,6 +10,13 @@ SELECT C."accountGuid"      AS CUSTOMER_ID
      , C."shippingCountry"  AS CUSTOMER_SHIPPING_COUNTRY
      , C."pricelistName"    AS CUSTOMER_PRICE_LIST
      , C."customerGroup"    AS CUSTOMER_GROUP
+     , CASE
+            WHEN C."emailVerified" = 0 THEN 'True'
+            ELSE 'False' 
+        END                             AS VERIFIED_EMAIL
+     , 'Unknown'::VARCHAR AS MARKETING_OPT_IN_LEVEL
+     , 'Unknown'::VARCHAR AS STATE
+     , NULL::BOOLEAN AS ACCEPTS_MARKETING
 FROM "customers" C;
 
 --- try to match customars based on email
@@ -58,7 +65,7 @@ SELECT O.ORDER_ID
         WHERE IO.ORDER_CUSTOMER_EMAIL = O.ORDER_CUSTOMER_EMAIL)                                                                  AS ORDER_COUNT
      , COUNT(*)
              OVER (PARTITION BY ORDER_CUSTOMER_EMAIL ORDER BY ORDER_DATE::DATE ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS ORDER_COUNT_ROLL
-     , SUM(ORDER_TOTAL_PRICE_WITHOUT_WAT)
+     , SUM(ORDER_TOTAL_PRICE_WITHOUT_TAXES)
            OVER (PARTITION BY ORDER_CUSTOMER_EMAIL ORDER BY ORDER_DATE::DATE ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)   AS ORDER_PRICE_ROLL
      , CASE
            WHEN ORDER_COUNT_ROLL >= 14 THEN '15+ total orders'
@@ -70,7 +77,7 @@ SELECT O.ORDER_ID
            WHEN ORDER_COUNT_ROLL = 1 THEN 'New Customer'
            ELSE 'new_customer' END                                                                                               AS CATEGORY_BY_ORDER_COUNT
      , ORDER_CUSTOMER_EMAIL
-     , ORDER_TOTAL_PRICE_VAT
+     , ORDER_TOTAL_PRICE_TAXES
 FROM "bdm_orders" O
 WHERE ORDER_CUSTOMER_EMAIL <> ''
 ORDER BY ORDER_CUSTOMER_EMAIL, ORDER_DATE
@@ -96,3 +103,30 @@ SET O.IS_FIRST_PURCHASE = TRUE
 FROM "order_customer_categories" C
 WHERE O.ORDER_ID = C.ORDER_ID
   AND C.ORDER_COUNT_ROLL = 1;
+
+--UPDATE ORDERS_COUNT AND TOTAL_SPEND
+ALTER TABLE "bdm_customers" 
+ADD COLUMN "ORDERS_COUNT" INTEGER;
+
+UPDATE "bdm_customers" 
+SET "ORDERS_COUNT" =  "o"."count"
+FROM (
+    SELECT CUSTOMER_ID, ORDER_CUSTOMER_EMAIL, COUNT ("o"."ORDER_ID") as "count"
+    FROM "bdm_orders" "o"
+    WHERE IS_SUCESSFUL = true
+    GROUP BY CUSTOMER_ID, ORDER_CUSTOMER_EMAIL) as "o"
+WHERE "o"."CUSTOMER_ID" = "bdm_customers"."CUSTOMER_ID"
+OR lower("o"."ORDER_CUSTOMER_EMAIL") = lower("bdm_customers"."CUSTOMER_EMAIL");
+
+ALTER TABLE "bdm_customers" 
+ADD COLUMN "TOTAL_SPEND" INTEGER;
+
+UPDATE "bdm_customers" 
+SET "TOTAL_SPEND" =  "o"."sum"
+FROM (
+    SELECT CUSTOMER_ID, ORDER_CUSTOMER_EMAIL, SUM ("o"."ORDER_TOTAL_PRICE_TO_PAY") as "sum"
+    FROM "bdm_orders" "o"
+    WHERE IS_SUCESSFUL = true
+    GROUP BY CUSTOMER_ID, ORDER_CUSTOMER_EMAIL) as "o"
+WHERE "o"."CUSTOMER_ID" = "bdm_customers"."CUSTOMER_ID"
+OR lower("o"."ORDER_CUSTOMER_EMAIL") = lower("bdm_customers"."CUSTOMER_EMAIL");
