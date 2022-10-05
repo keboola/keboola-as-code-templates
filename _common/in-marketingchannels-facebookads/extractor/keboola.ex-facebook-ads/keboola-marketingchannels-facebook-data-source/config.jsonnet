@@ -49,7 +49,7 @@
         name: "ads_insights",
         query: {
           path: "ads",
-          fields: "insights.action_breakdowns(action_type).date_preset(last_7d).time_increment(1){ad_id,impressions,reach,inline_link_clicks,spend},adcreatives{id,object_story_spec{page_id,link_data{link}},url_tags}",
+          fields: "insights.action_breakdowns(action_type).time_increment(1){ad_id,impressions,reach,inline_link_clicks,spend},adcreatives{id,object_story_spec{page_id,link_data{link}},url_tags}",
           ids: "",
           limit: "100",
           since: Input("ex-facebook-ads-since"),
