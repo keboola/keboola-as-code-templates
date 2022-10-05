@@ -97,7 +97,7 @@
           destination: "in.c-crm-tr-" + InstanceIdShort() + ".contacts",
           incremental: true,
           primary_key: [
-            "email",
+            "canonical_vid",
           ],
           source: "out_contacts",
         },
