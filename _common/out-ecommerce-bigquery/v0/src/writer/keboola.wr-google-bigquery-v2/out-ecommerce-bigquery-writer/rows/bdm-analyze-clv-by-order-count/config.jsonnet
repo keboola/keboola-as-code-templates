@@ -9,9 +9,9 @@
           columns: [
             "CUSTOMER_CATEGORY_BY_ORDER_COUNT",
             "ORDERS",
-            "UNIQUE_CUTOMERS",
+            "UNIQUE_CUSTOMERS",
             "AVG_CLV",
-            "ORDER_TOTAL_PRICE_VAT",
+            "ORDER_TOTAL_PRICE_TAXES",
             "AVG_ORDER_PRICE",
           ],
         },
@@ -36,8 +36,8 @@
             type: "FLOAT",
           },
           {
-            name: "UNIQUE_CUTOMERS",
-            dbName: "UNIQUE_CUTOMERS",
+            name: "UNIQUE_CUSTOMERS",
+            dbName: "UNIQUE_CUSTOMERS",
             type: "FLOAT",
           },
           {
@@ -46,8 +46,8 @@
             type: "FLOAT",
           },
           {
-            name: "ORDER_TOTAL_PRICE_VAT",
-            dbName: "ORDER_TOTAL_PRICE_VAT",
+            name: "ORDER_TOTAL_PRICE_TAXES",
+            dbName: "ORDER_TOTAL_PRICE_TAXES",
             type: "FLOAT",
           },
           {
