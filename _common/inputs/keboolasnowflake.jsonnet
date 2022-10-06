@@ -38,6 +38,7 @@
     showif: "[wr-snowflake-selection] == 'TEST'",
     type: "string",
     kind: "input",
+    default: "",
   },
   {
     id: "wr-snowflake-blob-storage-db-database",
