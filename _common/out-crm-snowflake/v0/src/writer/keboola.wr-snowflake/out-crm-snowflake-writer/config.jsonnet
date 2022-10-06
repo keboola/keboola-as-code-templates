@@ -8,7 +8,7 @@
       host: Input("wr-snowflake-db-host"),
       user: Input("wr-snowflake-db-user"),
       database: Input("wr-snowflake-db-database"),
-      "#password": Input("wr-snowflake-db-password"),
+      
     },
   },
 }
