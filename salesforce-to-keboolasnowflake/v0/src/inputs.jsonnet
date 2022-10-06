@@ -33,7 +33,7 @@ local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
          {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
           dialogName: "DWH provided by Keboola", 

@@ -34,7 +34,7 @@ local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
           {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake Destination",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
