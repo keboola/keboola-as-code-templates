@@ -38,7 +38,7 @@
     description: ".",
     type: "string",
     kind: "select",
-    default: "LastSixMonths",
+    default: "LastThreeMonths",
     options: [
       {
         value: "LastWeek",
