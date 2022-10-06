@@ -35,10 +35,9 @@
     id: "wr-snowflake-blob-storage-db-password",
     name: "Database Password",
     description: "Insert your password to the database.",
-    showif: "[wr-snowflake-selection] == 'TEST'",
+    
     type: "string",
     kind: "input",
-    default: "",
   },
   {
     id: "wr-snowflake-blob-storage-db-database",
