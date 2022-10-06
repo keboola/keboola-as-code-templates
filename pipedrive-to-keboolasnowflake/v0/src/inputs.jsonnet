@@ -1,4 +1,4 @@
-local kbc_snowflake = import "/<common>/inputs/keboolasnowflake.jsonnet";
+local kbc_snowflake = import "/<common>/inputs/snowflake.jsonnet";
 local pipedrive = import "/<common>/in-crm-pipedrive/inputs.jsonnet";
 
 {
