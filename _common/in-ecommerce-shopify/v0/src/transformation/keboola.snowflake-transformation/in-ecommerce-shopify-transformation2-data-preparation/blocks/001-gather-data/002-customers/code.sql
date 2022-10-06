@@ -84,7 +84,7 @@ AS
             WHERE IO.ORDER_CUSTOMER_EMAIL = O.ORDER_CUSTOMER_EMAIL)                                                            AS ORDER_COUNT,
             COUNT(*)
                   OVER (PARTITION BY ORDER_CUSTOMER_EMAIL ORDER BY ORDER_DATE::DATE ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS ORDER_COUNT_ROLL,
-            SUM(ORDER_TOTAL_PRICE_WITHOUT_WAT)
+            SUM(ORDER_TOTAL_PRICE_WITHOUT_TAXES)
                   OVER (PARTITION BY ORDER_CUSTOMER_EMAIL ORDER BY ORDER_DATE::DATE ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)   AS ORDER_PRICE_ROLL,
             CASE
                   WHEN ORDER_COUNT_ROLL >= 14 THEN '15+ total orders'
@@ -97,7 +97,7 @@ AS
                   ELSE 'new_customer' 
             END                                                                                                                AS CATEGORY_BY_ORDER_COUNT,
             ORDER_CUSTOMER_EMAIL,
-            ORDER_TOTAL_PRICE_VAT
+            ORDER_TOTAL_PRICE_TAXES
 FROM "bdm_orders" O
 WHERE ORDER_CUSTOMER_EMAIL <> ''
 ORDER BY ORDER_CUSTOMER_EMAIL, ORDER_DATE;
