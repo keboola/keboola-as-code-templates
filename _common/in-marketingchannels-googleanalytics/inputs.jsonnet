@@ -24,7 +24,7 @@
     type: "string",
     kind: "select",
     rules: "required",
-    default: "-6 months",
+    default: "-3 months",
     options: [
       {
         value: '-1 week',
