@@ -46,7 +46,7 @@ WITH SC AS
                , SUM(CASE
                          WHEN MA.ORDER_DATE::DATE >= ADD_MONTHS(SNAPSHOT_DATE, $M_REVENUE_MONTHS) AND
                               (MA.ORDER_DATE::DATE < SNAPSHOT_DATE)
-                             THEN MA.ORDER_TOTAL_PRICE_WITHOUT_WAT
+                             THEN MA.ORDER_TOTAL_PRICE_WITHOUT_TAXES
                          ELSE 0
                  END)                                                                AS REVENUE_SUM_3M
 

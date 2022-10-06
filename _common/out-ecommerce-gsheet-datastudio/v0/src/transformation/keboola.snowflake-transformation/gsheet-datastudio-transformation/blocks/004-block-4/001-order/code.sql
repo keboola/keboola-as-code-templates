@@ -1,6 +1,6 @@
 CREATE TABLE "bdmOrdersEnrich" AS
 SELECT  
-        "bdmO"."ORDER_TOTAL_PRICE_WITH_WAT",
+        "bdmO"."ORDER_TOTAL_PRICE_WITH_TAXES" AS "ORDER_TOTAL_PRICE_WITH_VAT",
         "bdmO"."REFERER",
         "bdmO"."SOURCE",
         "bdmO"."ORDER_ID",
@@ -11,7 +11,7 @@ SELECT
         "bdmO"."CHANNEL",
         "bdmO"."BILLING_CITY",	
         "bdmO"."BILLING_ZIP",
-        "bdmO"."ORDER_TOTAL_PRICE_WITHOUT_WAT",
+        "bdmO"."ORDER_TOTAL_PRICE_WITHOUT_TAXES" AS "ORDER_TOTAL_PRICE_WITHOUT_VAT",
         "bdmO"."SHIPPING_COUNTRY",
         "bdmO"."DAYS_SINCE_PREVIOUS_ORDER",
         "bdmO"."IS_FIRST_PURCHASE",
@@ -22,7 +22,7 @@ SELECT
         "bdmO"."ORDER_REMARK",
         "bdmO"."BILLING_COUNTRY",
         "bdmO"."CUSTOMER_ID",
-        "bdmO"."ORDER_TOTAL_PRICE_VAT",
+        "bdmO"."ORDER_TOTAL_PRICE_TAXES" AS "ORDER_TOTAL_PRICE_VAT",
         "bdmO"."ORDER_WEIGHT",
         "bdmO"."SHIPPING_CITY",
         "bdmO"."SHIPPING_TYPE",
