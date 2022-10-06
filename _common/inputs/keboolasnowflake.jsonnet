@@ -37,7 +37,7 @@
     description: "Insert your password to the database.",
     showif: "[wr-snowflake-selection] == 'TEST'",
     type: "string",
-    kind: "hidden",
+    kind: "input",
   },
   {
     id: "wr-snowflake-blob-storage-db-database",
