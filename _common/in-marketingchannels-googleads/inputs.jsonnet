@@ -23,7 +23,7 @@
     description: "",
     type: "string",
     kind: "select",
-    default: "-6 months",
+    default: "-3 months",
     options: [
       {
         value: "-1 week",

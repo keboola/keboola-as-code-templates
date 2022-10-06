@@ -21,7 +21,7 @@ AS
                END                                                                                            AS PREVIOUS_ORDER,
                (SELECT COUNT(1) FROM "bdm_orders" io WHERE io.ORDER_CUSTOMER_EMAIL = o.ORDER_CUSTOMER_EMAIL)  AS ORDER_COUNT,
                ORDER_CUSTOMER_EMAIL,
-               ORDER_TOTAL_PRICE_WITH_WAT                                                                     AS ORDER_TOTAL_PRICE_VAT
+               ORDER_TOTAL_PRICE_WITH_TAXES                                                                     AS ORDER_TOTAL_PRICE_TAXES
           FROM "bdm_orders" o
           WHERE ORDER_CUSTOMER_EMAIL <> ''
           )
@@ -30,9 +30,9 @@ SELECT
        PREVIOUS_ORDER                                                      AS TIME_FROM_PREVIOUS_ORDER
      , COUNT(1)                                                            AS ORDERS
      , COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)                                AS UNIQUE_CUSTOMERS
-     , SUM(ORDER_TOTAL_PRICE_VAT) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)   AS AVG_CLV
-     , SUM(ORDER_TOTAL_PRICE_VAT)                                          AS ORDER_TOTAL_PRICE_VAT
-     , AVG(ORDER_TOTAL_PRICE_VAT)                                          AS AVG_ORDER_PRICE
+     , SUM(ORDER_TOTAL_PRICE_TAXES) / COUNT(DISTINCT ORDER_CUSTOMER_EMAIL)   AS AVG_CLV
+     , SUM(ORDER_TOTAL_PRICE_TAXES)                                          AS ORDER_TOTAL_PRICE_TAXES
+     , AVG(ORDER_TOTAL_PRICE_TAXES)                                          AS AVG_ORDER_PRICE
 FROM previous_order_category
 GROUP BY PREVIOUS_ORDER
 ORDER BY PREVIOUS_ORDER;
