@@ -1,4 +1,4 @@
-local kbc_snowflake = import "/<common>/inputs/keboolasnowflake.jsonnet";
+local kbc_snowflake = import "/<common>/inputs/keboolasnowflakev2.jsonnet";
 local salesforce = import "/<common>/in-crm-salesforce/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
