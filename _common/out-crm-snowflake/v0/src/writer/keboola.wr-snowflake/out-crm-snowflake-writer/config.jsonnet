@@ -1,14 +1,14 @@
 {
   parameters: {
     db: {
-      port: if InputIsAvailable("wr-snowflake-db-port") == true then Input("wr-snowflake-db-port") else "",
-      schema: if InputIsAvailable("wr-snowflake-db-schema") == true then Input("wr-snowflake-db-schema") else "",
-      warehouse: if InputIsAvailable("wr-snowflake-db-warehouse") == true then Input("wr-snowflake-db-warehouse") else "",
+      port: Input("wr-snowflake-db-port"),
+      schema: Input("wr-snowflake-db-schema"),
+      warehouse: Input("wr-snowflake-db-warehouse"),
       driver: "snowflake",
-      host: if InputIsAvailable("wr-snowflake-db-host") == true then Input("wr-snowflake-db-host") else "",
-      user: if InputIsAvailable("wr-snowflake-db-user") == true then Input("wr-snowflake-db-user") else "", 
-      database: if InputIsAvailable("wr-snowflake-db-database") == true then Input("wr-snowflake-db-database") else "", 
-      "#password": if InputIsAvailable("wr-snowflake-db-password") == true then Input("wr-snowflake-db-password") else "", 
+      host: Input("wr-snowflake-db-host"),
+      user: Input("wr-snowflake-db-user"),
+      database: Input("wr-snowflake-db-database"),
+      "#password": Input("wr-snowflake-db-password"),
     },
   },
 }
