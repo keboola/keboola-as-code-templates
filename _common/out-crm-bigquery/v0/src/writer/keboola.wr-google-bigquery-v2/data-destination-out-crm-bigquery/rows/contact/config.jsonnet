@@ -23,7 +23,7 @@
     tables: [
       {
         dbName: "contact",
-        tableId: "out.c-crm-wr-ycRsSjGx.contact",
+        tableId: "out.c-crm-wr-" + InstanceIdShort() + ".contact",
         incremental: true,
         items: [
           {

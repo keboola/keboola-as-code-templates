@@ -37,7 +37,7 @@ local googlesheet = import "/<common>/out-typeform-gsheet/inputs.jsonnet";
           name: "Google Sheets",
           description: "Load to data into Google Sheets",
           dialogName: "Google Sheets Destination", 
-          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1liGkoSKbWXSpWaSg5qHo_sLEmQWEzcCxdoXsd_wTH_U) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/u/2/d/1uETGeTPzooCiFD9Wi2tKSyRjtH2CLXlBVBWZuWIQ88w) into your drive. Copy the text between 'spreadsheets/d/' and '/edit', and paste it below.",
           inputs: googlesheet,  
         },
       ]
