@@ -49,11 +49,11 @@
       path: "<common>/out-crm-gsheet/v0/src/writer/keboola.wr-google-sheets/out-crm-gsheet-writer",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-crm-snowflake-writer"),
-      path: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-crm-snowflake-writer",
+      path: "<common>/out-crm-snowflake/v0/src/writer/keboola.wr-snowflake/out-crm-snowflake-writer",
       rows: [
         {
           id: ConfigRowId("activity"),
