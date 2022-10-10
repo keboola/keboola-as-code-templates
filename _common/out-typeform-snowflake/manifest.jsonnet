@@ -1,9 +1,9 @@
 { 
   configurations: [
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: "keboola.wr-snowflake",
       id: ConfigId("data-destination-out-typeform-snowflake"),
-      path: "writer/keboola.wr-snowflake-blob-storage/data-destination-out-typeform-snowflake",
+      path: "writer/keboola.wr-snowflake/data-destination-out-typeform-snowflake",
       rows: [
         {
           id: ConfigRowId("answer-option-001"),

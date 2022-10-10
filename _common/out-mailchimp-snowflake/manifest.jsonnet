@@ -1,9 +1,9 @@
 { 
   configurations: [
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-mailchimp-snowflake"),
-      path: "writer/keboola.wr-snowflake-blob-storage/data-destination-out-mailchimp-snowflake",
+      path: "writer/keboola.wr-snowflake/data-destination-out-mailchimp-snowflake",
       rows: [
         {
           id: ConfigRowId("campaign-001"),
