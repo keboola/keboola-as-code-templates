@@ -37,9 +37,9 @@
       metadata: { "KBC.configuration.folderName": "[MGMT-ASANA]"}
     },
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-mgmt-snowflake"),
-      path: "<common>/out-mgmt-snowflake/writer/keboola.wr-snowflake-blob-storage/data-destination-out-mgmt-snowflake",
+      path: "<common>/out-mgmt-snowflake/writer/keboola.wr-snowflake/data-destination-out-mgmt-snowflake",
       rows: [
         {
           id: ConfigRowId("project-001"),
