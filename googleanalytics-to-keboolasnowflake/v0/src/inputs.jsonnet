@@ -1,4 +1,4 @@
-local kbc_snowflake = import "/<common>/inputs/keboolasnowflake.jsonnet";
+local kbc_snowflake = import "/<common>/inputs/keboolasnowflakev2.jsonnet";
 local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonnet";
 local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/inputs.jsonnet";
 {
@@ -48,7 +48,7 @@ local searchconsole = import "/<common>/in-googleanalytics-searchconsole/v0/src/
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
           dialogName: "DWH provided by Keboola", 
