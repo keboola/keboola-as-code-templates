@@ -35,7 +35,7 @@ local bigquery = import "/<common>/out-typeform-bigquery/inputs.jsonnet";
       required: "optional",
       steps: [
           {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 
