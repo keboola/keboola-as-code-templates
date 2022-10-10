@@ -1,4 +1,4 @@
-local kbc_snowflake = import "/<common>/inputs/keboolasnowflake.jsonnet";
+local kbc_snowflake = import "/<common>/inputs/keboolasnowflakev2.jsonnet";
 local shoptet = import "/<common>/in-ecommerce-shoptet/v0/src/inputs.jsonnet";
 local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
 local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet";
@@ -67,7 +67,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
           dialogName: "DWH provided by Keboola", 

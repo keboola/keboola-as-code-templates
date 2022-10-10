@@ -52,11 +52,11 @@
       path: "<common>/out-typeform-gsheet/writer/keboola.wr-google-sheets/data-destination-out-typeform-gsheet",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-typeform-snowflake"),
-      path: "<common>/out-typeform-snowflake/writer/keboola.wr-snowflake-blob-storage/data-destination-out-typeform-snowflake",
+      path: "<common>/out-typeform-snowflake/writer/keboola.wr-snowflake/data-destination-out-typeform-snowflake",
       rows: [
         {
           id: ConfigRowId("answer-option-001"),

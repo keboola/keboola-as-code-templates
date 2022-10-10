@@ -33,7 +33,7 @@ local snowflake = import "/<common>/out-mgmt-snowflake/inputs.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 

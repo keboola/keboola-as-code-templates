@@ -33,7 +33,7 @@ local snowflake = import "/<common>/out-mailchimp-snowflake/inputs.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 

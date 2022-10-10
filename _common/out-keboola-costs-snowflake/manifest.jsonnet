@@ -1,9 +1,9 @@
 {
   configurations:[
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("snowflake-keboola-costs"),
-      path: "writer/keboola.wr-snowflake-blob-storage/snowflake-keboola-costs",
+      path: "writer/keboola.wr-snowflake/snowflake-keboola-costs",
       rows: [
         {
           id: ConfigRowId("components"),

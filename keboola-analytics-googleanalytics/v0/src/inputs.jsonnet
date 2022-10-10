@@ -50,7 +50,7 @@ local googlesheet = import "/<common>/out-googleanalytics-gsheet/v0/src/inputs.j
       required: "optional",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Snowflake - Destination",
           dialogName: "Snowflake Destination",

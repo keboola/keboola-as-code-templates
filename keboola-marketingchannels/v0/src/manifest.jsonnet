@@ -128,11 +128,11 @@
       path: "<common>/out-marketingchannels-gsheet/writer/keboola.wr-google-sheets/keboola-marketingchannels-googlesheet-data-destination",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),
-      path: "<common>/out-marketingchannels-snowflake/writer/keboola.wr-snowflake-blob-storage/keboola-marketingchannels-snowflake-data-destination",
+      path: "<common>/out-marketingchannels-snowflake/writer/keboola.wr-snowflake/keboola-marketingchannels-snowflake-data-destination",
       rows: std.filter(function(v) v != null,[
         if InputIsAvailable("ga-from") then
         {

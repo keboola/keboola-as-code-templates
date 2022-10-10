@@ -28,11 +28,11 @@
       path: "<common>/out-keboola-costs-gsheet/writer/keboola.wr-google-sheets/google-sheets-keboola-costs",
       rows: [],
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") then
+    if InputIsAvailable("wr-snowflake-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("snowflake-keboola-costs"),
-      path: "<common>/out-keboola-costs-snowflake/writer/keboola.wr-snowflake-blob-storage/snowflake-keboola-costs",
+      path: "<common>/out-keboola-costs-snowflake/writer/keboola.wr-snowflake/snowflake-keboola-costs",
       rows: [
         {
           id: ConfigRowId("components"),
