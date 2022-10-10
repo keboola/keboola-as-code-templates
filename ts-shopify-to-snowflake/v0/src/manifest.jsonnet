@@ -37,9 +37,9 @@
       metadata: { "KBC.configuration.folderName": "[THOUGHTSPOT-SHOPIFY-SNOWFLAKE]"}
     },
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-ecommerce-snowflake-writer"),
-      path: "<common>/out-ecommerce-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-ecommerce-snowflake-writer",
+      path: "<common>/out-ecommerce-snowflake/v0/src/writer/keboola.wr-snowflake/out-ecommerce-snowflake-writer",
       rows: std.filter(function(v) v != null,[
         {
           id: ConfigRowId("bdm-analyze-clv-by-order-count-001"),
