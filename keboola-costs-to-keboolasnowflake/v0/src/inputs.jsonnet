@@ -1,4 +1,4 @@
-local kbc_snowflake = import "/<common>/inputs/keboolasnowflake.jsonnet";
+local kbc_snowflake = import "/<common>/inputs/keboolasnowflakev2.jsonnet";
 
 {
   stepsGroups: [
@@ -33,7 +33,7 @@ local kbc_snowflake = import "/<common>/inputs/keboolasnowflake.jsonnet";
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
           dialogName: "DWH provided by Keboola", 

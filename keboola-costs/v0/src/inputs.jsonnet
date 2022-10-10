@@ -34,7 +34,7 @@ local bigquery = import "/<common>/out-keboola-costs-bigquery/v0/src/inputs.json
       required: "optional",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load to data into Snowflake",
           dialogName: "Snowflake Destination", 
