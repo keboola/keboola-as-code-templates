@@ -4,9 +4,6 @@
     since: Input("ex-google-ads-since"),
     until: Input("ex-google-ads-until"),
     name: "ad_groups",
-    primary: [
-      "adGroupId",
-      "segmentsDate",
-    ],
+    primary: [],
   },
 }
