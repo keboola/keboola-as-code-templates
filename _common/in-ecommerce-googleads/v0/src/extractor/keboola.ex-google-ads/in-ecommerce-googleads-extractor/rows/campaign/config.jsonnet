@@ -4,9 +4,6 @@
     query: "SELECT campaign.name, metrics.clicks, metrics.impressions, metrics.cost_micros, segments.date FROM campaign",
     since: Input("ex-google-ads-since"),
     until: Input("ex-google-ads-until"),
-    primary: [
-      "segmentsDate",
-      "campaignName",
-    ],
+    primary: [],
   },
 }
