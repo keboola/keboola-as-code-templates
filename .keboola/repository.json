@@ -1089,7 +1089,7 @@
     },
     {
       "id": "shopify-to-keboolasnowflake",
-      "name": "Shopify to Snowflake",
+      "name": "Shopify to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Shopify data and change it into actionable insights.",
       "path": "shopify-to-keboolasnowflake",
       "versions": [
