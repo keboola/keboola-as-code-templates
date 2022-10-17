@@ -9,6 +9,19 @@
       path: "other/keboola.orchestrator/flow-keboola-metadata-to-datahub",
       rows: [],
     },
+    {
+      componentId: "keboola.scheduler",
+      id: ConfigId("scheduler"),
+      path: "schedules/scheduler",
+      relations: [
+        {
+          componentId: "keboola.orchestrator",
+          configId: ConfigId("flow-keboola-metadata-to-datahub"),
+          type: "schedulerFor"
+        }
+      ],
+      rows: []
+    },
     if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
     {
       componentId: "kds-team.ex-kbc-project-metadata-v2",
