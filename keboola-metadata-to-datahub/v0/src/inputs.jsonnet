@@ -6,8 +6,8 @@
       steps: [
         {
           icon: "common:settings",
-          name: "More information",
-          description: "About Telemetry and Metadata",
+          name: "Setup",
+          description: "Set up Telemetry and Metadata",
           dialogName: "Telemetry and Metadata",
           dialogDescription: "To run Metadata data source we need to know your storage token.",
           inputs: [
