@@ -9,23 +9,23 @@
           name: "More information",
           description: "About Telemetry and Metadata",
           dialogName: "Telemetry and Metadata",
-          dialogDescription: "Do you already have Telemetry and Metadata configurations? If no, we will create them for you. If yes, please, tell us the bucket name, they are in.",
+          dialogDescription: "To run Metadata data source we need to know your token.",
           inputs: [
             {
-              id: "own-data-source",
-              name: "Existing configurations",
-              description: "Do you regularly extract data from Telemetry and Metadata?",
+              id: "metadata-level",
+              name: "Level of Metadata source",
+              description: "Do you want to get data in project or organization level?",
               type: "string",
               kind: "select",
               rules: "required",
               options:[
                 {
-                  value: 'YES',
-                  label:'YES'
+                  value: 'Project',
+                  label:'Project'
                 },
                 {
-                  value: 'NO',
-                  label:'NO'
+                  value: 'Organization',
+                  label:'Organization'
                 },
               ],
             },
@@ -36,7 +36,25 @@
               type: "string",
               kind: "hidden",
               rules: "required",
-              showif: "[own-data-source] == 'NO'",
+              showif: "[metadata-level] == 'Project'"
+            },
+            {
+              id: "ex-kbc-project-metadata-v2-master-token-0-token",
+              name: "Master Access Token",
+              description: "Insert management token of your organization.",
+              type: "string",
+              kind: "hidden",
+              rules: "required",
+              showif: "[metadata-level] == 'Organization'"
+            },
+            {
+              id: "ex-kbc-project-metadata-v2-master-token-0-org-id",
+              name: "Organization ID",
+              description: "The ID can be found in the URL of the organization page.",
+              type: "string",
+              kind: "input",
+              default: "XXX",
+              showif: "[metadata-level] == 'Organization'"
             },
             {
               id: "metadata-folder",
@@ -46,7 +64,7 @@
               kind: "input",
               rules: "required",
               default: "kds-team-ex-kbc-project-metadata-v2-12345678",
-              showif: "[own-data-source] == 'YES'",
+              showif: "[ex-kbc-project-metadata-v2-tokens-0-key] == 'YES'",
             },
             {
               id: "telemetry-folder",
@@ -56,7 +74,7 @@
               kind: "input",
               rules: "required",
               default: "keboola-ex-telemetry-data-12345678",
-              showif: "[own-data-source] == 'YES'",
+              showif: "[ex-kbc-project-metadata-v2-tokens-0-key] == 'YES'",
             },
           ],
         },
