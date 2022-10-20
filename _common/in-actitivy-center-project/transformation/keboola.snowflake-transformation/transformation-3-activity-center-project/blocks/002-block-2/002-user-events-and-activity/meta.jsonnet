@@ -1,3 +1,0 @@
-{
-  name: "User Events & Activity",
-}
