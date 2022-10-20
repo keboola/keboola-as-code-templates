@@ -50,7 +50,7 @@
             {
               id: "ex-kbc-project-metadata-v2-master-token-0-org-id",
               name: "Organization ID",
-              description: "Enter your Organization ID, which can be found in the URL on the organization page.",
+              description: "Organization ID is visible in URL on the organization page.",
               type: "string",
               kind: "input",
               default: "XXX",
