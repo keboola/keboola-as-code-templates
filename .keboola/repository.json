@@ -1187,7 +1187,7 @@
     {
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
-      "description": "Get data about telemetry and metadata into DataHub. DataHub enables data discovery, data observability and federated governance that helps tame the complexity of keboola ecosystem.",
+      "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
       "path": "keboola-metadata-to-datahub",
       "versions": [
         {
@@ -1203,7 +1203,7 @@
         },
         {
           "version": "1.0.1",
-          "description": "support of triggers needed",
+          "description": "",
           "stable": false,
           "components": [
             "keboola.ex-telemetry-data",
@@ -1211,6 +1211,17 @@
             "kds-team.app-datahub"
           ],
           "path": "v1"
+        },
+        {
+          "version": "0.0.0",
+          "description": "support of triggers needed",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "kds-team.ex-kbc-project-metadata-v2",
+            "kds-team.app-datahub"
+          ],
+          "path": "v2"
         }
       ]
     }
