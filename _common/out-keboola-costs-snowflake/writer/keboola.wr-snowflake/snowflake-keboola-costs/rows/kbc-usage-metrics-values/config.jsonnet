@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values",
+    tableId: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_usage_metrics_values",
     dbName: "kbc_usage_metrics_values",
     incremental: true,
     primaryKey: [
@@ -141,8 +141,8 @@
     input: {
       tables: [
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values",
-          destination: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values.csv",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_usage_metrics_values",
+          destination: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_usage_metrics_values.csv",
           columns: [
             "metrics_values_id",
             "kbc_project_id",
