@@ -88,7 +88,7 @@
           icon: "component:kds-team.ex-kbc-project-metadata-v2",
           name: "KBC Project Metadata",
           description: "Import KBC Project Metadata",
-          dialogName: "KBC Project Metadata Source",
+          dialogName: "KBC Project Metadata",
           dialogDescription: "This source component imports data about your Keboola project.",
           inputs: []
         },
