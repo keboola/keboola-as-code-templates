@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_usage_metrics_values",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_usage_metrics_values",
           destination: "kbc_usage_metrics_values",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_component_configuration_version",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_component_configuration_version",
           destination: "kbc_component_configuration_version",
           where_column: "",
           where_values: [],
@@ -20,7 +20,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_snowflake_stats",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_snowflake_stats",
           destination: "kbc_snowflake_stats",
           where_column: "",
           where_values: [],
@@ -28,7 +28,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_component_configuration",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_component_configuration",
           destination: "kbc_component_configuration",
           where_column: "",
           where_values: [],
@@ -36,7 +36,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_bucket_snapshot",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_bucket_snapshot",
           destination: "kbc_bucket_snapshot",
           where_column: "",
           where_values: [],
@@ -44,7 +44,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_project",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_project",
           destination: "kbc_project",
           where_column: "",
           where_values: [],
@@ -52,7 +52,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_project_snapshot",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_project_snapshot",
           destination: "kbc_project_snapshot",
           where_column: "",
           where_values: [],
@@ -60,7 +60,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_job",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_job",
           destination: "kbc_job",
           where_column: "",
           where_values: [],
@@ -68,7 +68,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_project_user",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_project_user",
           destination: "kbc_project_user",
           where_column: "",
           where_values: [],
@@ -76,7 +76,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".kbc_table_snapshot",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".kbc_table_snapshot",
           destination: "kbc_table_snapshot",
           where_column: "",
           where_values: [],
@@ -84,7 +84,7 @@
           columns: [],
         },
         {
-          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-keboola-costs") + ".security_event",
+          source: "in.c-keboola-ex-telemetry-data-" + ConfigId("telemetry-activity-center-project") + ".security_event",
           destination: "security_event",
           where_column: "",
           where_values: [],
