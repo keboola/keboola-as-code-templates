@@ -75,7 +75,7 @@ local snowflake = import "/<common>/out-marketingchannels-snowflake/inputs.jsonn
       required: "all",
       steps: [
         {
-          icon: "component:keboola.wr-snowflake-blob-storage",
+          icon: "component:"+SnowflakeWriterComponentId(),
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
