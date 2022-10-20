@@ -11,8 +11,8 @@
     },
     {
       componentId: "keboola.ex-telemetry-data",
-      id: ConfigId("telemetry-keboola-costs"),
-      path: "<common>/in-keboola-costs/extractor/keboola.ex-telemetry-data/telemetry-keboola-costs",
+      id: ConfigId("telemetry-activity-center-project"),
+      path: "<common>/in-actitivy-center-project/extractor/keboola.ex-telemetry-data/telemetry-activity-center-project",
       rows: [],
     },
     {

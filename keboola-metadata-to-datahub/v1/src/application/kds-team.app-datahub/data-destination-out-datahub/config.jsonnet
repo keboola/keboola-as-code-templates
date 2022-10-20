@@ -3,7 +3,7 @@
     input: {
       tables: [
         {
-          source: "out.c-datahub.table-level-metadata",
+          source: "out.c-datahub-"+InstanceIdShort()+".table-level-metadata",
           destination: "table-level-metadata.csv",
           where_column: "",
           where_values: [],
@@ -11,7 +11,7 @@
           columns: [],
         },
         {
-          source: "out.c-datahub.storage_inputs_and_outputs",
+          source: "out.c-datahub-"+InstanceIdShort()+".storage_inputs_and_outputs",
           destination: "storage-inputs-and-outputs.csv",
           where_column: "",
           where_values: [],

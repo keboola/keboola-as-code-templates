@@ -6,80 +6,98 @@
       steps: [
         {
           icon: "common:settings",
-          name: "More information",
-          description: "About Telemetry and Metadata",
+          name: "Setup",
+          description: "Set up Telemetry and Metadata",
           dialogName: "Telemetry and Metadata",
-          dialogDescription: "Do you already have Telemetry and Metadata configurations? If no, we will create them for you. If yes, please, tell us the bucket name, they are in.",
+          dialogDescription: "To run the Metadata source component we need to know your storage token or master token and organisation ID. It depend if you want to use this template on project or organization level.",
           inputs: [
             {
-              id: "own-data-source",
-              name: "Existing configurations",
-              description: "Do you regularly extract data from Telemetry and Metadata?",
+              id: "metadata-level",
+              name: "Level of Metadata source",
+              description: "Do you want to get data on project or organization level?",
               type: "string",
               kind: "select",
               rules: "required",
               options:[
                 {
-                  value: 'YES',
-                  label:'YES'
+                  value: 'Project',
+                  label:'Only for this Project'
                 },
                 {
-                  value: 'NO',
-                  label:'NO'
+                  value: 'Organization',
+                  label:'For whole Organization'
                 },
               ],
             },
             {
               id: "ex-kbc-project-metadata-v2-tokens-0-key",
               name: "Storage Token",
-              description: "Insert Storage Token from your project.",
+              description: "Enter the storage token from your project.",
               type: "string",
               kind: "hidden",
               rules: "required",
-              showif: "[own-data-source] == 'NO'",
+              showif: "[metadata-level] == 'Project'"
+            },
+            {
+              id: "ex-kbc-project-metadata-v2-master-token-0-token",
+              name: "Master Access Token",
+              description: "Enter the management token for your organization.",
+              type: "string",
+              kind: "hidden",
+              rules: "required",
+              showif: "[metadata-level] == 'Organization'"
+            },
+            {
+              id: "ex-kbc-project-metadata-v2-master-token-0-org-id",
+              name: "Organization ID",
+              description: "Enter your Organization ID, which can be found in the URL on the organization page.",
+              type: "string",
+              kind: "input",
+              default: "XXX",
+              showif: "[metadata-level] == 'Organization'"
             },
             {
               id: "metadata-folder",
               name: "Metadata Bucket",
-              description: "Insert the bucket name of the data from Metadata data source",
+              description: "Enter the bucket name of the Metadata source component.",
               type: "string",
               kind: "input",
               rules: "required",
               default: "kds-team-ex-kbc-project-metadata-v2-12345678",
-              showif: "[own-data-source] == 'YES'",
+              showif: "[ex-kbc-project-metadata-v2-tokens-0-key] == 'YES'",
             },
             {
               id: "telemetry-folder",
               name: "Telemetry Bucket",
-              description: "Insert the bucket name of the data extracted from Telemetry.",
+              description: "Enter the bucket name of the Telemetry source component.",
               type: "string",
               kind: "input",
               rules: "required",
               default: "keboola-ex-telemetry-data-12345678",
-              showif: "[own-data-source] == 'YES'",
+              showif: "[ex-kbc-project-metadata-v2-tokens-0-key] == 'YES'",
             },
           ],
         },
       ],
     },
     {
-      description: "Data Source",
+      description: "Source component",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.ex-kbc-project-metadata-v2",
           name: "KBC Project Metadata",
-          description: "KBC Project Metadata - Data Source",
-          dialogName: "KBC Project Metadata",
-          dialogDescription: "This data source is getting data about your Keboola project.",
+          description: "Import KBC Project Metadata",
+          dialogName: "KBC Project Metadata Source",
+          dialogDescription: "This source component imports data about your Keboola project.",
           inputs: []
         },
         {
           icon: "component:keboola.ex-telemetry-data",
-          name: "Telemetry data",
-          description: "Telemetry data - Data Source",
-          dialogName: "Telemetry - Data Source",
-          dialogDescription: "This data source is getting data about your Keboola project.",
+          name: "Telemetry Data",
+          description: "Import Telemetry data",
+          dialogName: "Telemetry Source",
+          dialogDescription: "This source component imports data about your Keboola project.",
           inputs: [],
         },
       ],
@@ -97,28 +115,28 @@
       ]
     },
     {
-      description: "Data Destination",
+      description: "Destination component",
       required: "all",
       steps: [
          {
           icon: "component:kds-team.app-datahub",
           name: "DataHub",
-          description: "The metadata platform for modern data stack",
-          dialogName: "DataHub application", 
-          dialogDescription: "Use the metadata platform for modern data stack which will help you to have your data organized.",
+          description: "Load data into DataHub",
+          dialogName: "DataHub destination", 
+          dialogDescription: "This destination component loads your Telemetry data and metadata into DataHub.",
           inputs:[
             {
               id: "app-datahub-datahub-token",
-              name: "Datahub Token",
-              description: "Insert your Datahub Token",
+              name: "DataHub Token",
+              description: "Enter your DataHub Token",
               type: "string",
               kind: "hidden",
               rules: "required"
             },
             {
               id: "app-datahub-server-address",
-              name: "Datahub server address",
-              description: "Set URL or IP in format (http://IP:PORT)",
+              name: "DataHub server address",
+              description: "Enter URL or IP in the format of http://IP:PORT",
               type: "string",
               kind: "input",
               default: "URL",

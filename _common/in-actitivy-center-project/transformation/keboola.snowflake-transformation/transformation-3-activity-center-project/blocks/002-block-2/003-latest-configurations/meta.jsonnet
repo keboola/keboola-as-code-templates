@@ -1,3 +1,0 @@
-{
-  name: "Latest Configurations",
-}
