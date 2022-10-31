@@ -1224,6 +1224,23 @@
           "path": "v2"
         }
       ]
+    },
+    {
+      "id": "hubspot-demo",
+      "name": "HubSpot DEMO",
+      "description": "Pipeline for transforming Hubspot Data.",
+      "path": "hubspot-demo",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
