@@ -67,11 +67,11 @@
         },
       ]),
     },
-    if InputIsAvailable("wr-snowflake-blob-storage-db-host") || InputIsAvailable("wr-snowflake-selection") then
+    if InputIsAvailable("wr-snowflake-db-host") || InputIsAvailable("wr-snowflake-selection") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("out-googleanalytics-snowflake-writer"),
-      path: "<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake-blob-storage/out-thoughtspot-gaa-snowflake-writer",
+      path: "<common>/out-thoughtspot-googleanalytics-snowflake/v0/src/writer/keboola.wr-snowflake/out-thoughtspot-gaa-snowflake-writer",
       rows: std.filter(function(v) v != null, [
         {
           id: ConfigRowId("ga-ad-analytics"),

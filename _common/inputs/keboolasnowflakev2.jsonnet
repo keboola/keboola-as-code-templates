@@ -1,12 +1,19 @@
 [
   {
+    id: "wr-snowflake-selection",
+    name: "Got it!",
+    description: "If needed, click the Support Button!",
+    type: "bool",
+    kind: "confirm",
+    rules: "required",
+  },
+  {
     id: "wr-snowflake-db-host",
     name: "Hostname",
     description: "Insert database hostname",
     type: "string",
     kind: "input",
-    rules: "required",
-    default: "hostname.com",
+    showif: "[wr-snowflake-selection] == 'TEST'",
   },
   {
     id: "wr-snowflake-db-port",
@@ -14,8 +21,7 @@
     description: "Insert database port number.",
     type: "string",
     kind: "input",
-    default: "XXX",
-    showif: "[wr-snowflake-db-host] != ''",
+    showif: "[wr-snowflake-selection] == 'TEST'",
   },
   {
     id: "wr-snowflake-db-user",
@@ -23,16 +29,15 @@
     description: "Insert database username.",
     type: "string",
     kind: "input",
-    default: "userName",
-    showif: "[wr-snowflake-db-host] != ''",
+    showif: "[wr-snowflake-selection] == 'TEST'",
   },
   {
     id: "wr-snowflake-db-password",
     name: "Database Password",
     description: "Insert your password to the database.",
-    showif: "[wr-snowflake-db-host] != ''",
+    showif: "[wr-snowflake-selection] == 'TEST'",
     type: "string",
-    kind: "hidden",
+    kind: "input",
   },
   {
     id: "wr-snowflake-db-database",
@@ -40,8 +45,7 @@
     description: "Insert name of your database.",
     type: "string",
     kind: "input",
-    default: "DatabaseName",
-    showif: "[wr-snowflake-db-host] != ''",
+    showif: "[wr-snowflake-selection] == 'TEST'",
   },
   {
     id: "wr-snowflake-db-schema",
@@ -49,8 +53,7 @@
     description: "Insert database schema.",
     type: "string",
     kind: "input",
-    default: "Schema",
-    showif: "[wr-snowflake-db-host] != ''",
+    showif: "[wr-snowflake-selection] == 'TEST'",
   },
   {
     id: "wr-snowflake-db-warehouse",
@@ -58,7 +61,6 @@
     description: "Insert database warehouse.",
     type: "string",
     kind: "input",
-    default: "Warehouse",
-    showif: "[wr-snowflake-db-host] != ''",
-  },
+    showif: "[wr-snowflake-selection] == 'TEST'",
+  }
 ]
