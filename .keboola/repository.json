@@ -1257,7 +1257,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake"
+            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }
