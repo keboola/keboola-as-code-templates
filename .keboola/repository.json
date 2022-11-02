@@ -1241,6 +1241,27 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "snowflake-virtual-hands-on-lab",
+      "name": "Snowflake Virtual Hands on Lab",
+      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "path": "snowflake-virtual-hands-on-lab",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
