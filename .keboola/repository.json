@@ -1260,6 +1260,19 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
         }
       ]
     }
