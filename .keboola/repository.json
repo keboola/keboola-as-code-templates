@@ -19,7 +19,7 @@
             "kds-team.ex-shopify",
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
-            "keboola.ex-sklik",
+            "keboola.ex-sklik", 
             "jakub-bartel.wr-data-studio",
             "keboola.wr-google-sheets"
           ],
@@ -72,7 +72,7 @@
       "id": "thoughtspot-crm-hubspot",
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
-            "path": "thoughtspot-crm-hubspot",
+      "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
           "version": "1.0.0",
@@ -275,6 +275,27 @@
             "keboola.ex-telemetry-data",
             "kds-team.ex-kbc-project-metadata-v2",
             "kds-team.app-datahub"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-virtual-hands-on-lab",
+      "name": "Snowflake Virtual Hands on Lab",
+      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "path": "snowflake-virtual-hands-on-lab",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
         }
