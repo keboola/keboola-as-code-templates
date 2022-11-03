@@ -18,14 +18,14 @@
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
-      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation1-prepare-input-tables",
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/demo-in-ecommerce-shopify-transformation1-prepare-input-tables",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation"),
-      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation2-data-preparation",
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/demo-in-ecommerce-shopify-transformation2-data-preparation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
