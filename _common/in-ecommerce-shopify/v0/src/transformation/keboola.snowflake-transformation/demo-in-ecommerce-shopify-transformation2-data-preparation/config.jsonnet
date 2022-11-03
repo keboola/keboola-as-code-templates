@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line_item_tax_lines",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line-item-tax-lines",
           destination: "line_item_tax_lines",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product_options",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product-options",
           destination: "product_options",
           where_column: "",
           where_values: [],
@@ -44,7 +44,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_discount_applications",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order-discount-applications",
           destination: "order_discount_applications",
           where_column: "",
           where_values: [],
@@ -52,7 +52,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product_variant",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product-variant",
           destination: "product_variant",
           where_column: "",
           where_values: [],
@@ -60,7 +60,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_fulfillments",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order-fulfillments",
           destination: "order_fulfillments",
           where_column: "",
           where_values: [],
@@ -68,7 +68,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order_tax_lines",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".order-tax-lines",
           destination: "order_tax_lines",
           where_column: "",
           where_values: [],
@@ -76,7 +76,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product_images",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".product-images",
           destination: "product_images",
           where_column: "",
           where_values: [],
@@ -84,7 +84,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".inventory_items",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".inventory-items",
           destination: "inventory_items",
           where_column: "",
           where_values: [],
@@ -92,7 +92,7 @@
           columns: [],
         },
         {
-          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line_item",
+          source: "in.c-demo-kds-team-ex-shopify-" + ConfigId("in-ecommerce-shopify-extractor") + ".line-item",
           destination: "line_item",
           where_column: "",
           where_values: [],
