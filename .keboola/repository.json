@@ -516,6 +516,75 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "pipedrive-to-snowflake",
+      "name": "Pipedrive to Snowflake",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-googlesheet",
+      "name": "Pipedrive to Google Sheets",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.ex-pipedrive", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-bigquery",
+      "name": "PipeDrive to BigQuery",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-keboolasnowflake",
+      "name": "Pipedrive to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
