@@ -6,4 +6,4 @@ The resulting flow will contain the HubSpot data source component that connects 
 
 All that is left then is to set up the connection in ThoughtSpot and, if you haven’t done so yet, install the [Hubspot Marketing Analytics TML block from CodeSpot](https://developers.thoughtspot.com/codespot/jira-tmp-finish).
 
-The use case will run daily at 2am, however you can change the schedule in the Flows menu.
+The template will run daily at 2am, however you can change the schedule in the Flows menu.
