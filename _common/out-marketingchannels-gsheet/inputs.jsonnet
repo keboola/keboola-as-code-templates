@@ -1,7 +1,7 @@
 [
   {
       id:          "oauth-google-sheets",
-      name:        "Google OAuth",
+      name:        "Open Authentication",
       description: "Authorization for Google Sheets",
       type:        "object",
       kind:        "oauth",
