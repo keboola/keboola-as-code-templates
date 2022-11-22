@@ -1,7 +1,7 @@
 [
   {
     id:          "oauth-linkedinads",
-    name:        "Google OAuth",
+    name:        "Open Authentication",
     description: "Authorization for LinkedIn Ads",
     type:        "object",
     kind:        "oauth",

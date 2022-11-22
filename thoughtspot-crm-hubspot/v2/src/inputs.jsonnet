@@ -48,7 +48,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
           dialogName: "DWH provided by Keboola", 
-          dialogDescription: "You don't need your own DWH. After setting up the use case, go to configuration of Snowflake Data Destination and select Keboola provided database when setting up credentials.",
+          dialogDescription: "You don't need your own DWH. After setting up the template, go to configuration of Snowflake Data Destination and select Keboola provided database when setting up credentials.",
           inputs: kbc_snowflake
         },
         {
