@@ -1,7 +1,7 @@
 [
     {
       id:          "oauth-datastudio",
-      name:        "Google OAuth",
+      name:        "Open Authentication",
       description: "Authorization for DataStudio Google Sheets",
       type:        "object",
       kind:        "oauth",
