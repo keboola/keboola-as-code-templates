@@ -1,7 +1,7 @@
 [
   {
     id:          "oauth-googlesearch",
-    name:        "Google OAuth",
+    name:        "Open Authentication",
     description: "Authorization for Google Search Console",
     type:        "object",
     kind:        "oauth",
