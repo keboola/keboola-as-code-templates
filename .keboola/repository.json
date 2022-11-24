@@ -313,6 +313,7 @@
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
             "keboola.wr-google-bigquery-v2"
           ],
           "path": "v0"
@@ -331,6 +332,7 @@
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
@@ -349,6 +351,7 @@
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
@@ -367,6 +370,7 @@
           "stable": false,
           "components": [
             "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
             "keboola.wr-google-sheets"
           ],
           "path": "v0"
