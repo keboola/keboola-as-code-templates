@@ -3,7 +3,7 @@
     oauth_api: Input("g3s2-oauth-googlesheet"),
   },
   parameters: {
-    tables: [
+    tables: std.filter(function(v) v != null,[
       {
         id: 66866,
         action: "update",
@@ -64,6 +64,7 @@
         fileId: Input("google-sheet-id"),
         sheetId: 417166026,
       },
+      if InputIsAvailable("gsc-domain") then
       {
         id: 52563,
         action: "update",
@@ -74,11 +75,11 @@
         fileId: Input("google-sheet-id"),
         sheetId: 1279699515,
       },
-    ],
+    ]),
   },
   storage: {
     input: {
-      tables: [
+      tables: std.filter(function(v) v != null,[
         {
           source: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
           destination: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics.csv",
@@ -127,6 +128,7 @@
           where_operator: "eq",
           columns: [],
         },
+        if InputIsAvailable("gsc-domain") then
         {
           source: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
           destination: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
@@ -135,7 +137,7 @@
           where_operator: "eq",
           columns: [],
         },
-      ],
+      ]),
     },
   },
 }
