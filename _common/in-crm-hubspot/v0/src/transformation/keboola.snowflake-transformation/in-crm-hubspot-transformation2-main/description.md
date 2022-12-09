@@ -1,4 +1,3 @@
-## Description:
 Creates output CRM data model (set of the output tables) from data extracted from Hubspot.
 It is divided into 3 phases. 
 

@@ -1,4 +1,3 @@
-## Description:
 This data source extracts data from mailing lists sent by the Mailchimp service. It downloads configured reports for all specified accounts, importing data about lists and their members.
 
 ## Credentials:
