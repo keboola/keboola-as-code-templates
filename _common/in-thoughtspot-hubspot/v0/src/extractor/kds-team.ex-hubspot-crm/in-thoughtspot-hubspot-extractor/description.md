@@ -1,4 +1,3 @@
-## Description:
 This data source is getting data from HubSpot. It's an incremental update and the data source is taking data about: companies, activities, lists, owners, contacts, deals and pipelines.
 
 ## Credentials:
