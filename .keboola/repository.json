@@ -962,7 +962,7 @@
     },
     {
       "id": "adsplatform-to-keboolasnowflake",
-      "name": "Advertising Platforms to Keboola DWH",
+      "name": "Advertising Platforms→Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "path": "adsplatform-to-keboolasnowflake",
       "versions": [
@@ -984,7 +984,7 @@
     },
     {
       "id": "asana-to-keboolasnowflake",
-      "name": "Asana to Keboola DWH",
+      "name": "Asana to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your Asana data to dramatically improve team collaboration and work management.",
       "path": "asana-to-keboolasnowflake",
       "versions": [
@@ -1002,7 +1002,7 @@
     },
     {
       "id": "github-to-keboolasnowflake",
-      "name": "GitHub to Keboola DWH",
+      "name": "GitHub to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "path": "github-to-keboolasnowflake",
       "versions": [
@@ -1020,7 +1020,7 @@
     },
     {
       "id": "hubspot-to-keboolasnowflake",
-      "name": "HubSpot to Keboola DWH",
+      "name": "HubSpot to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
       "path": "hubspot-to-keboolasnowflake",
       "versions": [
@@ -1038,7 +1038,7 @@
     },
     {
       "id": "mailchimp-to-keboolasnowflake",
-      "name": "Mailchimp to Keboola DWH",
+      "name": "Mailchimp to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Create a BDM from your Mailchimp marketing data and load them to snowflake DB.",
       "path": "mailchimp-to-keboolasnowflake",
       "versions": [
@@ -1056,7 +1056,7 @@
     },
     {
       "id": "pipedrive-to-keboolasnowflake",
-      "name": "Pipedrive to Keboola DWH",
+      "name": "Pipedrive to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
       "path": "pipedrive-to-keboolasnowflake",
       "versions": [
@@ -1074,7 +1074,7 @@
     },
     {
       "id": "salesforce-to-keboolasnowflake",
-      "name": "Salesforce to Keboola DWH",
+      "name": "Salesforce to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
       "path": "salesforce-to-keboolasnowflake",
       "versions": [
@@ -1092,7 +1092,7 @@
     },
     {
       "id": "shopify-to-keboolasnowflake",
-      "name": "Shopify to Keboola DWH",
+      "name": "Shopify to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Shopify data and change it into actionable insights.",
       "path": "shopify-to-keboolasnowflake",
       "versions": [
@@ -1113,7 +1113,7 @@
     },
     {
       "id": "shoptet-to-keboolasnowflake",
-      "name": "Shoptet to Keboola DWH",
+      "name": "Shoptet to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Sync your Shoptet order's data with Keboola and build your analytics for better business decisions.",
       "path": "shoptet-to-keboolasnowflake",
       "versions": [
@@ -1134,7 +1134,7 @@
     },
     {
       "id": "typeform-to-keboolasnowflake",
-      "name": "Typeform to Keboola DWH",
+      "name": "Typeform to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
       "path": "typeform-to-keboolasnowflake",
       "versions": [
@@ -1152,7 +1152,7 @@
     },
     {
       "id": "keboola-costs-to-keboolasnowflake",
-      "name": "Keboola Costs to Keboola DWH",
+      "name": "Keboola Costs to Keboola Snowflake",
       "description": "Don't you have your own data warehouse?Use Keboola provided Snowflake DB. Aggregate all your Telemetry data about your Keboola Connection project to gain valuable insights and improve decision-making.",
       "path": "keboola-costs-to-keboolasnowflake",
       "versions": [
@@ -1171,7 +1171,7 @@
     },
     {
       "id": "googleanalytics-to-keboolasnowflake",
-      "name": "Google Analytics to Keboola DWH",
+      "name": "Google Analytics to Keboola Snowflake",
       "description": "Don't you have own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Google Analytics data and transform it into more powerful customer insights and smarter marketing strategies.",
       "path": "googleanalytics-to-keboolasnowflake",
       "versions": [
