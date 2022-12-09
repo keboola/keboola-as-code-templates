@@ -10,7 +10,7 @@ local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
           icon: "component:kds-team.ex-hubspot-crm",
           name: "HubSpot",
           description: "Import data from HubSpot",
-          dialogName: "HubSpot Source", 
+          dialogName: "HubSpot Source",
           dialogDescription: "This source component imports data from HubSpot. Enter your HubSpot API token from your HubSpot Super Admin account. Please note that API key authentication will be deprecated starting 10/2022.",
           #"This source component imports data from HubSpot (companies, deals, activities, etc.). Enter your HubSpot API token from your HubSpot Super Admin account and start loading.",
           inputs: hubspot,
@@ -35,9 +35,9 @@ local hubspot = import "/<common>/in-crm-hubspot/v0/src/inputs.jsonnet";
       steps: [
         {
           icon: "component:"+SnowflakeWriterComponentId(),
-          name: "DWH provided by Keboola",
+          name: "Keboola Snowflake",
           description: "Keboola - managed Snowflake",
-          dialogName: "DWH provided by Keboola", 
+          dialogName: "Keboola Snowflake", 
           dialogDescription: "You don't need your own DWH. After setting up the template, go to configuration of Snowflake Data Destination and select Keboola provided database when setting up credentials.",
           inputs: kbc_snowflake
         },
