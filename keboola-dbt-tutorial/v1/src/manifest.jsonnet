@@ -39,12 +39,12 @@
       path: "writer/keboola.wr-db-mssql-v2/export-models-to-ms-sql",
       rows: [
         {
-          id: ConfigRowId("promo-deliveries-003"),
-          path: "rows/promo-deliveries-003",
+          id: ConfigRowId("promo-deliveries-002"),
+          path: "rows/promo-deliveries-002",
         },
         {
-          id: ConfigRowId("sales-003"),
-          path: "rows/sales-003",
+          id: ConfigRowId("sales-002"),
+          path: "rows/sales-002",
         },
       ],
     },
