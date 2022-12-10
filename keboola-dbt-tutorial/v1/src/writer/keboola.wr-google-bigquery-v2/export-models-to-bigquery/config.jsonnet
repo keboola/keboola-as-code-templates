@@ -12,7 +12,7 @@
       client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/dbt-template%40sales-demo-169517.iam.gserviceaccount.com",
       type: "service_account",
     },
-    dataset: Input("wr-google-bigquery-v2-dataset"),
+    dataset: "keboola-dbt-tutorial",
   },
   runtime: {
     parallelism: "2",
