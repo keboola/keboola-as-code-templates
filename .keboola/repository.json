@@ -1279,6 +1279,29 @@
           "path": "v1"
         }
       ]
+    },
+    {
+      "id": "keboola-dbt-tutorial",
+      "name": "Keboola dbt Tutorial",
+      "description": "Run your first data pipeline with dbt! Extract seed data, run dbt to model data and export it to the DB destination of your choice!",
+      "path": "keboola-dbt-tutorial",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-http",
+            "keboola.dbt-transformation",
+            "keboola.wr-db-mssql-v2",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
     }
   ]
 }
