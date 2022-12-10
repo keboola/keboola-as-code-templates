@@ -28,10 +28,10 @@
       input: {
         tables: [
           {
-            source: "in.c-keboola-ex-http-" + ConfigId("dbt-seed-files") + ".seed_beers",
+            source: "in.c-keboola-ex-http-28681838.seed_beers",
           },
           {
-            source: "in.c-keboola-ex-http-" + ConfigId("dbt-seed-files") + ".seed_breweries",
+            source: "in.c-keboola-ex-http-28681838.seed_breweries",
           },
         ],
       },
