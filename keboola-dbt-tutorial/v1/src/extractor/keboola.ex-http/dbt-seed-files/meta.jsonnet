@@ -1,4 +1,4 @@
 {
-  name: "dbt seed files",
+  name: "dbt Seed Files Extraction",
   isDisabled: false,
 }

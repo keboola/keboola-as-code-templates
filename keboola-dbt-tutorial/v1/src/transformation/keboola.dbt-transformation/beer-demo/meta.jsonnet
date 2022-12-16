@@ -1,4 +1,4 @@
 {
-  name: "Beer Demo",
+  name: "Beer Demo dbt Transformation",
   isDisabled: false,
 }
