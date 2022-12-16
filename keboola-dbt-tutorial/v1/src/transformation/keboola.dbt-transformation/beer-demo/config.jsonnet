@@ -36,6 +36,7 @@
         ],
       },
     },
+    generateSources: true,
   },
   storage: {
     output: {
