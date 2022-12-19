@@ -16,6 +16,14 @@
         size: "1000",
       },
       {
+        name: "kbc_project_id",
+        dbName: "project_id",
+        type: "text",
+        nullable: false,
+        default: "",
+        size: "1000",
+      },
+      {
         name: "email",
         dbName: "user_email",
         type: "text",
@@ -57,6 +65,7 @@
           destination: "out.c-keboola-costs.users.csv",
           columns: [
             "user_id",
+            "kbc_project_id",
             "email",
             "domain",
             "valid_from",
