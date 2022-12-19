@@ -59,7 +59,7 @@
               description: "Insert DB Port.",
               type: "string",
               kind: "input",
-              default: "XXXX",
+              default: "5432",
             },
             {
               id: "wr-db-pgsql-db-schema",
@@ -115,7 +115,7 @@
               description: "Insert DB port.",
               type: "string",
               kind: "input",
-              default: "XXXX",
+              default: "3306",
             },
             {
               id: "wr-db-mysql-db-user",
@@ -163,7 +163,7 @@
               description: "Insert port.",
               type: "string",
               kind: "input",
-              default: "XXXX",
+              default: "1433",
             },
             {
               id: "wr-db-mssql-v2-db-user",
@@ -204,7 +204,7 @@
               description: "Insert database port number.",
               type: "string",
               kind: "input",
-              default: "XXX",
+              default: "443",
               showif: "[wr-snowflake-db-host] != ''",
             },
             {
