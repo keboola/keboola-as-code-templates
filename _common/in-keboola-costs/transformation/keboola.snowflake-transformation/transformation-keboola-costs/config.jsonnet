@@ -106,14 +106,14 @@
           destination: "out.c-keboola-costs.configurations",
           source: "out_configurations",
           primary_key: [
-            "component_configuration_branch_id",
+            "component_configuration_id",
           ],
         },
         {
           destination: "out.c-keboola-costs.configurations_versions",
           source: "out_configurations_versions",
           primary_key: [
-            "component_configuration_branch_version_id",
+            "component_configuration_version_id",
           ],
         },
         {
@@ -133,16 +133,6 @@
         {
           destination: "out.c-keboola-costs.projects",
           source: "out_projects",
-          primary_key: [
-            "project_id",
-          ],
-        },
-        {
-          destination: "out.c-keboola-costs.users",
-          source: "out_users",
-          primary_key: [
-            "user_id",
-          ],
         },
       ],
     },
