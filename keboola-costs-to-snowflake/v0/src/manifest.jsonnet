@@ -54,6 +54,10 @@
           id: ConfigRowId("snowflake-statistics"),
           path: "rows/snowflake-statistics",
         },
+        {
+          id: ConfigRowId("users"),
+          path: "rows/users",
+        },
       ],
     },
   ],
