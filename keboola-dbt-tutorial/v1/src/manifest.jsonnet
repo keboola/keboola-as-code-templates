@@ -7,20 +7,13 @@
   configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.ex-http",
-      id: ConfigId("seed-breweries"),
-      path: "extractor/keboola.ex-http/seed-breweries",
+      id: ConfigId("seed-extraction"),
+      path: "extractor/keboola.ex-http/seed-extraction",
       rows: [
         {
           id: ConfigRowId("seed-breweries-csv"),
           path: "rows/seed-breweries-csv",
         },
-      ],
-    },
-    {
-      componentId: "keboola.ex-http",
-      id: ConfigId("seed-beers"),
-      path: "extractor/keboola.ex-http/seed-beers",
-      rows: [
         {
           id: ConfigRowId("seed-beers-csv"),
           path: "rows/seed-beers-csv",
