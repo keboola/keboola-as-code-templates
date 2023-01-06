@@ -1,6 +1,6 @@
 {
   name: "Modelling",
   dependsOn: [
-    "002-extract-seed-data",
+    "001-extract-seed-data",
   ],
 }
