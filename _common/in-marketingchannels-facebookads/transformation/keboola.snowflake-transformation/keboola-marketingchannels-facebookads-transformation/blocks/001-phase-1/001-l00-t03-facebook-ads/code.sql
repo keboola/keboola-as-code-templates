@@ -13,23 +13,23 @@ CREATE OR REPLACE FUNCTION PARSE_UTM(utm STRING,trg_str STRING )
 
 -- parse "url_tags" field function
 
-/* utms aren't available
 create view "tmp_utm" as 
 select distinct "parent_id"
 ,PARSE_UTM('utm_source',"url_tags") as "source"
 ,PARSE_UTM('utm_medium',"url_tags") as "medium"
 ,PARSE_UTM('utm_campaign',"url_tags") as "campaign"
 --,PARSE_UTM('utm_content',"url_tags") as "content"
-from "Facebook_Ads_ads_insights_adcreatives";*/
+from "Facebook_Ads_ads_insights_adcreatives";
 
+/*
 CREATE VIEW "tmp_utm" AS 
 SELECT DISTINCT 
   "parent_id"
-  ,'' as "source"
-  ,'' as "medium"
-  ,'' as "campaign"
+  ,NULL as "source"
+  ,NULL as "medium"
+  ,NULL as "campaign"
 FROM "Facebook_Ads_ads_insights_adcreatives";
-
+*/
 -- join all source tables in one
 -- create UTM tags (see also query and function above)
 CREATE VIEW "tmp_facebook" AS 
