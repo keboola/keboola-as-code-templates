@@ -14,7 +14,7 @@
     description: "Insert database port number.",
     type: "string",
     kind: "input",
-    default: "XXX",
+    default: "443",
     showif: "[wr-snowflake-db-host] != ''",
   },
   {
