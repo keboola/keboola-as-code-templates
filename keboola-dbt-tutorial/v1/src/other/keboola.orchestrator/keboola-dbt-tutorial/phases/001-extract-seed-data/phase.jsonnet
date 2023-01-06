@@ -1,4 +1,4 @@
 {
-  name: "Extract Seed Data",
+  name: "Extract Seed Beers Data",
   dependsOn: [],
 }
