@@ -1,6 +1,6 @@
 {
   name: "Push Models to External DB",
   dependsOn: [
-    "002-modelling",
+    "003-modelling",
   ],
 }
