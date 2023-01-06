@@ -44,6 +44,10 @@
           primary_key: [
             "online_marketing_traffic_id",
           ],
+          incremental: true,
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
         },
         {
           destination: "out.c-marketing-tr-" + InstanceIdShort() + ".accounts",
