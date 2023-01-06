@@ -1300,21 +1300,6 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
-        },
-        {
-          "version": "1.0.1",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-http",
-            "keboola.dbt-transformation",
-            "keboola.wr-db-mssql-v2",
-            "keboola.wr-db-mysql",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v2"
         }
       ]
     }
