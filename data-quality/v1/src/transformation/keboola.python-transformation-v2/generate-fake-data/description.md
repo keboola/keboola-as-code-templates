@@ -1,0 +1,1 @@
+This transformation is generating sample data which are used in snowflake transformation giving you example of implementation of data quality tests.
