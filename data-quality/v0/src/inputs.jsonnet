@@ -2,7 +2,7 @@
   stepsGroups: [
     {
       description: "Generation of sample data.",
-      required: "all",
+      required: "optional",
       steps: [
         {
           icon: "component:keboola.python-transformation-v2",
@@ -14,7 +14,7 @@
     },
     {
       description: "Example of data quality check",
-      required: "all",
+      required: "optional",
       steps: [
         {
           icon: "component:keboola.snowflake-transformation",
