@@ -1,4 +1,4 @@
 {
-  name: "Step 2",
+  name: "Tranformation with data quality checks",
   dependsOn: ["<previous>"],
 }

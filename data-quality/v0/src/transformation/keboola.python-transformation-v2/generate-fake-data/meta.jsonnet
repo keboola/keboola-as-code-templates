@@ -1,4 +1,4 @@
 {
-  name: "Generate Fake Data",
+  name: "Generate Sample Data",
   isDisabled: false,
 }

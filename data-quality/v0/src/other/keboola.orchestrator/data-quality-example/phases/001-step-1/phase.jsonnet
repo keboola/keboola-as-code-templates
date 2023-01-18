@@ -1,4 +1,4 @@
 {
-  name: "Step 1",
+  name: "Generator of sample data",
   dependsOn: [],
 }

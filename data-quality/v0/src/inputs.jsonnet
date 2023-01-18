@@ -7,7 +7,7 @@
         {
           icon: "component:keboola.python-transformation-v2",
           name: "Python transformation",
-          description: "Generate Fake Data",
+          description: "Generate Sample Data",
           inputs: [],
         },
       ],
@@ -19,7 +19,7 @@
         {
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake transformation",
-          description: "Data Quality Core - Full Example",
+          description: "Data Quality Example",
           inputs: [],
         },
       ],
