@@ -1,3 +1,0 @@
-{
-  name: "TEST - Table Empty",
-}

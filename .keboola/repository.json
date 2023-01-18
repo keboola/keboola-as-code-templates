@@ -1317,15 +1317,6 @@
             "keboola.snowflake-transformation"
           ],
           "path": "v0"
-        },
-        {
-          "version": "1.0.1",
-          "description": "Version without inputs.",
-          "stable": false,
-          "components": [
-            "keboola.snowflake-transformation"
-          ],
-          "path": "v1"
         }
       ]
     }
