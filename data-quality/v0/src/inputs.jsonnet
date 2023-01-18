@@ -2,7 +2,7 @@
   stepsGroups: [
     {
       description: "Generation of sample data.",
-      required: "optional",
+      required: "all",
       steps: [
         {
           icon: "component:keboola.python-transformation-v2",

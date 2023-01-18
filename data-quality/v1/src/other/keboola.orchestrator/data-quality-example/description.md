@@ -1,1 +1,0 @@
-Full example of data quality checks.
