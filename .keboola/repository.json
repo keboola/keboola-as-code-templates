@@ -1302,6 +1302,23 @@
           "path": "v1"
         }
       ]
+    },
+    {
+      "id": "data-quality",
+      "name": "Data Quality",
+      "description": "Take a look at our data quality tests via an example.",
+      "path": "data-quality",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
