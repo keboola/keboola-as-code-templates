@@ -378,78 +378,6 @@
       ]
     },
     {
-      "id": "hubspot-to-keboolasnowflake",
-      "name": "HubSpot to Keboola DWH",
-      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
-      "path": "hubspot-to-keboolasnowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-hubspot-crm",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "hubspot-to-snowflake",
-      "name": "HubSpot to Snowflake",
-      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
-      "path": "hubspot-to-snowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-hubspot-crm",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "hubspot-to-googlesheet",
-      "name": "HubSpot to Google Sheets",
-      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
-      "path": "hubspot-to-googlesheet",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-hubspot-crm",
-            "keboola.wr-google-sheets"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "hubspot-to-bigquery",
-      "name": "Hubspot to BigQuery",
-      "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
-      "path": "hubspot-to-bigquery",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-hubspot-crm",
-            "keboola.wr-google-bigquery-v2"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
       "id": "salesforce-to-bigquery",
       "name": "Salesforce to BigQuery",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
@@ -610,6 +538,95 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "github-to-bigquery",
+      "name": "GitHub to BigQuery",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-googlesheet",
+      "name": "GitHub to Google Sheets",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-snowflake",
+      "name": "GitHub to Snowflake",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-keboolasnowflake",
+      "name": "GitHub to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "data-quality",
+      "name": "Data Quality",
+      "description": "Take a look at our data quality tests via an example.",
+      "path": "data-quality",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
         }
       ]
     }

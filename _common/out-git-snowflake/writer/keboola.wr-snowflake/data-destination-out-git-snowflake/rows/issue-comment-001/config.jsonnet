@@ -1,0 +1,97 @@
+{
+  parameters: {
+    tableId: "out.c-git-bdm-" + InstanceIdShort() + ".issue_comment",
+    dbName: "ISSUE_COMMENT",
+    incremental: true,
+    primaryKey: [
+      "ISSUE_COMMENT_ID",
+    ],
+    items: [
+      {
+        name: "issue_comment_id",
+        dbName: "ISSUE_COMMENT_ID",
+        type: "string",
+        nullable: false,
+        default: "",
+        size: "255",
+      },
+      {
+        name: "issue_id",
+        dbName: "ISSUE_ID",
+        type: "string",
+        nullable: false,
+        default: "",
+        size: "255",
+      },
+      {
+        name: "user_id",
+        dbName: "USER_ID",
+        type: "string",
+        nullable: false,
+        default: "",
+        size: "255",
+      },
+      {
+        name: "user",
+        dbName: "USER",
+        type: "string",
+        nullable: false,
+        default: "",
+        size: "255",
+      },
+      {
+        name: "description",
+        dbName: "DESCRIPTION",
+        type: "string",
+        nullable: false,
+        default: "",
+        size: "1024",
+      },
+      {
+        name: "created_on",
+        dbName: "CREATED_ON",
+        type: "string",
+        nullable: true,
+        default: "",
+        size: "255",
+      },
+      {
+        name: "updated_on",
+        dbName: "UPDATED_ON",
+        type: "string",
+        nullable: true,
+        default: "",
+        size: "255",
+      },
+      {
+        name: "url",
+        dbName: "URL",
+        type: "string",
+        nullable: false,
+        default: "",
+        size: "1000",
+      },
+    ],
+  },
+  storage: {
+    input: {
+      tables: [
+        {
+          source: "out.c-git-bdm-" + InstanceIdShort() + ".issue_comment",
+          destination: "out.c-git-bdm-" + InstanceIdShort() + ".issue_comment.csv",
+          columns: [
+            "issue_comment_id",
+            "issue_id",
+            "user_id",
+            "user",
+            "description",
+            "created_on",
+            "updated_on",
+            "url",
+          ],
+          changed_since: "adaptive",
+        },
+      ],
+    },
+  },
+}
