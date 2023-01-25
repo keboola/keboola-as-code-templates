@@ -399,6 +399,219 @@
           "path": "v1"
         }
       ]
+    },
+    {
+      "id": "github-to-bigquery",
+      "name": "GitHub to BigQuery",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-googlesheet",
+      "name": "GitHub to Google Sheets",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-snowflake",
+      "name": "GitHub to Snowflake",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "github-to-keboolasnowflake",
+      "name": "GitHub to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "path": "github-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-bigquery",
+      "name": "Salesforce to BigQuery",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "path": "salesforce-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-keboolasnowflake",
+      "name": "Salesforce to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "path": "salesforce-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-snowflake",
+      "name": "Salesforce to Snowflake",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "path": "salesforce-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-googlesheet",
+      "name": "Salesforce to Google Sheets",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "path": "salesforce-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-snowflake",
+      "name": "Pipedrive to Snowflake",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-googlesheet",
+      "name": "Pipedrive to Google Sheets",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.ex-pipedrive", "keboola.wr-google-sheets"],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-bigquery",
+      "name": "PipeDrive to BigQuery",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-keboolasnowflake",
+      "name": "Pipedrive to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "path": "pipedrive-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
