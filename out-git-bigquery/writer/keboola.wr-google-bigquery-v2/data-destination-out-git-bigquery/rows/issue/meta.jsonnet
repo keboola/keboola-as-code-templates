@@ -1,4 +1,0 @@
-{
-  name: "issue",
-  isDisabled: false,
-}
