@@ -1,0 +1,87 @@
+{
+  authorization: {
+    oauth_api: Input("oauth-google-sheets"),
+  },
+  parameters: {
+    tables: [
+      {
+        id: 59582,
+        action: "update",
+        sheetTitle: "survey",
+        enabled: true,
+        tableId: "out.c-typeform-" + InstanceIdShort() + ".survey",
+        title: "OUT-TYPEFORM",
+        sheetId: 0,
+        fileId: Input("google-sheet-id"),
+      },
+      {
+        id: 68393,
+        action: "update",
+        sheetTitle: "question",
+        enabled: true,
+        tableId: "out.c-typeform-" + InstanceIdShort() + ".question",
+        title: "OUT-TYPEFORM",
+        fileId: Input("google-sheet-id"),
+        sheetId: 181885379,
+      },
+      {
+        id: 3515,
+        action: "update",
+        sheetTitle: "answer_option",
+        enabled: true,
+        tableId: "out.c-typeform-" + InstanceIdShort() + ".answer_option",
+        title: "OUT-TYPEFORM",
+        fileId: Input("google-sheet-id"),
+        sheetId: 978805991,
+      },
+      {
+        id: 58287,
+        action: "update",
+        sheetTitle: "responses",
+        enabled: true,
+        tableId: "out.c-typeform-" + InstanceIdShort() + ".responses",
+        title: "OUT-TYPEFORM",
+        fileId: Input("google-sheet-id"),
+        sheetId: 111584779,
+      },
+    ],
+  },
+  storage: {
+    input: {
+      tables: [
+        {
+          source: "out.c-typeform-" + InstanceIdShort() + ".survey",
+          destination: "out.c-typeform-" + InstanceIdShort() + ".survey.csv",
+          where_column: "",
+          where_values: [],
+          where_operator: "eq",
+          columns: [],
+        },
+        {
+          source: "out.c-typeform-" + InstanceIdShort() + ".question",
+          destination: "out.c-typeform-" + InstanceIdShort() + ".question.csv",
+          where_column: "",
+          where_values: [],
+          where_operator: "eq",
+          columns: [],
+        },
+        {
+          source: "out.c-typeform-" + InstanceIdShort() + ".answer_option",
+          destination: "out.c-typeform-" + InstanceIdShort() + ".answer_option.csv",
+          where_column: "",
+          where_values: [],
+          where_operator: "eq",
+          columns: [],
+        },
+        {
+          source: "out.c-typeform-" + InstanceIdShort() + ".responses",
+          destination: "out.c-typeform-" + InstanceIdShort() + ".responses.csv",
+          where_column: "",
+          where_values: [],
+          where_operator: "eq",
+          columns: [],
+        },
+      ],
+    },
+  },
+}
