@@ -612,6 +612,78 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "asana-to-keboolasnowflake",
+      "name": "Asana to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "path": "asana-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "asana-to-bigquery",
+      "name": "Asana to BigQuery",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "path": "asana-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "asana-to-googlesheet",
+      "name": "Asana to Google Sheets",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "path": "asana-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "asana-to-snowflake",
+      "name": "Asana to Snowflake",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "path": "asana-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
