@@ -612,6 +612,78 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "typeform-to-snowflake",
+      "name": "Typeform to Snowflake",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "path": "typeform-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-bigquery",
+      "name": "Typeform to BigQuery",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "path": "typeform-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-googlesheet",
+      "name": "Typeform to Google Sheets",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "path": "typeform-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-keboolasnowflake",
+      "name": "Typeform to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "path": "typeform-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
