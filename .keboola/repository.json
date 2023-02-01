@@ -756,6 +756,23 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "data-quality",
+      "name": "Hands on Data Quality",
+      "description": "Take a look at data quality testing and monitoring via two examples.",
+      "path": "data-quality",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
