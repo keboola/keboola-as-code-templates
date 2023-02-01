@@ -11,7 +11,7 @@
         name: "answer_option_id",
         dbName: "answer_option_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },

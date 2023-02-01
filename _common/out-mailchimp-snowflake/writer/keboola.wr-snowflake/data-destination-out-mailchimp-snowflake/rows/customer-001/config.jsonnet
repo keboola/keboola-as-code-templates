@@ -11,7 +11,7 @@
         name: "customer_id",
         dbName: "customer_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },

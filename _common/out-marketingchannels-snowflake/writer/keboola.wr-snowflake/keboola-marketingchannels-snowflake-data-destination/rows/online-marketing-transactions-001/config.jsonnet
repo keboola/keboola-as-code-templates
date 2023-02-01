@@ -11,7 +11,7 @@
         name: "online_marketing_transactions_id",
         dbName: "online_marketing_transactions_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
