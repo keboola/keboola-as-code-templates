@@ -11,7 +11,7 @@
         name: "survey_id",
         dbName: "survey_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
