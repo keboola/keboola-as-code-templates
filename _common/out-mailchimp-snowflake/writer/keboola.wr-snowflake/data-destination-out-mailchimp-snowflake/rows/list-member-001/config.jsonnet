@@ -11,7 +11,7 @@
         name: "list_member_id",
         dbName: "list_member_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },

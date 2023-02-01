@@ -11,7 +11,7 @@
         name: "campaign_id",
         dbName: "campaign_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
