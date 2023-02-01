@@ -163,34 +163,5 @@
         }
       ],
     },
-    {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("data-quality-abort-fail-example"),
-      path: "transformation/keboola.snowflake-transformation/data-quality-abort-fail-example",
-      rows: [],
-    },
-    {
-      componentId: "keboola.variables",
-      id: ConfigId("Variables definition for keboola.snowflake-transformation/913123605"),
-      path: "variables",
-      relations: [
-        {
-          componentId: "keboola.snowflake-transformation",
-          configId: ConfigId("data-quality-abort-fail-example"),
-          type: "variablesFor",
-        },
-      ],
-      rows: [
-        {
-          id: ConfigRowId("default"),
-          path: "values/default",
-          relations: [
-            {
-              type: "variablesValuesFor",
-            },
-          ]
-        }
-      ],
-    },
   ],
 }

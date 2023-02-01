@@ -42,14 +42,14 @@ SELECT DISTINCT
                 kcc."kbc_component_id"                                        AS "component_id",
                 kcc."kbc_component_configuration"                             AS "configuration_name",
                 kcc."kbc_component_configuration_url"                         AS "configuration_url",
-                "configuration_id_num" || '-' || $stack           			              AS "configuration_id",
+                "configuration_id_num" || $stack           			              AS "configuration_id",
                 kcc."kbc_configuration_is_deleted"                            AS "configuration_is_deleted",
                 REPLACE(REPLACE(kccv."configuration_updated_at",'T',' '),'Z','')    AS "configuration_last_updated",
                 kccv."configuration_version"::INT                             AS "configuration_last_version",
-                kccv."token_id" || '-' || $stack 			                                AS "last_update_token_id",
+                kccv."token_id" || $stack			                                AS "last_update_token_id",
                 kccv."token_name"                                             AS "last_update_token_name",
                 REPLACE(REPLACE(kccv1."configuration_updated_at",'T',' '),'Z','')  AS "configuration_created",
-                kccv1."token_id" || '-' || $stack 		                                AS "creator_token_id",
+                kccv1."token_id" || $stack		                                AS "creator_token_id",
                 kccv1."token_name"                                            AS "creator_token_name"
 FROM "kbc_component_configuration" kcc
          LEFT JOIN "kbc_component_configuration_version" kccv
@@ -79,7 +79,7 @@ SELECT
        replace(replace(v."configuration_updated_at",'T',' '),'Z','')    AS "configuration_version_updated",
        "last_version"                                            AS "configuration_version_is_last",
        LEFT("change_description",2000)                           AS "configuration_version_description",
-       v."token_id" || '-' || $stack 			                               AS "token_id",
+       v."token_id" || $stack			                               AS "token_id",
        v."token_name"                                            AS "token_name",
        CASE
            WHEN "configuration_version"::INT = 1 THEN 'created'

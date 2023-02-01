@@ -2,7 +2,7 @@
   stepsGroups: [
     {
       description: "Generation of sample data.",
-      required: "all",
+      required: "optional",
       steps: [
         {
           icon: "component:keboola.python-transformation-v2",
@@ -14,24 +14,12 @@
     },
     {
       description: "Example of data quality check",
-      required: "all",
+      required: "optional",
       steps: [
         {
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake transformation",
-          description: "Data Quality Core - Full Example",
-          inputs: [],
-        },
-      ],
-    },
-    {
-      description: "Example of transformation abort",
-      required: "all",
-      steps: [
-        {
-          icon: "component:keboola.snowflake-transformation",
-          name: "Snowflake transformation",
-          description: "Data Quality Core - ABORT/FAIL Example",
+          description: "Data Quality Example",
           inputs: [],
         },
       ],
