@@ -615,8 +615,8 @@
     },
     {
       "id": "data-quality",
-      "name": "Data Quality",
-      "description": "Take a look at our data quality tests via an example.",
+      "name": "Hands on Data Quality",
+      "description": "Take a look at data quality testing and monitoring via two examples.",
       "path": "data-quality",
       "versions": [
         {
