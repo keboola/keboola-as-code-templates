@@ -11,7 +11,7 @@
         name: "keyword_id",
         dbName: "keyword_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
