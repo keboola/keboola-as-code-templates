@@ -773,6 +773,78 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "mailchimp-to-bigquery",
+      "name": "Mailchimp to BigQuery",
+      "description": "Create a BDM from your Mailchimo marketing data and load them to BigQuery.",
+      "path": "mailchimp-to-bigquery",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-bigquery-v2"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "mailchimp-to-googlesheet",
+      "name": "Mailchimp to GoogleSheet",
+      "description": "Create a BDM from your Mailchimo marketing data and load them to google sheet.",
+      "path": "mailchimp-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "mailchimp-to-snowflake",
+      "name": "Mailchimp to Snowflake",
+      "description": "Create a BDM from your Mailchimo marketing data and load them to snowflake DB.",
+      "path": "mailchimp-to-snowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "mailchimp-to-keboolasnowflake",
+      "name": "Mailchimp to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Create a BDM from your Mailchimp marketing data and load them to snowflake DB.",
+      "path": "mailchimp-to-keboolasnowflake",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
