@@ -98,7 +98,7 @@
     },
     if InputIsAvailable("wr-snowflake-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("export-models-to-snowflake"),
       path: "writer/keboola.wr-snowflake-blob-storage/export-models-to-snowflake",
       rows: [
