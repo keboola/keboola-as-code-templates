@@ -70,7 +70,7 @@
               description: "Authorization for LinkedIn Ads",
               type:        "object",
               kind:        "oauth",
-              componentId: "kds-team.ex-linked-pages",
+              componentId: "kds-team.ex-linkedin-pages",
               rules:       "required",
             },
             {
