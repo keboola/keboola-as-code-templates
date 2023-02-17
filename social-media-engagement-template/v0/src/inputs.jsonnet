@@ -35,23 +35,19 @@
               description: "Select period from which you want to get the data.",
               type: "string",
               kind: "select",
-              default: 'last_90d',
+              default: 'last_30d',
               options: [
                 {
-                  value: 'last_month',
-                  label: '1 month ago',
+                  value: 'last_30d',
+                  label: 'last 30 days',
                 },
                 {
                   value: 'last_60d',
-                  label: '2 months ago',
+                  label: 'last 60 days',
                 },
                 {
-                  value: 'last_90d',
-                  label: '3 months ago',
-                },
-                {
-                  value: 'last_year',
-                  label: '12 months ago',
+                  value: 'last_93d',
+                  label: 'last 93 days',
                 },
               ],
             }
@@ -76,10 +72,9 @@
             {
               id: "ex-linkedin-pages-sync-options-date-from",
               name: "Sync options Date from",
-              description: "linkedin",
               type: "string",
               kind: "select",
-              default: "3 months ago",
+              default: "1 month ago",
               options: [
                 {
                   value: '1 month ago',
@@ -107,7 +102,7 @@
           name: "Instagram",
           description: "Import data from Instagram",
           dialogName: "Instagram Source", 
-          dialogDescription: "This source component imports posts engagement and page engagement from your Instagram account",
+          dialogDescription: "This component imports post engagement and page engagement from your Instagram Business Accounts. Authorization is via a Facebook account and Facebook page connected to an Instagram Business Account.",
           inputs: [
             {
               id:          "oauth-instagram",
@@ -133,23 +128,19 @@
               description: "Select period from which you want to get the data.",
               type: "string",
               kind: "select",
-              default: 'last_90d',
+              default: 'last_30d',
               options: [
                 {
-                  value: 'last_month',
-                  label: '1 month ago',
+                  value: '7 days ago',
+                  label: '7 days ago',
                 },
                 {
-                  value: 'last_60d',
-                  label: '2 months ago',
+                  value: '14 days ago',
+                  label: '14 days ago',
                 },
                 {
-                  value: 'last_90d',
-                  label: '3 months ago',
-                },
-                {
-                  value: 'last_year',
-                  label: '12 months ago',
+                  value: '30 days ago',
+                  label: '30 days ago',
                 },
               ],
             }

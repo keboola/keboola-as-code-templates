@@ -32,7 +32,7 @@
         name: "page_daily_insights",
         query: {
           path: "",
-          fields: "insights.date_preset("+Input("ex-instagram-since")+").metric(reach,impressions,follower_count,email_contacts,text_message_clicks,get_directions_clicks,phone_call_clicks,website_clicks,profile_views)",
+          fields: "insights.since("+Input("ex-instagram-since")+").period(day).metric(reach,impressions,follower_count,email_contacts,text_message_clicks,get_directions_clicks,phone_call_clicks,website_clicks,profile_views)",
           limit: "25",
           ids: "",
         },
