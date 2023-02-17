@@ -36,3 +36,11 @@ Currently are available:
 | all_reactions - SUM of: |   likes  |   likes   |   likes  |  likes  |    likes   |
 |                         |  shares  |  comments |          |  shares |  comments  |
 |                         |          |           |          |         | favourites |
+
+**Availability of historical data:**
+Each social network allows access to the history of page engagement differently:
+- Facebook - maximum 93 days ago
+- Instagram - maximum 30 days ago
+- LinkedIn - without known limit
+- Twitter - since the first run of a component 
+- Youtube - currently not available in this template
