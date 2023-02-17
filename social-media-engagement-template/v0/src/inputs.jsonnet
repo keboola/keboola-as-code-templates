@@ -163,20 +163,12 @@
               rules:       "required",
             },
             {
-              id: "followersList_screen_name",
+              id: "screen_name",
               name: "Screen Name",
-              description: "Enter your screen name for followers list",
+              description: "Enter your screen name",
               type: "string",
               kind: "input",
-              default: 'Followers List Screen Name',
-            },
-            {
-              id: "userTimeline_screen_name",
-              name: "Screen Name",
-              description: "Enter your screen name for user timeline",
-              type: "string",
-              kind: "input",
-              default: 'User Timeline Screen Name',
+              default: 'Screen Name',
             }
           ]
         },
