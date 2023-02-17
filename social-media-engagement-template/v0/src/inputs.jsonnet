@@ -128,7 +128,7 @@
               description: "Select period from which you want to get the data.",
               type: "string",
               kind: "select",
-              default: 'last_30d',
+              default: '30 days ago',
               options: [
                 {
                   value: '7 days ago',
