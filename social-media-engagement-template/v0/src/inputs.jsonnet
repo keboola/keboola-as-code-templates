@@ -9,12 +9,12 @@
           name: "Facebook Pages",
           description: "Import data from Facebook Pages",
           dialogName: "Facebook Pages Source", 
-          dialogDescription: "This source component imports posts engagement and page engagement from your Facebook Pages",
+          dialogDescription: "This source component imports posts engagement and page engagement from your Facebook Pages.",
           inputs: [
             {
               id:          "oauth-facebookads",
               name:        "Open Authentication",
-              description: "Authorization for Facebook Pages",
+              description: "Authorize Facebook Pages",
               type:        "object",
               kind:        "oauth",
               componentId: "keboola.ex-facebook",
@@ -32,7 +32,7 @@
             {
               id: "ex-facebook-ads-since",
               name: "Period from date [incl.]",
-              description: "Select period from which you want to get the data.",
+              description: "Select the period from which you want to get the data",
               type: "string",
               kind: "select",
               default: 'last_30d',
@@ -58,7 +58,7 @@
           name: "LinkedIn Pages",
           description: "Import data from LinkedIn Pages",
           dialogName: "LinkedIn Pages Source", 
-          dialogDescription: "This source component imports posts engagement and page engagement from your LinkedIn Page",
+          dialogDescription: "This source component imports posts engagement and page engagement from your LinkedIn Page.",
           inputs: [
             {
               id:          "oauth-linkedinads",
@@ -102,7 +102,7 @@
           name: "Instagram",
           description: "Import data from Instagram",
           dialogName: "Instagram Source", 
-          dialogDescription: "This component imports post engagement and page engagement from your Instagram Business Accounts. Authorization is via a Facebook account and Facebook page connected to an Instagram Business Account.",
+          dialogDescription: "This component imports post engagement and page engagement from your Instagram Business Accounts. Authorization is via a Facebook account and Facebook page connected to an Instagram business account.",
           inputs: [
             {
               id:          "oauth-instagram",
@@ -125,7 +125,7 @@
             {
               id: "ex-instagram-since",
               name: "Period from date [incl.]",
-              description: "Select period from which you want to get the data.",
+              description: "Select the period from which you want to extract the data",
               type: "string",
               kind: "select",
               default: '30 days ago',
@@ -150,13 +150,13 @@
           icon: "component:keboola.ex-twitter",
           name: "Twitter Page",
           description: "Import data from Twitter Page",
-          dialogName: "Twitter Pages Source", 
-          dialogDescription: "This source component imports all posts engagement and page engagement (since this day) from your Twitter account",
+          dialogName: "Twitter Page Source", 
+          dialogDescription: "This source component imports all posts engagement and page engagement (since this day) from your Twitter account.",
           inputs: [
             {
               id:          "oauth-twitter",
               name:        "Open Authentication",
-              description: "Authorization for Twitter",
+              description: "Authorize Twitter",
               type:        "object",
               kind:        "oauth",
               componentId: "keboola.ex-twitter",
@@ -174,15 +174,15 @@
         },
         {
           icon: "component:keboola.ex-youtube",
-          name: "Youtube Channel",
-          description: "Import data from Youtube Channel",
-          dialogName: "Youtube Channel Source", 
-          dialogDescription: "This source component imports all posts (videos) engagement from your Youtube Channel",
+          name: "YouTube Channel",
+          description: "Import data from your YouTube channel",
+          dialogName: "YouTube Channel Source", 
+          dialogDescription: "This source component imports all posts (videos) engagement from your YouTube channel.",
           inputs: [
             {
               id:          "oauth-youtube",
               name:        "Open Authentication",
-              description: "Authorization for Youtube",
+              description: "Authorize YouTube",
               type:        "object",
               kind:        "oauth",
               componentId: "keboola.ex-youtube",
@@ -205,7 +205,7 @@
     },
 
     {
-      description: "Configure your credentials for writer.",
+      description: "Provide credentials for the destination component",
       required: "optional",
       steps: [
         {
@@ -213,12 +213,12 @@
           name: "PostgreSQL Destination",
           description: "Load data into PostgreSQL",
           dialogName: "PostgreSQL Destination", 
-          dialogDescription: "Data load to PostgreSQL DB.",
+          dialogDescription: "This destination component loads data into a PostgreSQL database.",
           inputs: [
             {
               id: "wr-db-pgsql-db-host",
               name: "Host",
-              description: "Insert Host address.",
+              description: "Insert the host address",
               type: "string",
               kind: "input",
               default: "host.example.rds.amazonaws.com",
@@ -226,15 +226,15 @@
             {
               id: "wr-db-pgsql-db-database",
               name: "Database",
-              description: "Insert Database Name.",
+              description: "Insert the name of the database",
               type: "string",
               kind: "input",
-              default: "Database name",
+              default: "database name",
             },
             {
               id: "wr-db-pgsql-db-port",
               name: "Port",
-              description: "Insert DB Port.",
+              description: "Insert the database port",
               type: "string",
               kind: "input",
               default: "5432",
@@ -242,7 +242,7 @@
             {
               id: "wr-db-pgsql-db-schema",
               name: "Schema",
-              description: "Insert Schema name.",
+              description: "Insert the schema name",
               type: "string",
               kind: "input",
               default: "public",
@@ -250,7 +250,7 @@
             {
               id: "wr-db-pgsql-db-user",
               name: "User",
-              description: "Insert User Name.",
+              description: "Insert the user name",
               type: "string",
               kind: "input",
               default: "user name",
@@ -258,7 +258,7 @@
             {
               id: "wr-db-pgsql-db-password",
               name: "Password",
-              description: "Insert Password.",
+              description: "Insert the password",
               type: "string",
               kind: "hidden",
             }
@@ -274,7 +274,7 @@
             {
               id: "wr-db-mysql-db-host",
               name: "Host",
-              description: "Insert host.",
+              description: "Insert the host",
               type: "string",
               kind: "input",
               default: "host.example.rds.amazonaws.com",
@@ -282,7 +282,7 @@
             {
               id: "wr-db-mysql-db-database",
               name: "Database",
-              description: "Insert Database name.",
+              description: "Insert the name of the database",
               type: "string",
               kind: "input",
               default: "database name",
@@ -290,7 +290,7 @@
             {
               id: "wr-db-mysql-db-port",
               name: "Port",
-              description: "Insert DB port.",
+              description: "Insert the database port",
               type: "string",
               kind: "input",
               default: "3306",
@@ -298,7 +298,7 @@
             {
               id: "wr-db-mysql-db-user",
               name: "User",
-              description: "Insert user name.",
+              description: "Insert the user name",
               type: "string",
               kind: "input",
               default: "user name",
@@ -306,7 +306,7 @@
             {
               id: "wr-db-mysql-db-password",
               name: "Password",
-              description: "Insert Password.",
+              description: "Insert your password",
               type: "string",
               kind: "hidden",
             }
@@ -314,15 +314,15 @@
         },
         {
           icon: "component:"+SnowflakeWriterComponentId(),
-          name: "Snowflake Destination",
+          name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
-          dialogDescription: "Data load to Snowflake DB.",
+          dialogDescription: "This destination component loads data into a Snowflake database.",
           inputs: [
             {
               id: "wr-snowflake-db-host",
               name: "Hostname",
-              description: "Insert database hostname",
+              description: "Insert the database hostname",
               type: "string",
               kind: "input",
               rules: "required",
@@ -331,7 +331,7 @@
             {
               id: "wr-snowflake-db-port",
               name: "Port",
-              description: "Insert database port number.",
+              description: "Insert the database port number",
               type: "string",
               kind: "input",
               default: "443",
@@ -340,7 +340,7 @@
             {
               id: "wr-snowflake-db-user",
               name: "Username",
-              description: "Insert database username.",
+              description: "Insert the database username",
               type: "string",
               kind: "input",
               default: "userName",
@@ -349,7 +349,7 @@
             {
               id: "wr-snowflake-db-password",
               name: "Database Password",
-              description: "Insert your password to the database.",
+              description: "Insert your password to the database",
               showif: "[wr-snowflake-db-host] != ''",
               type: "string",
               kind: "hidden",
@@ -357,7 +357,7 @@
             {
               id: "wr-snowflake-db-database",
               name: "Database Name",
-              description: "Insert name of your database.",
+              description: "Insert the name of the database",
               type: "string",
               kind: "input",
               default: "DatabaseName",
@@ -366,7 +366,7 @@
             {
               id: "wr-snowflake-db-schema",
               name: "Schema",
-              description: "Insert database schema.",
+              description: "Insert the database schema",
               type: "string",
               kind: "input",
               default: "Schema",
@@ -375,7 +375,7 @@
             {
               id: "wr-snowflake-db-warehouse",
               name: "Warehouse",
-              description: "Insert database warehouse.",
+              description: "Insert the database warehouse",
               type: "string",
               kind: "input",
               default: "Warehouse",
@@ -385,10 +385,10 @@
         },
         {
           icon: "component:keboola.wr-google-sheets",
-          name: "Google sheet Destination",
-          description: "Load to data into google sheet",
-          dialogName: "Google Sheet Destination", 
-          dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1BFXwTno70hJIZJWQ_iHW26qZvjCIQmxLAg1W93gQTrM/edit?usp=sharing) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
+          name: "Google Sheets",
+          description: "Load data into Google Sheets",
+          dialogName: "Google Sheets Destination", 
+          dialogDescription: "Copy [this sheet](https://docs.google.com/spreadsheets/d/1BFXwTno70hJIZJWQ_iHW26qZvjCIQmxLAg1W93gQTrM/edit?usp=sharing) into your drive. Copy the text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: [
             {
               id:          "oauth-googlesheet",
@@ -402,7 +402,7 @@
             {
                 id: "google-sheet-id",
                 name: "CRM gSheet File ID",
-                description: "Insert file ID of the google sheet destination",
+                description: "Insert the file ID of the Google sheet destination",
                 type: "string",
                 kind: "input",
                 rules: "required",
