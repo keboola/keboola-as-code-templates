@@ -1,22 +1,20 @@
-## Social Media Engagement Template
+The process is simple and we will guide you through it.
 
-With this flow, you can get aggregated engagement data from different social networks. The output is two tables, first table pages_engagement of daily metrics for each social media and the second posts_engagement table containing all posts from selected social media.
+The flow, in a nutshell:
 
-### The flow, in a nutshell:
-
-1. First, the data source components obtain data from chosen social networks.
-Currently are available:
+- First, the Social Media Engagement source components will collect data from your selected social networks. Currently, these networks are available:
+    
     - Facebook
     - Instagram
     - YouTube
     - LinkedIn
-    - Twitter - announced the end of free API
+    - Twitter – has announced the end of the free API
 
-2. The transformation fills Nulls in missing columns, converts dates to a standard format, and adds information about the source social network to the source column.
+- We then add NULL values if any columns are missing, convert dates to a standard format, and add information about the source social network to the source column.
 
-3. Finally, the united data are exported to the destination tables
+- Finally, the combined data will be exported to the destination tables.
 
-**Output table - pages_engagement:**
+**Output table: pages_engagement**
 
 | metric / social network | Facebook | Instagram | LinkedIn | Twitter | YouTube |
 |-------------------------|:----------:|:-----------:|:----------:|:---------:|:---------:|
@@ -25,7 +23,7 @@ Currently are available:
 | page_views_total        |     ✅    |     ✅     |     ✅    |    ❌    |    ❌    |
 
 
-**Output table - posts_engagement:**
+**Output table: posts_engagement**
 
 | metric / social network | Facebook | Instagram | LinkedIn | Twitter |   YouTube  |
 |-------------------------|:--------:|:---------:|:--------:|:-------:|:----------:|
@@ -37,8 +35,11 @@ Currently are available:
 |                         |  shares  |  comments |          |  shares |  comments  |
 |                         |          |           |          |         | favourites |
 
-**Availability of historical data:**
+
+**Availability of historical data**
+
 Each social network allows access to the history of page engagement differently:
+
 - Facebook - maximum 93 days ago
 - Instagram - maximum 30 days ago
 - LinkedIn - without known limit
