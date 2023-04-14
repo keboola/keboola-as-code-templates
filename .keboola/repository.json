@@ -791,7 +791,7 @@
       "id": "keboola-costs-to-googlesheet",
       "name": "Keboola Costs to Google Sheets",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
-      "categories": ["Costs", "Keboola Costs"],
+      "categories": ["Costs"],
       "path": "keboola-costs-to-googlesheet",
       "versions": [
         {
@@ -811,7 +811,7 @@
       "id": "keboola-costs",
       "name": "Keboola Costs",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
-      "categories": ["Costs", "Keboola Costs"],
+      "categories": ["Costs"],
       "path": "keboola-costs",
       "versions": [
         {
@@ -833,7 +833,7 @@
       "id": "keboola-costs-to-snowflake",
       "name": "Keboola Costs to Snowflake",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
-      "categories": ["Costs", "Keboola Costs"],
+      "categories": ["Costs"],
       "path": "keboola-costs-to-snowflake",
       "versions": [
         {
@@ -967,7 +967,7 @@
       "id": "keboola-costs-to-bigquery",
       "name": "Keboola costs to BigQuery",
       "description": "Aggregate all your Telemetry data about your Keboola Connection project or about your whole organization to gain valuable insights and improve decision-making.",
-      "categories": ["Costs", "Keboola Costs"],
+      "categories": ["Costs"],
       "path": "keboola-costs-to-bigquery",
       "versions": [
         {
