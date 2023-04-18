@@ -9,6 +9,7 @@
       "id": "shopify-to-datastudio",
       "name": "Shopify to Data Studio",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": ["E-commerce"],
       "path": "shopify-to-datastudio",
       "versions": [
         {
@@ -31,6 +32,7 @@
       "id": "adsplatform-to-googlesheet",
       "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": ["Marketing"],
       "path": "adsplatform-to-googlesheet",
       "versions": [
         {
@@ -52,6 +54,7 @@
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the TML block.",
+      "categories": ["Analytics"],
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -72,6 +75,7 @@
       "id": "thoughtspot-crm-hubspot",
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
+      "categories": ["Analytics"],
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -92,6 +96,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
+      "categories": ["E-commerce"],
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
@@ -115,6 +120,7 @@
       "id": "shopify-to-bigquery",
       "name": "Shopify to BigQuery",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": ["E-commerce"],
       "path": "shopify-to-bigquery",
       "versions": [
         {
@@ -136,6 +142,7 @@
       "id": "shopify-to-snowflake",
       "name": "Shopify to Snowflake",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": ["E-commerce"],
       "path": "shopify-to-snowflake",
       "versions": [
         {
@@ -157,6 +164,7 @@
       "id": "shopify-to-googlesheet",
       "name": "Shopify to Google Sheets",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": ["E-commerce"],
       "path": "shopify-to-googlesheet",
       "versions": [
         {
@@ -178,6 +186,7 @@
       "id": "shopify-to-keboolasnowflake",
       "name": "Shopify to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Shopify data and change it into actionable insights.",
+      "categories": ["E-commerce"],
       "path": "shopify-to-keboolasnowflake",
       "versions": [
         {
@@ -199,6 +208,7 @@
       "id": "adsplatform-to-bigquery",
       "name": "Advertising Platforms to BigQuery",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": ["Marketing"],
       "path": "adsplatform-to-bigquery",
       "versions": [
         {
@@ -221,6 +231,7 @@
       "id": "adsplatform-to-snowflake",
       "name": "Advertising Platforms to Snowflake",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": ["Marketing"],
       "path": "adsplatform-to-snowflake",
       "versions": [
         {
@@ -243,6 +254,7 @@
       "id": "adsplatform-to-keboolasnowflake",
       "name": "Advertising Platforms to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": ["Marketing"],
       "path": "adsplatform-to-keboolasnowflake",
       "versions": [
         {
@@ -265,6 +277,7 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "categories": ["Data Governance"],
       "path": "keboola-metadata-to-datahub",
       "versions": [
         {
@@ -284,6 +297,7 @@
       "id": "snowflake-virtual-hands-on-lab",
       "name": "Snowflake Virtual Hands on Lab",
       "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "categories": ["Tutorials"],
       "path": "snowflake-virtual-hands-on-lab",
       "versions": [
         {
@@ -305,6 +319,7 @@
       "id": "googleanalytics-to-bigquery",
       "name": "Google Analytics to BigQuery",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": ["Analytics"],
       "path": "googleanalytics-to-bigquery",
       "versions": [
         {
@@ -324,6 +339,7 @@
       "id": "googleanalytics-to-snowflake",
       "name": "Google Analytics to Snowflake",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": ["Analytics"],
       "path": "googleanalytics-to-snowflake",
       "versions": [
         {
@@ -343,6 +359,7 @@
       "id": "googleanalytics-to-keboolasnowflake",
       "name": "Google Analytics to Keboola DWH",
       "description": "Don't you have own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Google Analytics data and transform it into more powerful customer insights and smarter marketing strategies.",
+      "categories": ["Analytics"],
       "path": "googleanalytics-to-keboolasnowflake",
       "versions": [
         {
@@ -362,6 +379,7 @@
       "id": "googleanalytics-to-googlesheet",
       "name": "Google Analytics to Google Sheets",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": ["Analytics"],
       "path": "googleanalytics-to-googlesheet",
       "versions": [
         {
@@ -381,6 +399,7 @@
       "id": "salesforce-to-bigquery",
       "name": "Salesforce to BigQuery",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": ["CRM"],
       "path": "salesforce-to-bigquery",
       "versions": [
         {
@@ -399,6 +418,7 @@
       "id": "salesforce-to-keboolasnowflake",
       "name": "Salesforce to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": ["CRM"],
       "path": "salesforce-to-keboolasnowflake",
       "versions": [
         {
@@ -417,6 +437,7 @@
       "id": "salesforce-to-snowflake",
       "name": "Salesforce to Snowflake",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": ["CRM"],
       "path": "salesforce-to-snowflake",
       "versions": [
         {
@@ -435,6 +456,7 @@
       "id": "salesforce-to-googlesheet",
       "name": "Salesforce to Google Sheets",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": ["CRM"],
       "path": "salesforce-to-googlesheet",
       "versions": [
         {
@@ -453,6 +475,7 @@
       "id": "pipedrive-to-snowflake",
       "name": "Pipedrive to Snowflake",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": ["CRM"],
       "path": "pipedrive-to-snowflake",
       "versions": [
         {
@@ -471,6 +494,7 @@
       "id": "pipedrive-to-googlesheet",
       "name": "Pipedrive to Google Sheets",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": ["CRM"],
       "path": "pipedrive-to-googlesheet",
       "versions": [
         {
@@ -486,6 +510,7 @@
       "id": "pipedrive-to-bigquery",
       "name": "PipeDrive to BigQuery",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": ["CRM"],
       "path": "pipedrive-to-bigquery",
       "versions": [
         {
@@ -504,6 +529,7 @@
       "id": "pipedrive-to-keboolasnowflake",
       "name": "Pipedrive to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": ["CRM"],
       "path": "pipedrive-to-keboolasnowflake",
       "versions": [
         {
@@ -522,6 +548,7 @@
       "id": "keboola-dbt-tutorial",
       "name": "Keboola dbt Tutorial",
       "description": "Run your first data pipeline with dbt! Extract seed data, run dbt to model data and export it to the DB destination of your choice!",
+      "categories": ["Tutorials"],
       "path": "keboola-dbt-tutorial",
       "versions": [
         {
@@ -545,6 +572,7 @@
       "id": "github-to-bigquery",
       "name": "GitHub to BigQuery",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": ["Git"],
       "path": "github-to-bigquery",
       "versions": [
         {
@@ -563,6 +591,7 @@
       "id": "github-to-googlesheet",
       "name": "GitHub to Google Sheets",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": ["Git"],
       "path": "github-to-googlesheet",
       "versions": [
         {
@@ -581,6 +610,7 @@
       "id": "github-to-snowflake",
       "name": "GitHub to Snowflake",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": ["Git"],
       "path": "github-to-snowflake",
       "versions": [
         {
@@ -599,6 +629,7 @@
       "id": "github-to-keboolasnowflake",
       "name": "GitHub to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": ["Git"],
       "path": "github-to-keboolasnowflake",
       "versions": [
         {
@@ -617,6 +648,7 @@
       "id": "data-quality",
       "name": "Hands on Data Quality",
       "description": "Take a look at data quality testing and monitoring via two examples.",
+      "categories": ["Tutorials"],
       "path": "data-quality",
       "versions": [
         {
@@ -634,6 +666,7 @@
       "id": "asana-to-keboolasnowflake",
       "name": "Asana to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": ["Project Management"],
       "path": "asana-to-keboolasnowflake",
       "versions": [
         {
@@ -652,6 +685,7 @@
       "id": "asana-to-bigquery",
       "name": "Asana to BigQuery",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": ["Project Management"],
       "path": "asana-to-bigquery",
       "versions": [
         {
@@ -670,6 +704,7 @@
       "id": "asana-to-googlesheet",
       "name": "Asana to Google Sheets",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": ["Project Management"],
       "path": "asana-to-googlesheet",
       "versions": [
         {
@@ -688,6 +723,7 @@
       "id": "asana-to-snowflake",
       "name": "Asana to Snowflake",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": ["Project Management"],
       "path": "asana-to-snowflake",
       "versions": [
         {
@@ -706,6 +742,7 @@
       "id": "typeform-to-snowflake",
       "name": "Typeform to Snowflake",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": ["Surveys"],
       "path": "typeform-to-snowflake",
       "versions": [
         {
@@ -724,6 +761,7 @@
       "id": "typeform-to-bigquery",
       "name": "Typeform to BigQuery",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": ["Surveys"],
       "path": "typeform-to-bigquery",
       "versions": [
         {
@@ -742,6 +780,7 @@
       "id": "typeform-to-googlesheet",
       "name": "Typeform to Google Sheets",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": ["Surveys"],
       "path": "typeform-to-googlesheet",
       "versions": [
         {
@@ -760,6 +799,7 @@
       "id": "typeform-to-keboolasnowflake",
       "name": "Typeform to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": ["Surveys"],
       "path": "typeform-to-keboolasnowflake",
       "versions": [
         {
