@@ -7,7 +7,7 @@
   "templates": [
     {
       "id": "api-demo",
-      "name": "API demo (UI dev)",
+      "name": "API Demo (UI dev)",
       "description": "Template from the examples of https://templates.keboola.com/v1/documentation/",
       "path": "api-demo",
       "versions": [
@@ -31,6 +31,21 @@
           "stable": false,
           "components": ["common:settings"],
           "path": "v2"
+        }
+      ]
+    },
+    {
+      "id": "api-demo-minimal",
+      "name": "API Demo Minimal (UI dev)",
+      "description": "The template contains only the ex-generic-v2 configuration.",
+      "path": "api-demo-minimal",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": ["ex-generic-v2"],
+          "path": "v1"
         }
       ]
     },
