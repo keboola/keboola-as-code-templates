@@ -28,9 +28,9 @@ Within this transformation, data is transformed. In this transformation, data is
 
 A basic RFM analysis is performed during this transformation.
 
-### DD: Data Destination [OUT-ECOMM-GSHEET] OR [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY]
+### DD: Data Destination [OUT-ECOMM-GSHEET] OR [OUT-ECOMM-SNOWFLAKE] OR [OUT-ECOMM-BIGQUERY] OR [OUT-ECOMM-POSTGRESQL]
 
-The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
+The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database or a PostgreSQL database.
 
 ### FLOW: Flow [ECOMM-SHOPTET]
 

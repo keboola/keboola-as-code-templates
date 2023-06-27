@@ -19,7 +19,7 @@ local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet
           inputs: facebookads
         },
         {
-          icon: "component:esnerda.ex-bingads",
+          icon: "component:kds-team.ex-bing-ads",
           name: "Bing Ads",
           description: "Import data from Bing Ads",
           dialogName: "Bing Ads Source", 

@@ -2,6 +2,7 @@ local snowflake = import "/<common>/out-crm-snowflake/v0/src/inputs.jsonnet";
 local pipedrive = import "/<common>/in-crm-pipedrive/inputs.jsonnet";
 local googlesheet = import "/<common>/out-crm-gsheet/v0/src/inputs.jsonnet";
 local bigquery = import "/<common>/out-crm-bigquery/v0/src/inputs.jsonnet";
+local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
 
 {
   stepsGroups: [
@@ -58,6 +59,14 @@ local bigquery = import "/<common>/out-crm-bigquery/v0/src/inputs.jsonnet";
           dialogName: "Big Query Destination", 
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
+        },
+        {
+          icon: "component:keboola.wr-db-pgsql",
+          name: "PostgreSQL Destination",
+          description: "Load to data into PostgreSQL",
+          dialogName: "PostgreSQL Destination", 
+          dialogDescription: "Data load to PostgreSQL DB.",
+          inputs: postgresql
         },
       ]
     },

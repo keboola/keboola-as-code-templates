@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Value Data Type",
+  name: "[Keboola] TEST - Column Value Data Type",
 }

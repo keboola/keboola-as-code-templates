@@ -29,9 +29,9 @@ From Pipedrive data, the second transformation creates an output CRM data model 
 The third transformation then creates the out_activity table using the first contact/opportunity/employee IDs from the activities by joining the table; this also outputs a pairing table for opportunities and contacts are created.
 The final snapshots are generated from the auxiliary tables.
 
-### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE] OR [OUT-CRM-BIGQUERY]
+### DD: Data Destination [OUT-CRM-GSHEET]  OR [OUT-CRM-SNOWFLAKE] OR [OUT-CRM-BIGQUERY] OR [OUT-CRM-POSTGRESQL]
 
-The writer loads data into a Google sheet or a Snowflake database or a BigQuery database.
+The writer loads data into a Google sheet or a Snowflake database or a BigQuery database or a PostgreSQL database.
 
 ### FLOW: Flow [CRM-PIPEDRIVE]
 

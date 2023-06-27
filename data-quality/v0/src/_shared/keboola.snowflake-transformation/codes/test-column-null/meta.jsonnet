@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Null",
+  name: "[Keboola] TEST - Column Null",
 }

@@ -1,3 +1,3 @@
 {
-  name: "TEST - Table Compare Records",
+  name: "[Keboola] TEST - Table Compare Records",
 }

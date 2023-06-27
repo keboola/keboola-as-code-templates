@@ -24,9 +24,9 @@ In this transformation, tables with organizations and users are created. These t
 
 Within this transformation, output tables are done to be able to do simple visualization.
 
-### DD: Data Destination [OUT-GIT-GSHEET]  OR [OUT-GIT-SNOWFLAKE] OR [OUT-GIT-BIGQUERY]
+### DD: Data Destination [OUT-GIT-GSHEET]  OR [OUT-GIT-SNOWFLAKE] OR [OUT-GIT-BIGQUERY] OR [OUT-GIT-POSTGRESQL]
 
-The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
+The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database or a PostgreSQL database.
 
 ### FLOW: Flow [GIT-GITHUB] 
 

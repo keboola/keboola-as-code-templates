@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-bingads-dev-key") == false,
+  isIgnored: InputIsAvailable("ex-bingads-account-id") == false,
 }
