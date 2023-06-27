@@ -70,7 +70,29 @@ AS
 --adding number of days in previous stage
 --iff project is moved more than once to some status, it always assign number of all days in that previous particular status
 CREATE TABLE "out_project_snapshot"
-AS
+(
+    "project_id" VARCHAR(255) NOT NULL,
+    "snapshot_date" DATE NOT NULL,
+    "status" VARCHAR(255),
+    "status_text" VARCHAR(255),
+    "days_in_status" INTEGER,
+    "previous_status" VARCHAR(255),
+    "status_change" BOOLEAN,
+    "days_in_previous_status" INTEGER,
+    "due_date" VARCHAR(255),
+    "previous_due_date" DATE,
+    "due_date_change" BOOLEAN,
+    "due_date_diff" VARCHAR(255),
+    "owner" VARCHAR(255),
+    "previous_owner" VARCHAR(255),
+    "owner_change" BOOLEAN,
+    "last_snapshot" BOOLEAN,
+    "last_day_of_month" BOOLEAN,
+    "last_day_of_quarter" BOOLEAN
+);
+
+
+INSERT INTO "out_project_snapshot"
     SELECT
         "o"."project_id",
         "o"."snapshot_date",
@@ -108,20 +130,20 @@ AS
 --don't snapshot tasks of already archived projects (using inner join on project snapshot tmp table)
 CREATE TABLE "task_snapshot_tmp"
 AS
-    SELECT
+     SELECT
         "ts"."task_id",
-        "ts"."snapshot_date",
-        nullif("ts"."due_date", '') AS "due_date",
-        nullif(lag("ts"."due_date") OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
+        nullif(to_char("ts"."snapshot_date"),'') AS "snapshot_date",
+        nullif(to_char("ts"."due_date"), '') AS "due_date",
+        nullif(lag(to_char("ts"."due_date")) OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
                '')                  AS "previous_due_date",
         "ts"."completed",
-        ifnull(lag("ts"."completed") OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
+        ifnull(lag(to_char("ts"."completed")) OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
                '')                  AS "previous_completed",
         "ts"."section",
-        ifnull(lag("ts"."section") OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
+        ifnull(lag(to_char("ts"."section")) OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
                '')                  AS "previous_section",
         "ts"."assignee",
-        ifnull(lag("ts"."assignee") OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
+        ifnull(lag(to_char("ts"."assignee")) OVER (PARTITION BY "ts"."task_id" ORDER BY "ts"."snapshot_date"),
                '')                  AS "previous_assignee"
     FROM "task_snapshot" "ts"
              INNER JOIN (SELECT DISTINCT
@@ -170,7 +192,25 @@ AS
 --create task snapshot table
 --define if there has been change of section, assignee or due date
 CREATE TABLE "out_task_snapshot"
-AS
+(
+ "task_id" VARCHAR(255) NOT NULL,
+ "snapshot_date" DATE NOT NULL,
+ "section" VARCHAR(255),
+ "previous_section" VARCHAR(255),
+ "section_change" BOOLEAN,
+ "due_date" DATE,
+ "previous_due_date" DATE,
+ "due_date_change" BOOLEAN,
+ "due_date_diff" INTEGER,
+ "assignee" VARCHAR(255),
+ "previous_assignee" VARCHAR(255),
+ "assignee_change" BOOLEAN,
+ "last_snapshot" BOOLEAN,
+ "last_day_of_month" BOOLEAN,
+ "last_day_of_quarter" BOOLEAN
+);
+
+INSERT INTO "out_task_snapshot"
     SELECT
         "o"."task_id",
         "o"."snapshot_date",

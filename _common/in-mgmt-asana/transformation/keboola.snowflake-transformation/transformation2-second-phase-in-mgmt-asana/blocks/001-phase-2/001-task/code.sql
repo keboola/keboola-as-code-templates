@@ -3,15 +3,33 @@
 -- change boolean values to true/false
 -- add section from membership table
 CREATE TABLE "out_task"
-AS
+(
+    "task_id" VARCHAR(255) NOT NULL,
+    "task" VARCHAR(255),
+    "section" VARCHAR(255),
+    "project_id" VARCHAR(255),
+    "created_at" TIMESTAMP,
+    "completed_at" TIMESTAMP,
+    "due_date" DATE,
+    "days_past_due" VARCHAR(255),
+    "is_past_due" BOOLEAN,
+    "url" VARCHAR(1024),
+    "assignee" VARCHAR(255),
+    "assignee_type" VARCHAR(255),
+    "completed" BOOLEAN,
+    "is_subtask" BOOLEAN
+
+);
+
+INSERT INTO "out_task"
     SELECT DISTINCT
         "t"."id"                                                                                  AS "task_id",
         iff(length("t"."name") > 1024, left("t"."name", 1021) || '...', "t"."name")               AS "task",
         ifnull("tdm"."section_name", '(no section)')                                              AS "section",
         "p"."project_id"                                                                          AS "project_id",
-        replace(left("td"."created_at", 19), 'T', ' ')                                            AS "created_at",
-        replace(left("td"."completed_at", 19), 'T', ' ')                                          AS "completed_at",
-        "td"."due_on"                                                                             AS "due_date",
+        nullif(replace(right(replace(left("td"."created_at", 19), 'T', ' '),1),'Z',''),'')        AS "created_at",
+        nullif(replace(right(replace(left("td"."completed_at", 19), 'T', ' '),1),'Z',''),'')      AS "completed_at",
+        nullif("td"."due_on",'')                                                                  AS "due_date",
         iff("td"."completed" = '1', NULL, datediff(DAY, nullif("td"."due_on", ''), current_date)) AS "days_past_due",
         iff("days_past_due" IS NULL OR "days_past_due" < 1, 'false', 'true')                      AS "is_past_due",
         'https://app.asana.com/0/' || "p"."project_id" || '/' || "t"."id"                         AS "url",
@@ -33,7 +51,14 @@ AS
 -- table with custom task fields
 -- choose correct value column based on type of the field
 CREATE TABLE "out_task_custom_field"
-AS
+(
+    "task_custom_field_id" VARCHAR(255) NOT NULL,
+    "task_id" VARCHAR(255),
+    "task_custom_field" VARCHAR(255),
+    "task_custom_field_value" VARCHAR(255)
+);
+
+INSERT INTO "out_task_custom_field"
     SELECT
         "id"                                                    AS "task_custom_field_id",
         "task_details_pk"                                       AS "task_id",
@@ -43,7 +68,12 @@ AS
 
 -- table with tags assigned to task
 CREATE TABLE "out_task_tag"
-AS
+(
+    "task_id" VARCHAR(255) NOT NULL,
+    "tag" VARCHAR(255) NOT NULL
+);
+
+INSERT INTO "out_task_tag"
     SELECT
         "ot"."task_id" AS "task_id",
         "tdt"."name"   AS "tag"
@@ -53,7 +83,12 @@ AS
 
 -- create N:M relation table describing user membership in tasks
 CREATE TABLE "out_task_user"
-AS
+(
+    "user_id" VARCHAR(255) NOT NULL,
+    "task_id" VARCHAR(255) NOT NULL
+);
+
+INSERT INTO "out_task_user"
     SELECT
         "tdf"."id"     AS "user_id",
         "ot"."task_id" AS "task_id"
@@ -64,14 +99,26 @@ AS
 -- table with task events
 -- trim text if it's too long
 CREATE TABLE "out_task_event"
-AS
+(
+    "task_event_id" VARCHAR(255) NOT NULL,
+    "task_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "user_type" VARCHAR(255),
+    "user" VARCHAR(255),
+    "created_at" TIMESTAMP,
+    "event_type" VARCHAR(255),
+    "event" VARCHAR(255),
+    "event_text" VARCHAR(1024)
+);
+
+INSERT INTO "out_task_event"
     SELECT
         "id"                                                            AS "task_event_id",
         "task_id",
         ifnull("u"."user_id", '0')                                      AS "user_id",
         "u"."user_type",
         ifnull("u"."user", 'Unknown')                                   AS "user",
-        replace(left("created_at", 19), 'T', ' ')                       AS "created_at",
+        nullif(replace(left("created_at", 19), 'T', ' '),'')            AS "created_at",
         "type"                                                          AS "event_type",
         "resource_subtype"                                              AS "event",
         iff(length("text") > 1024, left("text", 1021) || '...', "text") AS "event_text"
@@ -86,8 +133,39 @@ ALTER SESSION
     SET TIMEZONE = 'UTC';
 
 CREATE TABLE "out_task_snapshot"
-AS
+(
+    "snapshot_date" DATE NOT NULL,
+    "task_id" VARCHAR(255) NOT NULL,
+    "task" VARCHAR(255),
+    "section" VARCHAR(255),
+    "project_id" VARCHAR(255),
+    "created_at" TIMESTAMP,
+    "completed_at" TIMESTAMP,
+    "due_date" DATE,
+    "days_past_due" VARCHAR(255),
+    "is_past_due" BOOLEAN,
+    "url" VARCHAR(1024),
+    "assignee" VARCHAR(255),
+    "assignee_type" VARCHAR(255),
+    "completed" BOOLEAN,
+    "is_subtask" BOOLEAN
+);
+
+INSERT INTO "out_task_snapshot"
     SELECT
-        current_date :: STRING AS "snapshot_date",
-        "ot".*
-    FROM "out_task" "ot";
+        current_date()  AS "snapshot_date",
+        "task_id",
+        "task",
+        "section", 
+        "project_id", 
+        "created_at", 
+        "completed_at",
+        "due_date",
+        "days_past_due", 
+        "is_past_due",
+        "url",
+        "assignee",
+        "assignee_type",
+        "completed",
+    		"is_subtask"
+    FROM "out_task";

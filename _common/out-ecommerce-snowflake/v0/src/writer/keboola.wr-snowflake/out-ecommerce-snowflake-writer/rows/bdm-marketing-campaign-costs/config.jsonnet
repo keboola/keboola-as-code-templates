@@ -26,10 +26,10 @@
       {
         name: "DATE",
         dbName: "DATE",
-        type: "varchar",
+        type: "date",
         nullable: true,
         default: "",
-        size: "16777216",
+        size: "",
       },
       {
         name: "CAMPAIGN",

@@ -18,7 +18,15 @@ FROM "out_ga_traffic" t1
 			ON split_part(t1."ga_traffic_id",'*',6) = "account_id";
 
 -- table with relationships between ("keyword" ,"ad_group") and ga traffic data
-CREATE  VIEW "out_keyword_ad_group" AS 
+CREATE TABLE "out_keyword_ad_group"
+(
+  "keyword_id" VARCHAR(1024) NOT NULL,
+  "online_marketing_traffic_id" VARCHAR(1024),
+  "keyword" VARCHAR(255),
+  "ad_group" VARCHAR(255)
+);
+
+INSERT INTO "out_keyword_ad_group"
 SELECT DISTINCT  
 	ifnull("account_name",'') || '*' || ifnull("date",'') || '*' || ifnull("source",'') || '*' ||
 ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'')  || '*' || ifnull("keyword",'') || '*' || ifnull("ad_group",'') AS "keyword_id"
@@ -60,7 +68,26 @@ FROM "online_marketing" t1
 		ON t1."online_marketing_traffic_id"=t2."id";
 
 -- final traffic table 
-CREATE  TABLE "out_marketing" AS 
+CREATE  TABLE "out_marketing"
+(
+  "online_marketing_traffic_id" VARCHAR(1024) NOT NULL,
+  "account_name" VARCHAR(255),
+  "date" DATE,
+  "source" VARCHAR(255),
+  "medium" VARCHAR(255),
+  "campaign" VARCHAR(255),
+  "domain" VARCHAR(255),
+  "impressions" INTEGER,
+  "clicks" INTEGER,
+  "costs_cpc" FLOAT,
+  "costs_conversion" FLOAT,
+  "sessions_new" INTEGER,
+  "sessions_return" INTEGER,
+  "pageviews" INTEGER,
+  "bounces" INTEGER
+);
+
+INSERT INTO "out_marketing"
 SELECT 
 	"id" AS "online_marketing_traffic_id"
   ,split_part("id",'*',1) AS "account_name"
@@ -94,7 +121,21 @@ FROM (
 );
 
 -- final transaction table 
-CREATE VIEW "out_marketing_transactions" AS 
+CREATE TABLE "out_marketing_transactions"
+(
+  "online_marketing_transactions_id" VARCHAR(1024) NOT NULL,
+  "online_marketing_traffic_id" VARCHAR(1024),
+  "account_name" VARCHAR(255),
+  "date" DATE,
+  "source" VARCHAR(255),
+  "medium" VARCHAR(255),
+  "campaign" VARCHAR(255),
+  "domain" VARCHAR(255),
+  "transaction_id" VARCHAR(255),
+  "item_quantity" INTEGER
+);
+
+INSERT INTO "out_marketing_transactions" 
 SELECT 
 	ifnull("account_name",'') || '*' || ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'') || '*' || ifnull("transaction_id",'') AS "online_marketing_transactions_id" 
 	,ifnull("account_name",'') || '*' || ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'') AS "online_marketing_traffic_id"  

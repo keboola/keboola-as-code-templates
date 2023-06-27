@@ -22,7 +22,15 @@ FROM "Google_Adwords_ad_groups" AS a
 		ON a."campaignId"="d"."campaignId" AND a."adGroupId"="d"."adGroupId" AND a."segmentsDate"="d"."segmentsDate";
 
 -- output table grouping
-CREATE TABLE "out_adwords" AS 
+CREATE TABLE "out_adwords"
+(
+  "adwords_id" VARCHAR(1024) NOT NULL,
+  "impressions" INTEGER,
+  "clicks" INTEGER,
+  "costs" FLOAT
+);
+
+INSERT INTO"out_adwords"  
 SELECT
 	ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'') || '*' || ifnull("currency",'') || '*' || ifnull("account_id",'')  AS "adwords_id"
   ,SUM("impressions") AS "impressions" 

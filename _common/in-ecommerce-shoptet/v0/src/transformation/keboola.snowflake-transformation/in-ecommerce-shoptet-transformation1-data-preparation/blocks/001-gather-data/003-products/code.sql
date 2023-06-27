@@ -1,6 +1,28 @@
 --BDM_PRODUCTS
+CREATE TABLE "bdm_products"
+(
+     PRODUCT_ID VARCHAR(255) NOT NULL,
+     PRODUCT_CODE VARCHAR(255),
+     PRODUCT_CODE_2 VARCHAR(255),
+     PRODUCT_GUID VARCHAR(255),
+     PRODUCT_NAME VARCHAR(1024),
+     PRODUCT_MANUFACTURER VARCHAR(255),
+     PRODUCT_TYPE VARCHAR(255),
+     PRODUCT_EAN VARCHAR(255),
+     PRODUCT_PRICE FLOAT,
+     PRODUCT_STANDARD_PRICE FLOAT,
+     PRODUCT_PURCHASE_PRICE FLOAT,
+     PRODUCT_OPTION1 VARCHAR(255),
+     PRODUCT_OPTION2 VARCHAR(255),
+     PRODUCT_OPTION3 VARCHAR(255),
+     PRODUCT_STOCK_AMOUNT INTEGER,
+     CATEGORY VARCHAR(255),
+     CATEGORY_TEXT VARCHAR(255),
+     PRODUCT_URL VARCHAR(1024),
+     IS_DELETED BOOLEAN
+);
 
-CREATE TABLE "bdm_products" AS
+INSERT INTO "bdm_products"
 SELECT
     P."code"                                                                                     AS PRODUCT_ID
   , P."code"                                                                                     AS PRODUCT_CODE

@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_ad_analytics",
     dbName: "ga_ad_analytics",
     incremental: false,
     primaryKey: [
@@ -149,8 +149,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_ad_analytics.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_ad_analytics",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_ad_analytics.csv",
           columns: [
             "id_TBE",
             "ga_date",
