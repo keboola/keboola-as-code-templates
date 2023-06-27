@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user",
+    tableId: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user",
     dbName: "USER",
     incremental: true,
     primaryKey: [
@@ -19,7 +19,7 @@
         name: "user",
         dbName: "USER",
         type: "string",
-        nullable: false,
+        nullable: true,
         default: "",
         size: "255",
       },
@@ -27,7 +27,7 @@
         name: "email",
         dbName: "EMAIL",
         type: "string",
-        nullable: false,
+        nullable: true,
         default: "",
         size: "255",
       },
@@ -35,7 +35,7 @@
         name: "email_domain",
         dbName: "EMAIL_DOMAIN",
         type: "string",
-        nullable: false,
+        nullable: true,
         default: "",
         size: "255",
       },
@@ -43,7 +43,7 @@
         name: "user_type",
         dbName: "USER_TYPE",
         type: "string",
-        nullable: false,
+        nullable: true,
         default: "",
         size: "255",
       },
@@ -53,8 +53,8 @@
     input: {
       tables: [
         {
-          source: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user",
-          destination: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user.csv",
+          source: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user",
+          destination: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user.csv",
           columns: [
             "user_id",
             "user",
