@@ -9,7 +9,56 @@ SELECT O."code"                                             AS ORDER_ID
 FROM "orders" O
 GROUP BY 1;
 
-CREATE TABLE "bdm_orders" AS
+CREATE TABLE "bdm_orders"
+(
+    ORDER_ID VARCHAR(255) NOT NULL,
+    ORDER_DATE TIMESTAMP,
+    ORDER_STATUS VARCHAR(255),
+    IS_SUCESSFUL BOOLEAN,
+    IS_FIRST_PURCHASE BOOLEAN,
+    ORDER_CURRENCY VARCHAR(255),
+    ORDER_CURRENCY_FX_RATE INTEGER,
+    ORDER_CUSTOMER_EMAIL VARCHAR(255),
+    CUSTOMER_ID VARCHAR(255),
+    CUSTOMER_REGULARITY_TYPE VARCHAR(255),
+    DAYS_SINCE_PREVIOUS_ORDER INTEGER,
+    ORDER_REMARK INTEGER,
+    ORDER_SHOP_REMARK INTEGER,
+    ORDER_PACKAGE_NUMBER INTEGER,
+    ORDER_NOTE1 VARCHAR(255),
+    ORDER_NOTE2 VARCHAR(255),
+    ORDER_NOTE3 VARCHAR(255),
+    ORDER_NOTE4 VARCHAR(255),
+    ORDER_NOTE5 VARCHAR(255),
+    ORDER_NOTE6 VARCHAR(255),
+    ORDER_WEIGHT FLOAT,
+    REFERER VARCHAR(255),
+    CHANNEL VARCHAR(255),
+    SOURCE VARCHAR(255),
+    CUSTOMER_GROUP_NAME VARCHAR(255),
+    CUSTOMER_GROUP_TYPE VARCHAR(255),
+    CUSTOMER_TYPE VARCHAR(255),
+    BILLING_CITY VARCHAR(255),
+    BILLING_COUNTRY VARCHAR(255),
+    BILLING_ZIP VARCHAR(255),
+    SHIPPING_CITY VARCHAR(255),
+    SHIPPING_COUNTRY VARCHAR(255),
+    SHIPPING_ZIP VARCHAR(255),
+    BILLING_TYPE VARCHAR(255),
+    SHIPPING_TYPE VARCHAR(255),
+    ORDER_TOTAL_PRICE_WITH_TAXES FLOAT,
+    ORDER_TOTAL_PRICE_WITHOUT_TAXES FLOAT,
+    ORDER_TOTAL_PRICE_TAXES FLOAT,
+    ORDER_PRICE_ROUNDING FLOAT,
+    ORDER_TOTAL_PRICE_TO_PAY FLOAT,
+    ORDER_TOTAL_PRICE_PAID FLOAT,
+    ORDER_LINE_PRICE_WITH_TAXES FLOAT,
+    ORDER_LINE_PRICE_WITHOUT_TAXES FLOAT,
+    ORDER_LINE_PRICE_TAXES FLOAT,
+    ORDER_LINE_TAXES_RATE INTEGER
+);
+
+INSERT INTO "bdm_orders"
 SELECT DISTINCT O."code"                                       AS ORDER_ID
               , O."date"                                       AS ORDER_DATE
               , O."statusName"                                 AS ORDER_STATUS
@@ -71,7 +120,24 @@ FROM "orders" O
          JOIN "order_totals" OT ON O."code" = OT.ORDER_ID;
 
 --BDM_ORDER_LINES
-CREATE TABLE "bdm_order_lines" AS
+CREATE TABLE "bdm_order_lines"
+(
+    ORDER_ID INTEGER NOT NULL,
+    ORDER_LINE_ID VARCHAR(255),
+    ORDER_DATE TIMESTAMP,
+    ORDER_LINE_PRODUCT_ID VARCHAR(255),
+    ORDER_ITEM_TYPE VARCHAR(255),
+    ITEMNAME VARCHAR(255),
+    DISCOUNT_PERCENT FLOAT,
+    ORDER_LINE_AMOUNT FLOAT,
+    ORDER_LINE_PRICE_WITH_TAXES FLOAT,
+    ORDER_LINE_PRICE_WITHOUT_TAXES FLOAT,
+    ORDER_LINE_PRICE_TAXES FLOAT,
+    ORDER_LINE_TAXES_RATE FLOAT,
+    LINE_PURCHASE_PRICE FLOAT
+);
+
+INSERT INTO "bdm_order_lines"
 SELECT O."code"                                                                          AS ORDER_ID
      -- TODO: review the logic, what if there's product change or what if there's more than 1000 items? What if price changes?
      -- Or what if there's 10 items with the same price.
@@ -95,14 +161,25 @@ SELECT O."code"                                                                 
 FROM "orders" O;
 
 --- Get billing and shipping details
+CREATE TABLE "bdm_shipping_type" 
+(
+    SHIPPING_TYPE_ID VARCHAR(255),
+    NAME VARCHAR(255)
+);
 
-CREATE TABLE "bdm_shipping_type" AS
+INSERT INTO "bdm_shipping_type"
 SELECT DISTINCT "itemCode" AS SHIPPING_TYPE_ID
               , "itemName" AS NAME
 FROM "orders"
 WHERE "orderItemType" = 'shipping';
 
-CREATE TABLE "bdm_billing_type" AS
+CREATE TABLE "bdm_billing_type" 
+(
+    BILLING_TYPE_ID VARCHAR(255),
+    NAME VARCHAR(255)
+);
+
+INSERT INTO "bdm_billing_type"
 SELECT DISTINCT "itemCode" AS BILLING_TYPE_ID
               , "itemName" AS NAME
 FROM "orders"

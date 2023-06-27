@@ -28,9 +28,9 @@ Within this transformation, output table with tasks is created and snapshot task
 
 The third transformation creates task snapshot table and project snapshot table. Task snapshot table defines if there has been change of section, assignee or due date project snapshot table. The project snapshot table defines if there has been change of status, owner or due date and counts number of days in previous stage.
 
-### DD: Data Destination [OUT-MGMT-GSHEET]  OR [OUT-MGMT-SNOWFLAKE] OR [OUT-MGMT-BIGQUERY]
+### DD: Data Destination [OUT-MGMT-GSHEET]  OR [OUT-MGMT-SNOWFLAKE] OR [OUT-MGMT-BIGQUERY] OR [OUT-MGMT-POSTGRESQL]
 
-The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
+The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database or a PostgreSQL database.
 
 ### FLOW: Flow [MGMT-ASANA] 
 

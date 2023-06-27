@@ -1,1 +1,1 @@
-By using this end-to-end flow you can extract data from Pipedrive and transform it into visualizations in your BI tool or anywhere else (currently into a Google sheet, Snowflake or BigQuery database).
+By using this end-to-end flow you can extract data from Pipedrive and transform it into visualizations in your BI tool or anywhere else (currently into a Google sheet, Snowflake, PostgreSQL or BigQuery database).

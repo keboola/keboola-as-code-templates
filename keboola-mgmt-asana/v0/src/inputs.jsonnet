@@ -2,6 +2,7 @@ local asana = import "/<common>/in-mgmt-asana/inputs.jsonnet";
 local snowflake = import "/<common>/out-mgmt-snowflake/inputs.jsonnet";
 local bigquery = import "/<common>/out-mgmt-bigquery/inputs.jsonnet";
 local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
+local postgresql = import"/<common>/out-mgmt-postgresql/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -13,7 +14,7 @@ local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
           name: "Asana",
           description: "Asana - Data Source",
           dialogName: "Asana Data Source", 
-          dialogDescription: "Extractor collects data from Asana about projects and tasks.",
+          dialogDescription: "This source component collects data from Asana about projects and tasks.",
           inputs: asana
         }
       ]
@@ -57,6 +58,14 @@ local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
           dialogName: "Google Sheet Destination", 
           dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1zpBB_3HbD2ofXGtPYEabuHeIPVrAYpC1vllpJO5fjIA) into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below",
           inputs: googlesheet,  
+        },
+        {
+          icon: "component:keboola.wr-db-pgsql",
+          name: "PostgreSQL Destination",
+          description: "Load to data into PostgreSQL",
+          dialogName: "PostgreSQL Destination", 
+          dialogDescription: "Data load to PostgreSQL DB.",
+          inputs: postgresql
         },
       ],
     },

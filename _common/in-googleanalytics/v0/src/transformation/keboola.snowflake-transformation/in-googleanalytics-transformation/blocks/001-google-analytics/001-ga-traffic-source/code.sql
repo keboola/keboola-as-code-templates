@@ -1,5 +1,25 @@
-CREATE TABLE "ga_traffic_source" AS 
+CREATE TABLE "ga_traffic_source"
 (
+  "id_TBE" VARCHAR(2000) NOT NULL,
+  "ga_userType" VARCHAR(255),
+  "ga_date" DATE,
+  "ga_campaign" VARCHAR(255),
+  "ga_source" VARCHAR(255),
+  "ga_medium" VARCHAR(255),
+  "ga_keyword" VARCHAR(255),
+  "ga_adContent" VARCHAR(255),
+  "ga_socialNetwork" VARCHAR(255),
+  "ga_channelGrouping" VARCHAR(255),
+  "ga_sessions" INTEGER,
+  "ga_users" INTEGER,
+  "ga_bounces" INTEGER,
+  "ga_sessionDuration" FLOAT,
+  "ga_pageviews" INTEGER,
+  "ga_organicSearches" INTEGER
+);
+
+
+INSERT INTO "ga_traffic_source" 
   SELECT 
     -- dimensions
     "id" AS "id_TBE"
@@ -21,4 +41,4 @@ CREATE TABLE "ga_traffic_source" AS
     ,"organicSearches" AS "ga_organicSearches"
   FROM
     "raw_traffic_source"
-);
+;

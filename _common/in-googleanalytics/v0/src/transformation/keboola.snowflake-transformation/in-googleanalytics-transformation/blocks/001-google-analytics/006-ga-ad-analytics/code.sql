@@ -1,5 +1,26 @@
-CREATE TABLE "ga_ad_analytics" AS 
+CREATE TABLE "ga_ad_analytics" 
 (
+  "id_TBE" VARCHAR(2000) NOT NULL,
+  "ga_date" DATE,
+  "ga_adGroup" VARCHAR(255),
+  "ga_adContent" VARCHAR(255),
+  "ga_adDistributionNetwork" VARCHAR(255),
+  "ga_campaign" VARCHAR(255),
+  "ga_adSlot" VARCHAR(255),
+  "ga_impressions" INTEGER,
+  "ga_adClicks" INTEGER,
+  "ga_adCost" FLOAT,
+  "ga_CPM" FLOAT,
+  "ga_CPC" FLOAT,
+  "ga_transactionRevenue" FLOAT,
+  "ga_sessions" INTEGER,
+  "ga_bounces" INTEGER,
+  "ga_users" INTEGER,
+  "ga_pageviews" INTEGER
+);
+
+
+INSERT INTO "ga_ad_analytics" 
   SELECT 
     --dimensions
     "id" AS "id_TBE",
@@ -22,4 +43,4 @@ CREATE TABLE "ga_ad_analytics" AS
     ,"pageviews" AS "ga_pageviews"
   FROM
     "raw_ad_analytics"
-);
+;

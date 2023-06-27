@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Value Equal",
+  name: "[Keboola] TEST - Column Value Equal",
 }

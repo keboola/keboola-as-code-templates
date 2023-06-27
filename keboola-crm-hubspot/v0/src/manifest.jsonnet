@@ -121,5 +121,41 @@
         },
       ],
     },
+    if InputIsAvailable("wr-postgresql-db-hostname") then
+    {
+      componentId: "keboola.wr-db-pgsql",
+      id: ConfigId("out-crm-postgresql-writer"),
+      path: "<common>/out-crm-postgresql/v0/src/writer/keboola.wr-db-pgsql/out-crm-postgresql-writer",
+      rows: [
+        {
+          id: ConfigRowId("activity"),
+          path: "rows/activity",
+        },
+        {
+          id: ConfigRowId("company"),
+          path: "rows/company",
+        },
+        {
+          id: ConfigRowId("contact"),
+          path: "rows/contact",
+        },
+        {
+          id: ConfigRowId("employee"),
+          path: "rows/employee",
+        },
+        {
+          id: ConfigRowId("opportunity"),
+          path: "rows/opportunity",
+        },
+        {
+          id: ConfigRowId("opportunity-contact"),
+          path: "rows/opportunity-contact",
+        },
+        {
+          id: ConfigRowId("opportunity-snapshot"),
+          path: "rows/opportunity-snapshot",
+        },
+      ],
+    },
   ]),
 }

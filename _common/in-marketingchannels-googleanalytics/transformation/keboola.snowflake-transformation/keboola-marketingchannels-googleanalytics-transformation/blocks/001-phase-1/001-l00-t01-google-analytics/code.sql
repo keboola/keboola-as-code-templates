@@ -1,5 +1,14 @@
 -- NOT collected session_id and client_id
-CREATE OR REPLACE VIEW "out_ga_traffic" AS
+CREATE TABLE "out_ga_traffic"
+(
+  "ga_traffic_id" VARCHAR(1024) NOT NULL,
+  "sessions_new" INTEGER,
+  "sessions_return" INTEGER,
+  "pageviews" INTEGER,
+  "bounces" INTEGER
+);
+
+INSERT INTO "out_ga_traffic"
 SELECT  
 	ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'')  || '*' || ifnull("account_id",'') || '*' || ifnull("keyword",'') || '*' || ifnull("ad_group",'') AS "ga_traffic_id"
   ,SUM("sessions_new") AS "sessions_new"
@@ -33,7 +42,13 @@ GROUP BY "date"
 ,"ad_group";
 
 -- transaction detail
-CREATE OR REPLACE VIEW "out_ga_transactions" AS
+CREATE TABLE "out_ga_transactions"
+(
+  "ga_transactions_id" VARCHAR(1024) NOT NULL,
+  "item_quantity" INTEGER
+);
+
+INSERT INTO "out_ga_transactions"
 SELECT  
 	ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || 			ifnull("domain",'')  || '*' ||
 ifnull("account_id",'') || '*' || ifnull("keyword",'') || '*' || ifnull("ad_group",'')|| '*' || ifnull("transaction_id",'')   AS 	"ga_transactions_id"

@@ -6,13 +6,21 @@ AS
     FROM "companies";
 
 CREATE TABLE "out_companies"
-AS
+(
+"companyId" VARCHAR(1024) NOT NULL,
+"name" VARCHAR(255),
+"website" VARCHAR(255),
+"createdate" DATE,
+"isDeleted" BOOLEAN
+);
+
+INSERT INTO "out_companies"
     SELECT
-        trim("obj":"companyId", '"')  AS "companyId",
-        trim("obj":"name", '"')       AS "name",
-        trim("obj":"website", '"')    AS "website",
-        trim("obj":"createdate", '"') AS "createdate",
-        trim("obj":"isDeleted", '"')  AS "isDeleted"
+        trim("obj":"companyId", '"')            AS "companyId",
+        trim("obj":"name", '"')                 AS "name",
+        trim("obj":"website", '"')              AS "website",
+        nullif(trim(to_date("obj":"createdate"), '"'),'') AS "createdate",
+        trim("obj":"isDeleted", '"')             AS "isDeleted"
     FROM "companies_tmp";
 
 --contacts table
@@ -23,13 +31,24 @@ AS
     FROM "contacts";
 
 CREATE TABLE "out_contacts"
-AS
+(
+    "canonical_vid" VARCHAR(1024) NOT NULL,
+    "firstname" VARCHAR(255),
+    "lastname" VARCHAR(255),
+    "email" VARCHAR(255),
+    "createdate" DATE,
+    "email_source" VARCHAR(255),
+    "associatedcompanyid" VARCHAR(255),
+    "lifecyclestage" VARCHAR(255)
+);
+
+INSERT INTO "out_contacts"
     SELECT
         trim("obj":"canonical_vid", '"')       AS "canonical_vid",
         trim("obj":"firstname", '"')           AS "firstname",
         trim("obj":"lastname", '"')            AS "lastname",
         trim("obj":"email", '"')               AS "email",
-        trim("obj":"createdate", '"')          AS "createdate",
+        nullif(trim(to_date("obj":"createdate"), '"'),'')          AS "createdate",
         trim("obj":"email_source", '"')        AS "email_source",
         trim("obj":"associatedcompanyid", '"') AS "associatedcompanyid",
         trim("obj":"lifecyclestage", '"')      AS "lifecyclestage"
@@ -43,7 +62,14 @@ AS
     FROM "owners";
 
 CREATE TABLE "out_owners"
-AS
+(
+"ownerId" VARCHAR(1024) NOT NULL,
+"firstName" VARCHAR(255),
+"lastName" VARCHAR(255),
+"email" VARCHAR(255)
+);
+
+INSERT INTO "out_owners"
     SELECT
         trim("obj":"ownerId", '"')   AS "ownerId",
         trim("obj":"firstName", '"') AS "firstName",
@@ -59,19 +85,33 @@ AS
     FROM "deals";
 
 CREATE TABLE "out_deals"
-AS
+(
+    "dealId" VARCHAR(1024) NOT NULL,
+    "isDeleted" BOOLEAN,
+    "dealname" VARCHAR(255),
+    "createdate" DATE,
+    "closedate" DATE,
+    "dealtype" VARCHAR(255),
+    "amount" FLOAT,
+    "pipeline" VARCHAR(255),
+    "dealstage" VARCHAR(255),
+    "hubspot_owner_id" VARCHAR(255),
+    "hs_analytics_source" VARCHAR(255)
+);
+
+INSERT INTO "out_deals"
     SELECT
-        trim("obj":"dealId", '"')               AS "dealId",
-        trim("obj":"isDeleted", '"')            AS "isDeleted",
-        trim("obj":"dealname", '"')             AS "dealname",
-        trim("obj":"createdate", '"')           AS "createdate",
-        trim("obj":"closedate", '"')            AS "closedate",
-        trim("obj":"dealtype", '"')             AS "dealtype",
-        trim("obj":"amount", '"')               AS "amount",
-        trim("obj":"pipeline", '"')             AS "pipeline",
-        trim("obj":"dealstage", '"')            AS "dealstage",
-        trim("obj":"hubspot_owner_id", '"')     AS "hubspot_owner_id",
-        trim("obj":"hs_analytics_source", '"')  AS "hs_analytics_source"
+        trim("obj":"dealId", '"')                           AS "dealId",
+        trim("obj":"isDeleted", '"')                        AS "isDeleted",
+        trim("obj":"dealname", '"')                         AS "dealname",
+        nullif(trim("obj":"createdate", '"'),'')   					AS "createdate",
+        nullif(trim("obj":"closedate", '"'),'')    					AS "closedate",
+        trim("obj":"dealtype", '"')                         AS "dealtype",
+        nullif(trim("obj":"amount", '"'),'')                AS "amount",
+        trim("obj":"pipeline", '"')                         AS "pipeline",
+        trim("obj":"dealstage", '"')                        AS "dealstage",
+        trim("obj":"hubspot_owner_id", '"')                 AS "hubspot_owner_id",
+        trim("obj":"hs_analytics_source", '"')              AS "hs_analytics_source"
     FROM "deals_tmp";
 
 --deals companies table
@@ -82,7 +122,12 @@ AS
     FROM "deals_assoc_companies_list";
 
 CREATE TABLE "out_deals_companies"
-AS
+(
+    "dealId" VARCHAR(1024) NOT NULL,
+    "associated_companyId" VARCHAR(255) NOT NULL
+);
+
+INSERT INTO "out_deals_companies"
     SELECT
         trim("obj":"dealId", '"')               AS "dealId",
         trim("obj":"associated_companyId", '"') AS "associated_companyId"
@@ -96,7 +141,12 @@ AS
     FROM "pipelines";
 
 CREATE TABLE "out_pipelines"
-AS
+(
+    "pipelineId" VARCHAR(1024) NOT NULL,
+    "label" VARCHAR(255)
+);
+
+INSERT INTO "out_pipelines"
     SELECT
         trim("obj":"pipelineId", '"') AS "pipelineId",
         trim("obj":"label", '"')      AS "label"
@@ -110,12 +160,20 @@ AS
     FROM "pipeline_stages";
 
 CREATE TABLE "out_stages"
-AS
+(
+    "stageId" VARCHAR(1024) NOT NULL,
+    "label" VARCHAR(255),
+    "displayOrder" INTEGER,
+    "probability" FLOAT,
+    "closedWon" BOOLEAN
+);
+
+INSERT INTO "out_stages"
     SELECT
         trim("obj":"stageId", '"') 		AS "stageId",
         trim("obj":"label", '"')   		AS "label",
-        trim("obj":"displayOrder", '"') AS "displayOrder",
-        trim("obj":"probability", '"')	AS "probability",
+        nullif(trim("obj":"displayOrder", '"'),'') AS "displayOrder",
+        nullif(trim("obj":"probability", '"'),'')	AS "probability",
         trim("obj":"closedWon", '"')	AS "closedWon"
     FROM "stages_tmp";
 
@@ -127,7 +185,12 @@ AS
     FROM "deals_contacts_list";
 
 CREATE TABLE "out_deals_contacts_list"
-AS
+(
+    "contact_vid" VARCHAR(1024) NOT NULL,
+    "dealId" VARCHAR(1024) NOT NULL
+);
+
+INSERT INTO "out_deals_contacts_list"
     SELECT
         trim("obj":"contact_vid", '"') AS "contact_vid",
         trim("obj":"dealId", '"')      AS "dealId"
@@ -141,11 +204,21 @@ AS
     FROM "activities";
 
 CREATE TABLE "out_activities"
-AS
+(
+    "engagement_id" VARCHAR(1024) NOT NULL,
+    "metadata_subject" VARCHAR(2000),
+    "engagement_createdAt" DATE,
+    "metadata_durationMilliseconds" VARCHAR(255),
+    "associations_contactIds" VARCHAR(255),
+    "associations_dealIds" VARCHAR(255),
+    "associations_ownerIds" VARCHAR(255)
+);
+
+INSERT INTO "out_activities"
     SELECT
         trim("obj":"engagement_id", '"')                 AS "engagement_id",
         trim("obj":"metadata_subject", '"')              AS "metadata_subject",
-        trim("obj":"engagement_createdAt", '"')          AS "engagement_createdAt",
+        nullif(trim("obj":"engagement_createdAt", '"'),'')          AS "engagement_createdAt",
         trim("obj":"metadata_durationMilliseconds", '"') AS "metadata_durationMilliseconds",
         trim("obj":"associations_contactIds", '"')       AS "associations_contactIds",
         trim("obj":"associations_dealIds", '"')          AS "associations_dealIds",

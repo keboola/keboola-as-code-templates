@@ -1,7 +1,20 @@
 -- creates a list of all Questions asked in the survey
 -- question_position identifies the order of questions within the survey
 -- question_family and question_subtype could be useful for aggregating data
-CREATE TABLE "out_question" AS
+CREATE TABLE "out_question"
+(
+    "question_id" VARCHAR(255) NOT NULL,
+    "survey_id" VARCHAR(255),
+    "survey_title" VARCHAR(255),
+    "question_heading" VARCHAR,
+    "description" VARCHAR,
+    "question_position" VARCHAR(255),
+    "question_family" VARCHAR(255),
+    "question_subtype" VARCHAR(255),
+    "question_is_visible" VARCHAR(255)
+);
+
+INSERT INTO "out_question"
 SELECT
       ff."fields_id" AS "question_id"
     , f."id" AS "survey_id"

@@ -7,11 +7,12 @@ local facebook = import "/<common>/in-ecommerce-facebook/v0/src/inputs.jsonnet";
 local googleads = import "/<common>/in-ecommerce-googleads/v0/src/inputs.jsonnet";
 local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
 local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inputs.jsonnet";
+local postgresql = import "/<common>/out-ecommerce-postgresql/v0/src/inputs.jsonnet";
 
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Shoptet extractor.",
+      description: "Configure your credentials for Shoptet data source.",
       required: "all",
       steps: [
         {
@@ -19,7 +20,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Shoptet",
           description: "Shoptet - Data Source",
           dialogName: "Shoptet Data Source", 
-          dialogDescription: "Extractor collects data from Shoptet about orders, products, inventory, and customers.",
+          dialogDescription: "This source component collects data from Shoptet about orders, products, inventory, and customers.",
           inputs: shoptet
         }
       ]
@@ -33,7 +34,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Facebook Ads",
           description: "Facebook Ads - Data Source",
           dialogName: "Facebook Ads Data Source", 
-          dialogDescription: "This extractor is getting data about facebook ads monthly insights and insights for the last 90 days.",
+          dialogDescription: "This source component is getting data about facebook ads monthly insights and insights for the last 90 days.",
           inputs: facebook
         },
         {
@@ -41,7 +42,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Google Ads",
           description: "Google Ads - Data Source",
           dialogName: "Google Ads Data Source", 
-          dialogDescription: "This extractor is getting data about Google ads insights.",
+          dialogDescription: "This source component is getting data about Google ads insights.",
           inputs: googleads
         },
         {
@@ -49,7 +50,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           name: "Sklik",
           description: "Sklik - Data Source",
           dialogName: "Sklik Data Source", 
-          dialogDescription: "This extractor is getting data about Sklik monthly and daily insights.",
+          dialogDescription: "This source component is getting data about Sklik monthly and daily insights.",
           inputs: sklik
         }
       ]
@@ -67,7 +68,7 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
       ]
     },
     {
-      description: "Configure your credentials for writer.",
+      description: "Configure your credentials for data destination.",
       required: "optional",
       steps: [
         {
@@ -101,6 +102,14 @@ local datastudio = import "/<common>/out-ecommerce-gsheet-datastudio/v0/src/inpu
           dialogName: "Dashboard in Data Studio", 
           dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/1bMRx54sRUTpI6ZtLMkQD2MJtoJywHGPyKgoB8htRj4s) into your Drive. Copy text between 'spreadsheets/d/' and '/edit' and paste it below.",
           inputs: datastudio,  
+        },
+        {
+          icon: "component:keboola.wr-db-pgsql",
+          name: "PostgreSQL Destination",
+          description: "Load to data into PostgreSQL",
+          dialogName: "PostgreSQL Destination", 
+          dialogDescription: "Data load to PostgreSQL DB.",
+          inputs: postgresql
         },
       ]
     },

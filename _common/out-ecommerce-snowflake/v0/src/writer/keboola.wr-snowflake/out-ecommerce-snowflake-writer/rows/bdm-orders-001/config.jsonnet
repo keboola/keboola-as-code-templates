@@ -178,7 +178,7 @@
       {
         name: "ORDER_TOTAL_PRICE_WITH_TAXES",
         dbName: "ORDER_TOTAL_PRICE_WITH_TAXES",
-        type: "double",
+        type: "double precision",
         nullable: true,
         default: "",
         size: "",
@@ -186,7 +186,7 @@
       {
         name: "ORDER_TOTAL_PRICE_WITHOUT_TAXES",
         dbName: "ORDER_TOTAL_PRICE_WITHOUT_TAXES",
-        type: "float",
+        type: "real",
         nullable: true,
         default: "",
         size: "",

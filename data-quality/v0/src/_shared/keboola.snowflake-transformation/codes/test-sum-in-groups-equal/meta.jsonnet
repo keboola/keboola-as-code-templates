@@ -1,3 +1,3 @@
 {
-  name: "TEST - Sum In Groups Equal",
+  name: "[Keboola] TEST - Sum In Groups Equal",
 }

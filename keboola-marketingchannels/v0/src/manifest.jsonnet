@@ -67,7 +67,7 @@
       id: ConfigId("keboola-marketingchannels-bingads-transformation"),
       path: "<common>/in-marketingchannels-bingads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-bingads-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
+      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
     if InputIsAvailable("oauth-googleads") then
     {
@@ -75,7 +75,7 @@
       id: ConfigId("keboola-marketingchannels-googleads-transformation"),
       path: "<common>/in-marketingchannels-googleads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-googleads-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
+      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
     if InputIsAvailable("ga-from") then
     {
@@ -83,7 +83,7 @@
       id: ConfigId("keboola-marketingchannels-googleanalytics-transformation"),
       path: "<common>/in-marketingchannels-googleanalytics/transformation/keboola.snowflake-transformation/keboola-marketingchannels-googleanalytics-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
+      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
     if InputIsAvailable("ex-linkedin-start-day") then
     {
@@ -91,7 +91,7 @@
       id: ConfigId("keboola-marketingchannels-linkedin-transformation"),
       path: "<common>/in-marketingchannels-linkedinads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-linkedin-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
+      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {

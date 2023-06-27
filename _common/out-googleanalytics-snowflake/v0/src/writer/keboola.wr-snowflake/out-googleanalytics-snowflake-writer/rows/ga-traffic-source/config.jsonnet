@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_traffic_source",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_traffic_source",
     dbName: "ga_traffic_source",
     incremental: false,
     primaryKey: [
@@ -141,8 +141,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_traffic_source",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_traffic_source.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_traffic_source",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_traffic_source.csv",
           columns: [
             "id_TBE",
             "ga_userType",

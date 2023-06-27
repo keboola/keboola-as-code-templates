@@ -3,8 +3,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_site_statistics",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_site_statistics.csv",
           changed_since: "",
           columns: [
             "id_TBE",
@@ -34,7 +34,7 @@
     tables: [
       {
         dbName: "ga_site_statistics",
-        tableId: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics",
+        tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_site_statistics",
         incremental: false,
         items: [
           {
