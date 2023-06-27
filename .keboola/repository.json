@@ -244,7 +244,7 @@
           "description": "",
           "stable": false,
           "components": [
-            "kds-team.ex-pipedrive",
+            "keboola.ex-pipedrive",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-db-snowflake",
