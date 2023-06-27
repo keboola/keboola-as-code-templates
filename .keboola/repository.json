@@ -633,7 +633,7 @@
     },
     {
       "id": "keboola-mgmt-jira",
-      "name": "keboola-mgmt-jira",
+      "name": "JIRA Project Management",
       "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
       "path": "keboola-mgmt-jira",
       "categories": [
