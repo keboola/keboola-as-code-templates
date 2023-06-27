@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".project",
+          source: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".project",
           destination: "project",
           column_types: [],
           where_column: "",
@@ -13,7 +13,7 @@
           columns: [],
         },
         {
-          source: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user",
+          source: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user",
           destination: "user",
           column_types: [],
           where_column: "",
