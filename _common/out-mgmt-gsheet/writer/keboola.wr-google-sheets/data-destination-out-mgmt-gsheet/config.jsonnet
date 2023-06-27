@@ -9,7 +9,7 @@
         action: "update",
         sheetTitle: "project",
         enabled: true,
-        tableId: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".project",
+        tableId: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".project",
         title: "PROJECT_MANAGEMENT",
         sheetId: 0,
         fileId: Input("google-sheet-id"),
@@ -79,7 +79,7 @@
         action: "update",
         sheetTitle: "user",
         enabled: true,
-        tableId: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user",
+        tableId: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user",
         title: "PROJECT_MANAGEMENT",
         fileId: Input("google-sheet-id"),
         sheetId: 1669051898,
@@ -110,8 +110,8 @@
     input: {
       tables: [
         {
-          source: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".project",
-          destination: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".project.csv",
+          source: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".project",
+          destination: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".project.csv",
           where_column: "",
           where_values: [],
           where_operator: "eq",
@@ -166,8 +166,8 @@
           columns: [],
         },
         {
-          source: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user",
-          destination: "out.c-projectmgmt-tr-" + InstanceIdShort() + ".user.csv",
+          source: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user",
+          destination: "out.c-projectmgmt-bdm-" + InstanceIdShort() + ".user.csv",
           where_column: "",
           where_values: [],
           where_operator: "eq",
