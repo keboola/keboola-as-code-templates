@@ -816,7 +816,7 @@
     },
     {
       "id": "keboola-mgmt-jira",
-      "name": "keboola-mgmt-jira",
+      "name": "JIRA Project Management",
       "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
       "path": "keboola-mgmt-jira",
       "categories": [
@@ -831,6 +831,7 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
