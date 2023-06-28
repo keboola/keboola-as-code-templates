@@ -401,7 +401,7 @@
             },
             {
                 id: "google-sheet-id",
-                name: "CRM gSheet File ID",
+                name: "gSheet File ID",
                 description: "Insert the file ID of the Google sheet destination",
                 type: "string",
                 kind: "input",
