@@ -410,8 +410,7 @@
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-snowflake",
-            "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-pgsql"
+            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }
@@ -464,8 +463,7 @@
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-snowflake",
-            "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-pgsql"
+            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }

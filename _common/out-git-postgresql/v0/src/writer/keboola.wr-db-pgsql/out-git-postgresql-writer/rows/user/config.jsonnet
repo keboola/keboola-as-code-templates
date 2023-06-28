@@ -2,7 +2,7 @@
   parameters: {
     tableId: "out.c-git-tr-" + InstanceIdShort() + ".user",
     dbName: "user",
-    incremental: true,
+    incremental: false,
     primaryKey: [
       "user_id",
     ],
