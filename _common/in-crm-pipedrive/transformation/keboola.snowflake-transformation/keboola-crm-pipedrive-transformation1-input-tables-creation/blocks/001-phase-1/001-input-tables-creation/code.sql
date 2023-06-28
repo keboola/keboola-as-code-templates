@@ -100,7 +100,7 @@ AS
 CREATE TABLE "out_person_emails"
 AS
     SELECT
-        trim("obj":"persons_pk", '"') AS "contact_id",
+        trim("obj":"contact_id", '"') AS "contact_id",
         trim("obj":"label", '"')      AS "label",
         trim("obj":"value", '"')      AS "value",
         trim("obj":"primary", '"')    AS "primary"
