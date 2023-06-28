@@ -428,7 +428,7 @@
           "description": "",
           "stable": false,
           "components": [
-            "esnerda.ex-bingads",
+            "kds-team.ex-bing-ads",
             "leochan.ex-linkedin",
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
@@ -451,7 +451,7 @@
           "description": "",
           "stable": false,
           "components": [
-            "esnerda.ex-bingads",
+            "kds-team.ex-bing-ads",
             "leochan.ex-linkedin",
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
@@ -474,7 +474,7 @@
           "description": "",
           "stable": false,
           "components": [
-            "esnerda.ex-bingads",
+            "kds-team.ex-bing-ads",
             "leochan.ex-linkedin",
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
@@ -1054,7 +1054,7 @@
           "description": "",
           "stable": false,
           "components": [
-            "esnerda.ex-bingads",
+            "kds-team.ex-bing-ads",
             "leochan.ex-linkedin",
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",

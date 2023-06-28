@@ -16,11 +16,11 @@
       path: "<common>/in-marketingchannels-facebookads/extractor/keboola.ex-facebook-ads/keboola-marketingchannels-facebook-data-source",
       rows: [],
     },
-    if InputIsAvailable("ex-bingads-dev-key") then
+    if InputIsAvailable("ex-bingads-account-id") then
     {
-      componentId: "esnerda.ex-bingads",
+      componentId: "kds-team.ex-bing-ads",
       id: ConfigId("keboola-marketingchannels-bingads-data-source"),
-      path: "<common>/in-marketingchannels-bingads/extractor/esnerda.ex-bingads/keboola-marketingchannels-bingads-data-source",
+      path: "<common>/in-marketingchannels-bingads/extractor/kds-team.ex-bing-ads/keboola-marketingchannels-bingads-data-source",
       rows: [],
     },
     if InputIsAvailable("oauth-googleads") then
@@ -61,7 +61,7 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
     },
-    if InputIsAvailable("ex-bingads-dev-key") then
+    if InputIsAvailable("ex-bingads-account-id") then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("keboola-marketingchannels-bingads-transformation"),
