@@ -2,7 +2,15 @@
 -- get email domain from email
 -- identify employees by the domain - CHANGE ACCORDINGLY!!!
 CREATE TABLE "out_user"
-AS
+(
+    "user_id" VARCHAR(255) NOT NULL,
+    "user" VARCHAR(255),
+    "email" VARCHAR(255),
+    "email_domain" VARCHAR(255),
+    "user_type" VARCHAR(255)
+);
+
+INSERT INTO "out_user"
     SELECT
         "id"                                                            AS "user_id",
         "name"                                                          AS "user",
@@ -21,7 +29,22 @@ VALUES
 -- add workspace name to the projects
 -- change boolean values to true/false
 CREATE TABLE "out_project"
-AS
+(
+    "project_id" VARCHAR(255) NOT NULL,
+    "project" VARCHAR(255),
+    "created_at" TIMESTAMP,
+    "due_date" VARCHAR(255),
+    "workspace" VARCHAR(255),
+    "url" VARCHAR(1024),
+    "owner" VARCHAR(255),
+    "owner_type" VARCHAR(255),
+    "status" VARCHAR(255),
+    "status_text" VARCHAR(255),
+    "archived" BOOLEAN,
+    "public" VARCHAR(255)
+);
+
+INSERT INTO "out_project"
     SELECT
         "p"."id"                                           AS "project_id",
         "p"."name"                                         AS "project",
@@ -46,7 +69,12 @@ AS
 
 -- create N:M relation table describing user membership in projects
 CREATE TABLE "out_project_user"
-AS
+(
+    "user_id" VARCHAR(255) NOT NULL,
+    "project_id" VARCHAR(255) NOT NULL
+);
+
+INSERT INTO "out_project_user"
     SELECT
         ifnull("u"."user_id", '0') AS "user_id",
         "op"."project_id"
@@ -63,7 +91,23 @@ ALTER SESSION
     SET TIMEZONE = 'UTC';
 
 CREATE TABLE "out_project_snapshot"
-AS
+(
+    "snapshot_date" DATE NOT NULL,
+    "project_id" VARCHAR(255) NOT NULL,
+    "project" VARCHAR(255),
+    "created_at" TIMESTAMP,
+    "due_date" VARCHAR(255),
+    "workspace" VARCHAR(255),
+    "url" VARCHAR(1024),
+    "owner" VARCHAR(255),
+    "owner_type" VARCHAR(255),
+    "status" VARCHAR(255),
+    "status_text" VARCHAR(255),
+    "archived" BOOLEAN,
+    "public" VARCHAR(255)
+);
+
+INSERT INTO "out_project_snapshot"
     SELECT
         current_date :: STRING AS "snapshot_date",
         "op".*
