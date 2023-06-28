@@ -21,7 +21,7 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           inputs: facebookads
         },
         {
-          icon: "component:esnerda.ex-bingads",
+          icon: "component:kds-team.ex-bing-ads",
           name: "Bing Ads",
           description: "BingAds - Data Source",
           dialogName: "BingAds Data Source", 
