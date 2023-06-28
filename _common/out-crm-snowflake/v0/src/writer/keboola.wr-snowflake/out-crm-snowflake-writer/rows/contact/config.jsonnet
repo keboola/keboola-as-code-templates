@@ -42,10 +42,10 @@
       {
         name: "date_created",
         dbName: "date_created",
-        type: "date",
+        type: "varchar",
         nullable: true,
         default: "",
-        size: "",
+        size: "255",
       },
       {
         name: "lead_source",
