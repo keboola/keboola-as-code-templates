@@ -186,6 +186,33 @@
       ]
     },
     {
+      "id": "social-media-engagement-template",
+      "name": "Social Media Engagement",
+      "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
+      "categories": ["Marketing"],
+      "path": "social-media-engagement-template",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-facebook",
+            "keboola.ex-instagram",
+            "keboola.ex-twitter",
+            "keboola.ex-youtube",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-sheets",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-snowflake-blob-storage",
+            "kds-team.ex-linkedin-pages"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "keboola-crm-hubspot",
       "name": "CRM Hubspot",
       "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
