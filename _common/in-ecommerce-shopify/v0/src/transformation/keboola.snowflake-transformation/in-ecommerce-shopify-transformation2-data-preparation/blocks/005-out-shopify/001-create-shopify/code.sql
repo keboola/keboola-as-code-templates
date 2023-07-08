@@ -1,5 +1,11 @@
 CREATE TABLE "out_shop" 
-AS
+(
+   NAME VARCHAR(255),
+   BASE_URL VARCHAR(1024),
+   DOMAIN VARCHAR(255)
+);
+
+INSERT INTO "out_shop" 
    SELECT DISTINCT
       CASE 
          WHEN UPPER(split_part(split_part("order_status_url", 'https://',2),'.',1)) <> '' 

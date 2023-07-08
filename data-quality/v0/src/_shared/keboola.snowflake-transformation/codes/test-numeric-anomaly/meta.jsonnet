@@ -1,3 +1,3 @@
 {
-  name: "TEST - Numeric Anomaly",
+  name: "[Keboola] TEST - Numeric Anomaly",
 }

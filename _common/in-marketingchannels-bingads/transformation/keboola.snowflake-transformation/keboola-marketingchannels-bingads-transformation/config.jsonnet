@@ -4,7 +4,7 @@
     input: {
       tables: [
         {
-          source: "in.c-bing_ads-" + ConfigId("keboola-marketingchannels-bingads-data-source") + ".campaignperformance",
+          source: "in.c-kds-team-ex-bing-ads-" + ConfigId("keboola-marketingchannels-bingads-data-source") + ".AdGroupPerformance_Daily_Report",
           destination: "Bing_Ads_campaignperformance",
           where_column: "",
           where_values: [],
@@ -12,7 +12,7 @@
           columns: [],
         },
         {
-          source: "in.c-bing_ads-" + ConfigId("keboola-marketingchannels-bingads-data-source") + ".campaigns",
+          source: "in.c-kds-team-ex-bing-ads-" + ConfigId("keboola-marketingchannels-bingads-data-source") + ".Campaigns",
           destination: "Bing_Ads_campaigns",
           where_column: "",
           where_values: [],

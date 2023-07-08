@@ -1,6 +1,15 @@
 -- rozpeti objednavek 2
 CREATE TABLE "analyze_clv_by_order_count" 
-AS
+(
+    CUSTOMER_CATEGORY_BY_ORDER_COUNT VARCHAR(255),
+    ORDERS INTEGER,
+    UNIQUE_CUSTOMERS INTEGER,
+    AVG_CLV FLOAT,
+    ORDER_TOTAL_PRICE_TAXES FLOAT,
+    AVG_ORDER_PRICE FLOAT
+);
+
+INSERT INTO "analyze_clv_by_order_count" 
     WITH PREVIOUS_ORDER_CATEGORY 
     AS (
         SELECT 

@@ -3,17 +3,26 @@
 --format datetime
 --convert duration to minutes
 --using the first contact/opportunity/employee ID in array from activities table for joins
-CREATE OR REPLACE TABLE "out_activity"
-AS
+CREATE TABLE "out_activity"
+(
+    "activity_id" VARCHAR(2000) NOT NULL,
+    "employee_id" VARCHAR(2000),
+    "contact_id" VARCHAR(2000),
+    "opportunity_id" VARCHAR(2000),
+    "activity" VARCHAR(2000),
+    "activity_date" TIMESTAMP,
+    "activity_duration_m" FLOAT
+);
+
+INSERT INTO "out_activity"
 SELECT "a"."engagement_id"                              AS "activity_id",
        ifnull("e"."employee_id", '0')                   AS "employee_id",
        ifnull("c"."contact_id", '0')                    AS "contact_id",
        ifnull("o"."opportunity_id", '0')                AS "opportunity_id",
        iff(length("a"."metadata_subject") > 1028, left("a"."metadata_subject", 1025) || '...', "a"."metadata_subject")		                          AS "activity",
-       TO_CHAR(TO_TIMESTAMP_NTZ("a"."engagement_createdAt"),
-               'YYYY-MM-DD hh24:mi:ss')                 AS "activity_date",
-       iff("a"."metadata_durationMilliseconds" = '', NULL,
-           "a"."metadata_durationMilliseconds" / 60000) AS "activity_duration_m"
+       to_timestamp_ntz("a"."engagement_createdAt")     AS "activity_date",
+       (iff("a"."metadata_durationMilliseconds" = '', NULL,
+           "a"."metadata_durationMilliseconds" / 60000))::FLOAT  AS "activity_duration_m"
 FROM "activities" "a"
          LEFT JOIN "out_contact" "c"
                    ON SPLIT_PART(REPLACE(REPLACE("a"."associations_contactIds", ']', ''), '[', ''), ',', 0) ||

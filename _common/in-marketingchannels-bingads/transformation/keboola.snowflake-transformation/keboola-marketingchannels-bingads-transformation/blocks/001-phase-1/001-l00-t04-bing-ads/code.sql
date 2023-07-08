@@ -15,7 +15,15 @@ FROM "Bing_Ads_campaignperformance" AS a
 		ON a."CampaignId"=b."Id" ;
 
 -- output table grouping
-CREATE TABLE "out_bingads" AS 
+CREATE TABLE "out_bingads" 
+(
+  "bing_id" VARCHAR(1024) NOT NULL,
+  "impressions" INTEGER,
+  "clicks" INTEGER,
+  "costs" FLOAT
+);
+
+INSERT INTO "out_bingads"
 SELECT 
 	ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'') || '*' || ifnull("currency",'') || '*' || ifnull("account_id",'')  AS "bing_id"
   ,SUM("impressions") AS "impressions" 

@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Value Contain",
+  name: "[Keboola] TEST - Column Value Contain",
 }

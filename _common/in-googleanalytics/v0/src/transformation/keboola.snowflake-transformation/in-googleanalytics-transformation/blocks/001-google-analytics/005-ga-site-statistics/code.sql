@@ -1,5 +1,27 @@
-CREATE TABLE "ga_site_statistics" AS 
+CREATE TABLE "ga_site_statistics"
 (
+  "id_TBE" VARCHAR(2000) NOT NULL,
+  "ga_date" DATE,
+  "ga_time" VARCHAR(255),
+  "ga_hostname" VARCHAR(255),
+  "ga_pagePath" VARCHAR(1024),
+  "ga_country" VARCHAR(255),
+  "ga_browser" VARCHAR(255),
+  "ga_operatingSystemVersion" VARCHAR(255),
+  "ga_deviceCategory" VARCHAR(255),
+  "ga_operatingSystem" VARCHAR(255),
+  "ga_language" VARCHAR(255),
+  "ga_sessions" INTEGER,
+  "ga_pageviews" INTEGER,
+  "ga_avgPageLoadTime" FLOAT,
+  "ga_avgPageDownloadTime" FLOAT,
+  "ga_avgRedirectionTime" FLOAT,
+  "ga_avgServerConnectionTime" FLOAT,
+  "ga_serverResponseTime" INTEGER
+);
+
+
+INSERT INTO "ga_site_statistics" 
   SELECT 
     -- dimensions
     "id" AS "id_TBE",
@@ -23,4 +45,4 @@ CREATE TABLE "ga_site_statistics" AS
     ,"serverResponseTime"AS "ga_serverResponseTime"
   FROM
     "raw_site_statistics"
-);
+;
