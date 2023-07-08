@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Value Greater Than",
+  name: "[Keboola] TEST - Column Value Greater Than",
 }

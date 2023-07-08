@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Value Not Begin",
+  name: "[Keboola] TEST - Column Value Not Begin",
 }

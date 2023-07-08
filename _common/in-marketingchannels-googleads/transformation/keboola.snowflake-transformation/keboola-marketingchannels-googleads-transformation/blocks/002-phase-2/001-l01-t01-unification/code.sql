@@ -1,9 +1,12 @@
 -- table with account id Labels
-CREATE OR REPLACE TABLE "accounts" ("ads_system" STRING, "account_id" STRING , "account_name" STRING );
+CREATE OR REPLACE TABLE "accounts" ("ads_system" STRING NOT NULL, "account_id" STRING NOT NULL, "account_name" STRING NOT NULL);
 
-INSERT INTO "accounts"
-VALUES ('adwords','9881402274','Customer_name')
-;
+INSERT INTO "accounts" ("ads_system","account_id","account_name") 
+SELECT 
+  'adwords' as "ads_system", 
+  "id", 
+  "descriptiveName"
+FROM "Google_Adwords_customers";
 
 -- collect all ads system in one table 
 CREATE  OR REPLACE VIEW  "tmp_ads_systems" AS
@@ -48,19 +51,34 @@ GROUP BY
 ;
 
 -- final facebook marketing table 
-CREATE  TABLE "out_marketing" AS 
+CREATE  TABLE "out_marketing"
+(
+  "online_marketing_traffic_id" VARCHAR(1024) NOT NULL,
+  "account_name" VARCHAR(255),
+  "date" DATE,
+  "source" VARCHAR(255),
+  "medium" VARCHAR(255),
+  "campaign" VARCHAR(255),
+  "domain" VARCHAR(255),
+  "impressions" INTEGER,
+  "clicks" INTEGER,
+  "costs_cpc" FLOAT,
+  "costs_conversion" FLOAT
+);
+
+INSERT INTO "out_marketing"  
 SELECT 
     "id" AS "online_marketing_traffic_id"
     ,split_part("id",'*',1) AS "account_name"
     ,split_part("id",'*',2) AS "date"
-	,split_part("id",'*',3) AS "source"
-	,split_part("id",'*',4) AS "medium"
-	,split_part("id",'*',5) AS "campaign"
-	,split_part("id",'*',6) AS "domain"
-	,"impressions" 
-	,"clicks"
-	,"costs_cpc"
-	,"costs_conversion" 
+    ,split_part("id",'*',3) AS "source"
+    ,split_part("id",'*',4) AS "medium"
+    ,split_part("id",'*',5) AS "campaign"
+    ,split_part("id",'*',6) AS "domain"
+    ,"impressions" 
+    ,"clicks"
+    ,"costs_cpc"
+    ,"costs_conversion" 
 FROM (
 	SELECT 
   	"id"

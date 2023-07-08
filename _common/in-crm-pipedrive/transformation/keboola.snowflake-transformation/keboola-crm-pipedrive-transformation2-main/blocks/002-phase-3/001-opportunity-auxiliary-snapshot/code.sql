@@ -4,14 +4,33 @@
 --check referential integrity with employees and companies
 --change boolean values to commonly used format in KBC scaffolds
 CREATE TABLE "out_opportunity"
-AS
+(
+    "opportunity_id" VARCHAR(2000) NOT NULL,
+    "company_id" VARCHAR(2000),
+    "employee_id" VARCHAR(2000),
+    "opportunity" VARCHAR(255),
+    "date_created" DATE,
+    "date_closed" DATE,
+    "is_closed" VARCHAR(255),
+    "is_won" VARCHAR(255),
+    "pipeline" VARCHAR(255),
+    "stage" VARCHAR(255),
+    "stage_order" VARCHAR(255),
+    "opportunity_type" VARCHAR(255),
+    "opportunity_value" FLOAT,
+    "currency" VARCHAR(255),
+    "lead_source" VARCHAR(255),
+    "probability" FLOAT
+);
+
+INSERT INTO "out_opportunity"
     SELECT
         "d"."deal_id"                                       AS "opportunity_id",
         ifnull("c"."company_id", '0')                       AS "company_id",
         ifnull("e"."employee_id", '0')                      AS "employee_id",
         "d"."deal_title"                                    AS "opportunity",
-        left("d"."add_time", 10)                            AS "date_created",
-        left("d"."close_time", 10)                          AS "date_closed",
+        try_to_date(left("d"."add_time", 10))               AS "date_created",
+        try_to_date(left("d"."close_time", 10))             AS "date_closed",
         iff("d"."close_time" = '', 'No', 'Yes')             AS "is_closed",
         iff("d"."deal_status" = 'won', 'Yes', 'No')         AS "is_won",
         "p"."pipeline_name"                                 AS "pipeline",
@@ -40,7 +59,27 @@ ALTER SESSION
 --create snapshot of the output table to track changes throughout time
 --snapshot will be used in another transformation where it will be adjusted for a better final analysis
 CREATE TABLE "out_opportunity_snapshot"
-AS
+(
+    "snapshot_date" DATE NOT NULL,
+    "opportunity_id" VARCHAR(2000) NOT NULL,
+    "company_id" VARCHAR(2000),
+    "employee_id" VARCHAR(2000),
+    "opportunity" VARCHAR(255),
+    "date_created" DATE,
+    "date_closed" DATE,
+    "is_closed" VARCHAR(255),
+    "is_won" VARCHAR(255),
+    "pipeline" VARCHAR(255),
+    "stage" VARCHAR(255),
+    "stage_order" VARCHAR(255),
+    "opportunity_type" VARCHAR(255),
+    "opportunity_value" FLOAT,
+    "currency" VARCHAR(255),
+    "lead_source" VARCHAR(255),
+    "probability" FLOAT
+);
+
+INSERT INTO "out_opportunity_snapshot"
     SELECT
         current_date AS "snapshot_date",
         "o".*

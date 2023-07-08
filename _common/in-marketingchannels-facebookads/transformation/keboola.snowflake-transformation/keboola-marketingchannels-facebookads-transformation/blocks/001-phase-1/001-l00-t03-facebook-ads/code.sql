@@ -18,18 +18,8 @@ select distinct "parent_id"
 ,PARSE_UTM('utm_source',"url_tags") as "source"
 ,PARSE_UTM('utm_medium',"url_tags") as "medium"
 ,PARSE_UTM('utm_campaign',"url_tags") as "campaign"
---,PARSE_UTM('utm_content',"url_tags") as "content"
 from "Facebook_Ads_ads_insights_adcreatives";
 
-/*
-CREATE VIEW "tmp_utm" AS 
-SELECT DISTINCT 
-  "parent_id"
-  ,NULL as "source"
-  ,NULL as "medium"
-  ,NULL as "campaign"
-FROM "Facebook_Ads_ads_insights_adcreatives";
-*/
 -- join all source tables in one
 -- create UTM tags (see also query and function above)
 CREATE VIEW "tmp_facebook" AS 
@@ -60,7 +50,15 @@ FROM "Facebook_Ads_ads_insights" "i"
   	ON "cmp"."ex_account_id"="acc"."id";
 
 -- final output table
-CREATE TABLE "out_facebook" AS 
+CREATE TABLE "out_facebook"
+(
+  "facebook_ads_id" VARCHAR(1024) NOT NULL,
+  "clicks" INTEGER,
+  "impressions" INTEGER,
+  "costs" FLOAT
+);
+
+INSERT INTO "out_facebook" 
 SELECT 
 	ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'') || '*' || ifnull("currency",'') || '*' || ifnull("account_id",'')  AS "facebook_ads_id"
   ,SUM("clicks") AS "clicks"

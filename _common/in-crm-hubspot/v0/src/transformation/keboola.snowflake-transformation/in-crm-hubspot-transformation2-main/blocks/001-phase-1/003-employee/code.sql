@@ -1,7 +1,14 @@
 --create output table with employees
 --concatenate first and last name to get full name of the employee
 CREATE TABLE "out_employee"
-AS
+(
+    "employee_id" VARCHAR(2000) NOT NULL,
+    "employee" VARCHAR(255),
+    "email" VARCHAR(255),
+    "position" VARCHAR(255)
+);
+
+INSERT INTO "out_employee"
 SELECT "ownerId"                        AS "employee_id",
        "firstName" || ' ' || "lastName" AS "employee",
        "email",

@@ -27,7 +27,29 @@ AS
 --create opportunity snapshot table
 --define if there has been change of pipeline, stage or value
 CREATE TABLE "out_opportunity_snapshot"
-AS
+(
+       "opportunity_id" VARCHAR(2000) NOT NULL,
+       "snapshot_date" DATE NOT NULL,
+       "employee_id" VARCHAR(2000),
+       "company_id" VARCHAR(2000),
+       "pipeline" VARCHAR(255),
+       "previous_pipeline" VARCHAR(255),
+       "pipeline_change" VARCHAR(255),
+       "stage" VARCHAR(255),
+       "stage_order" INTEGER,
+       "previous_stage" VARCHAR(255),
+       "previous_stage_order" INTEGER,
+       "stage_change" VARCHAR(255),
+       "opportunity_value" FLOAT,
+       "previous_opportunity_value" FLOAT,
+       "opportunity_value_change" VARCHAR(255),
+       "probability" FLOAT,
+       "previous_probability" FLOAT,
+       "probability_change" VARCHAR(255),
+       "max_date_in_month" BOOLEAN
+);
+
+INSERT INTO "out_opportunity_snapshot"
     SELECT
         "s"."opportunity_id",
         "s"."snapshot_date",
@@ -37,15 +59,15 @@ AS
         "s"."previous_pipeline",
         iff("s"."pipeline" <> "s"."previous_pipeline", 'Yes', 'No')                   AS "pipeline_change",
         "s"."stage",
-        "s"."stage_order",
+        "s"."stage_order"                                                 AS "stage_order",
         "s"."previous_stage",
         "s"."previous_stage_order",
         iff("s"."stage" <> "s"."previous_stage", 'Yes', 'No')                         AS "stage_change",
         "s"."opportunity_value",
-        "s"."previous_opportunity_value",
+        "s"."previous_opportunity_value"                                   AS "previous_opportunity_value",
         iff("s"."opportunity_value" <> "s"."previous_opportunity_value", 'Yes', 'No') AS "opportunity_value_change",
-        "s"."probability",
-        "s"."previous_probability",
+        "s"."probability"                                                  AS "probability",
+        "s"."previous_probability"                                         AS "previous_probability",
         iff("s"."probability" <> "s"."previous_probability", 'Yes', 'No')             AS "probability_change",
         iff("m"."max_date_in_month" IS NULL, 'false', 'true')                         AS "max_date_in_month"
     FROM "opportunity_snapshot_tmp" "s"

@@ -3,7 +3,20 @@
 --format date
 --mark Looker repositories based on changed files
 CREATE TABLE "out_repository"
-AS
+(
+    "repository_id" VARCHAR(255) NOT NULL,
+    "repository" VARCHAR(255),
+    "project" VARCHAR(255),
+    "description" VARCHAR(1024),
+    "language" VARCHAR(255),
+    "has_wiki" BOOLEAN,
+    "has_issues" BOOLEAN,
+    "is_private" BOOLEAN,
+    "created_on" TIMESTAMP,
+    "url" VARCHAR(1024)
+);
+
+INSERT INTO "out_repository"
     SELECT
         "r"."id"                                            AS "repository_id",
         "r"."name"                                          AS "repository",
@@ -22,7 +35,19 @@ AS
 --referential integrity check
 --define if closed pull request is declined or merged
 CREATE TABLE "out_pull_request"
-AS
+(
+    "pull_request_id" VARCHAR(255) NOT NULL,
+    "repository_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "title" VARCHAR(255),
+    "description" VARCHAR(1024),
+    "state" VARCHAR(255),
+    "created_on" TIMESTAMP,
+    "updated_on" TIMESTAMP,
+    "url" VARCHAR(1024)
+);
+
+INSERT INTO "out_pull_request"
     SELECT
         "p"."id"                                      AS "pull_request_id",
         "r"."repository_id",
@@ -49,7 +74,19 @@ AS
 --easy deduplication of activity (there is no state which can change during time)
 --format columns
 CREATE TABLE "out_pull_request_activity"
-AS
+(
+    "pull_request_activity_id" VARCHAR(255) NOT NULL,
+    "pull_request_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "user" VARCHAR(255),
+    "date" TIMESTAMP,
+    "state" VARCHAR(255),
+    "title" VARCHAR(255),
+    "description" VARCHAR(1024),
+    "reason" VARCHAR(1024)
+);
+
+INSERT INTO "out_pull_request_activity"
     SELECT DISTINCT
             "opr"."repository_id" || '_' || "opr"."pull_request_id" || '_' || "pr"."state" || '_' ||
             left("pr"."submitted_at", 19)                                             AS "pull_request_activity_id",
@@ -124,7 +161,16 @@ WHERE "p"."merged_at" <> '';
 
 --create output commits table
 CREATE TABLE "out_repository_commit"
-AS
+(
+    "repository_commit_id" VARCHAR(255) NOT NULL,
+    "repository_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "date" TIMESTAMP,
+    "url" VARCHAR(1024),
+    "message" VARCHAR(1024)
+);
+
+INSERT INTO "out_repository_commit"
     SELECT
         "c"."sha"                                             AS "repository_commit_id",
         "or"."repository_id",
@@ -141,7 +187,23 @@ AS
 
 --create output issues table
 CREATE TABLE "out_issue"
-AS
+(
+    "issue_id" VARCHAR(255) NOT NULL,
+    "repository_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "reporter" VARCHAR(255),
+    "number" VARCHAR(255),
+    "title" VARCHAR(255),
+    "description" VARCHAR(1024),
+    "state" VARCHAR(255),
+    "priority" VARCHAR(255),
+    "kind" VARCHAR(255),
+    "created_on" TIMESTAMP,
+    "updated_on" TIMESTAMP,
+    "url" VARCHAR(1024)
+);
+
+INSERT INTO "out_issue"
     SELECT
         "i"."id"                                                                    AS "issue_id",
         "r"."repository_id"                                                         AS "repository_id",
@@ -165,7 +227,18 @@ AS
 --create output issue comments table
 --bit confusing join, but we don't have issue id in comments, so we need to get it first by joining to raw issues table and then deal with referential integrity
 CREATE TABLE "out_issue_comment"
-AS
+(
+    "issue_comment_id" VARCHAR(255) NOT NULL,
+    "issue_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "user" VARCHAR(255),
+    "description" VARCHAR(1024),
+    "created_on" TIMESTAMP,
+    "updated_on" TIMESTAMP,
+    "url" VARCHAR(1024)
+);
+
+INSERT INTO "out_issue_comment"
     SELECT
         "ic"."id"                                                                      AS "issue_comment_id",
         "i"."issue_id",
@@ -188,7 +261,16 @@ AS
 
 --creating output events table from previously created tables, so it's possible to measure user's overall activity
 CREATE TABLE "out_event"
-AS
+(
+    "event_id" VARCHAR(255) NOT NULL,
+    "repository_id" VARCHAR(255),
+    "user_id" VARCHAR(255),
+    "event" VARCHAR(255),
+    "date" TIMESTAMP,
+    "url" VARCHAR(1024)
+);
+
+INSERT INTO "out_event"
     SELECT
         "pull_request_id" || '_prc' AS "event_id",
         "repository_id",

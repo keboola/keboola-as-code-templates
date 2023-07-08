@@ -1,10 +1,20 @@
 --GoogleAds campaigns source data
 CREATE TABLE "bdm_marketing_campaign_costs"
-AS
+(
+  "MARKETING_CAMPAIGN_COSTS_ID" VARCHAR NOT NULL,
+  "SOURCE" VARCHAR,
+  "DATE" DATE,
+  "CAMPAIGN" VARCHAR,
+  "IMPRESSIONS" INTEGER,
+  "CLICKS" INTEGER,
+  "COST" FLOAT
+);
+
+INSERT INTO "bdm_marketing_campaign_costs"
     SELECT
         "segmentsDate" || '-' || 'GoogleAds' || '-' || "campaignName" "MARKETING_CAMPAIGN_COSTS_ID"
       , 'GoogleAds'                                      							"SOURCE"
-      , "segmentsDate"                                            		"DATE"
+      , try_to_date("segmentsDate")                                   "DATE"
       , "campaignName"                                       					"CAMPAIGN"
       , SUM("metricsImpressions")                               			"IMPRESSIONS"
       , SUM("metricsClicks")                                    			"CLICKS"
@@ -14,11 +24,21 @@ AS
 
 --GoogleAds campaigns source data grouped by month
 CREATE TABLE "bdm_marketing_campaign_costs_monthly"
-AS
+(
+  "MARKETING_CAMPAIGN_COSTS_ID" VARCHAR NOT NULL,
+  "SOURCE" VARCHAR,
+  "DATE" DATE,
+  "CAMPAIGN" VARCHAR,
+  "IMPRESSIONS" INTEGER,
+  "CLICKS" INTEGER,
+  "COST" FLOAT
+);
+
+INSERT INTO "bdm_marketing_campaign_costs_monthly"
     SELECT
         LEFT("segmentsDate", 7) || '-01-' || 'GoogleAds' || '-' || "campaignName" "MARKETING_CAMPAIGN_COSTS_ID"
       , 'GoogleAds'                                                  							"SOURCE"
-      , LEFT("segmentsDate", 7) || '-01'                                      		"DATE"
+      , try_to_date(LEFT("segmentsDate", 7)) || '-01'                                      		"DATE"
       , "campaignName"                                                   					"CAMPAIGN"
       , SUM("metricsImpressions")                                           			"IMPRESSIONS"
       , SUM("metricsClicks")                                                			"CLICKS"

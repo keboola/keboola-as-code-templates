@@ -6,7 +6,15 @@ AS
     FROM "account";
 
 CREATE TABLE "out_account"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "IsDeleted" BOOLEAN,
+    "Name" VARCHAR(255),
+    "Website" VARCHAR(255),
+    "CreatedDate" VARCHAR(255)  
+);
+
+INSERT INTO "out_account"
     SELECT
         trim("obj":"Id", '"')          AS "Id",
         trim("obj":"IsDeleted", '"')   AS "IsDeleted",
@@ -23,7 +31,16 @@ AS
     FROM "contact";
 
 CREATE TABLE "out_contact"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "IsDeleted" BOOLEAN,
+    "Name" VARCHAR(255),
+    "Email" VARCHAR(255),
+    "CreatedDate" VARCHAR(255),
+    "LeadSource" VARCHAR(255)
+);
+
+INSERT INTO "out_contact"
     SELECT
         trim("obj":"Id", '"')          AS "Id",
         trim("obj":"IsDeleted", '"')   AS "IsDeleted",
@@ -41,7 +58,17 @@ AS
     FROM "lead";
 
 CREATE TABLE "out_lead"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "IsDeleted" BOOLEAN,
+    "Name" VARCHAR(255),
+    "Email" VARCHAR(255),
+    "CreatedDate" VARCHAR(255),
+    "LeadSource" VARCHAR(255),
+    "IsConverted" BOOLEAN
+);
+
+INSERT INTO "out_lead"
     SELECT
         trim("obj":"Id", '"')          AS "Id",
         trim("obj":"IsDeleted", '"')   AS "IsDeleted",
@@ -60,7 +87,14 @@ AS
     FROM "user";
 
 CREATE TABLE "out_user"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "Name" VARCHAR(255),
+    "Email" VARCHAR(255),
+    "Title" VARCHAR(255)
+);
+
+INSERT INTO "out_user"
     SELECT
         trim("obj":"Id", '"')    AS "Id",
         trim("obj":"Name", '"')  AS "Name",
@@ -76,7 +110,25 @@ AS
     FROM "opportunity";
 
 CREATE TABLE "out_opportunity"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "IsDeleted" BOOLEAN,
+    "AccountId" VARCHAR(1024),
+    "OwnerId" VARCHAR(1024),
+    "Name" VARCHAR(255),
+    "CreatedDate" VARCHAR(255),
+    "CloseDate" VARCHAR(255),
+    "IsClosed" BOOLEAN,
+    "IsWon" BOOLEAN,
+    "StageName" VARCHAR(255),
+    "Type" VARCHAR(255),
+    "Amount" FLOAT,
+    "CurrencyIsoCode" VARCHAR(255),
+    "LeadSource" VARCHAR(255),
+    "Probability" FLOAT
+);
+
+INSERT INTO "out_opportunity"
     SELECT
         trim("obj":"Id", '"')              AS "Id",
         trim("obj":"IsDeleted", '"')       AS "IsDeleted",
@@ -89,10 +141,10 @@ AS
         trim("obj":"IsWon", '"')           AS "IsWon",
         trim("obj":"StageName", '"')       AS "StageName",
         trim("obj":"Type", '"')            AS "Type",
-        trim("obj":"Amount", '"')          AS "Amount",
+        nullif(trim("obj":"Amount", '"'),'')          AS "Amount",
         trim("obj":"CurrencyIsoCode", '"') AS "CurrencyIsoCode",
         trim("obj":"LeadSource", '"') 	   AS "LeadSource",
-        trim("obj":"Probability", '"')	   AS "Probability"
+        nullif(trim("obj":"Probability", '"'),'')	   AS "Probability"
     FROM "opportunity_tmp";
 
 --opportunitystage table
@@ -103,11 +155,17 @@ AS
     FROM "opportunitystage";
 
 CREATE TABLE "out_opportunitystage"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "MasterLabel" VARCHAR(255),
+    "SortOrder" INTEGER
+);
+
+INSERT INTO "out_opportunitystage"
     SELECT
         trim("obj":"Id", '"')              AS "Id",
         trim("obj":"MasterLabel", '"')     AS "MasterLabel",
-        trim("obj":"SortOrder", '"')       AS "SortOrder"
+        nullif(trim("obj":"SortOrder", '"'),'')       AS "SortOrder"
     FROM "opportunitystage_tmp";
 
 --event table
@@ -118,7 +176,18 @@ AS
     FROM "event";
 
 CREATE TABLE "out_event"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "IsDeleted" BOOLEAN,
+    "WhoId" VARCHAR(255),
+    "WhatId" VARCHAR(255),
+    "OwnerId" VARCHAR(255),
+    "Subject" VARCHAR(1024),
+    "ActivityDateTime" VARCHAR(255),
+    "DurationInMinutes" INTEGER
+);
+
+INSERT INTO "out_event"
     SELECT
         trim("obj":"Id", '"')                AS "Id",
         trim("obj":"IsDeleted", '"')         AS "IsDeleted",
@@ -127,7 +196,7 @@ AS
         trim("obj":"OwnerId", '"')           AS "OwnerId",
         trim("obj":"Subject", '"')           AS "Subject",
         trim("obj":"ActivityDateTime", '"')  AS "ActivityDateTime",
-        trim("obj":"DurationInMinutes", '"') AS "DurationInMinutes"
+        nullif(trim("obj":"DurationInMinutes", '"'),'') AS "DurationInMinutes"
     FROM "event_tmp";
 
 --opportunity contact role table
@@ -138,7 +207,16 @@ AS
     FROM "opportunitycontactrole";
 
 CREATE TABLE "out_opportunitycontactrole"
-AS
+(
+    "Id" VARCHAR(1024) NOT NULL,
+    "IsDeleted" BOOLEAN,
+    "OpportunityId" VARCHAR(1024),
+    "ContactId" VARCHAR(1024),
+    "IsPrimary" BOOLEAN,
+    "Role" VARCHAR(255)
+);
+
+INSERT INTO "out_opportunitycontactrole"
     SELECT
         trim("obj":"Id", '"')            AS "Id",
         trim("obj":"IsDeleted", '"')     AS "IsDeleted",
