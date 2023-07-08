@@ -117,6 +117,28 @@
       ]
     },
     {
+      "id": "snowflake-virtual-hands-on-lab",
+      "name": "Snowflake Virtual Hands on Lab",
+      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "categories": ["Tutorials"],
+      "path": "snowflake-virtual-hands-on-lab",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
       "id": "shopify-to-datastudio",
       "name": "Shopify to Data Studio",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
@@ -313,28 +335,6 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v1"
-        }
-      ]
-    },
-    {
-      "id": "snowflake-virtual-hands-on-lab",
-      "name": "Snowflake Virtual Hands on Lab",
-      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
-      "categories": ["Tutorials"],
-      "path": "snowflake-virtual-hands-on-lab",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-shopify",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-sklik",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
