@@ -95,6 +95,26 @@
           "path": "v0"
         }
       ]
+    },    
+    {
+      "id": "keboola-metadata-to-datahub",
+      "name": "Keboola's Project Metadata to DataHub",
+      "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "categories": ["Data Governance"],
+      "path": "keboola-metadata-to-datahub",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "kds-team.ex-kbc-project-metadata-v2",
+            "kds-team.app-datahub"
+          ],
+          "path": "v1"
+        }
+      ]
     },
     {
       "id": "shopify-to-datastudio",
@@ -294,26 +314,6 @@
             "keboola.ex-google-ads",
             "keboola.ex-google-analytics-v4",
             "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v1"
-        }
-      ]
-    },
-    {
-      "id": "keboola-metadata-to-datahub",
-      "name": "Keboola's Project Metadata to DataHub",
-      "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
-      "categories": ["Data Governance"],
-      "path": "keboola-metadata-to-datahub",
-      "versions": [
-        {
-          "version": "1.0.1",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-telemetry-data",
-            "kds-team.ex-kbc-project-metadata-v2",
-            "kds-team.app-datahub"
           ],
           "path": "v1"
         }
