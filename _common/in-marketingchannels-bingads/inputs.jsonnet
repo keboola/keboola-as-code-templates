@@ -6,7 +6,7 @@
     type:        "object",
     kind:        "oauth",
     default:      {},
-    componentId: "esnerda.ex-bingads",
+    componentId: "kds-team.ex-bing-ads",
   },
   {
     id: "ex-bingads-account-id",
