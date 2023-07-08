@@ -72,6 +72,31 @@
       ]
     },
     {
+      "id": "keboola-mgmt-jira",
+      "name": "JIRA Project Management",
+      "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
+      "path": "keboola-mgmt-jira",
+      "categories": [
+        "Project Management"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-jira",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "shopify-to-datastudio",
       "name": "Shopify to Data Studio",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
@@ -811,31 +836,6 @@
           "components": [
             "fisa.ex-typeform",
             "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "keboola-mgmt-jira",
-      "name": "JIRA Project Management",
-      "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
-      "path": "keboola-mgmt-jira",
-      "categories": [
-        "Project Management"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-jira",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-snowflake",
-            "keboola.wr-db-pgsql"
           ],
           "path": "v0"
         }
