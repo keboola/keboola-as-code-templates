@@ -360,6 +360,31 @@
       ]
     },
     {
+      "id": "googleanalytics",
+      "name": "Google Analytics",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": [
+        "Analytics"
+      ],
+      "path": "keboola-analytics-googleanalytics",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "adsplatform-to-googlesheet",
       "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
@@ -448,113 +473,6 @@
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
-        }
-      ]
-    },
-    {
-      "id": "googleanalytics-to-bigquery",
-      "name": "Google Analytics to BigQuery",
-      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
-      "categories": ["Analytics"],
-      "path": "googleanalytics-to-bigquery",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-google-bigquery-v2"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "googleanalytics-to-snowflake",
-      "name": "Google Analytics to Snowflake",
-      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
-      "categories": ["Analytics"],
-      "path": "googleanalytics-to-snowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "googleanalytics-to-keboolasnowflake",
-      "name": "Google Analytics to Keboola DWH",
-      "description": "Don't you have own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Google Analytics data and transform it into more powerful customer insights and smarter marketing strategies.",
-      "categories": ["Analytics"],
-      "path": "googleanalytics-to-keboolasnowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "googleanalytics-to-googlesheet",
-      "name": "Google Analytics to Google Sheets",
-      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
-      "categories": ["Analytics"],
-      "path": "googleanalytics-to-googlesheet",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-google-sheets"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "social-media-engagement-template",
-      "name": "Social Media Engagement",
-      "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
-      "categories": ["Marketing"],
-      "path": "social-media-engagement-template",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-facebook",
-            "keboola.ex-instagram",
-            "keboola.ex-twitter",
-            "keboola.ex-youtube",
-            "keboola.wr-db-mysql",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
-            "keboola.wr-snowflake-blob-storage",
-            "kds-team.ex-linkedin-pages"
-          ],
-          "path": "v0"
         }
       ]
     }
