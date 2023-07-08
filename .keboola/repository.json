@@ -310,6 +310,31 @@
       ]
     },
     {
+      "id": "keboola-mgmt-asana",
+      "name": "Asana Project Management",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": [
+        "Project Management"
+      ],
+      "path": "keboola-mgmt-asana",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "adsplatform-to-googlesheet",
       "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
@@ -476,82 +501,6 @@
             "keboola.ex-google-analytics-v4",
             "kds-team.ex-google-search-console",
             "keboola.wr-google-sheets"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "asana-to-keboolasnowflake",
-      "name": "Asana to Keboola Snowflake",
-      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your Asana data to dramatically improve team collaboration and work management.",
-      "categories": ["Project Management"],
-      "path": "asana-to-keboolasnowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "leochan.ex-asana",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "asana-to-bigquery",
-      "name": "Asana to BigQuery",
-      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
-      "categories": ["Project Management"],
-      "path": "asana-to-bigquery",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "leochan.ex-asana",
-            "keboola.wr-google-bigquery-v2"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "asana-to-googlesheet",
-      "name": "Asana to Google Sheets",
-      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
-      "categories": ["Project Management"],
-      "path": "asana-to-googlesheet",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "leochan.ex-asana",
-            "keboola.wr-google-sheets"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "asana-to-snowflake",
-      "name": "Asana to Snowflake",
-      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
-      "categories": ["Project Management"],
-      "path": "asana-to-snowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "leochan.ex-asana",
-            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }
