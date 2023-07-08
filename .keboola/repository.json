@@ -9,7 +9,7 @@
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the TML block.",
-      "categories": ["Analytics"],
+      "categories": ["Analytics", "ThoughtSpot"],
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -20,6 +20,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
+            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -30,7 +31,7 @@
       "id": "thoughtspot-crm-hubspot",
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
-      "categories": ["CRM"],
+      "categories": ["CRM", "ThoughtSpot"],
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -41,6 +42,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
+            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -51,7 +53,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
-      "categories": ["E-commerce"],
+      "categories": ["E-commerce", "ThoughtSpot"],
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
@@ -65,6 +67,7 @@
             "keboola.ex-sklik",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
+            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -88,14 +91,14 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-snowflake",
+            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
         }
       ]
-    },    
+    },
     {
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
@@ -132,6 +135,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
+            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -156,6 +160,7 @@
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
+            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -166,7 +171,7 @@
       "id": "data-quality",
       "name": "Hands on Data Quality",
       "description": "Take a look at data quality testing and monitoring via two examples.",
-      "categories": ["Tutorials"],
+      "categories": ["Data Quality"],
       "path": "data-quality",
       "versions": [
         {
