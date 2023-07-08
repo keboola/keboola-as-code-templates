@@ -59,7 +59,7 @@
       id: ConfigId("keboola-marketingchannels-facebookads-transformation"),
       path: "<common>/in-marketingchannels-facebookads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-facebookads-transformation",
       rows: [],
-      metadata: { "KBC.configuration.folderName": "[MARKETINGCHANNELS]"}
+      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
     if InputIsAvailable("ex-bingads-account-id") then
     {

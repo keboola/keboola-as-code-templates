@@ -32,4 +32,4 @@ INSERT INTO "out_contact"
 INSERT INTO "out_contact"
     ("contact_id", "contact", "email", "contact_type", "date_created", "lead_source", "lead_converted")
 VALUES
-    ('0', 'Unknown', '', 'Lead', NULL, '', 'No');
+    ('0', 'Unknown', '', 'Lead', '', '', 'No');

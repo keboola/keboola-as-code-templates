@@ -11,7 +11,7 @@
         name: "id_TBE",
         dbName: "id_TBE",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
