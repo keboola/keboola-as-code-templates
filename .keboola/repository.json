@@ -163,6 +163,24 @@
       ]
     },
     {
+      "id": "data-quality",
+      "name": "Hands on Data Quality",
+      "description": "Take a look at data quality testing and monitoring via two examples.",
+      "categories": ["Tutorials"],
+      "path": "data-quality",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "shopify-to-datastudio",
       "name": "Shopify to Data Studio",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
@@ -666,24 +684,6 @@
           "components": [
             "keboola.ex-github",
             "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "data-quality",
-      "name": "Hands on Data Quality",
-      "description": "Take a look at data quality testing and monitoring via two examples.",
-      "categories": ["Tutorials"],
-      "path": "data-quality",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.snowflake-transformation"
           ],
           "path": "v0"
         }
