@@ -20,7 +20,7 @@
         name: "user_id",
         dbName: "USER_ID",
         type: "string",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "255",
       },

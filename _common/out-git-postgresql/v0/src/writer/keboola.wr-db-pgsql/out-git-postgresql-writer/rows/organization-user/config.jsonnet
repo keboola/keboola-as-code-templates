@@ -20,7 +20,7 @@
         name: "user_id",
         dbName: "user_id",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "255",
       },
