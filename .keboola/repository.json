@@ -335,6 +335,31 @@
       ]
     },
     {
+      "id": "keboola-typeform",
+      "name": "Typeform",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": [
+        "Surveys"
+      ],
+      "path": "keboola-typeform",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "adsplatform-to-googlesheet",
       "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
@@ -501,82 +526,6 @@
             "keboola.ex-google-analytics-v4",
             "kds-team.ex-google-search-console",
             "keboola.wr-google-sheets"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "typeform-to-snowflake",
-      "name": "Typeform to Snowflake",
-      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
-      "categories": ["Surveys"],
-      "path": "typeform-to-snowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "fisa.ex-typeform",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "typeform-to-bigquery",
-      "name": "Typeform to BigQuery",
-      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
-      "categories": ["Surveys"],
-      "path": "typeform-to-bigquery",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "fisa.ex-typeform",
-            "keboola.wr-google-bigquery-v2"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "typeform-to-googlesheet",
-      "name": "Typeform to Google Sheets",
-      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
-      "categories": ["Surveys"],
-      "path": "typeform-to-googlesheet",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "fisa.ex-typeform",
-            "keboola.wr-google-sheets"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "typeform-to-keboolasnowflake",
-      "name": "Typeform to Keboola Snowflake",
-      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
-      "categories": ["Surveys"],
-      "path": "typeform-to-keboolasnowflake",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "fisa.ex-typeform",
-            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }
