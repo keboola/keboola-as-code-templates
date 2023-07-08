@@ -6,51 +6,6 @@
   },
   "templates": [
     {
-      "id": "shopify-to-datastudio",
-      "name": "Shopify to Data Studio",
-      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
-      "categories": ["E-commerce"],
-      "path": "shopify-to-datastudio",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-shopify",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-sklik", 
-            "jakub-bartel.wr-data-studio",
-            "keboola.wr-google-sheets"
-          ],
-          "path": "v1"
-        }
-      ]
-    },
-    {
-      "id": "adsplatform-to-googlesheet",
-      "name": "Advertising Platforms to Google Sheets",
-      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
-      "categories": ["Marketing"],
-      "path": "adsplatform-to-googlesheet",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "esnerda.ex-bingads",
-            "leochan.ex-linkedin",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-google-analytics-v4",
-            "keboola.wr-google-sheets"
-          ],
-          "path": "v1"
-        }
-      ]
-    },{
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the TML block.",
@@ -111,6 +66,52 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-datastudio",
+      "name": "Shopify to Data Studio",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": ["E-commerce"],
+      "path": "shopify-to-datastudio",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik", 
+            "jakub-bartel.wr-data-studio",
+            "keboola.wr-google-sheets"
+          ],
+          "path": "v1"
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-googlesheet",
+      "name": "Advertising Platforms to Google Sheets",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": ["Marketing"],
+      "path": "adsplatform-to-googlesheet",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
           ],
           "path": "v1"
         }
