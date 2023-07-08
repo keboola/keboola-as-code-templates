@@ -1,5 +1,11 @@
-CREATE TABLE  "bdm_product_margin_over_time" 
-AS
+CREATE TABLE "bdm_product_margin_over_time" 
+(
+     ORDER_DATE DATE,
+     PRODUCT_ID VARCHAR(255),
+     AVG_ORDER_LINE_MARGIN FLOAT
+);
+
+INSERT INTO  "bdm_product_margin_over_time" 
      SELECT ORDER_DATE::date                                                         AS ORDER_DATE
           , ORDER_LINE_PRODUCT_ID                                                    AS PRODUCT_ID
           , AVG((ORDER_LINE_PRICE_WITH_TAXES - LINE_PURCHASE_PRICE)/ORDER_LINE_AMOUNT) AS AVG_ORDER_LINE_MARGIN

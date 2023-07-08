@@ -16,8 +16,27 @@ AS
                   ON LO."id" = O."id";
 
 --BDM_CUSTOMERS
-CREATE OR REPLACE TABLE "bdm_customers" 
-AS
+CREATE TABLE "bdm_customers"
+(
+      CUSTOMER_ID VARCHAR(255),
+      CUSTOMER_EMAIL_HASH VARCHAR(255),
+      CUSTOMER_EMAIL VARCHAR(255),
+      CUSTOMER_ACCOUNT_GUID VARCHAR(255) NOT NULL,
+      CUSTOMER_BILLING_CITY VARCHAR(255),
+      CUSTOMER_BILLING_COUNTRY VARCHAR(255),
+      CUSTOMER_SHIPPING_CITY VARCHAR(255),
+      CUSTOMER_SHIPPING_COUNTRY VARCHAR(255),
+      CUSTOMER_PRICE_LIST VARCHAR(255),
+      CUSTOMER_GROUP VARCHAR(255),
+      ACCEPTS_MARKETING BOOLEAN,
+      MARKETING_OPT_IN_LEVEL VARCHAR(255),
+      ORDERS_COUNT INTEGER,
+      TOTAL_SPEND FLOAT,
+      VERIFIED_EMAIL BOOLEAN,
+      STATE VARCHAR(255)
+);
+
+INSERT INTO "bdm_customers" 
       SELECT 
             C."id"                              AS CUSTOMER_ID,
             SHA2(C."email", 224)                AS CUSTOMER_EMAIL_HASH,
@@ -29,12 +48,12 @@ AS
             LS."shipping_address__country"      AS CUSTOMER_SHIPPING_COUNTRY,
             ''::STRING                          AS CUSTOMER_PRICE_LIST,
             ''::STRING                          AS CUSTOMER_GROUP,
-            C."accepts_marketing"			AS ACCEPTS_MARKETING,
-            C."marketing_opt_in_level"		AS MARKETING_OPT_IN_LEVEL,
-            C."orders_count"				AS ORDERS_COUNT,
-            C."total_spent"				AS TOTAL_SPEND,
-            C."verified_email"			AS VERIFIED_EMAIL,
-            C."state"					AS STATE
+            C."accepts_marketing"								AS ACCEPTS_MARKETING,
+            C."marketing_opt_in_level"					AS MARKETING_OPT_IN_LEVEL,
+            nullif(C."orders_count",'')					AS ORDERS_COUNT,
+            nullif(C."total_spent",'')						AS TOTAL_SPEND,
+            C."verified_email"									AS VERIFIED_EMAIL,
+            C."state"														AS STATE
       FROM "customer" C
             LEFT JOIN "last_shipping_address" LS 
                   ON LS."customer_id"=C."id";

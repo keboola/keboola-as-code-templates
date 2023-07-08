@@ -18,7 +18,15 @@ FROM "linkedin_ads_basic_stats" AS a
 WHERE a."pivot"='CAMPAIGN' AND c."pivot"='CAMPAIGN';
 
 -- output table grouping
-CREATE OR REPLACE TABLE "out_linkedin" AS 
+CREATE TABLE "out_linkedin"
+(
+  "linkedin_id" VARCHAR(1024) NOT NULL,
+  "impressions" INTEGER,
+  "clicks" INTEGER,
+  "costs" FLOAT
+);
+
+INSERT INTO "out_linkedin" 
 SELECT 
   ifnull("date",'') || '*' || ifnull("source",'') || '*' || ifnull("medium",'') || '*' || ifnull("campaign",'') || '*' || ifnull("domain",'') || '*' || ifnull("currency",'') || '*' || ifnull("account_id",'')  AS "linkedin_id"
   ,SUM("impressions") AS "impressions" 

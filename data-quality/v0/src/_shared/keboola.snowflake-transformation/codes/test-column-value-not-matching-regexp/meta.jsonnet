@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Value Not Matching REGEXP",
+  name: "[Keboola] TEST - Column Value Not Matching REGEXP",
 }

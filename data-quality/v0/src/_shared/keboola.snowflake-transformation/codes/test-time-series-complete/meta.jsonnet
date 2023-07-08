@@ -1,3 +1,3 @@
 {
-  name: "TEST - Time Series Complete",
+  name: "[Keboola] TEST - Time Series Complete",
 }

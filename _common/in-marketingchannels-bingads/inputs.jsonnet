@@ -9,14 +9,6 @@
     componentId: "esnerda.ex-bingads",
   },
   {
-    id: "ex-bingads-dev-key",
-    name: "Developer Token",
-    description: "Your developer token of your BingAds account.",
-    type: "string",
-    kind: "hidden",
-    rules: "required",
-  },
-  {
     id: "ex-bingads-account-id",
     name: "Account ID",
     description: "Account identifier of your BingAds account.",
@@ -35,7 +27,7 @@
   {
     id: "ex-bingads-report-period",
     name: "Report Period",
-    description: ".",
+    description: "Select time period the report relates to.",
     type: "string",
     kind: "select",
     default: "LastThreeMonths",

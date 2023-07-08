@@ -1,3 +1,3 @@
 {
-  name: "Data Quality Core",
+  name: "[Keboola] Data Quality Core",
 }

@@ -13,8 +13,38 @@ AS
                 ON O."id" = OTL."order_id"
     GROUP BY 1,2,3,4;
 
-CREATE OR REPLACE TABLE "bdm_orders" 
-AS
+CREATE TABLE "bdm_orders" 
+(
+    ORDER_ID VARCHAR(255) NOT NULL,
+    ORDER_DATE TIMESTAMP,
+    ORDER_STATUS VARCHAR(255),
+    IS_SUCESSFUL BOOLEAN,
+    IS_FIRST_PURCHASE BOOLEAN,
+    ORDER_CURRENCY VARCHAR(255),
+    ORDER_CUSTOMER_EMAIL VARCHAR(255),
+    ORDER_REMARK VARCHAR(255),
+    ORDER_PACKAGE_NUMBER VARCHAR(255),
+    ORDER_WEIGHT FLOAT,
+    REFERER VARCHAR(255),
+    CHANNEL VARCHAR(255),
+    SOURCE VARCHAR(255),
+    BILLING_CITY VARCHAR(255),
+    BILLING_COUNTRY VARCHAR(255),
+    BILLING_ZIP VARCHAR(255),
+    SHIPPING_CITY VARCHAR(255),
+    SHIPPING_COUNTRY VARCHAR(255),
+    SHIPPING_ZIP VARCHAR(255),
+    BILLING_TYPE VARCHAR(255),
+    SHIPPING_TYPE VARCHAR(255),
+    ORDER_TOTAL_PRICE_WITH_TAXES FLOAT,
+    ORDER_TOTAL_PRICE_WITHOUT_TAXES FLOAT,
+    ORDER_TOTAL_PRICE_TAXES FLOAT,
+    CUSTOMER_ID VARCHAR(255),
+    CUSTOMER_REGULARITY_TYPE VARCHAR(255),
+    DAYS_SINCE_PREVIOUS_ORDER INTEGER
+);
+
+INSERT INTO "bdm_orders" 
     SELECT DISTINCT 
         O."id"                                                AS ORDER_ID,
         O."created_at"                                        AS ORDER_DATE,
@@ -55,9 +85,24 @@ AS
                     ON O."id" = OFU."order_id";
 
 --BDM_ORDER_LINES
+CREATE TABLE "bdm_order_lines" 
+(
+    ORDER_ID VARCHAR(255),
+    ORDER_LINE_ID VARCHAR(255) NOT NULL,
+    ORDER_DATE TIMESTAMP,
+    ORDER_LINE_PRODUCT_ID VARCHAR(255),
+    ITEMNAME VARCHAR(1024),
+    ORDER_ITEM_TYPE VARCHAR(255),
+    DISCOUNT_PERCENT FLOAT,
+    ORDER_LINE_AMOUNT FLOAT,
+    ORDER_LINE_PRICE_WITH_TAXES FLOAT,
+    ORDER_LINE_PRICE_WITHOUT_TAXES FLOAT,
+    ORDER_LINE_PRICE_TAXES FLOAT,
+    ORDER_LINE_TAXES_RATE FLOAT,
+    LINE_PURCHASE_PRICE FLOAT
+);
 
-CREATE OR REPLACE TABLE "bdm_order_lines" 
-AS
+INSERT INTO "bdm_order_lines" 
     SELECT 
         O."id"                                                        AS ORDER_ID,
         LI."id"                                                       AS ORDER_LINE_ID,
@@ -105,9 +150,13 @@ AS
                     ON PV."inventory_item_id" = II."id";
 
 --- Get billing and shipping details
+CREATE TABLE "bdm_shipping_type" 
+(
+    SHIPPING_TYPE_ID VARCHAR(255) NOT NULL,
+    NAME VARCHAR(255)
+);
 
-CREATE OR REPLACE TABLE "bdm_shipping_type" 
-AS
+INSERT INTO "bdm_shipping_type" 
     SELECT 
         ROW_NUMBER() OVER(ORDER BY NAME) AS SHIPPING_TYPE_ID,
         NAME 
@@ -142,8 +191,14 @@ AS
                 END)            AS BILLING_TYPE
     FROM "order";
 */
-CREATE OR REPLACE TABLE "bdm_billing_type" 
-AS
+
+CREATE TABLE "bdm_billing_type" 
+(
+    BILLING_TYPE_ID VARCHAR(255) NOT NULL,
+    NAME VARCHAR(255)
+);
+
+INSERT INTO "bdm_billing_type" 
     SELECT 
         1 AS BILLING_TYPE_ID, 
         'Billing Types not specified' as NAME;

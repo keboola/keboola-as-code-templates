@@ -4,7 +4,7 @@
     }
   },
   parameters:
-    {
+  {
     authentication_type: "Private App Token",
     include_contact_list_membership: true,
     property_attributes: {
