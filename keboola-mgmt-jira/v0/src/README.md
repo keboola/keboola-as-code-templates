@@ -6,6 +6,6 @@ The flow, in a nutshell:
 
 - We then create the output tables and snapshots.
 
--The data is then written into a data destination of your choice: Snowflake database, PostgreSQL database or BigQuery Database.
+- Optionally, the data is then written into a data destination of your choice.
 
-- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The JIRA source component, all data manipulations, and the Snowflake destination component, will be processed.
+- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The JIRA source component, all data manipulations, and optionally, the destination component, will be processed.

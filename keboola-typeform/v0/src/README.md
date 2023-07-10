@@ -1,37 +1,11 @@
-# KEBOOLA-TYPEFORM
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials, and authorize the source and destination components.
+ 
+The flow, in a nutshell:
 
-By using this end-to-end flow you can extract data from Typeform and transform it into visualizations in your BI tool or anywhere else you prefer.
+- First, the Typeform source component will collect data from your Typeform account: lists of forms, questions, and responses, and basic form statistics.
 
-## Steps to take:
-1. Authorize Typeform data source
-2. Optionaly select and authorize data destinations
-3. Run the flow
+- We then prepare four tables (surveys, questions, answer options, and responses) that can be used to visualize survey results.
 
-## Included components' configurations:
+- Optionally, the data is then written into a data destination of your choice.
 
-DS -> TR -> DD -> FLOW
-
-
-### DS: Data Source [IN-TYPEFORM]
-
-Typeform extracts and produces data such as list of forms, basic form statistics, list of questions, responses. 
-
-### TR: Transformation [IN-TYPEFORM] 
-
-Within this transformation are prepared four tables (survey, questions, answer option, responses).
-
-### DD: Data Destination [OUT-TYPEFORM-SNOWFLAKE]  OR [OUT-TYPEFORM-BIGQUERY] OR [OUT-TYPEFORM-GSHEET]
-
-The data destination loads data into a Snowflake database or a BigQuery database or a Google sheet.
-
-### FLOW: Flow [TYPEFORM] 
-
-The Flow gets the data from Typeform data source, transforms the data and optionally writes the data into selected data destinations.
-
-## Business Data Model
-
-
-
-
-
-
+- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Typeform source component, all data manipulations, and optionally, the destination component, will be processed.
