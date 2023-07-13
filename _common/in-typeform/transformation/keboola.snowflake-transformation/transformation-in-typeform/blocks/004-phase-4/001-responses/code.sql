@@ -36,16 +36,30 @@ unpivot(response for type in (
 
 delete from "responses_pivoted" where RESPONSE = '';
 
-create table "out_responses" AS
+CREATE TABLE "out_responses"
+(
+    "response_id" VARCHAR(255) NOT NULL,
+    "session_id" VARCHAR(255),
+    "question_id" VARCHAR(255),
+    "answer_option_id" VARCHAR(255),
+    "ip_address" VARCHAR(255),
+    "recipient_id" VARCHAR(255),
+    "date_created" DATE,
+    "response_status" VARCHAR(255),
+    "response_text" VARCHAR(2000),
+    "type_pivot" VARCHAR(255),
+    "field_type" VARCHAR(255)
+);
+
+INSERT INTO "out_responses"
 select
     distinct ra."responses_pk"||'_'||ra."field_id" AS "response_id"
 --    r."response_id"||'_'|| --Unique ID for the response. Note that response_id values are unique per form but are not unique globally.
 --    ra."field_id" --The unique id of the form field the answer refers to
 --    AS "response_id"
     , ra."responses_pk" AS "session_id"
-    , ra."field_ref" AS "question_id"
+    , ra."field_id" AS "question_id"
 --    , '' AS "survey_response_question_id"  
---    , ra."field_id"||'_'||IFNULL(ffpc."id",'') AS "answer_option_id"
     , oao."answer_option_id"
     , '' AS "ip_address"
     , '' AS "recipient_id"

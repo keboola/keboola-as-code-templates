@@ -1,3 +1,3 @@
 {
-  name: "TEST - Foreign Reference Column",
+  name: "[Keboola] TEST - Foreign Reference Column",
 }

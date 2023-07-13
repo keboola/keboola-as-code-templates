@@ -1,6 +1,16 @@
 --sklik campaigns source data
 CREATE TABLE "bdm_marketing_campaign_costs"
-AS
+(
+      "MARKETING_CAMPAIGN_COSTS_ID" VARCHAR NOT NULL,
+      "SOURCE" VARCHAR,
+      "DATE" DATE,
+      "CAMPAIGN" VARCHAR,
+      "IMPRESSIONS" INTEGER,
+      "CLICKS" INTEGER,
+      "COST" FLOAT
+);
+
+INSERT INTO "bdm_marketing_campaign_costs"
     SELECT
             LEFT("st"."date", 4) || '-' || RIGHT(LEFT("st"."date", 6), 2) || '-' || RIGHT(LEFT("st"."date", 8), 2) ||
             '-' || 'Sklik' || '-' || "c"."name" "MARKETING_CAMPAIGN_COSTS_ID"
@@ -19,7 +29,17 @@ AS
 
 --sklik campaigns source data grouped by month
 CREATE TABLE "bdm_marketing_campaign_costs_monthly"
-AS
+(
+      "MARKETING_CAMPAIGN_COSTS_ID" VARCHAR NOT NULL,
+      "SOURCE" VARCHAR,
+      "DATE" DATE,
+      "CAMPAIGN" VARCHAR,
+      "IMPRESSIONS" INTEGER,
+      "CLICKS" INTEGER,
+      "COST" FLOAT
+);
+
+INSERT INTO "bdm_marketing_campaign_costs_monthly"
     SELECT
             LEFT("st"."date", 4) || '-' || RIGHT(LEFT("st"."date", 6), 2) || '-01' ||
             '-' || 'Sklik' || '-' || "c"."name"                                    "MARKETING_CAMPAIGN_COSTS_ID"

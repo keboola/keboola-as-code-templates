@@ -19,7 +19,7 @@
         name: "organization",
         dbName: "ORGANIZATION",
         type: "string",
-        nullable: false,
+        nullable: true,
         default: "",
         size: "255",
       },

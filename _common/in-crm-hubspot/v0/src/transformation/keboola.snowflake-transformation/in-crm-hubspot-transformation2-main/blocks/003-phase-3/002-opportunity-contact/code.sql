@@ -2,7 +2,15 @@
 --merge both tables ids as paring table id
 --use inner joins and ids from referring tables to make sure referential integrity is intact
 CREATE TABLE "out_opportunity_contact"
-AS
+(
+    "opportunity_contact_id" VARCHAR(2000) NOT NULL,
+    "opportunity_id" VARCHAR(2000),
+    "contact_id" VARCHAR(2000),
+    "is_primary_contact" VARCHAR(255),
+    "role" VARCHAR(255)
+);
+
+INSERT INTO "out_opportunity_contact"
 SELECT "o"."opportunity_id" || '-' || "c"."contact_id" AS "opportunity_contact_id",
        "o"."opportunity_id",
        "c"."contact_id",

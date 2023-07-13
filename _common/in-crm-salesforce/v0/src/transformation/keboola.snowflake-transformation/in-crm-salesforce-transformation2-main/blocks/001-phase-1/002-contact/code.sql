@@ -1,12 +1,23 @@
 --create output table with contacts
 CREATE TABLE "out_contact"
-AS
+(
+  "contact_id" VARCHAR(2000) NOT NULL,
+  "contact" VARCHAR(255),
+  "email" VARCHAR(255),
+  "contact_type" VARCHAR(255),
+  "date_created" DATE,
+  "lead_source" VARCHAR(255),
+  "lead_converted" VARCHAR(255)
+);
+
+
+INSERT INTO "out_contact"
   SELECT
     "Id"                                  AS "contact_id",
     "Name"                                AS "contact",
     "Email"                               AS "email",
     'Contact'                             AS "contact_type",
-    to_date("CreatedDate") :: VARCHAR(10) AS "date_created",
+    iff("CreatedDate" = '', null, to_date("CreatedDate")) AS "date_created",
     "LeadSource"                          AS "lead_source",
     'Is Contact'                          AS "lead_converted"
   FROM "contact"
@@ -18,7 +29,7 @@ AS
     "Name"                                    AS "contact",
     "Email"                                   AS "email",
     'Lead'                                    AS "contact_type",
-    to_date("CreatedDate") :: VARCHAR(10)     AS "date_created",
+    iff("CreatedDate" = '', null, to_date("CreatedDate"))     AS "date_created",
     "LeadSource"                              AS "lead_source",
     iff("IsConverted" = 'false', 'No', 'Yes') AS "lead_converted"
   FROM "lead"
@@ -28,4 +39,4 @@ AS
 INSERT INTO "out_contact"
   ("contact_id", "contact", "email", "contact_type", "date_created", "lead_source", "lead_converted")
 VALUES
-  ('0', 'Unknown', '', 'Lead', '', '', 'No');
+  ('0', 'Unknown', '', 'Lead', null, '', 'No');

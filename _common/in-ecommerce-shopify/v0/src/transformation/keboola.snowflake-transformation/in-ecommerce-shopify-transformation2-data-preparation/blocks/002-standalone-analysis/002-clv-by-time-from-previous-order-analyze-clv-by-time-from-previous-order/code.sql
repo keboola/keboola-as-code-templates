@@ -1,5 +1,14 @@
-CREATE OR REPLACE TABLE "analyze_clv_by_time_from_previous_order" 
-AS
+CREATE TABLE "analyze_clv_by_time_from_previous_order" 
+(
+     TIME_FROM_PREVIOUS_ORDER VARCHAR(255),
+     ORDERS INTEGER,
+     UNIQUE_CUSTOMERS INTEGER,
+     AVG_CLV FLOAT,
+     ORDER_TOTAL_PRICE_TAXES FLOAT,
+     AVG_ORDER_PRICE FLOAT
+);
+
+INSERT INTO "analyze_clv_by_time_from_previous_order" 
      WITH previous_order_category 
      AS (
           SELECT  

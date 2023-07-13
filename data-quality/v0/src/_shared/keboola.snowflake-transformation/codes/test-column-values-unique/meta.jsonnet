@@ -1,3 +1,3 @@
 {
-  name: "TEST - Column Values Unique",
+  name: "[Keboola] TEST - Column Values Unique",
 }

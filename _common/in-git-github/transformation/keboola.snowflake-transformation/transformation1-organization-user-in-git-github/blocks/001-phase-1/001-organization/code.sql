@@ -1,6 +1,11 @@
 --create output organization table
 CREATE TABLE "out_organization"
-AS
+(
+    "organization_id" VARCHAR(255) NOT NULL,
+    "organization" VARCHAR(255)
+);
+
+INSERT INTO "out_organization"
     SELECT
         "org_id"   AS "organization_id",
         "org_name" AS "organization"

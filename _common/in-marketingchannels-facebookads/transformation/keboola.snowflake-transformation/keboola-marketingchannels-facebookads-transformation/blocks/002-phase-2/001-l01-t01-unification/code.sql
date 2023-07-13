@@ -1,13 +1,15 @@
 -- table with account id Labels
-CREATE or replace TABLE "accounts" (
-    "ads_system" STRING, 
-    "account_id" STRING , 
-    "account_name" STRING 
+CREATE OR REPLACE TABLE "accounts" (
+    "ads_system" STRING NOT NULL, 
+    "account_id" STRING NOT NULL, 
+    "account_name" STRING NOT NULL
 );
 
--- has to be edited
-INSERT INTO "accounts"
-VALUES ('facebook','XXXXXX','Customer_name');
+INSERT INTO "accounts" ("ads_system","account_id","account_name") 
+SELECT 'facebook' as "ads_system", 
+        "account_id", 
+        "name"
+FROM "Facebook_Ads_accounts";
 
 -- collect all ads system in one table 
 CREATE  OR REPLACE VIEW  "tmp_ads_systems" AS
@@ -28,11 +30,11 @@ FROM (
         ,"costs_cpc"
         ,"costs_conversion"
         FROM (
-            SELECT "facebook_ads_id" as "id"
+            SELECT "facebook_ads_id" AS "id"
             ,"impressions"
             ,"clicks"
             ,"costs" AS "costs_cpc"
-            ,0 as "costs_conversion"
+            ,0 AS "costs_conversion"
             FROM "out_facebook"
         ) t1
         LEFT JOIN "accounts" t2
@@ -42,7 +44,22 @@ WHERE "costs_cpc"  > 0 OR  "costs_conversion" > 0
 GROUP BY "account_name","date","source","medium","campaign","domain";
 
 -- final facebook marketing table 
-CREATE  TABLE "out_marketing" AS 
+CREATE  TABLE "out_marketing"
+(
+  "online_marketing_traffic_id" VARCHAR(1024) NOT NULL,
+  "account_name" VARCHAR(255),
+  "date" DATE,
+  "source" VARCHAR(255),
+  "medium" VARCHAR(255),
+  "campaign" VARCHAR(255),
+  "domain" VARCHAR(255),
+  "impressions" INTEGER,
+  "clicks" INTEGER,
+  "costs_cpc" FLOAT,
+  "costs_conversion" FLOAT
+);
+
+INSERT INTO "out_marketing" 
 SELECT 
     "id" AS "online_marketing_traffic_id"
     ,split_part("id",'*',1) AS "account_name"
