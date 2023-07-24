@@ -1,4 +1,4 @@
 {
-  name: "Destinations",
+  name: "Load",
   dependsOn: ["<previous>"],
 }
