@@ -1,4 +1,4 @@
-# OUT-CRM-GSHEET
+# OUT-CRM-PG
 
 This template is useful for writing transformed CRM data into PostgreSQL database.
 
