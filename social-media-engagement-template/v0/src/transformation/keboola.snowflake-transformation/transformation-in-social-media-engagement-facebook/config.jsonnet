@@ -32,7 +32,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-social-media-engagement" + InstanceIdShort() + ".posts_engagement",
+          destination: "out.c-social-media-engagement-" + InstanceIdShort() + ".posts_engagement",
           primary_key: [
             "uid",
           ],
@@ -43,7 +43,7 @@
           source: "posts_engagement",
         },
         {
-          destination: "out.c-social-media-engagement" + InstanceIdShort() + ".pages_engagement",
+          destination: "out.c-social-media-engagement-" + InstanceIdShort() + ".pages_engagement",
           source: "pages_engagement",
           incremental: true,
           delete_where_column: "",

@@ -24,7 +24,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-social-media-engagement" + InstanceIdShort() + ".posts_engagement",
+          destination: "out.c-social-media-engagement-" + InstanceIdShort() + ".posts_engagement",
           source: "posts_engagement",
           primary_key: [
             "uid",
@@ -35,7 +35,7 @@
           delete_where_values: [],
         },
         {
-          destination: "out.c-social-media-engagement" + InstanceIdShort() + ".pages_engagement",
+          destination: "out.c-social-media-engagement-" + InstanceIdShort() + ".pages_engagement",
           source: "pages_engagement",
           primary_key: [
             "date",

@@ -20,7 +20,6 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -42,7 +41,6 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -67,7 +65,6 @@
             "keboola.ex-sklik",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -91,7 +88,6 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -135,7 +131,6 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -160,7 +155,6 @@
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v1"
@@ -204,7 +198,6 @@
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "kds-team.ex-linkedin-pages"
           ],
@@ -229,7 +222,6 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -254,7 +246,6 @@
             "keboola.ex-pipedrive",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -279,7 +270,6 @@
             "kds-team.ex-salesforce-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -307,7 +297,6 @@
             "keboola.ex-sklik",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql",
             "jakub-bartel.wr-data-studio"
@@ -333,7 +322,6 @@
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -358,7 +346,6 @@
             "leochan.ex-asana",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -383,7 +370,6 @@
             "fisa.ex-typeform",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -409,7 +395,6 @@
             "kds-team.ex-google-search-console",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
@@ -437,7 +422,6 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
@@ -462,7 +446,6 @@
             "keboola.ex-mailchimp",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
