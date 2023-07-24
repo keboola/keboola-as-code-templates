@@ -1,4 +1,4 @@
 {
-  name: "Data destination [OUT-SOCIAL-MEDIA-ENGAGEMENT-MYSQL]",
+  name: "Data destination [OUT-SOCIAL-MEDIA-ENGAGEMENT-MYSQL] /" + InstanceIdShort(),
   isDisabled: false,
 }
