@@ -1,4 +1,4 @@
 {
-  name: "Data source [IN-SOCIAL-MEDIA-ENGAGEMENT-INSTAGRAM]",
+  name: "Data source [IN-SOCIAL-MEDIA-ENGAGEMENT-INSTAGRAM] /" + InstanceIdShort(),
   isDisabled: false,
 }
