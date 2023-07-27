@@ -1,4 +1,0 @@
-{
-  name: "list",
-  isDisabled: false,
-}

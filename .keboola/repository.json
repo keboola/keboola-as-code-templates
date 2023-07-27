@@ -13,7 +13,7 @@
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -34,7 +34,7 @@
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -55,7 +55,7 @@
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
-          "version": "1.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -424,29 +424,6 @@
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "mailchimp",
-      "name": "Emailing Mailchimp",
-      "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet.",
-      "categories": [
-        "Mailing"
-      ],
-      "path": "keboola-mailchimp",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-mailchimp",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }

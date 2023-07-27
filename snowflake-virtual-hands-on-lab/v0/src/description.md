@@ -1,1 +1,0 @@
-With this end-to-end flow you can use Shopify demo data to see Snowflake Lab in action. 

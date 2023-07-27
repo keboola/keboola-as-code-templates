@@ -1,4 +1,0 @@
-### HubSpot DEMO
-
-Extended description
-

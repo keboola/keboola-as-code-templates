@@ -1,4 +1,0 @@
-### KEBOOLA-MAILCHIMP
-
-Extended description
-

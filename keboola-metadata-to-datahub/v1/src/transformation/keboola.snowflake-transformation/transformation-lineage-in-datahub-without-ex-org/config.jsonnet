@@ -19,22 +19,6 @@
           where_operator: "eq",
           columns: [],
         },
-        {
-          source: "in.c-kds-team-ex-kbc-project-metadata-v2-" + ConfigId("metadata-activity-center") + ".orchestrations_v2_tasks",
-          destination: "orchestrations_v2_tasks",
-          where_column: "",
-          where_values: [],
-          where_operator: "eq",
-          columns: [],
-        },
-        {
-          source: "in.c-kds-team-ex-kbc-project-metadata-v2-" + ConfigId("metadata-activity-center") + ".tables",
-          destination: "tables",
-          where_column: "",
-          where_values: [],
-          where_operator: "eq",
-          columns: [],
-        },
       ],
     },
     output: {

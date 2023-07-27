@@ -1,1 +1,0 @@
-In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the [TML block](https://developers.thoughtspot.com/codespot/google-analytics-tml-blocks).
