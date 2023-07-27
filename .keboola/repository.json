@@ -9,7 +9,10 @@
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the TML block.",
-      "categories": ["Analytics", "ThoughtSpot"],
+      "categories": [
+        "Analytics",
+        "ThoughtSpot"
+      ],
       "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
@@ -31,7 +34,10 @@
       "id": "thoughtspot-crm-hubspot",
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
-      "categories": ["CRM", "ThoughtSpot"],
+      "categories": [
+        "CRM",
+        "ThoughtSpot"
+      ],
       "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
@@ -53,7 +59,10 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
-      "categories": ["E-commerce", "ThoughtSpot"],
+      "categories": [
+        "E-commerce",
+        "ThoughtSpot"
+      ],
       "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
@@ -103,7 +112,9 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
-      "categories": ["Data Governance"],
+      "categories": [
+        "Data Governance"
+      ],
       "path": "keboola-metadata-to-datahub",
       "versions": [
         {
@@ -123,7 +134,9 @@
       "id": "snowflake-virtual-hands-on-lab",
       "name": "Snowflake Virtual Hands on Lab",
       "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
-      "categories": ["Tutorials"],
+      "categories": [
+        "Tutorials"
+      ],
       "path": "snowflake-virtual-hands-on-lab",
       "versions": [
         {
@@ -146,7 +159,9 @@
       "id": "keboola-dbt-tutorial",
       "name": "Keboola dbt Tutorial",
       "description": "Run your first data pipeline with dbt! Extract seed data, run dbt to model data and export it to the DB destination of your choice!",
-      "categories": ["Tutorials"],
+      "categories": [
+        "Tutorials"
+      ],
       "path": "keboola-dbt-tutorial",
       "versions": [
         {
@@ -171,7 +186,9 @@
       "id": "data-quality",
       "name": "Hands on Data Quality",
       "description": "Take a look at data quality testing and monitoring via two examples.",
-      "categories": ["Data Quality"],
+      "categories": [
+        "Data Quality"
+      ],
       "path": "data-quality",
       "versions": [
         {
@@ -189,7 +206,9 @@
       "id": "social-media-engagement-template",
       "name": "Social Media Engagement",
       "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
-      "categories": ["Marketing"],
+      "categories": [
+        "Marketing"
+      ],
       "path": "social-media-engagement-template",
       "versions": [
         {
@@ -442,6 +461,842 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-datastudio",
+      "name": "Shopify to Data Studio",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": [
+        "E-commerce"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-googlesheet",
+      "name": "Advertising Platforms to Google Sheets",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": [
+        "Marketing"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-bigquery",
+      "name": "Shopify to BigQuery",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": [
+        "E-commerce"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-snowflake",
+      "name": "Shopify to Snowflake",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": [
+        "E-commerce"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-googlesheet",
+      "name": "Shopify to Google Sheets",
+      "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "categories": [
+        "E-commerce"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopify-to-keboolasnowflake",
+      "name": "Shopify to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Shopify data and change it into actionable insights.",
+      "categories": [
+        "E-commerce"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-bigquery",
+      "name": "Advertising Platforms to BigQuery",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": [
+        "Marketing"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-snowflake",
+      "name": "Advertising Platforms to Snowflake",
+      "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": [
+        "Marketing"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adsplatform-to-keboolasnowflake",
+      "name": "Advertising Platforms to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "categories": [
+        "Marketing"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keboola-metadata-to-datahub",
+      "name": "Keboola's Project Metadata to DataHub",
+      "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "categories": [
+        "Data Governance"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "kds-team.ex-kbc-project-metadata-v2",
+            "kds-team.app-datahub"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snowflake-virtual-hands-on-lab",
+      "name": "Snowflake Virtual Hands on Lab",
+      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "categories": [
+        "Tutorials"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics-to-bigquery",
+      "name": "Google Analytics to BigQuery",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": [
+        "Analytics"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics-to-snowflake",
+      "name": "Google Analytics to Snowflake",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": [
+        "Analytics"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics-to-keboolasnowflake",
+      "name": "Google Analytics to Keboola DWH",
+      "description": "Don't you have own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Google Analytics data and transform it into more powerful customer insights and smarter marketing strategies.",
+      "categories": [
+        "Analytics"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics-to-googlesheet",
+      "name": "Google Analytics to Google Sheets",
+      "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": [
+        "Analytics"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-bigquery",
+      "name": "Salesforce to BigQuery",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-keboolasnowflake",
+      "name": "Salesforce to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-snowflake",
+      "name": "Salesforce to Snowflake",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salesforce-to-googlesheet",
+      "name": "Salesforce to Google Sheets",
+      "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-snowflake",
+      "name": "Pipedrive to Snowflake",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-googlesheet",
+      "name": "Pipedrive to Google Sheets",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-bigquery",
+      "name": "PipeDrive to BigQuery",
+      "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pipedrive-to-keboolasnowflake",
+      "name": "Pipedrive to Keboola DWH",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "categories": [
+        "CRM"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keboola-dbt-tutorial",
+      "name": "Keboola dbt Tutorial",
+      "description": "Run your first data pipeline with dbt! Extract seed data, run dbt to model data and export it to the DB destination of your choice!",
+      "categories": [
+        "Tutorials"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-http",
+            "keboola.dbt-transformation",
+            "keboola.wr-db-mssql-v2",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-to-bigquery",
+      "name": "GitHub to BigQuery",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": [
+        "Git"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-to-googlesheet",
+      "name": "GitHub to Google Sheets",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": [
+        "Git"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-to-snowflake",
+      "name": "GitHub to Snowflake",
+      "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": [
+        "Git"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-to-keboolasnowflake",
+      "name": "GitHub to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "categories": [
+        "Git"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-quality",
+      "name": "Hands on Data Quality",
+      "description": "Take a look at data quality testing and monitoring via two examples.",
+      "categories": [
+        "Tutorials"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asana-to-keboolasnowflake",
+      "name": "Asana to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": [
+        "Project Management"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asana-to-bigquery",
+      "name": "Asana to BigQuery",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": [
+        "Project Management"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asana-to-googlesheet",
+      "name": "Asana to Google Sheets",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": [
+        "Project Management"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asana-to-snowflake",
+      "name": "Asana to Snowflake",
+      "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "categories": [
+        "Project Management"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-snowflake",
+      "name": "Typeform to Snowflake",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": [
+        "Surveys"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-bigquery",
+      "name": "Typeform to BigQuery",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": [
+        "Surveys"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-googlesheet",
+      "name": "Typeform to Google Sheets",
+      "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": [
+        "Surveys"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-sheets"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typeform-to-keboolasnowflake",
+      "name": "Typeform to Keboola Snowflake",
+      "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "categories": [
+        "Surveys"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keboola-mgmt-jira",
+      "name": "JIRA Project Management",
+      "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
+      "deprecated": true,
+      "categories": [
+        "Project Management"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-jira",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-db-pgsql"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "social-media-engagement-template",
+      "name": "Social Media Engagement",
+      "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
+      "categories": [
+        "Marketing"
+      ],
+      "deprecated": true,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-facebook",
+            "keboola.ex-instagram",
+            "keboola.ex-twitter",
+            "keboola.ex-youtube",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-sheets",
+            "keboola.wr-db-snowflake",
+            "keboola.wr-snowflake-blob-storage",
+            "kds-team.ex-linkedin-pages"
+          ]
         }
       ]
     }
