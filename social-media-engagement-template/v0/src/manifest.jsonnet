@@ -105,7 +105,8 @@
       componentId: "keboola.wr-db-mysql",
       id: ConfigId("data-destination-out-social-media-engagement-mysql"),
       path: "writer/keboola.wr-db-mysql/data-destination-out-social-media-engagement-mysql",
-      rows: [
+      rows: std.filter(function(v) v != null,[
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
         {
           id: ConfigRowId("pages-engagement"),
           path: "rows/pages-engagement",
@@ -114,14 +115,15 @@
           id: ConfigRowId("posts-engagement"),
           path: "rows/posts-engagement",
         },
-      ],
+      ]),
     },
     if InputIsAvailable("wr-db-pgsql-db-host") then
     {
       componentId: "keboola.wr-db-pgsql",
       id: ConfigId("data-destination-out-social-media-engagement-postgresql"),
       path: "writer/keboola.wr-db-pgsql/data-destination-out-social-media-engagement-postgresql",
-      rows: [
+      rows:std.filter(function(v) v != null,[
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
         {
           id: ConfigRowId("pages-engagement-001"),
           path: "rows/pages-engagement-001",
@@ -130,7 +132,7 @@
           id: ConfigRowId("posts-engagement-001"),
           path: "rows/posts-engagement-001",
         },
-      ],
+      ]),
     },
     if InputIsAvailable("google-sheet-id") then
     {
@@ -144,7 +146,8 @@
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-social-media-engagement-snowflake"),
       path: "writer/keboola.wr-snowflake-blob-storage/data-destination-out-social-media-engagement-snowflake",
-      rows: [
+      rows: std.filter(function(v) v != null,[
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
         {
           id: ConfigRowId("pages-engagement-002"),
           path: "rows/pages-engagement-002",
@@ -153,7 +156,24 @@
           id: ConfigRowId("posts-engagement-002"),
           path: "rows/posts-engagement-002",
         },
-      ],
+      ]),
+    },
+    if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
+    {
+      componentId: "keboola.wr-google-bigquery-v2",
+      id: ConfigId("data-destination-out-social-media-engagement-bigquery"),
+      path: "writer/keboola.wr-google-bigquery-v2/out-social-media-engagement-bigquery-writer",
+      rows: std.filter(function(v) v != null,[
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
+        {
+          id: ConfigRowId("pages-engagement"),
+          path: "rows/pages-engagement",
+        },
+        {
+          id: ConfigRowId("posts-engagement"),
+          path: "rows/posts-engagement",
+        },
+      ]),
     },
   ]),
 }

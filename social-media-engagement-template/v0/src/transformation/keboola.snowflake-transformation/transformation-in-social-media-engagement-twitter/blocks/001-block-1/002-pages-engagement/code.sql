@@ -1,13 +1,20 @@
-CREATE
-OR REPLACE TABLE "pages_engagement" AS
-select
+CREATE TABLE "pages_engagement"
+(
+    "source" VARCHAR(255) NOT NULL,
+    "date" DATE NOT NULL,
+    "page_followers" INTEGER,
+    "page_views_total" INTEGER,
+    "page_posts_impressions" INTEGER
+);
+
+INSERT INTO "pages_engagement"
+SELECT
     'twitter' as "source",
     CURRENT_DATE() as "date",
     count(DISTINCT "id") as "page_followers",
-    
-    null as "page_posts_impressions",
-    null as "page_views_total"
-from
+    0 as "page_views_total",
+    0 as "page_posts_impressions"
+FROM
     "users"
-where
-    "keboola_source" = 'followersList'
+WHERE
+    "keboola_source" = 'followersList';

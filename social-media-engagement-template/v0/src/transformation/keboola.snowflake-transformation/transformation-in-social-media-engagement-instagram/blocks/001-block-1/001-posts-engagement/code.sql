@@ -1,3 +1,17 @@
+CREATE TABLE "posts_engagement"
+(
+    "uid" VARCHAR(1024),
+    "post_id" VARCHAR(1024),
+    "source" VARCHAR(255),
+    "date" DATE,
+    "post_text" VARCHAR(1024),
+    "shares" INTEGER,
+    "views" INTEGER,
+    "likes" INTEGER,
+    "comments" INTEGER,
+    "all_reactions" INTEGER
+);
+
 CREATE
 OR REPLACE TABLE "posts_engagement" AS WITH insights_pivoted AS (
     SELECT
@@ -28,11 +42,11 @@ SELECT
     'instagram' AS "source",
     try_to_date(replace("timestamp", '+0000')) AS "date",
     "caption" AS "post_text",
-    NULL AS "shares",
+    0 AS "shares",
     ZEROIFNULL("comments_count") AS "comments",
     ZEROIFNULL("like_count") AS "likes",
-    NULL AS "views",
+    0 AS "views",
     "comments" + "likes" AS "all_reactions"
 FROM
     "media"
-    LEFT JOIN insights_pivoted ON "media"."id" = insights_pivoted."parent_id"
+    LEFT JOIN insights_pivoted ON "media"."id" = insights_pivoted."parent_id";

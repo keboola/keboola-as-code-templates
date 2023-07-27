@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-social-media-engagement" + InstanceIdShort() + ".posts_engagement",
+    tableId: "out.c-social-media-engagement-" + InstanceIdShort() + ".posts_engagement",
     dbName: "posts_engagement",
     incremental: false,
     primaryKey: [
@@ -93,8 +93,8 @@
     input: {
       tables: [
         {
-          source: "out.c-social-media-engagement" + InstanceIdShort() + ".posts_engagement",
-          destination: "out.c-social-media-engagement" + InstanceIdShort() + ".posts_engagement.csv",
+          source: "out.c-social-media-engagement-" + InstanceIdShort() + ".posts_engagement",
+          destination: "out.c-social-media-engagement-" + InstanceIdShort() + ".posts_engagement.csv",
           columns: [
             "uid",
             "post_id",

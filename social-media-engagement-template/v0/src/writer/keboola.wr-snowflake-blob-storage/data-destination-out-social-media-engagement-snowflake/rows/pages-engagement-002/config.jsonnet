@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-social-media-engagement" + InstanceIdShort() + ".pages_engagement",
+    tableId: "out.c-social-media-engagement-" + InstanceIdShort() + ".pages_engagement",
     dbName: "pages_engagement",
     incremental: true,
     primaryKey: [
@@ -54,8 +54,8 @@
     input: {
       tables: [
         {
-          source: "out.c-social-media-engagement" + InstanceIdShort() + ".pages_engagement",
-          destination: "out.c-social-media-engagement" + InstanceIdShort() + ".pages_engagement.csv",
+          source: "out.c-social-media-engagement-" + InstanceIdShort() + ".pages_engagement",
+          destination: "out.c-social-media-engagement-" + InstanceIdShort() + ".pages_engagement.csv",
           columns: [
             "source",
             "date",
