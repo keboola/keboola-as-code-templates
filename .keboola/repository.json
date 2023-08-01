@@ -661,50 +661,6 @@
       ]
     },
     {
-      "id": "keboola-metadata-to-datahub",
-      "name": "Keboola's Project Metadata to DataHub",
-      "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
-      "categories": [
-        "Data Governance"
-      ],
-      "deprecated": true,
-      "versions": [
-        {
-          "version": "1.0.1",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-telemetry-data",
-            "kds-team.ex-kbc-project-metadata-v2",
-            "kds-team.app-datahub"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "snowflake-virtual-hands-on-lab",
-      "name": "Snowflake Virtual Hands on Lab",
-      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
-      "categories": [
-        "Tutorials"
-      ],
-      "deprecated": true,
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-shopify",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
-          ]
-        }
-      ]
-    },
-    {
       "id": "googleanalytics-to-bigquery",
       "name": "Google Analytics to BigQuery",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
@@ -949,31 +905,6 @@
       ]
     },
     {
-      "id": "keboola-dbt-tutorial",
-      "name": "Keboola dbt Tutorial",
-      "description": "Run your first data pipeline with dbt! Extract seed data, run dbt to model data and export it to the DB destination of your choice!",
-      "categories": [
-        "Tutorials"
-      ],
-      "deprecated": true,
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-http",
-            "keboola.dbt-transformation",
-            "keboola.wr-db-mssql-v2",
-            "keboola.wr-db-mysql",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
-          ]
-        }
-      ]
-    },
-    {
       "id": "github-to-bigquery",
       "name": "GitHub to BigQuery",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
@@ -1049,25 +980,6 @@
           "components": [
             "keboola.ex-github",
             "keboola.wr-snowflake-blob-storage"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "data-quality",
-      "name": "Hands on Data Quality",
-      "description": "Take a look at data quality testing and monitoring via two examples.",
-      "categories": [
-        "Tutorials"
-      ],
-      "deprecated": true,
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.snowflake-transformation"
           ]
         }
       ]
@@ -1228,58 +1140,6 @@
           "components": [
             "fisa.ex-typeform",
             "keboola.wr-snowflake-blob-storage"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "keboola-mgmt-jira",
-      "name": "JIRA Project Management",
-      "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
-      "deprecated": true,
-      "categories": [
-        "Project Management"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-jira",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-snowflake",
-            "keboola.wr-db-pgsql"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "social-media-engagement-template",
-      "name": "Social Media Engagement",
-      "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
-      "categories": [
-        "Marketing"
-      ],
-      "deprecated": true,
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-facebook",
-            "keboola.ex-instagram",
-            "keboola.ex-twitter",
-            "keboola.ex-youtube",
-            "keboola.wr-db-mysql",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
-            "keboola.wr-snowflake-blob-storage",
-            "kds-team.ex-linkedin-pages"
           ]
         }
       ]
