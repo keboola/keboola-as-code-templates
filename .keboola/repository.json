@@ -6,6 +6,50 @@
   },
   "templates": [
     {
+      "id": "api-demo",
+      "name": "API Demo (UI dev)",
+      "description": "Template from the examples of https://templates.keboola.com/v1/documentation/",
+      "path": "_demo",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["common:settings"],
+          "path": "v0"
+        },
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": ["common:settings"],
+          "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "With Google Drive Writer OAuth",
+          "stable": false,
+          "components": ["common:settings"],
+          "path": "v2"
+        }
+      ]
+    },
+    {
+      "id": "api-demo-minimal",
+      "name": "API Demo Minimal (UI dev)",
+      "description": "The template contains only the ex-generic-v2 configuration.",
+      "path": "_demo-minimal",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": ["ex-generic-v2"],
+          "path": "v1"
+        }
+      ]
+    },
+    {
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the TML block.",
