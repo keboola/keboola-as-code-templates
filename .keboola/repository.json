@@ -1187,6 +1187,30 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mailchimp",
+      "name": "Emailing Mailchimp",
+      "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet.",
+      "categories": [
+        "Mailing"
+      ],
+      "path": "keboola-mailchimp",
+      "deprecated": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }

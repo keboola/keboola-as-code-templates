@@ -65,6 +65,20 @@
       path: "transformation/keboola.snowflake-transformation/transformation-table-level-metadata-in-datahub-without-ex-org",
       rows: [],
     },
+    if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-org"),
+      path: "transformation/keboola.snowflake-transformation/transformation-flow-lineage-in-datahub-without-ex-org",
+      rows: [],
+    },
+    if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-project"),
+      path: "transformation/keboola.snowflake-transformation/transformation-flow-lineage-in-datahub-without-ex-project",
+      rows: [],
+    },
     {
       componentId: "kds-team.app-datahub",
       id: ConfigId("data-destination-out-datahub"),
