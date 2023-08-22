@@ -1228,7 +1228,7 @@
           "stable": false,
           "components": [
             "keboola.data-apps",
-            "keboola.ex-sample-data",
+            "kds-team.ex-shopify",
             "keboola.snowflake-transformation",
             "keboola.wr-snowflake-blob-storage"
           ],
