@@ -1213,8 +1213,8 @@
       ]
     },
     {
-      "id": "Snowpark & Streamlit",
-      "name": "snowpark-streamlit",
+      "id": "snowpark-streamlit",
+      "name": "Snowpark & Streamlit",
       "description": "Full workflow to ...",
       "path": "snowpark-streamlit",
       "deprecated": false,
