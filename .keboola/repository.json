@@ -1217,9 +1217,13 @@
       "name": "snowpark-streamlit",
       "description": "Full workflow to ...",
       "path": "snowpark-streamlit",
+      "deprecated": false,
+      "categories": [
+        "Tutorials"
+      ],
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
