@@ -1,6 +1,32 @@
 {
   stepsGroups: [
     {
+      description: "Source component",
+      required: "all",
+      steps: [
+        {
+          icon: "component:kds-team.ex-shopify",
+          name: "Shopify Demo Data",
+          description: "Imports demo data from Shopify",
+          dialogName: "Shopify Demo Data", 
+          dialogDescription: "This source component imports demo Shopify data (orders, products, inventory, etc.).",
+          inputs: [],
+        }
+      ]
+    },
+    {   
+      description: "Snowflake Transformations",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.snowflake-transformation",
+          name: "Snowflake SQL",
+          description: "Transformations",
+          inputs: [],
+        },
+      ]
+    },
+    {
       description: "Provide credentials for the destination component.",
       required: "all",
       steps: [
@@ -76,6 +102,18 @@
           ]
         },
       ]
+    },
+    {   
+      description: "Data App",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.data-apps",
+          name: "Data App",
+          description: "Streamlit Data App",
+          inputs: [],
+        },
+      ]
     }
-  ],
+  ]
 }
