@@ -1211,6 +1211,26 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "Snowpark & Streamlit",
+      "name": "snowpark-streamlit",
+      "description": "Full workflow to ...",
+      "path": "snowpark-streamlit",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "keboola.ex-sample-data",
+            "keboola.snowflake-transformation",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
