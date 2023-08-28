@@ -99,6 +99,14 @@
           where_operator: "eq",
           where_values: [],
         },
+        {
+          columns: [],          
+          destination: "bdm_orders",
+          source: "out.c-ecommerce-wr-JPblfJtg.bdm_orders",          
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],          
+        },
       ],
     },
     output: {
@@ -160,6 +168,10 @@
         {
           destination: "out.c-ecommerce-wr-JPblfJtg.out_shop",
           source: "out_shop",
+        },
+        {
+          destination: "out.c-ecommerce-wr-JPblfJtg.bdm_rfm",
+          source: "RFM_FINAL"
         },
       ],
     },
