@@ -20,8 +20,8 @@
     },
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("flow-snowflake-virtual-hands-on-lab-snowpark-streamlit"),
-      path: "other/keboola.orchestrator/flow-snowflake-virtual-hands-on-lab-snowpark-streamlit",
+      id: ConfigId("flow-snowflake-virtual-hands-on-lab-streamlit"),
+      path: "other/keboola.orchestrator/flow-snowflake-virtual-hands-on-lab-streamlit",
       metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"keboola-ecommerce-shopify-orchestration"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
@@ -32,8 +32,8 @@
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("data-preparation-cleaning"),
-      path: "transformation/keboola.snowflake-transformation/data-preparation-cleaning",
+      id: ConfigId("data-cleaning-rfm-analysis"),
+      path: "transformation/keboola.snowflake-transformation/data-cleaning-rfm-analysis",
       metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation2-data-preparation"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",

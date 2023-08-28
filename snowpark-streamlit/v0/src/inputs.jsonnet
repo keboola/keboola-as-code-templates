@@ -20,8 +20,8 @@
       steps: [
         {
           icon: "component:keboola.snowflake-transformation",
-          name: "Snowflake SQL",
-          description: "Transformations",
+          name: "Snowflake SQL Transformation",
+          description: "Clean Data and calculate RFM",
           inputs: [],
         },
       ]
@@ -32,8 +32,8 @@
       steps: [
         {
           icon: "component:"+SnowflakeWriterComponentId(),
-          name: "Snowflake",
-          description: "Load data into Snowflake",
+          name: "Snowflake Destination",
+          description: "Save data into Snowflake",
           dialogName: "Snowflake Destination",
           dialogDescription: "Fill your database credentials.",
           inputs: [
@@ -104,13 +104,13 @@
       ]
     },
     {   
-      description: "Data App",
+      description: "Interactive Data App",
       required: "all",
       steps: [
         {
           icon: "component:keboola.data-apps",
-          name: "Data App",
-          description: "Streamlit Data App",
+          name: "Interactive Data App",
+          description: "Web App visualizing the results of RFM Analysis",
           inputs: [],
         },
       ]
