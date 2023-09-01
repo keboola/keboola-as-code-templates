@@ -2,8 +2,8 @@
   configurations: [
     {
       componentId: "keboola.data-apps",
-      id: ConfigId("my-data-app"),
-      path: "app/keboola.data-apps/my-data-app",
+      id: ConfigId("interactive-data-app"),
+      path: "app/keboola.data-apps/interactive-data-app",
       rows: [],
     },
     {
@@ -14,32 +14,46 @@
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-extractor"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
-        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab",
+        "KBC.KAC.templates.templateId": "[ECOMMERCE-SHOPIFY]",
       },
       rows: [],
     },
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("flow-snowflake-virtual-hands-on-lab-snowpark-streamlit"),
-      path: "other/keboola.orchestrator/flow-snowflake-virtual-hands-on-lab-snowpark-streamlit",
+      id: ConfigId("flow-snowflake-virtual-hands-on-lab-streamlit"),
+      path: "other/keboola.orchestrator/flow-snowflake-virtual-hands-on-lab-streamlit",
       metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"keboola-ecommerce-shopify-orchestration"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
-        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab",
+        "KBC.KAC.templates.templateId": "[ECOMMERCE-SHOPIFY]",
       },
       rows: [],
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("data-preparation-cleaning"),
+      id: ConfigId("data-preparation"),
       path: "transformation/keboola.snowflake-transformation/data-preparation-cleaning",
       metadata: {
-        "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation2-data-preparation"}',
+        "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation2-data-preparation-cleaning"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
-        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab",
+        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab-streamlit",
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]",
+      },
+      rows: [],
+    },
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("RFM-analysis"),
+      path: "transformation/keboola.snowflake-transformation/RFM-analysis",
+      
+      metadata: { 
+        "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation3-RFM-analysis"}',
+        "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
+        "KBC.KAC.templates.repository": "keboola-dev",
+        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab-streamlit",
+        "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"
       },
       rows: [],
     },
@@ -51,7 +65,7 @@
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation1-prepare-input-tables"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
-        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab",
+        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab-streamlit",
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]",
       },
       rows: [],
@@ -66,7 +80,7 @@
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
         "KBC.KAC.templates.rowsIds": '[{"idInProject":"49036255","idInTemplate":"bdm-analyze-clv-by-order-count-001"},{"idInProject":"49036260","idInTemplate":"bdm-analyze-clv-by-time-from-previous-order-001"},{"idInProject":"49036267","idInTemplate":"bdm-billing-type-001"},{"idInProject":"49036268","idInTemplate":"bdm-customers-001"},{"idInProject":"49036282","idInTemplate":"bdm-marketing-campaign-costs"},{"idInProject":"49036283","idInTemplate":"bdm-marketing-campaign-costs-monthly"},{"idInProject":"49036269","idInTemplate":"bdm-order-lines-001"},{"idInProject":"49036270","idInTemplate":"bdm-orders-001"},{"idInProject":"49036272","idInTemplate":"bdm-product-margin-over-time-001"},{"idInProject":"49036273","idInTemplate":"bdm-products-001"},{"idInProject":"49036276","idInTemplate":"bdm-rfm-001"},{"idInProject":"49036280","idInTemplate":"bdm-shipping-type-001"},{"idInProject":"' + ConfigRowId("out-shop") + '","idInTemplate":"out-shop-001"}]',
-        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab",
+        "KBC.KAC.templates.templateId": "snowflake-virtual-hands-on-lab-streamlit",
       },
       rows: [
         {
@@ -84,14 +98,6 @@
         {
           id: ConfigRowId("bdm-customers"),
           path: "rows/bdm-customers",
-        },
-        {
-          id: ConfigRowId("bdm-marketing-campaign-costs"),
-          path: "rows/bdm-marketing-campaign-costs",
-        },
-        {
-          id: ConfigRowId("bdm-marketing-campaign-costs-monthly"),
-          path: "rows/bdm-marketing-campaign-costs-monthly",
         },
         {
           id: ConfigRowId("bdm-order-lines"),
