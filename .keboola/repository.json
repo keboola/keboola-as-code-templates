@@ -1143,6 +1143,54 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mailchimp",
+      "name": "Emailing Mailchimp",
+      "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet.",
+      "categories": [
+        "Mailing"
+      ],
+      "path": "keboola-mailchimp",
+      "deprecated": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "snowpark-streamlit",
+      "name": "Snowpark & Streamlit",
+      "description": "Full workflow to ...",
+      "path": "snowpark-streamlit",
+      "deprecated": false,
+      "categories": [
+        "Tutorials"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "kds-team.ex-shopify",
+            "keboola.snowflake-transformation",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
