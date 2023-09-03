@@ -20,8 +20,8 @@
     },
     {
       componentId: "keboola.orchestrator",
-      id: ConfigId("flow-snowflake-virtual-hands-on-lab-streamlit"),
-      path: "other/keboola.orchestrator/flow-snowflake-virtual-hands-on-lab-streamlit",
+      id: ConfigId("RFM-shopify-streamlit"),
+      path: "other/keboola.orchestrator/RFM-shopify-streamlit",
       metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"keboola-ecommerce-shopify-orchestration"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
