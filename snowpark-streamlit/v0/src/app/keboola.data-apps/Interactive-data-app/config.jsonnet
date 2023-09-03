@@ -10,8 +10,8 @@
         "user": "",
         "password": "",
         "account": "",
-        "warehouse": "",
-        "db_name": "",
+        "warehouse": "PC_KEBOOLA_WH",
+        "db_name": "PC_KEBOOLA_DB",
         "schema_name": "",
         "keboola_key": ""
       }
