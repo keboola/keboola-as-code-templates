@@ -1,4 +1,4 @@
 {
-  name: "My Data App",
+  name: "RFM Analysis",
   isDisabled: false,
 }
