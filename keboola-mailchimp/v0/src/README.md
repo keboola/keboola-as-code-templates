@@ -1,39 +1,11 @@
-# KEBOOLA-MAILCHIMP
+The process is simple. We will guide you through it, and, when needed, ask you to provide your credentials and authorize the destination component.
 
-By using this end-to-end flow you can extract data from Mailchimp and transform it into visualizations in your BI tool or anywhere else you prefer.
+The flow, in a nutshell:
 
-## Steps to take:
-1. Authorize Mailchimp data source
-2. Optionaly select and authorize data destinations
-3. Run the flow
+- First, the MailChimp source component will collect data from your account: lists of campaigns, members and lists. 
 
-## Included components' configurations:
+- Then we prepare five tables (campaign, campaign-event, customer, list, list-member) that can be used to visualize results. 
 
-DS1 -> DS2 -> TR -> DD -> FLOW
+- The data is then written into a database of your choice.
 
-
-### DS: Data Source1 [IN-MAILCHIMP]
-
-This data source extracts data from mailing lists sent by the Mailchimp service. It downloads configured reports for all specified accounts, importing data about campaigns.
-
-### DS: Data Source2 [IN-MAILCHIMP]
-
-This data source extracts data from mailing lists sent by the Mailchimp service. It downloads configured reports for all specified accounts, importing data about lists and members.
-
-### TR: Transformation [IN-MAILCHIMP] 
-
-Within this transformation are prepared five tables (campaign, campaign-event, customer, list, list-member).
-
-### DD: Data Destination [OUT-MAILCHIMP-GSHEET]  OR [OUT-MAILCHIMP-SNOWFLAKE] OR [OUT-MAILCHIMP-BIGQUERY]
-
-The data destination loads data into a Google sheet or a Snowflake database or a BigQuery database.
-
-### FLOW: Flow [KEBOOLA-MAILCHIMP] 
-
-The Flow gets the data from Mailchimp Data Source, transforms the data and optionally writes the data into selected data destinations.
-
-## Business Data Model
-
-
-
-
+- Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The survey source component, all data manipulations, and the destination component, will be processed.
