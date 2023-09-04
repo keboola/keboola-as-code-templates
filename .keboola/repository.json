@@ -128,8 +128,8 @@
     },
     {
       "id": "snowflake-virtual-hands-on-lab",
-      "name": "Snowflake Virtual Hands on Lab",
-      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "name": "Shopify DEMO Data Analysis",
+      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness.",
       "categories": [
         "Tutorials"
       ],
@@ -1141,6 +1141,54 @@
             "fisa.ex-typeform",
             "keboola.wr-snowflake-blob-storage"
           ]
+        }
+      ]
+    },
+    {
+      "id": "mailchimp",
+      "name": "Emailing Mailchimp",
+      "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet.",
+      "categories": [
+        "Mailing"
+      ],
+      "path": "keboola-mailchimp",
+      "deprecated": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "snowpark-streamlit",
+      "name": "Shopify RFM Analysis with Streamlit",
+      "description": "Use Shopify demo data to perform RFM Analysis and visualize & explore results in interactive Data App",
+      "path": "snowpark-streamlit",
+      "deprecated": false,
+      "categories": [
+        "Tutorials"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "kds-team.ex-shopify",
+            "keboola.snowflake-transformation",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
         }
       ]
     }

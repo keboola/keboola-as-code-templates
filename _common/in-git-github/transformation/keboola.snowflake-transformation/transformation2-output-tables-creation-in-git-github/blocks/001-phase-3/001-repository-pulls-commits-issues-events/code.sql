@@ -279,7 +279,7 @@ INSERT INTO "out_event"
         "created_on"                AS "date",
         "url"
     FROM "out_pull_request"
-    WHERE "created_on" <> ''
+    WHERE "created_on" IS NOT NULL
     UNION ALL
     SELECT
         "a"."pull_request_activity_id" || '_pra' AS "event_id",
@@ -291,7 +291,7 @@ INSERT INTO "out_event"
     FROM "out_pull_request_activity" "a"
              LEFT JOIN "out_pull_request" "r"
                        ON "a"."pull_request_id" = "r"."pull_request_id"
-    WHERE "a"."date" <> ''
+    WHERE "a"."date" IS NOT NULL
     UNION ALL
     SELECT
         "repository_commit_id" || '_c' AS "event_id",
@@ -301,7 +301,7 @@ INSERT INTO "out_event"
         "date"                         AS "date",
         "url"
     FROM "out_repository_commit"
-    WHERE "date" <> ''
+    WHERE "date" IS NOT NULL
     UNION ALL
     SELECT
         "issue_id" || '_icr' AS "event_id",
@@ -311,7 +311,7 @@ INSERT INTO "out_event"
         "created_on"         AS "date",
         "url"
     FROM "out_issue"
-    WHERE "created_on" <> ''
+    WHERE "created_on" IS NOT NULL
     UNION ALL
     SELECT
         "c"."issue_comment_id" || '_ico' AS "event_id",
@@ -323,4 +323,4 @@ INSERT INTO "out_event"
     FROM "out_issue_comment" "c"
              LEFT JOIN "out_issue" "i"
                        ON "c"."issue_id" = "i"."issue_id"
-    WHERE "c"."created_on" <> '';
+    WHERE "c"."created_on" IS NOT NULL;
