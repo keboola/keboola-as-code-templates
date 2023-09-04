@@ -4,6 +4,6 @@
   continueOnFailure: false,
   task: {
     mode: "run",
-    configPath: "app/keboola.data-apps/interactive-data-app",
+    configPath: "app/keboola.data-apps/Interactive-data-app",
   },
 }
