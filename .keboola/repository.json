@@ -1232,7 +1232,7 @@
     },
     {
       "id": "snowpark-streamlit",
-      "name": "Snowpark & Streamlit",
+      "name": "Shopify RFM Analysis with Streamlit",
       "description": "Use Shopify demo data to perform RFM Analysis and visualize & explore results in interactive Data App",
       "path": "snowpark-streamlit",
       "deprecated": false,
