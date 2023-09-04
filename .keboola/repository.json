@@ -128,8 +128,8 @@
     },
     {
       "id": "snowflake-virtual-hands-on-lab",
-      "name": "Snowflake Virtual Hands on Lab",
-      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness in Snowflake Lab.",
+      "name": "Shopify DEMO Data Analysis",
+      "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness.",
       "categories": [
         "Tutorials"
       ],
