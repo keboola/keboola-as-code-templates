@@ -3,7 +3,7 @@
     {
       componentId: "keboola.data-apps",
       id: ConfigId("interactive-data-app"),
-      path: "app/keboola.data-apps/interactive-data-app",
+      path: "app/keboola.data-apps/Interactive-data-app",
       rows: [],
     },
     {
