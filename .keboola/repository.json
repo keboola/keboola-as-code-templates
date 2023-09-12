@@ -469,27 +469,11 @@
       "name": "Advertising Platforms",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "categories": [
-        "Marketing"
+        "Marketing","Data Apps"
       ],
+      "deprecated": false,
       "path": "keboola-marketingchannels",
       "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-bing-ads",
-            "leochan.ex-linkedin",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-google-analytics-v4",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-pgsql"
-          ],
-          "path": "v0"
-        },
         {
           "version": "1.0.1",
           "description": "",
@@ -1237,7 +1221,7 @@
       "path": "snowpark-streamlit",
       "deprecated": false,
       "categories": [
-        "Tutorials"
+        "Tutorials","Data Apps"
       ],
       "versions": [
         {
@@ -1317,8 +1301,8 @@
           "components": [
             "kds-team.ex-shopify",
             "keboola.snowflake-transformation",
-            "keboola.ex-slack",
-            "keboola.data-apps"
+            "keboola.data-apps",
+            "kds-team.wr-generic"
           ],
           "path": "v0"
         }
