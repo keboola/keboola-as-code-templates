@@ -12,7 +12,7 @@
         "account": "",
         "warehouse": "PC_KEBOOLA_WH",
         "db_name": "PC_KEBOOLA_DB",
-        "schema_name": "",
+        "schema_name": "PUBLIC",
         "keboola_key": ""
       }
     }
