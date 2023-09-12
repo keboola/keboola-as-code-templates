@@ -1,4 +1,4 @@
 {
-  name: "Data App [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "AI Created Content Checker [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
   isDisabled: false,
 }
