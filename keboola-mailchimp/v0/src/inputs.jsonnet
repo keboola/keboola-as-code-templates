@@ -2,6 +2,7 @@ local mailchimp = import "/<common>/in-mailchimp/inputs.jsonnet";
 local snowflake = import "/<common>/out-mailchimp-snowflake/inputs.jsonnet";
 local bigquery = import "/<common>/out-mailchimp-bigquery/inputs.jsonnet";
 local googlesheet = import "/<common>/out-mailchimp-googlesheet/inputs.jsonnet";
+local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -57,6 +58,14 @@ local googlesheet = import "/<common>/out-mailchimp-googlesheet/inputs.jsonnet";
           dialogName: "Google Sheet Destination", 
           dialogDescription: "Make a copy of [this sheet](https://docs.google.com/spreadsheets/d/14SnNVWo62MfDZPbnmuJQrg2NzKZzIzwgEg5ubRYyNLo) into your Drive. Copy text between 'spreadsheets/d/' and '/edit', paste it below",
           inputs: googlesheet,  
+        },
+        {
+          icon: "component:keboola.wr-db-pgsql",
+          name: "PostgreSQL Destination",
+          description: "Load to data into PostgreSQL",
+          dialogName: "PostgreSQL Destination", 
+          dialogDescription: "Data load to PostgreSQL DB.",
+          inputs: postgresql
         },
       ],
     },
