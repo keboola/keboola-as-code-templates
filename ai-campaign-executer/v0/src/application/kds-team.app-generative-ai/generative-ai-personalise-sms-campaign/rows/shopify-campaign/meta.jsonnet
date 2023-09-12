@@ -1,4 +1,4 @@
 {
-  name: "shopify_campaign",
+  name: "Shopify Campaign",
   isDisabled: false,
 }

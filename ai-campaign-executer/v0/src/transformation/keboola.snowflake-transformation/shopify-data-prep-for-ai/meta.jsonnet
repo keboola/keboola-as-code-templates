@@ -1,4 +1,4 @@
 {
-  name: "Transformation [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "[AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
   isDisabled: false,
 }

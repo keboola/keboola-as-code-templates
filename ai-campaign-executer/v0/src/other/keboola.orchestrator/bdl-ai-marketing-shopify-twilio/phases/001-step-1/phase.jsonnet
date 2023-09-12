@@ -1,4 +1,4 @@
 {
-  name: "Data Source",
+  name: "Shopify Data Source",
   dependsOn: [],
 }

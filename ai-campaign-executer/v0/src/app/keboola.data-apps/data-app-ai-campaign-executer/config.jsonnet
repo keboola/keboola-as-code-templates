@@ -2,9 +2,9 @@
   parameters: {
     dataApp: {
       git: {
-        repository: "https:....",
+        repository: "https:TBD",
         branch: "main",
-        entrypoint: "......py",
+        entrypoint: "TBD.py",
       },
       secrets: {
         KEBOOLA_STACK: Input("kbc_stack"),
