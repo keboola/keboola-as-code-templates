@@ -1253,6 +1253,76 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "interactive-keboola-sheets",
+      "name": "Interactive Keboola Sheets",
+      "description": "Simplify data management. No more manual manipulation, just seamless editing and collaboration.",
+      "path": "interactive-keboola-sheets",
+      "deprecated": false,
+      "categories": [
+        "Data Apps"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "ai-campaign-executer",
+      "name": "AI Campaign Executer",
+      "description": "Elevate marketing with AI: Shopify data for personalized SMS campaigns via Twilio.",
+      "path": "ai-campaign-executer",
+      "deprecated": false,
+      "categories": [
+        "Data Apps","Marketing"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "kds-team.app-generative-ai",
+            "keboola.snowflake-transformation",
+            "kds-team.wr-twilio",
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "interactive-kpi-report",
+      "name": "Interactive KPI Report",
+      "description": "Real-time KPI insights, alerts & action for data-driven decisions.",
+      "path": "interactive-kpi-report",
+      "deprecated": false,
+      "categories": [
+        "Data Apps", "E-commerce"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.snowflake-transformation",
+            "keboola.ex-slack",
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
