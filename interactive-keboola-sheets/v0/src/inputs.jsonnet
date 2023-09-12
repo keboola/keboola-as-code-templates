@@ -14,7 +14,7 @@
             {
               id: "kbc_bucket_token",
               name: "Keboola Token",
-              description: "Insert your Keboola Token.",
+              description: "Insert a storage or your master token.",
               type: "string",
               kind: "hidden",
               rules: "required",
@@ -22,7 +22,7 @@
             {
               id: "kbc_stack",
               name: "Keboola URL",
-              description: "Insert your Keboola URL.",
+              description: "Provide the URL or location of your project.",
               type: "string",
               kind: "input",
               default: "https://connection.north-europe.azure.keboola.com"

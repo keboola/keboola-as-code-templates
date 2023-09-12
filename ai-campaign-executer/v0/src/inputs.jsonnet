@@ -93,18 +93,18 @@
       ]
     },
     {
-      description: "AI application",
+      description: "AI Application",
       required: "all",
       steps: [
         {
           icon: "component:kds-team.app-generative-ai",
           name: "OpenAI application",
-          description: "OpenAI application generates personalise SMS campaigns.",
+          description: "OpenAI application generating personalise SMS campaigns.",
           inputs: [
             {
               id: "app-generative-ai-authentication-api-token",
               name: "OpenAI API Key",
-              description: "",
+              description: "Insert your token to your OpenAI account.",
               type: "string",
               kind: "hidden",
               rules: "required"
@@ -120,14 +120,14 @@
           {
           icon: "component:keboola.data-apps",
           name: "Data App",
-          description: "Deploy Data App",
-          dialogName: "Data App", 
-          dialogDescription: "",
+          description: "Configure Data App",
+          dialogName: "AI Campaign Executer", 
+          dialogDescription: "Configure Data App by filling up required secrets.",
           inputs: [
             {
               id: "kbc_storage_token",
               name: "Keboola Token",
-              description: "Insert your Keboola Token.",
+              description: "Insert a storage or your master token.",
               type: "string",
               kind: "hidden",
               rules: "required",
@@ -135,7 +135,7 @@
             {
               id: "kbc_stack",
               name: "Keboola URL",
-              description: "Insert your Keboola URL.",
+              description: "Provide the URL or location of your project.",
               type: "string",
               kind: "input",
               default: "https://connection.north-europe.azure.keboola.com"
@@ -150,13 +150,13 @@
       steps: [
         {
           icon: "component:kds-team.wr-twilio",
-          name: "Data Destination",
-          description: "Twilio",
+          name: "Twilio",
+          description: "Data Destination",
           inputs: [
             {
               id: "wr-twilio-auth-token",
               name: "Authentication Token",
-              description: "Insert your Twilio Token. Can be found in the Console.",
+              description: "Provide your Twilio Token. Can be found in the Console.",
               type: "string",
               kind: "hidden",
               rules: "required",

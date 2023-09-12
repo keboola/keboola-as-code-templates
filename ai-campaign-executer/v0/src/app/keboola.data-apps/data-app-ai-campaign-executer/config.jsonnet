@@ -8,7 +8,7 @@
       },
       secrets: {
         KEBOOLA_STACK: Input("kbc_stack"),
-        "#KEBOOLA_TOKEN": Input("kbc_storage_token"),
+        "#KEBOOLA_STORAGE_TOKEN": Input("kbc_storage_token"),
       },
     },
   },

@@ -32,6 +32,7 @@
           source: "out.c-campaign-executer-" + InstanceIdShort() + ".sms_campaign",
           destination: "sms_campaign.csv",
           where_column: "customer_id",
+          where_values: [],
           where_operator: "eq",
           columns: [],
           keep_internal_timestamp_column: false,
