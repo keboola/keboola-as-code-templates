@@ -8,7 +8,7 @@
           icon: "component:keboola.data-apps",
           name: "Data App",
           description: "Configure Data App",
-          dialogName: "Interactive Keboola Sheets", 
+          dialogName: "Keboola Sheets", 
           dialogDescription: "Configure Data App by filling up required secrets.",
           inputs: [
             {
