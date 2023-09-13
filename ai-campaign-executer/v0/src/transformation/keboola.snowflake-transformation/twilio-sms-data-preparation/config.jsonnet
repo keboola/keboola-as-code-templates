@@ -17,12 +17,12 @@
     output: {
       tables: [
         {
-          destination: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio-sms-campaign-ready",
-          source: "out-twilio-sms-campaign-ready",
+          destination: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio_sms_campaign_ready",
+          source: "out_twilio_sms_campaign_ready",
         },
         {
-          destination: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio-sms-campaign-approval-request",
-          source: "out-twilio-sms-campaign-approval-request",
+          destination: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio_sms_campaign_approval_request",
+          source: "out_twilio_sms_campaign_approval_request",
         },
       ],
     },
