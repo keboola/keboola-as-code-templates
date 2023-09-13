@@ -2,7 +2,7 @@
   parameters: {
     dataApp: {
       git: {
-        repository: "https://TBD",
+        repository: "https://github.com/keboola/interactive-kpi-reporting",
         branch: "main",
         entrypoint: "streamlit_app.py",
       },
