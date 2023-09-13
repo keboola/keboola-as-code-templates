@@ -29,6 +29,10 @@
           destination: "out.c-kpi-report-" + InstanceIdShort() + ".plan_monthly",
           source: "out_plan_monthly",
         },
+        {
+          destination: "out.c-kpi-report.test",
+          source: "test",
+        },
       ],
     },
   },

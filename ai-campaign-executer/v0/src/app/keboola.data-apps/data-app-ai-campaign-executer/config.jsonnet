@@ -15,7 +15,7 @@
     input: {
       tables: [
         {
-          source: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio_sms_campaign_approval_request",
+          source: "out.c-campaign-executer.twilio_sms_campaign_approval_request",
           destination: "twilio_sms_campaign_approval_request.csv",
           where_column: "",
           where_values: [],

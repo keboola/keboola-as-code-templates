@@ -41,7 +41,7 @@
     output: {
       tables: [
         {
-          destination: "out.c-campaign-executer-" + InstanceIdShort() + ".sms_campaign",
+          destination: "out.c-campaign-executer.sms_campaign",
           source: "out_sms_campaign",
         },
       ],

@@ -88,3 +88,7 @@ SELECT
 "metric_name",
 "plan_value"
 FROM "total_customers_monthly";
+
+
+-- dummy table creation to have bucket for data app
+Create table "test" as SELECT 1 as "value";
