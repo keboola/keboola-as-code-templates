@@ -3,7 +3,7 @@ WITH orders AS
 (
   SELECT
   "updated_at"::date AS "date"
-  ,'orders' AS "kpi_name"
+  ,'Orders' AS "kpi_name"
   ,count(*) AS "actual_value"
   ,'number' AS "type"
   FROM "order" 

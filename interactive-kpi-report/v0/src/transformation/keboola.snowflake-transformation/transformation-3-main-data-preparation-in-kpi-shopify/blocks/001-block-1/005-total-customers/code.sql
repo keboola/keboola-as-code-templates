@@ -3,7 +3,7 @@ WITH total_customers AS
 (
   SELECT 
   "updated_at"::date AS "date"
-  ,'total customers' AS "kpi_name"
+  ,'Total Customers' AS "kpi_name"
   ,count(*) AS "actual_value"
   ,'number' AS "type"
   FROM "customer" 
