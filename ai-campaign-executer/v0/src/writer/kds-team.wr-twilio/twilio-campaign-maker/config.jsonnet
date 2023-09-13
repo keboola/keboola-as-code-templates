@@ -9,10 +9,10 @@
     input: {
       tables: [
         {
-          source: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio_sms_campaign_approval_request",
+          source: "out.c-campaign-executer.twilio_sms_campaign_approval_request",
           destination: "twilio_sms_campaign_approval_request.csv",
           where_column: "approved",
-          where_values: [],
+          where_values: ["True"],
           where_operator: "eq",
           columns: [
             "phone_number",

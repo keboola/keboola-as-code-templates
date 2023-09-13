@@ -29,7 +29,7 @@
     input: {
       tables: [
         {
-          source: "out.c-campaign-executer-" + InstanceIdShort() + ".sms_campaign",
+          source: "out.c-campaign-executer.sms_campaign",
           destination: "sms_campaign.csv",
           where_column: "customer_id",
           where_values: [],
