@@ -2,13 +2,13 @@
   parameters: {
     dataApp: {
       git: {
-        repository: "https:TBD",
+        repository: "https://github.com/keboola/ai_campaign_executer",
         branch: "main",
-        entrypoint: "TBD.py",
+        entrypoint: "campaign_executor.py",
       },
       secrets: {
         KEBOOLA_STACK: Input("kbc_stack"),
-        "#KEBOOLA_STORAGE_TOKEN": Input("kbc_storage_token"),
+        "#kbc_bucket_token": Input("kbc_bucket_token"),
       },
     },
   },
@@ -16,8 +16,8 @@
     input: {
       tables: [
         {
-          source: "out.c-campaign-executer-" + InstanceIdShort() + ".sms_campaign",
-          destination: "sms_campaign.csv",
+          source: "out.c-campaign-executer-" + InstanceIdShort() + ".twilio-sms-campaign-approval-request",
+          destination: "twilio-sms-campaign-approval-request.csv",
           where_column: "",
           where_values: [],
           where_operator: "eq",
