@@ -5,8 +5,8 @@
       tables:
       [
         {
-          source: "in.c-kds-team-app-generative-ai-" + ConfigId("generative-ai-personalise-sms-campaign") + ".twilio_sms_campaing_source_data",
-          destination: "twilio_sms_campaing_source_data",
+          source: "in.c-kds-team-app-generative-ai-" + ConfigId("generative-ai-personalise-sms-campaign") + ".twilio_sms_campaign_source_data",
+          destination: "twilio_sms_campaign_source_data",
           where_column: "",
           where_values: [],
           where_operator: "eq",
