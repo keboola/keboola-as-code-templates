@@ -7,8 +7,7 @@
         entrypoint: "campaign_executor.py",
       },
       secrets: {
-        KEBOOLA_STACK: Input("kbc_stack"),
-        "#kbc_bucket_token": Input("kbc_bucket_token"),
+        "#kbc_storage_token": Input("kbc_storage_token"),
       },
     },
   },
