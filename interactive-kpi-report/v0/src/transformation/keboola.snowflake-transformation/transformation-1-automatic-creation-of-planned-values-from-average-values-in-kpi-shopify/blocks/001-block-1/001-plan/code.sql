@@ -3,7 +3,7 @@ CREATE TABLE "sales_monthly" AS
 SELECT 
 	DATE_PART(year,"updated_at"::DATE) as "year", 
   DATE_PART(month,"updated_at"::DATE) as "month",
-	'sales' as "metric_name",
+	'Turnover' as "metric_name",
 	SUM("current_total_price_set__shop_money__amount") as "plan_value" 
 FROM "order" 
 WHERE "financial_status"='paid'
@@ -14,7 +14,7 @@ CREATE TABLE "orders_monthly" AS
 SELECT
 DATE_PART(year,"updated_at"::DATE) as "year", 
 DATE_PART(month,"updated_at"::DATE) as "month", 
-'orders' as "metric_name",
+'Orders' as "metric_name",
 count(*) as "plan_value"
 FROM "order"
 --WHERE "financial_status"='paid'
@@ -25,7 +25,7 @@ CREATE TABLE "new_customers_monthly" AS
 SELECT
 DATE_PART(year,"updated_at"::DATE) as "year", 
 DATE_PART(month,"updated_at"::DATE) as "month",
-'new customers' AS "metric_name",
+'New Customers' AS "metric_name",
 count(*) AS "plan_value"
 FROM "customer"
 WHERE "last_order_id"=''
@@ -36,7 +36,7 @@ CREATE TABLE "AOV_monthly" AS
 SELECT
 DATE_PART(year,"updated_at"::DATE) as "year", 
 DATE_PART(month,"updated_at"::DATE) as "month",
-'average order value' as "metric_name",
+'Average Order Value' as "metric_name",
 AVG("current_total_price_set__shop_money__amount") as "plan_value"
 FROM "order"
 WHERE "financial_status"='paid'
@@ -47,7 +47,7 @@ CREATE TABLE "total_customers_monthly" AS
 SELECT
 DATE_PART(year,"updated_at"::DATE) as "year", 
 DATE_PART(month,"updated_at"::DATE) as "month",
-'total customers' as "metric_name",
+'Total Customers' as "metric_name",
 count(*) as "plan_value"
 FROM "customer"
 GROUP BY 1,2;
