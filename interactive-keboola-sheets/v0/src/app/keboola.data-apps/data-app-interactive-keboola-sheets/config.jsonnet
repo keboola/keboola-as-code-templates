@@ -7,7 +7,7 @@
         entrypoint: "plan_data_editor.py",
       },
       secrets: {
-        "#kbc_bucket_token": Input("kbc_storage_token"),
+        "#kbc_storage_token": Input("kbc_storage_token"),
       },
     },
   },
