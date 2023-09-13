@@ -7,7 +7,7 @@
         entrypoint: "streamlit_app.py",
       },
       secrets: {
-        "#KEBOOLA_STORAGE_TOKEN": Input("kbc_storage_token"),
+        "#kbc_storage_token": Input("kbc_storage_token"),
       },
     },
   },
