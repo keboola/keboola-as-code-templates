@@ -3,7 +3,7 @@ WITH sales AS
 (
   SELECT 
   "updated_at"::date AS "date"
-  ,'sales' AS "kpi_name"
+  ,'Turnover' AS "kpi_name"
   ,sum("current_total_price_set__shop_money__amount") AS "actual_value"
   ,'number' AS "type"
   FROM "order"

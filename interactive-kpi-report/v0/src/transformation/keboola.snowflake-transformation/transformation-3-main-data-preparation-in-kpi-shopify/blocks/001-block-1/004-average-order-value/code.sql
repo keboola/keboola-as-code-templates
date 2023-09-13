@@ -3,7 +3,7 @@ WITH AOV AS
 (
   SELECT 
   "updated_at"::date AS "date"
-  ,'average order value' AS "kpi_name"
+  ,'Average Order Value' AS "kpi_name"
   ,AVG("current_total_price_set__shop_money__amount") AS "actual_value"
   ,'number' AS "type"
   FROM "order" 
