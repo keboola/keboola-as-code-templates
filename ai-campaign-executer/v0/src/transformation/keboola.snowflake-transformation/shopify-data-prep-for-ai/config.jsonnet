@@ -13,7 +13,7 @@
           columns: [],
         },
         {
-          source: "in.c-kds-team-ex-shopify-" + ConfigId("shopify-data-source") + ".line-item",
+          source: "in.c-kds-team-ex-shopify-" + ConfigId("shopify-data-source") + ".line_item",
           destination: "line-item",
           where_column: "",
           where_values: [],
