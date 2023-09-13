@@ -1,5 +1,4 @@
 {
-  name: "Twilio",
-  dependsOn: [
-    "<previous>"],
+  name: "Data app Deployment",
+  dependsOn: ["<previous>"],
 }

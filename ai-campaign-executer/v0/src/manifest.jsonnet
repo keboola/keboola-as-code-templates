@@ -24,9 +24,21 @@
       rows: [],
     },
     {
+      componentId: "keboola.orchestrator",
+      id: ConfigId("twilio-campaign-sender-trigger"),
+      path: "other/keboola.orchestrator/twilio-campaign-sender-trigger",
+      rows: [],
+    },
+    {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("shopify-data-prep-for-ai"),
       path: "transformation/keboola.snowflake-transformation/shopify-data-prep-for-ai",
+      rows: [],
+    },
+     {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("twilio-sms-data-preparation"),
+      path: "transformation/keboola.snowflake-transformation/twilio-sms-data-preparation",
       rows: [],
     },
     {

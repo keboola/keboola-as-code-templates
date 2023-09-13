@@ -3,7 +3,7 @@
     model: "gpt-3.5-turbo",
     destination: {
       incremental_load: false,
-      output_table_name: "",
+      output_table_name: "twilio_sms_campaign_source_data",
       primary_keys_array: [
         "customer_id",
         "phone",

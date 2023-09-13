@@ -2,12 +2,11 @@
   parameters: {
     dataApp: {
       git: {
-        repository: "https://TBD",
+        repository: "https://github.com/keboola/interactive-kpi-reporting",
         branch: "main",
         entrypoint: "streamlit_app.py",
       },
       secrets: {
-        KEBOOLA_URL: Input("kbc_stack"),
         "#KEBOOLA_STORAGE_TOKEN": Input("kbc_storage_token"),
       },
     },
