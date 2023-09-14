@@ -363,14 +363,6 @@
               default: 2022,
             }
           ]
-        },
-        {
-          icon: "component:keboola.ex-currency",
-          name: "ECB Currency Rates",
-          description: "ECB Currency Rates - Data Source",
-          dialogName: "ECB Currency Rates", 
-          dialogDescription: "This source component is getting data about current exchange rate EUR/CZK.",
-          inputs: [],
         }
       ]
     },
@@ -384,6 +376,14 @@
           description: "Transformations",
           inputs: [],
         },
+        {
+          icon: "component:keboola.ex-currency",
+          name: "ECB Currency Rates",
+          description: "ECB Currency Rates - Data Source",
+          dialogName: "ECB Currency Rates", 
+          dialogDescription: "This source component is getting data about current exchange rate EUR/CZK.",
+          inputs: [],
+        }
       ]
     },
     {
