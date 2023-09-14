@@ -1,0 +1,2 @@
+This transformation performs several operations to transform and join data from multiple tables related to LinkedIn campaigns, statistics and costs into a single `linkedin` table for further analysis or reporting. It involves multiple data transformations, column extractions, and joins between different tables to achieve the result.
+The data from `linkedin` table is incrementally loaded into `ads_insight_fact`.
