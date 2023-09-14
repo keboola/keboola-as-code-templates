@@ -42,7 +42,7 @@
     input: {
       tables: [
         {
-          source: "in.c-kpi-report.slack",
+          source: "out.c-kpi-report.slack",
           destination: "slack.csv",
           where_column: "",
           where_values: [],
