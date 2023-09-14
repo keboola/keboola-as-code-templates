@@ -1342,6 +1342,10 @@
       "name": "UA and GA4 Comparison",
       "description": "Download and integrate data from Universal Analytics, Google Analytics 4 API, and Google Analytics raw data in BigQuery and compare these data in data app.",
       "path": "ua-and-ga4-comparison",
+      "deprecated": false,
+      "categories": [
+        "Data Apps", "Marketing"
+      ],
       "versions": [
         {
           "version": "1.0.0",
