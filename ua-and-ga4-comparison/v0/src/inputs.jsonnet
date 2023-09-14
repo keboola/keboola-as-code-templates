@@ -35,7 +35,7 @@
                 description: "From when do you want to get the data?",
                 type: "string",
                 kind: "select",
-                default: "-6 month",
+                default: "-6 months",
                 options: [
                   {
                     value: '-1 week',
