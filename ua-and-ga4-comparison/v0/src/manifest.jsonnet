@@ -33,7 +33,7 @@
         },
       ],
     },
-    if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
+    if InputIsAvailable("ex-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.ex-google-bigquery-v2",
       id: ConfigId("ga4-raw-events-ua-ga4-comparison-app"),
