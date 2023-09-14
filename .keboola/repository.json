@@ -1307,6 +1307,35 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "marketing-cashflow",
+      "name": "Marketing Cashflow",
+      "description": "Combine data from various platforms, transform, and deploy a Data App for managing expenses, client identification, upcoming payments, and campaign budget adjustments.",
+      "path": "marketing-cashflow",
+      "deprecated": false,
+      "categories": [
+        "Data Apps", "Marketing"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "keboola.ex-currency",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.orchestrator",
+            "keboola.snowflake-transformation",
+            "kds-team.ex-tiktok-ads",
+            "leochan.ex-linkedin"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
