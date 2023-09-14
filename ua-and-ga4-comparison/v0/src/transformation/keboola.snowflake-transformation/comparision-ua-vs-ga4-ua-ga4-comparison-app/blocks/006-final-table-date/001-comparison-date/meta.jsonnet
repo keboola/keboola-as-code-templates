@@ -1,0 +1,3 @@
+{
+  name: "COMPARISON_DATE",
+}
