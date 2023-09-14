@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-sklik-token") == false || InputIsAvailable("oauth-googleads") == false
+  isIgnored: InputIsAvailable("ex-sklik-token") == false && InputIsAvailable("oauth-googleads") == false
 }
