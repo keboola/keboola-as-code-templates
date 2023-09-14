@@ -1,0 +1,1 @@
+This Template combine data from different platforms (ECB currency rates, Meta, Google Ads, LinkedIn, TikTok, Sklik…) transform & join them and deploy a Data App where users can see and filter expenses by clients, identify upcoming payments or change budget for campaign.
