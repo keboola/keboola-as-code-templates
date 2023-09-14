@@ -17,6 +17,7 @@
       id: ConfigId("flow-1-interactive-kpi-report-kpi"),
       path: "other/keboola.orchestrator/flow-1-interactive-kpi-report-kpi",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KPI]"}
     },
     {
       componentId: "keboola.scheduler",
@@ -36,6 +37,7 @@
       id: ConfigId("flow-2-slack-notification-kpi"),
       path: "other/keboola.orchestrator/flow-2-slack-notification-kpi",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[KPI]"}
     },
     {
       componentId: "keboola.snowflake-transformation",

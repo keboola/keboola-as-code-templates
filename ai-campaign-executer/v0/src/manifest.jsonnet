@@ -22,12 +22,14 @@
       id: ConfigId("bdl-ai-marketing-shopify-twilio"),
       path: "other/keboola.orchestrator/bdl-ai-marketing-shopify-twilio",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
     },
     {
       componentId: "keboola.orchestrator",
       id: ConfigId("twilio-campaign-sender-trigger"),
       path: "other/keboola.orchestrator/twilio-campaign-sender-trigger",
       rows: [],
+      metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
     },
     {
       componentId: "keboola.snowflake-transformation",
