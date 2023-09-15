@@ -1,3 +1,0 @@
-{
-  name: "COMPARISON_DATE",
-}

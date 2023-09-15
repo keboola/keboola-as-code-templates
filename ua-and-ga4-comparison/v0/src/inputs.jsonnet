@@ -1,7 +1,7 @@
 {
   stepsGroups: [
     {
-      description: "Source component",
+      description: "UA source component",
       required: "all",
       steps: [
         {
@@ -67,8 +67,14 @@
                   },
                 ],
               },
-          ]
-        },
+            ]
+          },
+        ]
+      }, 
+      {
+        description: "GA4 source component",
+        required: "atLeastOne",
+        steps: [
         {
           icon: "component:keboola.ex-google-analytics-v4",
           name: "Google Analytics 4",

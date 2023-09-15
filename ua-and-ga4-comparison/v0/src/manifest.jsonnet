@@ -61,8 +61,22 @@
     },
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("comparision-ua-vs-ga4-ua-ga4-comparison-app"),
-      path: "transformation/keboola.snowflake-transformation/comparision-ua-vs-ga4-ua-ga4-comparison-app",
+      id: ConfigId("ua-ua-ga4-comparison-app"),
+      path: "transformation/keboola.snowflake-transformation/ua-ua-ga4-comparison-app",
+      rows: [],
+    },
+    if InputIsAvailable("oauth-googleanalytics4") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("ga4-api-ua-ga4-comparison-app"),
+      path: "transformation/keboola.snowflake-transformation/ga4-api-ua-ga4-comparison-app",
+      rows: [],
+    },
+    if InputIsAvailable("ex-google-bigquery-v2-service-account-private-key") then
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("ga4-bigquery-ua-ga4-comparison-app"),
+      path: "transformation/keboola.snowflake-transformation/ga4-bigquery-ua-ga4-comparison-app",
       rows: [],
     },
   ])
