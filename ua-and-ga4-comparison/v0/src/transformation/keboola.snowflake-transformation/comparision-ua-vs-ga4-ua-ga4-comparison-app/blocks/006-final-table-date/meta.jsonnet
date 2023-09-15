@@ -1,3 +1,0 @@
-{
-  name: "FINAL TABLE DATE",
-}
