@@ -1288,6 +1288,27 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "kai-promptlab",
+      "name": "Kai PromptLab",
+      "description": "Streamline your AI prompting process! Use this Streamlit app to refine, test, and compare multiple prompts, ensuring optimal results. Dive into AI with enhanced efficiency!",
+      "path": "kai-promptlab",
+      "deprecated": false,
+      "categories": [
+        "Data Apps", "Artificial Intelligence"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
