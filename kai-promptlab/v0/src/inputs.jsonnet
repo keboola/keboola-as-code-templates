@@ -10,15 +10,7 @@
           description: "Configure Data App",
           dialogName: "Kai PromptLab", 
           dialogDescription: "",
-          inputs: [
-            {
-              id: "data-apps",
-              name: "Let's do it!",
-              description: "",
-              type: "bool",
-              kind: "confirm",
-            },
-          ],
+          inputs: [],
         },
       ],
     },
