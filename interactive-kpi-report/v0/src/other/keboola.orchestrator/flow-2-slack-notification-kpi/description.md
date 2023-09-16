@@ -1,0 +1,1 @@
+Set a trigger on the table in.c-kpi-report.slack.

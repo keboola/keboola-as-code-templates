@@ -99,6 +99,22 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           dialogName: "Big Query Destination", 
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
+        },
+        {
+          icon: "component:keboola.data-apps",
+          name: "Online Marketing Report",
+          description: "Created data app by Streamlit",
+          dialogName: "Online Marketing Report", 
+          dialogDescription: "Use our interactive app to get insightful analytics for online marketing platforms data processed by this template.",
+          inputs: [
+            {
+              id: "data-apps",
+              name: "Let's do it!",
+              description: "",
+              type: "bool",
+              kind: "confirm",
+            },
+          ],
         }
       ]
     }
