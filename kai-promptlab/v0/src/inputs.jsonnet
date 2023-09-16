@@ -6,7 +6,7 @@
       steps: [
           {
           icon: "component:keboola.data-apps",
-          name: "Data App",
+          name: "Kai PromptLab",
           description: "Data App",
           dialogName: "Kai PromptLab", 
           dialogDescription: "",
