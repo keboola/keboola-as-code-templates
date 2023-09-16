@@ -10,8 +10,10 @@ The flow, in a nutshell:
 
 - Then, optionally, Google Analytics sessions (new and returns), page views, and bounces will be added to the output table, and two new tables will be created for transactions and keyword ad groups.
 
-- Optionally, the data will be written into a destination destination of your choice.
+- Optionally, the data will be written into a destination of your choice or you can use data app with online marketing dashboard.
 
 - Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). All your selected source components, all data manipulations, and optionally, the destination component, will be processed.
+
+For more information, take a look at our [documentation](https://help.keboola.com/templates/marketing-platforms/).
 
 
