@@ -1,13 +1,13 @@
 {
   stepsGroups: [
     {
-      description: "Data App",
+      description: "Kai PromptLab",
       required: "all",
       steps: [
           {
           icon: "component:keboola.data-apps",
           name: "Data App",
-          description: "Configure Data App",
+          description: "Data App",
           dialogName: "Kai PromptLab", 
           dialogDescription: "",
           inputs: [],
