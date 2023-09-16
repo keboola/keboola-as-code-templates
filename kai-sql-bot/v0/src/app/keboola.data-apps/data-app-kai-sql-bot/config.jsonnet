@@ -12,7 +12,6 @@
         user: Input("data-apps-data-app-secrets-role-name"),
         database_name: Input("data-apps-data-app-secrets-database-name"),
         "#OPENAI_API_KEY": Input("data-apps-data-app-secrets-openai-api-key"),
-        role_name: Input("data-apps-data-app-secrets-role-name"),
         account_identifier: Input("data-apps-data-app-secrets-account-identifier"),
         "#password": Input("data-apps-data-app-secrets-password"),
       },

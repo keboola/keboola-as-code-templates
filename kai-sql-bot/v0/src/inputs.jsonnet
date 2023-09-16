@@ -52,7 +52,7 @@
             },
             {
               id: "data-apps-data-app-secrets-role-name",
-              name: "Account Name",
+              name: "User Name",
               description: "Insert an account/user name to the database.",
               type: "string",
               kind: "input",
