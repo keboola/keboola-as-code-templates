@@ -1386,7 +1386,7 @@
     {
       "id": "kai-sql-bot",
       "name": "Kai SQL bot",
-      "description": "",
+      "description": "Kai SQL bot",
       "path": "kai-sql-bot",
       "deprecated": false,
       "categories": [
