@@ -1266,7 +1266,7 @@
       "path": "ai-campaign-executer",
       "deprecated": false,
       "categories": [
-        "Data Apps","Marketing"
+        "Data Apps","Marketing", "Artificial Intelligence"
       ],
       "versions": [
         {
@@ -1369,7 +1369,7 @@
       "path": "kai-promptlab",
       "deprecated": false,
       "categories": [
-        "Data Apps"
+        "Data Apps", "Artificial Intelligence"
       ],
       "versions": [
         {
