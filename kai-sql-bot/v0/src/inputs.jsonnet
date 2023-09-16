@@ -1,14 +1,24 @@
 {
   stepsGroups: [
     {
-      description: "Default Group",
+      description: "Kai SQL bot",
       required: "all",
       steps: [
         {
-          icon: "common:settings",
-          name: "Default Step",
-          description: "Default Step",
+          icon: "component:keboola.data-apps",
+          name: "Kai SQL bot",
+          description: "Configure Data App",
+          dialogName: "Configure Kai SQL bot", 
+          dialogDescription: "Insert values for all parameters below so the data app will work correctly.",
           inputs: [
+            {
+              id: "data-apps-data-app-secrets-account-identifier",
+              name: "Account Identifier",
+              description: "Insert your project location.",
+              type: "string",
+              kind: "input",
+              default: "keboola.west-europe.azure",
+            },
             {
               id: "data-apps-data-app-secrets-openai-api-key",
               name: "OpenAI API Key",
@@ -17,19 +27,12 @@
               kind: "hidden",
             },
             {
-              id: "data-apps-data-app-secrets-password",
-              name: "Snowflake DB Password",
-              description: "Insert your password into Snowflake database.",
-              type: "string",
-              kind: "hidden",
-            },
-            {
-              id: "data-apps-data-app-secrets-account-identifier",
-              name: "Account Identifier",
-              description: "Insert your project location.",
+              id: "data-apps-data-app-secrets-warehouse-name",
+              name: "Database Warehouse Name",
+              description: "Insert a database  warehouse name.",
               type: "string",
               kind: "input",
-              default: "keboola.west-europe.azure",
+              default: "KEBOOLA_PROD",
             },
             {
               id: "data-apps-data-app-secrets-database-name",
@@ -40,14 +43,6 @@
               default: "KEBOOLA_XXXXX",
             },
             {
-              id: "data-apps-data-app-secrets-role-name",
-              name: "Account Name",
-              description: "Insert an account/user name to the database.",
-              type: "string",
-              kind: "input",
-              default: "KEBOOLA_WORKSPACE_XXXXXXXX",
-            },
-            {
               id: "data-apps-data-app-secrets-schema-name",
               name: "Schema Name",
               description: "Insert a database schema name.",
@@ -56,13 +51,20 @@
               default: "WORKSPACE_XXXXXXX",
             },
             {
-              id: "data-apps-data-app-secrets-warehouse-name",
-              name: "Warehouse Name",
-              description: "Insert a database  warehouse name.",
+              id: "data-apps-data-app-secrets-role-name",
+              name: "Account Name",
+              description: "Insert an account/user name to the database.",
               type: "string",
               kind: "input",
-              default: "KEBOOLA_PROD",
+              default: "KEBOOLA_WORKSPACE_XXXXXXXX",
             },
+            {
+              id: "data-apps-data-app-secrets-password",
+              name: "Database Password",
+              description: "Insert your password into Snowflake database.",
+              type: "string",
+              kind: "hidden",
+            }
           ],
         },
       ],
