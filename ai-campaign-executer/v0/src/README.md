@@ -3,3 +3,5 @@ The flow in the nutshell:
 - The Transformation is already pre-defined for you and will create a dataset containing customer contact information and products to be recommended to each of them.
 - The AI app utilizes the data created by the above mentioned transformation and generates a customized SMS message for them.
 - As a final step, the dataset is being sent to Twilio to send a generated text message to each customer within the dataset.
+
+For more information, take a look at our [documentation](https://help.keboola.com/templates/ai-campaign-executer/).

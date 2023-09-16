@@ -11,3 +11,5 @@ In the transformations,  a singular metadata table is created for emitting infor
 In the final step, data will be pushed from storage to Datahub using the Datahub writer. You will enter an API token and endpoint for your GMS server, as well as select what information you want to be included (aka properties, schemas, tags, etc)
 
 Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The metadata/telemetry source components, all data manipulations and analyses, and the DataHub writer, will be processed.
+
+For more information, take a look at our [documentation](https://help.keboola.com/templates/datahub/).

@@ -14,4 +14,6 @@ The flow, in a nutshell:
 
 - Finally, you will run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). All your selected source components, all data manipulations, and optionally, the destination component, will be processed.
 
+For more information, take a look at our [documentation](https://help.keboola.com/templates/marketing-platforms/).
+
 
