@@ -1263,6 +1263,31 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "ua-and-ga4-comparison",
+      "name": "UA and GA4 Comparison",
+      "description": "Download and integrate data from Universal Analytics, Google Analytics 4 API, and Google Analytics raw data in BigQuery and compare these data in data app.",
+      "path": "ua-and-ga4-comparison",
+      "deprecated": false,
+      "categories": [
+        "Data Apps", "Marketing"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "keboola.ex-google-analytics-v4",
+            "keboola.ex-google-analytics-v4",
+            "keboola.ex-google-bigquery-v2",
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
