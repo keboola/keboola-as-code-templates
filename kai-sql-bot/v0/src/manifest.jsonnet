@@ -2,8 +2,8 @@
   configurations: [
     {
       componentId: "keboola.data-apps",
-      id: ConfigId("kai-sql-bot"),
-      path: "app/keboola.data-apps/kai-sql-bot",
+      id: ConfigId("data-app-kai-sql-bot"),
+      path: "app/keboola.data-apps/data-app-kai-sql-bot",
       rows: [],
     },
     {
