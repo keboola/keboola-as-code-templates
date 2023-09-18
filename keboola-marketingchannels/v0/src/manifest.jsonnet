@@ -156,5 +156,12 @@
         },
       ]),
     },
+    if InputIsAvailable("data-apps") then
+    {
+      componentId: "keboola.data-apps",
+      id: ConfigId("marketing-dashboard-data-app"),
+      path: "app/keboola.data-apps/marketing-dashboard-data-app",
+      rows: [],
+    },
   ]),
 }

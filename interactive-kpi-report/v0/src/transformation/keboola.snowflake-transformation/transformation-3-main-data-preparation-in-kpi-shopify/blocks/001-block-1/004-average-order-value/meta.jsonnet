@@ -1,0 +1,3 @@
+{
+  name: "Average Order Value",
+}
