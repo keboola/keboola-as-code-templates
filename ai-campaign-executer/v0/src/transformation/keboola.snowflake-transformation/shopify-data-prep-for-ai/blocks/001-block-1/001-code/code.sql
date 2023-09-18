@@ -2,7 +2,7 @@ CREATE TABLE "out_sms_campaign" AS
 SELECT
     o."customer_id",
     c."first_name" AS "name",
-    '+420774817121' AS "phone",
+    '+420123456789' AS "phone",
     count(li."product_id") AS "count",
     p."title",
     p."body_html"
