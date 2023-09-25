@@ -30,7 +30,7 @@
         },
         {
           source: "out.c-datahub-"+InstanceIdShort()+".dataset_lineage",
-          destination: "dataset_lineage.csv",
+          destination: "dataset.csv",
           where_column: "component_type",
           where_values: [
                         "other"
