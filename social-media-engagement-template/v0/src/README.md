@@ -45,3 +45,5 @@ Each social network allows access to the history of page engagement differently:
 - LinkedIn - without known limit
 - Twitter - since the first run of a component 
 - Youtube - currently not available in this template
+
+For more information, take a look at our [documentation](https://help.keboola.com/templates/social-media-engagement/).
