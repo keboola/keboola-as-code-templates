@@ -51,13 +51,6 @@
       path: "extractor/keboola.ex-instagram/data-source-in-social-media-engagement-instagram",
       rows: [],
     },
-    if InputIsAvailable("oauth-twitter") then
-    {
-      componentId: "keboola.ex-twitter",
-      id: ConfigId("data-source-in-social-media-engagement-twitter"),
-      path: "extractor/keboola.ex-twitter/data-source-in-social-media-engagement-twitter",
-      rows: [],
-    },
     if InputIsAvailable("oauth-youtube") then
     {
       componentId: "keboola.ex-youtube",
@@ -86,13 +79,6 @@
       path: "transformation/keboola.snowflake-transformation/transformation-in-social-media-engagement-linkedin",
       rows: [],
     },
-    if InputIsAvailable("oauth-twitter") then
-    {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-in-social-media-engagement-twitter"),
-      path: "transformation/keboola.snowflake-transformation/transformation-in-social-media-engagement-twitter",
-      rows: [],
-    },
     if InputIsAvailable("oauth-youtube") then
     {
       componentId: "keboola.snowflake-transformation",
@@ -106,7 +92,7 @@
       id: ConfigId("data-destination-out-social-media-engagement-mysql"),
       path: "writer/keboola.wr-db-mysql/data-destination-out-social-media-engagement-mysql",
       rows: std.filter(function(v) v != null,[
-        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") then
         {
           id: ConfigRowId("pages-engagement"),
           path: "rows/pages-engagement",
@@ -147,7 +133,7 @@
       id: ConfigId("data-destination-out-social-media-engagement-snowflake"),
       path: "writer/keboola.wr-snowflake-blob-storage/data-destination-out-social-media-engagement-snowflake",
       rows: std.filter(function(v) v != null,[
-        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") then
         {
           id: ConfigRowId("pages-engagement-002"),
           path: "rows/pages-engagement-002",
@@ -164,7 +150,7 @@
       id: ConfigId("data-destination-out-social-media-engagement-bigquery"),
       path: "writer/keboola.wr-google-bigquery-v2/out-social-media-engagement-bigquery-writer",
       rows: std.filter(function(v) v != null,[
-        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") || InputIsAvailable("oauth-twitter") then
+        if InputIsAvailable("oauth-facebookads") || InputIsAvailable("oauth-linkedinads") || InputIsAvailable("oauth-instagram") then
         {
           id: ConfigRowId("pages-engagement"),
           path: "rows/pages-engagement",
