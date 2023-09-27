@@ -6,15 +6,15 @@ local googlesheet = import "/<common>/out-googleanalytics-gsheet/v0/src/inputs.j
 {
   stepsGroups: [
     {
-      description: "Configure your credentials for Google Analytics extractor.",
+      description: "Configure your credentials for Universal Analytics extractor.",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-google-analytics-v4",
-          name: "Google Analytics",
-          description: "Google Analytics Data Source",
+          name: "Universal Analytics",
+          description: "Universal Analytics Data Source",
           dialogName: "Analytics Data Source",
-          dialogDescription: "Connect with Google Analytics and sync data from it.",
+          dialogDescription: "Connect with Universal Analytics and sync data from it.",
           inputs: googleanalytics
         },
       ],
