@@ -10,5 +10,4 @@ The flow, in a nutshell:
 
 - Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Asana source component, all data manipulations, and optionally, the destination component, will be processed.
 
-
-
+For more information, take a look at our [documentation](https://help.keboola.com/templates/project-management/).

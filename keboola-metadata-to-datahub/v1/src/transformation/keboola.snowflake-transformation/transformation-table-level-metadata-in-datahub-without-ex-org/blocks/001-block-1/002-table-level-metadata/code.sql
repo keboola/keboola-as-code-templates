@@ -63,7 +63,7 @@ upstream_config_lineage AS (
         configs."name",
         configs."component_type"
     FROM
-        "in.c-kds-team-ex-kbc-project-metadata-v2-12278349"."tables-metadata" table_md
+        "tables-metadata" table_md
         LEFT JOIN "configurations" configs ON "configuration_id" = configs."id"
     WHERE
         "key" = 'KBC.lastUpdatedBy.configuration.id'

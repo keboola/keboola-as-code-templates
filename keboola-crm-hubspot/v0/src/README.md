@@ -9,3 +9,6 @@ The flow, in a nutshell:
 - Optionally, you can load the results into one of the provided destinations.
 
 - Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The HubSpot source component, all data manipulations, and optionally, the destination component, will be processed.
+
+For more information, take a look at our [documentation](https://help.keboola.com/templates/customer-relationship-management/).
+
