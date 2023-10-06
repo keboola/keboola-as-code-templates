@@ -9,3 +9,5 @@ The flow, in a nutshell:
 - Optinally, the data will be written into a data destination of your choice.
 
 - Finally, you will schedule and run the entire flow (i.e., the sequence of all the prepared, above mentioned steps, in the correct order). The Pipedrive source component, all data manipulations, and optinally, the destination component, will be processed.
+
+For more information, take a look at our [documentation](https://help.keboola.com/templates/customer-relationship-management/).

@@ -2,7 +2,7 @@
   {
       id:           "oauth-google-analytics",
       name:         "Open Authentication",
-      description:  "Authorization for Google Analytics",
+      description:  "Authorization for Universal Analytics",
       type:         "object",
       kind:         "oauth",
       componentId:  "keboola.ex-google-analytics-v4",
@@ -11,7 +11,7 @@
   {
       id:           "oauth-google-analytics-accounts",
       name:         "Google Accounts",
-      description:  "Select accounts for Google Analytics",
+      description:  "Select accounts for Universal Analytics",
       type:         "object",
       kind:         "oauthAccounts",
       oauthInputId: "oauth-google-analytics",
