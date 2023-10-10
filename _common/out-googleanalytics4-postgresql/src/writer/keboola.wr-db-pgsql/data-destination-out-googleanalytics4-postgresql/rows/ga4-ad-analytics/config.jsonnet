@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ga4_test.ga4_ad_analytics",
+    tableId: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_ad_analytics",
     dbName: "ga4_ad_analytics",
     incremental: true,
     primaryKey: [
@@ -149,8 +149,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ga4_test.ga4_ad_analytics",
-          destination: "out.c-ga4_test.ga4_ad_analytics.csv",
+          source: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_ad_analytics",
+          destination: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_ad_analytics.csv",
           columns: [
             "id",
             "idProperty",

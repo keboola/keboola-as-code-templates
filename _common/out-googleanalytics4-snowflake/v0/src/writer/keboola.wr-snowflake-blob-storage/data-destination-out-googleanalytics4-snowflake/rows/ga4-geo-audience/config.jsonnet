@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ga4_test.ga4_geo_audience",
+    tableId: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_geo_audience",
     dbName: "ga4_geo_audience",
     incremental: true,
     primaryKey: [
@@ -165,8 +165,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ga4_test.ga4_geo_audience",
-          destination: "out.c-ga4_test.ga4_geo_audience.csv",
+          source: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_geo_audience",
+          destination: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_geo_audience.csv",
           columns: [
             "id",
             "idProperty",

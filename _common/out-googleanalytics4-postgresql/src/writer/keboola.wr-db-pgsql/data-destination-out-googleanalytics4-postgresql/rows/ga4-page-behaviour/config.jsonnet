@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ga4_test.ga4_page_behaviour",
+    tableId: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_page_behaviour",
     dbName: "ga4_page_behaviour",
     incremental: true,
     primaryKey: [
@@ -189,8 +189,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ga4_test.ga4_page_behaviour",
-          destination: "out.c-ga4_test.ga4_page_behaviour.csv",
+          source: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_page_behaviour",
+          destination: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_page_behaviour.csv",
           columns: [
             "id",
             "idProperty",

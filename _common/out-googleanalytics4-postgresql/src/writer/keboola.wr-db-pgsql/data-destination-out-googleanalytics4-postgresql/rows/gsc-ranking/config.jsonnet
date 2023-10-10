@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-bdm-IPftXAqa.gsc_ranking",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
     dbName: "gsc_ranking",
     incremental: true,
     primaryKey: [
@@ -39,8 +39,8 @@
     input: {
       tables: [
         {
-          source: "out.c-bdm-IPftXAqa.gsc_ranking",
-          destination: "out.c-bdm-IPftXAqa.gsc_ranking.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".gsc_ranking.csv",
           columns: [
             "page",
             "gsc_date",

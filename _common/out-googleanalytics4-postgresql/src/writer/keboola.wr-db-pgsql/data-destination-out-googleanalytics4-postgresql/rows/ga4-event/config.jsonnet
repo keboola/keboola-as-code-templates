@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ga4_test.ga4_event",
+    tableId: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_event",
     dbName: "ga4_event",
     incremental: true,
     primaryKey: [
@@ -93,8 +93,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ga4_test.ga4_event",
-          destination: "out.c-ga4_test.ga4_event.csv",
+          source: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_event",
+          destination: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_event.csv",
           columns: [
             "id",
             "idProperty",
