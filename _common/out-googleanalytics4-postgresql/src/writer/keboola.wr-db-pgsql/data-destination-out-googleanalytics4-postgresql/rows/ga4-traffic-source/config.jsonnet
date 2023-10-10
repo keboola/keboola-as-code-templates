@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-ga4_test.ga4_traffic_source",
+    tableId: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_traffic_source",
     dbName: "ga4_traffic_source",
     incremental: true,
     primaryKey: [
@@ -165,8 +165,8 @@
     input: {
       tables: [
         {
-          source: "out.c-ga4_test.ga4_traffic_source",
-          destination: "out.c-ga4_test.ga4_traffic_source.csv",
+          source: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_traffic_source",
+          destination: "out.c-bdm-ga4-" + InstanceIdShort() + ".ga4_traffic_source.csv",
           columns: [
             "id",
             "idProperty",
