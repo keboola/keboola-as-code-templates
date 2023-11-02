@@ -100,7 +100,7 @@
           icon: "component:keboola.data-apps",
           name: "Data App",
           description: "Configure Data App",
-          dialogName: "Interactive KPI Report", 
+          dialogName: "E-comm KPI Dashboard", 
           dialogDescription: "Configure Data App by filling up required secrets.",
           inputs: [
             {

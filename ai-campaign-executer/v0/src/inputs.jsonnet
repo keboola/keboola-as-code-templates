@@ -121,7 +121,7 @@
           icon: "component:keboola.data-apps",
           name: "Data App",
           description: "Configure Data App",
-          dialogName: "AI Campaign Executer", 
+          dialogName: "AI SMS Campaign", 
           dialogDescription: "Configure Data App by filling up required secrets.",
           inputs: [
             {

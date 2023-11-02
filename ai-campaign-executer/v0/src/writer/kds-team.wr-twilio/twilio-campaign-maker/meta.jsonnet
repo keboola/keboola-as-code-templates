@@ -1,4 +1,4 @@
 {
-  name: "Twilio [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "Twilio [AI-SMS-CAMPAIGN] /" + InstanceIdShort(),
   isDisabled: false,
 }
