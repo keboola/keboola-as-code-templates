@@ -1,4 +1,4 @@
 {
-  name: "Interactive KPI Report [KPI-APP] /" + InstanceIdShort(),
+  name: "E-comm KPI Dashboard [KPI-APP] /" + InstanceIdShort(),
   isDisabled: false,
 }

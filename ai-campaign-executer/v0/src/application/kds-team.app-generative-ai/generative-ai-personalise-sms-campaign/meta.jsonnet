@@ -1,4 +1,4 @@
 {
-  name: "AI SMS Campaign Generator [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "AI SMS Campaign Generator [AI-SMS-CAMPAIGN] /" + InstanceIdShort(),
   isDisabled: false,
 }
