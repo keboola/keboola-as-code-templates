@@ -1,4 +1,4 @@
 {
-  name: "Transformation 1: Shopify data preparation [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "Transformation 1: Shopify data preparation [AI-SMS-CAMPAIGN] /" + InstanceIdShort(),
   isDisabled: false,
 }

@@ -1,4 +1,4 @@
 {
-  name: "Flow 1: Interactive KPI Report [KPI] /" + InstanceIdShort(),
+  name: "Flow 1: E-comm KPI Dashboard [KPI] /" + InstanceIdShort(),
   isDisabled: false,
 }
