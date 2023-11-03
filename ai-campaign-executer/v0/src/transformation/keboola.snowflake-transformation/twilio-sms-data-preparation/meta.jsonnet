@@ -1,4 +1,4 @@
 {
-  name: "Transformation 2: Twilio data preparation [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "Transformation 2: Twilio data preparation [AI-SMS-CAMPAIGN] /" + InstanceIdShort(),
   isDisabled: false,
 }

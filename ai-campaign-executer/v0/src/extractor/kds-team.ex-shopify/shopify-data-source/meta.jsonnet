@@ -1,4 +1,4 @@
 {
-  name: "Data Source [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "Data Source [AI-SMS-CAMPAIGN] /" + InstanceIdShort(),
   isDisabled: false,
 }

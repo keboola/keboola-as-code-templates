@@ -1,4 +1,4 @@
 {
-  name: "AI Created Content Checker [AI-CAMPAIGN-EXECUTER] /" + InstanceIdShort(),
+  name: "AI Created Content Checker [AI-SMS-CAMPAIGN] /" + InstanceIdShort(),
   isDisabled: false,
 }
