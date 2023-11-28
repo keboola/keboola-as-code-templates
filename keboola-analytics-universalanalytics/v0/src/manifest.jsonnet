@@ -13,7 +13,32 @@
       componentId: "keboola.ex-google-analytics-v4",
       id: ConfigId("in-googleanalytics-extractor"),
       path: "<common>/in-googleanalytics/v0/src/extractor/keboola.ex-google-analytics-v4/in-googleanalytics-extractor",
-      rows: [],
+      rows: [
+        {
+          id: ConfigRowId("raw-ad-analytics"),
+          path: "rows/raw-ad-analytics",
+        },
+        {
+          id: ConfigRowId("raw-demographic-audience"),
+          path: "rows/raw-demographic-audience",
+        },
+        {
+          id: ConfigRowId("raw-geo-audience"),
+          path: "rows/raw-geo-audience",
+        },
+        {
+          id: ConfigRowId("raw-page-behaviour"),
+          path: "rows/raw-page-behaviour",
+        },
+        {
+          id: ConfigRowId("raw-site-statistics"),
+          path: "rows/raw-site-statistics",
+        },
+        {
+          id: ConfigRowId("raw-traffic-source"),
+          path: "rows/raw-traffic-source",
+        },
+      ],
     },
     {
       componentId: "keboola.snowflake-transformation",
