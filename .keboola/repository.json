@@ -1429,6 +1429,28 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "confluence-chatbot",
+      "name": "Confluence Chatbot",
+      "description": "Quickly build a GenAI chat application on top of your data",
+      "categories": [
+        "Artificial Intelligence", "Data Apps"
+      ],
+      "path": "confluence-chatbot",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "kds-team.ex-confluence",
+            "kds-team.wr-pinecone"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
