@@ -1,7 +1,7 @@
 {
   parameters: {
     dbName: "GA_PAGE_BEHAVIOUR",
-    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_page_behaviour",
     incremental: false,
     primaryKey: [],
     items: [
@@ -124,8 +124,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_page_behaviour.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_page_behaviour",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_page_behaviour.csv",
           columns: [
             "ga_date",
             "ga_hostname",
