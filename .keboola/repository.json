@@ -1433,7 +1433,7 @@
     {
       "id": "confluence-chatbot",
       "name": "Confluence Chatbot",
-      "description": "Quickly build a GenAI chat application on top of your data",
+      "description": "Quickly build a GenAI chat application on top of your data.",
       "categories": [
         "Artificial Intelligence", "Data Apps"
       ],

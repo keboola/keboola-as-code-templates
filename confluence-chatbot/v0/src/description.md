@@ -1,4 +1,1 @@
-### confluence-chatbot
-
-Extended description
-
+Use the power of retrieval augmented generation to build a chatbot on top your your knowledge base in minutes.
