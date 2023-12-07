@@ -1,0 +1,1 @@
+This configuration contains Python code that reads a CSV file containing Confluence page data, converts each row of the dataframe to a separate JSON file, and archives them in a single ZIP file. The output ZIP file is saved in the `out/files/` folder.
