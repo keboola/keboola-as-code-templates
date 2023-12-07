@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_site_statistics",
     dbName: "GA_SITE_STATISTICS",
     incremental: false,
     primaryKey: [],
@@ -139,8 +139,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_site_statistics.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_site_statistics",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_site_statistics.csv",
           columns: [
             "ga_date",
             "ga_time",

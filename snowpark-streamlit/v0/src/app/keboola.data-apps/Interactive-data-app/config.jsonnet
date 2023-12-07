@@ -1,6 +1,7 @@
 {
     parameters: {
     dataApp: {
+      streamlitAuthEnabled: true,
       git: {
         branch: "master",
         entrypoint: "main.py",

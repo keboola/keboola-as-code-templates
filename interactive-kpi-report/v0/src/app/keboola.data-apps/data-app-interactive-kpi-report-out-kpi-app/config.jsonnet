@@ -1,6 +1,7 @@
 {
   parameters: {
     dataApp: {
+      streamlitAuthEnabled: true,
       git: {
         repository: "https://github.com/keboola/interactive-kpi-reporting",
         branch: "main",

@@ -1,6 +1,7 @@
 {
   parameters: {
     dataApp: {
+      streamlitAuthEnabled: true,
       git: {
         repository: "https://github.com/keboola/ua-ga4-comparison",
         branch: "main",
