@@ -471,7 +471,7 @@
             "keboola.wr-db-pgsql",
             "keboola.data-apps"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -1243,7 +1243,7 @@
     },
     {
       "id": "ai-campaign-executer",
-      "name": "AI SMS Campaign",
+      "name": "GenAI Messaging Campaign",
       "description": "Elevate marketing with AI: Shopify data for personalized SMS campaigns via Twilio.",
       "path": "ai-campaign-executer",
       "deprecated": false,
@@ -1268,7 +1268,7 @@
     },
     {
       "id": "interactive-kpi-report",
-      "name": "E-comm KPI Dashboard",
+      "name": "E-commerce EasyCompass",
       "description": "Real-time KPI insights, alerts & action for data-driven decisions.",
       "path": "interactive-kpi-report",
       "deprecated": false,
