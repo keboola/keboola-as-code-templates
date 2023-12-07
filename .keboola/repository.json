@@ -471,7 +471,7 @@
             "keboola.wr-db-pgsql",
             "keboola.data-apps"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
