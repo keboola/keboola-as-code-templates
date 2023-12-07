@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_geo_audience",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_geo_audience",
     dbName: "GA_GEO_AUDIENCE",
     incremental: false,
     primaryKey: [],
@@ -117,8 +117,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_geo_audience",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_geo_audience.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_geo_audience",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_geo_audience.csv",
           columns: [
             "ga_date",
             "ga_country",

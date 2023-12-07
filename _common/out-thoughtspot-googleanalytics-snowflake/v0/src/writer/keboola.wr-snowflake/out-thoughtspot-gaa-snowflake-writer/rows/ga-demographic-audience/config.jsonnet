@@ -1,6 +1,6 @@
 {
   parameters: {
-    tableId: "out.c-wr-" + InstanceIdShort() + ".ga_demographic_audience",
+    tableId: "out.c-bdm-" + InstanceIdShort() + ".ga_demographic_audience",
     dbName: "GA_DEMOGRAPHIC_AUDIENCE",
     incremental: false,
     primaryKey: [],
@@ -109,8 +109,8 @@
     input: {
       tables: [
         {
-          source: "out.c-wr-" + InstanceIdShort() + ".ga_demographic_audience",
-          destination: "out.c-wr-" + InstanceIdShort() + ".ga_demographic_audience.csv",
+          source: "out.c-bdm-" + InstanceIdShort() + ".ga_demographic_audience",
+          destination: "out.c-bdm-" + InstanceIdShort() + ".ga_demographic_audience.csv",
           columns: [
             "ga_date",
             "ga_userAgeBracket",
