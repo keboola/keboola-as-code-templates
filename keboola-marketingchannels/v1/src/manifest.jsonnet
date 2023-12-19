@@ -21,7 +21,16 @@
       componentId: "kds-team.ex-bing-ads",
       id: ConfigId("keboola-marketingchannels-bingads-data-source"),
       path: "<common>/in-marketingchannels-bingads/extractor/kds-team.ex-bing-ads/keboola-marketingchannels-bingads-data-source",
-      rows: [],
+      rows: [
+        {
+          id: ConfigRowId("ad-group-performance"),
+          path: "rows/ad-group-performance"
+        },
+        {
+          id: ConfigRowId("campaigns"),
+          path: "rows/campaigns"
+        },
+      ],
     },
     if InputIsAvailable("oauth-googleads") then
     {

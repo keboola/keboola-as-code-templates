@@ -12,17 +12,17 @@
     id: "ex-bingads-account-id",
     name: "Account ID",
     description: "Account identifier of your BingAds account.",
-    type: "int",
+    type: "string",
     kind: "input",
-    default: 0,
+    default: "XXXXX"
   },
   {
     id: "ex-bingads-customer-id",
     name: "Customer ID",
     description: "Customer identifier of your BingAds account.",
-    type: "int",
+    type: "string",
     kind: "input",
-    default: 0,
+    default: "XXXXX"
   },
   {
     id: "ex-bingads-report-period",
