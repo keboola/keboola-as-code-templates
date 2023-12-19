@@ -85,7 +85,7 @@ INSERT INTO "out_deals"
         trim("obj":"org_id", '"')               					AS "org_id",
         trim("obj":"owner_id", '"')             					AS "owner_id",
         nullif(trim("obj":"deal_active", '"'),'')         AS "deal_active",
-        trim("obj":"expected_close_date", '"')  					AS "expected_close_date",
+        nullif(trim("obj":"expected_close_date", '"'), '')  					AS "expected_close_date",
         trim("obj":"stage_id", '"')             					AS "stage_id",
         nullif(trim("obj":"activities_count", '"'),'')    AS "activities_count",
         nullif(trim("obj":"email_messages_count", '"'),'') AS "email_messages_count",
