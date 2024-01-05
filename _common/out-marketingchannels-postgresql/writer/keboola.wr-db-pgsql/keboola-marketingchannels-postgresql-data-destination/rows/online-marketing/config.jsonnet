@@ -48,10 +48,10 @@
           {
             name: "date",
             dbName: "date",
-            type: "varchar",
+            type: "date",
             nullable: true,
             default: "",
-            size: "10485760"
+            size: ""
           },
           {
             name: "source",
@@ -88,10 +88,10 @@
           {
             name: "impressions",
             dbName: "impressions",
-            type: "real",
+            type: "numeric",
             nullable: true,
             default: "",
-            size: ""
+            size: "38,5"
           },
           {
             name: "clicks",
@@ -110,8 +110,8 @@
             size: "38,5"
           },
           {
-            name: "costs_coversion",
-            dbName: "costs_coversion",
+            name: "costs_conversion",
+            dbName: "costs_conversion",
             type: "numeric",
             nullable: true,
             default: "",
