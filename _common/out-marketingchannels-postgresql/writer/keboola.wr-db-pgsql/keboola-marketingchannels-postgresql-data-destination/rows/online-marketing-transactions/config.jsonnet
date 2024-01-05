@@ -54,10 +54,10 @@
           {
             name: "date",
             dbName: "date",
-            type: "varchar",
+            type: "date",
             nullable: true,
             default: "",
-            size: "10485760",
+            size: "",
           },
           {
             name: "source",
