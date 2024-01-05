@@ -81,8 +81,8 @@
             type: "FLOAT",
           },
           {
-            name: "costs_coversion",
-            dbName: "costs_coversion",
+            name: "costs_conversion",
+            dbName: "costs_conversion",
             type: "FLOAT",
           },
         ],
