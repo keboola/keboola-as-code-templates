@@ -261,6 +261,7 @@
             "keboola.wr-db-pgsql",
             "keboola.wr-google-sheets",
             "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-google-bigquery-v2",
             "kds-team.ex-linkedin-pages"
           ],
           "path": "v0"
