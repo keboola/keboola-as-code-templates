@@ -6,6 +6,7 @@ local linkedin = import "/<common>/in-marketingchannels-linkedinads/inputs.jsonn
 local snowflake = import "/<common>/out-marketingchannels-snowflake/inputs.jsonnet";
 local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet";
 local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
+local postgresql = import "/<common>/out-marketingchannels-postgresql/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -99,6 +100,14 @@ local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
           dialogName: "Big Query Destination", 
           dialogDescription: "Data load to Google Big Query",
           inputs: bigquery
+        },
+        {
+          icon: "component:keboola.wr-db-pgsql",
+          name: "PostgreSQL Destination",
+          description: "Load to data into PostgreSQL",
+          dialogName: "PostgreSQL Destination", 
+          dialogDescription: "Data load to PostgreSQL DB.",
+          inputs: postgresql
         },
         {
           icon: "component:keboola.data-apps",
