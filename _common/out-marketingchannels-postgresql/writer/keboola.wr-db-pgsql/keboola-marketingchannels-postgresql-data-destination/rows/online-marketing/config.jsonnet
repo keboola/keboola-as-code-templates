@@ -24,69 +24,99 @@
     },
   },
   parameters: {
-    tables: [
-      {
-        dbName: "online_marketing",
         tableId: "out.c-marketing-tr-" + InstanceIdShort() + ".online_marketing",
+        dbName: "online_marketing",
         incremental: true,
+        primaryKey: ["online_marketing_traffic_id"],
         items: [
           {
             name: "online_marketing_traffic_id",
             dbName: "online_marketing_traffic_id",
-            type: "STRING",
+            type: "varchar",
+            nullable: false,
+            default: "",
+            size: "10485760"
           },
           {
             name: "account_name",
             dbName: "account_name",
-            type: "STRING",
+            type: "varchar",
+            nullable: true,
+            default: "",
+            size: "10485760"
           },
           {
             name: "date",
             dbName: "date",
-            type: "STRING",
+            type: "date",
+            nullable: true,
+            default: "",
+            size: ""
           },
           {
             name: "source",
             dbName: "source",
-            type: "STRING",
+            type: "varchar",
+            nullable: true,
+            default: "",
+            size: "10485760"
           },
           {
             name: "medium",
             dbName: "medium",
-            type: "STRING",
+            type: "varchar",
+            nullable: true,
+            default: "",
+            size: "10485760"
           },
           {
             name: "campaign",
             dbName: "campaign",
-            type: "STRING",
+            type: "varchar",
+            nullable: true,
+            default: "",
+            size: "10485760"
           },
           {
             name: "domain",
             dbName: "domain",
-            type: "STRING",
+            type: "varchar",
+            nullable: true,
+            default: "",
+            size: "10485760"
           },
           {
             name: "impressions",
             dbName: "impressions",
-            type: "FLOAT",
+            type: "numeric",
+            nullable: true,
+            default: "",
+            size: "38,5"
           },
           {
             name: "clicks",
             dbName: "clicks",
-            type: "FLOAT",
+            type: "numeric",
+            nullable: true,
+            default: "",
+            size: "38,0"
           },
           {
             name: "costs_cpc",
             dbName: "costs_cpc",
-            type: "FLOAT",
+            type: "numeric",
+            nullable: true,
+            default: "",
+            size: "38,5"
           },
           {
             name: "costs_conversion",
             dbName: "costs_conversion",
-            type: "FLOAT",
+            type: "numeric",
+            nullable: true,
+            default: "",
+            size: "38,5"
           },
         ],
-      },
-    ],
   },
 }
