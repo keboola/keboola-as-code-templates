@@ -30,7 +30,7 @@
         label: '1 month ago',
       },
       {
-        value: 'last_90d',
+        value: 'last_60d',
         label: '2 months ago',
       },
       {
