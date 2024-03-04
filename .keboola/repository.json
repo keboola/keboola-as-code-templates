@@ -1452,6 +1452,27 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "test-stepgroups",
+      "name": "TEST - STEPGROUPS",
+      "description": "Desc",
+      "categories": [
+        "CRM"
+      ],
+      "path": "test-stepgroups",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "kds-team.ex-hubspot-crm"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
