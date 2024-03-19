@@ -1,18 +1,18 @@
 -- create task table
 CREATE TABLE "out_task"
 (
-  "task_id" VARCHAR(2000) NOT NULL,
-  "task" VARCHAR(255),
-  "section"  VARCHAR(255),
-  "project_id"  VARCHAR(2000),
-  "created_at" VARCHAR(255),
-  "completed_at" VARCHAR(255),
-  "due_date" VARCHAR(255),
+  "task_id" TEXT NOT NULL,
+  "task" TEXT,
+  "section"  TEXT,
+  "project_id"  TEXT,
+  "created_at" TEXT,
+  "completed_at" TEXT,
+  "due_date" TEXT,
   "days_past_due" INTEGER,
   "is_past_due" BOOLEAN,
-  "url"  VARCHAR(255),
-  "assignee"  VARCHAR(255),
-  "assignee_type"  VARCHAR(255),
+  "url"  TEXT,
+  "assignee"  TEXT,
+  "assignee_type"  TEXT,
   "completed" BOOLEAN,
   "is_subtask" BOOLEAN
 );
@@ -40,10 +40,10 @@ INSERT INTO "out_task"
 -- creates table with details in custom field of every task
 CREATE TABLE "out_task_custom_field"
 (
-  "task_custom_field_id" VARCHAR(2000) NOT NULL,
-  "task_id" VARCHAR(2000),
-  "task_custom_field" VARCHAR(255),
-  "task_custom_field_value" VARCHAR(5000)
+  "task_custom_field_id" TEXT NOT NULL,
+  "task_id" TEXT,
+  "task_custom_field" TEXT,
+  "task_custom_field_value" TEXT
 );
 
 INSERT INTO "out_task_custom_field"
@@ -64,15 +64,15 @@ INSERT INTO "out_task_custom_field"
 -- create task_event table
 CREATE TABLE "out_task_event"
 (
-  "task_event_id" VARCHAR(2000) NOT NULL,
-  "task_id" VARCHAR(2000),
-  "user_id" VARCHAR(2000),
-  "user_type" VARCHAR(255),
-  "user" VARCHAR(255),
+  "task_event_id" TEXT NOT NULL,
+  "task_id" TEXT,
+  "user_id" TEXT,
+  "user_type" TEXT,
+  "user" TEXT,
   "created_at" TIMESTAMP,
-  "event_type" VARCHAR(255),
-  "event" VARCHAR(255),
-  "event_text" VARCHAR(30000)
+  "event_type" TEXT,
+  "event" TEXT,
+  "event_text" TEXT
 );
 
 INSERT INTO "out_task_event"
@@ -96,8 +96,8 @@ INSERT INTO "out_task_event"
 -- create task_tag table
 CREATE TABLE "out_task_tag"
 (
-  "task_id" VARCHAR(2000) NOT NULL,
-  "tag" VARCHAR(2000) NOT NULL
+  "task_id" TEXT NOT NULL,
+  "tag" TEXT NOT NULL
 );
 
 INSERT INTO "out_task_tag"
@@ -110,8 +110,8 @@ INSERT INTO "out_task_tag"
 -- create join table of users and tasks
 CREATE TABLE "out_task_user"
 (
-  "user_id" VARCHAR(2000) NOT NULL,
-  "task_id" VARCHAR(2000) NOT NULL
+  "user_id" TEXT NOT NULL,
+  "task_id" TEXT NOT NULL
 );
 
 INSERT INTO "out_task_user"

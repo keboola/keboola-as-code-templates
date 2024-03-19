@@ -1,16 +1,16 @@
 -- create projects table
 CREATE TABLE "out_project"
 (
-  "project_id" VARCHAR(2000) NOT NULL,
-	"project" VARCHAR(255),
-  "created_at" VARCHAR(255),
-  "due_date" VARCHAR(255),
-  "workspace" VARCHAR(255),
-  "url"  VARCHAR(255),
-  "owner"  VARCHAR(255),
-  "owner_type" VARCHAR(255),
-  "status"  VARCHAR(255),
-  "status_text" VARCHAR(255),
+  "project_id" TEXT NOT NULL,
+	"project" TEXT,
+  "created_at" TEXT,
+  "due_date" TEXT,
+  "workspace" TEXT,
+  "url"  TEXT,
+  "owner"  TEXT,
+  "owner_type" TEXT,
+  "status"  TEXT,
+  "status_text" TEXT,
   "archived" BOOLEAN,
   "public" BOOLEAN
 );
@@ -33,11 +33,11 @@ INSERT INTO "out_project"
 -- creates table of users
 CREATE TABLE "out_user"
 (
-  "user_id" VARCHAR(2000) NOT NULL,
-  "user" VARCHAR(255),
-  "email" VARCHAR(255),
-  "email_domain" VARCHAR(255),
-  "user_type" VARCHAR(255)
+  "user_id" TEXT NOT NULL,
+  "user" TEXT,
+  "email" TEXT,
+  "email_domain" TEXT,
+  "user_type" TEXT
 );
 
 INSERT INTO "out_user"
@@ -52,8 +52,8 @@ INSERT INTO "out_user"
 
 CREATE TABLE "out_project_user"
 (
-  "user_id" VARCHAR(2000) NOT NULL,
-  "project_id" VARCHAR(2000) NOT NULL
+  "user_id" TEXT NOT NULL,
+  "project_id" TEXT NOT NULL
 );
 
 INSERT INTO "out_project_user"
