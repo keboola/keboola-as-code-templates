@@ -467,6 +467,24 @@
             "keboola.data-apps"
           ],
           "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-bing-ads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-pgsql",
+            "keboola.data-apps"
+          ],
+          "path": "v2"
         }
       ]
     },
