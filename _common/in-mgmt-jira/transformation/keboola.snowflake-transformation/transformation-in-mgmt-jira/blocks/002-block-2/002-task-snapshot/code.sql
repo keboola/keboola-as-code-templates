@@ -79,17 +79,17 @@ AS
 --define if there has been change of section, assignee or due date
 CREATE TABLE "out_task_snapshot"
 (
- "task_id" VARCHAR(255) NOT NULL,
+ "task_id" TEXT NOT NULL,
  "snapshot_date" DATE NOT NULL,
- "section" VARCHAR(255),
- "previous_section" VARCHAR(255),
+ "section" TEXT,
+ "previous_section" TEXT,
  "section_change" BOOLEAN,
  "due_date" DATE,
  "previous_due_date" DATE,
  "due_date_change" BOOLEAN,
  "due_date_diff" INTEGER,
- "assignee" VARCHAR(255),
- "previous_assignee" VARCHAR(255),
+ "assignee" TEXT,
+ "previous_assignee" TEXT,
  "assignee_change" BOOLEAN,
  "last_snapshot" BOOLEAN,
  "last_day_of_month" BOOLEAN,
