@@ -2,10 +2,10 @@ local facebookads = import "/<common>/in-marketingchannels-facebookads/inputs.js
 local bingads = import "/<common>/in-marketingchannels-bingads/inputs.jsonnet";
 local googleads = import "/<common>/in-marketingchannels-googleads/inputs.jsonnet";
 local linkedin = import "/<common>/in-marketingchannels-linkedinads/inputs.jsonnet";
-local snowflake = import "/<common>/out-marketingchannels-snowflake/inputs.jsonnet";
-local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet";
-local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
-local postgresql = import "/<common>/out-marketingchannels-postgresql/inputs.jsonnet";
+local snowflake = import "/<common>/out-marketingchannels-snowflake/v2/inputs.jsonnet";
+local bigquery = import "/<common>/out-marketingchannels-bigquery/v2/inputs.jsonnet";
+local gsheet = import "/<common>/out-marketingchannels-gsheet/v2/inputs.jsonnet";
+local postgresql = import "/<common>/out-marketingchannels-postgresql/v2/inputs.jsonnet";
 {
   stepsGroups: [
     {

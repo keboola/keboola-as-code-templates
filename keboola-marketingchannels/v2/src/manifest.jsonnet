@@ -91,7 +91,7 @@
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("keboola-marketingchannels-bigquery-data-destination"),
-      path: "<common>/out-marketingchannels-bigquery/writer/keboola.wr-google-bigquery-v2/keboola-marketingchannels-bigquery-data-destination",
+      path: "<common>/out-marketingchannels-bigquery/v2/writer/keboola.wr-google-bigquery-v2/keboola-marketingchannels-bigquery-data-destination",
       rows: [
         {
           id: ConfigRowId("online-marketing"),
@@ -103,14 +103,14 @@
     {
       componentId: "keboola.wr-google-sheets",
       id: ConfigId("keboola-marketingchannels-googlesheet-data-destination"),
-      path: "<common>/out-marketingchannels-gsheet/writer/keboola.wr-google-sheets/keboola-marketingchannels-googlesheet-data-destination",
+      path: "<common>/out-marketingchannels-gsheet/v2/writer/keboola.wr-google-sheets/keboola-marketingchannels-googlesheet-data-destination",
       rows: [],
     },
     if InputIsAvailable("wr-snowflake-db-host") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),
-      path: "<common>/out-marketingchannels-snowflake/writer/keboola.wr-snowflake/keboola-marketingchannels-snowflake-data-destination",
+      path: "<common>/out-marketingchannels-snowflake/v2/writer/keboola.wr-snowflake/keboola-marketingchannels-snowflake-data-destination",
       rows: [     
         {
           id: ConfigRowId("online-marketing"),
@@ -122,7 +122,7 @@
     {
       componentId: "keboola.wr-db-pgsql",
       id: ConfigId("keboola-marketingchannels-postgresql-data-destination"),
-      path: "<common>/out-marketingchannels-postgresql/writer/keboola.wr-db-pgsql/keboola-marketingchannels-postgresql-data-destination",
+      path: "<common>/out-marketingchannels-postgresql/v2/writer/keboola.wr-db-pgsql/keboola-marketingchannels-postgresql-data-destination",
       rows: [
         {
           id: ConfigRowId("online-marketing"),

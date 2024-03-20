@@ -1,4 +1,4 @@
 {
-  name: "Data App [OUT-MKT-MARKETINGDASHBOARD] /" + InstanceIdShort(),
+  name: "Data App [OUT-ADS-PLATFORMS-MARKETINGDASHBOARD] /" + InstanceIdShort(),
   isDisabled: false,
 }
