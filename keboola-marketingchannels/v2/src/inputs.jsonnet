@@ -1,8 +1,6 @@
 local facebookads = import "/<common>/in-marketingchannels-facebookads/inputs.jsonnet";
 local bingads = import "/<common>/in-marketingchannels-bingads/inputs.jsonnet";
 local googleads = import "/<common>/in-marketingchannels-googleads/inputs.jsonnet";
-local googleanalytics = import "/<common>/in-marketingchannels-googleanalytics/inputs.jsonnet";
-local googleanalytics4 = import "/<common>/in-marketingchannels-googleanalytics4/inputs.jsonnet";
 local linkedin = import "/<common>/in-marketingchannels-linkedinads/inputs.jsonnet";
 local snowflake = import "/<common>/out-marketingchannels-snowflake/inputs.jsonnet";
 local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet";

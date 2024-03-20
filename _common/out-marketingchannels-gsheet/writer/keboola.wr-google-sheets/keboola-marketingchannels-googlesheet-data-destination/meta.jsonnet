@@ -1,3 +1,3 @@
 {
-  name: "Data Destination [OUT-MKT-GOOGLESHEET] /" + InstanceIdShort(),
+  name: "Data Destination [OUT-ADS-PLATFORMS-GOOGLESHEET] /" + InstanceIdShort(),
 }
