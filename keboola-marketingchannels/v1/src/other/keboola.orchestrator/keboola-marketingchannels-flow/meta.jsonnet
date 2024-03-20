@@ -1,3 +1,3 @@
 {
-  name: "Flow [MKT] /" + InstanceIdShort(),
+  name: "Flow [ADS-PLATFORMS] /" + InstanceIdShort(),
 }
