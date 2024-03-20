@@ -1,3 +1,3 @@
 {
-  name: "Data Destination [OUT-MKT-SNOWFLAKE] /" + InstanceIdShort(),
+  name: "Data Destination [OUT-ADS-PLATFORMS-SNOWFLAKE] /" + InstanceIdShort(),
 }

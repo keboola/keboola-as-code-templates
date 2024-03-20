@@ -1,3 +1,3 @@
 {
-  name: "Data Destination [OUT-MKT-BIGQUERY] /" + InstanceIdShort(),
+  name: "Data Destination [OUT-ADS-PLATFORMS-BIGQUERY] /" + InstanceIdShort(),
 }

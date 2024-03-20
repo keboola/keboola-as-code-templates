@@ -1,3 +1,3 @@
 {
-  name: "Data Destination [OUT-MKT-POSTGRESQL] /" + InstanceIdShort(),
+  name: "Data Destination [OUT-ADS-PLATFORMS-POSTGRESQL] /" + InstanceIdShort(),
 }
