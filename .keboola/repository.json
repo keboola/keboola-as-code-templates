@@ -1497,6 +1497,7 @@
       "name": "keboola-ecommerce",
       "description": "Aggregate all your Shopify, WooCommerce, or BigCommerce data to gain comprehensive insights into product inventory, customer behavior, and sales performance.",
       "path": "keboola-ecommerce",
+      "categories": ["E-commerce"],
       "versions": [
         {
           "version": "0.0.1",
