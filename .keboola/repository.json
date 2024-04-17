@@ -1491,6 +1491,29 @@
           "path": "v0"
         }
       ]
-    }
+    },
+    {
+      "id": "keboola-ecommerce",
+      "name": "keboola-ecommerce",
+      "description": "Aggregate all your Shopify, WooCommerce, or BigCommerce data to gain comprehensive insights into product inventory, customer behavior, and sales performance.",
+      "path": "keboola-ecommerce",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage",
+            "kds-team.ex-bigcommerce",
+            "kds-team.ex-shopify",
+            "kds-team.ex-woocommerce"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
   ]
 }
