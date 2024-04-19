@@ -477,7 +477,6 @@
             "leochan.ex-linkedin",
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
-            "keboola.ex-google-analytics-v4",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-snowflake-blob-storage",
