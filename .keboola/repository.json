@@ -1215,7 +1215,7 @@
       "path": "snowpark-streamlit",
       "deprecated": false,
       "categories": [
-        "Tutorials","Data Apps"
+        "Tutorials"
       ],
       "versions": [
         {
