@@ -1,3 +1,3 @@
 {
-  name: "Data Source [IN-MKT-GOOGLEANALYTICS] /" + InstanceIdShort(),
+  name: "Data Source [IN-ADSPLATFORMS-GOOGLEANALYTICS] /" + InstanceIdShort(),
 }
