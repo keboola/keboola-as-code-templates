@@ -2,11 +2,12 @@ local facebookads = import "/<common>/in-marketingchannels-facebookads/inputs.js
 local bingads = import "/<common>/in-marketingchannels-bingads/inputs.jsonnet";
 local googleads = import "/<common>/in-marketingchannels-googleads/inputs.jsonnet";
 local googleanalytics = import "/<common>/in-marketingchannels-googleanalytics/inputs.jsonnet";
+local googleanalytics4 = import "/<common>/in-marketingchannels-googleanalytics4/inputs.jsonnet";
 local linkedin = import "/<common>/in-marketingchannels-linkedinads/inputs.jsonnet";
-local snowflake = import "/<common>/out-marketingchannels-snowflake/inputs.jsonnet";
-local bigquery = import "/<common>/out-marketingchannels-bigquery/inputs.jsonnet";
-local gsheet = import "/<common>/out-marketingchannels-gsheet/inputs.jsonnet";
-local postgresql = import "/<common>/out-marketingchannels-postgresql/inputs.jsonnet";
+local snowflake = import "/<common>/out-marketingchannels-snowflake/v0/inputs.jsonnet";
+local bigquery = import "/<common>/out-marketingchannels-bigquery/v0/inputs.jsonnet";
+local gsheet = import "/<common>/out-marketingchannels-gsheet/v0/inputs.jsonnet";
+local postgresql = import "/<common>/out-marketingchannels-postgresql/v0/inputs.jsonnet";
 {
   stepsGroups: [
     {
@@ -49,7 +50,7 @@ local postgresql = import "/<common>/out-marketingchannels-postgresql/inputs.jso
     },
     {
       description: "Google Analytics",
-      required: "zeroOrOne",
+      required: "optional",
       steps: [
         {
           icon: "component:keboola.ex-google-analytics-v4",
@@ -58,6 +59,14 @@ local postgresql = import "/<common>/out-marketingchannels-postgresql/inputs.jso
           dialogName: "Analytics Data Source", 
           dialogDescription: "Export data from multiple Ads platform into Google Analytics to provide you a bigger picture of your customer journeys.",
           inputs: googleanalytics
+        },
+        {
+          icon: "component:keboola.ex-google-analytics-v4",
+          name: "Google Analytics 4",
+          description: "Google Analytics 4 - Data Source",
+          dialogName: "Analytics Data Source", 
+          dialogDescription: "Export data from multiple Ads platform into Google Analytics 4 to provide you a bigger picture of your customer journeys.",
+          inputs: googleanalytics4
         }
       ]
     },

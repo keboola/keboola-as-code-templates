@@ -1,9 +1,9 @@
 -- creates a main list of surveys:
 CREATE TABLE "out_survey"
 (
-    "survey_id" VARCHAR(255) NOT NULL,
-    "survey_title" VARCHAR(255),
-    "survey_nickname" VARCHAR(255)
+    "survey_id" TEXT NOT NULL,
+    "survey_title" TEXT,
+    "survey_nickname" TEXT
 );
 
 INSERT INTO "out_survey"

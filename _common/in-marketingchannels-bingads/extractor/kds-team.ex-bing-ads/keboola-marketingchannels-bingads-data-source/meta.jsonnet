@@ -1,3 +1,3 @@
 {
-  name: "Data Source [IN-MKT-BINGADS] /" + InstanceIdShort(),
+  name: "Data Source [IN-ADS-PLATFORMS-BINGADS] /" + InstanceIdShort(),
 }

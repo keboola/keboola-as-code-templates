@@ -3,15 +3,15 @@
 -- question_family and question_subtype could be useful for aggregating data
 CREATE TABLE "out_question"
 (
-    "question_id" VARCHAR(255) NOT NULL,
-    "survey_id" VARCHAR(255),
-    "survey_title" VARCHAR(255),
-    "question_heading" VARCHAR,
-    "description" VARCHAR,
-    "question_position" VARCHAR(255),
-    "question_family" VARCHAR(255),
-    "question_subtype" VARCHAR(255),
-    "question_is_visible" VARCHAR(255)
+    "question_id" TEXT NOT NULL,
+    "survey_id" TEXT,
+    "survey_title" TEXT,
+    "question_heading" TEXT,
+    "description" TEXT,
+    "question_position" TEXT,
+    "question_family" TEXT,
+    "question_subtype" TEXT,
+    "question_is_visible" TEXT
 );
 
 INSERT INTO "out_question"
