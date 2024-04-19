@@ -65,12 +65,12 @@ where ff."fields_type" = 'yes_no'
 -- creates table with all the answer options for every question, including rating and yes_no:
 CREATE TABLE "out_answer_option"
 (
-    "answer_option_id" VARCHAR(255) NOT NULL,
-    "question_id" VARCHAR(255),
-    "question_heading" VARCHAR,
-    "choice_id" VARCHAR(255),
-    "choice_text" VARCHAR(255),
-    "field_type" VARCHAR(255)
+    "answer_option_id" TEXT NOT NULL,
+    "question_id" TEXT,
+    "question_heading" TEXT,
+    "choice_id" TEXT,
+    "choice_text" TEXT,
+    "field_type" TEXT
 );
 
 INSERt INTO "out_answer_option"

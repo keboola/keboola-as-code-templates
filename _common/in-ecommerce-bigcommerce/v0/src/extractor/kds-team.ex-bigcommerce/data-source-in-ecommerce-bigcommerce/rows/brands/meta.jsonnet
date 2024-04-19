@@ -1,0 +1,4 @@
+{
+  name: "Brands",
+  isDisabled: false,
+}
