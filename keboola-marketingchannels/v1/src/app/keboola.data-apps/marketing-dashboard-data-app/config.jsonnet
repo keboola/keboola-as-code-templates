@@ -16,6 +16,7 @@
   },
   parameters: {
     dataApp: {
+      streamlitAuthEnabled: true,
       git: {
         branch: "main",
         entrypoint: "online_marketing.py",
