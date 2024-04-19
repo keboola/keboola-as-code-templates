@@ -597,6 +597,69 @@
       ]
     },
     {
+      "id": "keboola-analytics-googleanalytics4",
+      "name": "Google Analytics 4",
+      "description": "Aggregate all your Google Analytics (GA4) data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "requirements":
+        {
+          "backends": ["snowflake"],
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage"
+          ]
+        },
+      "path": "keboola-analytics-googleanalytics4",
+      "deprecated": false,
+      "categories": [
+        "Analytics"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "googleanalytics",
+      "name": "Universal Analytics",
+      "description": "Aggregate all your Universal Analytics (UA) data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "categories": [
+        "Analytics"
+      ],
+      "deprecated": true,
+      "path": "keboola-analytics-universalanalytics",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-snowflake-blob-storage"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
       "id": "adsplatforms",
       "name": "Advertising Platforms",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
@@ -1626,69 +1689,6 @@
           "stable": false,
           "components": [
             "keboola.data-apps"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "keboola-analytics-googleanalytics4",
-      "name": "Google Analytics 4",
-      "description": "Aggregate all your Google Analytics (GA4) data and transform it into even more powerful customer insights and smarter marketing strategies.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage"
-          ]
-        },
-      "path": "keboola-analytics-googleanalytics4",
-      "deprecated": false,
-      "categories": [
-        "Analytics"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
-      "id": "googleanalytics",
-      "name": "Universal Analytics",
-      "description": "Aggregate all your Universal Analytics (UA) data and transform it into even more powerful customer insights and smarter marketing strategies.",
-      "categories": [
-        "Analytics"
-      ],
-      "deprecated": true,
-      "path": "keboola-analytics-universalanalytics",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
           ],
           "path": "v0"
         }
