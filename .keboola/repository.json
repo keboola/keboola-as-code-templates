@@ -1471,27 +1471,6 @@
       ]
     },
     {
-      "id": "test-stepgroups",
-      "name": "TEST - STEPGROUPS",
-      "description": "Desc",
-      "categories": [
-        "CRM"
-      ],
-      "path": "test-stepgroups",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-mailchimp",
-            "kds-team.ex-hubspot-crm"
-          ],
-          "path": "v0"
-        }
-      ]
-    },
-    {
       "id": "keboola-ecommerce",
       "name": "E-commerce Insights",
       "description": "Aggregate all your Shopify, WooCommerce, or BigCommerce data to gain comprehensive insights into product inventory, customer behavior, and sales performance.",
