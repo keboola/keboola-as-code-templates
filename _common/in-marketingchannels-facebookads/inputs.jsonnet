@@ -26,12 +26,12 @@
     default: 'last_90d',
     options: [
       {
-        value: 'last_month',
-        label: '1 month ago',
+        value: 'last_7d',
+        label: '1 week ago',
       },
       {
-        value: 'last_60d',
-        label: '2 months ago',
+        value: 'last_month',
+        label: '1 month ago',
       },
       {
         value: 'last_90d',
@@ -40,7 +40,7 @@
       {
         value: 'last_year',
         label: '6 months ago',
-      },
+      }
     ],
   },
 ]
