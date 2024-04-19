@@ -1,3 +1,3 @@
 {
-  name: "Transformation [IN-MKT-LINKEDIN] /" + InstanceIdShort(),
+  name: "Transformation [IN-ADS-PLATFORMS-LINKEDIN] /" + InstanceIdShort(),
 }
