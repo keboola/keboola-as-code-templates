@@ -9,29 +9,25 @@
       "id": "api-demo",
       "name": "API Demo (UI dev)",
       "description": "Template from the examples of https://templates.keboola.com/v1/documentation/",
-      "path": "_demo",
       "deprecated": true,
       "versions": [
         {
           "version": "0.0.1",
           "description": "",
           "stable": false,
-          "components": ["common:settings"],
-          "path": "v0"
+          "components": ["common:settings"]
         },
         {
           "version": "1.0.0",
           "description": "",
           "stable": false,
-          "components": ["common:settings"],
-          "path": "v1"
+          "components": ["common:settings"]
         },
         {
           "version": "2.0.0",
           "description": "With Google Drive Writer OAuth",
           "stable": false,
-          "components": ["common:settings"],
-          "path": "v2"
+          "components": ["common:settings"]
         }
       ]
     },
@@ -39,15 +35,13 @@
       "id": "api-demo-minimal",
       "name": "API Demo Minimal (UI dev)",
       "description": "The template contains only the ex-generic-v2 configuration.",
-      "path": "_demo-minimal",
       "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
           "description": "",
           "stable": false,
-          "components": ["ex-generic-v2"],
-          "path": "v1"
+          "components": ["ex-generic-v2"]
         }
       ]
     },
@@ -60,7 +54,6 @@
         "ThoughtSpot"
       ],
       "deprecated": true,
-      "path": "thoughtspot-analytics-googleanalytics",
       "versions": [
         {
           "version": "1.0.0",
@@ -71,8 +64,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -470,7 +462,6 @@
         "E-commerce"
       ],
       "deprecated": true,
-      "path": "keboola-ecommerce-shopify",
       "versions": [
         {
           "version": "1.0.0",
@@ -486,8 +477,7 @@
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql",
             "jakub-bartel.wr-data-studio"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
@@ -642,7 +632,6 @@
         "Analytics"
       ],
       "deprecated": true,
-      "path": "keboola-analytics-universalanalytics",
       "versions": [
         {
           "version": "1.0.0",
@@ -654,8 +643,7 @@
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
@@ -684,25 +672,6 @@
       "deprecated": false,
       "path": "keboola-marketingchannels",
       "versions": [
-        {
-          "version": "1.0.1",
-          "description": "",
-          "deprecated": true,
-          "stable": false,
-          "components": [
-            "kds-team.ex-bing-ads",
-            "leochan.ex-linkedin",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-google-analytics-v4",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-pgsql",
-            "keboola.data-apps"
-          ],
-          "path": "v1"
-        },
         {
           "version": "2.0.0",
           "description": "",
@@ -1583,7 +1552,6 @@
             "keboola.data-apps"
           ]
         },
-      "path": "marketing-cashflow",
       "deprecated": true,
       "categories": [
         "Data Apps", "Marketing"
@@ -1603,8 +1571,7 @@
             "keboola.snowflake-transformation",
             "kds-team.ex-tiktok-ads",
             "leochan.ex-linkedin"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
@@ -1710,7 +1677,6 @@
       "categories": [
         "Artificial Intelligence", "Data Apps"
       ],
-      "path": "confluence-chatbot",
       "deprecated": true,
       "versions": [
         {
@@ -1721,8 +1687,7 @@
             "keboola.data-apps",
             "kds-team.ex-confluence",
             "kds-team.wr-pinecone"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
