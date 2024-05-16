@@ -11,7 +11,7 @@
   {
     id: "ex-linkedin-start-day",
     name: "Start Day",
-    description: "Start time range of the analytics",
+    description: "",
     type: "int",
     kind: "input",
     rules: "min=1,max=31",
@@ -20,7 +20,7 @@
   {
     id: "ex-linkedin-start-month",
     name: "Start Month",
-    description: "Start time range of the analytics",
+    description: "",
     type: "int",
     kind: "input",
     rules: "min=1,max=12",
@@ -29,7 +29,7 @@
   {
     id: "ex-linkedin-start-year",
     name: "Start Year",
-    description: "Start time range of the analytics",
+    description: "",
     type: "int",
     kind: "input",
     rules: "min=2000,max=2100",
@@ -38,7 +38,7 @@
   {
     id: "ex-linkedin-end-day",
     name: "End Day",
-    description: "End time range of the analytics",
+    description: "",
     type: "int",
     kind: "input",
     rules: "min=1,max=31",
@@ -47,7 +47,7 @@
   {
     id: "ex-linkedin-end-month",
     name: "End Month",
-    description: "End time range of the analytics",
+    description: "",
     type: "int",
     kind: "input",
     rules: "min=1,max=12",
@@ -56,7 +56,7 @@
   {
     id: "ex-linkedin-end-year",
     name: "End Year",
-    description: "End time range of the analytics",
+    description: "",
     type: "int",
     kind: "input",
     rules: "min=2000,max=2100",

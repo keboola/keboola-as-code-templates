@@ -1,3 +1,3 @@
 {
-  name: "Data Source [IN-MKT-FACEBOOK] /" + InstanceIdShort(),
+  name: "Data Source [IN-ADS-PLATFORMS-FACEBOOK] /" + InstanceIdShort(),
 }

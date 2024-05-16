@@ -37,7 +37,7 @@
         type: "string",
         nullable: true,
         default: "",
-        size: "5000",
+        size: "255000",
       },
     ],
   },

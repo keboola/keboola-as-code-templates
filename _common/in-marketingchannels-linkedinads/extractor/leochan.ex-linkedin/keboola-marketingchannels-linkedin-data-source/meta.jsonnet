@@ -1,3 +1,3 @@
 {
-  name: "Data Source [IN-MKT-LINKEDIN] /" + InstanceIdShort(),
+  name: "Data Source [IN-ADS-PLATFORMS-LINKEDIN] /" + InstanceIdShort(),
 }

@@ -1,3 +1,3 @@
 {
-  name: "Transformation [IN-MKT-BINGADS] /" + InstanceIdShort(),
+  name: "Transformation [IN-ADS-PLATFORMS-BINGADS] /" + InstanceIdShort(),
 }

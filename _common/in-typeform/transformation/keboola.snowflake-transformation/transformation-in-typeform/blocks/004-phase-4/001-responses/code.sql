@@ -38,17 +38,17 @@ delete from "responses_pivoted" where RESPONSE = '';
 
 CREATE TABLE "out_responses"
 (
-    "response_id" VARCHAR(255) NOT NULL,
-    "session_id" VARCHAR(255),
-    "question_id" VARCHAR(255),
-    "answer_option_id" VARCHAR(255),
-    "ip_address" VARCHAR(255),
-    "recipient_id" VARCHAR(255),
+    "response_id" TEXT NOT NULL,
+    "session_id" TEXT,
+    "question_id" TEXT,
+    "answer_option_id" TEXT,
+    "ip_address" TEXT,
+    "recipient_id" TEXT,
     "date_created" DATE,
-    "response_status" VARCHAR(255),
-    "response_text" VARCHAR(2000),
-    "type_pivot" VARCHAR(255),
-    "field_type" VARCHAR(255)
+    "response_status" TEXT,
+    "response_text" TEXT,
+    "type_pivot" TEXT,
+    "field_type" TEXT
 );
 
 INSERT INTO "out_responses"
