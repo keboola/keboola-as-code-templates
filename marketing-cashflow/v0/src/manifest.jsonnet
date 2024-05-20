@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("ads-spend-vs-budget-ads-spend-vs-budget-tracker"),
+  },
   configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.orchestrator",

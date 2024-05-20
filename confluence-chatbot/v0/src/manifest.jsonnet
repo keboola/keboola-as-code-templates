@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("custom-confluence-chatbot"),
+  },
   configurations: [
     {
       componentId: "keboola.data-apps",

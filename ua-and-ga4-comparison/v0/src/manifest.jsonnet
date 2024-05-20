@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("google-analytics-comparison-ua-ga4-comparison-app"),
+  },
   configurations: std.filter(function(v) v != null,[
     {
       componentId: "keboola.data-apps",
