@@ -1,6 +1,6 @@
 { mainConfig: {
     componentId: "keboola.orchestrator",
-    id: ConfigId("keboola-analytics-googleanalytics-orchestration"),
+    id: ConfigId("flow-analytics-googleanalytics4"),
   },
   configurations: std.filter(function(v) v != null, [
     {

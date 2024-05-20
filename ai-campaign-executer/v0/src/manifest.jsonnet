@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("bdl-ai-marketing-shopify-twilio"),
+  },
   configurations: [
     {
       componentId: "kds-team.app-generative-ai",
