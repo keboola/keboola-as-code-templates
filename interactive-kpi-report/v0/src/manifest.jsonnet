@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("flow-1-interactive-kpi-report-kpi"),
+  },
   configurations: [
     {
       componentId: "keboola.data-apps",

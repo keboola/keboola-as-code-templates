@@ -51,18 +51,9 @@ INSERT INTO  "bdm_customers"
             C."default_address__country"             AS CUSTOMER_BILLING_COUNTRY,
             LS."shipping_address__city"              AS CUSTOMER_SHIPPING_CITY,
             LS."shipping_address__country"           AS CUSTOMER_SHIPPING_COUNTRY,
-            CASE WHEN C."orders_count" = '' 
-                  THEN null
-            	ELSE C."orders_count" END	      AS ORDERS_COUNT_TOTAL,
-            CASE WHEN C."total_spent" = '' 
-                  THEN null
-           		ELSE C."total_spent" END            AS TOTAL_SPEND,
-            DIV0(CASE WHEN C."total_spent" = '' 
-                  THEN 0
-           		ELSE C."total_spent" END, 
-                  CASE WHEN C."orders_count" = '' 
-                  THEN 0
-                  ELSE C."orders_count" END)         AS AVG_ORDER_VALUE,
+            C."orders_count"				                 AS ORDERS_COUNT_TOTAL,
+            C."total_spent"				                   AS TOTAL_SPEND,
+            DIV0(C."total_spent", C."orders_count")  AS AVG_ORDER_VALUE,
             R_SCORE                                  AS RECENCY_SCORE,
             R_RAW                                    AS DAYS_SINCE_LAST_ORDER,
             F_SCORE                                  AS FREQUENCY_SCORE,

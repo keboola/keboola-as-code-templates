@@ -3,7 +3,7 @@
     oauth_api: Input("oauth-google-sheets"),
   },
   parameters: {
-    tables: [
+    tables: 
       {
         id: 64957,
         action: "update",
@@ -14,11 +14,10 @@
         fileId: Input("google-sheet-id"),
         sheetId: 1942861239,
       },
-    ]
   },
   storage: {
     input: {
-      tables: [
+      tables: 
         {
           source: "out.c-marketing-tr-" + InstanceIdShort() + ".online_marketing",
           destination: "out.c-marketing-tr-" + InstanceIdShort() + ".online_marketing.csv",
@@ -27,7 +26,6 @@
           where_operator: "eq",
           columns: [],
         },
-      ]
     },
   },
 }

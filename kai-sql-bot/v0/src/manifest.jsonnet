@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("flow-kai-sql-bot"),
+  },
   configurations: [
     {
       componentId: "keboola.data-apps",
