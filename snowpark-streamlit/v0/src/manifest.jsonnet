@@ -1,4 +1,7 @@
-{
+ { mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("RFM-shopify-streamlit"),
+  },
   configurations: [
     {
       componentId: "keboola.data-apps",
