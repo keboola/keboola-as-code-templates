@@ -1,4 +1,7 @@
-{
+{ mainConfig: {
+    componentId: "keboola.orchestrator",
+    id: ConfigId("flow-interactive-keboola-sheets"),
+  },
   configurations: [
     {
       componentId: "keboola.data-apps",
