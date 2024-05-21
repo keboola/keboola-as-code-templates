@@ -662,9 +662,9 @@
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-pgsql",
-            "keboola.data-apps"
-          ]
+            "keboola.wr-db-pgsql"
+          ],
+          "features": ["sandboxes-data-apps"]
         },
       "categories": [
         "Marketing","Data Apps"
@@ -1421,9 +1421,9 @@
         "backend": ["snowflake"],
         "components": [
           "kds-team.ex-shopify",
-          "keboola.wr-snowflake-blob-storage",
-          "keboola.data-apps"
-        ]
+          "keboola.wr-snowflake-blob-storage"
+        ],
+        "features": ["sandboxes-data-apps"]
       },
       "path": "snowpark-streamlit",
       "deprecated": false,
@@ -1452,7 +1452,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "components": ["keboola.data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "interactive-keboola-sheets",
       "deprecated": false,
@@ -1481,9 +1481,9 @@
           "components": [
             "kds-team.ex-shopify",
             "kds-team.app-generative-ai",
-            "kds-team.wr-twilio",
-            "keboola.data-apps"
-          ]
+            "kds-team.wr-twilio"
+          ],
+          "features": ["sandboxes-data-apps"]
         },
       "path": "ai-campaign-executer",
       "deprecated": false,
@@ -1513,7 +1513,8 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "components": ["kds-team.ex-shopify", "kds-team.wr-generic","keboola.data-apps"]
+          "components": ["kds-team.ex-shopify", "kds-team.wr-generic"],
+          "features": ["sandboxes-data-apps"]
         },
       "path": "interactive-kpi-report",
       "deprecated": false,
@@ -1548,9 +1549,9 @@
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
             "kds-team.ex-tiktok-ads",
-            "leochan.ex-linkedin",
-            "keboola.data-apps"
-          ]
+            "leochan.ex-linkedin"
+          ],
+          "features": ["sandboxes-data-apps"]
         },
       "deprecated": true,
       "categories": [
@@ -1584,9 +1585,9 @@
           "backends": ["snowflake"],
           "components": [
             "keboola.ex-google-analytics-v4",
-            "keboola.ex-google-bigquery-v2",
-            "keboola.data-apps"
-          ]
+            "keboola.ex-google-bigquery-v2"
+          ],
+          "features": ["sandboxes-data-apps"]
         },
       "path": "ua-and-ga4-comparison",
       "deprecated": false,
@@ -1616,7 +1617,7 @@
       "requirements": 
         {
           "backends": ["snowflake"],
-          "components": ["keboola.data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "kai-promptlab",
       "deprecated": false,
@@ -1642,7 +1643,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "components": ["keboola.data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "kai-sql-bot",
       "deprecated": false,
@@ -1670,9 +1671,9 @@
           "backends": ["snowflake"],
           "components": [
             "kds-team.ex-confluence",
-            "kds-team.wr-pinecone",
-            "keboola.data-apps"
-          ]
+            "kds-team.wr-pinecone"
+          ],
+          "features": ["sandboxes-data-apps"]
         },
       "categories": [
         "Artificial Intelligence", "Data Apps"
