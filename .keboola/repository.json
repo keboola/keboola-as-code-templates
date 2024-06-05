@@ -664,7 +664,7 @@
             "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "categories": [
         "Marketing","Data Apps"
@@ -1423,7 +1423,7 @@
           "kds-team.ex-shopify",
           "keboola.wr-snowflake-blob-storage"
         ],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
       },
       "path": "snowpark-streamlit",
       "deprecated": false,
@@ -1452,7 +1452,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "path": "interactive-keboola-sheets",
       "deprecated": false,
@@ -1483,7 +1483,7 @@
             "kds-team.app-generative-ai",
             "kds-team.wr-twilio"
           ],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "path": "ai-campaign-executer",
       "deprecated": false,
@@ -1514,7 +1514,7 @@
         {
           "backends": ["snowflake"],
           "components": ["kds-team.ex-shopify", "kds-team.wr-generic"],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "path": "interactive-kpi-report",
       "deprecated": false,
@@ -1551,7 +1551,7 @@
             "kds-team.ex-tiktok-ads",
             "leochan.ex-linkedin"
           ],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "deprecated": true,
       "categories": [
@@ -1587,7 +1587,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.ex-google-bigquery-v2"
           ],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "path": "ua-and-ga4-comparison",
       "deprecated": false,
@@ -1617,7 +1617,7 @@
       "requirements": 
         {
           "backends": ["snowflake"],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "path": "kai-promptlab",
       "deprecated": false,
@@ -1643,7 +1643,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "path": "kai-sql-bot",
       "deprecated": false,
@@ -1673,7 +1673,7 @@
             "kds-team.ex-confluence",
             "kds-team.wr-pinecone"
           ],
-          "features": ["sandboxes-data-apps"]
+          "features": ["data-apps-proxy"]
         },
       "categories": [
         "Artificial Intelligence", "Data Apps"
