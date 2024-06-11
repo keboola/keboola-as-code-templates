@@ -27,4 +27,16 @@
       ],
     },
   },
+  authorization: {
+    app_proxy: {
+      auth_providers: [],
+      auth_rules: [
+        {
+          type: "pathPrefix",
+          value: "/",
+          auth_required: false
+        }
+      ]
+    }
+  }
 }
