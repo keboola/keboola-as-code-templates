@@ -360,7 +360,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "SnowflakeWriterComponentId()",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -377,7 +377,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "SnowflakeWriterComponentId()",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
