@@ -79,7 +79,7 @@
           "kds-team.ex-hubspot-crm",
           "keboola.wr-thoughtspot",
           "keboola.wr-google-bigquery-v2",
-          "keboola.wr-snowflake-blob-storage"
+          "SnowflakeWriterComponentId()"
         ]
       },
       "categories": [
@@ -96,7 +96,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "SnowflakeWriterComponentId()"
           ],
           "path": "v1"
         }
