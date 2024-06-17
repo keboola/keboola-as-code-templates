@@ -1450,7 +1450,7 @@
           "features": ["data-apps-proxy"]
         },
       "path": "interactive-keboola-sheets",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps"
       ],
@@ -1774,6 +1774,32 @@
           "stable": false,
           "components": [
             "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-data-editor",
+      "name": "Keboola Data Editor",
+      "description": "Simplify your data editing and management within your company using this demo data app that showcases the interaction between Streamlit and Keboola Storage.",
+      "requirements":
+        {
+          "backends": ["snowflake"],
+          "features": ["data-apps-proxy"]
+        },
+      "path": "keboola-data-editor",
+      "deprecated": false,
+      "categories": [
+        "Data Apps"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
           ],
           "path": "v0"
         }
