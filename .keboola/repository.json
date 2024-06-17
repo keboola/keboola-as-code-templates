@@ -78,8 +78,7 @@
         "components": [
           "kds-team.ex-hubspot-crm",
           "keboola.wr-thoughtspot",
-          "keboola.wr-google-bigquery-v2",
-          "keboola.wr-db-snowflake"
+          "keboola.wr-google-bigquery-v2"
         ]
       },
       "categories": [
@@ -115,8 +114,7 @@
           "keboola.ex-google-ads",
           "keboola.ex-sklik",
           "keboola.wr-thoughtspot",
-          "keboola.wr-google-bigquery-v2",
-          "keboola.wr-db-snowflake"
+          "keboola.wr-google-bigquery-v2"
         ]
       },
       "categories": [
@@ -153,7 +151,6 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -219,8 +216,7 @@
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
           "keboola.ex-google-ads",
-          "keboola.ex-sklik",
-          "keboola.wr-db-snowflake"
+          "keboola.ex-sklik"
         ]
       },
       "categories": [
@@ -256,7 +252,6 @@
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.dbt-transformation"
           ]
         },
@@ -320,7 +315,6 @@
           "keboola.wr-db-mysql",
           "keboola.wr-db-pgsql",
           "keboola.wr-google-sheets",
-          "keboola.wr-db-snowflake",
           "kds-team.ex-linkedin-pages",
           "keboola.wr-google-bigquery-v2"
         ]
@@ -360,7 +354,6 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -395,7 +388,6 @@
             "keboola.ex-pipedrive",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -430,7 +422,6 @@
             "kds-team.ex-salesforce-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -492,7 +483,6 @@
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -527,7 +517,6 @@
             "leochan.ex-asana",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -562,7 +551,6 @@
             "fisa.ex-typeform",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -598,8 +586,7 @@
             "kds-team.ex-google-search-console",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake"
+            "keboola.wr-google-sheets"
           ]
         },
       "path": "keboola-analytics-googleanalytics4",
@@ -661,7 +648,6 @@
             "keboola.ex-google-ads",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "features": ["data-apps-proxy"]
@@ -1391,6 +1377,16 @@
       "id": "mailchimp",
       "name": "Emailing Mailchimp",
       "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet, big query, snowflake DB or postgres.",
+      "requirements":
+        {
+        "backend": ["snowflake"],
+        "components": [
+          "keboola.ex-mailchimp",
+          "keboola.wr-google-sheets",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-db-pgsql"
+        ]
+      },
       "categories": [
         "Mailing"
       ],
@@ -1420,8 +1416,7 @@
         {
         "backend": ["snowflake"],
         "components": [
-          "kds-team.ex-shopify",
-          "keboola.wr-db-snowflake"
+          "kds-team.ex-shopify"
         ],
           "features": ["data-apps-proxy"]
       },
@@ -1703,7 +1698,6 @@
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
             "kds-team.ex-bigcommerce",
             "kds-team.ex-shopify",
             "kds-team.ex-woocommerce"
