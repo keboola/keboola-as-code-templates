@@ -5,11 +5,23 @@
       git: {
         repository: "https://github.com/keboola/planning-sheets-data-app/",
         branch: "main",
-        entrypoint: "plan_data_editor.py",
+        entrypoint: "streamlit_app.py",
       },
       secrets: {
         "#kbc_storage_token": Input("kbc_storage_token"),
       },
     },
   },
+  authorization: {
+    app_proxy: {
+      auth_providers: [],
+      auth_rules: [
+        {
+          type: "pathPrefix",
+          value: "/",
+          auth_required: false
+        }
+      ]
+    }
+  }
 }
