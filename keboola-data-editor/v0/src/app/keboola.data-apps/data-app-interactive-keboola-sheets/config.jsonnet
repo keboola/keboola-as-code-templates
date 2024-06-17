@@ -10,6 +10,7 @@
       secrets: {
         "#kbc_storage_token": Input("kbc_storage_token"),
       },
+      slug: "keboola-data-editor-demo",
     },
   },
   authorization: {

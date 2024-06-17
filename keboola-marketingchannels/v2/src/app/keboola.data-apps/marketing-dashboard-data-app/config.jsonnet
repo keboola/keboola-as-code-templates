@@ -23,5 +23,17 @@
         repository: "https://github.com/keboola/marketing-dashboard-data-app.git"
       }
     }
+  },
+  authorization: {
+    app_proxy: {
+      auth_providers: [],
+      auth_rules: [
+        {
+          type: "pathPrefix",
+          value: "/",
+          auth_required: false
+        }
+      ]
+    }
   }
 }
