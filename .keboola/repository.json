@@ -1449,7 +1449,6 @@
           "backends": ["snowflake"],
           "features": ["data-apps-proxy"]
         },
-      "path": "interactive-keboola-sheets",
       "deprecated": true,
       "categories": [
         "Data Apps"
@@ -1462,7 +1461,6 @@
           "components": [
             "keboola.data-apps"
           ],
-          "path": "v0"
         }
       ]
     },
