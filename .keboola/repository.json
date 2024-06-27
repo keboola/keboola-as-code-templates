@@ -1802,6 +1802,36 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "hello-world",
+      "name": "Hello World",
+      "description": "Experience a Streamlit web app with interactive widgets and optimized performance, showcasing caching for fast data loading and a user-friendly interface.",
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": null,
+        "features": [
+          "data-apps-proxy",
+          "sandboxes-data-apps"
+        ]
+      },
+      "categories": [
+        "Data Apps", "Tutorials"
+      ],
+      "path": "hello-world",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
