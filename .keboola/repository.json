@@ -1832,6 +1832,29 @@
           "path": "v0"
         }
       ]
-    }
+    },
+    {
+      "id": "snowflake-extortion-campaign",
+      "name": "Snowflake Extortion Campaign",
+      "description": "Detection of anomaly and suspicious activity in query and login logs. These tables are carefully crafted to identify potential security threats and unusual behavior within your systems.",
+      "requirements": {
+        "backends": ["snowflake"],
+        "components": ["keboola.ex-db-snowflake"],
+        "features": null
+      },
+      "categories": ["Security"],
+      "path": "snowflake-extortion-campaign",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-db-snowflake"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
   ]
 }
