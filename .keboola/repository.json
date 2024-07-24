@@ -1862,7 +1862,6 @@
       "description": "Generate responses for reviews on different platforms.",
       "requirements":
         {
-          "backends": ["snowflake"],
           "features": ["sandboxes-data-apps"]
         },
       "path": "review-app-template",
