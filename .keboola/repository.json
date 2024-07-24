@@ -1855,6 +1855,33 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "review-app-template",
+      "name": "Review App Template",
+      "description": "Generate responses for reviews on different platforms.",
+      "requirements":
+        {
+          "backends": ["snowflake"],
+          "features": ["data-apps-proxy","sandboxes-data-apps"]
+        },
+      "path": "review-app-template",
+      "deprecated": false,
+      "categories": [
+        "Data Apps"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "apify.apify"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
