@@ -104,6 +104,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
+      "deprecated": true,
       "requirements": 
         {
         "backend": ["snowflake"],
@@ -120,7 +121,6 @@
         "E-commerce",
         "ThoughtSpot"
       ],
-      "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
           "version": "1.0.0",
@@ -134,8 +134,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-snowflake"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -177,6 +176,7 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "deprecated": true,
       "requirements":
         {
           "backends": ["snowflake"],
@@ -189,7 +189,6 @@
       "categories": [
         "Data Governance"
       ],
-      "path": "keboola-metadata-to-datahub",
       "versions": [
         {
           "version": "1.0.1",
@@ -199,8 +198,7 @@
             "keboola.ex-telemetry-data",
             "kds-team.ex-kbc-project-metadata-v2",
             "kds-team.app-datahub"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
