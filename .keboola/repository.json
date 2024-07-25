@@ -246,6 +246,7 @@
       "requirements": 
         {
           "backends": ["snowflake"],
+          "features": ["native-types"],
           "components": [
             "keboola.ex-http",
             "keboola.wr-db-mssql-v2",
