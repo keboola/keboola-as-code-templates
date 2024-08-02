@@ -1,13 +1,13 @@
 {
   stepsGroups: [
     {
-      description: "Snowflake Security",
+      description: "Snowflake Data Source",
       required: "all",
       steps: [
         {
           icon: "component:keboola.ex-db-snowflake",
           name: "Snowflake Data Source",
-          description: "Setup inputs for 'user_timeline' table.",
+          description: "Setup inputs for download data from your Snowflake database.",
           inputs: [
             {
               id: "ex-snowflake-db-host",
@@ -43,24 +43,6 @@
               showif: "[ex-snowflake-db-host] != ''",
               type: "string",
               kind: "hidden",
-            },
-            {
-              id: "ex-snowflake-db-database",
-              name: "Database Name",
-              description: "Insert name of your database.",
-              type: "string",
-              kind: "input",
-              default: "DatabaseName",
-              showif: "[ex-snowflake-db-host] != ''",
-            },
-            {
-              id: "ex-snowflake-db-schema",
-              name: "Schema",
-              description: "Insert database schema.",
-              type: "string",
-              kind: "input",
-              default: "Schema",
-              showif: "[ex-snowflake-db-host] != ''",
             },
             {
               id: "ex-snowflake-db-warehouse",

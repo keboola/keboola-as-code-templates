@@ -1832,8 +1832,8 @@
       ]
     },
     {
-      "id": "snowflake-extortion-campaign",
-      "name": "Snowflake Extortion Campaign",
+      "id": "snowflake-security-checkup",
+      "name": "Snowflake Security Checkup",
       "description": "Detection of anomaly and suspicious activity in query and login logs. These tables are carefully crafted to identify potential security threats and unusual behavior within your systems.",
       "requirements": {
         "backends": ["snowflake"],
@@ -1841,7 +1841,7 @@
         "features": null
       },
       "categories": ["Security"],
-      "path": "snowflake-extortion-campaign",
+      "path": "snowflake-security-checkup",
       "versions": [
         {
           "version": "0.0.1",
@@ -1865,7 +1865,8 @@
       "path": "review-app-template",
       "deprecated": false,
       "categories": [
-        "Data Apps"
+        "Data Apps",
+        "AI Automations"
       ],
       "versions": [
         {
