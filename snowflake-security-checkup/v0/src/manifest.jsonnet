@@ -1,8 +1,27 @@
 { mainConfig: {
-    componentId: "keboola.ex-db-snowflake",
-    id: ConfigId("snowflake-security-data-source"),
+    componentId: "keboola.orchestrator",
+    id: ConfigId("security-checkup-flow"),
   },
   configurations: [
+    {
+      componentId: "keboola.orchestrator",
+      id: ConfigId("security-checkup-flow"),
+      path: "other/keboola.orchestrator/security-checkup-flow",
+      rows: [],
+    },
+    {
+      componentId: "keboola.scheduler",
+      id: ConfigId("scheduler-for"),
+      path: "schedules/scheduler-for",
+      relations: [
+        {
+          componentId: "keboola.orchestrator",
+          configId: ConfigId("security-checkup-flow"),
+          type: "schedulerFor"
+        }
+      ],
+      rows: []
+    },
     {
       componentId: "keboola.ex-db-snowflake",
       id: ConfigId("snowflake-security-data-source"),
