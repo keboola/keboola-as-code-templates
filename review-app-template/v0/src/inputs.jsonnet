@@ -20,13 +20,20 @@
               rules: "required",
             },
             {
-              id: "apify-dataset-id",
-              name: "Apify Dataset Id",
-              description: "Insert ID of the requested dataset.",
+              id: "apify-actor-id",
+              name: "Apify Actor Id",
+              description: "Insert ID of the Actor you want to run from Apify account.",
               type: "string",
               kind: "input",
               rules: "required",
-            }
+            },
+            {
+              id: "apify-input-start-url",
+              name: "Google Maps URL",
+              description: "",
+              type: "string",
+              kind: "input",
+            },
           ]
         },
       ],
