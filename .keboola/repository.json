@@ -1888,12 +1888,13 @@
       "requirements":
         {
           "backends": [],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "newsletters-data-app",
       "deprecated": false,
       "categories": [
-        "Data Apps"
+        "Data Apps",
+        "AI Automations"
       ],
       "versions": [
         {
@@ -1914,12 +1915,13 @@
       "requirements":
         {
           "backends": [],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "resume-analyzer",
       "deprecated": false,
       "categories": [
-        "Data Apps"
+        "Data Apps",
+        "AI Automations"
       ],
       "versions": [
         {

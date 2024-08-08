@@ -13,8 +13,6 @@
       },
       secrets: {
         "#api_key": Input("openai-api-token"),
-        "#storage_token": Input("kbc_storage_token"),
-        url: Input("keboola-account-url"),
       },
     }
   },

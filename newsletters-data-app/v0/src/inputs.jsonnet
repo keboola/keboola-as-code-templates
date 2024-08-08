@@ -19,22 +19,6 @@
               kind: "hidden",
               rules: "required"
             },
-            {
-              id: "kbc_storage_token",
-              name: "Keboola Token",
-              description: "Insert a storage or your master token.",
-              type: "string",
-              kind: "hidden",
-              rules: "required",
-            },
-            {
-              id: "keboola-account-url",
-              name: "Keboola Account Url",
-              description: "Insert your project location.",
-              type: "string",
-              kind: "input",
-              default: "https://connection.keboola.com/",
-            },
           ],
         },
       ],

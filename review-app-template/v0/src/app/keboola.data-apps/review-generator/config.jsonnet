@@ -13,8 +13,7 @@
       },
       secrets: {
         "#openai_token": Input("openai-token"),
-        "#kbc_token": Input("keboola-storage-token"),
-		"apify_table": "in.c-apify-apify-"+ConfigId("google-reviews") + ".dataset-items",
+		    apify_table: "in.c-apify-apify-" + ConfigId("google-reviews") + ".dataset-items",
       },
     },
   },

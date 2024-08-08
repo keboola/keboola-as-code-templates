@@ -50,14 +50,6 @@
           dialogDescription: "Configure Data App by filling up required secrets.",
           inputs: [
             {
-              id: "keboola-storage-token",
-              name: "Keboola Token",
-              ddescription: "Insert a storage or your master token.",
-              type: "string",
-              kind: "hidden",
-              rules: "required",
-            },
-            {
               id: "openai-token",
               name: "OpenAI Token",
               description: "Insert your token to your OpenAI account.",
