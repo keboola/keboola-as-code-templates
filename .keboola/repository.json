@@ -1934,6 +1934,33 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "rlhf-data-app",
+      "name": "RLHF Knowledge Base Data App",
+      "description": "Upload PDF files, extract text from them, and query the extracted information using this Streamlit app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "rlhf-data-app",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
