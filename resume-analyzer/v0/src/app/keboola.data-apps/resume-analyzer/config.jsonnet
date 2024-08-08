@@ -1,21 +1,21 @@
 {
   parameters: {
     dataApp: {
-      streamlitAuthEnabled: true,
-      slug: "review-generator",
+      slug: "cv-ranker-data-app",
+      streamlitAuthEnabled: false,
       streamlit: {
         "config.toml": '[theme]\nthemeName = "keboola"\nfont = "sans serif"\ntextColor = "#222529"\nbackgroundColor = "#FFFFFF"\nprimaryColor = "#1F8FFF"',
       },
+      secrets: {
+        "#openai_token": Input("data-apps-data-app-secrets-openai-token"),
+        "#lever_token": Input("data-apps-data-app-secrets-lever-token"),
+      },
       git: {
-        repository: "https://github.com/keboola/data-app-review-generator",
+        repository: "https://github.com/keboola/data-app-cv-ranker",
         branch: "main",
         entrypoint: "streamlit_app.py",
       },
-      secrets: {
-        "#openai_token": Input("openai-token"),
-		    apify_table: "in.c-apify-apify-" + ConfigId("google-reviews") + ".dataset-items",
-      },
-    },
+    }
   },
   authorization: {
     app_proxy: {

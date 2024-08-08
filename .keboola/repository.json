@@ -1880,6 +1880,87 @@
           "path": "v0"
         }
       ]
+    },
+        {
+      "id": "newsletters-data-app",
+      "name": "Newsletters Data App Template",
+      "description": "Personalize HTML newsletters for different customer segments within the app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "newsletters-data-app",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "resume-analyzer",
+      "name": "Resume Analyzer Template",
+      "description": "Identify the most suitable candidates for the job using this Streamlit app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "resume-analyzer",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "rlhf-data-app",
+      "name": "RLHF Knowledge Base Data App",
+      "description": "Upload PDF files, extract text from them, and query the extracted information using this Streamlit app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "rlhf-data-app",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }

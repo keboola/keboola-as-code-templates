@@ -20,13 +20,20 @@
               rules: "required",
             },
             {
-              id: "apify-dataset-id",
-              name: "Apify Dataset Id",
-              description: "Insert ID of the requested dataset.",
+              id: "apify-actor-id",
+              name: "Apify Actor Id",
+              description: "Insert ID of the Actor you want to run from Apify account.",
               type: "string",
               kind: "input",
               rules: "required",
-            }
+            },
+            {
+              id: "apify-input-start-url",
+              name: "Google Maps URL",
+              description: "",
+              type: "string",
+              kind: "input",
+            },
           ]
         },
       ],
@@ -42,14 +49,6 @@
           dialogName: "Set up Review Generator", 
           dialogDescription: "Configure Data App by filling up required secrets.",
           inputs: [
-            {
-              id: "keboola-storage-token",
-              name: "Keboola Token",
-              ddescription: "Insert a storage or your master token.",
-              type: "string",
-              kind: "hidden",
-              rules: "required",
-            },
             {
               id: "openai-token",
               name: "OpenAI Token",

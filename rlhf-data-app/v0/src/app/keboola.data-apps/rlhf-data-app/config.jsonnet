@@ -1,21 +1,21 @@
 {
   parameters: {
     dataApp: {
-      streamlitAuthEnabled: true,
-      slug: "review-generator",
+      slug: "rlhf-data-app",
+      streamlitAuthEnabled: false,
       streamlit: {
         "config.toml": '[theme]\nthemeName = "keboola"\nfont = "sans serif"\ntextColor = "#222529"\nbackgroundColor = "#FFFFFF"\nprimaryColor = "#1F8FFF"',
       },
-      git: {
-        repository: "https://github.com/keboola/data-app-review-generator",
-        branch: "main",
-        entrypoint: "streamlit_app.py",
-      },
       secrets: {
-        "#openai_token": Input("openai-token"),
-		    apify_table: "in.c-apify-apify-" + ConfigId("google-reviews") + ".dataset-items",
+        "#api_key": Input("openai-api-token"),
+        "#admin": Input("user-login"),
       },
-    },
+      git: {
+        repository: "https://github.com/keboola/data-app-rhlf",
+        entrypoint: "rlhf_app.py",
+        branch: "main",
+      },
+    }
   },
   authorization: {
     app_proxy: {
