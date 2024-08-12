@@ -63,7 +63,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -72,21 +72,20 @@
       "id": "thoughtspot-crm-hubspot",
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
+      "deprecated": true,
       "requirements":
         {
         "backend": ["snowflake"],
         "components": [
           "kds-team.ex-hubspot-crm",
           "keboola.wr-thoughtspot",
-          "keboola.wr-google-bigquery-v2",
-          "keboola.wr-snowflake-blob-storage"
+          "keboola.wr-google-bigquery-v2"
         ]
       },
       "categories": [
         "CRM",
         "ThoughtSpot"
       ],
-      "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
           "version": "1.0.0",
@@ -96,9 +95,8 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v1"
+            "keboola.wr-db-snowflake"
+          ]
         }
       ]
     },
@@ -106,6 +104,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
+      "deprecated": true,
       "requirements": 
         {
         "backend": ["snowflake"],
@@ -115,15 +114,13 @@
           "keboola.ex-google-ads",
           "keboola.ex-sklik",
           "keboola.wr-thoughtspot",
-          "keboola.wr-google-bigquery-v2",
-          "keboola.wr-snowflake-blob-storage"
+          "keboola.wr-google-bigquery-v2"
         ]
       },
       "categories": [
         "E-commerce",
         "ThoughtSpot"
       ],
-      "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
           "version": "1.0.0",
@@ -136,9 +133,8 @@
             "keboola.ex-sklik",
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
-          ],
-          "path": "v1"
+            "keboola.wr-db-snowflake"
+          ]
         }
       ]
     },
@@ -154,7 +150,6 @@
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-snowflake-blob-storage",
-            "keboola.wr-db-pgsql"
           ]
         },
       "path": "keboola-mgmt-jira",
@@ -170,7 +165,7 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -181,6 +176,7 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "deprecated": true,
       "requirements":
         {
           "backends": ["snowflake"],
@@ -193,7 +189,6 @@
       "categories": [
         "Data Governance"
       ],
-      "path": "keboola-metadata-to-datahub",
       "versions": [
         {
           "version": "1.0.1",
@@ -203,8 +198,7 @@
             "keboola.ex-telemetry-data",
             "kds-team.ex-kbc-project-metadata-v2",
             "kds-team.app-datahub"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -219,8 +213,7 @@
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
           "keboola.ex-google-ads",
-          "keboola.ex-sklik",
-          "keboola.wr-snowflake-blob-storage"
+          "keboola.ex-sklik"
         ]
       },
       "categories": [
@@ -237,7 +230,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ],
           "path": "v1"
         }
@@ -250,13 +243,13 @@
       "requirements": 
         {
           "backends": ["snowflake"],
+          "features": ["native-types"],
           "components": [
             "keboola.ex-http",
             "keboola.wr-db-mssql-v2",
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.dbt-transformation"
           ]
         },
@@ -276,7 +269,7 @@
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ],
           "path": "v1"
         }
@@ -320,7 +313,6 @@
           "keboola.wr-db-mysql",
           "keboola.wr-db-pgsql",
           "keboola.wr-google-sheets",
-          "keboola.wr-snowflake-blob-storage",
           "kds-team.ex-linkedin-pages",
           "keboola.wr-google-bigquery-v2"
         ]
@@ -341,7 +333,7 @@
             "keboola.wr-db-mysql",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-google-bigquery-v2",
             "kds-team.ex-linkedin-pages"
           ],
@@ -360,7 +352,6 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -377,7 +368,7 @@
             "kds-team.ex-hubspot-crm",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -395,7 +386,6 @@
             "keboola.ex-pipedrive",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -412,7 +402,7 @@
             "keboola.ex-pipedrive",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -430,7 +420,6 @@
             "kds-team.ex-salesforce-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -447,7 +436,7 @@
             "kds-team.ex-salesforce-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -474,7 +463,7 @@
             "keboola.ex-sklik",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql",
             "jakub-bartel.wr-data-studio"
           ]
@@ -492,7 +481,6 @@
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -509,7 +497,7 @@
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -527,7 +515,6 @@
             "leochan.ex-asana",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -544,7 +531,7 @@
             "leochan.ex-asana",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -562,7 +549,6 @@
             "fisa.ex-typeform",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ]
         },
@@ -579,7 +565,7 @@
             "fisa.ex-typeform",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -598,8 +584,7 @@
             "kds-team.ex-google-search-console",
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-google-sheets"
           ]
         },
       "path": "keboola-analytics-googleanalytics4",
@@ -618,7 +603,7 @@
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ],
           "path": "v0"
         }
@@ -642,7 +627,7 @@
             "kds-team.ex-google-search-console",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -661,7 +646,6 @@
             "keboola.ex-google-ads",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
             "keboola.wr-db-pgsql"
           ],
           "features": ["sandboxes-data-apps"]
@@ -683,7 +667,7 @@
             "keboola.ex-google-ads",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql",
             "keboola.data-apps"
           ],
@@ -780,7 +764,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -826,7 +810,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-sklik",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -874,7 +858,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -898,7 +882,7 @@
             "keboola.ex-facebook-ads",
             "keboola.ex-google-ads",
             "keboola.ex-google-analytics-v4",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -940,7 +924,7 @@
           "components": [
             "keboola.ex-google-analytics-v4",
             "kds-team.ex-google-search-console",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -961,7 +945,7 @@
           "components": [
             "keboola.ex-google-analytics-v4",
             "kds-team.ex-google-search-console",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1022,7 +1006,7 @@
           "stable": false,
           "components": [
             "kds-team.ex-salesforce-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1042,7 +1026,7 @@
           "stable": false,
           "components": [
             "kds-team.ex-salesforce-v2",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1082,7 +1066,7 @@
           "stable": false,
           "components": [
             "keboola.ex-pipedrive",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1142,7 +1126,7 @@
           "stable": false,
           "components": [
             "keboola.ex-pipedrive",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1202,7 +1186,7 @@
           "stable": false,
           "components": [
             "keboola.ex-github",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1222,7 +1206,7 @@
           "stable": false,
           "components": [
             "keboola.ex-github",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1242,7 +1226,7 @@
           "stable": false,
           "components": [
             "leochan.ex-asana",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1302,7 +1286,7 @@
           "stable": false,
           "components": [
             "leochan.ex-asana",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1322,7 +1306,7 @@
           "stable": false,
           "components": [
             "fisa.ex-typeform",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1382,7 +1366,7 @@
           "stable": false,
           "components": [
             "fisa.ex-typeform",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ]
         }
       ]
@@ -1391,6 +1375,16 @@
       "id": "mailchimp",
       "name": "Emailing Mailchimp",
       "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet, big query, snowflake DB or postgres.",
+      "requirements":
+        {
+        "backend": ["snowflake"],
+        "components": [
+          "keboola.ex-mailchimp",
+          "keboola.wr-google-sheets",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-db-pgsql"
+        ]
+      },
       "categories": [
         "Mailing"
       ],
@@ -1405,7 +1399,7 @@
             "keboola.ex-mailchimp",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
@@ -1420,10 +1414,9 @@
         {
         "backend": ["snowflake"],
         "components": [
-          "kds-team.ex-shopify",
-          "keboola.wr-snowflake-blob-storage"
+          "kds-team.ex-shopify"
         ],
-        "features": ["sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
       },
       "path": "snowpark-streamlit",
       "deprecated": false,
@@ -1439,7 +1432,7 @@
             "keboola.data-apps",
             "kds-team.ex-shopify",
             "keboola.snowflake-transformation",
-            "keboola.wr-snowflake-blob-storage"
+            "keboola.wr-db-snowflake"
           ],
           "path": "v0"
         }
@@ -1454,8 +1447,7 @@
           "backends": ["snowflake"],
           "features": ["sandboxes-data-apps"]
         },
-      "path": "interactive-keboola-sheets",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps"
       ],
@@ -1466,8 +1458,7 @@
           "stable": false,
           "components": [
             "keboola.data-apps"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
@@ -1703,7 +1694,6 @@
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
             "kds-team.ex-bigcommerce",
             "kds-team.ex-shopify",
             "kds-team.ex-woocommerce"
@@ -1720,10 +1710,253 @@
             "keboola.wr-db-pgsql",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-snowflake",
             "kds-team.ex-bigcommerce",
             "kds-team.ex-shopify",
             "kds-team.ex-woocommerce"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "csas-template-merge",
+      "name": "CSAS - Template Merge",
+      "description": "CSAS Merge example Snowflake transformation.",
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.wr-oracle-custom"
+        ],
+        "features": null
+      },
+      "categories": [
+        "Other"
+      ],
+      "path": "csas-template-merge",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "csas-template-scd",
+      "name": "CSAS - Template SCD",
+      "description": "CSAS SCD example Snowflake transformation.",
+      "requirements": {
+        "backends": ["snowflake"],
+        "components": [
+          "kds-team.wr-oracle-custom"
+        ],
+        "features": null
+      },
+      "categories": [
+        "Other"
+      ],
+      "path": "csas-template-scd",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "keboola-data-editor",
+      "name": "Keboola Data Editor",
+      "description": "Simplify your data editing and management within your company using this demo data app that showcases the interaction between Streamlit and Keboola Storage.",
+      "requirements":
+        {
+          "backends": ["snowflake"],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "keboola-data-editor",
+      "deprecated": false,
+      "categories": [
+        "Data Apps"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "hello-world",
+      "name": "Hello World",
+      "description": "Experience a Streamlit web app with interactive widgets and optimized performance, showcasing caching for fast data loading and a user-friendly interface.",
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": null,
+        "features": [
+          
+          "sandboxes-data-apps"
+        ]
+      },
+      "categories": [
+        "Data Apps", "Tutorials"
+      ],
+      "path": "hello-world",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "snowflake-security-checkup",
+      "name": "Snowflake Security Checkup",
+      "description": "Detection of anomaly and suspicious activity in query and login logs. These tables are carefully crafted to identify potential security threats and unusual behavior within your systems.",
+      "requirements": {
+        "backends": ["snowflake"],
+        "components": ["keboola.ex-db-snowflake"],
+        "features": null
+      },
+      "categories": ["Security"],
+      "path": "snowflake-security-checkup",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-db-snowflake"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "review-app-template",
+      "name": "Review App Template",
+      "description": "Generate responses for reviews on different platforms.",
+      "requirements":
+        {
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "review-app-template",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "apify.apify"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+        {
+      "id": "newsletters-data-app",
+      "name": "Newsletters Data App Template",
+      "description": "Personalize HTML newsletters for different customer segments within the app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "newsletters-data-app",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "resume-analyzer",
+      "name": "Resume Analyzer Template",
+      "description": "Identify the most suitable candidates for the job using this Streamlit app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "resume-analyzer",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
+    },
+    {
+      "id": "rlhf-data-app",
+      "name": "RLHF Knowledge Base Data App",
+      "description": "Upload PDF files, extract text from them, and query the extracted information using this Streamlit app.",
+      "requirements":
+        {
+          "backends": [],
+          "features": ["sandboxes-data-apps"]
+        },
+      "path": "rlhf-data-app",
+      "deprecated": false,
+      "categories": [
+        "Data Apps",
+        "AI Automations"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
           ],
           "path": "v0"
         }

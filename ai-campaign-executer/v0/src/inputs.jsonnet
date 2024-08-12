@@ -123,16 +123,7 @@
           description: "Configure Data App",
           dialogName: "AI SMS Campaign", 
           dialogDescription: "Configure Data App by filling up required secrets.",
-          inputs: [
-            {
-              id: "kbc_storage_token",
-              name: "Keboola Token",
-              description: "Insert a storage or your master token.",
-              type: "string",
-              kind: "hidden",
-              rules: "required",
-            }
-          ],
+          inputs: [],
         },
       ]
     },
