@@ -10,9 +10,6 @@
         branch: "main",
         entrypoint: "campaign_executor.py",
       },
-      secrets: {
-        "#kbc_storage_token": Input("kbc_storage_token"),
-      },
     },
   },
   storage: {
