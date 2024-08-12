@@ -1,7 +1,6 @@
 {
   parameters: {
     dataApp: {
-      streamlitAuthEnabled: true,
       slug: "review-generator",
       streamlit: {
         "config.toml": '[theme]\nthemeName = "keboola"\nfont = "sans serif"\ntextColor = "#222529"\nbackgroundColor = "#FFFFFF"\nprimaryColor = "#1F8FFF"',
@@ -19,14 +18,22 @@
   },
   authorization: {
     app_proxy: {
-      auth_providers: [],
+      auth_providers: [
+        {
+          id: "simpleAuth",
+          type: "password"
+        }
+      ],
       auth_rules: [
         {
           type: "pathPrefix",
           value: "/",
-          auth_required: false,
-        },
-      ],
+          auth_required: true,
+          auth: [
+            "simpleAuth"
+          ]
+        }
+      ]
     },
   },
 }

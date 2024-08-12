@@ -1,6 +1,10 @@
 {
   parameters: {
     dataApp: {
+      slug: "ads-spend-vs-budget-tracker",
+      streamlit: {
+        "config.toml": '[theme]\nthemeName = "keboola"\nfont = "sans serif"\ntextColor = "#222529"\nbackgroundColor = "#FFFFFF"\nprimaryColor = "#1F8FFF"',
+      },
       git: {
         repository: "https://TBD.git",
         branch: "main",
@@ -38,12 +42,20 @@
   },
   authorization: {
     app_proxy: {
-      auth_providers: [],
+      auth_providers: [
+        {
+          id: "simpleAuth",
+          type: "password"
+        }
+      ],
       auth_rules: [
         {
           type: "pathPrefix",
           value: "/",
-          auth_required: false
+          auth_required: true,
+          auth: [
+            "simpleAuth"
+          ]
         }
       ]
     }
