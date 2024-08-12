@@ -72,6 +72,7 @@
       "id": "thoughtspot-crm-hubspot",
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
+      "deprecated": true,
       "requirements":
         {
         "backend": ["snowflake"],
@@ -85,7 +86,6 @@
         "CRM",
         "ThoughtSpot"
       ],
-      "path": "thoughtspot-crm-hubspot",
       "versions": [
         {
           "version": "1.0.0",
@@ -96,8 +96,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-snowflake"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -105,6 +104,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
+      "deprecated": true,
       "requirements": 
         {
         "backend": ["snowflake"],
@@ -121,7 +121,6 @@
         "E-commerce",
         "ThoughtSpot"
       ],
-      "path": "thoughtspot-ecommerce-shopify",
       "versions": [
         {
           "version": "1.0.0",
@@ -135,8 +134,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-snowflake"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -178,6 +176,7 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "deprecated": true,
       "requirements":
         {
           "backends": ["snowflake"],
@@ -190,7 +189,6 @@
       "categories": [
         "Data Governance"
       ],
-      "path": "keboola-metadata-to-datahub",
       "versions": [
         {
           "version": "1.0.1",
@@ -200,8 +198,7 @@
             "keboola.ex-telemetry-data",
             "kds-team.ex-kbc-project-metadata-v2",
             "kds-team.app-datahub"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -246,6 +243,7 @@
       "requirements": 
         {
           "backends": ["snowflake"],
+          "features": ["native-types"],
           "components": [
             "keboola.ex-http",
             "keboola.wr-db-mssql-v2",
@@ -650,7 +648,7 @@
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-pgsql"
           ],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "categories": [
         "Marketing","Data Apps"
@@ -1418,7 +1416,7 @@
         "components": [
           "kds-team.ex-shopify"
         ],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
       },
       "path": "snowpark-streamlit",
       "deprecated": false,
@@ -1447,7 +1445,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "deprecated": true,
       "categories": [
@@ -1476,7 +1474,7 @@
             "kds-team.app-generative-ai",
             "kds-team.wr-twilio"
           ],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "ai-campaign-executer",
       "deprecated": false,
@@ -1507,7 +1505,7 @@
         {
           "backends": ["snowflake"],
           "components": ["kds-team.ex-shopify", "kds-team.wr-generic"],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "interactive-kpi-report",
       "deprecated": false,
@@ -1544,7 +1542,7 @@
             "kds-team.ex-tiktok-ads",
             "leochan.ex-linkedin"
           ],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "deprecated": true,
       "categories": [
@@ -1580,7 +1578,7 @@
             "keboola.ex-google-analytics-v4",
             "keboola.ex-google-bigquery-v2"
           ],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "ua-and-ga4-comparison",
       "deprecated": false,
@@ -1610,7 +1608,7 @@
       "requirements": 
         {
           "backends": ["snowflake"],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "kai-promptlab",
       "deprecated": false,
@@ -1636,7 +1634,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "kai-sql-bot",
       "deprecated": false,
@@ -1666,7 +1664,7 @@
             "kds-team.ex-confluence",
             "kds-team.wr-pinecone"
           ],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "categories": [
         "Artificial Intelligence", "Data Apps"
@@ -1784,7 +1782,7 @@
       "requirements":
         {
           "backends": ["snowflake"],
-          "features": ["data-apps-proxy","sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
         },
       "path": "keboola-data-editor",
       "deprecated": false,
@@ -1813,7 +1811,7 @@
         ],
         "components": null,
         "features": [
-          "data-apps-proxy",
+          
           "sandboxes-data-apps"
         ]
       },
