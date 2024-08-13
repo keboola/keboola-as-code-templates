@@ -149,7 +149,7 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage",
+            "keboola.wr-db-pgsql"
           ]
         },
       "path": "keboola-mgmt-jira",
