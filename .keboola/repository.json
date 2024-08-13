@@ -1416,7 +1416,7 @@
         "components": [
           "kds-team.ex-shopify"
         ],
-        "features": ["sandboxes-data-apps"]
+          "features": ["sandboxes-data-apps"]
       },
       "path": "snowpark-streamlit",
       "deprecated": false,
