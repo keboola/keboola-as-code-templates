@@ -1,0 +1,16 @@
+name: 'Json validation'
+
+on:
+  workflow_call:
+
+jobs:
+  json-validation:
+    name: "JSON validation"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repository"
+        uses: "actions/checkout@v4"
+
+      - name: "Check all JSON files in repository that are correct"
+        uses: GrantBirki/json-yaml-validate@v3.0.0
+
