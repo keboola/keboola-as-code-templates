@@ -1,0 +1,1 @@
+For full setup please read documentation: https://cnfl.csin.cz/x/BAJHNw\n\nYou need fill:\n- input mapping by tables which are used in your business transformation\n- output mapping with log table ETL_TASK_LOGS, XC table and target table\n- parameters in code block Custom ETL Parameters\n- your business transformation in code block XC Stage - Load"

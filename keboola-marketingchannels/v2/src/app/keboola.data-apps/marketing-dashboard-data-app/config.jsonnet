@@ -16,12 +16,35 @@
   },
   parameters: {
     dataApp: {
-      streamlitAuthEnabled: true,
+      slug: "marketing-channels",
+      streamlit: {
+        "config.toml": '[theme]\nthemeName = "keboola"\nfont = "sans serif"\ntextColor = "#222529"\nbackgroundColor = "#FFFFFF"\nprimaryColor = "#1F8FFF"',
+      },
       git: {
         branch: "main",
         entrypoint: "online_marketing.py",
         repository: "https://github.com/keboola/marketing-dashboard-data-app.git"
       }
+    }
+  },
+  authorization: {
+    app_proxy: {
+      auth_providers: [
+        {
+          id: "simpleAuth",
+          type: "password"
+        }
+      ],
+      auth_rules: [
+        {
+          type: "pathPrefix",
+          value: "/",
+          auth_required: true,
+          auth: [
+            "simpleAuth"
+          ]
+        }
+      ]
     }
   }
 }
