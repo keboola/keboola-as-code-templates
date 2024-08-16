@@ -1,0 +1,12 @@
+name: 'Push CI'
+
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  json-validation:
+    name: "JSON validation"
+    secrets: inherit
+    uses: ./.github/workflows/json-validation.yml
+
