@@ -1,5 +1,5 @@
 {
-    parameters: {
+  parameters: {
     dataApp: {
       slug: "interactive-data-app",
       streamlit: {
@@ -10,14 +10,14 @@
         entrypoint: "main.py",
         repository: "https://github.com/aalteirac/streamlit_keboola_vhol_pc.git"
       },
-      "secrets": {
-        "user": "",
-        "password": "",
-        "account": "",
-        "warehouse": "PC_KEBOOLA_WH",
-        "db_name": "PC_KEBOOLA_DB",
-        "schema_name": "PUBLIC",
-        "keboola_key": ""
+      secrets: {
+        user: Input("wr-snowflake-db-user"),
+        "#password": Input("wr-snowflake-db-password"),
+        account: Input("data-app-secrets-account-identifier"),
+        warehouse: Input("wr-snowflake-db-warehouse"),
+        db_name: Input("wr-snowflake-db-database"),
+        schema_name: Input("wr-snowflake-db-schema"),
+        keboola_key: Input("data-app-secrets-keboola-token")
       }
     }
   },

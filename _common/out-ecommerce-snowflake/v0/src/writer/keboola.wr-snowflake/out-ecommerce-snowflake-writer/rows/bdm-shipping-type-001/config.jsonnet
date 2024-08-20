@@ -11,7 +11,7 @@
         name: "SHIPPING_TYPE_ID",
         dbName: "SHIPPING_TYPE_ID",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },

@@ -11,7 +11,7 @@
         name: "BILLING_TYPE_ID",
         dbName: "BILLING_TYPE_ID",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
