@@ -135,7 +135,7 @@
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-db-snowflake"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -200,7 +200,7 @@
             "kds-team.ex-kbc-project-metadata-v2",
             "kds-team.app-datahub"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
