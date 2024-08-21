@@ -111,7 +111,23 @@
           icon: "component:keboola.data-apps",
           name: "Interactive Data App",
           description: "Web App visualizing the results of RFM Analysis",
-          inputs: [],
+          inputs: [
+            {
+              id: "data-app-secrets-account-identifier",
+              name: "Account Identifier",
+              description: "Insert your project location.",
+              type: "string",
+              kind: "input",
+              default: "https://connection.north-europe.azure.keboola.com/",
+            },
+            {
+              id: "data-app-secrets-keboola-token",
+              name: "Keboola Storage Token",
+              description: "Insert your storage token.",
+              type: "string",
+              kind: "input",
+            },
+          ],
         },
       ]
     }
