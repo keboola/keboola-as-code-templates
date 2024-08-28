@@ -7,7 +7,8 @@
       },
       secrets: {
         "#openai_token": Input("data-apps-data-app-secrets-openai-token"),
-        "#lever_token": Input("data-apps-data-app-secrets-lever-token"),
+        "#lever_token": Input("ex-lever-authentication-token"),
+        "lever_bucket": "in.c-kds-team-ex-lever-" + ConfigId("lever"),
       },
       git: {
         repository: "https://github.com/keboola/data-app-cv-ranker",
