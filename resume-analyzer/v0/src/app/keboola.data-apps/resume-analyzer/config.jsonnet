@@ -2,12 +2,14 @@
   parameters: {
     dataApp: {
       slug: "cv-ranker-data-app",
+      streamlitAuthEnabled: false,
       streamlit: {
         "config.toml": '[theme]\nthemeName = "keboola"\nfont = "sans serif"\ntextColor = "#222529"\nbackgroundColor = "#FFFFFF"\nprimaryColor = "#1F8FFF"',
       },
       secrets: {
         "#openai_token": Input("data-apps-data-app-secrets-openai-token"),
-        "#lever_token": Input("data-apps-data-app-secrets-lever-token"),
+        "#lever_token": Input("ex-lever-authentication-token"),
+        "lever_bucket": "in.c-kds-team-ex-lever-" + ConfigId("lever"),
       },
       git: {
         repository: "https://github.com/keboola/data-app-cv-ranker",
@@ -18,17 +20,12 @@
   },
   authorization: {
     app_proxy: {
-      auth_providers: [
-        {
-          id: "simpleAuth",
-          type: "password"
-        }
-      ],
+      auth_providers: [],
       auth_rules: [
         {
           type: "pathPrefix",
           value: "/",
-          auth_required: true,
+          auth_required: false,
           auth: [
             "simpleAuth"
           ]
