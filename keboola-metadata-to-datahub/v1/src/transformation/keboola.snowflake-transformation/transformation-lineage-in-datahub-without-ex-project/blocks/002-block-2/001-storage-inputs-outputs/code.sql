@@ -2,18 +2,20 @@ CREATE TABLE "storage_inputs_and_outputs" AS
 
 WITH storage_inputs_sources AS (
   SELECT 
-    "id", 
-    "region", 
-    "project_id", 
-    "name", 
-    "component_id", 
-    "component_name", 
-    "component_type", 
+    cp."id", 
+    cp."region", 
+    cp."project_id", 
+  	p."kbc_project" as "project_name",
+    cp."name", 
+    cp."component_id", 
+    cp."component_name", 
+    cp."component_type", 
     config_path, 
     CASE WHEN config_path LIKE 'storage.input.tables[%].source' 
     AND config_path NOT LIKE '%column%' THEN array_agg(config_value) END AS storage_inputs_sources 
   FROM 
-    "configurations_parsed" 
+    "configurations_parsed" cp
+  LEFT JOIN "kbc_project" p ON cp."project_id" = p."kbc_project_id_num"
     --where path LIKE 'storage.input.tables[%].source' and path NOT LIKE '%column%'--or path = 'storage.output.tables'
   GROUP BY 
     1, 
@@ -23,22 +25,25 @@ WITH storage_inputs_sources AS (
     5, 
     6, 
     7, 
-    8
+    8,
+  	9
 ), 
 storage_inputs_destinations AS (
   SELECT 
-    "id", 
-    "region", 
-    "project_id", 
-    "name", 
-    "component_id", 
-    "component_name", 
-    "component_type", 
+    cp."id", 
+    cp."region", 
+    cp."project_id", 
+  	p."kbc_project" as "project_name",
+    cp."name", 
+    cp."component_id", 
+    cp."component_name", 
+    cp."component_type", 
     config_path, 
     CASE WHEN config_path LIKE 'storage.input.tables[%].destination' 
     AND config_path NOT LIKE '%column%' THEN array_agg(config_value) END AS storage_inputs_destinations 
   FROM 
-    "configurations_parsed"
+    "configurations_parsed" cp
+  LEFT JOIN "kbc_project" p ON cp."project_id" = p."kbc_project_id_num"
   GROUP BY 
     1, 
     2, 
@@ -47,22 +52,25 @@ storage_inputs_destinations AS (
     5, 
     6, 
     7, 
-    8
+    8,
+  	9
 ),
  storage_outputs_sources AS (
   SELECT 
-    "id", 
-    "region", 
-    "project_id", 
-    "name", 
-    "component_id", 
-    "component_name", 
-    "component_type", 
+    cp."id", 
+    cp."region", 
+    cp."project_id", 
+  	p."kbc_project" as "project_name",
+    cp."name", 
+    cp."component_id", 
+    cp."component_name", 
+    cp."component_type",  
     config_path, 
     CASE WHEN config_path LIKE 'storage.output.tables[%].source' 
     AND config_path NOT LIKE '%column%' THEN array_agg(config_value) END AS storage_outputs_sources 
   FROM 
-    "configurations_parsed" 
+    "configurations_parsed" cp
+  LEFT JOIN "kbc_project" p ON cp."project_id" = p."kbc_project_id_num"
     --where path LIKE 'storage.input.tables[%].source' and path NOT LIKE '%column%'--or path = 'storage.output.tables'
   GROUP BY 
     1, 
@@ -72,22 +80,26 @@ storage_inputs_destinations AS (
     5, 
     6, 
     7, 
-    8
+    8,
+    9
 ), 
 storage_outputs_destinations AS (
   SELECT 
-    "id", 
-    "region", 
-    "project_id", 
-    "name", 
-    "component_id", 
-    "component_name", 
-    "component_type", 
+    cp."id", 
+    cp."region", 
+    cp."project_id", 
+  	p."kbc_project" as "project_name",
+    cp."name", 
+    cp."component_id", 
+    cp."component_name", 
+    cp."component_type",  
     config_path, 
     CASE WHEN config_path LIKE 'storage.output.tables[%].destination' 
     AND config_path NOT LIKE '%column%' THEN array_agg(config_value) END AS storage_outputs_destinations 
   FROM 
-    "configurations_parsed" --where path LIKE 'storage.input.tables[%].source' and path NOT LIKE '%column%'--or path = 'storage.output.tables'
+    "configurations_parsed" cp
+  LEFT JOIN "kbc_project" p ON cp."project_id" = p."kbc_project_id_num"
+--where path LIKE 'storage.input.tables[%].source' and path NOT LIKE '%column%'--or path = 'storage.output.tables'
   GROUP BY 
     1, 
     2, 
@@ -96,12 +108,14 @@ storage_outputs_destinations AS (
     5, 
     6, 
     7, 
-    8
+    8,
+  	9
 ) 
 SELECT 
   "id", 
   "region", 
   "project_id", 
+  "project_name",
   "name", 
   "component_id", 
   "component_name", 
@@ -113,17 +127,17 @@ SELECT
 FROM 
   storage_inputs_sources 
   LEFT JOIN storage_inputs_destinations USING(
-    "id", "region", "project_id", "name", 
+    "id", "region", "project_id", "project_name", "name", 
     "component_id", "component_name", 
     "component_type", config_path
   ) 
   LEFT JOIN storage_outputs_sources USING(
-    "id", "region", "project_id", "name", 
+    "id", "region", "project_id", "project_name", "name", 
     "component_id", "component_name", 
     "component_type", config_path
   ) 
   LEFT JOIN storage_outputs_destinations USING(
-    "id", "region", "project_id", "name", 
+    "id", "region", "project_id", "project_name", "name", 
     "component_id", "component_name", 
     "component_type", config_path
   )
