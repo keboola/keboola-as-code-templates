@@ -11,7 +11,7 @@
         name: "PRODUCT_ID",
         dbName: "PRODUCT_ID",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
