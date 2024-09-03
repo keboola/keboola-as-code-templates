@@ -1610,8 +1610,7 @@
           "backends": ["snowflake"],
           "features": ["sandboxes-data-apps"]
         },
-      "path": "kai-promptlab",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps", "Artificial Intelligence"
       ],
@@ -1622,8 +1621,7 @@
           "stable": false,
           "components": [
             "keboola.data-apps"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
