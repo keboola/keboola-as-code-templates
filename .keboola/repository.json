@@ -514,10 +514,11 @@
         {
           "backends": ["snowflake"],
           "components": [
-            "leochan.ex-asana",
+            "kds-team.ex-asana-v2",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
+            "keboola.wr-db-pgsql",
+            "keboola.wr-db-snowflake"
           ]
         },
       "categories": [
@@ -525,18 +526,18 @@
       ],
       "path": "keboola-mgmt-asana",
       "versions": [
-        {
-          "version": "1.0.0",
+         {
+          "version": "1.0.1",
           "description": "",
           "stable": false,
           "components": [
-            "leochan.ex-asana",
+            "kds-team.ex-asana-v2",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
