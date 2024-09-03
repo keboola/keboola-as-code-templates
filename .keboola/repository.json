@@ -1913,8 +1913,8 @@
           "backends": [],
           "features": ["sandboxes-data-apps"]
         },
-      "deprecated": false,
       "path": "resume-analyzer",
+      "deprecated": false,
       "categories": [
         "Data Apps",
         "AI Automations"
