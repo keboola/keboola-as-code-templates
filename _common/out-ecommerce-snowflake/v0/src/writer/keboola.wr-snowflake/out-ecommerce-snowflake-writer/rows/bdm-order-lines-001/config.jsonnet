@@ -19,7 +19,7 @@
         name: "ORDER_LINE_ID",
         dbName: "ORDER_LINE_ID",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
