@@ -11,7 +11,7 @@
         name: "ORDER_ID",
         dbName: "ORDER_ID",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },

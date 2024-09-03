@@ -11,7 +11,7 @@
         name: "MARKETING_CAMPAIGN_COSTS_ID",
         dbName: "MARKETING_CAMPAIGN_COSTS_ID",
         type: "varchar",
-        nullable: true,
+        nullable: false,
         default: "",
         size: "16777216",
       },
