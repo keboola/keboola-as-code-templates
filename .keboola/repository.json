@@ -104,6 +104,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
+      "deprecated": false,
       "requirements": 
         {
         "backend": ["snowflake"],
@@ -177,6 +178,7 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
+      "deprecated": false,
       "requirements":
         {
           "backends": ["snowflake"],
