@@ -1924,8 +1924,10 @@
           "description": "",
           "stable": false,
           "components": [
-            "keboola.data-apps"
-          ]
+            "keboola.data-apps",
+            "kds-team.ex-lever"
+          ],
+          "path": "v0"
         }
       ]
     },
