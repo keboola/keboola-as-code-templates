@@ -149,7 +149,7 @@
             "kds-team.ex-jira",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
+            "keboola.wr-snowflake-blob-storage"
           ]
         },
       "path": "keboola-mgmt-jira",
@@ -1862,8 +1862,7 @@
         {
           "features": ["sandboxes-data-apps"]
         },
-      "path": "review-app-template",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1876,8 +1875,7 @@
           "components": [
             "keboola.data-apps",
             "apify.apify"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
@@ -1890,8 +1888,7 @@
           "backends": [],
           "features": ["sandboxes-data-apps"]
         },
-      "path": "newsletters-data-app",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1903,8 +1900,7 @@
           "stable": false,
           "components": [
             "keboola.data-apps"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
@@ -1917,8 +1913,7 @@
           "backends": [],
           "features": ["sandboxes-data-apps"]
         },
-      "path": "resume-analyzer",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1945,8 +1940,7 @@
           "backends": [],
           "features": ["sandboxes-data-apps"]
         },
-      "path": "rlhf-data-app",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1958,8 +1952,7 @@
           "stable": false,
           "components": [
             "keboola.data-apps"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     }
