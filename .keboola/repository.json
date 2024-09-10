@@ -425,9 +425,7 @@
             "keboola.wr-db-pgsql"
           ]
         },
-      "categories": [
-        "CRM"
-      ],
+      "categories": ["CRM"],
       "path": "keboola-crm-salesforce",
       "versions": [
         {
