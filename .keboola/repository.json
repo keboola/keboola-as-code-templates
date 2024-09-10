@@ -438,7 +438,7 @@
             "kds-team.ex-salesforce-v2",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            <keboola.wr-db-snowflake>,
+            "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
