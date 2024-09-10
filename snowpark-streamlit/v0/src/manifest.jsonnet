@@ -74,7 +74,7 @@
       rows: [],
     },
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("create-snowflake-scheme"),
       path: "writer/keboola.wr-snowflake-blob-storage/create-snowflake-scheme",
       metadata: {
