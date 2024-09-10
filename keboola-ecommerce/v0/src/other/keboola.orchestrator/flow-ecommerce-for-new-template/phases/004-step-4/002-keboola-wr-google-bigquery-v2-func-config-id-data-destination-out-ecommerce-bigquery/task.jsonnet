@@ -3,7 +3,7 @@
   enabled: true,
   task: {
     mode: "run",
-    configPath: "<common>/out-ecommerce-snowflake/v1/src/writer/keboola.wr-snowflake-blob-storage/data-destination-out-ecommerce-snowflake",
+    configPath: "<common>/out-ecommerce-bigquery/v1/src/writer/keboola.wr-google-bigquery-v2/data-destination-out-ecommerce-bigquery",
   },
   continueOnFailure: false,
 }
