@@ -144,7 +144,7 @@
     },
     if InputIsAvailable("wr-snowflake-db-host") then
     {
-      componentId: "keboola.wr-snowflake-blob-storage",
+      componentId: SnowflakeWriterComponentId(),
       id: ConfigId("data-destination-out-ecommerce-snowflake"),
       path: "<common>/out-ecommerce-snowflake/v1/src/writer/keboola.wr-snowflake-blob-storage/data-destination-out-ecommerce-snowflake",
       rows: [
