@@ -1,4 +1,4 @@
-local asana = import "/<common>/in-mgmt-asana/v0/inputs.jsonnet";
+local asana = import "/<common>/in-mgmt-asana/v1/inputs.jsonnet";
 local snowflake = import "/<common>/out-mgmt-snowflake/inputs.jsonnet";
 local bigquery = import "/<common>/out-mgmt-bigquery/inputs.jsonnet";
 local googlesheet = import "/<common>/out-mgmt-gsheet/inputs.jsonnet";
