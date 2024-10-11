@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "project": {
+    "id": __PROJECT_ID__,
+    "apiHost": "__STORAGE_API_HOST__"
+  },
+  "allowTargetEnv": false,
+  "sortBy": "id",
+  "naming": {
+    "branch": "{branch_name}",
+    "config": "{component_type}/{component_id}/{config_name}",
+    "configRow": "rows/{config_row_name}",
+    "schedulerConfig": "schedules/{config_name}",
+    "sharedCodeConfig": "_shared/{target_component_id}",
+    "sharedCodeConfigRow": "codes/{config_row_name}",
+    "variablesConfig": "variables",
+    "variablesValuesRow": "values/{config_row_name}",
+    "dataAppConfig": "app/{component_id}/{config_name}"
+  },
+  "allowedBranches": [
+    "*"
+  ],
+  "ignoredComponents": [],
+  "templates": {
+    "repositories": [
+      {
+        "type": "dir",
+        "name": "keboola",
+        "url": "../repository",
+        "ref": "main"
+      }
+    ]
+  },
+  "branches": [
+    {
+      "id": __MAIN_BRANCH_ID__,
+      "path": "main",
+      "metadata": {
+        "KBC.KAC.templates.instances": "[{\"instanceId\":\"%s\",\"instanceName\":\"test\",\"templateId\":\"keboola-mgmt-jira\",\"repositoryName\":\"keboola\",\"version\":\"1.0.0\",\"created\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"updated\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"mainConfig\":{\"configId\":\"%s\",\"componentId\":\"keboola.orchestrator\"}}]"
+      }
+    }
+  ],
+  "configurations": [
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "kds-team.ex-jira",
+      "id": "%s",
+      "path": "extractor/kds-team.ex-jira/data-source-in-mgmt-jira-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"data-source-in-mgmt-jira\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"ex-jira-token\",\"key\":\"parameters.#token\"},{\"input\":\"ex-jira-organization-id\",\"key\":\"parameters.organization_id\"},{\"input\":\"ex-jira-organization-url\",\"key\":\"parameters.organization_url\"},{\"input\":\"ex-jira-since\",\"key\":\"parameters.since\"},{\"input\":\"ex-jira-username\",\"key\":\"parameters.username\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "keboola-mgmt-jira"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.orchestrator",
+      "id": "%s",
+      "path": "other/keboola.orchestrator/flow-mgmt-jira-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"flow-mgmt-jira\"}",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "keboola-mgmt-jira"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "%s",
+      "path": "transformation/keboola.snowflake-transformation/transformation-in-mgmt-jira-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"transformation-in-mgmt-jira\"}",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "keboola-mgmt-jira",
+        "KBC.configuration.folderName": "[MGMT-JIRA]"
+      },
+      "rows": []
+    }
+  ]
+}
