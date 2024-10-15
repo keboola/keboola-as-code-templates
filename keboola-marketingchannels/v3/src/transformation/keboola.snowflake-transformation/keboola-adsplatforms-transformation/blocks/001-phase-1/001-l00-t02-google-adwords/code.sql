@@ -7,7 +7,7 @@ SELECT
   ,'google' as "source"
   ,'cpc'  AS "medium"
   ,lower(c."name") AS "campaign"
-  ,lower(RIGHT(parse_url("landingPageViewUnexpandedFinalUrl",1):"host"::string,2)) AS "domain"
+  ,lower(SPLIT_PART(parse_url("landingPageViewUnexpandedFinalUrl",1):"host"::string,'.',-1)) AS "domain"
   ,lower(b."currencyCode") AS "currency"
   ,lower(b."id")  AS "account_id" 
   ,a."metricsImpressions" AS "impressions"
