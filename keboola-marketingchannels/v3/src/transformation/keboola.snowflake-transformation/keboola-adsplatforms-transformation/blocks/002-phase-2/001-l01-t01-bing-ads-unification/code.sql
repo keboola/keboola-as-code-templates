@@ -1,10 +1,9 @@
 -- table with account id Labels
 CREATE TABLE IF NOT EXISTS "accounts" ("ads_system" STRING NOT NULL, "account_id" STRING NOT NULL, "account_name" STRING NOT NULL);
 
+INSERT INTO "accounts"
+VALUES ('bing','XXXXXX','Customer_name');
 
-INSERT INTO "accounts" ("ads_system","account_id","account_name") 
-SELECT 'bing' as "ads_system", "account_id", "account_name"
-FROM "accounts";
 
 -- collect all ads system in one table 
 CREATE  OR REPLACE TABLE  "tmp_ads_systems" AS

@@ -4,7 +4,7 @@ SELECT
   ,'BingAds' AS "source"
   ,lower(b."Bid_Strategy_Type") AS "medium"
   ,lower(a."CampaignName") AS "campaign"
-  ,lower(b."Domain") AS "domain"
+  ,SPLIT_PART(b."Domain", '.', -1) AS "domain"
   ,lower(a."CurrencyCode") AS "currency"
   ,lower(a."AccountId") AS "account_id"
   ,a."Impressions" AS "impressions"
