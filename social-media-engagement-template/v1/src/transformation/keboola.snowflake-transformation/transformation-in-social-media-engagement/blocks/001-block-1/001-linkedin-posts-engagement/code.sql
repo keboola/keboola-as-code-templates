@@ -26,7 +26,7 @@ SELECT
     "likes" AS "all_reactions"
 FROM
     "linkedin_posts"
-    LEFT OUTER JOIN "linkedin_likes" ON "posts"."id" = "likes"."post_urn"
+    LEFT OUTER JOIN "linkedin_likes" ON "linkedin_posts"."id" = "linkedin_likes"."post_urn"
 GROUP BY
     "id",
     "createdAt",

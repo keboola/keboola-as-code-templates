@@ -48,5 +48,5 @@ SELECT
     0 AS "views",
     "comments" + "likes" AS "all_reactions"
 FROM
-    "instagram_media"
-    LEFT JOIN insights_pivoted ON "media"."id" = insights_pivoted."parent_id";
+    "instagram_media" 
+    LEFT JOIN insights_pivoted ON "instagram_media"."id" = insights_pivoted."parent_id";

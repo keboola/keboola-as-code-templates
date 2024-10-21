@@ -29,5 +29,5 @@ SELECT
     0 AS "comments",
     "shares" + "likes" AS "all_reactions"
 FROM
-    "facebook_feed"
-    LEFT JOIN "facebook_feed_likes_summary" ON "feed"."id" = "feed_likes_summary"."parent_id";
+    "facebook_feed" f1
+    LEFT JOIN "facebook_feed_likes_summary" f2 ON f1."id" = f2."parent_id";

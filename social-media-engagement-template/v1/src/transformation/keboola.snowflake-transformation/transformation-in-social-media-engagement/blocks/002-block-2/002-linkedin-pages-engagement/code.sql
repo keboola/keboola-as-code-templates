@@ -15,5 +15,5 @@ SELECT
     "likeCount" as "page_followers",
     "impressionCount" as "page_posts_impressions" 
 FROM
-    "linkedin_time_bound_page_statistics"
-    JOIN "linkedin_time_bound_share_statistics" ON "time_bound_page_statistics"."timeRange_end" = "time_bound_share_statistics"."timeRange_end";
+    "linkedin_time_bound_page_statistics" l1
+    JOIN "linkedin_time_bound_share_statistics" l2 ON l1."timeRange_end" = l2."timeRange_end";
