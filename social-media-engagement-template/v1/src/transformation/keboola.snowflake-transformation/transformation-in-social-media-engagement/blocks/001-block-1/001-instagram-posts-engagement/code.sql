@@ -36,16 +36,16 @@ SELECT
     CONCAT(
         try_to_date(replace("timestamp", '+0000')),
         '-instagram-',
-        "media"."id"
+        "instagram_media"."id"
     ) AS "uid",
-    "media"."id" AS "post_id",
+    "instagram_media"."id" AS "post_id",
     'instagram' AS "source",
     try_to_date(replace("timestamp", '+0000')) AS "date",
     "caption" AS "post_text",
     0 AS "shares",
-    ZEROIFNULL("comments_count") AS "comments",
-    ZEROIFNULL("like_count") AS "likes",
     0 AS "views",
+    ZEROIFNULL("like_count") AS "likes",
+    ZEROIFNULL("comments_count") AS "comments",
     "comments" + "likes" AS "all_reactions"
 FROM
     "instagram_media" 

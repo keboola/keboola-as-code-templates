@@ -9,10 +9,10 @@ CREATE TABLE IF NOT EXISTS "pages_engagement"
 
 INSERT INTO "pages_engagement"
 SELECT
-		'linkedin' as "source",
-    try_to_date("time_bound_page_statistics"."timeRange_end") as "date",
-    "views_allPageViews_pageViews" as "page_views_total",  
+	'linkedin' as "source",
+    try_to_date(l1."timeRange_end") as "date",
     "likeCount" as "page_followers",
+    "views_allPageViews_pageViews" as "page_views_total",  
     "impressionCount" as "page_posts_impressions" 
 FROM
     "linkedin_time_bound_page_statistics" l1
