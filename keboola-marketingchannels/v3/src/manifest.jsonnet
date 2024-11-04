@@ -55,10 +55,19 @@
       path: "<common>/in-marketingchannels-linkedinads/extractor/leochan.ex-linkedin/keboola-marketingchannels-linkedin-data-source",
       rows: [],
     },
+    if HasProjectBackend("snowflake")==true then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("keboola-adsplatforms-transformation"),
       path: "transformation/keboola.snowflake-transformation/keboola-adsplatforms-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
+    },
+    if HasProjectBackend("bigquery")==true then
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("keboola-advertising-platforms-transformation"),
+      path: "transformation/keboola.google-bigquery-transformation/keboola-advertising-platforms-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
