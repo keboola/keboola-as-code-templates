@@ -643,7 +643,7 @@
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "requirements": 
         {
-          "backends": ["snowflake"],
+          "backends": ["snowflake", "bigquery"],
           "components": [
             "kds-team.ex-bing-ads",
             "leochan.ex-linkedin",
