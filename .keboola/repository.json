@@ -342,6 +342,23 @@
             "kds-team.ex-linkedin-pages"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-facebook",
+            "keboola.ex-instagram",
+            "keboola.ex-youtube",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-google-bigquery-v2",
+            "kds-team.ex-linkedin-pages"
+          ],
+          "path": "v1"
         }
       ]
     },
