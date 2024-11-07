@@ -105,7 +105,7 @@
         },
         if InputIsAvailable("oauth-googleads") then
         {
-          source: "in.c-keboola-ex-google-ads-" + ConfigId("keboola-marketingchannels-googleads-data-source") + ".report_ad_groups",
+          source: "in.c-keboola-ex-google-ads-" + ConfigId("keboola-marketingchannels-googleads-data-source") + ".report-ad_groups",
           destination: "Google_Adwords_ad_groups",
           where_column: "",
           where_values: [],
@@ -115,7 +115,7 @@
         },
         if InputIsAvailable("oauth-googleads") then
         {
-          source: "in.c-keboola-ex-google-ads-" + ConfigId("keboola-marketingchannels-googleads-data-source") + ".report_url_adwords",
+          source: "in.c-keboola-ex-google-ads-" + ConfigId("keboola-marketingchannels-googleads-data-source") + ".report-url_adwords",
           destination: "Google_Adwords_url_adwords",
           where_column: "",
           where_values: [],
