@@ -19,10 +19,6 @@
           path: "codes/data-quality-core",
         },
         {
-          id: ConfigRowId("test-column-data-type"),
-          path: "codes/test-column-data-type",
-        },
-        {
           id: ConfigRowId("test-column-null"),
           path: "codes/test-column-null",
         },
