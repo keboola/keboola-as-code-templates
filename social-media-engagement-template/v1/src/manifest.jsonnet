@@ -58,10 +58,18 @@
       path: "extractor/keboola.ex-youtube/data-source-in-social-media-engagement-youtube",
       rows: [],
     },
+    if HasProjectBackend("snowflake")==true then
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("transformation-in-social-media-engagement"),
       path: "transformation/keboola.snowflake-transformation/transformation-in-social-media-engagement",
+      rows: [],
+    },
+    if HasProjectBackend("bigquery")==true then
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("social-media-engagement"),
+      path: "transformation/keboola.google-bigquery-transformation/social-media-engagement",
       rows: [],
     },
     if InputIsAvailable("wr-db-mysql-db-host") then
