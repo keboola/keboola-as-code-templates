@@ -75,7 +75,7 @@
       "deprecated": true,
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-hubspot-crm",
           "keboola.wr-thoughtspot",
@@ -107,7 +107,7 @@
       "deprecated": false,
       "requirements": 
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
@@ -212,7 +212,7 @@
       "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness.",
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
@@ -309,7 +309,7 @@
       "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "keboola.ex-facebook",
           "keboola.ex-instagram",
@@ -1433,7 +1433,7 @@
       "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet, big query, snowflake DB or postgres.",
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "keboola.ex-mailchimp",
           "keboola.wr-google-sheets",
@@ -1468,7 +1468,7 @@
       "description": "Use Shopify demo data to perform RFM Analysis and visualize & explore results in interactive Data App",
       "requirements": 
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-shopify"
         ],
