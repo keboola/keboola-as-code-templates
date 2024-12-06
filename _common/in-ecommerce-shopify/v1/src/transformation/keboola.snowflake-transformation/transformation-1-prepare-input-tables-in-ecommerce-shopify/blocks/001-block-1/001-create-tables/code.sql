@@ -22,7 +22,9 @@ CREATE TABLE "order_discount_applications" (
 	"target_selection" VARCHAR(16777216),
 	"type" VARCHAR(16777216),
 	"value" VARCHAR(16777216),
-	"allocation_method" VARCHAR(16777216)
+	"allocation_method" VARCHAR(16777216),
+	"description" VARCHAR(16777216),
+	"title" VARCHAR(16777216)
 );
 
 CREATE TABLE "order_fulfillments" (
@@ -41,5 +43,10 @@ CREATE TABLE "order_fulfillments" (
 	"updated_at" VARCHAR(16777216),
 	"tracking_numbers" VARCHAR(16777216),
 	"status" VARCHAR(16777216),
-	"admin_graphql_api_id" VARCHAR(16777216)
+	"admin_graphql_api_id" VARCHAR(16777216),
+	"origin_address__address1" VARCHAR(16777216),
+	"origin_address__city" VARCHAR(16777216),
+	"origin_address__country_code" VARCHAR(16777216),
+	"origin_address__zip" VARCHAR(16777216),
+	"receipt__gift_cards" VARCHAR(16777216)
 );
