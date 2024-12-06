@@ -157,7 +157,7 @@
         type: "varchar",
         nullable: true,
         default: "",
-        size: "255",
+        size: "2550",
       },
       {
         name: "ORDER_TOTAL_PRICE_WITH_TAXES",
