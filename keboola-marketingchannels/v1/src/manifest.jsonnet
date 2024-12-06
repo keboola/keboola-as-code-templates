@@ -48,43 +48,12 @@
         },
       ],
     },
-    if InputIsAvailable("ga-from") then
-    {
-      componentId: "keboola.ex-google-analytics-v4",
-      id: ConfigId("keboola-marketingchannels-googleanalytics-data-source"),
-      path: "<common>/in-marketingchannels-googleanalytics/extractor/keboola.ex-google-analytics-v4/keboola-marketingchannels-googleanalytics-data-source",
-      rows: [],
-    },
     if InputIsAvailable("ex-linkedin-start-day") then
     {
       componentId: "leochan.ex-linkedin",
       id: ConfigId("keboola-marketingchannels-linkedin-data-source"),
       path: "<common>/in-marketingchannels-linkedinads/extractor/leochan.ex-linkedin/keboola-marketingchannels-linkedin-data-source",
       rows: [],
-    },
-    if InputIsAvailable("ga4-from") then
-    {
-      componentId: "keboola.ex-google-analytics-v4",
-      id: ConfigId("in-marketingchannels-googleanalytics4-data-source"),
-      path: "<common>/in-marketingchannels-googleanalytics4/extractor/keboola.ex-google-analytics-v4/in-marketingchannels-googleanalytics4-data-source",
-      rows: [
-        {
-          id: ConfigRowId("ga4-basic-sessions"),
-          path: "rows/ga4-basic-sessions",
-        },
-        {
-          id: ConfigRowId("ga4-basic-transactions"),
-          path: "rows/ga4-basic-transactions",
-        },
-      ],
-    },
-    if InputIsAvailable("ga4-from") then
-    {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-in-mkt-googleanalytics-ga4-test"),
-      path: "<common>/in-marketingchannels-googleanalytics4/transformation/keboola.snowflake-transformation/transformation-in-mkt-googleanalytics4",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
     if InputIsAvailable("oauth-facebookads") then
     {
@@ -110,14 +79,6 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
-    if InputIsAvailable("ga-from") then
-    {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-marketingchannels-googleanalytics-transformation"),
-      path: "<common>/in-marketingchannels-googleanalytics/transformation/keboola.snowflake-transformation/keboola-marketingchannels-googleanalytics-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
-    },
     if InputIsAvailable("ex-linkedin-start-day") then
     {
       componentId: "keboola.snowflake-transformation",
@@ -130,92 +91,44 @@
     {
       componentId: "keboola.wr-google-bigquery-v2",
       id: ConfigId("keboola-marketingchannels-bigquery-data-destination"),
-      path: "<common>/out-marketingchannels-bigquery/v0/writer/keboola.wr-google-bigquery-v2/keboola-marketingchannels-bigquery-data-destination",
-      rows: std.filter(function(v) v != null,[
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("keywords-adgroup"),
-          path: "rows/keywords-adgroup",
-        },
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("online-marketing-traffic"),
-          path: "rows/online-marketing-traffic",
-        },
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("online-marketing-transactions"),
-          path: "rows/online-marketing-transactions",
-        },
-        if InputIsAvailable("ga-from") == false then
+      path: "<common>/out-marketingchannels-bigquery/v2/writer/keboola.wr-google-bigquery-v2/keboola-marketingchannels-bigquery-data-destination",
+      rows: [
         {
           id: ConfigRowId("online-marketing"),
           path: "rows/online-marketing",
         }
-      ]),
+      ],
     },
     if InputIsAvailable("google-sheet-id") then
     {
       componentId: "keboola.wr-google-sheets",
       id: ConfigId("keboola-marketingchannels-googlesheet-data-destination"),
-      path: "<common>/out-marketingchannels-gsheet/v0/writer/keboola.wr-google-sheets/keboola-marketingchannels-googlesheet-data-destination",
+      path: "<common>/out-marketingchannels-gsheet/v2/writer/keboola.wr-google-sheets/keboola-marketingchannels-googlesheet-data-destination",
       rows: [],
     },
     if InputIsAvailable("wr-snowflake-db-host") then
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("keboola-marketingchannels-snowflake-data-destination"),
-      path: "<common>/out-marketingchannels-snowflake/v0/writer/keboola.wr-snowflake/keboola-marketingchannels-snowflake-data-destination",
-      rows: std.filter(function(v) v != null,[
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("keywords-adgroup-001"),
-          path: "rows/keywords-adgroup-001",
-        },
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("online-marketing-traffic-001"),
-          path: "rows/online-marketing-traffic-001",
-        },
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("online-marketing-transactions-001"),
-          path: "rows/online-marketing-transactions-001",
-        },
-        if InputIsAvailable("ga-from") == false then         
+      path: "<common>/out-marketingchannels-snowflake/v2/writer/keboola.wr-snowflake/keboola-marketingchannels-snowflake-data-destination",
+      rows: [     
         {
           id: ConfigRowId("online-marketing"),
           path: "rows/online-marketing",
         },
-      ]),
+      ],
     },
     if InputIsAvailable("wr-postgresql-db-hostname") then
     {
       componentId: "keboola.wr-db-pgsql",
       id: ConfigId("keboola-marketingchannels-postgresql-data-destination"),
-      path: "<common>/out-marketingchannels-postgresql/v0/writer/keboola.wr-db-pgsql/keboola-marketingchannels-postgresql-data-destination",
-      rows: std.filter(function(v) v != null,[
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("keywords-adgroup"),
-          path: "rows/keywords-adgroup",
-        },
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("online-marketing-traffic"),
-          path: "rows/online-marketing-traffic",
-        },
-        if InputIsAvailable("ga-from") then
-        {
-          id: ConfigRowId("online-marketing-transactions"),
-          path: "rows/online-marketing-transactions",
-        },
-        if InputIsAvailable("ga-from") == false then
+      path: "<common>/out-marketingchannels-postgresql/v2/writer/keboola.wr-db-pgsql/keboola-marketingchannels-postgresql-data-destination",
+      rows: [
         {
           id: ConfigRowId("online-marketing"),
           path: "rows/online-marketing",
         }
-      ]),
+      ],
     },
     if InputIsAvailable("data-apps") then
     {
