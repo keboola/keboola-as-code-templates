@@ -30,10 +30,9 @@
     id: "wr-postgresql-db-user",
     name: "Username",
     description: "Insert database username.",
-    type: "string",
-    kind: "input",
-    default: "userName",
     showif: "[wr-postgresql-db-hostname] != ''",
+    type: "string",
+    kind: "hidden",
   },
   {
     id: "wr-postgresql-db-password",
