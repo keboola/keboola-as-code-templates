@@ -5,5 +5,5 @@
 
 # Environment
 .env
-projects.json
+/projects.json
 /inputs.json

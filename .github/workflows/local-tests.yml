@@ -1,0 +1,43 @@
+name: "Local tests"
+on:
+  workflow_call:
+
+jobs:
+  local-tests:
+    name: local tests
+    runs-on: ubuntu-latest
+    steps:
+          # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download keboola CLI
+        run: |
+          sudo wget -P /etc/apt/trusted.gpg.d https://cli-dist.keboola.com/deb/keboola.gpg
+          echo "deb https://cli-dist.keboola.com/deb /" | sudo tee /etc/apt/sources.list.d/keboola.list
+
+      - name: Install keboola CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install keboola-cli
+          kbc --version
+
+      - name: Set TEST_KBC_PROJECTS_FILE entries
+        uses: ./.github/actions/export-kbc-projects
+        with:
+          secrets: ${{ toJSON(secrets) }}
+
+      - name: Run tests
+        run: |
+          set -eo pipefail
+          kbc template test run keboola-mgmt-jira --local-only
+        shell: bash
+        env:
+          TEST_KBC_PROJECTS_FILE: '${{ github.workspace }}/${{ vars.TEST_KBC_PROJECTS_FILE }}'
+          KBC_SECRET_TOKEN: ${{ secrets.KBC_SECRET_TOKEN }}
+          KBC_SECRET_BIGQUERY_PRIVATE_KEY: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY }}
+          KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID }}
+          KBC_SECRET_POSTGRES_PASSWORD: ${{ secrets.KBC_SECRET_POSTGRES_PASSWORD }}
+          KBC_SECRET_POSTGRES_DB_USER: ${{ secrets.KBC_SECRET_POSTGRES_DB_USER }}
+          KBC_SECRET_SNOWFLAKE_PASSWORD: ${{ secrets.KBC_SECRET_SNOWFLAKE_PASSWORD }}
+          KBC_SECRET_SNOWFLAKE_DB_USER: ${{ secrets.KBC_SECRET_SNOWFLAKE_DB_USER }}
