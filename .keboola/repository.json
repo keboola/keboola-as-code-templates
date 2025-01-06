@@ -75,7 +75,7 @@
       "deprecated": true,
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-hubspot-crm",
           "keboola.wr-thoughtspot",
@@ -107,7 +107,7 @@
       "deprecated": false,
       "requirements": 
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
@@ -212,7 +212,7 @@
       "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness.",
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
@@ -309,7 +309,7 @@
       "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "keboola.ex-facebook",
           "keboola.ex-instagram",
@@ -327,7 +327,7 @@
       "path": "social-media-engagement-template",
       "versions": [
         {
-          "version": "1.0.0",
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -341,7 +341,7 @@
             "keboola.wr-google-bigquery-v2",
             "kds-team.ex-linkedin-pages"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -519,16 +519,17 @@
             "kds-team.ex-asana-v2",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
-          ]
+            "keboola.wr-db-pgsql",
+            "keboola.wr-db-snowflake"
+         ]
         },
       "categories": [
         "Project Management"
       ],
       "path": "keboola-mgmt-asana",
       "versions": [
-        {
-          "version": "2.0.0",
+         {
+          "version": "1.0.1",
           "description": "",
           "stable": false,
           "components": [
@@ -642,7 +643,7 @@
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
       "requirements": 
         {
-          "backends": ["snowflake"],
+          "backends": ["snowflake", "bigquery"],
           "components": [
             "kds-team.ex-bing-ads",
             "leochan.ex-linkedin",
@@ -661,7 +662,7 @@
       "path": "keboola-marketingchannels",
       "versions": [
         {
-          "version": "2.0.0",
+          "version": "3.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -675,7 +676,7 @@
             "keboola.wr-db-pgsql",
             "keboola.data-apps"
           ],
-          "path": "v2"
+          "path": "v3"
         }
       ]
     },
@@ -1381,7 +1382,7 @@
       "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet, big query, snowflake DB or postgres.",
       "requirements":
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "keboola.ex-mailchimp",
           "keboola.wr-google-sheets",
@@ -1416,7 +1417,7 @@
       "description": "Use Shopify demo data to perform RFM Analysis and visualize & explore results in interactive Data App",
       "requirements": 
         {
-        "backend": ["snowflake"],
+        "backends": ["snowflake"],
         "components": [
           "kds-team.ex-shopify"
         ],
@@ -1926,7 +1927,8 @@
           "description": "",
           "stable": false,
           "components": [
-            "keboola.data-apps"
+            "keboola.data-apps",
+            "kds-team.ex-lever"
           ]
         }
       ]
