@@ -42,4 +42,7 @@
       ],
     },
   },
+  runtime: {
+    process_timeout: 7200
+    },
 }

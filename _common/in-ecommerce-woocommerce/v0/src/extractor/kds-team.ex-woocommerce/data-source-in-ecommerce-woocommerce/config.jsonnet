@@ -14,4 +14,7 @@
     date_from: Input("ex-woocommerce-date-from"),
     query_string_auth: false,
   },
+  runtime: {
+    process_timeout: 7200
+  },
 }
