@@ -55,35 +55,19 @@
       path: "<common>/in-marketingchannels-linkedinads/extractor/leochan.ex-linkedin/keboola-marketingchannels-linkedin-data-source",
       rows: [],
     },
-    if InputIsAvailable("oauth-facebookads") then
+    if HasProjectBackend("snowflake")==true then
     {
       componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-marketingchannels-facebookads-transformation"),
-      path: "<common>/in-marketingchannels-facebookads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-facebookads-transformation",
+      id: ConfigId("keboola-adsplatforms-transformation"),
+      path: "transformation/keboola.snowflake-transformation/keboola-adsplatforms-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
-    if InputIsAvailable("ex-bingads-account-id") then
+    if HasProjectBackend("bigquery")==true then
     {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-marketingchannels-bingads-transformation"),
-      path: "<common>/in-marketingchannels-bingads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-bingads-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
-    },
-    if InputIsAvailable("oauth-googleads") then
-    {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-marketingchannels-googleads-transformation"),
-      path: "<common>/in-marketingchannels-googleads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-googleads-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
-    },
-    if InputIsAvailable("ex-linkedin-start-day") then
-    {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-marketingchannels-linkedin-transformation"),
-      path: "<common>/in-marketingchannels-linkedinads/transformation/keboola.snowflake-transformation/keboola-marketingchannels-linkedin-transformation",
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("keboola-advertising-platforms-transformation"),
+      path: "transformation/keboola.google-bigquery-transformation/keboola-advertising-platforms-transformation",
       rows: [],
       metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
     },
