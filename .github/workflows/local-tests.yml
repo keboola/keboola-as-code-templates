@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         run: |
           set -eo pipefail
-          kbc template test run keboola-mgmt-jira --local-only
+          kbc template test run --local-only
         shell: bash
         env:
           TEST_KBC_PROJECTS_FILE: '${{ github.workspace }}/${{ vars.TEST_KBC_PROJECTS_FILE }}'
