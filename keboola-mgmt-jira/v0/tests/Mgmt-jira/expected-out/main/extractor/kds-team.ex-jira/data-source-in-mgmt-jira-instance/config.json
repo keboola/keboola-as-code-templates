@@ -1,0 +1,17 @@
+{
+  "parameters": {
+    "#token": "##KBC_SECRET_TEST##",
+    "custom_jql": [],
+    "datasets": [
+      "issues",
+      "issues_changelogs",
+      "worklogs",
+      "boards_n_sprints"
+    ],
+    "incremental": 1,
+    "organization_id": "keboola",
+    "organization_url": "https://keboola.atlassian.net",
+    "since": "3 months ago",
+    "username": "monika.feigler@keboola.com"
+  }
+}
