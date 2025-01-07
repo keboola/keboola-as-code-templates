@@ -12,15 +12,32 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download keboola CLI
-        run: |
-          sudo wget -P /etc/apt/trusted.gpg.d https://cli-dist.keboola.com/deb/keboola.gpg
-          echo "deb https://cli-dist.keboola.com/deb /" | sudo tee /etc/apt/sources.list.d/keboola.list
+        id: kbc_download_latest_release
+        uses: robinraju/release-downloader@v1.11
+        with:
+          repository: 'keboola/keboola-as-code'
+          latest: true
+          fileName: '*_linux_amd64.zip'
 
       - name: Install keboola CLI
         run: |
-          sudo apt-get update
-          sudo apt-get install keboola-cli
+          mkdir "${{ runner.temp }}/kbc"
+          latest_tag=${{steps.kbc_download_latest_release.outputs.tag_name}}
+          latest_version=${latest_tag:1}
+          
+          release_zip="keboola-cli_${latest_version}_linux_amd64.zip"
+          if [ ! -f "$release_zip" ]; then
+          echo "Could not download keboola-cli_${latest_version}_linux_amd64.zip from the latest release."
+          exit 1
+          fi
+          
+          # Unzip the CLI binary
+          release_bin="/usr/local/bin/kbc"
+          unzip "$release_zip" -d /usr/local/bin
+          chmod +x "$release_bin"
+          echo "Keboola as Code CLI installed: $release_bin"
           kbc --version
+        shell: bash
 
       - name: Set TEST_KBC_PROJECTS_FILE entries
         uses: ./.github/actions/export-kbc-projects
