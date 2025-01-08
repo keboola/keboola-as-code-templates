@@ -508,24 +508,6 @@ FROM \"' || :TABLE1_NAME || '\"';
         $$;
 
 // Tests data type of provided column in provided table. Fails when different than expected.
-CREATE OR REPLACE PROCEDURE TEST_COLUMN_DATA_TYPE(TABLE_NAME STRING, COLUMN_NAME STRING, EXPECTED_DATA_TYPE STRING)
-returns table()
-language sql
-EXECUTE AS CALLER
-    as
-        $$
-            declare
-            	parameters string default '{\"TABLE_NAME\" :\"'|| :TABLE_NAME ||'\",\"COLUMN_NAME\": \"'|| :COLUMN_NAME || '\", \"EXPECTED_DATA_TYPE\": \"'|| :EXPECTED_DATA_TYPE || '\"}';
-                res resultset;
-                query varchar default 'SELECT COLUMN_NAME, DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = \'' || :TABLE_NAME || '\' AND COLUMN_NAME = \'' || :COLUMN_NAME || '\' AND DATA_TYPE != \'' || :EXPECTED_DATA_TYPE || '\'';
-            BEGIN
-                res := (execute immediate :query);
-                execute immediate 'CALL DQ_STORE_LAST_QUERY_PARAMETERS(\''|| :parameters ||'\')';
-                return table (res);
-            END;
-        $$;
-
-// Tests data type of provided column in provided table. Fails when different than expected.
 CREATE OR REPLACE PROCEDURE TEST_COLUMN_VALUE_DATA_TYPE(TABLE_NAME STRING, COLUMN_NAME STRING, EXPECTED_DATA_TYPE STRING)
 returns table()
 language sql

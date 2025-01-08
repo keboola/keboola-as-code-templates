@@ -18,4 +18,7 @@
       incremental_output: 1,
     },
   },
+  runtime: {
+    process_timeout: 7200
+  },
 }
