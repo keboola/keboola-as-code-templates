@@ -10,3 +10,7 @@ jobs:
     secrets: inherit
     uses: ./.github/workflows/json-validation.yml
 
+  local-test:
+    name: "Run local tests"
+    secrets: inherit
+    uses: ./.github/workflows/local-tests.yml

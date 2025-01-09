@@ -21,10 +21,9 @@
     id: "wr-snowflake-db-user",
     name: "Username",
     description: "Insert database username.",
-    type: "string",
-    kind: "input",
-    default: "userName",
     showif: "[wr-snowflake-db-host] != ''",
+    type: "string",
+    kind: "hidden",
   },
   {
     id: "wr-snowflake-db-password",
