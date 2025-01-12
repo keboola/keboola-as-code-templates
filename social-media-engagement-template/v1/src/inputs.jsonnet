@@ -165,17 +165,26 @@
           ]
         },         
       ],
-    },{   
+    },
+    {   
       description: "Transformations",
       required: "all",
-      steps: [
+      steps: std.filter(function(v) v != null,[
+        if HasProjectBackend("snowflake")==true then
         {
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "SQL Transformations",
           inputs: [],
         },
-      ]
+        if HasProjectBackend("bigquery")==true then
+        {
+          icon: "component:keboola.google-bigquery-transformation",
+          name: "BigQuery SQL",
+          description: "BigQuery Transformations",
+          inputs: [],
+        },
+      ])
     },
 
     {
