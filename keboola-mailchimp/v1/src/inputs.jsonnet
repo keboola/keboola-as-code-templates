@@ -19,7 +19,7 @@ local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
         }
       ]
     },
-     {   
+    {   
       description: "Transformations",
       required: "all",
       steps: [
@@ -32,7 +32,7 @@ local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
         },
         {
           icon: "component:keboola.google-bigquery-transformation",
-          name: "Snowflake SQL",
+          name: "BigQuery SQL",
           backend: "bigquery",
           description: "Transformations",
           inputs: [],
