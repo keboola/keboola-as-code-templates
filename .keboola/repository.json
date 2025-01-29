@@ -606,7 +606,7 @@
           "path": "v0"
         },
         {
-          "version": "1.0.0",
+          "version": "1.0.1",
           "description": "",
           "stable": false,
           "components": [
@@ -616,7 +616,7 @@
             "keboola.wr-db-snowflake",
             "keboola.wr-db-pgsql"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
