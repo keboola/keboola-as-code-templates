@@ -55,7 +55,7 @@ local snowflake = import "/<common>/out-ecommerce-snowflake/v1/src/inputs.jsonne
       required: "optional",
       steps: [
           {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 

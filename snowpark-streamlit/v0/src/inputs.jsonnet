@@ -31,7 +31,7 @@
       required: "all",
       steps: [
         {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake Destination",
           description: "Save data into Snowflake",
           dialogName: "Snowflake Destination",
