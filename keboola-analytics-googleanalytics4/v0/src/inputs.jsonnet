@@ -42,6 +42,7 @@ local postgresql = import "/<common>/out-googleanalytics4-postgresql/src/inputs.
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformation",
+          backend: "snowflake",
           inputs: [],
         },
       ]
@@ -51,7 +52,7 @@ local postgresql = import "/<common>/out-googleanalytics4-postgresql/src/inputs.
       required: "optional",
       steps: [
         {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake",
           description: "Snowflake - Destination",
           dialogName: "Snowflake Destination",

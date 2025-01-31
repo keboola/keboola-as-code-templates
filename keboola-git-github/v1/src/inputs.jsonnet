@@ -20,13 +20,21 @@ local postgresql = import "/<common>/out-git-postgresql/v0/src/inputs.jsonnet";
       ]
     },
     {   
-      description: "Snowflake Transformations",
+      description: "Transformations",
       required: "all",
       steps: [
         {
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",  
+          inputs: [],
+        },
+        {
+          icon: "component:keboola.google-bigquery-transformation",
+          name: "BigQuery SQL",
+          description: "Transformations",
+          backend: "bigquery",
           inputs: [],
         },
       ]
@@ -36,7 +44,7 @@ local postgresql = import "/<common>/out-git-postgresql/v0/src/inputs.jsonnet";
       required: "optional",
       steps: [
         {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 
