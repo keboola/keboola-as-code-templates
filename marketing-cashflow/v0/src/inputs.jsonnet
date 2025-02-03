@@ -374,6 +374,7 @@
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",
           inputs: [],
         },
         {

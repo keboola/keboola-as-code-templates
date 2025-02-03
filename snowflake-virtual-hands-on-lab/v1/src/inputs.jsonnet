@@ -57,6 +57,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",
           inputs: [],
         },
       ]
@@ -66,7 +67,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
           {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 

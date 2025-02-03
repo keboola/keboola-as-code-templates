@@ -25,9 +25,11 @@ local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
         {
+
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformation",
+          backend: "snowflake",
           inputs: [],
         },
       ]
@@ -37,7 +39,7 @@ local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
       required: "optional",
       steps: [
           {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake Destination",
           description: "Load to data into snowflake",
           dialogName: "Snowflake Destination", 

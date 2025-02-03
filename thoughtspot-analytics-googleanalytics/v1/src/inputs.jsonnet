@@ -26,6 +26,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformation",
+          backend: "snowflake",
           inputs: [],
         },
       ]
@@ -35,7 +36,7 @@ local googleanalytics = import "/<common>/in-googleanalytics/v0/src/inputs.jsonn
       required: "optional",
       steps: [
         {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination",
