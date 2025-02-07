@@ -1,0 +1,75 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "column_types": [],
+          "columns": [],
+          "destination": "campaigns",
+          "source": "in.c-mailchimp-ex-105194289.campaigns",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "column_types": [],
+          "columns": [],
+          "destination": "members",
+          "source": "in.c-mailchimp-ex-105194290.members",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "column_types": [],
+          "columns": [],
+          "destination": "lists",
+          "source": "in.c-mailchimp-ex-105194290.lists",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-mailchimp-bdm-instance.campaign",
+          "primary_key": [
+            "campaign_id"
+          ],
+          "source": "campaign_out"
+        },
+        {
+          "destination": "out.c-mailchimp-bdm-instance.customer",
+          "primary_key": [
+            "customer_id"
+          ],
+          "source": "customer_out"
+        },
+        {
+          "destination": "out.c-mailchimp-bdm-instance.campaign_event",
+          "primary_key": [
+            "campaign_event_id"
+          ],
+          "source": "campaign_event_out"
+        },
+        {
+          "destination": "out.c-mailchimp-bdm-instance.list",
+          "primary_key": [
+            "list_id"
+          ],
+          "source": "lists_out"
+        },
+        {
+          "destination": "out.c-mailchimp-bdm-instance.list_member",
+          "primary_key": [
+            "list_member_id"
+          ],
+          "source": "list_member_out"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "list",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "list_id",
+            "name": "list_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_name",
+            "name": "list_name",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_contact_company",
+            "name": "list_contact_company",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_contact_country",
+            "name": "list_contact_country",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_rating",
+            "name": "list_rating",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-mailchimp-bdm-instance.list"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "list_id",
+            "list_name",
+            "list_contact_company",
+            "list_contact_country",
+            "list_rating"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.list.csv",
+          "source": "out.c-mailchimp-bdm-instance.list"
+        }
+      ]
+    }
+  }
+}

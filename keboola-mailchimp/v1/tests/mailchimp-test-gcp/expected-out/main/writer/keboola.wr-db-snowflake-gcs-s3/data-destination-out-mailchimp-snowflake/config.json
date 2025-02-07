@@ -1,0 +1,14 @@
+{
+  "parameters": {
+    "db": {
+      "#password": "QbqrVg9ykoq5R9PnCe5Z4ZKKdy8LX9Cf",
+      "database": "KEBOOLA_8780",
+      "driver": "snowflake",
+      "host": "keboola.west-europe.azure.snowflakecomputing.com",
+      "port": "443",
+      "schema": "WORKSPACE_46154535",
+      "user": "KEBOOLA_WORKSPACE_46154535",
+      "warehouse": "KEBOOLA_PROD_SMALL"
+    }
+  }
+}

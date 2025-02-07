@@ -1,0 +1,9 @@
+{
+  "name": "keboola.snowflake-transformation-14223151",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "transformation/keboola.snowflake-transformation/transformation-in-mailchimp-instance"
+  }
+}

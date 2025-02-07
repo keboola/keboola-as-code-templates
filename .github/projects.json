@@ -1,0 +1,10 @@
+[
+  {
+    "host": "connection.us-east4.gcp.keboola.com",
+    "project": 242,
+    "stagingStorage": "s3",
+    "backend": "snowflake",
+    "token": "242-199776-YT92zlG6fgBzMKFk7EQ7XXlXmmXeax7XbH5xV2Qx",
+    "legacyTransformation": true
+  }
+]

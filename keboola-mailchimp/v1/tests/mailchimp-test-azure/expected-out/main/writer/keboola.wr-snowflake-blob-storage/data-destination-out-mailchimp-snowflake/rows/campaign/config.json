@@ -1,0 +1,178 @@
+{
+  "parameters": {
+    "dbName": "campaign",
+    "incremental": true,
+    "items": [
+      {
+        "dbName": "campaign_id",
+        "default": "",
+        "name": "campaign_id",
+        "nullable": false,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_title",
+        "default": "",
+        "name": "campaign_title",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_preview_url",
+        "default": "",
+        "name": "campaign_preview_url",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_type",
+        "default": "",
+        "name": "campaign_type",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_status",
+        "default": "",
+        "name": "campaign_status",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_subject",
+        "default": "",
+        "name": "campaign_subject",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_from_name",
+        "default": "",
+        "name": "campaign_from_name",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_reply_to",
+        "default": "",
+        "name": "campaign_reply_to",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_emails_sent",
+        "default": "",
+        "name": "campaign_emails_sent",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_recipient_count",
+        "default": "",
+        "name": "campaign_recipient_count",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_opens",
+        "default": "",
+        "name": "campaign_opens",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_unique_opens",
+        "default": "",
+        "name": "campaign_unique_opens",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_clicks",
+        "default": "",
+        "name": "campaign_clicks",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_subscriber_clicks",
+        "default": "",
+        "name": "campaign_subscriber_clicks",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_ecommerce_total_orders",
+        "default": "",
+        "name": "campaign_ecommerce_total_orders",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_ecommerce_total_spent",
+        "default": "",
+        "name": "campaign_ecommerce_total_spent",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_ecommerce_total_revenue",
+        "default": "",
+        "name": "campaign_ecommerce_total_revenue",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "campaign_id"
+    ],
+    "tableId": "out.c-mailchimp-bdm-instance.campaign"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "campaign_id",
+            "campaign_title",
+            "campaign_preview_url",
+            "campaign_type",
+            "campaign_status",
+            "campaign_subject",
+            "campaign_from_name",
+            "campaign_reply_to",
+            "campaign_emails_sent",
+            "campaign_recipient_count",
+            "campaign_opens",
+            "campaign_unique_opens",
+            "campaign_clicks",
+            "campaign_subscriber_clicks",
+            "campaign_ecommerce_total_orders",
+            "campaign_ecommerce_total_spent",
+            "campaign_ecommerce_total_revenue"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.campaign.csv",
+          "source": "out.c-mailchimp-bdm-instance.campaign"
+        }
+      ]
+    }
+  }
+}

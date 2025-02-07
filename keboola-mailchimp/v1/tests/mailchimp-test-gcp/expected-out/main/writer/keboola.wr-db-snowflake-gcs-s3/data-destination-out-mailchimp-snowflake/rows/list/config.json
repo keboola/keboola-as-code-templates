@@ -1,0 +1,70 @@
+{
+  "parameters": {
+    "dbName": "list",
+    "incremental": true,
+    "items": [
+      {
+        "dbName": "list_id",
+        "default": "",
+        "name": "list_id",
+        "nullable": false,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_name",
+        "default": "",
+        "name": "list_name",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_contact_company",
+        "default": "",
+        "name": "list_contact_company",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_contact_country",
+        "default": "",
+        "name": "list_contact_country",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_rating",
+        "default": "",
+        "name": "list_rating",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "list_id"
+    ],
+    "tableId": "out.c-mailchimp-bdm-instance.list"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "list_id",
+            "list_name",
+            "list_contact_company",
+            "list_contact_country",
+            "list_rating"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.list.csv",
+          "source": "out.c-mailchimp-bdm-instance.list"
+        }
+      ]
+    }
+  }
+}

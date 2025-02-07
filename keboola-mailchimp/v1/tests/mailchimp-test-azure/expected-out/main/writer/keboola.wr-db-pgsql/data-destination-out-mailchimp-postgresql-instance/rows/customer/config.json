@@ -1,0 +1,52 @@
+{
+  "parameters": {
+    "dbName": "customer",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "customer_id",
+        "default": "",
+        "name": "customer_id",
+        "nullable": false,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "customer_email_address",
+        "default": "",
+        "name": "customer_email_address",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "name",
+        "default": "",
+        "name": "name",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "customer_id"
+    ],
+    "tableId": "out.c-mailchimp-bdm-instance.customer"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "customer_id",
+            "customer_email_address",
+            "name"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.customer.csv",
+          "source": "out.c-mailchimp-bdm-instance.customer"
+        }
+      ]
+    }
+  }
+}

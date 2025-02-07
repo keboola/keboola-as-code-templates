@@ -1,0 +1,9 @@
+{
+  "name": "keboola.ex-mailchimp-14223150",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "extractor/keboola.ex-mailchimp/data-source-2-in-mailchimp-instance"
+  }
+}

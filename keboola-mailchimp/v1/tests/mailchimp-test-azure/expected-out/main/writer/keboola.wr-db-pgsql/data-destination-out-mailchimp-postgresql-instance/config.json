@@ -1,0 +1,13 @@
+{
+  "parameters": {
+    "db": {
+      "#password": "6k}gLHL2ebWBwcm",
+      "database": "salesdemo",
+      "driver": "pgsql",
+      "host": "keboolacasalesdemo.csjrlfk9cmjk.us-east-1.rds.amazonaws.com",
+      "port": "5432",
+      "schema": "website_leads",
+      "user": "keboola_ca"
+    }
+  }
+}

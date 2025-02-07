@@ -1,0 +1,9 @@
+{
+  "name": "keboola.wr-google-sheets-105194298",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "writer/keboola.wr-google-sheets/data-destination-out-mailchimp-gsheet-instance"
+  }
+}

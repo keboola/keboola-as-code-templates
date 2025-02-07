@@ -1,0 +1,128 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "campaign",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "campaign_id",
+            "name": "campaign_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_title",
+            "name": "campaign_title",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_preview_url",
+            "name": "campaign_preview_url",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_type",
+            "name": "campaign_type",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_status",
+            "name": "campaign_status",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_subject",
+            "name": "campaign_subject",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_from_name",
+            "name": "campaign_from_name",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_reply_to",
+            "name": "campaign_reply_to",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_emails_sent",
+            "name": "campaign_emails_sent",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_recipient_count",
+            "name": "campaign_recipient_count",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_opens",
+            "name": "campaign_opens",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_unique_opens",
+            "name": "campaign_unique_opens",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_clicks",
+            "name": "campaign_clicks",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_subscriber_clicks",
+            "name": "campaign_subscriber_clicks",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_ecommerce_total_orders",
+            "name": "campaign_ecommerce_total_orders",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_ecommerce_total_spent",
+            "name": "campaign_ecommerce_total_spent",
+            "type": "STRING"
+          },
+          {
+            "dbName": "campaign_ecommerce_total_revenue",
+            "name": "campaign_ecommerce_total_revenue",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-mailchimp-bdm-instance.campaign"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "campaign_id",
+            "campaign_title",
+            "campaign_preview_url",
+            "campaign_type",
+            "campaign_status",
+            "campaign_subject",
+            "campaign_from_name",
+            "campaign_reply_to",
+            "campaign_emails_sent",
+            "campaign_recipient_count",
+            "campaign_opens",
+            "campaign_unique_opens",
+            "campaign_clicks",
+            "campaign_subscriber_clicks",
+            "campaign_ecommerce_total_orders",
+            "campaign_ecommerce_total_spent",
+            "campaign_ecommerce_total_revenue"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.campaign.csv",
+          "source": "out.c-mailchimp-bdm-instance.campaign"
+        }
+      ]
+    }
+  }
+}

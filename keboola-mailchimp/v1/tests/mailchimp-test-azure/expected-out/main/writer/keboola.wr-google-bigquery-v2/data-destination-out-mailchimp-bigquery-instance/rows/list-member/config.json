@@ -1,0 +1,80 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "list_member",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "list_member_id",
+            "name": "list_member_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "customer_id",
+            "name": "customer_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_id",
+            "name": "list_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_member_status",
+            "name": "list_member_status",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_member_source",
+            "name": "list_member_source",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_member_unsubscribe_reason",
+            "name": "list_member_unsubscribe_reason",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_member_rating",
+            "name": "list_member_rating",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_member_avg_open_rate",
+            "name": "list_member_avg_open_rate",
+            "type": "STRING"
+          },
+          {
+            "dbName": "list_member_avg_click_rate",
+            "name": "list_member_avg_click_rate",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-mailchimp-bdm-instance.list_member"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "list_member_id",
+            "customer_id",
+            "list_id",
+            "list_member_status",
+            "list_member_source",
+            "list_member_unsubscribe_reason",
+            "list_member_rating",
+            "list_member_avg_open_rate",
+            "list_member_avg_click_rate"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.list_member.csv",
+          "source": "out.c-mailchimp-bdm-instance.list_member"
+        }
+      ]
+    }
+  }
+}

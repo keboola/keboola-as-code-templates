@@ -1,0 +1,9 @@
+{
+  "name": "keboola.wr-google-bigquery-v2-105194292",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "writer/keboola.wr-google-bigquery-v2/data-destination-out-mailchimp-bigquery-instance"
+  }
+}

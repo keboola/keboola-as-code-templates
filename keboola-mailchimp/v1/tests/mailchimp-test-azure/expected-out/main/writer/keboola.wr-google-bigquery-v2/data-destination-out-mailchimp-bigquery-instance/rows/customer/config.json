@@ -1,0 +1,44 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "customer",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "customer_id",
+            "name": "customer_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "customer_email_address",
+            "name": "customer_email_address",
+            "type": "STRING"
+          },
+          {
+            "dbName": "name",
+            "name": "name",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-mailchimp-bdm-instance.customer"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "customer_id",
+            "customer_email_address",
+            "name"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.customer.csv",
+          "source": "out.c-mailchimp-bdm-instance.customer"
+        }
+      ]
+    }
+  }
+}

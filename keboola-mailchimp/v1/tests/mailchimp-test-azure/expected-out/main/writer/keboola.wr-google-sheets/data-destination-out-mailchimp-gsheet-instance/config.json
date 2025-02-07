@@ -1,0 +1,105 @@
+{
+  "authorization": {
+    "oauth_api": {}
+  },
+  "parameters": {
+    "tables": [
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "1FJ6DiZ10L3dMKHHCnuHk0VrVVml6A8V7CUmyhygc9j4",
+        "id": 60916,
+        "sheetId": 0,
+        "sheetTitle": "campaign",
+        "tableId": "out.c-mailchimp-bdm-instance.campaign",
+        "title": "OUT-MAILCHIMP"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "1FJ6DiZ10L3dMKHHCnuHk0VrVVml6A8V7CUmyhygc9j4",
+        "id": 16345,
+        "sheetId": 84343315,
+        "sheetTitle": "campaign_event",
+        "tableId": "out.c-mailchimp-bdm-instance.campaign_event",
+        "title": "OUT-MAILCHIMP"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "1FJ6DiZ10L3dMKHHCnuHk0VrVVml6A8V7CUmyhygc9j4",
+        "id": 27421,
+        "sheetId": 930793580,
+        "sheetTitle": "customer",
+        "tableId": "out.c-mailchimp-bdm-instance.customer",
+        "title": "OUT-MAILCHIMP"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "1FJ6DiZ10L3dMKHHCnuHk0VrVVml6A8V7CUmyhygc9j4",
+        "id": 40010,
+        "sheetId": 865998605,
+        "sheetTitle": "list",
+        "tableId": "out.c-mailchimp-bdm-instance.list",
+        "title": "OUT-MAILCHIMP"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "1FJ6DiZ10L3dMKHHCnuHk0VrVVml6A8V7CUmyhygc9j4",
+        "id": 35129,
+        "sheetId": 1255572892,
+        "sheetTitle": "list_member",
+        "tableId": "out.c-mailchimp-bdm-instance.list_member",
+        "title": "OUT-MAILCHIMP"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "columns": [],
+          "destination": "out.c-mailchimp-bdm-instance.campaign.csv",
+          "source": "out.c-mailchimp-bdm-instance.campaign",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-mailchimp-bdm-instance.campaign_event.csv",
+          "source": "out.c-mailchimp-bdm-instance.campaign_event",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-mailchimp-bdm-instance.customer.csv",
+          "source": "out.c-mailchimp-bdm-instance.customer",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-mailchimp-bdm-instance.list.csv",
+          "source": "out.c-mailchimp-bdm-instance.list",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-mailchimp-bdm-instance.list_member.csv",
+          "source": "out.c-mailchimp-bdm-instance.list_member",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        }
+      ]
+    }
+  }
+}

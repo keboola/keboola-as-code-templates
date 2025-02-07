@@ -1,0 +1,106 @@
+{
+  "parameters": {
+    "dbName": "list_member",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "list_member_id",
+        "default": "",
+        "name": "list_member_id",
+        "nullable": false,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "customer_id",
+        "default": "",
+        "name": "customer_id",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_id",
+        "default": "",
+        "name": "list_id",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_member_status",
+        "default": "",
+        "name": "list_member_status",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_member_source",
+        "default": "",
+        "name": "list_member_source",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_member_unsubscribe_reason",
+        "default": "",
+        "name": "list_member_unsubscribe_reason",
+        "nullable": true,
+        "size": "10485760",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_member_rating",
+        "default": "",
+        "name": "list_member_rating",
+        "nullable": true,
+        "size": "",
+        "type": "integer"
+      },
+      {
+        "dbName": "list_member_avg_open_rate",
+        "default": "",
+        "name": "list_member_avg_open_rate",
+        "nullable": true,
+        "size": "",
+        "type": "integer"
+      },
+      {
+        "dbName": "list_member_avg_click_rate",
+        "default": "",
+        "name": "list_member_avg_click_rate",
+        "nullable": true,
+        "size": "",
+        "type": "integer"
+      }
+    ],
+    "primaryKey": [
+      "list_member_id"
+    ],
+    "tableId": "out.c-mailchimp-bdm-instance.list_member"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "list_member_id",
+            "customer_id",
+            "list_id",
+            "list_member_status",
+            "list_member_source",
+            "list_member_unsubscribe_reason",
+            "list_member_rating",
+            "list_member_avg_open_rate",
+            "list_member_avg_click_rate"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.list_member.csv",
+          "source": "out.c-mailchimp-bdm-instance.list_member"
+        }
+      ]
+    }
+  }
+}

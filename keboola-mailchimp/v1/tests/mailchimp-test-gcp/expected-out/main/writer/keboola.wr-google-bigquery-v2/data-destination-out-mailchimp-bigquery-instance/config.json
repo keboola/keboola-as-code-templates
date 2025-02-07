@@ -1,0 +1,17 @@
+{
+  "parameters": {
+    "dataset": "OUT_MAILCHIMP",
+    "service_account": {
+      "#private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBAw7SMYs37QxR\ntNx6muzNKlcJUo8Mt0sbRdYJJVBmAcfi8B3pDWjWVMESd6yVmtTBhI98C5nv36r/\nvUyPiaBAepPYMWa/A1RlwtdvuWGDgnNG7gn2xii7bQFdIKrHR9bAsq2yjiJmNmv+\nZDWGzmb6oEr5voRYvo2D57Z9CBWmycoV0tdFvyu7jhQ3iKafECTzhivLDe10r5C1\ncPNBByzkU3UjZYpAnrFdinXkW29UGZCCu9ZFwftvwUrrnzPBx9j3ARlSW6XAH/X5\nh4Yz5bM5lsD4wfcaExlTqUyMxk//LM51E7WLxvPxKnZfV5Nz+YnYZojHvfJ7fG0c\nNoULkrC7AgMBAAECggEAIis6anee3821SpmsFoBqv39pXRsie+vO/gsE8yWJ8CUM\nj95WTTW0g40JiQ1qnimE1KV1CU68d7yu9ws6DIceuYt5tOI6AELEpCc0IHE/FBr5\n8WqelPNLrrKDdUsdMJ5FJGP9YAjNii7EO4rd9vl/PYs2+rOBlnxVbS6OHeBahOYQ\n9qb2XTexWJ+qkgY5suDzgqYJnsX1F2Pfrwo0GTC6NyZCvqgGRmHxUrnEBY6PTEiw\nxAD65LSXs3ow9MI6fPIAyWz1btBuf0plh0riRk/2naRJGGrc33+FcUan2H+HM6Qh\n4YEzpYjGgiYFloQQGNytXLxBE93Wo1jkNr3ShDHiYQKBgQD7SgDDr3McGPxgNW6H\n9a+uQHODI3tqihhx79CIOtJkIcHhGM6juH/TpDNDYWTC8KCjRbZwl7iSQx1t9JTV\nMRNmgCaovoUB0BjfsENTiu71ohlEQadraa10C8qLWaXFBXogV4N6sip5dyCOIY+V\njgzd6iyDznxglY8c86dN8hdVmQKBgQDEoV5uwaG/7b6wkqfIwnj91duIuv+8pznk\nrSMEyaQjXL/fkn5uiErTjywQxE7IZIgg5k+ELkpzML8gSXMmwjVQRp/cIMsug1Ci\nXNnlwjN80TFYmePtj+iPPfuXVrXBDajZgOvGX7bHdrecJhdHy8hCVvTTxAPGvXhK\nCEyjkk1FcwKBgANU/t+ZYvhbaHVKIBYTbunrltyFSuyluh9Ao846oXGMdQqsDolj\nN+axhbB+CR0AndCsavfhOyRNWYWMubB9/xjb2Cdip1bX0IyexLXF4NdG9/jMuhCV\njSQ9x8jDPox3PyBQqMCmviNwLfFUhpfgE1GZ+k8hHMsXEJe8r1o8PIz5AoGBAJr0\nzJWeFNlLA87lFEK7N1xa75I2RBmo84/J/eHlAmw3yKHpMafr0oQcvU5NVgTIbRr4\nRUvWqydSEBzipVOzEw67SXnRgi2aoK4DXFibjbXcqfW3+Q6bLVvNLftbAwsrt5gI\n6EXB4ioY3aO5xPj4mE3ndzN3sr4pTKWTGsqBHlIPAoGAXy+8/3sgmPKakokII9+E\nffOu3ussmramsU1n7ZB2Zf2WhsD4fAoBHQSkN7hkYPEUubjkDG5opjVg8fWCZ3cv\n3SilXfe2izizJ3Ec0EG5OaICdlFpqo2YplIhboDFDItcCMGwL5YVSutVx+kmi8bl\ndjxdbblYK3Vpu1p4LqOmXqo=\n-----END PRIVATE KEY-----\n",
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+      "client_email": "dataflowtemplates@eternal-unity-350902.iam.gserviceaccount.com",
+      "client_id": "117935771995005256825",
+      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/templates%40keboola-shopify.iam.gserviceaccount.com",
+      "private_key_id": "f3b5b564bc65a806a91b4e2c9a74ebd8a449ebcc",
+      "project_id": "eternal-unity-350902",
+      "token_uri": "https://oauth2.googleapis.com/token",
+      "type": "service_account"
+    }
+  }
+}

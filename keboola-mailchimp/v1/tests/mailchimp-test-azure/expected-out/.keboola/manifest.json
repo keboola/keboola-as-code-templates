@@ -1,0 +1,221 @@
+{
+  "version": 2,
+  "project": {
+    "id": __PROJECT_ID__,
+    "apiHost": "__STORAGE_API_HOST__"
+  },
+  "allowTargetEnv": false,
+  "sortBy": "id",
+  "naming": {
+    "branch": "{branch_name}",
+    "config": "{component_type}/{component_id}/{config_name}",
+    "configRow": "rows/{config_row_name}",
+    "schedulerConfig": "schedules/{config_name}",
+    "sharedCodeConfig": "_shared/{target_component_id}",
+    "sharedCodeConfigRow": "codes/{config_row_name}",
+    "variablesConfig": "variables",
+    "variablesValuesRow": "values/{config_row_name}",
+    "dataAppConfig": "app/{component_id}/{config_name}"
+  },
+  "allowedBranches": [
+    "*"
+  ],
+  "ignoredComponents": [],
+  "templates": {
+    "repositories": [
+      {
+        "type": "dir",
+        "name": "keboola",
+        "url": "../repository",
+        "ref": "main"
+      }
+    ]
+  },
+  "branches": [
+    {
+      "id": __MAIN_BRANCH_ID__,
+      "path": "main",
+      "metadata": {
+        "KBC.KAC.templates.instances": "[{\"instanceId\":\"%s\",\"instanceName\":\"test\",\"templateId\":\"mailchimp\",\"repositoryName\":\"keboola\",\"version\":\"1.0.0\",\"created\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"updated\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"mainConfig\":{\"configId\":\"%s\",\"componentId\":\"keboola.orchestrator\"}}]"
+      }
+    }
+  ],
+  "configurations": [
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.ex-mailchimp",
+      "id": "%s",
+      "path": "extractor/keboola.ex-mailchimp/data-source-1-in-mailchimp-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"data-source-1-in-mailchimp\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"ex-mailchimp-config-password\",\"key\":\"parameters.config.#password\"},{\"input\":\"ex-mailchimp-config-dc\",\"key\":\"parameters.config.dc\"},{\"input\":\"ex-mailchimp-config-username\",\"key\":\"parameters.config.username\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.ex-mailchimp",
+      "id": "%s",
+      "path": "extractor/keboola.ex-mailchimp/data-source-2-in-mailchimp-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"data-source-2-in-mailchimp\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"ex-mailchimp-config-password\",\"key\":\"parameters.config.#password\"},{\"input\":\"ex-mailchimp-config-dc\",\"key\":\"parameters.config.dc\"},{\"input\":\"ex-mailchimp-config-username\",\"key\":\"parameters.config.username\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.orchestrator",
+      "id": "%s",
+      "path": "other/keboola.orchestrator/flow-keboola-mailchimp-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"flow-keboola-mailchimp\"}",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "%s",
+      "path": "transformation/keboola.snowflake-transformation/transformation-in-mailchimp-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"transformation-in-mailchimp\"}",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.wr-db-pgsql",
+      "id": "%s",
+      "path": "writer/keboola.wr-db-pgsql/data-destination-out-mailchimp-postgresql-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"out-mailchimp-postgresql-writer\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"wr-postgresql-db-password\",\"key\":\"parameters.db.#password\"},{\"input\":\"wr-postgresql-db-database\",\"key\":\"parameters.db.database\"},{\"input\":\"wr-postgresql-db-driver\",\"key\":\"parameters.db.driver\"},{\"input\":\"wr-postgresql-db-hostname\",\"key\":\"parameters.db.host\"},{\"input\":\"wr-postgresql-db-port\",\"key\":\"parameters.db.port\"},{\"input\":\"wr-postgresql-db-schema\",\"key\":\"parameters.db.schema\"},{\"input\":\"wr-postgresql-db-user\",\"key\":\"parameters.db.user\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.rowsIds": "[{\"idInProject\":\"%s\",\"idInTemplate\":\"campaign\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"campaign-event\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"customer\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"list\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"list-member\"}]",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": [
+        {
+          "id": "%s",
+          "path": "rows/campaign"
+        },
+        {
+          "id": "%s",
+          "path": "rows/campaign-event"
+        },
+        {
+          "id": "%s",
+          "path": "rows/customer"
+        },
+        {
+          "id": "%s",
+          "path": "rows/list"
+        },
+        {
+          "id": "%s",
+          "path": "rows/list-member"
+        }
+      ]
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.wr-google-bigquery-v2",
+      "id": "%s",
+      "path": "writer/keboola.wr-google-bigquery-v2/data-destination-out-mailchimp-bigquery-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"data-destination-out-mailchimp-bigquery\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"wr-google-bigquery-v2-service-account-private-key\",\"key\":\"parameters.service_account.#private_key\"},{\"input\":\"wr-google-bigquery-v2-service-account-client-email\",\"key\":\"parameters.service_account.client_email\"},{\"input\":\"wr-google-bigquery-v2-service-account-client-id\",\"key\":\"parameters.service_account.client_id\"},{\"input\":\"wr-google-bigquery-v2-service-account-private-key-id\",\"key\":\"parameters.service_account.private_key_id\"},{\"input\":\"wr-google-bigquery-v2-service-account-project-id\",\"key\":\"parameters.service_account.project_id\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.rowsIds": "[{\"idInProject\":\"%s\",\"idInTemplate\":\"campaign\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"campaign-event\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"customer\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"list\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"list-member\"}]",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": [
+        {
+          "id": "%s",
+          "path": "rows/campaign"
+        },
+        {
+          "id": "%s",
+          "path": "rows/campaign-event"
+        },
+        {
+          "id": "%s",
+          "path": "rows/customer"
+        },
+        {
+          "id": "%s",
+          "path": "rows/list"
+        },
+        {
+          "id": "%s",
+          "path": "rows/list-member"
+        }
+      ]
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.wr-google-sheets",
+      "id": "%s",
+      "path": "writer/keboola.wr-google-sheets/data-destination-out-mailchimp-gsheet-instance",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"data-destination-out-mailchimp-gsheet\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"g3s2-oauth\",\"key\":\"authorization.oauth_api\"},{\"input\":\"google-sheet-id\",\"key\":\"parameters.tables[0].fileId\"},{\"input\":\"google-sheet-id\",\"key\":\"parameters.tables[1].fileId\"},{\"input\":\"google-sheet-id\",\"key\":\"parameters.tables[2].fileId\"},{\"input\":\"google-sheet-id\",\"key\":\"parameters.tables[3].fileId\"},{\"input\":\"google-sheet-id\",\"key\":\"parameters.tables[4].fileId\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": []
+    },
+    {
+      "branchId": __MAIN_BRANCH_ID__,
+      "componentId": "keboola.wr-snowflake-blob-storage",
+      "id": "%s",
+      "path": "writer/keboola.wr-snowflake-blob-storage/data-destination-out-mailchimp-snowflake",
+      "metadata": {
+        "KBC.KAC.templates.configId": "{\"idInTemplate\":\"data-destination-out-mailchimp-snowflake\"}",
+        "KBC.KAC.templates.configInputs": "[{\"input\":\"wr-snowflake-db-password\",\"key\":\"parameters.db.#password\"},{\"input\":\"wr-snowflake-db-database\",\"key\":\"parameters.db.database\"},{\"input\":\"wr-snowflake-db-host\",\"key\":\"parameters.db.host\"},{\"input\":\"wr-snowflake-db-port\",\"key\":\"parameters.db.port\"},{\"input\":\"wr-snowflake-db-schema\",\"key\":\"parameters.db.schema\"},{\"input\":\"wr-snowflake-db-user\",\"key\":\"parameters.db.user\"},{\"input\":\"wr-snowflake-db-warehouse\",\"key\":\"parameters.db.warehouse\"}]",
+        "KBC.KAC.templates.instanceId": "%s",
+        "KBC.KAC.templates.repository": "keboola",
+        "KBC.KAC.templates.rowsIds": "[{\"idInProject\":\"%s\",\"idInTemplate\":\"campaign-001\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"campaign-event-001\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"customer-001\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"list-001\"},{\"idInProject\":\"%s\",\"idInTemplate\":\"list-member-001\"}]",
+        "KBC.KAC.templates.templateId": "mailchimp"
+      },
+      "rows": [
+        {
+          "id": "%s",
+          "path": "rows/campaign"
+        },
+        {
+          "id": "%s",
+          "path": "rows/campaign-event"
+        },
+        {
+          "id": "%s",
+          "path": "rows/customer"
+        },
+        {
+          "id": "%s",
+          "path": "rows/list"
+        },
+        {
+          "id": "%s",
+          "path": "rows/list-member"
+        }
+      ]
+    }
+  ]
+}

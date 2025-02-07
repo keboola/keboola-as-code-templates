@@ -1,0 +1,70 @@
+{
+  "parameters": {
+    "dbName": "campaign_event",
+    "incremental": true,
+    "items": [
+      {
+        "dbName": "campaign_event_id",
+        "default": "",
+        "name": "campaign_event_id",
+        "nullable": false,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_id",
+        "default": "",
+        "name": "campaign_id",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "list_id",
+        "default": "",
+        "name": "list_id",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_event_type",
+        "default": "",
+        "name": "campaign_event_type",
+        "nullable": true,
+        "size": "7",
+        "type": "varchar"
+      },
+      {
+        "dbName": "campaign_event_date",
+        "default": "",
+        "name": "campaign_event_date",
+        "nullable": true,
+        "size": "16777216",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "campaign_event_id"
+    ],
+    "tableId": "out.c-mailchimp-bdm-instance.campaign_event"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "campaign_event_id",
+            "campaign_id",
+            "list_id",
+            "campaign_event_type",
+            "campaign_event_date"
+          ],
+          "destination": "out.c-mailchimp-bdm-instance.campaign_event.csv",
+          "source": "out.c-mailchimp-bdm-instance.campaign_event"
+        }
+      ]
+    }
+  }
+}

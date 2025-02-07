@@ -1,0 +1,53 @@
+{
+  "parameters": {
+    "api": {
+      "authentication": {
+        "type": "basic"
+      },
+      "baseUrl": {
+        "args": [
+          "https://",
+          {
+            "attr": "dc"
+          },
+          ".api.mailchimp.com/3.0/"
+        ],
+        "function": "concat"
+      },
+      "name": "mailchimp",
+      "pagination": {
+        "limit": 1000,
+        "limitParam": "count",
+        "method": "offset"
+      },
+      "retryConfig": {
+        "maxRetries": 15
+      }
+    },
+    "config": {
+      "#password": "2c90501e14ce3946025c48d0f8047a11-us10",
+      "dc": "us10",
+      "debug": 0,
+      "incrementalOutput": false,
+      "jobs": [
+        {
+          "children": [
+            {
+              "dataField": "members",
+              "dataType": "members",
+              "endpoint": "lists/{id}/members",
+              "placeholders": {
+                "id": "id"
+              }
+            }
+          ],
+          "dataField": "lists",
+          "dataType": "lists",
+          "endpoint": "lists"
+        }
+      ],
+      "outputBucket": "mailchimp-ex-14223150",
+      "username": "eva@iiidmic.com"
+    }
+  }
+}
