@@ -45,7 +45,7 @@ local hubspot = import "/<common>/in-thoughtspot-hubspot/v0/src/inputs.jsonnet";
           inputs: snowflake,
         },
         {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "DWH provided by Keboola",
           description: "Keboola - managed Snowflake",
           dialogName: "DWH provided by Keboola", 
