@@ -1914,8 +1914,7 @@
           "backends": [],
           "features": ["sandboxes-data-apps"]
         },
-      "path": "resume-analyzer",
-      "deprecated": false,
+      "deprecated": true,
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1928,8 +1927,7 @@
           "components": [
             "keboola.data-apps",
             "kds-team.ex-lever"
-          ],
-          "path": "v0"
+          ]
         }
       ]
     },
