@@ -104,7 +104,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
-      "deprecated": false,
+      "deprecated": true,
       "requirements": 
         {
         "backends": ["snowflake"],
@@ -117,7 +117,6 @@
           "keboola.wr-google-bigquery-v2"
         ]
       },
-      "path": "thoughtspot-ecommerce-shopify",
       "categories": [
         "E-commerce",
         "ThoughtSpot"
@@ -135,8 +134,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "<keboola.wr-snowflake>"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
@@ -480,7 +478,7 @@
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
       "requirements": 
         {
-          "backends": ["snowflake"],
+          "backends": ["snowflake", "bigquery"],
           "components": [
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2",
@@ -494,7 +492,7 @@
       "path": "keboola-git-github",
       "versions": [
         {
-          "version": "1.0.0",
+          "version": "1.0.1",
           "description": "",
           "stable": false,
           "components": [
@@ -504,7 +502,7 @@
             "<keboola.wr-snowflake>",
             "keboola.wr-db-pgsql"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -521,7 +519,7 @@
             "keboola.wr-google-sheets",
             "keboola.wr-db-pgsql",
             "keboola.wr-db-snowflake"
-         ]
+          ]
         },
       "categories": [
         "Project Management"
@@ -549,7 +547,7 @@
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
       "requirements": 
         {
-          "backends": ["snowflake"],
+          "backends": ["snowflake", "bigquery"],
           "components": [
             "fisa.ex-typeform",
             "keboola.wr-google-bigquery-v2",
@@ -563,7 +561,7 @@
       "path": "keboola-typeform",
       "versions": [
         {
-          "version": "1.0.0",
+          "version": "1.0.1",
           "description": "",
           "stable": false,
           "components": [
@@ -573,7 +571,7 @@
             "<keboola.wr-snowflake>",
             "keboola.wr-db-pgsql"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
@@ -1382,7 +1380,7 @@
       "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet, big query, snowflake DB or postgres.",
       "requirements":
         {
-        "backends": ["snowflake"],
+        "backends": ["snowflake", "bigquery"],
         "components": [
           "keboola.ex-mailchimp",
           "keboola.wr-google-sheets",
@@ -1397,7 +1395,7 @@
       "deprecated": false,
       "versions": [
         {
-          "version": "1.0.0",
+          "version": "1.0.1",
           "description": "",
           "stable": false,
           "components": [
@@ -1407,7 +1405,7 @@
             "<keboola.wr-snowflake>",
             "keboola.wr-db-pgsql"
           ],
-          "path": "v0"
+          "path": "v1"
         }
       ]
     },
