@@ -66,7 +66,7 @@ local sklik = import "/<common>/in-ecommerce-sklik/v0/src/inputs.jsonnet";
       required: "all",
       steps: [
           {
-          icon: "component:"+SnowflakeWriterComponentId(),
+          icon: "component:<keboola.wr-snowflake>",
           name: "Snowflake",
           description: "Load data into Snowflake",
           dialogName: "Snowflake Destination", 
