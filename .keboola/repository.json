@@ -499,7 +499,7 @@
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
+            "<keboola.wr-snowflake>",
             "keboola.wr-db-pgsql"
           ],
           "path": "v1"
@@ -568,7 +568,7 @@
             "fisa.ex-typeform",
             "keboola.wr-google-bigquery-v2",
             "keboola.wr-google-sheets",
-            "keboola.wr-db-snowflake",
+            "<keboola.wr-snowflake>",
             "keboola.wr-db-pgsql"
           ],
           "path": "v1"
@@ -670,7 +670,7 @@
             "keboola.ex-google-ads",
             "keboola.wr-google-sheets",
             "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-snowflake",
+            "<keboola.wr-snowflake>",
             "keboola.wr-db-pgsql",
             "keboola.data-apps"
           ],
