@@ -104,7 +104,7 @@
       "id": "thoughtspot-ecommerce-shopify",
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
-      "deprecated": false,
+      "deprecated": true,
       "requirements": 
         {
         "backends": ["snowflake"],
@@ -117,7 +117,6 @@
           "keboola.wr-google-bigquery-v2"
         ]
       },
-      "path": "thoughtspot-ecommerce-shopify",
       "categories": [
         "E-commerce",
         "ThoughtSpot"
@@ -135,8 +134,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "<keboola.wr-snowflake>"
-          ],
-          "path": "v1"
+          ]
         }
       ]
     },
