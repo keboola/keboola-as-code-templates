@@ -1,0 +1,80 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "TASK_EVENT",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "TASK_EVENT_ID",
+            "name": "task_event_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "TASK_ID",
+            "name": "task_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "USER_ID",
+            "name": "user_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "USER_TYPE",
+            "name": "user_type",
+            "type": "STRING"
+          },
+          {
+            "dbName": "USER",
+            "name": "user",
+            "type": "STRING"
+          },
+          {
+            "dbName": "CREATED_AT",
+            "name": "created_at",
+            "type": "STRING"
+          },
+          {
+            "dbName": "EVENT_TYPE",
+            "name": "event_type",
+            "type": "STRING"
+          },
+          {
+            "dbName": "EVENT",
+            "name": "event",
+            "type": "STRING"
+          },
+          {
+            "dbName": "EVENT_TEXT",
+            "name": "event_text",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-projectmgmt-bdm-instance.task_event"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_event_id",
+            "task_id",
+            "user_id",
+            "user_type",
+            "user",
+            "created_at",
+            "event_type",
+            "event",
+            "event_text"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_event.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_event"
+        }
+      ]
+    }
+  }
+}

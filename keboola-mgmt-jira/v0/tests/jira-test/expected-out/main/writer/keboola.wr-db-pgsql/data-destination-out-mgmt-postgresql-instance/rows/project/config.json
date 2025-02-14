@@ -1,0 +1,133 @@
+{
+  "parameters": {
+    "dbName": "project",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "project_id",
+        "default": "",
+        "name": "project_id",
+        "nullable": false,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "project",
+        "default": "",
+        "name": "project",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "created_at",
+        "default": "",
+        "name": "created_at",
+        "nullable": true,
+        "size": "",
+        "type": "timestamp"
+      },
+      {
+        "dbName": "due_date",
+        "default": "",
+        "name": "due_date",
+        "nullable": true,
+        "size": "",
+        "type": "timestamp"
+      },
+      {
+        "dbName": "workspace",
+        "default": "",
+        "name": "workspace",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "url",
+        "default": "",
+        "name": "url",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "owner",
+        "default": "",
+        "name": "owner",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "owner_type",
+        "default": "",
+        "name": "owner_type",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "status",
+        "default": "",
+        "name": "status",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "status_text",
+        "default": "",
+        "name": "status_text",
+        "nullable": true,
+        "size": "1024",
+        "type": "varchar"
+      },
+      {
+        "dbName": "archived",
+        "default": "",
+        "name": "archived",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "public",
+        "default": "",
+        "name": "public",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "project_id"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.project"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "project_id",
+            "project",
+            "created_at",
+            "due_date",
+            "workspace",
+            "url",
+            "owner",
+            "owner_type",
+            "status",
+            "status_text",
+            "archived",
+            "public"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.project.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project"
+        }
+      ]
+    }
+  }
+}

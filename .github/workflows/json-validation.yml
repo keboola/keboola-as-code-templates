@@ -13,4 +13,8 @@ jobs:
 
       - name: "Check all JSON files in repository that are correct"
         uses: GrantBirki/json-yaml-validate@v3.0.0
-
+        with:
+          files: '**/*.json'
+#          Ignore validation for manifest.json
+#          Manifest.json contains placeholders, that we want to ignore.
+          json_exclude_regex: '^__[A-Z_]+__$'

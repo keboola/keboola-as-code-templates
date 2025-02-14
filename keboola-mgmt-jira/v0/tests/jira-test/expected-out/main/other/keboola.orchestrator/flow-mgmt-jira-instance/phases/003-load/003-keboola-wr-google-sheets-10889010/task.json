@@ -1,0 +1,9 @@
+{
+  "name": "keboola.wr-google-sheets-10889010",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "writer/keboola.wr-google-sheets/data-destination-out-mgmt-gsheet-instance"
+  }
+}

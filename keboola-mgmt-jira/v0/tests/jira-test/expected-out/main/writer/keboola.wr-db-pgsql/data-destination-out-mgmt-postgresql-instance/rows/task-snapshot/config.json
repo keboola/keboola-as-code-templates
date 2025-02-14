@@ -1,0 +1,161 @@
+{
+  "parameters": {
+    "dbName": "task_snapshot",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "task_id",
+        "default": "",
+        "name": "task_id",
+        "nullable": false,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "snapshot_date",
+        "default": "",
+        "name": "snapshot_date",
+        "nullable": false,
+        "size": "",
+        "type": "date"
+      },
+      {
+        "dbName": "section",
+        "default": "",
+        "name": "section",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "previous_section",
+        "default": "",
+        "name": "previous_section",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "section_change",
+        "default": "",
+        "name": "section_change",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "due_date",
+        "default": "",
+        "name": "due_date",
+        "nullable": true,
+        "size": "",
+        "type": "date"
+      },
+      {
+        "dbName": "previous_due_date",
+        "default": "",
+        "name": "previous_due_date",
+        "nullable": true,
+        "size": "",
+        "type": "date"
+      },
+      {
+        "dbName": "due_date_change",
+        "default": "",
+        "name": "due_date_change",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "due_date_diff",
+        "default": "",
+        "name": "due_date_diff",
+        "nullable": true,
+        "size": "",
+        "type": "int"
+      },
+      {
+        "dbName": "assignee",
+        "default": "",
+        "name": "assignee",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "previous_assignee",
+        "default": "",
+        "name": "previous_assignee",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "assignee_change",
+        "default": "",
+        "name": "assignee_change",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "last_snapshot",
+        "default": "",
+        "name": "last_snapshot",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "last_day_of_month",
+        "default": "",
+        "name": "last_day_of_month",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "last_day_of_quarter",
+        "default": "",
+        "name": "last_day_of_quarter",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "task_id",
+      "snapshot_date"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.task_snapshot"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_id",
+            "snapshot_date",
+            "section",
+            "previous_section",
+            "section_change",
+            "due_date",
+            "previous_due_date",
+            "due_date_change",
+            "due_date_diff",
+            "assignee",
+            "previous_assignee",
+            "assignee_change",
+            "last_snapshot",
+            "last_day_of_month",
+            "last_day_of_quarter"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_snapshot.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_snapshot"
+        }
+      ]
+    }
+  }
+}
