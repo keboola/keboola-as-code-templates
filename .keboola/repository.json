@@ -1447,7 +1447,7 @@
       "description": "Simplify data management. No more manual manipulation, just seamless editing and collaboration.",
       "requirements":
         {
-          "backends": ["snowflake"],
+          "backends": ["snowflake", "bigquery"],
           "features": ["sandboxes-data-apps"]
         },
       "deprecated": true,
@@ -1782,7 +1782,7 @@
       "description": "Simplify your data editing and management within your company using this demo data app that showcases the interaction between Streamlit and Keboola Storage.",
       "requirements":
         {
-          "backends": ["snowflake"],
+          "backends": ["snowflake", "bigquery"],
           "features": ["sandboxes-data-apps"]
         },
       "path": "keboola-data-editor",
@@ -1808,7 +1808,7 @@
       "description": "Experience a Streamlit web app with interactive widgets and optimized performance, showcasing caching for fast data loading and a user-friendly interface.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": null,
         "features": [
