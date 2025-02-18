@@ -46,6 +46,7 @@ local snowflake = import "/<common>/out-ecommerce-snowflake/v1/src/inputs.jsonne
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",
           inputs: [],
         },
       ]

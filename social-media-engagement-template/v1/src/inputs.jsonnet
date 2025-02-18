@@ -165,19 +165,27 @@
           ]
         },         
       ],
-    },{   
+    },
+    {   
       description: "Transformations",
       required: "all",
       steps: [
         {
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
-          description: "SQL Transformations",
+          description: "Transformations",
+          backend: "snowflake",  
+          inputs: [],
+        },
+        {
+          icon: "component:keboola.google-bigquery-transformation",
+          name: "BigQuery SQL",
+          description: "Transformations",
+          backend: "bigquery",
           inputs: [],
         },
       ]
     },
-
     {
       description: "Provide credentials for the destination component",
       required: "optional",

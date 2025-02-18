@@ -27,6 +27,7 @@ local postgresql = import"/<common>/out-mgmt-postgresql/v0/src/inputs.jsonnet";
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",
           inputs: [],
         },
       ]

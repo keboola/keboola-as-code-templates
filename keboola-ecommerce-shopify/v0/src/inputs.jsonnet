@@ -63,6 +63,7 @@ local postgresql = import "/<common>/out-ecommerce-postgresql/v0/src/inputs.json
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",
           inputs: [],
         },
       ]
