@@ -1,0 +1,4 @@
+{
+  name: "BasicSessions",
+  isDisabled: false,
+}
