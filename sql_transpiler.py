@@ -4,8 +4,94 @@ import os
 import shutil
 import sqlglot
 import argparse
+import json
 from pathlib import Path
-from typing import List, Tuple, Set
+from typing import List, Tuple, Set, Dict, Any
+
+class TemplateAdjuster:
+    def __init__(self, workspace_dir: str):
+        """
+        Initialize the Template Adjuster
+        
+        Args:
+            workspace_dir: Root directory containing templates
+        """
+        self.workspace_dir = Path(workspace_dir)
+    
+    def find_template_dirs(self) -> List[Path]:
+        """Find all template directories (excluding _common and hidden dirs)."""
+        template_dirs = []
+        for item in self.workspace_dir.iterdir():
+            if item.is_dir() and not item.name.startswith('_') and not item.name.startswith('.'):
+                template_dirs.append(item)
+        return template_dirs
+    
+    def process_inputs_jsonnet(self, file_path: Path):
+        """
+        Process inputs.jsonnet file to adjust for BigQuery
+        
+        Args:
+            file_path: Path to inputs.jsonnet file
+        """
+        print(f"Processing {file_path}")
+        
+        # Read the original file
+        with open(file_path, 'r') as f:
+            content = f.read()
+            
+        # Basic string replacements for transformation names
+        content = content.replace('Snowflake Transformation', 'Transformation')
+        content = content.replace('snowflake-transformation', 'google-bigquery-transformation')
+        
+        # Parse the jsonnet content (as a string, not executing it)
+        # Look for steps array
+        steps_start = content.find('steps: [')
+        if steps_start == -1:
+            return
+            
+        # Find the matching closing bracket
+        bracket_count = 1
+        steps_end = steps_start + 7  # len('steps: [')
+        while bracket_count > 0 and steps_end < len(content):
+            if content[steps_end] == '[':
+                bracket_count += 1
+            elif content[steps_end] == ']':
+                bracket_count -= 1
+            steps_end += 1
+            
+        if bracket_count > 0:
+            return
+            
+        # Extract steps array content
+        steps_content = content[steps_start:steps_end]
+        
+        # Create new content with backend parameter
+        new_content = content[:steps_start] + \
+            'backend: std.extVar("backend"),\n  ' + \
+            'steps: if std.extVar("backend") == "snowflake" then [\n    ' + \
+            steps_content[7:] + \
+            '\n  ] else [\n    ' + \
+            steps_content[7:].replace(
+                'keboola.snowflake-transformation', 
+                'keboola.google-bigquery-transformation'
+            ) + \
+            '\n  ]' + \
+            content[steps_end:]
+        
+        # Write the modified content back
+        with open(file_path, 'w') as f:
+            f.write(new_content)
+            
+    def process_template(self, template_dir: Path):
+        """
+        Process a template directory to adjust inputs.jsonnet
+        
+        Args:
+            template_dir: Path to template directory
+        """
+        # Look for inputs.jsonnet files
+        for inputs_file in template_dir.rglob('inputs.jsonnet'):
+            self.process_inputs_jsonnet(inputs_file)
 
 class SQLTranspiler:
     def __init__(self, source_dir: str, source_dialect: str = 'snowflake', target_dialect: str = 'bigquery'):
@@ -156,15 +242,16 @@ class SQLTranspiler:
             # self.transpile_sql(source_file, target_file)
 
 def main():
-    parser = argparse.ArgumentParser(description='SQL Transpiler for converting between SQL dialects')
+    parser = argparse.ArgumentParser(description='SQL Transpiler and Template Adjuster')
     parser.add_argument('--clean', action='store_true', help='Remove all transpiled (-bq) folders')
     parser.add_argument('--source-dir', default='_common', help='Source directory to process (default: _common)')
     parser.add_argument('--source-dialect', default='snowflake', help='Source SQL dialect (default: snowflake)')
     parser.add_argument('--target-dialect', default='bigquery', help='Target SQL dialect (default: bigquery)')
+    parser.add_argument('--adjust-templates', action='store_true', help='Adjust template inputs.jsonnet files')
     
     args = parser.parse_args()
     
-    # Initialize transpiler
+    # Step 1: SQL Transpilation
     transpiler = SQLTranspiler(
         source_dir=args.source_dir,
         source_dialect=args.source_dialect,
@@ -176,6 +263,13 @@ def main():
     else:
         # Process all files
         transpiler.process()
+        
+        # Step 2: Template Adjustment (if requested)
+        if args.adjust_templates:
+            adjuster = TemplateAdjuster(os.path.dirname(args.source_dir))
+            template_dirs = adjuster.find_template_dirs()
+            for template_dir in template_dirs:
+                adjuster.process_template(template_dir)
 
 if __name__ == "__main__":
     main() 
