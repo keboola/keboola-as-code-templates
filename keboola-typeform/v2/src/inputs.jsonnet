@@ -23,20 +23,20 @@ local postgresql = import "/<common>/out-typeform-postgresql/v0/src/inputs.jsonn
       description: "Snowflake Transformation",
       required: "all",
       steps: [
-        {
+{
           icon: "component:keboola.snowflake-transformation",
           backend: "snowflake",
           name: "Snowflake SQL",
           description: "Transformation",
           inputs: [],
-        },,
-        {
+        },
+{
           icon: "component:keboola.google-bigquery-transformation",
           backend: "bigquery",
           name: "BigQuery SQL",
           description: "Transformation",
           inputs: [],
-        },
+        }
       ]
     },
     {

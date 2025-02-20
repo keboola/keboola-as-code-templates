@@ -42,20 +42,20 @@ local snowflake = import "/<common>/out-ecommerce-snowflake/v1/src/inputs.jsonne
       description: "Snowflake Transformations",
       required: "all",
       steps: [
-        {
+{
           icon: "component:keboola.snowflake-transformation",
           backend: "snowflake",
           name: "Snowflake SQL",
           description: "Transformations",
           inputs: [],
-        },,
-        {
+        },
+{
           icon: "component:keboola.google-bigquery-transformation",
           backend: "bigquery",
           name: "BigQuery SQL",
           description: "Transformations",
           inputs: [],
-        },
+        }
       ]
     },
     {
