@@ -1,0 +1,38 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "TASK_USER",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "USER_ID",
+            "name": "user_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "TASK_ID",
+            "name": "task_id",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-projectmgmt-bdm-instance.task_user"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "user_id",
+            "task_id"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_user"
+        }
+      ]
+    }
+  }
+}

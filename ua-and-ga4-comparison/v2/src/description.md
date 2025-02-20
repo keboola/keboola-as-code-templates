@@ -1,0 +1,1 @@
+Download and integrate data from Universal Analytics, Google Analytics 4 API, and Google Analytics raw data in BigQuery. Harness the power of an interactive Data App to effortlessly compare these data.

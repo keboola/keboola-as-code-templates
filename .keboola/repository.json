@@ -34,6 +34,14 @@
           "components": [
             "common:settings"
           ]
+        },
+        {
+          "version": "3.0.0",
+          "description": "With Google Drive Writer OAuth",
+          "stable": false,
+          "components": [
+            "common:settings"
+          ]
         }
       ]
     },
@@ -45,6 +53,14 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "ex-generic-v2"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -65,6 +81,17 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -98,6 +125,17 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -146,6 +184,21 @@
             "<keboola.wr-snowflake>"
           ],
           "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-thoughtspot",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -181,6 +234,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-jira",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -213,6 +279,17 @@
             "kds-team.app-datahub"
           ],
           "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-telemetry-data",
+            "kds-team.ex-kbc-project-metadata-v2",
+            "kds-team.app-datahub"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -248,6 +325,19 @@
             "<keboola.wr-snowflake>"
           ],
           "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "<keboola.wr-snowflake>"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -290,6 +380,21 @@
             "<keboola.wr-snowflake>"
           ],
           "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-http",
+            "keboola.dbt-transformation",
+            "keboola.wr-db-mssql-v2",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -315,6 +420,15 @@
             "keboola.snowflake-transformation"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -358,6 +472,23 @@
             "kds-team.ex-linkedin-pages"
           ],
           "path": "v1"
+        },
+        {
+          "version": "3.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-facebook",
+            "keboola.ex-instagram",
+            "keboola.ex-youtube",
+            "keboola.wr-db-mysql",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-google-bigquery-v2",
+            "kds-team.ex-linkedin-pages"
+          ],
+          "path": "v3"
         }
       ]
     },
@@ -393,6 +524,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-hubspot-crm",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -428,6 +572,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -463,6 +620,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -477,6 +647,22 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql",
+            "jakub-bartel.wr-data-studio"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -525,6 +711,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -561,6 +760,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v1"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-asana-v2",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -596,6 +808,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -633,6 +858,20 @@
             "<keboola.wr-snowflake>"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -647,6 +886,18 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -703,6 +954,23 @@
             "keboola.data-apps"
           ],
           "path": "v3"
+        },
+        {
+          "version": "4.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-bing-ads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql",
+            "keboola.data-apps"
+          ],
+          "path": "v4"
         }
       ]
     },
@@ -717,6 +985,19 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "jakub-bartel.wr-data-studio",
+            "keboola.wr-google-sheets"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -751,6 +1032,19 @@
             "keboola.ex-google-analytics-v4",
             "keboola.wr-google-sheets"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-sheets"
+          ]
         }
       ]
     },
@@ -765,6 +1059,18 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -797,6 +1103,18 @@
             "keboola.ex-sklik",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -811,6 +1129,18 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.wr-google-sheets"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -843,6 +1173,18 @@
             "keboola.ex-sklik",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -857,6 +1199,19 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -891,6 +1246,19 @@
             "keboola.ex-google-analytics-v4",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -905,6 +1273,19 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "esnerda.ex-bingads",
+            "leochan.ex-linkedin",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-google-analytics-v4",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -936,6 +1317,16 @@
             "kds-team.ex-google-search-console",
             "keboola.wr-google-bigquery-v2"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-bigquery-v2"
+          ]
         }
       ]
     },
@@ -950,6 +1341,16 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -978,6 +1379,16 @@
             "kds-team.ex-google-search-console",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -992,6 +1403,16 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-google-analytics-v4",
+            "kds-team.ex-google-search-console",
+            "keboola.wr-google-sheets"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1019,6 +1440,15 @@
             "kds-team.ex-salesforce-v2",
             "keboola.wr-google-bigquery-v2"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-bigquery-v2"
+          ]
         }
       ]
     },
@@ -1033,6 +1463,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1059,6 +1498,15 @@
             "kds-team.ex-salesforce-v2",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -1073,6 +1521,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-salesforce-v2",
+            "keboola.wr-google-sheets"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1099,6 +1556,15 @@
             "keboola.ex-pipedrive",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -1113,6 +1579,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-sheets"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1139,6 +1614,15 @@
             "keboola.ex-pipedrive",
             "keboola.wr-google-bigquery-v2"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "keboola.wr-google-bigquery-v2"
+          ]
         }
       ]
     },
@@ -1153,6 +1637,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-pipedrive",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1179,6 +1672,15 @@
             "keboola.ex-github",
             "keboola.wr-google-bigquery-v2"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-bigquery-v2"
+          ]
         }
       ]
     },
@@ -1193,6 +1695,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "keboola.wr-google-sheets"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1219,6 +1730,15 @@
             "keboola.ex-github",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -1233,6 +1753,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-github",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1259,6 +1788,15 @@
             "leochan.ex-asana",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -1273,6 +1811,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1299,6 +1846,15 @@
             "leochan.ex-asana",
             "keboola.wr-google-sheets"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "keboola.wr-google-sheets"
+          ]
         }
       ]
     },
@@ -1313,6 +1869,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "leochan.ex-asana",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1339,6 +1904,15 @@
             "fisa.ex-typeform",
             "<keboola.wr-snowflake>"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "<keboola.wr-snowflake>"
+          ]
         }
       ]
     },
@@ -1353,6 +1927,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-bigquery-v2"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1379,6 +1962,15 @@
             "fisa.ex-typeform",
             "keboola.wr-google-sheets"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "keboola.wr-google-sheets"
+          ]
         }
       ]
     },
@@ -1393,6 +1985,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "fisa.ex-typeform",
+            "<keboola.wr-snowflake>"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1434,6 +2035,19 @@
             "keboola.wr-db-pgsql"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-mailchimp",
+            "keboola.wr-google-sheets",
+            "keboola.wr-google-bigquery-v2",
+            "<keboola.wr-snowflake>",
+            "keboola.wr-db-pgsql"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1468,6 +2082,18 @@
             "<keboola.wr-snowflake>"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "kds-team.ex-shopify",
+            "keboola.snowflake-transformation",
+            "<keboola.wr-snowflake>"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1490,6 +2116,14 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1534,6 +2168,19 @@
             "keboola.data-apps"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "kds-team.app-generative-ai",
+            "keboola.snowflake-transformation",
+            "kds-team.wr-twilio",
+            "keboola.data-apps"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1570,6 +2217,18 @@
             "kds-team.wr-generic"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.ex-shopify",
+            "keboola.snowflake-transformation",
+            "keboola.data-apps",
+            "kds-team.wr-generic"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1601,6 +2260,22 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "keboola.ex-currency",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-ads",
+            "keboola.ex-sklik",
+            "keboola.orchestrator",
+            "keboola.snowflake-transformation",
+            "kds-team.ex-tiktok-ads",
+            "leochan.ex-linkedin"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1651,6 +2326,19 @@
             "keboola.snowflake-transformation"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "keboola.ex-google-analytics-v4",
+            "keboola.ex-google-analytics-v4",
+            "keboola.ex-google-bigquery-v2",
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1674,6 +2362,14 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1708,6 +2404,15 @@
             "keboola.data-apps"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1735,6 +2440,16 @@
       "versions": [
         {
           "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "kds-team.ex-confluence",
+            "kds-team.wr-pinecone"
+          ]
+        },
+        {
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1781,6 +2496,21 @@
             "kds-team.ex-woocommerce"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.wr-db-pgsql",
+            "keboola.wr-google-bigquery-v2",
+            "keboola.wr-google-sheets",
+            "<keboola.wr-snowflake>",
+            "kds-team.ex-bigcommerce",
+            "kds-team.ex-shopify",
+            "kds-team.ex-woocommerce"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1810,6 +2540,15 @@
             "keboola.snowflake-transformation"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -1839,6 +2578,15 @@
             "keboola.snowflake-transformation"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.snowflake-transformation"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -1867,6 +2615,15 @@
             "keboola.data-apps"
           ],
           "path": "v0"
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v2"
         }
       ]
     },
@@ -1897,6 +2654,15 @@
             "keboola.data-apps"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -1926,6 +2692,15 @@
             "keboola.ex-db-snowflake"
           ],
           "path": "v0"
+        },
+        {
+          "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.ex-db-snowflake"
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -1946,6 +2721,15 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "apify.apify"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
@@ -1978,6 +2762,14 @@
           "components": [
             "keboola.data-apps"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ]
         }
       ]
     },
@@ -2005,6 +2797,15 @@
             "keboola.data-apps",
             "kds-team.ex-lever"
           ]
+        },
+        {
+          "version": "2.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "kds-team.ex-lever"
+          ]
         }
       ]
     },
@@ -2026,6 +2827,14 @@
       "versions": [
         {
           "version": "1.0.0",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ]
+        },
+        {
+          "version": "2.0.0",
           "description": "",
           "stable": false,
           "components": [
