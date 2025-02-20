@@ -1,3 +1,0 @@
-{
-  name: "User, Workspace & Project",
-}

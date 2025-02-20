@@ -1,4 +1,0 @@
-{
-  name: "BasicTransactions",
-  isDisabled: false,
-}
