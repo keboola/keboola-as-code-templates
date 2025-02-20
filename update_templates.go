@@ -70,6 +70,11 @@ func (tu *TemplateUpdater) processOrchestratorCleanup(path string) error {
 
 // processFile handles the modification of a single jsonnet file
 func (tu *TemplateUpdater) processFile(path string) error {
+	// Skip if not manifest.jsonnet
+	if filepath.Base(path) != "manifest.jsonnet" {
+		return nil
+	}
+
 	// Read the file content
 	content, err := os.ReadFile(path)
 	if err != nil {
@@ -77,65 +82,82 @@ func (tu *TemplateUpdater) processFile(path string) error {
 	}
 
 	contentStr := string(content)
+	lines := strings.Split(contentStr, "\n")
 
-	// Find any configuration with snowflake transformation
-	if strings.Contains(contentStr, `"keboola.snowflake-transformation"`) {
-		// Extract the original path and ID
-		lines := strings.Split(contentStr, "\n")
-		var configBlock string
-		var originalPath string
-		var originalID string
-		var originalMetadata string
-		// Find the configuration block
-		for i, line := range lines {
-			if strings.Contains(line, `"keboola.snowflake-transformation"`) {
-				// Look for the complete block
-				for j := i - 1; j < len(lines); j++ {
-					if strings.Contains(lines[j], "rows: []") {
-						// Found the end of block, capture it
-						configBlock = strings.Join(lines[i-1:j+2], "\n")
-						break
-					}
-				}
-				// Extract path and ID from the block
-				metadataSplit := false
-				for _, l := range strings.Split(configBlock, "\n") {
-					if strings.Contains(l, "path:") {
-						originalPath = strings.TrimSpace(strings.Split(l, ":")[1])
-						originalPath = strings.Trim(originalPath, `",`)
-					}
-					if strings.Contains(l, "id:") {
-						originalID = strings.TrimSpace(strings.Split(l, ":")[1])
-						originalID = strings.Trim(originalID, `",`)
-					}
-					if strings.Contains(l, "metadata:") {
-						originalMetadata = strings.TrimSpace(strings.Split(l, "metadata:")[1])
-						originalMetadata = strings.Trim(originalMetadata, `",`)
-						if originalMetadata == "{" {
-							originalMetadata += "\n"
-							metadataSplit = true
-							continue
+	// Arrays to store all blocks and their data
+	var configBlocks []string
+	var originalPaths []string
+	var originalIDs []string
+	var originalMetadatas []string
+	var blockStarts []int
+	var blockEnds []int
+
+	// First pass: collect all blocks
+	for i, line := range lines {
+		if strings.Contains(line, `"keboola.snowflake-transformation"`) {
+			blockStart := i - 1 // Start from the line before componentId
+			var configBlock string
+			var originalPath string
+			var originalID string
+			var originalMetadata string
+
+			// Look for the complete block
+			for j := i; j < len(lines); j++ {
+				if strings.Contains(lines[j], "rows: []") {
+					// Found the end of block
+					blockEnd := j + 2 // Include the line after rows: []
+					configBlock = strings.Join(lines[blockStart:blockEnd], "\n")
+
+					// Extract path and ID from the block
+					metadataSplit := false
+					for _, l := range strings.Split(configBlock, "\n") {
+						if strings.Contains(l, "path:") {
+							originalPath = strings.TrimSpace(strings.Split(l, ":")[1])
+							originalPath = strings.Trim(originalPath, `",`)
+						}
+						if strings.Contains(l, "id:") {
+							originalID = strings.TrimSpace(strings.Split(l, ":")[1])
+							originalID = strings.Trim(originalID, `",`)
+						}
+						if strings.Contains(l, "metadata:") {
+							originalMetadata = strings.TrimSpace(strings.Split(l, "metadata:")[1])
+							originalMetadata = strings.Trim(originalMetadata, `",`)
+							if originalMetadata == "{" {
+								originalMetadata += "\n"
+								metadataSplit = true
+								continue
+							}
+						}
+						if metadataSplit {
+							originalMetadata += l + "\n"
+							if strings.Contains(l, "},") {
+								metadataSplit = false
+							}
 						}
 					}
-					if metadataSplit {
-						originalMetadata += l + "\n"
-						if strings.Contains(l, "},") {
-							metadataSplit = false
-						}
-					}
+
+					// Store all block data
+					configBlocks = append(configBlocks, configBlock)
+					originalPaths = append(originalPaths, originalPath)
+					originalIDs = append(originalIDs, originalID)
+					originalMetadatas = append(originalMetadatas, originalMetadata)
+					blockStarts = append(blockStarts, blockStart)
+					blockEnds = append(blockEnds, blockEnd)
+					break
 				}
-				break
 			}
 		}
+	}
 
-		if configBlock != "" {
-			// Get the last part of the path which is the transformation name
-			pathParts := strings.Split(originalPath, "/")
-			transformationName := pathParts[len(pathParts)-1]
+	// Second pass: replace all blocks
+	// Process blocks in reverse order to maintain correct positions
+	for i := len(configBlocks) - 1; i >= 0; i-- {
+		pathParts := strings.Split(originalPaths[i], "/")
+		transformationName := pathParts[len(pathParts)-1]
 
-			var replacement string
-			if originalMetadata != "" {
-				replacement = fmt.Sprintf(`
+		var replacement string
+		if originalMetadatas[i] != "" {
+			replacement = fmt.Sprintf(`
     if HasProjectBackend("snowflake") then {
       componentId: "keboola.snowflake-transformation",
       id: %s,
@@ -148,10 +170,9 @@ func (tu *TemplateUpdater) processFile(path string) error {
       path: "transformation/keboola.google-bigquery-transformation/%s",
       rows: [],
       metadata: %s
-    },`, originalID, transformationName, originalMetadata, originalID, transformationName, originalMetadata)
-			} else {
-				// Create the replacement with the same ID and transformation name
-				replacement = fmt.Sprintf(`
+    },`, originalIDs[i], transformationName, originalMetadatas[i], originalIDs[i], transformationName, originalMetadatas[i])
+		} else {
+			replacement = fmt.Sprintf(`
     if HasProjectBackend("snowflake") then {
       componentId: "keboola.snowflake-transformation",
       id: %s,
@@ -162,10 +183,10 @@ func (tu *TemplateUpdater) processFile(path string) error {
       id: %s,
       path: "transformation/keboola.google-bigquery-transformation/%s",
       rows: []
-    },`, originalID, transformationName, originalID, transformationName)
-			}
-			contentStr = strings.Replace(contentStr, configBlock, replacement, 1)
+    `, originalIDs[i], transformationName, originalIDs[i], transformationName)
 		}
+
+		contentStr = strings.Replace(contentStr, configBlocks[i], replacement, 1)
 	}
 
 	// Write the modified content back to the file
@@ -426,13 +447,22 @@ func (tu *TemplateUpdater) UpdateRepositoryVersions() error {
 					if err := tu.processOrchestratorFiles(path); err != nil {
 						return fmt.Errorf("failed to process orchestrator files in %s: %w", path, err)
 					}
+				} else {
+					// Process inputs.jsonnet and manifest.jsonnet files
+					filename := filepath.Base(path)
+					if filename == "inputs.jsonnet" || filename == "manifest.jsonnet" {
+						if err := tu.processFile(path); err != nil {
+							return fmt.Errorf("failed to process %s in %s: %w", filename, path, err)
+						}
+						fmt.Printf("Updated %s in: %s\n", filename, path)
+					}
 				}
 				return nil
 			})
 			if err != nil {
-				return fmt.Errorf("failed to update orchestrator files: %w", err)
+				return fmt.Errorf("failed to update files: %w", err)
 			}
-			fmt.Printf("Updated orchestrator files in: %s\n", destPath)
+			fmt.Printf("Updated files in: %s\n", destPath)
 
 			// Duplicate snowflake directories to bigquery after all files are processed
 			if err := tu.duplicateSnowflakeDirectories(destPath); err != nil {
