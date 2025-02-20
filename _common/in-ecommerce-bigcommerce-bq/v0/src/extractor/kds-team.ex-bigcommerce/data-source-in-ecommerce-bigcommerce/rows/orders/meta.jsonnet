@@ -1,4 +1,0 @@
-{
-  name: "Orders",
-  isDisabled: false,
-}
