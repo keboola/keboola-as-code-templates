@@ -266,6 +266,8 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 			`icon: "component:keboola.snowflake-transformation"`,
 			`icon: "component:keboola.snowflake-transformation",
           backend: "snowflake"`, 1)
+		// Remove any trailing comma from the snowflake block
+		snowflakeBlock = strings.TrimRight(strings.TrimSpace(snowflakeBlock), ",")
 
 		// Create BigQuery block by copying the Snowflake block and adjusting fields
 		bigqueryBlock := strings.Replace(snowflakeBlock,
@@ -278,8 +280,8 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 			`backend: "snowflake"`,
 			`backend: "bigquery"`, 1)
 
-		// Replace the original block with both blocks
-		replacement := snowflakeBlock + ",\n" + bigqueryBlock
+		// Replace the original block with both blocks, ensuring proper comma separation
+		replacement := fmt.Sprintf("%s,\n%s", snowflakeBlock, bigqueryBlock)
 
 		contentStr = strings.Replace(contentStr, originalBlock, replacement, 1)
 	}
