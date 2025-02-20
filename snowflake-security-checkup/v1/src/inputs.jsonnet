@@ -1,0 +1,77 @@
+{
+  stepsGroups: [
+    {
+      description: "Snowflake Data Source",
+      required: "all",
+      steps: [
+        {
+          icon: "component:keboola.ex-db-snowflake",
+          name: "Snowflake Data Source",
+          description: "Setup inputs for download data from your Snowflake database.",
+          inputs: [
+            {
+              id: "ex-snowflake-db-host",
+              name: "Hostname",
+              description: "Insert database hostname",
+              type: "string",
+              kind: "input",
+              rules: "required",
+              default: "hostname.com",
+            },
+            {
+              id: "ex-snowflake-db-port",
+              name: "Port",
+              description: "Insert database port number.",
+              type: "string",
+              kind: "input",
+              default: "443",
+              showif: "[ex-snowflake-db-host] != ''",
+            },
+            {
+              id: "ex-snowflake-db-user",
+              name: "Username",
+              description: "Insert database username.",
+              type: "string",
+              kind: "input",
+              default: "userName",
+              showif: "[ex-snowflake-db-host] != ''",
+            },
+            {
+              id: "ex-snowflake-db-password",
+              name: "Database Password",
+              description: "Insert your password to the database.",
+              showif: "[ex-snowflake-db-host] != ''",
+              type: "string",
+              kind: "hidden",
+            },
+            {
+              id: "ex-snowflake-db-warehouse",
+              name: "Warehouse",
+              description: "Insert database warehouse.",
+              type: "string",
+              kind: "input",
+              default: "Warehouse",
+              showif: "[ex-snowflake-db-host] != ''",
+            },
+            {
+              id: "user-name",
+              name: "User Name",
+              description: "For 'user_timeline' table is necessary to set user_name.",
+              type: "string",
+              kind: "input",
+              default: "Username",
+            },
+            {
+              id: "start-time",
+              name: "Start Time",
+              description: "Start of query and login history.E.g.2024-06-01 01:13:36.710",
+              type: "string",
+              kind: "input",
+              default: "2024-06-01 01:13:36.710 -0700",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
