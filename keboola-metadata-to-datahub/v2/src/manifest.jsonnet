@@ -49,7 +49,7 @@
       id: ConfigId("transformation-lineage-in-datahub-without-ex-project"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-lineage-in-datahub-without-ex-project",
       rows: []
-    
+    },
     if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
 
     if HasProjectBackend("snowflake") then {
@@ -62,7 +62,7 @@
       id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-project"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-table-level-metadata-in-datahub-without-ex-project",
       rows: []
-    
+    },
     if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
 
     if HasProjectBackend("snowflake") then {
@@ -75,7 +75,7 @@
       id: ConfigId("transformation-lineage-in-datahub-without-ex-org"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-lineage-in-datahub-without-ex-org",
       rows: []
-    
+    },
     if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
 
     if HasProjectBackend("snowflake") then {
@@ -88,7 +88,7 @@
       id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-org"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-table-level-metadata-in-datahub-without-ex-org",
       rows: []
-    
+    },
     if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
 
     if HasProjectBackend("snowflake") then {
@@ -101,7 +101,7 @@
       id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-org"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-flow-lineage-in-datahub-without-ex-org",
       rows: []
-    
+    },
     if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
 
     if HasProjectBackend("snowflake") then {
@@ -114,7 +114,7 @@
       id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-project"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-flow-lineage-in-datahub-without-ex-project",
       rows: []
-    
+    },
     {
       componentId: "kds-team.app-datahub",
       id: ConfigId("data-destination-out-datahub"),

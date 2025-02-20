@@ -14,6 +14,6 @@
       id: ConfigId("csas-template-merge"),
       path: "transformation/keboola.google-bigquery-transformation/csas-template-merge",
       rows: []
-    
+    },
   ],
 }

@@ -14,6 +14,6 @@
       id: ConfigId("csas-template-scd"),
       path: "transformation/keboola.google-bigquery-transformation/csas-template-scd",
       rows: []
-    
+    },
   ],
 }

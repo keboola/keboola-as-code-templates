@@ -70,7 +70,7 @@
       id: ConfigId("transformation-in-social-media-engagement"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-in-social-media-engagement",
       rows: []
-    
+    },
     if HasProjectBackend("bigquery")==true then
     {
       componentId: "keboola.google-bigquery-transformation",
