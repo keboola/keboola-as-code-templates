@@ -36,46 +36,9 @@ func (tu *TemplateUpdater) processOrchestratorFiles(path string) error {
 		return nil
 	}
 
-	var err error
-	// Check for task.jsonnet in the snowflake folder
-	taskPath := filepath.Join(path, "task.jsonnet")
-	if _, err = os.Stat(taskPath); err == nil {
-		// Modify existing task.jsonnet
-		content, err := os.ReadFile(taskPath)
-		if err != nil {
-			return fmt.Errorf("failed to read task.jsonnet: %w", err)
-		}
-
-		//		Replace snowflake transformation with bigquery transformation
-		modified := strings.ReplaceAll(string(content),
-			"keboola.snowflake-transformation",
-			"keboola.google-bigquery-transformation")
-
-		err = os.WriteFile(taskPath, []byte(modified), 0644)
-		if err != nil {
-			return fmt.Errorf("failed to write task.jsonnet: %w", err)
-		}
-	}
-
-	// Check for kbcdir.jsonnet in the snowflake folder
-	kbcdirPath := filepath.Join(path, "kbcdir.jsonnet")
-	if _, err = os.Stat(kbcdirPath); err == nil {
-		// Modify existing kbcdir.jsonnet
-		content, err := os.ReadFile(kbcdirPath)
-		if err != nil {
-			return fmt.Errorf("failed to read kbcdir.jsonnet: %w", err)
-		}
-
-		//		Replace snowflake transformation with bigquery transformation
-		modified := strings.ReplaceAll(string(content),
-			"\"snowflake\"",
-			"\"bigquery\"")
-
-		err = os.WriteFile(kbcdirPath, []byte(modified), 0644)
-		if err != nil {
-			return fmt.Errorf("failed to create kbcdir.jsonnet: %w", err)
-		}
-		fmt.Printf("Created kbcdir.jsonnet in: %s\n", path)
+	// Skip file processing for snowflake folders - they will be duplicated instead
+	if strings.Contains(basePath, "snowflake") {
+		return nil
 	}
 
 	return nil
@@ -279,16 +242,29 @@ type Repository struct {
 	Templates []RepositoryTemplate `json:"templates"`
 }
 
-// renameSnowflakeDirectories renames all snowflake directories to bigquery in the given path
-func (tu *TemplateUpdater) renameSnowflakeDirectories(path string) error {
+// duplicateSnowflakeDirectories duplicates snowflake directories to bigquery in the given path
+func (tu *TemplateUpdater) duplicateSnowflakeDirectories(path string) error {
 	// Get all subdirectories
 	var dirs []string
 	err := filepath.Walk(path, func(p string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
-		if info.IsDir() && strings.Contains(info.Name(), "snowflake") {
-			dirs = append(dirs, p)
+		if !info.IsDir() {
+			return nil
+		}
+
+		// Check if this is a snowflake directory under keboola.orchestrator
+		if strings.Contains(info.Name(), "snowflake") {
+			// Check if any parent directory is keboola.orchestrator
+			currentPath := p
+			for currentPath != path {
+				if strings.Contains(filepath.Base(currentPath), "keboola.orchestrator") {
+					dirs = append(dirs, p)
+					break
+				}
+				currentPath = filepath.Dir(currentPath)
+			}
 		}
 		return nil
 	})
@@ -300,17 +276,59 @@ func (tu *TemplateUpdater) renameSnowflakeDirectories(path string) error {
 	for i := len(dirs) - 1; i >= 0; i-- {
 		dirPath := dirs[i]
 		dirName := filepath.Base(dirPath)
-		if strings.Contains(dirName, "snowflake") {
-			// Create the new directory name
-			newDirName := strings.ReplaceAll(dirName, "snowflake", "bigquery")
-			newDirPath := filepath.Join(filepath.Dir(dirPath), newDirName)
+		// Create the new directory name
+		newDirName := strings.ReplaceAll(dirName, "snowflake", "google-bigquery")
+		newDirPath := filepath.Join(filepath.Dir(dirPath), newDirName)
 
-			// Rename the directory
-			if err := os.Rename(dirPath, newDirPath); err != nil {
-				return fmt.Errorf("failed to rename directory from %s to %s: %w", dirPath, newDirPath, err)
-			}
-			fmt.Printf("Renamed directory from %s to %s\n", dirPath, newDirPath)
+		// Create new directory and copy contents
+		if err := os.MkdirAll(newDirPath, 0755); err != nil {
+			return fmt.Errorf("failed to create directory %s: %w", newDirPath, err)
 		}
+
+		// Copy directory contents
+		err := filepath.Walk(dirPath, func(srcPath string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+
+			// Get relative path
+			relPath, err := filepath.Rel(dirPath, srcPath)
+			if err != nil {
+				return err
+			}
+
+			destPath := filepath.Join(newDirPath, relPath)
+
+			if info.IsDir() {
+				return os.MkdirAll(destPath, 0755)
+			}
+
+			// Copy file
+			data, err := os.ReadFile(srcPath)
+			if err != nil {
+				return err
+			}
+
+			// For task.jsonnet and kbcdir.jsonnet, modify content before writing
+			switch filepath.Base(srcPath) {
+			case "task.jsonnet":
+				content := strings.ReplaceAll(string(data),
+					"keboola.snowflake-transformation",
+					"keboola.google-bigquery-transformation")
+				data = []byte(content)
+			case "kbcdir.jsonnet":
+				content := strings.ReplaceAll(string(data),
+					"\"snowflake\"",
+					"\"bigquery\"")
+				data = []byte(content)
+			}
+
+			return os.WriteFile(destPath, data, 0644)
+		})
+		if err != nil {
+			return fmt.Errorf("failed to copy directory contents from %s to %s: %w", dirPath, newDirPath, err)
+		}
+		fmt.Printf("Created BigQuery directory: %s (duplicated from %s)\n", newDirPath, dirPath)
 	}
 
 	return nil
@@ -416,9 +434,9 @@ func (tu *TemplateUpdater) UpdateRepositoryVersions() error {
 			}
 			fmt.Printf("Updated orchestrator files in: %s\n", destPath)
 
-			// Rename snowflake directories to bigquery after all files are processed
-			if err := tu.renameSnowflakeDirectories(destPath); err != nil {
-				return fmt.Errorf("failed to rename snowflake directories: %w", err)
+			// Duplicate snowflake directories to bigquery after all files are processed
+			if err := tu.duplicateSnowflakeDirectories(destPath); err != nil {
+				return fmt.Errorf("failed to duplicate snowflake directories: %w", err)
 			}
 		}
 	}
