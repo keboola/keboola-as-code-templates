@@ -15,19 +15,25 @@
           "version": "0.0.1",
           "description": "",
           "stable": false,
-          "components": ["common:settings"]
+          "components": [
+            "common:settings"
+          ]
         },
         {
           "version": "1.0.0",
           "description": "",
           "stable": false,
-          "components": ["common:settings"]
+          "components": [
+            "common:settings"
+          ]
         },
         {
           "version": "2.0.0",
           "description": "With Google Drive Writer OAuth",
           "stable": false,
-          "components": ["common:settings"]
+          "components": [
+            "common:settings"
+          ]
         }
       ]
     },
@@ -41,7 +47,9 @@
           "version": "1.0.0",
           "description": "",
           "stable": false,
-          "components": ["ex-generic-v2"]
+          "components": [
+            "ex-generic-v2"
+          ]
         }
       ]
     },
@@ -49,11 +57,11 @@
       "id": "thoughtspot-analytics-googleanalytics",
       "name": "Google Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to process and supply Google Analytics data to ThoughtSpot in a format compatible with both the ThoughtSpot SpotApp and the TML block.",
+      "deprecated": true,
       "categories": [
         "Analytics",
         "ThoughtSpot"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -73,9 +81,10 @@
       "name": "HubSpot Analytics for ThoughtSpot",
       "description": "In a few clicks, set up a flow to supply HubSpot data to ThoughtSpot in a format compatible with the HubSpot Marketing Analytics TML block.",
       "deprecated": true,
-      "requirements":
-        {
-        "backends": ["snowflake"],
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
         "components": [
           "kds-team.ex-hubspot-crm",
           "keboola.wr-thoughtspot",
@@ -105,9 +114,10 @@
       "name": "Shopify Analytics for Thoughtspot",
       "description": "Combine data from Shopify and any of the included ad platforms to get complete view of your e-commerce business with ready-to-go analytics in Thoughtspot.",
       "deprecated": true,
-      "requirements": 
-        {
-        "backends": ["snowflake"],
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
         "components": [
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
@@ -142,16 +152,17 @@
       "id": "keboola-mgmt-jira",
       "name": "JIRA Project Management",
       "description": "Aggregate all your JIRA data to dramatically improve team collaboration and work management.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "kds-team.ex-jira",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-snowflake-blob-storage"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-jira",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-snowflake-blob-storage"
+        ]
+      },
       "path": "keboola-mgmt-jira",
       "categories": [
         "Project Management"
@@ -176,16 +187,16 @@
       "id": "keboola-metadata-to-datahub",
       "name": "Keboola's Project Metadata to DataHub",
       "description": "Aggregate all your telemetry data and metadata about your Keboola Connection project to gain valuable insights and improve data governance.",
-      "deprecated": false,
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.ex-telemetry-data",
-            "kds-team.ex-kbc-project-metadata-v2",
-            "kds-team.app-datahub"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-telemetry-data",
+          "kds-team.ex-kbc-project-metadata-v2",
+          "kds-team.app-datahub"
+        ]
+      },
       "path": "keboola-metadata-to-datahub",
       "categories": [
         "Data Governance"
@@ -208,9 +219,10 @@
       "id": "snowflake-virtual-hands-on-lab",
       "name": "Shopify DEMO Data Analysis",
       "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness.",
-      "requirements":
-        {
-        "backends": ["snowflake"],
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
         "components": [
           "kds-team.ex-shopify",
           "keboola.ex-facebook-ads",
@@ -218,10 +230,10 @@
           "keboola.ex-sklik"
         ]
       },
+      "path": "snowflake-virtual-hands-on-lab",
       "categories": [
         "Tutorials"
       ],
-      "path": "snowflake-virtual-hands-on-lab",
       "versions": [
         {
           "version": "1.0.0",
@@ -242,23 +254,26 @@
       "id": "keboola-dbt-tutorial",
       "name": "Keboola dbt Tutorial",
       "description": "Run your first data pipeline with dbt! Extract seed data, run dbt to model data and export it to the DB destination of your choice!",
-      "requirements": 
-        {
-          "backends": ["snowflake"],
-          "features": ["native-types"],
-          "components": [
-            "keboola.ex-http",
-            "keboola.wr-db-mssql-v2",
-            "keboola.wr-db-mysql",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.dbt-transformation"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-http",
+          "keboola.wr-db-mssql-v2",
+          "keboola.wr-db-mysql",
+          "keboola.wr-db-pgsql",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.dbt-transformation"
+        ],
+        "features": [
+          "native-types"
+        ]
+      },
+      "path": "keboola-dbt-tutorial",
       "categories": [
         "Tutorials"
       ],
-      "path": "keboola-dbt-tutorial",
       "versions": [
         {
           "version": "1.0.0",
@@ -281,14 +296,15 @@
       "id": "data-quality",
       "name": "Hands on Data Quality",
       "description": "Take a look at data quality testing and monitoring via two examples.",
-      "requirements": 
-        {
-          "backends": ["snowflake"]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ]
+      },
+      "path": "data-quality",
       "categories": [
         "Data Quality"
       ],
-      "path": "data-quality",
       "versions": [
         {
           "version": "1.0.0",
@@ -305,9 +321,10 @@
       "id": "social-media-engagement-template",
       "name": "Social Media Engagement",
       "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
-      "requirements":
-        {
-        "backends": ["snowflake"],
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
         "components": [
           "keboola.ex-facebook",
           "keboola.ex-instagram",
@@ -319,10 +336,10 @@
           "keboola.wr-google-bigquery-v2"
         ]
       },
+      "path": "social-media-engagement-template",
       "categories": [
         "Marketing"
       ],
-      "path": "social-media-engagement-template",
       "versions": [
         {
           "version": "2.0.0",
@@ -347,20 +364,21 @@
       "id": "keboola-crm-hubspot",
       "name": "CRM Hubspot",
       "description": "Aggregate all your HubSpot data to further enhance your company’s marketing, sales, service, and operations strategies.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "kds-team.ex-hubspot-crm",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-hubspot-crm",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-db-pgsql"
+        ]
+      },
+      "path": "keboola-crm-hubspot",
       "categories": [
         "CRM"
       ],
-      "path": "keboola-crm-hubspot",
       "versions": [
         {
           "version": "1.0.0",
@@ -381,20 +399,21 @@
       "id": "keboola-crm-pipedrive",
       "name": "CRM Pipedrive",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.ex-pipedrive",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-pipedrive",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-db-pgsql"
+        ]
+      },
+      "path": "keboola-crm-pipedrive",
       "categories": [
         "CRM"
       ],
-      "path": "keboola-crm-pipedrive",
       "versions": [
         {
           "version": "1.0.0",
@@ -415,20 +434,21 @@
       "id": "keboola-crm-salesforce",
       "name": "CRM Salesforce",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
-      "requirements": 
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "kds-team.ex-salesforce-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-pgsql"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-salesforce-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-db-pgsql"
+        ]
+      },
+      "path": "keboola-crm-salesforce",
       "categories": [
         "CRM"
       ],
-      "path": "keboola-crm-salesforce",
       "versions": [
         {
           "version": "1.0.0",
@@ -449,10 +469,10 @@
       "id": "keboola-ecommerce-shopify",
       "name": "E-commerce Shopify",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "deprecated": true,
       "categories": [
         "E-commerce"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -476,20 +496,22 @@
       "id": "keboola-git-github",
       "name": "Git GitHub",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
-      "requirements": 
-        {
-          "backends": ["snowflake", "bigquery"],
-          "components": [
-            "keboola.ex-github",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
+        "components": [
+          "keboola.ex-github",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-db-pgsql"
+        ]
+      },
+      "path": "keboola-git-github",
       "categories": [
         "Git"
       ],
-      "path": "keboola-git-github",
       "versions": [
         {
           "version": "1.0.1",
@@ -510,23 +532,24 @@
       "id": "keboola-mgmt-asana",
       "name": "Asana Project Management",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
-      "requirements": 
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "kds-team.ex-asana-v2",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-db-snowflake"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-asana-v2",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-db-pgsql",
+          "keboola.wr-db-snowflake"
+        ]
+      },
+      "path": "keboola-mgmt-asana",
       "categories": [
         "Project Management"
       ],
-      "path": "keboola-mgmt-asana",
       "versions": [
-         {
+        {
           "version": "1.0.1",
           "description": "",
           "stable": false,
@@ -545,20 +568,22 @@
       "id": "keboola-typeform",
       "name": "Typeform",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
-      "requirements": 
-        {
-          "backends": ["snowflake", "bigquery"],
-          "components": [
-            "fisa.ex-typeform",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-db-pgsql"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
+        "components": [
+          "fisa.ex-typeform",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "keboola.wr-db-pgsql"
+        ]
+      },
+      "path": "keboola-typeform",
       "categories": [
         "Surveys"
       ],
-      "path": "keboola-typeform",
       "versions": [
         {
           "version": "1.0.1",
@@ -579,19 +604,19 @@
       "id": "keboola-analytics-googleanalytics4",
       "name": "Google Analytics 4",
       "description": "Aggregate all your Google Analytics (GA4) data and transform it into even more powerful customer insights and smarter marketing strategies.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "kds-team.ex-google-search-console",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-google-analytics-v4",
+          "kds-team.ex-google-search-console",
+          "keboola.wr-db-pgsql",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets"
+        ]
+      },
       "path": "keboola-analytics-googleanalytics4",
-      "deprecated": false,
       "categories": [
         "Analytics"
       ],
@@ -616,10 +641,10 @@
       "id": "googleanalytics",
       "name": "Universal Analytics",
       "description": "Aggregate all your Universal Analytics (UA) data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "deprecated": true,
       "categories": [
         "Analytics"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -639,25 +664,29 @@
       "id": "adsplatforms",
       "name": "Advertising Platforms",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
-      "requirements": 
-        {
-          "backends": ["snowflake", "bigquery"],
-          "components": [
-            "kds-team.ex-bing-ads",
-            "leochan.ex-linkedin",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-db-pgsql"
-          ],
-          "features": ["sandboxes-data-apps"]
-        },
-      "categories": [
-        "Marketing","Data Apps"
-      ],
-      "deprecated": false,
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
+        "components": [
+          "kds-team.ex-bing-ads",
+          "leochan.ex-linkedin",
+          "keboola.ex-facebook-ads",
+          "keboola.ex-google-ads",
+          "keboola.wr-google-sheets",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-db-pgsql"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "path": "keboola-marketingchannels",
+      "categories": [
+        "Marketing",
+        "Data Apps"
+      ],
       "versions": [
         {
           "version": "3.0.0",
@@ -682,10 +711,10 @@
       "id": "shopify-to-datastudio",
       "name": "Shopify to Data Studio",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "deprecated": true,
       "categories": [
         "E-commerce"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -706,10 +735,10 @@
       "id": "adsplatform-to-googlesheet",
       "name": "Advertising Platforms to Google Sheets",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "deprecated": true,
       "categories": [
         "Marketing"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -730,10 +759,10 @@
       "id": "shopify-to-bigquery",
       "name": "Shopify to BigQuery",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "deprecated": true,
       "categories": [
         "E-commerce"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -753,10 +782,10 @@
       "id": "shopify-to-snowflake",
       "name": "Shopify to Snowflake",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "deprecated": true,
       "categories": [
         "E-commerce"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -776,10 +805,10 @@
       "id": "shopify-to-googlesheet",
       "name": "Shopify to Google Sheets",
       "description": "Aggregate all your Shopify data and change it into actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness, etc.",
+      "deprecated": true,
       "categories": [
         "E-commerce"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -799,10 +828,10 @@
       "id": "shopify-to-keboolasnowflake",
       "name": "Shopify to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Shopify data and change it into actionable insights.",
+      "deprecated": true,
       "categories": [
         "E-commerce"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -822,10 +851,10 @@
       "id": "adsplatform-to-bigquery",
       "name": "Advertising Platforms to BigQuery",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "deprecated": true,
       "categories": [
         "Marketing"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -846,10 +875,10 @@
       "id": "adsplatform-to-snowflake",
       "name": "Advertising Platforms to Snowflake",
       "description": "Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "deprecated": true,
       "categories": [
         "Marketing"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -870,10 +899,10 @@
       "id": "adsplatform-to-keboolasnowflake",
       "name": "Advertising Platforms to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate your advertising data to optimize the monetization of your online traffic and significantly increase revenue.",
+      "deprecated": true,
       "categories": [
         "Marketing"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -894,10 +923,10 @@
       "id": "googleanalytics-to-bigquery",
       "name": "Google Analytics to BigQuery",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "deprecated": true,
       "categories": [
         "Analytics"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -915,10 +944,10 @@
       "id": "googleanalytics-to-snowflake",
       "name": "Google Analytics to Snowflake",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "deprecated": true,
       "categories": [
         "Analytics"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -936,10 +965,10 @@
       "id": "googleanalytics-to-keboolasnowflake",
       "name": "Google Analytics to Keboola DWH",
       "description": "Don't you have own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Google Analytics data and transform it into more powerful customer insights and smarter marketing strategies.",
+      "deprecated": true,
       "categories": [
         "Analytics"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -957,10 +986,10 @@
       "id": "googleanalytics-to-googlesheet",
       "name": "Google Analytics to Google Sheets",
       "description": "Aggregate all your Google Analytics data and transform it into even more powerful customer insights and smarter marketing strategies.",
+      "deprecated": true,
       "categories": [
         "Analytics"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -978,10 +1007,10 @@
       "id": "salesforce-to-bigquery",
       "name": "Salesforce to BigQuery",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -998,10 +1027,10 @@
       "id": "salesforce-to-keboolasnowflake",
       "name": "Salesforce to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1018,10 +1047,10 @@
       "id": "salesforce-to-snowflake",
       "name": "Salesforce to Snowflake",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1038,10 +1067,10 @@
       "id": "salesforce-to-googlesheet",
       "name": "Salesforce to Google Sheets",
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1058,10 +1087,10 @@
       "id": "pipedrive-to-snowflake",
       "name": "Pipedrive to Snowflake",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1078,10 +1107,10 @@
       "id": "pipedrive-to-googlesheet",
       "name": "Pipedrive to Google Sheets",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1098,10 +1127,10 @@
       "id": "pipedrive-to-bigquery",
       "name": "PipeDrive to BigQuery",
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1118,10 +1147,10 @@
       "id": "pipedrive-to-keboolasnowflake",
       "name": "Pipedrive to Keboola DWH",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake DB. Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
+      "deprecated": true,
       "categories": [
         "CRM"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1138,10 +1167,10 @@
       "id": "github-to-bigquery",
       "name": "GitHub to BigQuery",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "deprecated": true,
       "categories": [
         "Git"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1158,10 +1187,10 @@
       "id": "github-to-googlesheet",
       "name": "GitHub to Google Sheets",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "deprecated": true,
       "categories": [
         "Git"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1178,10 +1207,10 @@
       "id": "github-to-snowflake",
       "name": "GitHub to Snowflake",
       "description": "Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "deprecated": true,
       "categories": [
         "Git"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1198,10 +1227,10 @@
       "id": "github-to-keboolasnowflake",
       "name": "GitHub to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your GitHub data to successfully manage your team and enhance security.",
+      "deprecated": true,
       "categories": [
         "Git"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1218,10 +1247,10 @@
       "id": "asana-to-keboolasnowflake",
       "name": "Asana to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? No problem. Use Keboola provided Snowflake database. Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "deprecated": true,
       "categories": [
         "Project Management"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1238,10 +1267,10 @@
       "id": "asana-to-bigquery",
       "name": "Asana to BigQuery",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "deprecated": true,
       "categories": [
         "Project Management"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1258,10 +1287,10 @@
       "id": "asana-to-googlesheet",
       "name": "Asana to Google Sheets",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "deprecated": true,
       "categories": [
         "Project Management"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1278,10 +1307,10 @@
       "id": "asana-to-snowflake",
       "name": "Asana to Snowflake",
       "description": "Aggregate all your Asana data to dramatically improve team collaboration and work management.",
+      "deprecated": true,
       "categories": [
         "Project Management"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1298,10 +1327,10 @@
       "id": "typeform-to-snowflake",
       "name": "Typeform to Snowflake",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "deprecated": true,
       "categories": [
         "Surveys"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1318,10 +1347,10 @@
       "id": "typeform-to-bigquery",
       "name": "Typeform to BigQuery",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "deprecated": true,
       "categories": [
         "Surveys"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1338,10 +1367,10 @@
       "id": "typeform-to-googlesheet",
       "name": "Typeform to Google Sheets",
       "description": "Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "deprecated": true,
       "categories": [
         "Surveys"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1358,10 +1387,10 @@
       "id": "typeform-to-keboolasnowflake",
       "name": "Typeform to Keboola Snowflake",
       "description": "Don't you have your own data warehouse? Use Keboola provided Snowflake database. Aggregate all your Typeform data to grow your business by building more meaningful relationships with your customers.",
+      "deprecated": true,
       "categories": [
         "Surveys"
       ],
-      "deprecated": true,
       "versions": [
         {
           "version": "1.0.0",
@@ -1378,9 +1407,11 @@
       "id": "mailchimp",
       "name": "Emailing Mailchimp",
       "description": "Create a BDM from your Mailchimp marketing data and load them to google sheet, big query, snowflake DB or postgres.",
-      "requirements":
-        {
-        "backends": ["snowflake", "bigquery"],
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
         "components": [
           "keboola.ex-mailchimp",
           "keboola.wr-google-sheets",
@@ -1388,11 +1419,10 @@
           "keboola.wr-db-pgsql"
         ]
       },
+      "path": "keboola-mailchimp",
       "categories": [
         "Mailing"
       ],
-      "path": "keboola-mailchimp",
-      "deprecated": false,
       "versions": [
         {
           "version": "1.0.1",
@@ -1413,16 +1443,18 @@
       "id": "snowpark-streamlit",
       "name": "Shopify RFM Analysis with Streamlit",
       "description": "Use Shopify demo data to perform RFM Analysis and visualize & explore results in interactive Data App",
-      "requirements": 
-        {
-        "backends": ["snowflake"],
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
         "components": [
           "kds-team.ex-shopify"
         ],
-          "features": ["sandboxes-data-apps"]
+        "features": [
+          "sandboxes-data-apps"
+        ]
       },
       "path": "snowpark-streamlit",
-      "deprecated": false,
       "categories": [
         "Tutorials"
       ],
@@ -1445,12 +1477,16 @@
       "id": "interactive-keboola-sheets",
       "name": "Interactive Keboola Sheets",
       "description": "Simplify data management. No more manual manipulation, just seamless editing and collaboration.",
-      "requirements":
-        {
-          "backends": ["snowflake", "bigquery"],
-          "features": ["sandboxes-data-apps"]
-        },
       "deprecated": true,
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
         "Data Apps"
       ],
@@ -1469,20 +1505,24 @@
       "id": "ai-campaign-executer",
       "name": "GenAI Messaging Campaign",
       "description": "Elevate marketing with AI: Shopify data for personalized SMS campaigns via Twilio.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "kds-team.ex-shopify",
-            "kds-team.app-generative-ai",
-            "kds-team.wr-twilio"
-          ],
-          "features": ["sandboxes-data-apps"]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-shopify",
+          "kds-team.app-generative-ai",
+          "kds-team.wr-twilio"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "path": "ai-campaign-executer",
-      "deprecated": false,
       "categories": [
-        "Data Apps","Marketing", "Artificial Intelligence"
+        "Data Apps",
+        "Marketing",
+        "Artificial Intelligence"
       ],
       "versions": [
         {
@@ -1504,16 +1544,22 @@
       "id": "interactive-kpi-report",
       "name": "E-commerce EasyCompass",
       "description": "Real-time KPI insights, alerts & action for data-driven decisions.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": ["kds-team.ex-shopify", "kds-team.wr-generic"],
-          "features": ["sandboxes-data-apps"]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-shopify",
+          "kds-team.wr-generic"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "path": "interactive-kpi-report",
-      "deprecated": false,
       "categories": [
-        "Data Apps", "E-commerce"
+        "Data Apps",
+        "E-commerce"
       ],
       "versions": [
         {
@@ -1534,22 +1580,26 @@
       "id": "marketing-cashflow",
       "name": "Marketing Cashflow",
       "description": "Combine data from various platforms, transform, and deploy a Data App for managing expenses, client identification, upcoming payments, and campaign budget adjustments.",
-      "requirements": 
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.ex-currency",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-sklik",
-            "kds-team.ex-tiktok-ads",
-            "leochan.ex-linkedin"
-          ],
-          "features": ["sandboxes-data-apps"]
-        },
       "deprecated": true,
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-currency",
+          "keboola.ex-facebook-ads",
+          "keboola.ex-google-ads",
+          "keboola.ex-sklik",
+          "kds-team.ex-tiktok-ads",
+          "leochan.ex-linkedin"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
-        "Data Apps", "Marketing"
+        "Data Apps",
+        "Marketing"
       ],
       "versions": [
         {
@@ -1574,19 +1624,22 @@
       "id": "ua-and-ga4-comparison",
       "name": "UA and GA4 Comparison",
       "description": "Download and integrate data from Universal Analytics, Google Analytics 4 API, and Google Analytics raw data in BigQuery and compare these data in data app.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.ex-google-analytics-v4",
-            "keboola.ex-google-bigquery-v2"
-          ],
-          "features": ["sandboxes-data-apps"]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-google-analytics-v4",
+          "keboola.ex-google-bigquery-v2"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "path": "ua-and-ga4-comparison",
-      "deprecated": false,
       "categories": [
-        "Data Apps", "Marketing"
+        "Data Apps",
+        "Marketing"
       ],
       "versions": [
         {
@@ -1608,14 +1661,18 @@
       "id": "kai-promptlab",
       "name": "Kai PromptLab",
       "description": "Streamline your AI prompting process! Use this Streamlit app to refine, test, and compare multiple prompts, ensuring optimal results. Dive into AI with enhanced efficiency!",
-      "requirements": 
-        {
-          "backends": ["snowflake"],
-          "features": ["sandboxes-data-apps"]
-        },
       "deprecated": true,
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
-        "Data Apps", "Artificial Intelligence"
+        "Data Apps",
+        "Artificial Intelligence"
       ],
       "versions": [
         {
@@ -1632,15 +1689,18 @@
       "id": "kai-sql-bot",
       "name": "Kai SQL bot",
       "description": "Chat with our AI-driven SQL Bot to effortlessly query your Snowflake database. Seamless and powerful!",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "features": ["sandboxes-data-apps"]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "path": "kai-sql-bot",
-      "deprecated": false,
       "categories": [
-        "Data Apps", "Artificial Intelligence"
+        "Data Apps",
+        "Artificial Intelligence"
       ],
       "versions": [
         {
@@ -1658,19 +1718,23 @@
       "id": "confluence-chatbot",
       "name": "Confluence Chatbot",
       "description": "Quickly build a GenAI chat application on top of your data.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "kds-team.ex-confluence",
-            "kds-team.wr-pinecone"
-          ],
-          "features": ["sandboxes-data-apps"]
-        },
-      "categories": [
-        "Artificial Intelligence", "Data Apps"
-      ],
       "deprecated": true,
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "kds-team.ex-confluence",
+          "kds-team.wr-pinecone"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
+      "categories": [
+        "Artificial Intelligence",
+        "Data Apps"
+      ],
       "versions": [
         {
           "version": "0.0.1",
@@ -1688,20 +1752,23 @@
       "id": "keboola-ecommerce",
       "name": "E-commerce Insights",
       "description": "Aggregate all your Shopify, WooCommerce, or BigCommerce data to gain comprehensive insights into product inventory, customer behavior, and sales performance.",
-      "requirements":
-        {
-          "backends": ["snowflake"],
-          "components": [
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "kds-team.ex-bigcommerce",
-            "kds-team.ex-shopify",
-            "kds-team.ex-woocommerce"
-          ]
-        },
+      "requirements": {
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.wr-db-pgsql",
+          "keboola.wr-google-bigquery-v2",
+          "keboola.wr-google-sheets",
+          "kds-team.ex-bigcommerce",
+          "kds-team.ex-shopify",
+          "kds-team.ex-woocommerce"
+        ]
+      },
       "path": "keboola-ecommerce",
-      "categories": ["E-commerce"],
+      "categories": [
+        "E-commerce"
+      ],
       "versions": [
         {
           "version": "1.0.0",
@@ -1733,10 +1800,10 @@
         ],
         "features": null
       },
+      "path": "csas-template-merge",
       "categories": [
         "Other"
       ],
-      "path": "csas-template-merge",
       "versions": [
         {
           "version": "0.0.1",
@@ -1754,16 +1821,18 @@
       "name": "CSAS - Template SCD",
       "description": "CSAS SCD example Snowflake transformation.",
       "requirements": {
-        "backends": ["snowflake"],
+        "backends": [
+          "snowflake"
+        ],
         "components": [
           "kds-team.wr-oracle-custom"
         ],
         "features": null
       },
+      "path": "csas-template-scd",
       "categories": [
         "Other"
       ],
-      "path": "csas-template-scd",
       "versions": [
         {
           "version": "0.0.1",
@@ -1780,13 +1849,17 @@
       "id": "keboola-data-editor",
       "name": "Keboola Data Editor",
       "description": "Simplify your data editing and management within your company using this demo data app that showcases the interaction between Streamlit and Keboola Storage.",
-      "requirements":
-        {
-          "backends": ["snowflake", "bigquery"],
-          "features": ["sandboxes-data-apps"]
-        },
-      "path": "keboola-data-editor",
       "deprecated": false,
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
+      "path": "keboola-data-editor",
       "categories": [
         "Data Apps"
       ],
@@ -1812,14 +1885,14 @@
         ],
         "components": null,
         "features": [
-          
           "sandboxes-data-apps"
         ]
       },
-      "categories": [
-        "Data Apps", "Tutorials"
-      ],
       "path": "hello-world",
+      "categories": [
+        "Data Apps",
+        "Tutorials"
+      ],
       "versions": [
         {
           "version": "0.0.1",
@@ -1837,12 +1910,18 @@
       "name": "Snowflake Security Checkup",
       "description": "Detection of anomaly and suspicious activity in query and login logs. These tables are carefully crafted to identify potential security threats and unusual behavior within your systems.",
       "requirements": {
-        "backends": ["snowflake"],
-        "components": ["keboola.ex-db-snowflake"],
+        "backends": [
+          "snowflake"
+        ],
+        "components": [
+          "keboola.ex-db-snowflake"
+        ],
         "features": null
       },
-      "categories": ["Security"],
       "path": "snowflake-security-checkup",
+      "categories": [
+        "Security"
+      ],
       "versions": [
         {
           "version": "0.0.1",
@@ -1859,11 +1938,12 @@
       "id": "review-app-template",
       "name": "Review App Template",
       "description": "Generate responses for reviews on different platforms.",
-      "requirements":
-        {
-          "features": ["sandboxes-data-apps"]
-        },
       "deprecated": true,
+      "requirements": {
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1880,16 +1960,17 @@
         }
       ]
     },
-        {
+    {
       "id": "newsletters-data-app",
       "name": "Newsletters Data App Template",
       "description": "Personalize HTML newsletters for different customer segments within the app.",
-      "requirements":
-        {
-          "backends": [],
-          "features": ["sandboxes-data-apps"]
-        },
       "deprecated": true,
+      "requirements": {
+        "backends": [],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1909,13 +1990,13 @@
       "id": "resume-analyzer",
       "name": "Resume Analyzer Template",
       "description": "Identify the most suitable candidates for the job using this Streamlit app.",
-      "requirements":
-        {
-          "backends": [],
-          "features": ["sandboxes-data-apps"]
-        },
-      "path": "resume-analyzer",
       "deprecated": false,
+      "requirements": {
+        "backends": [],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -1937,12 +2018,13 @@
       "id": "rlhf-data-app",
       "name": "RLHF Knowledge Base Data App",
       "description": "Upload PDF files, extract text from them, and query the extracted information using this Streamlit app.",
-      "requirements":
-        {
-          "backends": [],
-          "features": ["sandboxes-data-apps"]
-        },
       "deprecated": true,
+      "requirements": {
+        "backends": [],
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
       "categories": [
         "Data Apps",
         "AI Automations"
