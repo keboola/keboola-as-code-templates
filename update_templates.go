@@ -70,11 +70,18 @@ func (tu *TemplateUpdater) processOrchestratorCleanup(path string) error {
 
 // processFile handles the modification of a single jsonnet file
 func (tu *TemplateUpdater) processFile(path string) error {
-	// Skip if not manifest.jsonnet
-	if filepath.Base(path) != "manifest.jsonnet" {
-		return nil
+	filename := filepath.Base(path)
+	if filename == "manifest.jsonnet" {
+		return tu.processManifestFile(path)
 	}
+	if filename == "inputs.jsonnet" {
+		return tu.processInputsFile(path)
+	}
+	return nil
+}
 
+// processManifestFile handles the modification of manifest.jsonnet files
+func (tu *TemplateUpdater) processManifestFile(path string) error {
 	// Read the file content
 	content, err := os.ReadFile(path)
 	if err != nil {
@@ -187,6 +194,101 @@ func (tu *TemplateUpdater) processFile(path string) error {
 		}
 
 		contentStr = strings.Replace(contentStr, configBlocks[i], replacement, 1)
+	}
+
+	// Write the modified content back to the file
+	err = os.WriteFile(path, []byte(contentStr), 0644)
+	if err != nil {
+		return fmt.Errorf("failed to write file %s: %w", path, err)
+	}
+
+	return nil
+}
+
+// processInputsFile handles the modification of inputs.jsonnet files
+func (tu *TemplateUpdater) processInputsFile(path string) error {
+	// Read the file content
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return fmt.Errorf("failed to read file %s: %w", path, err)
+	}
+
+	contentStr := string(content)
+	lines := strings.Split(contentStr, "\n")
+
+	// Arrays to store all blocks and their data
+	var stepBlocks []string
+	var blockStarts []int
+	var blockEnds []int
+	var descriptionLines []int
+
+	// First pass: collect all blocks
+	inSteps := false
+	for i, line := range lines {
+		if strings.Contains(line, "steps:") {
+			inSteps = true
+			continue
+		}
+		// Find and store the description line
+		if strings.Contains(line, `description: "Snowflake transformations"`) {
+			descriptionLines = append(descriptionLines, i)
+		}
+		if inSteps && strings.Contains(line, `icon: "component:keboola.snowflake-transformation"`) {
+			blockStart := i - 1 // Start from the line with opening brace
+			var blockLines []string
+			var curlyBraceCount int
+
+			// Look forward to find the end of the block (matching closing curly brace)
+			for j := blockStart; j < len(lines); j++ {
+				line := lines[j]
+				curlyBraceCount += strings.Count(line, "{") - strings.Count(line, "}")
+				blockLines = append(blockLines, line)
+				if curlyBraceCount == 0 {
+					blockEnd := j + 1
+
+					// Store block data
+					stepBlocks = append(stepBlocks, strings.Join(blockLines, "\n"))
+					blockStarts = append(blockStarts, blockStart)
+					blockEnds = append(blockEnds, blockEnd)
+					break
+				}
+			}
+		}
+	}
+
+	// Second pass: replace all blocks and update descriptions
+	// Process blocks in reverse order to maintain correct positions
+	for i := len(stepBlocks) - 1; i >= 0; i-- {
+		originalBlock := stepBlocks[i]
+
+		// Add backend field to the original block after the icon field
+		snowflakeBlock := strings.Replace(originalBlock,
+			`icon: "component:keboola.snowflake-transformation"`,
+			`icon: "component:keboola.snowflake-transformation",
+          backend: "snowflake"`, 1)
+
+		// Create BigQuery block by copying the Snowflake block and adjusting fields
+		bigqueryBlock := strings.Replace(snowflakeBlock,
+			`icon: "component:keboola.snowflake-transformation"`,
+			`icon: "component:keboola.google-bigquery-transformation"`, 1)
+		bigqueryBlock = strings.Replace(bigqueryBlock,
+			`name: "Snowflake SQL"`,
+			`name: "BigQuery SQL"`, 1)
+		bigqueryBlock = strings.Replace(bigqueryBlock,
+			`backend: "snowflake"`,
+			`backend: "bigquery"`, 1)
+
+		// Replace the original block with both blocks
+		replacement := snowflakeBlock + ",\n" + bigqueryBlock
+
+		contentStr = strings.Replace(contentStr, originalBlock, replacement, 1)
+	}
+
+	// Update step group descriptions
+	for i := len(descriptionLines) - 1; i >= 0; i-- {
+		contentStr = strings.Replace(contentStr,
+			`description: "Snowflake transformations"`,
+			`description: "SQL Transformations"`, 1)
 	}
 
 	// Write the modified content back to the file
