@@ -26,7 +26,7 @@
       id: ConfigId("transformation-in-typeform"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-in-typeform",
       rows: []
-    
+    },
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",

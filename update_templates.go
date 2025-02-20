@@ -190,7 +190,7 @@ func (tu *TemplateUpdater) processManifestFile(path string) error {
       id: %s,
       path: "transformation/keboola.google-bigquery-transformation/%s",
       rows: []
-    `, originalIDs[i], transformationName, originalIDs[i], transformationName)
+    },`, originalIDs[i], transformationName, originalIDs[i], transformationName)
 		}
 
 		contentStr = strings.Replace(contentStr, configBlocks[i], replacement, 1)

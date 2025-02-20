@@ -73,7 +73,7 @@
       id: ConfigId("ua-ua-ga4-comparison-app"),
       path: "transformation/keboola.google-bigquery-transformation/ua-ua-ga4-comparison-app",
       rows: []
-    
+    },
     if InputIsAvailable("oauth-googleanalytics4") then
 
     if HasProjectBackend("snowflake") then {
@@ -86,7 +86,7 @@
       id: ConfigId("ga4-api-ua-ga4-comparison-app"),
       path: "transformation/keboola.google-bigquery-transformation/ga4-api-ua-ga4-comparison-app",
       rows: []
-    
+    },
     if InputIsAvailable("ex-google-bigquery-v2-service-account-private-key") then
 
     if HasProjectBackend("snowflake") then {
@@ -99,6 +99,6 @@
       id: ConfigId("ga4-bigquery-ua-ga4-comparison-app"),
       path: "transformation/keboola.google-bigquery-transformation/ga4-bigquery-ua-ga4-comparison-app",
       rows: []
-    
+    },
   ])
 }

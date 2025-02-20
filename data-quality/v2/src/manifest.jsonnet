@@ -141,7 +141,7 @@
       id: ConfigId("data-quality-core-full-example"),
       path: "transformation/keboola.google-bigquery-transformation/data-quality-core-full-example",
       rows: []
-    
+    },
     {
       componentId: "keboola.variables",
       id: ConfigId("Variables definition for keboola.snowflake-transformation/913123604"),
@@ -176,7 +176,7 @@
       id: ConfigId("data-quality-abort-fail-example"),
       path: "transformation/keboola.google-bigquery-transformation/data-quality-abort-fail-example",
       rows: []
-    
+    },
     {
       componentId: "keboola.variables",
       id: ConfigId("Variables definition for keboola.snowflake-transformation/913123605"),

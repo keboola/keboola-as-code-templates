@@ -32,7 +32,7 @@
       id: ConfigId("transformation-in-mailchimp"),
       path: "transformation/keboola.google-bigquery-transformation/transformation-in-mailchimp",
       rows: []
-    
+    },
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",
