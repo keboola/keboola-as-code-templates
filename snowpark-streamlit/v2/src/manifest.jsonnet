@@ -34,12 +34,12 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("data-preparation"),
-      path: "transformation/keboola.snowflake-transformation/data-preparation-cleaning",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("data-preparation"),
+	  path: "transformation/keboola.snowflake-transformation/data-preparation-cleaning",
+	  rows: [],
+	  metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation2-data-preparation-cleaning"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
@@ -47,12 +47,12 @@
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]",
       },
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("data-preparation"),
-      path: "transformation/keboola.google-bigquery-transformation/data-preparation-cleaning",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("data-preparation"),
+	  path: "transformation/keboola.google-bigquery-transformation/data-preparation-cleaning",
+	  rows: [],
+	  metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation2-data-preparation-cleaning"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
@@ -60,14 +60,14 @@
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]",
       },
 
-    },
+	},
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("RFM-analysis"),
-      path: "transformation/keboola.snowflake-transformation/RFM-analysis",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("RFM-analysis"),
+	  path: "transformation/keboola.snowflake-transformation/RFM-analysis",
+	  rows: [],
+	  metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation3-RFM-analysis"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
@@ -75,12 +75,12 @@
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"
       },
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("RFM-analysis"),
-      path: "transformation/keboola.google-bigquery-transformation/RFM-analysis",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("RFM-analysis"),
+	  path: "transformation/keboola.google-bigquery-transformation/RFM-analysis",
+	  rows: [],
+	  metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation3-RFM-analysis"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
@@ -88,14 +88,14 @@
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"
       },
 
-    },
+	},
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("prepare-input-tables"),
-      path: "transformation/keboola.snowflake-transformation/prepare-input-tables",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("prepare-input-tables"),
+	  path: "transformation/keboola.snowflake-transformation/prepare-input-tables",
+	  rows: [],
+	  metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation1-prepare-input-tables"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
@@ -103,12 +103,12 @@
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]",
       },
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("prepare-input-tables"),
-      path: "transformation/keboola.google-bigquery-transformation/prepare-input-tables",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("prepare-input-tables"),
+	  path: "transformation/keboola.google-bigquery-transformation/prepare-input-tables",
+	  rows: [],
+	  metadata: {
         "KBC.KAC.templates.configId": '{"idInTemplate":"in-ecommerce-shopify-transformation1-prepare-input-tables"}',
         "KBC.KAC.templates.instanceId": "JPblfJtgey8xVKAvheJXtRq0o",
         "KBC.KAC.templates.repository": "keboola-dev",
@@ -116,7 +116,7 @@
         "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]",
       },
 
-    },
+	},
     {
       componentId: SnowflakeWriterComponentId(),
       id: ConfigId("create-snowflake-scheme"),

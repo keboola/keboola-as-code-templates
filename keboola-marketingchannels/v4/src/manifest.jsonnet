@@ -57,19 +57,19 @@
     },
     if HasProjectBackend("snowflake")==true then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-adsplatforms-transformation"),
-      path: "transformation/keboola.snowflake-transformation/keboola-adsplatforms-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("keboola-adsplatforms-transformation"),
-      path: "transformation/keboola.google-bigquery-transformation/keboola-adsplatforms-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("keboola-adsplatforms-transformation"),
+	  path: "transformation/keboola.snowflake-transformation/keboola-adsplatforms-transformation",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("keboola-adsplatforms-transformation"),
+	  path: "transformation/keboola.google-bigquery-transformation/keboola-adsplatforms-transformation",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[ADVERTISING PLATFORMS]"}
+	},
     },
     if HasProjectBackend("bigquery")==true then
     {

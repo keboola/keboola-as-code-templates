@@ -16,59 +16,59 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-crm-pipedrive-transformation1-input-tables-creation"),
-      path: "transformation/keboola.snowflake-transformation/keboola-crm-pipedrive-transformation1-input-tables-creation",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("keboola-crm-pipedrive-transformation1-input-tables-creation"),
+	  path: "<common>/in-crm-pipedrive/transformation/keboola.snowflake-transformation/keboola-crm-pipedrive-transformation1-input-tables-creation",
+	  rows: [],
+	  metadata: {
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("keboola-crm-pipedrive-transformation1-input-tables-creation"),
-      path: "transformation/keboola.google-bigquery-transformation/keboola-crm-pipedrive-transformation1-input-tables-creation",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("keboola-crm-pipedrive-transformation1-input-tables-creation"),
+	  path: "<common>/in-crm-pipedrive/transformation/keboola.google-bigquery-transformation/keboola-crm-pipedrive-transformation1-input-tables-creation",
+	  rows: [],
+	  metadata: {
 
-    },
+	},
         "KBC.configuration.folderName": "[CRM-PIPEDRIVE]"
       },
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-crm-pipedrive-transformation2-main"),
-      path: "transformation/keboola.snowflake-transformation/keboola-crm-pipedrive-transformation2-main",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("keboola-crm-pipedrive-transformation2-main"),
+	  path: "<common>/in-crm-pipedrive/transformation/keboola.snowflake-transformation/keboola-crm-pipedrive-transformation2-main",
+	  rows: [],
+	  metadata: {
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("keboola-crm-pipedrive-transformation2-main"),
-      path: "transformation/keboola.google-bigquery-transformation/keboola-crm-pipedrive-transformation2-main",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("keboola-crm-pipedrive-transformation2-main"),
+	  path: "<common>/in-crm-pipedrive/transformation/keboola.google-bigquery-transformation/keboola-crm-pipedrive-transformation2-main",
+	  rows: [],
+	  metadata: {
 
-    },
+	},
         "KBC.configuration.folderName": "[CRM-PIPEDRIVE]"
       },
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("keboola-crm-pipedrive-transformation3-snapshots"),
-      path: "transformation/keboola.snowflake-transformation/keboola-crm-pipedrive-transformation3-snapshots",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("keboola-crm-pipedrive-transformation3-snapshots"),
+	  path: "<common>/in-crm-pipedrive/transformation/keboola.snowflake-transformation/keboola-crm-pipedrive-transformation3-snapshots",
+	  rows: [],
+	  metadata: {
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("keboola-crm-pipedrive-transformation3-snapshots"),
-      path: "transformation/keboola.google-bigquery-transformation/keboola-crm-pipedrive-transformation3-snapshots",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("keboola-crm-pipedrive-transformation3-snapshots"),
+	  path: "<common>/in-crm-pipedrive/transformation/keboola.google-bigquery-transformation/keboola-crm-pipedrive-transformation3-snapshots",
+	  rows: [],
+	  metadata: {
 
-    },
+	},
         "KBC.configuration.folderName": "[CRM-PIPEDRIVE]"
       },
     },

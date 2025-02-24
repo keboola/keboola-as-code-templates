@@ -16,19 +16,19 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-in-mgmt-jira"),
-      path: "transformation/keboola.snowflake-transformation/transformation-in-mgmt-jira",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[MGMT-JIRA]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-in-mgmt-jira"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-in-mgmt-jira",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[MGMT-JIRA]"}
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-in-mgmt-jira"),
+	  path: "<common>/in-mgmt-jira/transformation/keboola.snowflake-transformation/transformation-in-mgmt-jira",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[MGMT-JIRA]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-in-mgmt-jira"),
+	  path: "<common>/in-mgmt-jira/transformation/keboola.google-bigquery-transformation/transformation-in-mgmt-jira",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[MGMT-JIRA]"}
+	},
     },
      if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
