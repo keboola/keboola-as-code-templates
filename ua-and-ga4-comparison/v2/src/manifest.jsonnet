@@ -63,42 +63,42 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("ua-ua-ga4-comparison-app"),
-      path: "transformation/keboola.snowflake-transformation/ua-ua-ga4-comparison-app",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("ua-ua-ga4-comparison-app"),
-      path: "transformation/keboola.google-bigquery-transformation/ua-ua-ga4-comparison-app",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("ua-ua-ga4-comparison-app"),
+	  path: "transformation/keboola.snowflake-transformation/ua-ua-ga4-comparison-app",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("ua-ua-ga4-comparison-app"),
+	  path: "transformation/keboola.google-bigquery-transformation/ua-ua-ga4-comparison-app",
+	  rows: []
+	},
     if InputIsAvailable("oauth-googleanalytics4") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("ga4-api-ua-ga4-comparison-app"),
-      path: "transformation/keboola.snowflake-transformation/ga4-api-ua-ga4-comparison-app",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("ga4-api-ua-ga4-comparison-app"),
-      path: "transformation/keboola.google-bigquery-transformation/ga4-api-ua-ga4-comparison-app",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("ga4-api-ua-ga4-comparison-app"),
+	  path: "transformation/keboola.snowflake-transformation/ga4-api-ua-ga4-comparison-app",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("ga4-api-ua-ga4-comparison-app"),
+	  path: "transformation/keboola.google-bigquery-transformation/ga4-api-ua-ga4-comparison-app",
+	  rows: []
+	},
     if InputIsAvailable("ex-google-bigquery-v2-service-account-private-key") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("ga4-bigquery-ua-ga4-comparison-app"),
-      path: "transformation/keboola.snowflake-transformation/ga4-bigquery-ua-ga4-comparison-app",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("ga4-bigquery-ua-ga4-comparison-app"),
-      path: "transformation/keboola.google-bigquery-transformation/ga4-bigquery-ua-ga4-comparison-app",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("ga4-bigquery-ua-ga4-comparison-app"),
+	  path: "transformation/keboola.snowflake-transformation/ga4-bigquery-ua-ga4-comparison-app",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("ga4-bigquery-ua-ga4-comparison-app"),
+	  path: "transformation/keboola.google-bigquery-transformation/ga4-bigquery-ua-ga4-comparison-app",
+	  rows: []
+	},
   ])
 }

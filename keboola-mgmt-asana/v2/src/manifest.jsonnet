@@ -16,65 +16,65 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation1-user-project"),
-      path: "transformation/keboola.snowflake-transformation/transformation1-user-project",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation1-user-project"),
+	  path: "<common>/in-mgmt-asana/v1/transformation/keboola.snowflake-transformation/transformation1-user-project",
+	  rows: [],
+	  metadata: {
         "KBC.configuration.folderName": "[MGMT-ASANA]",
       },
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation1-user-project"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation1-user-project",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation1-user-project"),
+	  path: "<common>/in-mgmt-asana/v1/transformation/keboola.google-bigquery-transformation/transformation1-user-project",
+	  rows: [],
+	  metadata: {
         "KBC.configuration.folderName": "[MGMT-ASANA]",
       },
 
-    },
+	},
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation2-tasks"),
-      path: "transformation/keboola.snowflake-transformation/transformation2-tasks",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation2-tasks"),
+	  path: "<common>/in-mgmt-asana/v1/transformation/keboola.snowflake-transformation/transformation2-tasks",
+	  rows: [],
+	  metadata: {
         "KBC.configuration.folderName": "[MGMT-ASANA]",
       },
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation2-tasks"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation2-tasks",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation2-tasks"),
+	  path: "<common>/in-mgmt-asana/v1/transformation/keboola.google-bigquery-transformation/transformation2-tasks",
+	  rows: [],
+	  metadata: {
         "KBC.configuration.folderName": "[MGMT-ASANA]",
       },
 
-    },
+	},
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation3-snapshots"),
-      path: "transformation/keboola.snowflake-transformation/transformation3-snapshots",
-      rows: [],
-      metadata: {
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation3-snapshots"),
+	  path: "<common>/in-mgmt-asana/v1/transformation/keboola.snowflake-transformation/transformation3-snapshots",
+	  rows: [],
+	  metadata: {
         "KBC.configuration.folderName": "[MGMT-ASANA]",
       },
 
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation3-snapshots"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation3-snapshots",
-      rows: [],
-      metadata: {
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation3-snapshots"),
+	  path: "<common>/in-mgmt-asana/v1/transformation/keboola.google-bigquery-transformation/transformation3-snapshots",
+	  rows: [],
+	  metadata: {
         "KBC.configuration.folderName": "[MGMT-ASANA]",
       },
 
-    },
+	},
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",

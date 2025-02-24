@@ -131,17 +131,17 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("data-quality-core-full-example"),
-      path: "transformation/keboola.snowflake-transformation/data-quality-core-full-example",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("data-quality-core-full-example"),
-      path: "transformation/keboola.google-bigquery-transformation/data-quality-core-full-example",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("data-quality-core-full-example"),
+	  path: "transformation/keboola.snowflake-transformation/data-quality-core-full-example",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("data-quality-core-full-example"),
+	  path: "transformation/keboola.google-bigquery-transformation/data-quality-core-full-example",
+	  rows: []
+	},
     {
       componentId: "keboola.variables",
       id: ConfigId("Variables definition for keboola.snowflake-transformation/913123604"),
@@ -166,17 +166,17 @@
       ],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("data-quality-abort-fail-example"),
-      path: "transformation/keboola.snowflake-transformation/data-quality-abort-fail-example",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("data-quality-abort-fail-example"),
-      path: "transformation/keboola.google-bigquery-transformation/data-quality-abort-fail-example",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("data-quality-abort-fail-example"),
+	  path: "transformation/keboola.snowflake-transformation/data-quality-abort-fail-example",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("data-quality-abort-fail-example"),
+	  path: "transformation/keboola.google-bigquery-transformation/data-quality-abort-fail-example",
+	  rows: []
+	},
     {
       componentId: "keboola.variables",
       id: ConfigId("Variables definition for keboola.snowflake-transformation/913123605"),

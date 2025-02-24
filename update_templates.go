@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"strconv"
 	"strings"
 )
@@ -162,35 +163,40 @@ func (tu *TemplateUpdater) processManifestFile(path string) error {
 		pathParts := strings.Split(originalPaths[i], "/")
 		transformationName := pathParts[len(pathParts)-1]
 
+		var commonPath string
+		if slices.Contains(pathParts, "<common>") {
+			commonPath = strings.Join(pathParts[:len(pathParts)-3], "/") + "/"
+		}
+
 		var replacement string
 		if originalMetadatas[i] != "" {
 			replacement = fmt.Sprintf(`
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: %s,
-      path: "transformation/keboola.snowflake-transformation/%s",
-      rows: [],
-      metadata: %s
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: %s,
-      path: "transformation/keboola.google-bigquery-transformation/%s",
-      rows: [],
-      metadata: %s
-    },`, originalIDs[i], transformationName, originalMetadatas[i], originalIDs[i], transformationName, originalMetadatas[i])
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: %s,
+	  path: "%stransformation/keboola.snowflake-transformation/%s",
+	  rows: [],
+	  metadata: %s
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: %s,
+	  path: "%stransformation/keboola.google-bigquery-transformation/%s",
+	  rows: [],
+	  metadata: %s
+	},`, originalIDs[i], commonPath, transformationName, originalMetadatas[i], originalIDs[i], commonPath, transformationName, originalMetadatas[i])
 		} else {
 			replacement = fmt.Sprintf(`
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: %s,
-      path: "transformation/keboola.snowflake-transformation/%s",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: %s,
-      path: "transformation/keboola.google-bigquery-transformation/%s",
-      rows: []
-    },`, originalIDs[i], transformationName, originalIDs[i], transformationName)
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: %s,
+	  path: "%stransformation/keboola.snowflake-transformation/%s",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: %s,
+	  path: "%stransformation/keboola.google-bigquery-transformation/%s",
+	  rows: []
+	},`, originalIDs[i], commonPath, transformationName, originalIDs[i], commonPath, transformationName)
 		}
 
 		contentStr = strings.Replace(contentStr, configBlocks[i], replacement, 1)
@@ -432,6 +438,14 @@ func (tu *TemplateUpdater) duplicateSnowflakeDirectories(path string) error {
 			data, err := os.ReadFile(srcPath)
 			if err != nil {
 				return err
+			}
+
+			if strings.Contains(srcPath, "transformation") && strings.Contains(string(data), " isIgnored: InputIsAvailable") {
+				//fmt.Println("AAAA: ", string(data))
+				//data = []byte(strings.ReplaceAll(string(data),
+				//	`isIgnored: InputIsAvailable("ex-woocommerce-store-url") == false`,
+				//	`isIgnored: InputIsAvailable("gsc-domain") == false `,
+				//))
 			}
 
 			// For task.jsonnet and kbcdir.jsonnet, modify content before writing
