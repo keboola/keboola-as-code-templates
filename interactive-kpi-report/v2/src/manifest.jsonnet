@@ -43,49 +43,49 @@
       metadata: { "KBC.configuration.folderName": "[KPI]"}
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify"),
-      path: "transformation/keboola.snowflake-transformation/transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[KPI]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[KPI]"}
-    },
-    },
-
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify"),
-      path: "transformation/keboola.snowflake-transformation/transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[KPI]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[KPI]"}
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[KPI]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-1-automatic-creation-of-planned-values-from-average-values-in-kpi-shopify",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[KPI]"}
+	},
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-3-main-data-preparation-in-kpi-shopify"),
-      path: "transformation/keboola.snowflake-transformation/transformation-3-main-data-preparation-in-kpi-shopify",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[KPI]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-3-main-data-preparation-in-kpi-shopify"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-3-main-data-preparation-in-kpi-shopify",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[KPI]"}
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[KPI]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-2-generation-of-daily-plan-from-monthly-in-kpi-shopify",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[KPI]"}
+	},
     },
+
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-3-main-data-preparation-in-kpi-shopify"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-3-main-data-preparation-in-kpi-shopify",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[KPI]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-3-main-data-preparation-in-kpi-shopify"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-3-main-data-preparation-in-kpi-shopify",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[KPI]"}
+	},
     },
     {
       componentId: "kds-team.wr-generic",

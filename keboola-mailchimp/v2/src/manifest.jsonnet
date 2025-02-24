@@ -22,17 +22,17 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-in-mailchimp"),
-      path: "transformation/keboola.snowflake-transformation/transformation-in-mailchimp",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-in-mailchimp"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-in-mailchimp",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-in-mailchimp"),
+	  path: "<common>/in-mailchimp/transformation/keboola.snowflake-transformation/transformation-in-mailchimp",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-in-mailchimp"),
+	  path: "<common>/in-mailchimp/transformation/keboola.google-bigquery-transformation/transformation-in-mailchimp",
+	  rows: []
+	},
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",

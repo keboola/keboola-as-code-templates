@@ -60,17 +60,17 @@
     },
     if HasProjectBackend("snowflake")==true then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-in-social-media-engagement"),
-      path: "transformation/keboola.snowflake-transformation/transformation-in-social-media-engagement",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-in-social-media-engagement"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-in-social-media-engagement",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-in-social-media-engagement"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-in-social-media-engagement",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-in-social-media-engagement"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-in-social-media-engagement",
+	  rows: []
+	},
     if HasProjectBackend("bigquery")==true then
     {
       componentId: "keboola.google-bigquery-transformation",

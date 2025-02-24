@@ -45,19 +45,19 @@
       ],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-googleanalytics4-transformation"),
-      path: "transformation/keboola.snowflake-transformation/in-googleanalytics4-transformation",
-      rows: [],
-      metadata: {"KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("in-googleanalytics4-transformation"),
-      path: "transformation/keboola.google-bigquery-transformation/in-googleanalytics4-transformation",
-      rows: [],
-      metadata: {"KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("in-googleanalytics4-transformation"),
+	  path: "<common>/in-googleanalytics4/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics4-transformation",
+	  rows: [],
+	  metadata: {"KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("in-googleanalytics4-transformation"),
+	  path: "<common>/in-googleanalytics4/v0/src/transformation/keboola.google-bigquery-transformation/in-googleanalytics4-transformation",
+	  rows: [],
+	  metadata: {"KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
+	},
     },
     if InputIsAvailable("wr-postgresql-db-hostname") then
     {
@@ -203,19 +203,19 @@
     },
     if InputIsAvailable("gsc-domain") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("in-googleanalytics-searchconsole-transformation"),
-      path: "transformation/keboola.snowflake-transformation/in-googleanalytics-searchconsole-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("in-googleanalytics-searchconsole-transformation"),
-      path: "transformation/keboola.google-bigquery-transformation/in-googleanalytics-searchconsole-transformation",
-      rows: [],
-      metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("in-googleanalytics-searchconsole-transformation"),
+	  path: "<common>/in-googleanalytics-searchconsole/v0/src/transformation/keboola.snowflake-transformation/in-googleanalytics-searchconsole-transformation",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("in-googleanalytics-searchconsole-transformation"),
+	  path: "<common>/in-googleanalytics-searchconsole/v0/src/transformation/keboola.google-bigquery-transformation/in-googleanalytics-searchconsole-transformation",
+	  rows: [],
+	  metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
+	},
     },
   ]),
 }

@@ -39,82 +39,82 @@
     },
     if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-lineage-in-datahub-without-ex-project"),
-      path: "transformation/keboola.snowflake-transformation/transformation-lineage-in-datahub-without-ex-project",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-lineage-in-datahub-without-ex-project"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-lineage-in-datahub-without-ex-project",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-lineage-in-datahub-without-ex-project"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-lineage-in-datahub-without-ex-project",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-lineage-in-datahub-without-ex-project"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-lineage-in-datahub-without-ex-project",
+	  rows: []
+	},
     if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-project"),
-      path: "transformation/keboola.snowflake-transformation/transformation-table-level-metadata-in-datahub-without-ex-project",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-project"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-table-level-metadata-in-datahub-without-ex-project",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-project"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-table-level-metadata-in-datahub-without-ex-project",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-project"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-table-level-metadata-in-datahub-without-ex-project",
+	  rows: []
+	},
     if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-lineage-in-datahub-without-ex-org"),
-      path: "transformation/keboola.snowflake-transformation/transformation-lineage-in-datahub-without-ex-org",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-lineage-in-datahub-without-ex-org"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-lineage-in-datahub-without-ex-org",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-lineage-in-datahub-without-ex-org"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-lineage-in-datahub-without-ex-org",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-lineage-in-datahub-without-ex-org"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-lineage-in-datahub-without-ex-org",
+	  rows: []
+	},
     if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-org"),
-      path: "transformation/keboola.snowflake-transformation/transformation-table-level-metadata-in-datahub-without-ex-org",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-org"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-table-level-metadata-in-datahub-without-ex-org",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-org"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-table-level-metadata-in-datahub-without-ex-org",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-table-level-metadata-in-datahub-without-ex-org"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-table-level-metadata-in-datahub-without-ex-org",
+	  rows: []
+	},
     if InputIsAvailable("ex-kbc-project-metadata-v2-master-token-0-token") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-org"),
-      path: "transformation/keboola.snowflake-transformation/transformation-flow-lineage-in-datahub-without-ex-org",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-org"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-flow-lineage-in-datahub-without-ex-org",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-org"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-flow-lineage-in-datahub-without-ex-org",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-org"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-flow-lineage-in-datahub-without-ex-org",
+	  rows: []
+	},
     if InputIsAvailable("ex-kbc-project-metadata-v2-tokens-0-key") then
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-project"),
-      path: "transformation/keboola.snowflake-transformation/transformation-flow-lineage-in-datahub-without-ex-project",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-project"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-flow-lineage-in-datahub-without-ex-project",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-project"),
+	  path: "transformation/keboola.snowflake-transformation/transformation-flow-lineage-in-datahub-without-ex-project",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-flow-lineage-in-datahub-without-ex-project"),
+	  path: "transformation/keboola.google-bigquery-transformation/transformation-flow-lineage-in-datahub-without-ex-project",
+	  rows: []
+	},
     {
       componentId: "kds-team.app-datahub",
       id: ConfigId("data-destination-out-datahub"),

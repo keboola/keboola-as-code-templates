@@ -16,17 +16,17 @@
       rows: [],
     },
 
-    if HasProjectBackend("snowflake") then {
-      componentId: "keboola.snowflake-transformation",
-      id: ConfigId("transformation-in-typeform"),
-      path: "transformation/keboola.snowflake-transformation/transformation-in-typeform",
-      rows: []
-    } else if HasProjectBackend("bigquery") then {
-      componentId: "keboola.google-bigquery-transformation",
-      id: ConfigId("transformation-in-typeform"),
-      path: "transformation/keboola.google-bigquery-transformation/transformation-in-typeform",
-      rows: []
-    },
+	if HasProjectBackend("snowflake") then {
+	  componentId: "keboola.snowflake-transformation",
+	  id: ConfigId("transformation-in-typeform"),
+	  path: "<common>/in-typeform/transformation/keboola.snowflake-transformation/transformation-in-typeform",
+	  rows: []
+	} else if HasProjectBackend("bigquery") then {
+	  componentId: "keboola.google-bigquery-transformation",
+	  id: ConfigId("transformation-in-typeform"),
+	  path: "<common>/in-typeform/transformation/keboola.google-bigquery-transformation/transformation-in-typeform",
+	  rows: []
+	},
     if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
       componentId: "keboola.wr-google-bigquery-v2",
