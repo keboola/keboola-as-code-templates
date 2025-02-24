@@ -1,0 +1,9 @@
+{
+  "name": "kds-team.ex-jira-10888997",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "extractor/kds-team.ex-jira/data-source-in-mgmt-jira-instance"
+  }
+}

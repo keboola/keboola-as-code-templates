@@ -1,0 +1,9 @@
+{
+  "name": "keboola.wr-google-bigquery-v2-10888999",
+  "enabled": true,
+  "continueOnFailure": false,
+  "task": {
+    "mode": "run",
+    "configPath": "writer/keboola.wr-google-bigquery-v2/data-destination-out-mgmt-bigquery-instance"
+  }
+}

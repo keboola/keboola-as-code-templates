@@ -1,0 +1,44 @@
+{
+  "parameters": {
+    "dbName": "PROJECT_USER",
+    "incremental": true,
+    "items": [
+      {
+        "dbName": "USER_ID",
+        "default": "",
+        "name": "user_id",
+        "nullable": false,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "PROJECT_ID",
+        "default": "",
+        "name": "project_id",
+        "nullable": false,
+        "size": "255",
+        "type": "string"
+      }
+    ],
+    "primaryKey": [
+      "USER_ID",
+      "PROJECT_ID"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.project_user"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "user_id",
+            "project_id"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.project_user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project_user"
+        }
+      ]
+    }
+  }
+}

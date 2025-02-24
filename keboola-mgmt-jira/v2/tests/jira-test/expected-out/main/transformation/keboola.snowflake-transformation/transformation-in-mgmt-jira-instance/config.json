@@ -1,0 +1,124 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "columns": [],
+          "destination": "projects",
+          "keep_internal_timestamp_column": false,
+          "source": "{{:default-bucket:extractor/kds-team.ex-jira/data-source-in-mgmt-jira-instance}}.projects",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "users",
+          "keep_internal_timestamp_column": false,
+          "source": "{{:default-bucket:extractor/kds-team.ex-jira/data-source-in-mgmt-jira-instance}}.users",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "issues-changelogs",
+          "keep_internal_timestamp_column": false,
+          "source": "{{:default-bucket:extractor/kds-team.ex-jira/data-source-in-mgmt-jira-instance}}.issues-changelogs",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "issues",
+          "keep_internal_timestamp_column": false,
+          "source": "{{:default-bucket:extractor/kds-team.ex-jira/data-source-in-mgmt-jira-instance}}.issues",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.project",
+          "primary_key": [
+            "project_id"
+          ],
+          "source": "out_project"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.user",
+          "primary_key": [
+            "user_id"
+          ],
+          "source": "out_user"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.project_user",
+          "primary_key": [
+            "project_id",
+            "user_id"
+          ],
+          "source": "out_project_user"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.task",
+          "primary_key": [
+            "task_id"
+          ],
+          "source": "out_task"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.task_custom_field",
+          "primary_key": [
+            "task_custom_field_id"
+          ],
+          "source": "out_task_custom_field"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.task_event",
+          "primary_key": [
+            "task_event_id"
+          ],
+          "source": "out_task_event"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.task_tag",
+          "primary_key": [
+            "task_id",
+            "tag"
+          ],
+          "source": "out_task_tag"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.task_user",
+          "primary_key": [
+            "task_id",
+            "user_id"
+          ],
+          "source": "out_task_user"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.task_snapshot",
+          "primary_key": [
+            "task_id",
+            "snapshot_date"
+          ],
+          "source": "out_task_snapshot"
+        },
+        {
+          "destination": "out.c-projectmgmt-bdm-instance.project_snapshot",
+          "primary_key": [
+            "project_id",
+            "snapshot_date"
+          ],
+          "source": "out_project_snapshot"
+        }
+      ]
+    }
+  }
+}

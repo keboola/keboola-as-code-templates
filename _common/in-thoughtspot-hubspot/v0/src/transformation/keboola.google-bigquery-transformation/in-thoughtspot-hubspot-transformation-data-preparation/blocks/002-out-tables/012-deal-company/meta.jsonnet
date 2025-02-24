@@ -1,0 +1,3 @@
+{
+  name: "DEAL_COMPANY",
+}
