@@ -1,0 +1,13 @@
+{
+  "parameters": {
+    "db": {
+      "#password": "##KBC_SECRET_POSTGRES_PASSWORD##",
+      "database": "salesdemo",
+      "driver": "pgsql",
+      "host": "http://keboolacasalesdemo.csjrlfk9cmjk.us-east-1.rds.amazonaws.com/",
+      "port": "5432",
+      "schema": "website_leads",
+      "user": "##KBC_SECRET_POSTGRES_DB_USER##"
+    }
+  }
+}

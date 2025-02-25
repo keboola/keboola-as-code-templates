@@ -1,0 +1,1 @@
+With this end-to-end flow you can bring into Keboola Connection data from one or more marketing channels of your choice (Facebook Ads, LinkedIn Ads, Google Ads, and Bing Ads). After all the necessary tasks are performed on the data, you can load the results into data destination of your choice or you can use data app for visualization. 

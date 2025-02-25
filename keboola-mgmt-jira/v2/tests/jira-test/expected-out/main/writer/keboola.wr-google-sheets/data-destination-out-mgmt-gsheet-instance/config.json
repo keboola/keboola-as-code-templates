@@ -1,0 +1,195 @@
+{
+  "authorization": {
+    "oauth_api": {}
+  },
+  "parameters": {
+    "tables": [
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 56379,
+        "sheetId": 0,
+        "sheetTitle": "project",
+        "tableId": "out.c-projectmgmt-bdm-instance.project",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 99608,
+        "sheetId": 765004455,
+        "sheetTitle": "project_snapshot",
+        "tableId": "out.c-projectmgmt-bdm-instance.project_snapshot",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 99368,
+        "sheetId": 1198024744,
+        "sheetTitle": "project_user",
+        "tableId": "out.c-projectmgmt-bdm-instance.project_user",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 36035,
+        "sheetId": 946660273,
+        "sheetTitle": "task",
+        "tableId": "out.c-projectmgmt-bdm-instance.task",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 21290,
+        "sheetId": 1463124052,
+        "sheetTitle": "task_tag",
+        "tableId": "out.c-projectmgmt-bdm-instance.task_tag",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 52421,
+        "sheetId": 1768271132,
+        "sheetTitle": "task_user",
+        "tableId": "out.c-projectmgmt-bdm-instance.task_user",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 88810,
+        "sheetId": 1987268340,
+        "sheetTitle": "task_snapshot",
+        "tableId": "out.c-projectmgmt-bdm-instance.task_snapshot",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 1894,
+        "sheetId": 1669051898,
+        "sheetTitle": "user",
+        "tableId": "out.c-projectmgmt-bdm-instance.user",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 94789,
+        "sheetId": 703952813,
+        "sheetTitle": "task_event",
+        "tableId": "out.c-projectmgmt-bdm-instance.task_event",
+        "title": "PROJECT_MANAGEMENT"
+      },
+      {
+        "action": "update",
+        "enabled": true,
+        "fileId": "XXXXXXX",
+        "id": 91962,
+        "sheetId": 1131095859,
+        "sheetTitle": "task_custom_field",
+        "tableId": "out.c-projectmgmt-bdm-instance.task_custom_field",
+        "title": "PROJECT_MANAGEMENT"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.project.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.project_snapshot.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project_snapshot",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.project_user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project_user",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.task.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.task_tag.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_tag",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.task_user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_user",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.task_snapshot.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_snapshot",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.user",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.task_event.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_event",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        },
+        {
+          "columns": [],
+          "destination": "out.c-projectmgmt-bdm-instance.task_custom_field.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_custom_field",
+          "where_column": "",
+          "where_operator": "eq",
+          "where_values": []
+        }
+      ]
+    }
+  }
+}

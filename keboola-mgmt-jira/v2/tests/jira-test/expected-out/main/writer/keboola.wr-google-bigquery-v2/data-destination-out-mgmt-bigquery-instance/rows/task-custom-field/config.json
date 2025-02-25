@@ -1,0 +1,50 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "TASK_CUSTOM_FIELD",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "TASK_CUSTOM_FIELD_ID",
+            "name": "task_custom_field_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "TASK_ID",
+            "name": "task_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "TASK_CUSTOM_FIELD",
+            "name": "task_custom_field",
+            "type": "STRING"
+          },
+          {
+            "dbName": "TASK_CUSTOM_FIELD_VALUE",
+            "name": "task_custom_field_value",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-projectmgmt-bdm-instance.task_custom_field"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_custom_field_id",
+            "task_id",
+            "task_custom_field",
+            "task_custom_field_value"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_custom_field.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_custom_field"
+        }
+      ]
+    }
+  }
+}

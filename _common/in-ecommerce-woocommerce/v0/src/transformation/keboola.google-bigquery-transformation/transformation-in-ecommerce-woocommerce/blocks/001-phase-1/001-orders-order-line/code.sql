@@ -1,0 +1,124 @@
+CREATE OR REPLACE TABLE `order_totals` AS
+SELECT
+  O.`id` AS ORDER_ID,
+  O.`total` AS ORDER_LINE_PRICE_WITH_TAXES,
+  O.`total` - O.`total_tax` AS ORDER_LINE_PRICE_WITHOUT_TAXES,
+  O.`total_tax` AS ORDER_LINE_PRICE_TAXES,
+  AVG(O.`total_tax` / (
+    O.`total` - O.`total_tax`
+  )) AS ORDER_LINE_TAXES_RATE
+FROM `order` AS O
+GROUP BY
+  1,
+  2,
+  3,
+  4
+/* bdm_orders table */
+CREATE TABLE `bdm_orders` (
+  ORDER_ID STRING NOT NULL,
+  ORDER_DATE DATE,
+  ORDER_STATUS STRING,
+  IS_SUCCESSFUL BOOL,
+  IS_FIRST_PURCHASE BOOL,
+  ORDER_CURRENCY STRING,
+  ORDER_CUSTOMER_EMAIL STRING,
+  ORDER_REMARK STRING,
+  REFERER STRING,
+  CHANNEL STRING,
+  SOURCE STRING,
+  BILLING_CITY STRING,
+  BILLING_COUNTRY STRING,
+  BILLING_ZIP STRING,
+  SHIPPING_CITY STRING,
+  SHIPPING_COUNTRY STRING,
+  SHIPPING_ZIP STRING,
+  BILLING_TYPE STRING,
+  SHIPPING_TYPE STRING,
+  ORDER_TOTAL_PRICE_WITH_TAXES FLOAT64,
+  ORDER_TOTAL_PRICE_WITHOUT_TAXES FLOAT64,
+  ORDER_TOTAL_PRICE_TAXES FLOAT64,
+  CUSTOMER_ID STRING
+)
+INSERT INTO `bdm_orders`
+SELECT DISTINCT
+  O.`id` AS ORDER_ID,
+  CAST(O.`date_created` AS DATE) AS ORDER_DATE,
+  O.`status` AS ORDER_STATUS,
+  IF(O.`status` = 'completed', TRUE, FALSE) AS IS_SUCCESSFUL,
+  CASE WHEN O.`date_created` = `min_order_date` THEN TRUE ELSE FALSE END AS IS_FIRST_PURCHASE,
+  O.`currency` AS ORDER_CURRENCY,
+  IF(O.`billing__email` = '', C.`email`, O.`billing__email`) AS ORDER_CUSTOMER_EMAIL,
+  O.`customer_note` AS ORDER_REMARK,
+  CAST('' AS STRING) AS REFERER,
+  CAST('' AS STRING) AS CHANNEL,
+  CAST('' AS STRING) AS SOURCE,
+  O.`billing__city` AS BILLING_CITY,
+  O.`billing__country` AS BILLING_COUNTRY,
+  O.`billing__postcode` AS BILLING_ZIP,
+  O.`shipping__city` AS SHIPPING_CITY,
+  O.`shipping__country` AS SHIPPING_COUNTRY,
+  O.`shipping__postcode` AS SHIPPING_ZIP,
+  O.`payment_method` AS BILLING_TYPE,
+  CAST('' AS STRING) AS SHIPPING_TYPE,
+  O.`total` AS ORDER_TOTAL_PRICE_WITH_TAXES,
+  O.`total` - O.`total_tax` AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
+  O.`total_tax` AS ORDER_TOTAL_PRICE_TAXES,
+  O.`customer_id` AS CUSTOMER_ID
+FROM `order` AS O
+LEFT JOIN `customer` AS C
+  ON O.`customer_id` = C.`id`
+LEFT JOIN (
+  SELECT
+    `customer_id`,
+    MIN(`date_created`) AS `min_order_date`
+  FROM `order`
+  GROUP BY
+    `customer_id`
+) AS m
+  ON o.`customer_id` = m.`customer_id`
+/* BDM_ORDER_LINES */
+CREATE TABLE `bdm_order_lines` (
+  ORDER_ID STRING,
+  ORDER_LINE_ID STRING NOT NULL,
+  ORDER_DATE DATE,
+  ORDER_LINE_PRODUCT_ID STRING,
+  ITEMNAME STRING,
+  DISCOUNT_PERCENT FLOAT64,
+  ORDER_LINE_AMOUNT FLOAT64,
+  ORDER_LINE_PRICE_WITH_TAXES FLOAT64,
+  ORDER_LINE_PRICE_WITHOUT_TAXES FLOAT64,
+  ORDER_LINE_PRICE_TAXES FLOAT64,
+  ORDER_LINE_TAXES_RATE FLOAT64,
+  LINE_PURCHASE_PRICE FLOAT64,
+  AVG_ORDER_LINE_MARGIN FLOAT64
+)
+INSERT INTO `bdm_order_lines`
+SELECT
+  OL.`id` AS ORDER_LINE_ID,
+  OL.`order_id` AS ORDER_ID,
+  CAST(O.`date_created` AS DATE) AS ORDER_DATE,
+  OL.`product_id` AS ORDER_LINE_PRODUCT_ID,
+  OL.`name` AS ITEMNAME,
+  (
+    (
+      OL.`subtotal` - OL.`total`
+    ) / OL.`subtotal`
+  ) AS DISCOUNT_PERCENT,
+  CASE WHEN OL.`quantity` = '' THEN 0 ELSE OL.`quantity` END AS ORDER_LINE_AMOUNT,
+  CASE WHEN OL.`total` = '' THEN 0 ELSE OL.`total` END AS ORDER_LINE_PRICE_WITH_TAXES,
+  OL.`total` - OL.`total_tax` AS ORDER_LINE_PRICE_WITHOUT_TAXES,
+  CASE WHEN OL.`total_tax` = '' THEN 0 ELSE OL.`total_tax` END AS ORDER_LINE_PRICE_TAXES,
+  IF(
+    (
+      OL.`total` - OL.`total_tax`
+    ) = 0 AND NOT OL.`total_tax` IS NULL,
+    0,
+    OL.`total_tax` / (
+      OL.`total` - OL.`total_tax`
+    )
+  ) AS ORDER_LINE_TAXES_RATE,
+  NULL AS LINE_PURCHASE_PRICE,
+  NULL AS AVG_ORDER_LINE_MARGIN
+FROM `order` AS O
+LEFT JOIN `order_line_items` AS OL
+  ON O.`id` = OL.`order_id`

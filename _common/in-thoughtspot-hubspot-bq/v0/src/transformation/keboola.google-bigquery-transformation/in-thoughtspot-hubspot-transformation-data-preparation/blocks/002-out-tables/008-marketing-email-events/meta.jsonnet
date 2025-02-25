@@ -1,0 +1,3 @@
+{
+  name: "MARKETING_EMAIL_EVENTS",
+}

@@ -1,0 +1,4 @@
+{
+  name: "sales",
+  isDisabled: false,
+}

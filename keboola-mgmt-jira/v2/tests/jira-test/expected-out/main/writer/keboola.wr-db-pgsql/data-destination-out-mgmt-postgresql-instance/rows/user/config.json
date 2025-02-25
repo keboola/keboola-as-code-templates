@@ -1,0 +1,70 @@
+{
+  "parameters": {
+    "dbName": "user",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "user_id",
+        "default": "",
+        "name": "user_id",
+        "nullable": false,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "user",
+        "default": "",
+        "name": "user",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "email",
+        "default": "",
+        "name": "email",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "email_domain",
+        "default": "",
+        "name": "email_domain",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "user_type",
+        "default": "",
+        "name": "user_type",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "user_id"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.user"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "user_id",
+            "user",
+            "email",
+            "email_domain",
+            "user_type"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.user"
+        }
+      ]
+    }
+  }
+}

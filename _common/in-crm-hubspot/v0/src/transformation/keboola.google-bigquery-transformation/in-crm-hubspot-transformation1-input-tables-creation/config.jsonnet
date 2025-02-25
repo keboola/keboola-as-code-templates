@@ -1,0 +1,178 @@
+{
+  parameters: {},
+  storage: {
+    input: {
+      tables: [
+        {
+          columns: [],
+          destination: "contacts",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".contacts",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "pipelines",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".pipelines",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "pipeline_stages",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".pipeline_stages",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "deals_contacts_list",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".deals_contacts_list",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "companies",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".companies",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "owners",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".owners",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "deals",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".deals",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "activities",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".activities",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+        {
+          columns: [],
+          destination: "deals_assoc_companies_list",
+          source: "in.c-kds-team-ex-hubspot-crm-" + ConfigId("in-crm-hubspot-extractor") + ".deals_assoc_companies_list",
+          where_column: "",
+          where_operator: "eq",
+          where_values: [],
+        },
+      ],
+    },
+    output: {
+      tables: [
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".companies",
+          incremental: true,
+          primary_key: [
+            "companyId",
+          ],
+          source: "out_companies",
+        },
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".contacts",
+          incremental: true,
+          primary_key: [
+            "canonical_vid",
+          ],
+          source: "out_contacts",
+        },
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".owners",
+          incremental: true,
+          primary_key: [
+            "ownerId",
+          ],
+          source: "out_owners",
+        },
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".deals",
+          incremental: true,
+          primary_key: [
+            "dealId",
+          ],
+          source: "out_deals",
+        },
+        {
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".deals_companies",
+          primary_key: [
+            "dealId",
+            "associated_companyId",
+          ],
+          source: "out_deals_companies",
+        },
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".pipelines",
+          incremental: true,
+          primary_key: [
+            "pipelineId",
+          ],
+          source: "out_pipelines",
+        },
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".stages",
+          incremental: true,
+          primary_key: [
+            "stageId",
+          ],
+          source: "out_stages",
+        },
+        {
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".deals_contacts_list",
+          primary_key: [
+            "dealId",
+            "contact_vid",
+          ],
+          source: "out_deals_contacts_list",
+        },
+        {
+          delete_where_column: "",
+          delete_where_operator: "eq",
+          delete_where_values: [],
+          destination: "in.c-crm-tr-" + InstanceIdShort() + ".activities",
+          incremental: true,
+          primary_key: [
+            "engagement_id",
+          ],
+          source: "out_activities",
+        },
+      ],
+    },
+  },
+}

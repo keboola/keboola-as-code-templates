@@ -1,0 +1,116 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "TASK_SNAPSHOT",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "TASK_ID",
+            "name": "task_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "SNAPSHOT_DATE",
+            "name": "snapshot_date",
+            "type": "STRING"
+          },
+          {
+            "dbName": "SECTION",
+            "name": "section",
+            "type": "STRING"
+          },
+          {
+            "dbName": "PREVIOUS_SECTION",
+            "name": "previous_section",
+            "type": "STRING"
+          },
+          {
+            "dbName": "SECTION_CHANGE",
+            "name": "section_change",
+            "type": "STRING"
+          },
+          {
+            "dbName": "DUE_DATE",
+            "name": "due_date",
+            "type": "STRING"
+          },
+          {
+            "dbName": "PREVIOUS_DUE_DATE",
+            "name": "previous_due_date",
+            "type": "STRING"
+          },
+          {
+            "dbName": "DUE_DATE_CHANGE",
+            "name": "due_date_change",
+            "type": "STRING"
+          },
+          {
+            "dbName": "DUE_DATE_DIFF",
+            "name": "due_date_diff",
+            "type": "INTEGER"
+          },
+          {
+            "dbName": "ASSIGNEE",
+            "name": "assignee",
+            "type": "STRING"
+          },
+          {
+            "dbName": "PREVIOUS_ASSIGNEE",
+            "name": "previous_assignee",
+            "type": "STRING"
+          },
+          {
+            "dbName": "ASSIGNEE_CHANGE",
+            "name": "assignee_change",
+            "type": "STRING"
+          },
+          {
+            "dbName": "LAST_SNAPSHOT",
+            "name": "last_snapshot",
+            "type": "STRING"
+          },
+          {
+            "dbName": "LAST_DAY_OF_MONTH",
+            "name": "last_day_of_month",
+            "type": "STRING"
+          },
+          {
+            "dbName": "LAST_DAY_OF_QUARTER",
+            "name": "last_day_of_quarter",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-projectmgmt-bdm-instance.task_snapshot"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_id",
+            "snapshot_date",
+            "section",
+            "previous_section",
+            "section_change",
+            "due_date",
+            "previous_due_date",
+            "due_date_change",
+            "due_date_diff",
+            "assignee",
+            "previous_assignee",
+            "assignee_change",
+            "last_snapshot",
+            "last_day_of_month",
+            "last_day_of_quarter"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_snapshot.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_snapshot"
+        }
+      ]
+    }
+  }
+}
