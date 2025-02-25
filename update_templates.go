@@ -469,6 +469,33 @@ func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath strin
 				return err
 			}
 
+			if strings.Contains(srcPath, "transformation") && strings.Contains(string(data), " isIgnored: InputIsAvailable") {
+				// Extract the input parameter from the original string
+				originalStr := string(data)
+				start := strings.Index(originalStr, `InputIsAvailable("`) + len(`InputIsAvailable("`)
+				end := strings.Index(originalStr[start:], `"`) + start
+				inputParam := originalStr[start:end]
+
+				data = []byte(strings.ReplaceAll(string(data),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false`, inputParam),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false && HasProjectBackend("bigquery") == false`, inputParam),
+				))
+			}
+
+			// For task.jsonnet and kbcdir.jsonnet, modify content before writing
+			switch filepath.Base(srcPath) {
+			case "task.jsonnet":
+				content := strings.ReplaceAll(string(data),
+					"keboola.snowflake-transformation",
+					"keboola.google-bigquery-transformation")
+				data = []byte(content)
+			case "kbcdir.jsonnet":
+				content := strings.ReplaceAll(string(data),
+					"\"snowflake\"",
+					"\"bigquery\"")
+				data = []byte(content)
+			}
+
 			return os.WriteFile(destPath, data, 0644)
 		})
 		if err != nil {
