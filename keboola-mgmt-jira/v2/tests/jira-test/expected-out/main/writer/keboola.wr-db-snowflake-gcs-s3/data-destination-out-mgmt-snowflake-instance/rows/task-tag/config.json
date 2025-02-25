@@ -1,0 +1,44 @@
+{
+  "parameters": {
+    "dbName": "TASK_TAG",
+    "incremental": true,
+    "items": [
+      {
+        "dbName": "TASK_ID",
+        "default": "",
+        "name": "task_id",
+        "nullable": false,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "TAG",
+        "default": "",
+        "name": "tag",
+        "nullable": false,
+        "size": "255",
+        "type": "string"
+      }
+    ],
+    "primaryKey": [
+      "TASK_ID",
+      "TAG"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.task_tag"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_id",
+            "tag"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_tag.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_tag"
+        }
+      ]
+    }
+  }
+}

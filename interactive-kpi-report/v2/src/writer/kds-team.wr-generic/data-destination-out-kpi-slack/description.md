@@ -1,0 +1,1 @@
+This generic data destination is triggered on the table in.c-kpi-report.slack. When a change is made to this table, a notification is sent to Slack.

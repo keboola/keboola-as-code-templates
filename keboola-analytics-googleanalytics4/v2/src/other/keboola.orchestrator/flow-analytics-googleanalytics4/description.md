@@ -1,0 +1,1 @@
+With this end-to-end flow you can extract your updated data from Google Analytics 4 and bring it into Keboola Connection. You can also import your Google Search Console data. After all the necessary tasks are performed on the data, you can transform the results into visualizations in any BI tool of your choice.

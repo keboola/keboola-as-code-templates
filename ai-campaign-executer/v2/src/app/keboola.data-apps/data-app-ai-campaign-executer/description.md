@@ -1,0 +1,1 @@
+Check the AI generated SMS which would be sent to your customer.

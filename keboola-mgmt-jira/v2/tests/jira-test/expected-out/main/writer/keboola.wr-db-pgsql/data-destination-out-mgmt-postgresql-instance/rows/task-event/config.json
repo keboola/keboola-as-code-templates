@@ -1,0 +1,106 @@
+{
+  "parameters": {
+    "dbName": "task_event",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "task_event_id",
+        "default": "",
+        "name": "task_event_id",
+        "nullable": false,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "task_id",
+        "default": "",
+        "name": "task_id",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "user_id",
+        "default": "",
+        "name": "user_id",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "user_type",
+        "default": "",
+        "name": "user_type",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "user",
+        "default": "",
+        "name": "user",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "created_at",
+        "default": "",
+        "name": "created_at",
+        "nullable": true,
+        "size": "",
+        "type": "timestamp"
+      },
+      {
+        "dbName": "event_type",
+        "default": "",
+        "name": "event_type",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "event",
+        "default": "",
+        "name": "event",
+        "nullable": true,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "event_text",
+        "default": "",
+        "name": "event_text",
+        "nullable": true,
+        "size": "50000",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "task_event_id"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.task_event"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_event_id",
+            "task_id",
+            "user_id",
+            "user_type",
+            "user",
+            "created_at",
+            "event_type",
+            "event",
+            "event_text"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_event.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_event"
+        }
+      ]
+    }
+  }
+}

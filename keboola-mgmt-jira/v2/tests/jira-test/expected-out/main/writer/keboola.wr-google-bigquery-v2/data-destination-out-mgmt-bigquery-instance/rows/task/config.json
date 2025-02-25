@@ -1,0 +1,110 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "TASK",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "TASK_ID",
+            "name": "task_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "TASK",
+            "name": "task",
+            "type": "STRING"
+          },
+          {
+            "dbName": "SECTION",
+            "name": "section",
+            "type": "STRING"
+          },
+          {
+            "dbName": "PROJECT_ID",
+            "name": "project_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "CREATED_AT",
+            "name": "created_at",
+            "type": "STRING"
+          },
+          {
+            "dbName": "COMPLETED_AT",
+            "name": "completed_at",
+            "type": "STRING"
+          },
+          {
+            "dbName": "DUE_DATE",
+            "name": "due_date",
+            "type": "STRING"
+          },
+          {
+            "dbName": "DAYS_PAST_DUE",
+            "name": "days_past_due",
+            "type": "INTEGER"
+          },
+          {
+            "dbName": "IS_PAST_DUE",
+            "name": "is_past_due",
+            "type": "STRING"
+          },
+          {
+            "dbName": "URL",
+            "name": "url",
+            "type": "STRING"
+          },
+          {
+            "dbName": "ASSIGNEE",
+            "name": "assignee",
+            "type": "STRING"
+          },
+          {
+            "dbName": "ASSIGNEE_TYPE",
+            "name": "assignee_type",
+            "type": "STRING"
+          },
+          {
+            "dbName": "COMPLETED",
+            "name": "completed",
+            "type": "STRING"
+          },
+          {
+            "dbName": "IS_SUBTASK",
+            "name": "is_subtask",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-projectmgmt-bdm-instance.task"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "task_id",
+            "task",
+            "section",
+            "project_id",
+            "created_at",
+            "completed_at",
+            "due_date",
+            "days_past_due",
+            "is_past_due",
+            "url",
+            "assignee",
+            "assignee_type",
+            "completed",
+            "is_subtask"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task"
+        }
+      ]
+    }
+  }
+}

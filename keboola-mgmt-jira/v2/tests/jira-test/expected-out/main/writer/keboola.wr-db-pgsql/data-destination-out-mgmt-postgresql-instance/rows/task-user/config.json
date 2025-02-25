@@ -1,0 +1,44 @@
+{
+  "parameters": {
+    "dbName": "task_user",
+    "incremental": false,
+    "items": [
+      {
+        "dbName": "user_id",
+        "default": "",
+        "name": "user_id",
+        "nullable": false,
+        "size": "255",
+        "type": "varchar"
+      },
+      {
+        "dbName": "task_id",
+        "default": "",
+        "name": "task_id",
+        "nullable": false,
+        "size": "255",
+        "type": "varchar"
+      }
+    ],
+    "primaryKey": [
+      "user_id",
+      "task_id"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.task_user"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "user_id",
+            "task_id"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.task_user.csv",
+          "source": "out.c-projectmgmt-bdm-instance.task_user"
+        }
+      ]
+    }
+  }
+}
