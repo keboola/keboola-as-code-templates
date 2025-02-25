@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-sklik-token") == false,
+  isIgnored: InputIsAvailable("ex-sklik-token") == false || HasProjectBackend("bigquery") == false,
 }
