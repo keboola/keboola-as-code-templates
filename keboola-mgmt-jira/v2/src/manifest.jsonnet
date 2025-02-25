@@ -28,7 +28,6 @@
 	  path: "<common>/in-mgmt-jira/transformation/keboola.google-bigquery-transformation/transformation-in-mgmt-jira",
 	  rows: [],
 	  metadata: { "KBC.configuration.folderName": "[MGMT-JIRA]"}
-	},
     },
      if InputIsAvailable("wr-google-bigquery-v2-service-account-private-key") then
     {
