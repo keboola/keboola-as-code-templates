@@ -1,66 +1,66 @@
-# name: "Remote tests"
-# on:
-  # pull_request:
-  # schedule:
+name: "Remote tests"
+on:
+  pull_request:
+  schedule:
     # Run every 3 days at 00:00 UTC
-    # - cron: '0 0 */3 * *'
-  # workflow_call:
-# 
-# jobs:
-  # remote-tests:
+    - cron: '0 0 */3 * *'
+  workflow_call:
+
+jobs:
+  remote-tests:
     # Only run scheduled jobs on dev/beta/main branches
-    # if: github.event_name != 'schedule' || (github.event_name == 'schedule' && (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/main'))
-    # name: remote tests
-    # runs-on: ubuntu-latest
-    # steps:
+    if: github.event_name != 'schedule' || (github.event_name == 'schedule' && (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/main'))
+    name: remote tests
+    runs-on: ubuntu-latest
+    steps:
       # Checkout repository
-      # - name: Checkout code
-        # uses: actions/checkout@v4
-# 
-      # - name: Download keboola CLI
-        # id: kbc_download_latest_release
-        # uses: robinraju/release-downloader@v1.11
-        # with:
-          # repository: 'keboola/keboola-as-code'
-          # latest: true
-          # fileName: '*_linux_amd64.zip'
-# 
-      # - name: Install keboola CLI
-        # run: |
-          # mkdir "${{ runner.temp }}/kbc"
-          # latest_tag=${{steps.kbc_download_latest_release.outputs.tag_name}}
-          # latest_version=${latest_tag:1}
-          # 
-          # release_zip="keboola-cli_${latest_version}_linux_amd64.zip"
-          # if [ ! -f "$release_zip" ]; then
-          # echo "Could not download keboola-cli_${latest_version}_linux_amd64.zip from the latest release."
-          # exit 1
-          # fi
-          # 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download keboola CLI
+        id: kbc_download_latest_release
+        uses: robinraju/release-downloader@v1.11
+        with:
+          repository: 'keboola/keboola-as-code'
+          latest: true
+          fileName: '*_linux_amd64.zip'
+
+      - name: Install keboola CLI
+        run: |
+          mkdir "${{ runner.temp }}/kbc"
+          latest_tag=${{steps.kbc_download_latest_release.outputs.tag_name}}
+          latest_version=${latest_tag:1}
+          
+          release_zip="keboola-cli_${latest_version}_linux_amd64.zip"
+          if [ ! -f "$release_zip" ]; then
+          echo "Could not download keboola-cli_${latest_version}_linux_amd64.zip from the latest release."
+          exit 1
+          fi
+          
           # Unzip the CLI binary
-          # release_bin="/usr/local/bin/kbc"
-          # unzip "$release_zip" -d /usr/local/bin
-          # chmod +x "$release_bin"
-          # echo "Keboola as Code CLI installed: $release_bin"
-          # kbc --version
-        # shell: bash
-# 
-      # - name: Set TEST_KBC_PROJECTS_FILE entries
-        # uses: ./.github/actions/export-kbc-projects
-        # with:
-          # secrets: ${{ toJSON(secrets) }}
-# 
-      # - name: Run tests
-        # run: |
-          # set -eo pipefail
-          # kbc template test run --remote-only
-        # shell: bash
-        # env:
-          # TEST_KBC_PROJECTS_FILE: '${{ github.workspace }}/${{ vars.TEST_KBC_PROJECTS_FILE }}'
-          # KBC_SECRET_TOKEN: ${{ secrets.KBC_SECRET_TOKEN }}
-          # KBC_SECRET_BIGQUERY_PRIVATE_KEY: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY }}
-          # KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID }}
-          # KBC_SECRET_POSTGRES_PASSWORD: ${{ secrets.KBC_SECRET_POSTGRES_PASSWORD }}
-          # KBC_SECRET_POSTGRES_DB_USER: ${{ secrets.KBC_SECRET_POSTGRES_DB_USER }}
-          # KBC_SECRET_SNOWFLAKE_PASSWORD: ${{ secrets.KBC_SECRET_SNOWFLAKE_PASSWORD }}
-          # KBC_SECRET_SNOWFLAKE_DB_USER: ${{ secrets.KBC_SECRET_SNOWFLAKE_DB_USER }} 
+          release_bin="/usr/local/bin/kbc"
+          unzip "$release_zip" -d /usr/local/bin
+          chmod +x "$release_bin"
+          echo "Keboola as Code CLI installed: $release_bin"
+          kbc --version
+        shell: bash
+
+      - name: Set TEST_KBC_PROJECTS_FILE entries
+        uses: ./.github/actions/export-kbc-projects
+        with:
+          secrets: ${{ toJSON(secrets) }}
+
+      - name: Run tests
+        run: |
+          set -eo pipefail
+          kbc template test run --remote-only
+        shell: bash
+        env:
+          TEST_KBC_PROJECTS_FILE: '${{ github.workspace }}/${{ vars.TEST_KBC_PROJECTS_FILE }}'
+          KBC_SECRET_TOKEN: ${{ secrets.KBC_SECRET_TOKEN }}
+          KBC_SECRET_BIGQUERY_PRIVATE_KEY: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY }}
+          KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID }}
+          KBC_SECRET_POSTGRES_PASSWORD: ${{ secrets.KBC_SECRET_POSTGRES_PASSWORD }}
+          KBC_SECRET_POSTGRES_DB_USER: ${{ secrets.KBC_SECRET_POSTGRES_DB_USER }}
+          KBC_SECRET_SNOWFLAKE_PASSWORD: ${{ secrets.KBC_SECRET_SNOWFLAKE_PASSWORD }}
+          KBC_SECRET_SNOWFLAKE_DB_USER: ${{ secrets.KBC_SECRET_SNOWFLAKE_DB_USER }}
