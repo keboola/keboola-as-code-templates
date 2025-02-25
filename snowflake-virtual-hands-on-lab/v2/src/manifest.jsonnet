@@ -15,50 +15,44 @@
       path: "<common>/in-ecommerce-shopify/v0/src/extractor/keboola.ex-sample-data/demo-data",
       rows: [],
     },
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
-	  path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/demo-in-ecommerce-shopify-transformation1-prepare-input-tables",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
-	  path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.google-bigquery-transformation/demo-in-ecommerce-shopify-transformation1-prepare-input-tables",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/demo-in-ecommerce-shopify-transformation1-prepare-input-tables",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
+    } else if HasProjectBackend("bigquery") then {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-ecommerce-shopify-transformation1-prepare-input-tables"),
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.google-bigquery-transformation/demo-in-ecommerce-shopify-transformation1-prepare-input-tables",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation"),
-	  path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/demo-in-ecommerce-shopify-transformation2-data-preparation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation"),
-	  path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.google-bigquery-transformation/demo-in-ecommerce-shopify-transformation2-data-preparation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation"),
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/demo-in-ecommerce-shopify-transformation2-data-preparation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
+    } else if HasProjectBackend("bigquery") then {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-ecommerce-shopify-transformation2-data-preparation"),
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.google-bigquery-transformation/demo-in-ecommerce-shopify-transformation2-data-preparation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis"),
-	  path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation3-rfm-analysis",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis"),
-	  path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-shopify-transformation3-rfm-analysis",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis"),
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-shopify-transformation3-rfm-analysis",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
+    } else if HasProjectBackend("bigquery") then {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-ecommerce-shopify-transformation3-rfm-analysis"),
+      path: "<common>/in-ecommerce-shopify/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-shopify-transformation3-rfm-analysis",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("wr-snowflake-db-host") then
     {
@@ -130,20 +124,21 @@
       rows: [],
     },
     if InputIsAvailable("oauth-facebookads") then
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-ecommerce-facebook-transformation"),
-	  path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-ecommerce-facebook-transformation"),
-	  path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-facebook-transformation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-facebook-transformation"),
+      path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-facebook-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
+    },
+    if InputIsAvailable("oauth-facebookads") then
+    if HasProjectBackend("bigquery") then 
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-ecommerce-facebook-transformation"),
+      path: "<common>/in-ecommerce-facebook/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-facebook-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("oauth-googleads") then
     {
@@ -158,20 +153,21 @@
       ],
     },
     if InputIsAvailable("oauth-googleads") then
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-ecommerce-googleads-transformation"),
-	  path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-ecommerce-googleads-transformation"),
-	  path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-googleads-transformation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-googleads-transformation"),
+      path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-googleads-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
+    },
+    if InputIsAvailable("oauth-googleads") then
+    if HasProjectBackend("bigquery") then 
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-ecommerce-googleads-transformation"),
+      path: "<common>/in-ecommerce-googleads/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-googleads-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     if InputIsAvailable("ex-sklik-token") then
     {
@@ -181,20 +177,22 @@
       rows: [],
     },
     if InputIsAvailable("ex-sklik-token") then
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-ecommerce-sklik-transformation"),
-	  path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-ecommerce-sklik-transformation"),
-	  path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-sklik-transformation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
-	},
+    if HasProjectBackend("snowflake") then 
+    {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-ecommerce-sklik-transformation"),
+      path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.snowflake-transformation/in-ecommerce-sklik-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
+    },
+    if InputIsAvailable("ex-sklik-token") then
+    if HasProjectBackend("bigquery") then 
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-ecommerce-sklik-transformation"),
+      path: "<common>/in-ecommerce-sklik/v0/src/transformation/keboola.google-bigquery-transformation/in-ecommerce-sklik-transformation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[ECOMMERCE-SHOPIFY]"}
     },
     ],
   )
