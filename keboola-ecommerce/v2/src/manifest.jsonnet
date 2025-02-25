@@ -47,7 +47,8 @@
       path: "<common>/in-ecommerce-woocommerce/v0/src/extractor/kds-team.ex-woocommerce/data-source-in-ecommerce-woocommerce",
       rows: [],
     },
-    if InputIsAvailable("ex-shopify-api-token") && HasProjectBackend("snowflake") then 
+    if InputIsAvailable("ex-shopify-api-token") then
+    if HasProjectBackend("snowflake") then 
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("transformation-1-prepare-input-tables-in-ecommerce-shopify"),
@@ -57,7 +58,8 @@
           "KBC.configuration.folderName": "ECOMMERCE",
         },
 	  }, 
-    if InputIsAvailable("ex-shopify-api-token") && HasProjectBackend("bigquery") then 
+    if InputIsAvailable("ex-shopify-api-token") then
+    if HasProjectBackend("bigquery") then 
     {
       componentId: "keboola.google-bigquery-transformation",
       id: ConfigId("transformation-1-prepare-input-tables-in-ecommerce-shopify"),
@@ -67,7 +69,8 @@
           "KBC.configuration.folderName": "ECOMMERCE",
         },
 	  },
-    if InputIsAvailable("ex-shopify-api-token") && HasProjectBackend("snowflake") then 
+    if InputIsAvailable("ex-shopify-api-token") then
+    if HasProjectBackend("snowflake") then 
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("transformation-2-data-preparation-in-ecommerce-shopify"),
@@ -77,7 +80,8 @@
           "KBC.configuration.folderName": "ECOMMERCE",
         },
     },
-    if InputIsAvailable("ex-shopify-api-token") && HasProjectBackend("bigquery") then 
+    if InputIsAvailable("ex-shopify-api-token") then
+    if HasProjectBackend("bigquery") then 
     {
       componentId: "keboola.google-bigquery-transformation",
       id: ConfigId("transformation-2-data-preparation-in-ecommerce-shopify"),
@@ -88,7 +92,8 @@
         },
 
     },
-    if InputIsAvailable("ex-bigcommerce-access-token") && HasProjectBackend("snowflake") then 
+    if InputIsAvailable("ex-bigcommerce-access-token") then
+    if HasProjectBackend("snowflake") then 
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("transformation-in-ecommerce-bigcommerce"),
@@ -98,7 +103,8 @@
           "KBC.configuration.folderName": "ECOMMERCE",
         },
     },
-    if InputIsAvailable("ex-bigcommerce-access-token") && HasProjectBackend("bigquery") then 
+    if InputIsAvailable("ex-bigcommerce-access-token") then
+    if HasProjectBackend("bigquery") then 
     {
       componentId: "keboola.google-bigquery-transformation",
       id: ConfigId("transformation-in-ecommerce-bigcommerce"),
@@ -108,7 +114,8 @@
           "KBC.configuration.folderName": "ECOMMERCE",
         },
     },
-    if InputIsAvailable("ex-woocommerce-store-url") && HasProjectBackend("snowflake") then 
+    if InputIsAvailable("ex-woocommerce-store-url") then
+    if HasProjectBackend("snowflake") then 
     {
       componentId: "keboola.snowflake-transformation",
       id: ConfigId("transformation-in-ecommerce-woocommerce"),
@@ -118,7 +125,8 @@
           "KBC.configuration.folderName": "ECOMMERCE",
         },
     },
-    if InputIsAvailable("ex-woocommerce-store-url") && HasProjectBackend("bigquery") then 
+    if InputIsAvailable("ex-woocommerce-store-url") then
+    if HasProjectBackend("bigquery") then 
     {
       componentId: "keboola.google-bigquery-transformation",
       id: ConfigId("transformation-in-ecommerce-woocommerce"),
