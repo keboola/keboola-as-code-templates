@@ -34,36 +34,32 @@
       rows: [],
       metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
     },
-
-	if HasProjectBackend("snowflake") then {
+	  if HasProjectBackend("snowflake") then {
 	  componentId: "keboola.snowflake-transformation",
 	  id: ConfigId("shopify-data-prep-for-ai"),
 	  path: "transformation/keboola.snowflake-transformation/shopify-data-prep-for-ai",
 	  rows: [],
 	  metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
-	} else if HasProjectBackend("bigquery") then {
+	  } else if HasProjectBackend("bigquery") then {
 	  componentId: "keboola.google-bigquery-transformation",
 	  id: ConfigId("shopify-data-prep-for-ai"),
 	  path: "transformation/keboola.google-bigquery-transformation/shopify-data-prep-for-ai",
 	  rows: [],
 	  metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
-	},
-    },
-
-	if HasProjectBackend("snowflake") then {
+	  },
+	  if HasProjectBackend("snowflake") then {
 	  componentId: "keboola.snowflake-transformation",
 	  id: ConfigId("twilio-sms-data-preparation"),
 	  path: "transformation/keboola.snowflake-transformation/twilio-sms-data-preparation",
 	  rows: [],
 	  metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
-	} else if HasProjectBackend("bigquery") then {
+	  } else if HasProjectBackend("bigquery") then {
 	  componentId: "keboola.google-bigquery-transformation",
 	  id: ConfigId("twilio-sms-data-preparation"),
 	  path: "transformation/keboola.google-bigquery-transformation/twilio-sms-data-preparation",
 	  rows: [],
 	  metadata: { "KBC.configuration.folderName": "[AI-CAMPAIGN-EXECUTER]"}
-	},
-    },
+	  },
     {
       componentId: "kds-team.wr-twilio",
       id: ConfigId("twilio-campaign-maker"),
