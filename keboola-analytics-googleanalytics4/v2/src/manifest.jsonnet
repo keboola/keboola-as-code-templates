@@ -58,7 +58,6 @@
 	  rows: [],
 	  metadata: {"KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
 	},
-    },
     if InputIsAvailable("wr-postgresql-db-hostname") then
     {
       componentId: "keboola.wr-db-pgsql",
@@ -216,6 +215,5 @@
 	  rows: [],
 	  metadata: { "KBC.configuration.folderName": "[ANALYTICS-GOOGLEANALYTICS4]"}
 	},
-    },
   ]),
 }
