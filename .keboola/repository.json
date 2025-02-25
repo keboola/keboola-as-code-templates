@@ -182,8 +182,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "<keboola.wr-snowflake>"
-          ],
-          "path": "v1"
+          ]
         },
         {
           "version": "2.0.0",
@@ -197,8 +196,7 @@
             "keboola.wr-thoughtspot",
             "keboola.wr-google-bigquery-v2",
             "<keboola.wr-snowflake>"
-          ],
-          "path": "v2"
+          ]
         }
       ]
     },
@@ -2790,6 +2788,7 @@
           "sandboxes-data-apps"
         ]
       },
+      "path": "resume-analyzer",
       "categories": [
         "Data Apps",
         "AI Automations"
@@ -2812,7 +2811,8 @@
           "components": [
             "keboola.data-apps",
             "kds-team.ex-lever"
-          ]
+          ],
+          "path": "v1"
         }
       ]
     },
