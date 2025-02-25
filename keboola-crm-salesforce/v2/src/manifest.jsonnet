@@ -48,50 +48,44 @@
         },
       ],
     },
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation"),
-	  path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation1-input-tables-creation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation"),
-	  path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.google-bigquery-transformation/in-crm-salesforce-transformation1-input-tables-creation",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation"),
+      path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation1-input-tables-creation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
+    } else if HasProjectBackend("bigquery") then {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-crm-salesforce-transformation1-input-tables-creation"),
+      path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.google-bigquery-transformation/in-crm-salesforce-transformation1-input-tables-creation",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
     },
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-crm-salesforce-transformation2-main"),
-	  path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-crm-salesforce-transformation2-main"),
-	  path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.google-bigquery-transformation/in-crm-salesforce-transformation2-main",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-crm-salesforce-transformation2-main"),
+      path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation2-main",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
+    } else if HasProjectBackend("bigquery") then {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-crm-salesforce-transformation2-main"),
+      path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.google-bigquery-transformation/in-crm-salesforce-transformation2-main",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
     },
-
-	if HasProjectBackend("snowflake") then {
-	  componentId: "keboola.snowflake-transformation",
-	  id: ConfigId("in-crm-salesforce-transformation3-snapshots"),
-	  path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation3-snapshots",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
-	} else if HasProjectBackend("bigquery") then {
-	  componentId: "keboola.google-bigquery-transformation",
-	  id: ConfigId("in-crm-salesforce-transformation3-snapshots"),
-	  path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.google-bigquery-transformation/in-crm-salesforce-transformation3-snapshots",
-	  rows: [],
-	  metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
-	},
+    if HasProjectBackend("snowflake") then {
+      componentId: "keboola.snowflake-transformation",
+      id: ConfigId("in-crm-salesforce-transformation3-snapshots"),
+      path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.snowflake-transformation/in-crm-salesforce-transformation3-snapshots",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
+    } else if HasProjectBackend("bigquery") then {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("in-crm-salesforce-transformation3-snapshots"),
+      path: "<common>/in-crm-salesforce/v0/src/transformation/keboola.google-bigquery-transformation/in-crm-salesforce-transformation3-snapshots",
+      rows: [],
+      metadata: { "KBC.configuration.folderName": "[CRM-SALESFORCE]"}
     },
     if InputIsAvailable("google-sheet-id") then
     {
