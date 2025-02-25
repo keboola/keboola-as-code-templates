@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-woocommerce-store-url") == false,
+  isIgnored: InputIsAvailable("ex-woocommerce-store-url") == false || HasProjectBackend("bigquery") == false,
 }

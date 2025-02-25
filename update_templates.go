@@ -441,11 +441,16 @@ func (tu *TemplateUpdater) duplicateSnowflakeDirectories(path string) error {
 			}
 
 			if strings.Contains(srcPath, "transformation") && strings.Contains(string(data), " isIgnored: InputIsAvailable") {
-				//fmt.Println("AAAA: ", string(data))
-				//data = []byte(strings.ReplaceAll(string(data),
-				//	`isIgnored: InputIsAvailable("ex-woocommerce-store-url") == false`,
-				//	`isIgnored: InputIsAvailable("gsc-domain") == false `,
-				//))
+				// Extract the input parameter from the original string
+				originalStr := string(data)
+				start := strings.Index(originalStr, `InputIsAvailable("`) + len(`InputIsAvailable("`)
+				end := strings.Index(originalStr[start:], `"`) + start
+				inputParam := originalStr[start:end]
+
+				data = []byte(strings.ReplaceAll(string(data),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false`, inputParam),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false || HasProjectBackend("bigquery") == false`, inputParam),
+				))
 			}
 
 			// For task.jsonnet and kbcdir.jsonnet, modify content before writing
