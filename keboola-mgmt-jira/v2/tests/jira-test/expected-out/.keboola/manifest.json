@@ -36,7 +36,7 @@
       "id": __MAIN_BRANCH_ID__,
       "path": "main",
       "metadata": {
-        "KBC.KAC.templates.instances": "[{\"instanceId\":\"%s\",\"instanceName\":\"test\",\"templateId\":\"keboola-mgmt-jira\",\"repositoryName\":\"keboola\",\"version\":\"1.0.0\",\"created\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"updated\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"mainConfig\":{\"configId\":\"%s\",\"componentId\":\"keboola.orchestrator\"}}]"
+        "KBC.KAC.templates.instances": "[{\"instanceId\":\"%s\",\"instanceName\":\"test\",\"templateId\":\"keboola-mgmt-jira\",\"repositoryName\":\"keboola\",\"version\":\"2.0.0\",\"created\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"updated\":{\"date\":\"%s\",\"tokenId\":\"%s\"},\"mainConfig\":{\"configId\":\"%s\",\"componentId\":\"keboola.orchestrator\"}}]"
       }
     }
   ],
