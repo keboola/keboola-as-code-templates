@@ -1,12 +1,12 @@
-CREATE OR REPLACE TABLE "UA" AS
+CREATE OR REPLACE TABLE `UA` AS
 SELECT
-TO_DATE("date") as "date",
-"source",
-"medium",
-"campaign" as "campaign",
-"source"||' / '||"medium" as "source_medium",
-SUM("transactions") as "ua_transactions",
-SUM("sessions") as "ua_sessions",
-SUM("users") as "ua_users"
-FROM "Universal-Analytics"
-GROUP BY ALL;
+  CAST(`date` AS DATE) AS `date`,
+  `source`,
+  `medium`,
+  `campaign` AS `campaign`,
+  `source` || ' / ' || `medium` AS `source_medium`,
+  SUM(`transactions`) AS `ua_transactions`,
+  SUM(`sessions`) AS `ua_sessions`,
+  SUM(`users`) AS `ua_users`
+FROM `Universal-Analytics`
+GROUP BY ALL

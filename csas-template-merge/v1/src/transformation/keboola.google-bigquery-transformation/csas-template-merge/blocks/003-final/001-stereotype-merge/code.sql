@@ -1,20 +1,4 @@
-/**********************************************************************************************************************/
-/* Shared Code:        MERGE Stereotype Keboola Implementation                                                        */
-/* Purpose:            Loads data into Target table using MERGE stereotype with DELETED_FLAG                          */
-/*                                                                                                                    */
-/* Change History:                                                                                                    */
-/* Date            Author               Change                                                                        */
-/* 2024-03-25      Filip Oliva          Initial version                                                               */
-/* 2024-04-26      Filip Oliva          Primary key can have N columns                                                */
-/* 2024-05-16      Filip Oliva          Soft Delete is optional, Sequence is optional,Subset filter,                  */
-/*                                      XC duplicity check                                           */
-/*                                                                                                                    */
-/* Description:                                                                                                       */
-/* Procedure merge date from XC table, set Deleted Flag and Updated date/task_key in target table                     */
-/**********************************************************************************************************************/
-
-/********************************************** BEGIN: Session Variables used for debuging **********************************************/
-/*
+SET map_xc_table = 'XC_' || @map_target_table || '_' || @map_module_id /* ******************************************************************************************************************** */ /* Shared Code:        MERGE Stereotype Keboola Implementation                                                        */ /* Purpose:            Loads data into Target table using MERGE stereotype with DELETED_FLAG                          */ /*                                                                                                                    */ /* Change History:                                                                                                    */ /* Date            Author               Change                                                                        */ /* 2024-03-25      Filip Oliva          Initial version                                                               */ /* 2024-04-26      Filip Oliva          Primary key can have N columns                                                */ /* 2024-05-16      Filip Oliva          Soft Delete is optional, Sequence is optional,Subset filter,                  */ /*                                      XC duplicity check                                           */ /*                                                                                                                    */ /* Description:                                                                                                       */ /* Procedure merge date from XC table, set Deleted Flag and Updated date/task_key in target table                     */ /* ******************************************************************************************************************** */ /* ********************************************* BEGIN: Session Variables used for debuging ********************************************* */ /*
 SET p_load_date = to_date('2024-04-30','yyyy-mm-dd');
 SET p_task_key = -98174::number(38,0);
 SET p_proc_key = -98174::number(38,0);
@@ -27,15 +11,8 @@ SET map_seq_col = 'RPSP_KEY';
 SET map_soft_delete = false;
 SET map_subset_filter = 'CHANNEL_ID=''BRANCH''';
 SET map_data_cols_exceptions = 'INT_RATE_VALID_FROM,INT_RATE_VALID_TO';
-*/
-
-/********************************************** END: Session Variables used for debuging **********************************************/
-
-/********************************************** BEGIN: Session Variables for MERGE **********************************************/
-SET map_xc_table = 'XC_' || $map_target_table || '_' ||$map_module_id;
-
-/********************************************** END: Session Variables for MERGE **********************************************/
-
+*/ /* ********************************************* END: Session Variables used for debuging ********************************************* */ /* ********************************************* BEGIN: Session Variables for MERGE ********************************************* */
+/* ********************************************* END: Session Variables for MERGE ********************************************* */
 EXECUTE IMMEDIATE $$
 DECLARE
 

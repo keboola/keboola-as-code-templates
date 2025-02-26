@@ -1,20 +1,22 @@
-CREATE TABLE IF NOT EXISTS "pages_engagement"
-(
-    "source" VARCHAR(255) NOT NULL,
-    "date" DATE NOT NULL,
-    "page_followers" INTEGER,
-    "page_views_total" INTEGER,
-    "page_posts_impressions" INTEGER
-);
-
-INSERT INTO "pages_engagement"
-    SELECT
-        'instagram' as "source",
-        try_to_date(replace("""end_time""", '+0000')) as "date",
-        min("'follower_count'") as "page_followers",
-        min("'profile_views'") as "page_views_total",
-        min("'impressions'") as "page_posts_impressions"
-    FROM
-        (SELECT * FROM "instagram_page_daily_insights")
-        PIVOT (max("value") for "name" IN ('reach', 'website_clicks', 'phone_call_clicks', 'email_contacts', 'profile_views', 'get_directions_clicks', 'text_message_clicks', 'impressions', 'follower_count'))
-    GROUP BY "date";
+CREATE TABLE IF NOT EXISTS `pages_engagement` (
+  `source` STRING(255) NOT NULL,
+  `date` DATE NOT NULL,
+  `page_followers` INT64,
+  `page_views_total` INT64,
+  `page_posts_impressions` INT64
+)
+INSERT INTO `pages_engagement`
+SELECT
+  'instagram' AS `source`,
+  CAST(replace(`"end_time"`, '+0000') AS DATE) AS `date`,
+  MIN(`'follower_count'`) AS `page_followers`,
+  MIN(`'profile_views'`) AS `page_views_total`,
+  MIN(`'impressions'`) AS `page_posts_impressions`
+FROM (
+  SELECT
+    *
+  FROM `instagram_page_daily_insights`
+)
+PIVOT(MAX(`value`) FOR `name` IN ('reach', 'website_clicks', 'phone_call_clicks', 'email_contacts', 'profile_views', 'get_directions_clicks', 'text_message_clicks', 'impressions', 'follower_count'))
+GROUP BY
+  `date`

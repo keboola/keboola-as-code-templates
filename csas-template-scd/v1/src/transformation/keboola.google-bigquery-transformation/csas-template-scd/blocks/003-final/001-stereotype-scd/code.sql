@@ -1,21 +1,5 @@
-/**********************************************************************************************************************/
-/* Shared Code:        SCD2 Stereotype Keboola Implementation                                                         */
-/* Purpose:            Loads data into Target table using SCD2 historization (Valid FROM/To)                          */
-/*                                                                                                                    */
-/* Change History:                                                                                                    */
-/* Date            Author               Change                                                                        */
-/* 2024-03-25      Filip Oliva          Initial version                                                               */
-/* 2024-04-24      Filip Oliva          Primary key can have N columns                                                */
-/* 2024-04-25      Filip Oliva          MODULE_ID filter, Temp Target table creation                                  */
-/* 2024-05-22      Filip Oliva          Subset filter, Duplicity Check, Soft Delete is optional                     
-/*                                                                                                                    */
-/* Description:                                                                                                       */
-/* Procedure prepare data IN DIFF table which is THEN used for historization into target table                         */
-/**********************************************************************************************************************/
-
-/********************************************** BEGIN: Session Variables used for debuging **********************************************/
-
-/*
+SET map_xc_table = 'XC_' || @map_target_table || '_' || @map_module_id /* ******************************************************************************************************************** */ /* Shared Code:        SCD2 Stereotype Keboola Implementation                                                         */ /* Purpose:            Loads data into Target table using SCD2 historization (Valid FROM/To)                          */ /*                                                                                                                    */ /* Change History:                                                                                                    */ /* Date            Author               Change                                                                        */ /* 2024-03-25      Filip Oliva          Initial version                                                               */ /* 2024-04-24      Filip Oliva          Primary key can have N columns                                                */ /* 2024-04-25      Filip Oliva          MODULE_ID filter, Temp Target table creation                                  */ /* 2024-05-22      Filip Oliva          Subset filter, Duplicity Check, Soft Delete is optional                     
+/*                                                                                                                    */ /* Description:                                                                                                       */ /* Procedure prepare data IN DIFF table which is THEN used for historization into target table                         */ /* ******************************************************************************************************************** */ /* ********************************************* BEGIN: Session Variables used for debuging ********************************************* */ /*
 SET p_load_date = to_date('2024-04-18','yyyy-mm-dd');
 SET p_task_key = -98174::number(38,0);
 SET p_proc_key = -98174::number(38,0);
@@ -27,15 +11,8 @@ SET map_seq_col = '';
 SET map_soft_delete = true;
 SET map_subset_filter = 'OKOPROD_LEAF_FLAG=''N''';
 SET map_data_cols_exceptions = '';
-*/
-
-/********************************************** END: Session Variables used for debuging **********************************************/
-
-/********************************************** BEGIN: Session Variables for SCD **********************************************/
-SET map_xc_table = 'XC_' || $map_target_table || '_' ||$map_module_id;
-
-/********************************************** END: Session Variables for SCD **********************************************/
-/********************************************** END: Session Variables used for debuging **********************************************/
+*/ /* ********************************************* END: Session Variables used for debuging ********************************************* */ /* ********************************************* BEGIN: Session Variables for SCD ********************************************* */
+/* ********************************************* END: Session Variables for SCD ********************************************* */ /* ********************************************* END: Session Variables used for debuging ********************************************* */
 EXECUTE IMMEDIATE $$
 
 DECLARE

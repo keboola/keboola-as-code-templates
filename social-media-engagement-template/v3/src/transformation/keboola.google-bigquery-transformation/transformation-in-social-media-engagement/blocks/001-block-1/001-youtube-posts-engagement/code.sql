@@ -1,32 +1,25 @@
-CREATE TABLE IF NOT EXISTS "posts_engagement"
-(
-    "uid" VARCHAR(1024) NOT NULL,
-    "post_id" VARCHAR(1024),
-    "source" VARCHAR(255),
-    "date" DATE,
-    "post_text" VARCHAR(1024),
-    "shares" INTEGER,
-    "views" INTEGER,
-    "likes" INTEGER,
-    "comments" INTEGER,
-    "all_reactions" INTEGER
-);
-
-INSERT INTO "posts_engagement"
+CREATE TABLE IF NOT EXISTS `posts_engagement` (
+  `uid` STRING(1024) NOT NULL,
+  `post_id` STRING(1024),
+  `source` STRING(255),
+  `date` DATE,
+  `post_text` STRING(1024),
+  `shares` INT64,
+  `views` INT64,
+  `likes` INT64,
+  `comments` INT64,
+  `all_reactions` INT64
+)
+INSERT INTO `posts_engagement`
 SELECT
-    CONCAT(
-        try_to_date("snippet_publishedAt"),
-        '-youtube-',
-        "id"
-    ) AS "uid",
-    "id" AS "post_id",
-    'youtube' AS "source",
-    try_to_date("snippet_publishedAt") AS "date",
-    "snippet_title" AS "post_text",
-    0 AS "shares",
-    ZEROIFNULL("statistics_viewCount") AS "views",
-    ZEROIFNULL("statistics_likeCount") AS "likes",
-    ZEROIFNULL("statistics_commentCount") AS "comments",
-    "likes" + ZEROIFNULL("statistics_favoriteCount") + "comments" AS "all_reactions"
-FROM
-    "youtube_videosDetail";
+  CONCAT(CAST(`snippet_publishedAt` AS DATE), '-youtube-', `id`) AS `uid`,
+  `id` AS `post_id`,
+  'youtube' AS `source`,
+  CAST(`snippet_publishedAt` AS DATE) AS `date`,
+  `snippet_title` AS `post_text`,
+  0 AS `shares`,
+  IF(`statistics_viewCount` IS NULL, 0, `statistics_viewCount`) AS `views`,
+  IF(`statistics_likeCount` IS NULL, 0, `statistics_likeCount`) AS `likes`,
+  IF(`statistics_commentCount` IS NULL, 0, `statistics_commentCount`) AS `comments`,
+  `likes` + IF(`statistics_favoriteCount` IS NULL, 0, `statistics_favoriteCount`) + `comments` AS `all_reactions`
+FROM `youtube_videosDetail`

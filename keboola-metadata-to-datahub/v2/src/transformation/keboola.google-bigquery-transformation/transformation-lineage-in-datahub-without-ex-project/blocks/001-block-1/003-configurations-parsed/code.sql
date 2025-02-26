@@ -1,12 +1,8 @@
-CREATE TABLE "configurations_parsed" AS
-SELECT 
-  *
-FROM 
-  "rows_json" c 
- 
-UNION ALL
-
+CREATE TABLE `configurations_parsed` AS
 SELECT
   *
-FROM 
-  "configuration_json" c;
+FROM `rows_json` AS c
+UNION ALL
+SELECT
+  *
+FROM `configuration_json` AS c
