@@ -37,4 +37,4 @@ SELECT
   `actual_value`,
   `plan_value`,
   `type`
-FROM `total_customers`
+FROM `total_customers`;

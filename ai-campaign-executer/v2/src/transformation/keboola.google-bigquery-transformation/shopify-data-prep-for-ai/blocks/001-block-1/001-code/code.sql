@@ -20,4 +20,4 @@ GROUP BY
   c.`first_name`,
   c.`phone`,
   p.`title`,
-  p.`body_html`
+  p.`body_html`;

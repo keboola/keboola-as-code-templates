@@ -17,4 +17,4 @@ SELECT
   tc.`type`
 FROM total_customers AS tc
 LEFT JOIN `plan_daily` AS p
-  ON tc.`kpi_name` = p.`metric_name` AND tc.`date` = p.`date`
+  ON tc.`kpi_name` = p.`metric_name` AND tc.`date` = p.`date`;

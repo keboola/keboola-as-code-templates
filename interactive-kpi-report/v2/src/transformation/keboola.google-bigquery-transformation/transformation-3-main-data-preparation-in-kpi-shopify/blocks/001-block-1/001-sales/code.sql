@@ -19,4 +19,4 @@ SELECT
   s.`type`
 FROM sales AS s
 LEFT JOIN `plan_daily` AS p
-  ON s.`kpi_name` = p.`metric_name` AND s.`date` = p.`date`
+  ON s.`kpi_name` = p.`metric_name` AND s.`date` = p.`date`;

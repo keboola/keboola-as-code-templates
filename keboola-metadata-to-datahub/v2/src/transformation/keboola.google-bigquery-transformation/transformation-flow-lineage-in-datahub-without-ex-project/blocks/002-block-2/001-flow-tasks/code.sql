@@ -32,4 +32,4 @@ LEFT JOIN `phase_configs_tmp` AS orch_phases
   AND orch_tasks.`phase` = orch_phases.`phase_id`
 ORDER BY
   `orchestration_id` NULLS LAST,
-  `phase_index` NULLS LAST
+  `phase_index` NULLS LAST;

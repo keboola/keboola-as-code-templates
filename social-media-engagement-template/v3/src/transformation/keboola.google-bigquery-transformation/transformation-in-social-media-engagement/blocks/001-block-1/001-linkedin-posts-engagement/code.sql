@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS `posts_engagement` (
   `likes` INT64,
   `comments` INT64,
   `all_reactions` INT64
-)
+);
+
 INSERT INTO `posts_engagement`
 SELECT
   CONCAT(CAST(`createdAt` AS DATE), '-linkedin-', `id`) AS `uid`,
@@ -28,4 +29,4 @@ LEFT OUTER JOIN `linkedin_likes`
 GROUP BY
   `id`,
   `createdAt`,
-  `commentary`
+  `commentary`;

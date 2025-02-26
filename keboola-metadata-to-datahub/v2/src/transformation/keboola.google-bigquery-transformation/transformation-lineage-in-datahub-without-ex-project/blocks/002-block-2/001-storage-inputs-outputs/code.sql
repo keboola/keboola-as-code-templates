@@ -137,4 +137,4 @@ LEFT JOIN storage_outputs_sources
 LEFT JOIN storage_outputs_destinations
   USING (`id`, `region`, `project_id`, `project_name`, `name`, `component_id`, `component_name`, `component_type`, config_path)
 WHERE
-  NOT STORAGE_INPUTS_SOURCES IS NULL OR NOT STORAGE_OUTPUTS_DESTINATIONS IS NULL
+  NOT STORAGE_INPUTS_SOURCES IS NULL OR NOT STORAGE_OUTPUTS_DESTINATIONS IS NULL;

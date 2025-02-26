@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS `pages_engagement` (
   `page_followers` INT64,
   `page_views_total` INT64,
   `page_posts_impressions` INT64
-)
+);
+
 INSERT INTO `pages_engagement`
 SELECT
   'instagram' AS `source`,
@@ -19,4 +20,4 @@ FROM (
 )
 PIVOT(MAX(`value`) FOR `name` IN ('reach', 'website_clicks', 'phone_call_clicks', 'email_contacts', 'profile_views', 'get_directions_clicks', 'text_message_clicks', 'impressions', 'follower_count'))
 GROUP BY
-  `date`
+  `date`;

@@ -19,4 +19,4 @@ SELECT
   a.`type`
 FROM AOV AS a
 LEFT JOIN `plan_daily` AS p
-  ON a.`kpi_name` = p.`metric_name` AND a.`date` = p.`date`
+  ON a.`kpi_name` = p.`metric_name` AND a.`date` = p.`date`;

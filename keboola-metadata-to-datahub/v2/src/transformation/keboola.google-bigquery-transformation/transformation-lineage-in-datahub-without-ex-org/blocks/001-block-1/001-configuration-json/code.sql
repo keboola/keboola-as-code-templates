@@ -25,4 +25,4 @@ SELECT
   configs.index AS config_index,
   configs.value AS config_value,
   configs.this AS config_this
-FROM `configurations` AS c, LATERAL EXPLODE(PARSE_JSON(c.`configuration`), recursive => TRUE, outer => TRUE) AS configs
+FROM `configurations` AS c, LATERAL EXPLODE(PARSE_JSON(c.`configuration`), recursive => TRUE, outer => TRUE) AS configs;

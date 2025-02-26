@@ -3,7 +3,8 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `ads_system` STRING NOT NULL,
   `account_id` STRING NOT NULL,
   `account_name` STRING NOT NULL
-)
+);
+
 INSERT INTO `accounts` (
   `ads_system`,
   `account_id`,
@@ -13,7 +14,8 @@ SELECT
   'facebook' AS `ads_system`,
   `account_id`,
   `name`
-FROM `Facebook_Ads_accounts`
+FROM `Facebook_Ads_accounts`;
+
 /* collect all ads system in one table */
 CREATE OR REPLACE TABLE `tmp_ads_systems` AS
 SELECT
@@ -54,7 +56,8 @@ GROUP BY
   `source`,
   `medium`,
   `campaign`,
-  `domain`
+  `domain`;
+
 /* final facebook marketing table */
 CREATE TABLE IF NOT EXISTS `out_marketing` (
   `online_marketing_traffic_id` STRING(1024) NOT NULL,
@@ -68,7 +71,8 @@ CREATE TABLE IF NOT EXISTS `out_marketing` (
   `clicks` INT64,
   `costs_cpc` FLOAT64,
   `costs_conversion` FLOAT64
-)
+);
+
 INSERT INTO `out_marketing`
 SELECT
   `id` AS `online_marketing_traffic_id`,
@@ -94,4 +98,4 @@ FROM (
     NOT `id` IS NULL
   GROUP BY
     `id`
-) AS t
+) AS t;

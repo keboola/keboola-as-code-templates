@@ -5,4 +5,4 @@ FROM `rows_json` AS c
 UNION ALL
 SELECT
   *
-FROM `configuration_json` AS c
+FROM `configuration_json` AS c;

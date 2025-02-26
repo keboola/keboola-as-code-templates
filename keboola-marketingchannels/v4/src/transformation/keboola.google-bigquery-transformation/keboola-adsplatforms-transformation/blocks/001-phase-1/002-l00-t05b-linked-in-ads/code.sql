@@ -16,14 +16,16 @@ LEFT JOIN `linkedin_campaigns` AS b
 LEFT JOIN `linkedin_ads_cost` AS c
   ON a.`pk` = c.`pk`
 WHERE
-  a.`pivot` = 'CAMPAIGN' AND c.`pivot` = 'CAMPAIGN'
+  a.`pivot` = 'CAMPAIGN' AND c.`pivot` = 'CAMPAIGN';
+
 /* output table grouping */
 CREATE TABLE `out_linkedin` (
   `linkedin_id` STRING(1024) NOT NULL,
   `impressions` INT64,
   `clicks` INT64,
   `costs` FLOAT64
-)
+);
+
 INSERT INTO `out_linkedin`
 SELECT
   COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`currency`, '') || '*' || COALESCE(`account_id`, '') AS `linkedin_id`,
@@ -38,4 +40,4 @@ GROUP BY
   `campaign`,
   `domain`,
   `currency`,
-  `account_id`
+  `account_id`;

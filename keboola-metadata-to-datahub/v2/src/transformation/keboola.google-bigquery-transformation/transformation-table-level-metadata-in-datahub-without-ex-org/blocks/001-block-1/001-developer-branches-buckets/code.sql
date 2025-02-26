@@ -32,4 +32,4 @@ SELECT
   `sourceBucket__created`
 FROM `storage_buckets` AS sb
 LEFT JOIN `kbc_branch` AS br
-  ON `branch_id` = br.`kbc_branch_id`
+  ON `branch_id` = br.`kbc_branch_id`;

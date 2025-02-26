@@ -5,7 +5,8 @@ SELECT
   EXTRACT(month FROM date) AS month
 FROM TABLE(generator(rowcount => 366 * (
   YEAR(CURRENT_DATE) - 2017
-)))
+)));
+
 CREATE TABLE `out_plan_daily` AS
 WITH days AS (
   SELECT
@@ -38,4 +39,4 @@ FROM date_series AS ds
 FULL OUTER JOIN plan_value_monthly AS p
   ON ds.year = p.`year` AND ds.month = p.`month`
 WHERE
-  NOT `metric_name` IS NULL
+  NOT `metric_name` IS NULL;

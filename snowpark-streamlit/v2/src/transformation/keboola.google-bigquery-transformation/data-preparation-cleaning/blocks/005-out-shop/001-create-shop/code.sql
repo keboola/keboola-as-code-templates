@@ -21,4 +21,4 @@ SELECT DISTINCT
     ELSE CONCAT('www.', SPLIT_PART(SPLIT_PART(`order_status_url`, 'www.', 2), '/', 1))
   END AS BASE_URL,
   NULL AS DOMAIN
-FROM `order`
+FROM `order`;

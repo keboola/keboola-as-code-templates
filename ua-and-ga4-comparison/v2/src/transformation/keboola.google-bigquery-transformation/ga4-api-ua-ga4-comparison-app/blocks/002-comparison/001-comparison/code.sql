@@ -5,7 +5,8 @@ WHERE
   AND `COMPARISON`.`source` = GA4API.`source`
   AND `COMPARISON`.`medium` = GA4API.`medium`
   AND `COMPARISON`.`campaign` = GA4API.`campaign`
-  AND `COMPARISON`.`source_medium` = GA4API.`source_medium`
+  AND `COMPARISON`.`source_medium` = GA4API.`source_medium`;
+
 CREATE TABLE `COMPARISON2` AS
 SELECT
   `source_medium`,
@@ -51,4 +52,4 @@ WHERE
     SELECT
       CONCAT_WS('_', `source_medium`, `date`, `medium`, `source`, `campaign`)
     FROM `COMPARISON`
-  )
+  );

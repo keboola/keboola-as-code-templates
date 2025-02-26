@@ -11,7 +11,8 @@ SET map_seq_col = '';
 SET map_soft_delete = true;
 SET map_subset_filter = 'OKOPROD_LEAF_FLAG=''N''';
 SET map_data_cols_exceptions = '';
-*/ /* ********************************************* END: Session Variables used for debuging ********************************************* */ /* ********************************************* BEGIN: Session Variables for SCD ********************************************* */
+*/ /* ********************************************* END: Session Variables used for debuging ********************************************* */ /* ********************************************* BEGIN: Session Variables for SCD ********************************************* */;
+
 /* ********************************************* END: Session Variables for SCD ********************************************* */ /* ********************************************* END: Session Variables used for debuging ********************************************* */
 EXECUTE IMMEDIATE $$
 
@@ -325,4 +326,4 @@ RETURN 'Done OK';
 
 END;
 
-$$
+$$;

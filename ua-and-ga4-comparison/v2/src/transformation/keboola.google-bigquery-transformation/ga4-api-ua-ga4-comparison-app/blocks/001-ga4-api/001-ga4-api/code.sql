@@ -25,4 +25,4 @@ SELECT
   *
 FROM `users`
 FULL OUTER JOIN `transactions`
-  USING (`date`, `source`, `medium`, `campaign`, `source_medium`)
+  USING (`date`, `source`, `medium`, `campaign`, `source_medium`);

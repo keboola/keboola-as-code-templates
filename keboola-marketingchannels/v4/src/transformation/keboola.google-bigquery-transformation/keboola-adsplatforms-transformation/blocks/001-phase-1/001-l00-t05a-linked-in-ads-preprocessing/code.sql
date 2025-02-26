@@ -33,7 +33,8 @@ SELECT
   ABS.`companyPageClicks`,
   ABS.`likes`,
   ABS.`commentLikes`
-FROM `linkedinraw_ads_basic_stats` AS ABS
+FROM `linkedinraw_ads_basic_stats` AS ABS;
+
 CREATE OR REPLACE TABLE `linkedin_ads_cost` AS
 SELECT
   CONCAT_WS(
@@ -59,7 +60,8 @@ SELECT
   AC.`costInUsd`,
   AC.`conversionValueInLocalCurrency`,
   AC.`costInLocalCurrency`
-FROM `linkedinraw_ads_cost` AS AC
+FROM `linkedinraw_ads_cost` AS AC;
+
 CREATE OR REPLACE TABLE `linkedin_campaigns` AS
 SELECT
   'urn:li:sponsoredCampaign:' || `id` AS `campaign_id`,
@@ -87,4 +89,4 @@ SELECT
   `type`,
   `unitCost_currencyCode`,
   `creativeSelection`
-FROM `linkedinraw_campaigns`
+FROM `linkedinraw_campaigns`;

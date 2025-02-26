@@ -9,4 +9,4 @@ SELECT
   SUM(`sessions`) AS `ua_sessions`,
   SUM(`users`) AS `ua_users`
 FROM `Universal-Analytics`
-GROUP BY ALL
+GROUP BY ALL;

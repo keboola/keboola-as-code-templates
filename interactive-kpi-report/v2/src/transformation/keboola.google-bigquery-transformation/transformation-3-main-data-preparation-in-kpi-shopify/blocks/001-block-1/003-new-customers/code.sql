@@ -19,4 +19,4 @@ SELECT
   nc.`type`
 FROM new_customers AS nc
 LEFT JOIN `plan_daily` AS p
-  ON nc.`kpi_name` = p.`metric_name` AND nc.`date` = p.`date`
+  ON nc.`kpi_name` = p.`metric_name` AND nc.`date` = p.`date`;

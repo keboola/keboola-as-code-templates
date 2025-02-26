@@ -17,4 +17,4 @@ SELECT
   '' AS `ga4_ua_users`,
   '' AS `ga4_ua_sessions`,
   '' AS `ga4_ua_transactions`
-FROM UA
+FROM UA;

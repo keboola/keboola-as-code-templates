@@ -25,14 +25,16 @@ LEFT JOIN `Google_Adwords_customers` AS b
 LEFT JOIN `Google_Adwords_url_adwords` AS `d`
   ON a.`campaignId` = `d`.`campaignId`
   AND a.`adGroupId` = `d`.`adGroupId`
-  AND a.`segmentsDate` = `d`.`segmentsDate`
+  AND a.`segmentsDate` = `d`.`segmentsDate`;
+
 /* output table grouping */
 CREATE TABLE `out_adwords` (
   `adwords_id` STRING(1024) NOT NULL,
   `impressions` INT64,
   `clicks` INT64,
   `costs` FLOAT64
-)
+);
+
 INSERT INTO `out_adwords`
 SELECT
   COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`currency`, '') || '*' || COALESCE(`account_id`, '') AS `adwords_id`,
@@ -47,4 +49,4 @@ GROUP BY
   `campaign`,
   `domain`,
   `currency`,
-  `account_id`
+  `account_id`;

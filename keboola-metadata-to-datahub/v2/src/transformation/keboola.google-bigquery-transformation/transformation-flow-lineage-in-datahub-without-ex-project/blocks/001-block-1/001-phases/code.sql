@@ -25,4 +25,4 @@ SELECT
 FROM P
 ORDER BY
   `orchestration_id` NULLS LAST,
-  `phase_index` NULLS LAST
+  `phase_index` NULLS LAST;

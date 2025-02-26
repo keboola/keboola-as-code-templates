@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS `posts_engagement` (
   `likes` INT64,
   `comments` INT64,
   `all_reactions` INT64
-)
+);
+
 INSERT INTO `posts_engagement`
 WITH insights_pivoted AS (
   SELECT
@@ -40,4 +41,4 @@ SELECT
   `comments` + `likes` AS `all_reactions`
 FROM `instagram_media`
 LEFT JOIN insights_pivoted
-  ON `instagram_media`.`id` = insights_pivoted.`parent_id`
+  ON `instagram_media`.`id` = insights_pivoted.`parent_id`;

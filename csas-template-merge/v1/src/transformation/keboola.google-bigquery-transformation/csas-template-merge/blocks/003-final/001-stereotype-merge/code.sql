@@ -11,7 +11,8 @@ SET map_seq_col = 'RPSP_KEY';
 SET map_soft_delete = false;
 SET map_subset_filter = 'CHANNEL_ID=''BRANCH''';
 SET map_data_cols_exceptions = 'INT_RATE_VALID_FROM,INT_RATE_VALID_TO';
-*/ /* ********************************************* END: Session Variables used for debuging ********************************************* */ /* ********************************************* BEGIN: Session Variables for MERGE ********************************************* */
+*/ /* ********************************************* END: Session Variables used for debuging ********************************************* */ /* ********************************************* BEGIN: Session Variables for MERGE ********************************************* */;
+
 /* ********************************************* END: Session Variables for MERGE ********************************************* */
 EXECUTE IMMEDIATE $$
 DECLARE
@@ -184,4 +185,4 @@ RETURN 'Done OK';
 
 END;
 
-$$
+$$;

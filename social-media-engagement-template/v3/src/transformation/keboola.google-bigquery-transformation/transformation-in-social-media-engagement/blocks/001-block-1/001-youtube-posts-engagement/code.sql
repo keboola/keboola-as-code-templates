@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS `posts_engagement` (
   `likes` INT64,
   `comments` INT64,
   `all_reactions` INT64
-)
+);
+
 INSERT INTO `posts_engagement`
 SELECT
   CONCAT(CAST(`snippet_publishedAt` AS DATE), '-youtube-', `id`) AS `uid`,
@@ -22,4 +23,4 @@ SELECT
   IF(`statistics_likeCount` IS NULL, 0, `statistics_likeCount`) AS `likes`,
   IF(`statistics_commentCount` IS NULL, 0, `statistics_commentCount`) AS `comments`,
   `likes` + IF(`statistics_favoriteCount` IS NULL, 0, `statistics_favoriteCount`) + `comments` AS `all_reactions`
-FROM `youtube_videosDetail`
+FROM `youtube_videosDetail`;

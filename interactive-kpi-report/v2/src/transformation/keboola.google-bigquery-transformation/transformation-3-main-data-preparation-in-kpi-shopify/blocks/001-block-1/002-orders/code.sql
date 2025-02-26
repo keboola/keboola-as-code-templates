@@ -17,4 +17,4 @@ SELECT
   o.`type`
 FROM orders AS o
 LEFT JOIN `plan_daily` AS p
-  ON o.`kpi_name` = p.`metric_name` AND o.`date` = p.`date`
+  ON o.`kpi_name` = p.`metric_name` AND o.`date` = p.`date`;

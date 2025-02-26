@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS `pages_engagement` (
   `page_followers` INT64,
   `page_views_total` INT64,
   `page_posts_impressions` INT64
-)
+);
+
 INSERT INTO `pages_engagement`
 SELECT
   'facebook' AS `source`,
@@ -23,4 +24,4 @@ PIVOT(MAX(`value`) FOR `name` IN ('page_fan_adds', 'page_negative_feedback', 'pa
 WHERE
   `date` < GETDATE()
 GROUP BY
-  `date`
+  `date`;

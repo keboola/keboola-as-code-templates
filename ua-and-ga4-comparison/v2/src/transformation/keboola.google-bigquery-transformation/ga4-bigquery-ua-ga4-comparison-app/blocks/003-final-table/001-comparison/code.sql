@@ -5,7 +5,8 @@ WHERE
   AND `COMPARISON`.`source` = GA4UA.`source`
   AND `COMPARISON`.`medium` = GA4UA.`medium`
   AND `COMPARISON`.`campaign` = GA4UA.`campaign`
-  AND `COMPARISON`.`source_medium` = GA4UA.`source_medium`
+  AND `COMPARISON`.`source_medium` = GA4UA.`source_medium`;
+
 CREATE OR REPLACE TABLE `COMPARISON2` AS
 SELECT
   `source_medium`,
@@ -51,7 +52,8 @@ WHERE
     SELECT
       CONCAT_WS('_', `source_medium`, `date`, `medium`, `source`, `campaign`)
     FROM `COMPARISON`
-  )
+  );
+
 UPDATE `COMPARISON2` SET `ga4export_users` = GA4EXPORT.`ga4export_users`, `ga4export_sessions` = GA4EXPORT.`ga4export_sessions`, `ga4export_transactions` = GA4EXPORT.`ga4export_transactions`
 FROM GA4EXPORT
 WHERE
@@ -59,7 +61,8 @@ WHERE
   AND `COMPARISON2`.`source` = GA4EXPORT.`source`
   AND `COMPARISON2`.`medium` = GA4EXPORT.`medium`
   AND `COMPARISON2`.`campaign` = GA4EXPORT.`campaign`
-  AND `COMPARISON2`.`source_medium` = GA4EXPORT.`source_medium`
+  AND `COMPARISON2`.`source_medium` = GA4EXPORT.`source_medium`;
+
 CREATE OR REPLACE TABLE `COMPARISON3` AS
 SELECT
   `source_medium`,
@@ -105,4 +108,4 @@ WHERE
     SELECT
       CONCAT_WS('_', `source_medium`, `date`, `medium`, `source`, `campaign`)
     FROM `COMPARISON2`
-  )
+  );

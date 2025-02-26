@@ -143,4 +143,4 @@ SELECT
   COUNT(DISTINCT SESSION_ID) AS `ga4_ua_sessions`,
   SUM(WIZARD_COMPLETED) AS `ga4_ua_transactions`
 FROM final_distribution
-GROUP BY ALL
+GROUP BY ALL;

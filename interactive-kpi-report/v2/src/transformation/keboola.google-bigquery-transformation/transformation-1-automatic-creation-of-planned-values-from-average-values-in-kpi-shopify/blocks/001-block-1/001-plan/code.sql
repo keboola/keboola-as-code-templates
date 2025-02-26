@@ -8,7 +8,8 @@ SELECT
 FROM `order`
 GROUP BY
   1,
-  2
+  2;
+
 /* orders */
 CREATE TABLE `orders_monthly` AS
 SELECT
@@ -19,7 +20,8 @@ SELECT
 FROM `order`
 GROUP BY
   1,
-  2
+  2;
+
 /* new customers */
 CREATE TABLE `new_customers_monthly` AS
 SELECT
@@ -32,7 +34,8 @@ WHERE
   `last_order_id` = ''
 GROUP BY
   1,
-  2
+  2;
+
 /* AOV */
 CREATE TABLE `AOV_monthly` AS
 SELECT
@@ -49,7 +52,8 @@ SELECT
 FROM `order`
 GROUP BY
   1,
-  2
+  2;
+
 /* total customers */
 CREATE TABLE `total_customers_monthly` AS
 SELECT
@@ -60,7 +64,8 @@ SELECT
 FROM `customer`
 GROUP BY
   1,
-  2
+  2;
+
 /* final table "plan_monthly" */
 CREATE TABLE `out_plan_monthly` AS
 SELECT
@@ -96,8 +101,9 @@ SELECT
   `month`,
   `metric_name`,
   `plan_value`
-FROM `total_customers_monthly`
+FROM `total_customers_monthly`;
+
 /* dummy table creation to have bucket for data app */
 CREATE TABLE `test` AS
 SELECT
-  1 AS `value`
+  1 AS `value`;

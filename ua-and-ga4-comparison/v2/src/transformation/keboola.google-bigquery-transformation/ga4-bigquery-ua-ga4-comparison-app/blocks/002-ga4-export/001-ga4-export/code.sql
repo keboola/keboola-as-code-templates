@@ -89,4 +89,4 @@ SELECT
   COUNT(DISTINCT SESSION_ID) AS `ga4export_sessions`,
   SUM(WIZARD_COMPLETED) AS `ga4export_transactions`
 FROM column_naming
-GROUP BY ALL
+GROUP BY ALL;

@@ -24,4 +24,4 @@ FROM (
   FROM `storage_inputs_and_outputs` AS STORAGE
   LEFT JOIN `orchestrations_v2_tasks` AS orch
     ON STORAGE.`id` = orch.`config_id`
-)
+);

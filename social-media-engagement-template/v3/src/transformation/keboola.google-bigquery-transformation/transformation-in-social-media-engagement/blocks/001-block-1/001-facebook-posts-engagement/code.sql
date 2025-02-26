@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS `posts_engagement` (
   `likes` INT64,
   `comments` INT64,
   `all_reactions` INT64
-)
+);
+
 INSERT INTO `posts_engagement`
 SELECT
   CONCAT(CAST(replace(`created_time`, '+0000') AS DATE), '-facebook-', `id`) AS `uid`,
@@ -24,4 +25,4 @@ SELECT
   `shares` + `likes` AS `all_reactions`
 FROM `facebook_feed` AS f1
 LEFT JOIN `facebook_feed_likes_summary` AS f2
-  ON f1.`id` = f2.`parent_id`
+  ON f1.`id` = f2.`parent_id`;
