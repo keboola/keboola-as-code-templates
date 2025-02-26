@@ -1,0 +1,1 @@
+This transformation converts monthly planned values into daily values.

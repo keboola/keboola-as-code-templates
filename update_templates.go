@@ -310,11 +310,6 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 
 // UpdateTemplates walks through all template directories and updates jsonnet files
 func (tu *TemplateUpdater) UpdateTemplates(updateOrchestrator bool, cleanupOrchestrator bool) error {
-	// First duplicate all standalone Snowflake transformation directories
-	if err := tu.duplicateStandaloneTransformations(); err != nil {
-		return fmt.Errorf("failed to duplicate standalone transformations: %w", err)
-	}
-
 	return filepath.Walk(tu.rootDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -378,109 +373,23 @@ type Repository struct {
 	Templates []RepositoryTemplate `json:"templates"`
 }
 
-// duplicateSnowflakeDirectories duplicates snowflake directories to bigquery in the given path
-func (tu *TemplateUpdater) duplicateSnowflakeDirectories(path string) error {
-	// Get all subdirectories
-	var dirs []string
-	err := filepath.Walk(path, func(p string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-		if !info.IsDir() {
-			return nil
+// findTransformationDir traverses up the directory tree until it finds the "transformation" directory
+func findTransformationDir(path string) (string, error) {
+	current := path
+	for {
+		// Check if we've hit the root
+		if current == "/" || current == "." {
+			return "", fmt.Errorf("transformation directory not found in path: %s", path)
 		}
 
-		// Check if this is a snowflake directory under keboola.orchestrator
-		if strings.Contains(info.Name(), "snowflake") {
-			// Check if any parent directory is keboola.orchestrator
-			currentPath := p
-			for currentPath != path {
-				if strings.Contains(filepath.Base(currentPath), "keboola.orchestrator") {
-					dirs = append(dirs, p)
-					break
-				}
-				currentPath = filepath.Dir(currentPath)
-			}
+		// Check if this is the transformation directory
+		if filepath.Base(current) == "transformation" {
+			return current, nil
 		}
-		return nil
-	})
-	if err != nil {
-		return fmt.Errorf("failed to walk directory %s: %w", path, err)
+
+		// Go up one directory
+		current = filepath.Dir(current)
 	}
-
-	// Process directories in reverse order (deepest first)
-	for i := len(dirs) - 1; i >= 0; i-- {
-		dirPath := dirs[i]
-		dirName := filepath.Base(dirPath)
-		// Create the new directory name
-		newDirName := strings.ReplaceAll(dirName, "keboola.snowflake-transformation", "keboola.google-bigquery-transformation")
-		newDirPath := filepath.Join(filepath.Dir(dirPath), newDirName)
-
-		// Create new directory and copy contents
-		if err := os.MkdirAll(newDirPath, 0755); err != nil {
-			return fmt.Errorf("failed to create directory %s: %w", newDirPath, err)
-		}
-
-		// Copy directory contents
-		err := filepath.Walk(dirPath, func(srcPath string, info os.FileInfo, err error) error {
-			if err != nil {
-				return err
-			}
-
-			// Get relative path
-			relPath, err := filepath.Rel(dirPath, srcPath)
-			if err != nil {
-				return err
-			}
-
-			destPath := filepath.Join(newDirPath, relPath)
-
-			if info.IsDir() {
-				return os.MkdirAll(destPath, 0755)
-			}
-
-			// Copy file
-			data, err := os.ReadFile(srcPath)
-			if err != nil {
-				return err
-			}
-
-			if strings.Contains(srcPath, "transformation") && strings.Contains(string(data), " isIgnored: InputIsAvailable") {
-				// Extract the input parameter from the original string
-				originalStr := string(data)
-				start := strings.Index(originalStr, `InputIsAvailable("`) + len(`InputIsAvailable("`)
-				end := strings.Index(originalStr[start:], `"`) + start
-				inputParam := originalStr[start:end]
-
-				data = []byte(strings.ReplaceAll(string(data),
-					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false`, inputParam),
-					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false || HasProjectBackend("bigquery") == false`, inputParam),
-				))
-			}
-
-			// For task.jsonnet and kbcdir.jsonnet, modify content before writing
-			switch filepath.Base(srcPath) {
-			case "task.jsonnet":
-				content := strings.ReplaceAll(string(data),
-					"keboola.snowflake-transformation",
-					"keboola.google-bigquery-transformation")
-				data = []byte(content)
-			case "kbcdir.jsonnet":
-				content := strings.ReplaceAll(string(data),
-					"\"snowflake\"",
-					"\"bigquery\"")
-				data = []byte(content)
-			}
-
-			return os.WriteFile(destPath, data, 0644)
-		})
-		if err != nil {
-			return fmt.Errorf("failed to copy directory contents from %s to %s: %w", dirPath, newDirPath, err)
-		}
-		fmt.Printf("Created BigQuery directory: %s (duplicated from %s)\n", newDirPath, dirPath)
-	}
-
-	return nil
 }
 
 // duplicateStandaloneTransformationsInDir finds and duplicates standalone Snowflake transformation directories to BigQuery in a specific directory
@@ -495,11 +404,28 @@ func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath strin
 			return nil
 		}
 
-		// Check if this is a standalone Snowflake transformation directory
-		if strings.Contains(path, "transformation/keboola.snowflake-transformation") {
+		// Check if this is a keboola.snowflake-transformation directory
+		if filepath.Base(path) == "keboola.snowflake-transformation" {
 			// Make sure it's not inside an orchestrator
 			if !strings.Contains(path, "keboola.orchestrator") {
-				transformationDirs = append(transformationDirs, path)
+				// Search for code.sql in this directory and all subdirectories
+				hasCodeSql := false
+				err := filepath.Walk(path, func(subPath string, subInfo os.FileInfo, err error) error {
+					if err != nil {
+						return err
+					}
+					if !subInfo.IsDir() && subInfo.Name() == "code.sql" {
+						hasCodeSql = true
+						return filepath.SkipDir // Found what we need, stop walking
+					}
+					return nil
+				})
+				if err != nil {
+					return err
+				}
+				if hasCodeSql {
+					transformationDirs = append(transformationDirs, path)
+				}
 			}
 		}
 		return nil
@@ -510,16 +436,9 @@ func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath strin
 
 	// Process each transformation directory
 	for _, dirPath := range transformationDirs {
-		// Check if code.sql exists in this directory
-		codeSqlPath := filepath.Join(dirPath, "code.sql")
-		if _, err := os.Stat(codeSqlPath); os.IsNotExist(err) {
-			// Skip this directory if code.sql doesn't exist
-			continue
-		}
-
-		// Create the new directory path
+		// Create the new directory path at the same level
 		parentDir := filepath.Dir(dirPath)
-		newDirPath := filepath.Join(parentDir, "keboola-google-bigquery-transformation")
+		newDirPath := filepath.Join(parentDir, "keboola.google-bigquery-transformation")
 
 		// Create new directory
 		if err := os.MkdirAll(newDirPath, 0755); err != nil {
@@ -527,7 +446,7 @@ func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath strin
 		}
 
 		// Copy directory contents
-		err := filepath.Walk(dirPath, func(srcPath string, info os.FileInfo, err error) error {
+		err = filepath.Walk(dirPath, func(srcPath string, info os.FileInfo, err error) error {
 			if err != nil {
 				return err
 			}
@@ -566,11 +485,6 @@ func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath strin
 		fmt.Printf("==========================================================\n\n")
 	}
 	return nil
-}
-
-// duplicateStandaloneTransformations finds and duplicates standalone Snowflake transformation directories to BigQuery
-func (tu *TemplateUpdater) duplicateStandaloneTransformations() error {
-	return tu.duplicateStandaloneTransformationsInDir(tu.rootDir)
 }
 
 // UpdateRepositoryVersions updates repository.json with new major versions
