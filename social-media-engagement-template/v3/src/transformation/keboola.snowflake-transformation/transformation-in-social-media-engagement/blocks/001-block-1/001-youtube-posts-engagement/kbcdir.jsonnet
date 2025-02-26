@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("oauth-youtube") == false,
+  isIgnored: InputIsAvailable("oauth-youtube") == false || HasProjectBackend("snowflake") == false,
 }

@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("oauth-instagram") == false,
+  isIgnored: InputIsAvailable("oauth-instagram") == false || HasProjectBackend("snowflake") == false,
 }

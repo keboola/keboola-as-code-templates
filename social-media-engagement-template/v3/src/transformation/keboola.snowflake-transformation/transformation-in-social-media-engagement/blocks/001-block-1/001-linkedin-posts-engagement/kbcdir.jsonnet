@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("oauth-linkedinads") == false,
+  isIgnored: InputIsAvailable("oauth-linkedinads") == false || HasProjectBackend("snowflake") == false,
 }
