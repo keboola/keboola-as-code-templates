@@ -26,20 +26,119 @@ func NewTemplateUpdater(rootDir string) *TemplateUpdater {
 
 // processOrchestratorFiles handles the modification of task.jsonnet and kbcdir.jsonnet files
 func (tu *TemplateUpdater) processOrchestratorFiles(path string) error {
-	// Check if this is a transformation orchestrator folder
-	basePath := filepath.Base(path)
-	if !strings.Contains(basePath, "transformation") && !strings.Contains(basePath, "keboola.snowflake-transformation") {
+	// Check if we're in an orchestrator path
+	if !strings.Contains(path, "keboola.orchestrator") {
 		return nil
 	}
 
-	// Skip if this is already a bigquery transformation folder
-	if strings.Contains(basePath, "google-bigquery-transformation") {
+	// Check if this is a phase folder within an orchestrator
+	parentDir := filepath.Dir(path)
+	parentBase := filepath.Base(parentDir)
+
+	// Only process if we're in a phases folder
+	if parentBase != "phases" {
 		return nil
 	}
 
-	// Skip file processing for snowflake folders - they will be duplicated instead
-	if strings.Contains(basePath, "snowflake") {
+	// Find all snowflake transformation folders in this phase
+	var snowflakePaths []string
+	err := filepath.Walk(path, func(subPath string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if info.IsDir() && (strings.Contains(filepath.Base(subPath), "keboola.snowflake-transformation") || strings.Contains(filepath.Base(subPath), "keboola-snowflake-transformation")) {
+			snowflakePaths = append(snowflakePaths, subPath)
+		}
 		return nil
+	})
+	if err != nil {
+		return fmt.Errorf("failed to walk directory %s: %w", path, err)
+	}
+
+	// Process each snowflake transformation folder
+	for _, srcPath := range snowflakePaths {
+		// Create bigquery version path by replacing snowflake with bigquery in the folder name
+		srcBase := filepath.Base(srcPath)
+		destBase := strings.ReplaceAll(srcBase, "snowflake", "bigquery")
+		destPath := filepath.Join(filepath.Dir(srcPath), destBase)
+
+		// Skip if destination already exists
+		if _, err := os.Stat(destPath); err == nil {
+			continue
+		}
+
+		// Create destination directory
+		if err := os.MkdirAll(destPath, 0755); err != nil {
+			return fmt.Errorf("failed to create directory %s: %w", destPath, err)
+		}
+
+		// Copy and modify directory contents
+		err = filepath.Walk(srcPath, func(srcFilePath string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+
+			// Get relative path from the source path
+			relPath, err := filepath.Rel(srcPath, srcFilePath)
+			if err != nil {
+				return err
+			}
+
+			destFilePath := filepath.Join(destPath, relPath)
+
+			if info.IsDir() {
+				// For directories, just create them
+				return os.MkdirAll(destFilePath, 0755)
+			}
+
+			// Read file content
+			data, err := os.ReadFile(srcFilePath)
+			if err != nil {
+				return err
+			}
+
+			if strings.Contains(srcPath, "transformation") && strings.Contains(string(data), " isIgnored: InputIsAvailable") {
+				// Extract the input parameter from the original string
+				originalStr := string(data)
+				start := strings.Index(originalStr, `InputIsAvailable("`) + len(`InputIsAvailable("`)
+				end := strings.Index(originalStr[start:], `"`) + start
+				inputParam := originalStr[start:end]
+
+				data = []byte(strings.ReplaceAll(string(data),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false`, inputParam),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false || HasProjectBackend("bigquery") == false`, inputParam),
+				))
+			}
+
+			// For task.jsonnet and kbcdir.jsonnet, modify content before writing
+			switch filepath.Base(srcFilePath) {
+			case "task.jsonnet":
+				content := strings.ReplaceAll(string(data),
+					"keboola.snowflake-transformation",
+					"keboola.google-bigquery-transformation")
+				data = []byte(content)
+			case "kbcdir.jsonnet":
+				content := strings.ReplaceAll(string(data),
+					"\"snowflake\"",
+					"\"bigquery\"")
+				data = []byte(content)
+			}
+
+			// Replace snowflake transformation references with bigquery
+			// Skip replacement for wr-snowflake components
+			if !strings.Contains(srcFilePath, "keboola-wr-snowflake") {
+				data = []byte(strings.ReplaceAll(string(data), "keboola.snowflake-transformation", "keboola.google-bigquery-transformation"))
+			}
+
+			// Write modified content
+			return os.WriteFile(destFilePath, data, 0644)
+		})
+
+		if err != nil {
+			return fmt.Errorf("failed to copy and modify directory contents from %s to %s: %w", srcPath, destPath, err)
+		}
+
+		fmt.Printf("Created BigQuery version of transformation: %s\n", destPath)
 	}
 
 	return nil
