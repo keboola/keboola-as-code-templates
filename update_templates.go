@@ -310,6 +310,11 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 
 // UpdateTemplates walks through all template directories and updates jsonnet files
 func (tu *TemplateUpdater) UpdateTemplates(updateOrchestrator bool, cleanupOrchestrator bool) error {
+	// First duplicate all standalone Snowflake transformation directories
+	if err := tu.duplicateStandaloneTransformations(); err != nil {
+		return fmt.Errorf("failed to duplicate standalone transformations: %w", err)
+	}
+
 	return filepath.Walk(tu.rootDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -408,7 +413,7 @@ func (tu *TemplateUpdater) duplicateSnowflakeDirectories(path string) error {
 		dirPath := dirs[i]
 		dirName := filepath.Base(dirPath)
 		// Create the new directory name
-		newDirName := strings.ReplaceAll(dirName, "snowflake", "google-bigquery")
+		newDirName := strings.ReplaceAll(dirName, "keboola.snowflake-transformation", "keboola.google-bigquery-transformation")
 		newDirPath := filepath.Join(filepath.Dir(dirPath), newDirName)
 
 		// Create new directory and copy contents
@@ -476,6 +481,96 @@ func (tu *TemplateUpdater) duplicateSnowflakeDirectories(path string) error {
 	}
 
 	return nil
+}
+
+// duplicateStandaloneTransformationsInDir finds and duplicates standalone Snowflake transformation directories to BigQuery in a specific directory
+func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath string) error {
+	// Find all Snowflake transformation directories in the specified directory
+	var transformationDirs []string
+	err := filepath.Walk(dirPath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() {
+			return nil
+		}
+
+		// Check if this is a standalone Snowflake transformation directory
+		if strings.Contains(path, "transformation/keboola.snowflake-transformation") {
+			// Make sure it's not inside an orchestrator
+			if !strings.Contains(path, "keboola.orchestrator") {
+				transformationDirs = append(transformationDirs, path)
+			}
+		}
+		return nil
+	})
+	if err != nil {
+		return fmt.Errorf("failed to walk directory %s: %w", dirPath, err)
+	}
+
+	// Process each transformation directory
+	for _, dirPath := range transformationDirs {
+		// Check if code.sql exists in this directory
+		codeSqlPath := filepath.Join(dirPath, "code.sql")
+		if _, err := os.Stat(codeSqlPath); os.IsNotExist(err) {
+			// Skip this directory if code.sql doesn't exist
+			continue
+		}
+
+		// Create the new directory path
+		parentDir := filepath.Dir(dirPath)
+		newDirPath := filepath.Join(parentDir, "keboola-google-bigquery-transformation")
+
+		// Create new directory
+		if err := os.MkdirAll(newDirPath, 0755); err != nil {
+			return fmt.Errorf("failed to create directory %s: %w", newDirPath, err)
+		}
+
+		// Copy directory contents
+		err := filepath.Walk(dirPath, func(srcPath string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+
+			// Get relative path
+			relPath, err := filepath.Rel(dirPath, srcPath)
+			if err != nil {
+				return err
+			}
+
+			destPath := filepath.Join(newDirPath, relPath)
+
+			if info.IsDir() {
+				return os.MkdirAll(destPath, 0755)
+			}
+
+			// Copy file
+			data, err := os.ReadFile(srcPath)
+			if err != nil {
+				return err
+			}
+
+			return os.WriteFile(destPath, data, 0644)
+		})
+		if err != nil {
+			return fmt.Errorf("failed to copy directory contents from %s to %s: %w", dirPath, newDirPath, err)
+		}
+		fmt.Printf("Created BigQuery transformation directory: %s (duplicated from %s)\n", newDirPath, dirPath)
+	}
+
+	if len(transformationDirs) > 0 {
+		fmt.Printf("\n==========================================================\n")
+		fmt.Printf("IMPORTANT: Transformation duplication complete for directory: %s\n", dirPath)
+		fmt.Println("The SQL code in the duplicated directories needs to be manually transpiled")
+		fmt.Println("from Snowflake SQL syntax to BigQuery SQL syntax.")
+		fmt.Printf("==========================================================\n\n")
+	}
+	return nil
+}
+
+// duplicateStandaloneTransformations finds and duplicates standalone Snowflake transformation directories to BigQuery
+func (tu *TemplateUpdater) duplicateStandaloneTransformations() error {
+	return tu.duplicateStandaloneTransformationsInDir(tu.rootDir)
 }
 
 // UpdateRepositoryVersions updates repository.json with new major versions
@@ -587,8 +682,8 @@ func (tu *TemplateUpdater) UpdateRepositoryVersions() error {
 			}
 			fmt.Printf("Updated files in: %s\n", destPath)
 
-			// Duplicate snowflake directories to bigquery after all files are processed
-			if err := tu.duplicateSnowflakeDirectories(destPath); err != nil {
+			// Duplicate snowflake directories to bigquery only in the new version directory
+			if err := tu.duplicateStandaloneTransformationsInDir(destPath); err != nil {
 				return fmt.Errorf("failed to duplicate snowflake directories: %w", err)
 			}
 		}
