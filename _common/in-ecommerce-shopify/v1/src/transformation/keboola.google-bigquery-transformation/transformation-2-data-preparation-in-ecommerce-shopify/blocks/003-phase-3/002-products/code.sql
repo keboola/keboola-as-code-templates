@@ -15,7 +15,8 @@ CREATE TABLE `bdm_products` (
   AVG_SOLD_UNITS_PER_DAY FLOAT64,
   STOCK_REFILL FLOAT64,
   IS_DELETED BOOL
-)
+);
+
 /* this calculates unit sales for each product over the last 30 days, 90 days */
 CREATE OR REPLACE TABLE `product_totals` AS
 SELECT DISTINCT
@@ -56,7 +57,8 @@ LEFT JOIN (
 GROUP BY
   1,
   2,
-  3
+  3;
+
 /* this calculates the average price and stock amount for each product variant */
 CREATE OR REPLACE TABLE `product_variant_totals` AS
 SELECT
@@ -70,7 +72,8 @@ LEFT JOIN `product_variant` AS pv
 LEFT JOIN `inventory_items` AS ii
   ON pv.`inventory_item_id` = ii.`id`
 GROUP BY
-  p.`id`
+  p.`id`;
+
 /* BDM_PRODUCTS */
 INSERT INTO `bdm_products`
 SELECT
@@ -98,7 +101,8 @@ FROM `product` AS P
 LEFT JOIN `product_variant_totals` AS PV
   ON P.`id` = PV.PRODUCT_ID
 LEFT JOIN `product_totals` AS PT
-  ON P.`id` = PT.PRODUCT_ID
+  ON P.`id` = PT.PRODUCT_ID;
+
 /* - ADD missing / deleted items */
 CREATE OR REPLACE TABLE `deleted_products` AS
 SELECT DISTINCT
@@ -112,7 +116,8 @@ WHERE
   P.`id` IS NULL
 GROUP BY
   1,
-  2
+  2;
+
 INSERT INTO `bdm_products`
 SELECT
   DP.PRODUCT_ID AS PRODUCT_ID,
@@ -133,8 +138,9 @@ SELECT
   'true' AS IS_DELETED
 FROM `deleted_products` AS DP
 QUALIFY
-  ROW_NUMBER() OVER (PARTITION BY DP.PRODUCT_ID ORDER BY DP.PRODUCT_TYPE NULLS LAST) = 1
+  ROW_NUMBER() OVER (PARTITION BY DP.PRODUCT_ID ORDER BY DP.PRODUCT_TYPE NULLS LAST) = 1;
+
 /* some do not have code */
 UPDATE `bdm_products` SET PRODUCT_ID = 'N/A'
 WHERE
-  PRODUCT_ID = ''
+  PRODUCT_ID = '';

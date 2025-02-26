@@ -7,4 +7,4 @@ FROM `activities`, Table(
   EXPLODE(
     strtok_to_array(replace(replace(`activities`.`associations_contactIds`, '[', ''), ']', ''), ', ')
   )
-) AS F
+) AS F;

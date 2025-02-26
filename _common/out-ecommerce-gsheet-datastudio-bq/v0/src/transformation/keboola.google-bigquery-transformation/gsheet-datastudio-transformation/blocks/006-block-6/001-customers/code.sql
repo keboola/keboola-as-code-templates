@@ -38,4 +38,4 @@ WHERE
     SELECT
       COUNT(*)
     FROM data_all
-  ) = 0
+  ) = 0;

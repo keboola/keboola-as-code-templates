@@ -14,7 +14,8 @@ SELECT
   COALESCE(LAG(`owner`) OVER (PARTITION BY `project_id` ORDER BY `snapshot_date`), '') AS `previous_owner`
 FROM `project_snapshot`
 WHERE
-  `archived` = 'false'
+  `archived` = 'false';
+
 /* add partition column to tmp table for assigning number of day in the previous status and other possible calculations */ /* marking last day of month/quarter last snapshot for reporting */
 CREATE TABLE `project_snapshot_tmp2` AS
 SELECT
@@ -63,7 +64,8 @@ LEFT JOIN (
     OR NOT `m`.`max_date` IS NULL
 ) AS `lq`
   ON `t`.`project_id` = `lq`.`project_id`
-  AND `t`.`snapshot_date` = `lq`.`snapshot_date`
+  AND `t`.`snapshot_date` = `lq`.`snapshot_date`;
+
 /* create project snapshot table */ /* define if there has been change of status, owner or due date */ /* adding number of days in previous stage */ /* iff project is moved more than once to some status, it always assign number of all days in that previous particular status */
 CREATE TABLE `out_project_snapshot` (
   `project_id` STRING(255) NOT NULL,
@@ -84,7 +86,8 @@ CREATE TABLE `out_project_snapshot` (
   `last_snapshot` BOOL,
   `last_day_of_month` BOOL,
   `last_day_of_quarter` BOOL
-)
+);
+
 INSERT INTO `out_project_snapshot`
 SELECT
   `o`.`project_id`,
@@ -121,7 +124,8 @@ LEFT JOIN (
     4
 ) AS `d`
   ON `o`.`project_id` = `d`.`project_id`
-  AND `o`.`continuous_status_partition` = `d`.`following_partition`
+  AND `o`.`continuous_status_partition` = `d`.`following_partition`;
+
 /* TASK SNAPSHOTS */ /* create temporary table for additional calculations */ /* add previous values of due date, assignee and section, so we can define if there has been any change */ /* don't snapshot tasks of already archived projects (using inner join on project snapshot tmp table) */
 CREATE TABLE `task_snapshot_tmp` AS
 SELECT
@@ -153,7 +157,8 @@ INNER JOIN (
     `project_id`
   FROM `project_snapshot_tmp`
 ) AS `ps`
-  ON `ts`.`project_id` = `ps`.`project_id`
+  ON `ts`.`project_id` = `ps`.`project_id`;
+
 /* marking last day of month/quarter and last snapshot for reporting */
 CREATE TABLE `task_snapshot_tmp2` AS
 SELECT
@@ -199,7 +204,8 @@ LEFT JOIN (
     `s`.`snapshot_date` = LAST_DAY(CAST(`s`.`snapshot_date` AS DATE), QUARTER)
     OR NOT `m`.`max_date` IS NULL
 ) AS `lq`
-  ON `t`.`task_id` = `lq`.`task_id` AND `t`.`snapshot_date` = `lq`.`snapshot_date`
+  ON `t`.`task_id` = `lq`.`task_id` AND `t`.`snapshot_date` = `lq`.`snapshot_date`;
+
 /* create task snapshot table */ /* define if there has been change of section, assignee or due date */
 CREATE TABLE `out_task_snapshot` (
   `task_id` STRING(255) NOT NULL,
@@ -217,7 +223,8 @@ CREATE TABLE `out_task_snapshot` (
   `last_snapshot` BOOL,
   `last_day_of_month` BOOL,
   `last_day_of_quarter` BOOL
-)
+);
+
 INSERT INTO `out_task_snapshot`
 SELECT
   `o`.`task_id`,
@@ -235,4 +242,4 @@ SELECT
   `o`.`last_snapshot`,
   `o`.`last_day_of_month`,
   `o`.`last_day_of_quarter`
-FROM `task_snapshot_tmp2` AS `o`
+FROM `task_snapshot_tmp2` AS `o`;

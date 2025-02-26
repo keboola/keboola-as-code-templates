@@ -4,14 +4,16 @@ CREATE TABLE `out_employee` (
   `employee` STRING(255),
   `email` STRING(255),
   `position` STRING(255)
-)
+);
+
 INSERT INTO `out_employee`
 SELECT
   `ownerId` AS `employee_id`,
   `firstName` || ' ' || `lastName` AS `employee`,
   `email`,
   '' AS `position`
-FROM `owners`
+FROM `owners`;
+
 /* fake row to keep referential integrity if child tables are missing existing employee ids */
 INSERT INTO `out_employee` (
   `employee_id`,
@@ -20,4 +22,4 @@ INSERT INTO `out_employee` (
   `position`
 )
 VALUES
-  ('0', 'Unknown', '', '')
+  ('0', 'Unknown', '', '');

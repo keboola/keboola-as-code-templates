@@ -1,11 +1,13 @@
 /* TASK SNAPSHOTS */ /* snapshot task table to be able to track progress in time */ /* this table is an auxiliary table which will be used for creating final snapshot table later on */ /* set timezone to UTC (change accordingly) */
 ALTER SESSION
-    SET TIMEZONE = 'UTC'
+    SET TIMEZONE = 'UTC';
+
 CREATE TABLE `tmp1_task_snapshot` AS
 SELECT
   CAST(CURRENT_DATE AS STRING) AS `snapshot_date`,
   `ot`.*
-FROM `out_task` AS `ot`
+FROM `out_task` AS `ot`;
+
 /* create temporary table for additional calculations */ /* add previous values of due date, assignee and section, so we can define if there has been any change */ /* don't snapshot tasks of already archived projects (using inner join on project snapshot tmp table) */
 CREATE TABLE `tmp2_task_snapshot` AS
 SELECT
@@ -37,7 +39,8 @@ INNER JOIN (
     `project_id`
   FROM `tmp2_project_snapshot`
 ) AS `ps`
-  ON `ts`.`project_id` = `ps`.`project_id`
+  ON `ts`.`project_id` = `ps`.`project_id`;
+
 /* marking last day of month/quarter and last snapshot for reporting */
 CREATE TABLE `tmp3_task_snapshot` AS
 SELECT
@@ -83,7 +86,8 @@ LEFT JOIN (
     `s`.`snapshot_date` = LAST_DAY(CAST(`s`.`snapshot_date` AS DATE), QUARTER)
     OR NOT `m`.`max_date` IS NULL
 ) AS `lq`
-  ON `t`.`task_id` = `lq`.`task_id` AND `t`.`snapshot_date` = `lq`.`snapshot_date`
+  ON `t`.`task_id` = `lq`.`task_id` AND `t`.`snapshot_date` = `lq`.`snapshot_date`;
+
 /* create task snapshot table */ /* define if there has been change of section, assignee or due date */
 CREATE TABLE `out_task_snapshot` (
   `task_id` STRING NOT NULL,
@@ -101,7 +105,8 @@ CREATE TABLE `out_task_snapshot` (
   `last_snapshot` BOOL,
   `last_day_of_month` BOOL,
   `last_day_of_quarter` BOOL
-)
+);
+
 INSERT INTO `out_task_snapshot`
 SELECT
   `o`.`task_id`,
@@ -119,4 +124,4 @@ SELECT
   `o`.`last_snapshot`,
   `o`.`last_day_of_month`,
   `o`.`last_day_of_quarter`
-FROM `tmp3_task_snapshot` AS `o`
+FROM `tmp3_task_snapshot` AS `o`;

@@ -12,7 +12,8 @@ CREATE TABLE `ga4_audience` (
   `screenPageViews` INT64,
   `averageSessionDuration` FLOAT64,
   `userEngagementDuration` FLOAT64
-)
+);
+
 INSERT INTO `ga4_audience`
 SELECT
   `id`, /* dimensions */
@@ -28,4 +29,4 @@ SELECT
   `screenPageViews`,
   `averageSessionDuration`,
   `userEngagementDuration`
-FROM `raw_audience`
+FROM `raw_audience`;

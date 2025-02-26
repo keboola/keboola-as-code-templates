@@ -30,7 +30,8 @@ SELECT
     LAG(`probability`) OVER (PARTITION BY `opportunity_id` ORDER BY `snapshot_date`),
     `probability`
   ) AS `previous_probability`
-FROM `opportunity_snapshot`
+FROM `opportunity_snapshot`;
+
 /* create opportunity snapshot table */ /* define if there has been change of pipeline, stage or value */
 CREATE TABLE `out_opportunity_snapshot` (
   `opportunity_id` STRING(2000) NOT NULL,
@@ -52,7 +53,8 @@ CREATE TABLE `out_opportunity_snapshot` (
   `previous_probability` FLOAT64,
   `probability_change` STRING(255),
   `max_date_in_month` BOOL
-)
+);
+
 INSERT INTO `out_opportunity_snapshot`
 SELECT
   `s`.`opportunity_id`,
@@ -86,4 +88,4 @@ LEFT JOIN (
     2
 ) AS `m`
   ON `s`.`opportunity_id` = `m`.`opportunity_id`
-  AND `s`.`snapshot_date` = `m`.`max_date_in_month`
+  AND `s`.`snapshot_date` = `m`.`max_date_in_month`;

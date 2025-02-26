@@ -14,7 +14,8 @@ SELECT
   O.`customer_id`
 FROM `orders` AS O
 JOIN `last_order` AS LO
-  ON LO.`id` = O.`id`
+  ON LO.`id` = O.`id`;
+
 /* BDM_CUSTOMERS */
 CREATE TABLE `bdm_customers` (
   CUSTOMER_ID STRING NOT NULL,
@@ -38,7 +39,8 @@ CREATE TABLE `bdm_customers` (
   SEGMENT_NR INT64,
   FIRST_SUCCEEDED_TRANSACTION_DATE DATE,
   LAST_SUCCEEDED_TRANSACTION_DATE DATE
-)
+);
+
 /* count orders_count a total_spend for each customer */
 CREATE OR REPLACE TABLE `tmp_customer_order_count_value` AS
 (
@@ -49,7 +51,8 @@ CREATE OR REPLACE TABLE `tmp_customer_order_count_value` AS
   FROM `orders`
   GROUP BY
     1
-)
+);
+
 /* insert into tmp table */
 CREATE OR REPLACE TABLE `tmp_customers` AS
 (
@@ -73,7 +76,8 @@ CREATE OR REPLACE TABLE `tmp_customers` AS
     ON C.`id` = tmpco.`CUSTOMER_ID`
   LEFT JOIN `last_billing_address` AS lba
     ON C.`id` = lba.`customer_id`
-)
+);
+
 INSERT INTO `bdm_customers`
 SELECT
   tmpc.CUSTOMER_ID,
@@ -99,7 +103,8 @@ SELECT
   LAST_SUCCEEDED_TRANSACTION_DATE AS LAST_SUCCEDED_TRANSACTION_DATE
 FROM `tmp_customers` AS tmpc
 LEFT JOIN `rfm` AS rfm
-  ON tmpc.CUSTOMER_ID = rfm.CUSTOMER_ID
+  ON tmpc.CUSTOMER_ID = rfm.CUSTOMER_ID;
+
 /* - try to match customers based on email */
 CREATE OR REPLACE TABLE `customer_ids` AS
 SELECT DISTINCT
@@ -109,9 +114,10 @@ FROM `orders` AS O
 JOIN `bdm_customers` AS C
   ON O.`billing_address_email` = C.CUSTOMER_EMAIL
 QUALIFY
-  ROW_NUMBER() OVER (PARTITION BY `billing_address_email` ORDER BY C.CUSTOMER_ID NULLS LAST) = 1
+  ROW_NUMBER() OVER (PARTITION BY `billing_address_email` ORDER BY C.CUSTOMER_ID NULLS LAST) = 1;
+
 /* UPDATE ORDERS */
 UPDATE `bdm_orders` AS O SET O.CUSTOMER_ID = C.CUSTOMER_ID
 FROM `customer_ids` AS C
 WHERE
-  O.ORDER_CUSTOMER_EMAIL = C.`EMAIL`
+  O.ORDER_CUSTOMER_EMAIL = C.`EMAIL`;

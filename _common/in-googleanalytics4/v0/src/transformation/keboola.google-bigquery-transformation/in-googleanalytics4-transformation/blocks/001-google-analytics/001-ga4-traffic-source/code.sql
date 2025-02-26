@@ -18,7 +18,8 @@ CREATE TABLE `ga4_traffic_source` (
   `screenPageViews` INT64,
   `conversions` INT64,
   `eventCount` INT64
-)
+);
+
 INSERT INTO `ga4_traffic_source`
 SELECT
   `id`, /* dimensions */
@@ -40,4 +41,4 @@ SELECT
   `screenPageViews`,
   `conversions`,
   `eventCount`
-FROM `raw_traffic_acquisition`
+FROM `raw_traffic_acquisition`;

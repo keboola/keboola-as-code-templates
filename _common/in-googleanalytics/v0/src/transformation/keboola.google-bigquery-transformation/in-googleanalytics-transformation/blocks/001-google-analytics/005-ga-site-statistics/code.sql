@@ -17,7 +17,8 @@ CREATE TABLE `ga_site_statistics` (
   `ga_avgRedirectionTime` FLOAT64,
   `ga_avgServerConnectionTime` FLOAT64,
   `ga_serverResponseTime` INT64
-)
+);
+
 INSERT INTO `ga_site_statistics`
 SELECT
   `id` AS `id_TBE`, /* dimensions */
@@ -38,4 +39,4 @@ SELECT
   `avgRedirectionTime` AS `ga_avgRedirectionTime`,
   `avgServerConnectionTime` AS `ga_avgServerConnectionTime`,
   `serverResponseTime` AS `ga_serverResponseTime`
-FROM `raw_site_statistics`
+FROM `raw_site_statistics`;

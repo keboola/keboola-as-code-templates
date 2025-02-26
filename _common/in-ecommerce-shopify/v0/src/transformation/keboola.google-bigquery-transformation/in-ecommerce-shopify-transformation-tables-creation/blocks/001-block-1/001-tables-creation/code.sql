@@ -1,4 +1,5 @@
-DROP TABLE IF EXISTS `customer`
+DROP TABLE IF EXISTS `customer`;
+
 CREATE TABLE `customer` (
   `accepts_marketing` STRING(16777216),
   `accepts_marketing_updated_at` STRING(16777216),
@@ -31,7 +32,8 @@ CREATE TABLE `customer` (
   `default_address__country` STRING(16777216),
   `shipping_address__city` STRING(16777216),
   `shipping_address__country` STRING(16777216)
-)
+);
+
 INSERT INTO `customer`
 VALUES
   (
@@ -26400,8 +26402,10 @@ VALUES
     'no',
     'no',
     'no'
-  )
-DROP TABLE IF EXISTS `line_item`
+  );
+
+DROP TABLE IF EXISTS `line_item`;
+
 CREATE TABLE `line_item` (
   `admin_graphql_api_id` STRING(16777216),
   `duties` STRING(16777216),
@@ -26436,7 +26440,8 @@ CREATE TABLE `line_item` (
   `variant_inventory_management` STRING(16777216),
   `variant_title` STRING(16777216),
   `vendor` STRING(16777216)
-)
+);
+
 INSERT INTO `line_item`
 VALUES
   (
@@ -42223,8 +42228,10 @@ VALUES
     'shopify',
     '',
     'FUNKO'
-  )
-DROP TABLE IF EXISTS `order`
+  );
+
+DROP TABLE IF EXISTS `order`;
+
 CREATE TABLE `order` (
   `admin_graphql_api_id` STRING(16777216),
   `shipping_lines` STRING(16777216),
@@ -42335,7 +42342,8 @@ CREATE TABLE `order` (
   `shipping_address__city` STRING(16777216),
   `shipping_address__country` STRING(16777216),
   `shipping_address__zip` STRING(16777216)
-)
+);
+
 INSERT INTO `order`
 VALUES
   (
@@ -92398,8 +92406,10 @@ VALUES
     'no',
     'no',
     'no'
-  )
-DROP TABLE IF EXISTS `product_images`
+  );
+
+DROP TABLE IF EXISTS `product_images`;
+
 CREATE TABLE `product_images` (
   `admin_graphql_api_id` STRING(16777216),
   `alt` STRING(16777216),
@@ -92413,7 +92423,8 @@ CREATE TABLE `product_images` (
   `updated_at` STRING(16777216),
   `variant_ids` STRING(16777216),
   `width` STRING(16777216)
-)
+);
+
 INSERT INTO `product_images`
 VALUES
   (
@@ -101333,8 +101344,10 @@ VALUES
     '2022-02-02T20:39:25-05:00',
     '',
     '358'
-  )
-DROP TABLE IF EXISTS `product_options`
+  );
+
+DROP TABLE IF EXISTS `product_options`;
+
 CREATE TABLE `product_options` (
   `extraction_time` STRING(16777216),
   `id` STRING(16777216),
@@ -101342,7 +101355,8 @@ CREATE TABLE `product_options` (
   `position` STRING(16777216),
   `product_id` STRING(16777216),
   `values` STRING(16777216)
-)
+);
+
 INSERT INTO `product_options`
 VALUES
   (
@@ -105824,8 +105838,10 @@ VALUES
     '1',
     '7581051945211',
     '["Default Title"]'
-  )
-DROP TABLE IF EXISTS `product_variant`
+  );
+
+DROP TABLE IF EXISTS `product_variant`;
+
 CREATE TABLE `product_variant` (
   `admin_graphql_api_id` STRING(16777216),
   `barcode` STRING(16777216),
@@ -105854,7 +105870,8 @@ CREATE TABLE `product_variant` (
   `updated_at` STRING(16777216),
   `weight` STRING(16777216),
   `weight_unit` STRING(16777216)
-)
+);
+
 INSERT INTO `product_variant`
 VALUES
   (
@@ -124619,8 +124636,10 @@ VALUES
     '2022-02-02T20:50:15-05:00',
     '0',
     'lb'
-  )
-DROP TABLE IF EXISTS `product`
+  );
+
+DROP TABLE IF EXISTS `product`;
+
 CREATE TABLE `product` (
   `admin_graphql_api_id` STRING(16777216),
   `body_html` STRING(16777216),
@@ -124646,7 +124665,8 @@ CREATE TABLE `product` (
   `title` STRING(16777216),
   `updated_at` STRING(16777216),
   `vendor` STRING(16777216)
-)
+);
+
 INSERT INTO `product`
 VALUES
   (
@@ -138428,8 +138448,10 @@ VALUES
     'Pirate Ship Bath Toy',
     '2022-10-03T09:00:06-04:00',
     'TOMY TOYS'
-  )
-DROP TABLE IF EXISTS `inventory_items`
+  );
+
+DROP TABLE IF EXISTS `inventory_items`;
+
 CREATE TABLE `inventory_items` (
   `admin_graphql_api_id` STRING(16777216),
   `cost` STRING(16777216),
@@ -138443,7 +138465,8 @@ CREATE TABLE `inventory_items` (
   `sku` STRING(16777216),
   `tracked` STRING(16777216),
   `updated_at` STRING(16777216)
-)
+);
+
 INSERT INTO `inventory_items`
 VALUES
   (
@@ -140503,4 +140526,4 @@ VALUES
     'AD-01-white-12',
     'True',
     '2022-02-17T08:29:20-05:00'
-  )
+  );

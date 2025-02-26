@@ -10,7 +10,8 @@ CREATE OR REPLACE TABLE `fulfillment_line_item_tax_lines` (
   `rate` STRING(16777216),
   `row_nr` STRING(16777216),
   `title` STRING(16777216)
-)
+);
+
 CREATE OR REPLACE TABLE `line_item_tax_lines` (
   `channel_liable` STRING(16777216),
   `extraction_time` STRING(16777216),
@@ -23,7 +24,8 @@ CREATE OR REPLACE TABLE `line_item_tax_lines` (
   `rate` STRING(16777216),
   `row_nr` STRING(16777216),
   `title` STRING(16777216)
-)
+);
+
 CREATE OR REPLACE TABLE `order_tax_lines` (
   `channel_liable` STRING(16777216),
   `extraction_time` STRING(16777216),
@@ -36,7 +38,8 @@ CREATE OR REPLACE TABLE `order_tax_lines` (
   `rate` STRING(16777216),
   `row_nr` STRING(16777216),
   `title` STRING(16777216)
-)
+);
+
 CREATE OR REPLACE TABLE `fulfillment_line_item_discount_allocations` (
   `amount` STRING(16777216),
   `amount_set__presentment_money__amount` STRING(16777216),
@@ -48,7 +51,8 @@ CREATE OR REPLACE TABLE `fulfillment_line_item_discount_allocations` (
   `line_item_id` STRING(16777216),
   `row_nr` STRING(16777216),
   `title` STRING(16777216)
-)
+);
+
 CREATE OR REPLACE TABLE `line_item_discount_allocations` (
   `amount` STRING(16777216),
   `row_nr` STRING(16777216),
@@ -59,7 +63,8 @@ CREATE OR REPLACE TABLE `line_item_discount_allocations` (
   `extraction_time` STRING(16777216),
   `amount_set__shop_money__currency_code` STRING(16777216),
   `discount_application_index` STRING(16777216)
-)
+);
+
 CREATE TABLE `customer_addresses` (
   `phone` STRING(16777216),
   `name` STRING(16777216),
@@ -79,7 +84,8 @@ CREATE TABLE `customer_addresses` (
   `country` STRING(16777216),
   `country_code` STRING(16777216),
   `first_name` STRING(16777216)
-)
+);
+
 CREATE TABLE `fulfillment_line_item` (
   `admin_graphql_api_id` STRING(16777216),
   `duties` STRING(16777216),
@@ -130,7 +136,8 @@ CREATE TABLE `fulfillment_line_item` (
   `destination_location__address1` STRING(16777216),
   `destination_location__address2` STRING(16777216),
   `destination_location__country_code` STRING(16777216)
-)
+);
+
 CREATE TABLE `order_discount_applications` (
   `row_nr` STRING(16777216),
   `order_id` STRING(16777216),
@@ -142,7 +149,8 @@ CREATE TABLE `order_discount_applications` (
   `type` STRING(16777216),
   `value` STRING(16777216),
   `allocation_method` STRING(16777216)
-)
+);
+
 CREATE TABLE `order_discount_codes` (
   `amount` STRING(16777216),
   `row_nr` STRING(16777216),
@@ -150,7 +158,8 @@ CREATE TABLE `order_discount_codes` (
   `order_id` STRING(16777216),
   `code` STRING(16777216),
   `extraction_time` STRING(16777216)
-)
+);
+
 CREATE TABLE `order_fulfillments` (
   `name` STRING(16777216),
   `tracking_urls` STRING(16777216),
@@ -168,4 +177,4 @@ CREATE TABLE `order_fulfillments` (
   `tracking_numbers` STRING(16777216),
   `status` STRING(16777216),
   `admin_graphql_api_id` STRING(16777216)
-)
+);

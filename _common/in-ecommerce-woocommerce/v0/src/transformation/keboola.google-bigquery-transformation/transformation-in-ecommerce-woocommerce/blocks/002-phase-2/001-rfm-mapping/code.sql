@@ -3,7 +3,8 @@ CREATE OR REPLACE TABLE MAPPING_SEGMENT_RFM (
   SCORE STRING,
   SEGMENT STRING,
   SEGMENT_NR NUMERIC(38, 0)
-)
+);
+
 INSERT INTO MAPPING_SEGMENT_RFM
 VALUES
   ('555', 'Loyal', 10),
@@ -132,4 +133,4 @@ VALUES
   ('121', 'Hibernating customers', 1),
   ('131', 'Hibernating customers', 1),
   ('141', 'Hibernating customers', 1),
-  ('151', 'Hibernating customers', 1)
+  ('151', 'Hibernating customers', 1);

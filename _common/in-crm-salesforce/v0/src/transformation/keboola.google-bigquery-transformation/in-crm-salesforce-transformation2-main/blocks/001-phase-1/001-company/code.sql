@@ -4,7 +4,8 @@ CREATE TABLE `out_company` (
   `company` STRING(255),
   `website` STRING(2000),
   `date_created` DATE
-)
+);
+
 INSERT INTO `out_company`
 SELECT DISTINCT
   `Id` AS `company_id`,
@@ -13,7 +14,8 @@ SELECT DISTINCT
   IF(`CreatedDate` = '', NULL, CAST(`CreatedDate` AS DATE)) AS `date_created`
 FROM `account`
 WHERE
-  LOWER(`IsDeleted`) = 'false'
+  LOWER(`IsDeleted`) = 'false';
+
 /* fake row to keep referential integrity if child tables are missing existing company ids */
 INSERT INTO `out_company` (
   `company_id`,
@@ -22,4 +24,4 @@ INSERT INTO `out_company` (
   `date_created`
 )
 VALUES
-  ('0', 'Unknown', '', NULL)
+  ('0', 'Unknown', '', NULL);

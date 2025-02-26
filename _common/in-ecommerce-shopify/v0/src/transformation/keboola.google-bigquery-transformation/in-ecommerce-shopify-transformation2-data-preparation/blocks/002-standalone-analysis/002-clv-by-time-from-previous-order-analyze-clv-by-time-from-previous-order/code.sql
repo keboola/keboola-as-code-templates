@@ -5,7 +5,8 @@ CREATE TABLE `analyze_clv_by_time_from_previous_order` (
   AVG_CLV FLOAT64,
   ORDER_TOTAL_PRICE_TAXES FLOAT64,
   AVG_ORDER_PRICE FLOAT64
-)
+);
+
 INSERT INTO `analyze_clv_by_time_from_previous_order`
 WITH previous_order_category AS (
   SELECT
@@ -64,4 +65,4 @@ FROM previous_order_category
 GROUP BY
   TIME_FROM_PREVIOUS_ORDER
 ORDER BY
-  PREVIOUS_ORDER NULLS LAST
+  PREVIOUS_ORDER NULLS LAST;

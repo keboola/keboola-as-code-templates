@@ -10,7 +10,8 @@ CREATE TABLE `out_repository` (
   `is_private` BOOL,
   `created_on` DATETIME,
   `url` STRING(1024)
-)
+);
+
 INSERT INTO `out_repository`
 SELECT
   `r`.`id` AS `repository_id`,
@@ -27,7 +28,8 @@ SELECT
   IF(`r`.`private` = '1', 'true', 'false') AS `is_private`,
   replace(LEFT(`r`.`created_at`, 19), 'T', ' ') AS `created_on`,
   `r`.`html_url` AS `url`
-FROM `repos` AS `r`
+FROM `repos` AS `r`;
+
 /* format dates */ /* referential integrity check */ /* define if closed pull request is declined or merged */
 CREATE TABLE `out_pull_request` (
   `pull_request_id` STRING(255) NOT NULL,
@@ -39,7 +41,8 @@ CREATE TABLE `out_pull_request` (
   `created_on` DATETIME,
   `updated_on` DATETIME,
   `url` STRING(1024)
-)
+);
+
 INSERT INTO `out_pull_request`
 SELECT
   `p`.`id` AS `pull_request_id`,
@@ -63,7 +66,8 @@ FROM `pulls` AS `p`
 INNER JOIN `out_repository` AS `r`
   ON `p`.`repo_name` = `r`.`repository`
 LEFT JOIN `user` AS `u`
-  ON `p`.`user_id` = `u`.`user_id`
+  ON `p`.`user_id` = `u`.`user_id`;
+
 /* easy deduplication of activity (there is no state which can change during time) */ /* format columns */
 CREATE TABLE `out_pull_request_activity` (
   `pull_request_activity_id` STRING(255) NOT NULL,
@@ -75,7 +79,8 @@ CREATE TABLE `out_pull_request_activity` (
   `title` STRING(255),
   `description` STRING(1024),
   `reason` STRING(1024)
-)
+);
+
 INSERT INTO `out_pull_request_activity`
 SELECT DISTINCT
   `opr`.`repository_id` || '_' || `opr`.`pull_request_id` || '_' || `pr`.`state` || '_' || LEFT(`pr`.`submitted_at`, 19) AS `pull_request_activity_id`,
@@ -99,7 +104,8 @@ LEFT JOIN `user` AS `u`
 LEFT JOIN `pull_comments` AS `pc`
   ON `pr`.`id` = `pc`.`pull_review_id`
 WHERE
-  `pr`.`state` <> ''
+  `pr`.`state` <> '';
+
 /* insert comments on pull request (those are gathered from issues endpoint) */ /* check if the timestamp is same as closing the request (GitHub action "comment and close") and mark such activity as 'DECLINED' */ /* format dates */
 INSERT INTO `out_pull_request_activity` (
   `pull_request_activity_id`,
@@ -132,7 +138,8 @@ INNER JOIN `out_pull_request` AS `opr`
 LEFT JOIN `user` AS `u`
   ON `pic`.`user_id` = `u`.`user_id`
 LEFT JOIN `pulls` AS `p`
-  ON `opr`.`pull_request_id` = `p`.`id` AND `pic`.`created_at` = `p`.`closed_at`
+  ON `opr`.`pull_request_id` = `p`.`id` AND `pic`.`created_at` = `p`.`closed_at`;
+
 /* add merge activity */
 INSERT INTO `out_pull_request_activity` (
   `pull_request_activity_id`,
@@ -161,7 +168,8 @@ INNER JOIN `out_repository` AS `r`
 LEFT JOIN `user` AS `u`
   ON `p`.`user_id` = `u`.`user_id`
 WHERE
-  `p`.`merged_at` <> ''
+  `p`.`merged_at` <> '';
+
 /* create output commits table */
 CREATE TABLE `out_repository_commit` (
   `repository_commit_id` STRING(255) NOT NULL,
@@ -170,7 +178,8 @@ CREATE TABLE `out_repository_commit` (
   `date` DATETIME,
   `url` STRING(1024),
   `message` STRING(1024)
-)
+);
+
 INSERT INTO `out_repository_commit`
 SELECT
   `c`.`sha` AS `repository_commit_id`,
@@ -187,7 +196,8 @@ FROM `commits` AS `c`
 INNER JOIN `out_repository` AS `or`
   ON `c`.`repo_name` = `or`.`repository`
 LEFT JOIN `user` AS `u`
-  ON `c`.`author_id` = `u`.`user_id`
+  ON `c`.`author_id` = `u`.`user_id`;
+
 /* create output issues table */
 CREATE TABLE `out_issue` (
   `issue_id` STRING(255) NOT NULL,
@@ -203,7 +213,8 @@ CREATE TABLE `out_issue` (
   `created_on` DATETIME,
   `updated_on` DATETIME,
   `url` STRING(1024)
-)
+);
+
 INSERT INTO `out_issue`
 SELECT
   `i`.`id` AS `issue_id`,
@@ -223,7 +234,8 @@ FROM `issues` AS `i`
 INNER JOIN `out_repository` AS `r`
   ON `i`.`repo_name` = `r`.`repository`
 LEFT JOIN `user` AS `u`
-  ON `i`.`assignee_id` = `u`.`user_id`
+  ON `i`.`assignee_id` = `u`.`user_id`;
+
 /* create output issue comments table */ /* bit confusing join, but we don't have issue id in comments, so we need to get it first by joining to raw issues table and then deal with referential integrity */
 CREATE TABLE `out_issue_comment` (
   `issue_comment_id` STRING(255) NOT NULL,
@@ -234,7 +246,8 @@ CREATE TABLE `out_issue_comment` (
   `created_on` DATETIME,
   `updated_on` DATETIME,
   `url` STRING(1024)
-)
+);
+
 INSERT INTO `out_issue_comment`
 SELECT
   `ic`.`id` AS `issue_comment_id`,
@@ -253,7 +266,8 @@ LEFT JOIN `issues` AS `i2`
 INNER JOIN `out_issue` AS `i`
   ON `i2`.`id` = `i`.`issue_id`
 LEFT JOIN `user` AS `u`
-  ON `ic`.`user_id` = `u`.`user_id`
+  ON `ic`.`user_id` = `u`.`user_id`;
+
 /* creating output events table from previously created tables, so it's possible to measure user's overall activity */
 CREATE TABLE `out_event` (
   `event_id` STRING(255) NOT NULL,
@@ -262,7 +276,8 @@ CREATE TABLE `out_event` (
   `event` STRING(255),
   `date` DATETIME,
   `url` STRING(1024)
-)
+);
+
 INSERT INTO `out_event`
 SELECT
   `pull_request_id` || '_prc' AS `event_id`,
@@ -321,4 +336,4 @@ FROM `out_issue_comment` AS `c`
 LEFT JOIN `out_issue` AS `i`
   ON `c`.`issue_id` = `i`.`issue_id`
 WHERE
-  NOT `c`.`created_on` IS NULL
+  NOT `c`.`created_on` IS NULL;

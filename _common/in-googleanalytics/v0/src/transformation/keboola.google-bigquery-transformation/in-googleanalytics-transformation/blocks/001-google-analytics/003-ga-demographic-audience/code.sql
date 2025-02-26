@@ -13,7 +13,8 @@ CREATE TABLE `ga_demographic_audience` (
   `ga_bounces` INT64,
   `ga_sessionDuration` FLOAT64,
   `ga_pageviews` INT64
-)
+);
+
 INSERT INTO `ga_demographic_audience`
 SELECT
   `id` AS `id_TBE`, /* dimensions */
@@ -30,4 +31,4 @@ SELECT
   `bounces` AS `ga_bounces`,
   `sessionDuration` AS `ga_sessionDuration`,
   `pageviews` AS `ga_pageviews`
-FROM `raw_demographic_audience`
+FROM `raw_demographic_audience`;

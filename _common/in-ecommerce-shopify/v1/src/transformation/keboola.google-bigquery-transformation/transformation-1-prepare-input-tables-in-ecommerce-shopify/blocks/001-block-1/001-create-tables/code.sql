@@ -10,7 +10,8 @@ CREATE OR REPLACE TABLE `line_item_tax_lines` (
   `rate` STRING(16777216),
   `row_nr` STRING(16777216) NOT NULL,
   `title` STRING(16777216)
-)
+);
+
 CREATE TABLE `order_discount_applications` (
   `row_nr` STRING(16777216) NOT NULL,
   `order_id` STRING(16777216) NOT NULL,
@@ -24,7 +25,8 @@ CREATE TABLE `order_discount_applications` (
   `allocation_method` STRING(16777216),
   `description` STRING(16777216),
   `title` STRING(16777216)
-)
+);
+
 CREATE TABLE `order_fulfillments` (
   `name` STRING(16777216),
   `tracking_urls` STRING(16777216),
@@ -47,4 +49,4 @@ CREATE TABLE `order_fulfillments` (
   `origin_address__country_code` STRING(16777216),
   `origin_address__zip` STRING(16777216),
   `receipt__gift_cards` STRING(16777216)
-)
+);

@@ -5,7 +5,8 @@ CREATE TABLE `campaign_event_out` (
   `list_id` STRING(255),
   `campaign_event_type` STRING(255),
   `campaign_event_date` DATETIME
-)
+);
+
 INSERT INTO `campaign_event_out`
 SELECT
   `id` || '_sent' AS `campaign_event_id`,
@@ -25,4 +26,4 @@ SELECT
   IF(`create_time` = '', '', CAST(TO_TIMESTAMP_NTZ(`create_time`) AS STRING)) AS `campaign_event_date`
 FROM `campaigns`
 WHERE
-  `create_time` <> ''
+  `create_time` <> '';

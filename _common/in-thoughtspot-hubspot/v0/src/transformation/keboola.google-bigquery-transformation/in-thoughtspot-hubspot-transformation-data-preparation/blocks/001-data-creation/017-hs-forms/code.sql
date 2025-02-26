@@ -6,4 +6,4 @@ SELECT DISTINCT
   `configuration__postSubmitAction__type` AS ACTION,
   `displayOptions__submitButtonText` AS SUBMIT_TEXT,
   '' AS LEAD_NURTURING_CAMPAIGN_ID /* TODO */
-FROM `forms`
+FROM `forms`;

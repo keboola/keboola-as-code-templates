@@ -2,7 +2,8 @@
 CREATE TABLE `activities_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `activities`
+FROM `activities`;
+
 CREATE TABLE `out_activities` (
   `activity_id` STRING(1024) NOT NULL,
   `company_id` STRING(1024),
@@ -14,7 +15,8 @@ CREATE TABLE `out_activities` (
   `due_date` DATE,
   `add_time` DATETIME,
   `done` STRING(1024)
-)
+);
+
 INSERT INTO `out_activities`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.activity_id'), '"') AS `activity_id`,
@@ -27,12 +29,14 @@ SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.due_date'), '"') AS `due_date`,
   TRIM(JSON_EXTRACT(`obj`, '$.add_time'), '"') AS `add_time`,
   TRIM(JSON_EXTRACT(`obj`, '$.done'), '"') AS `done`
-FROM `activities_tmp`
+FROM `activities_tmp`;
+
 /* deals table */
 CREATE TABLE `deals_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `deals`
+FROM `deals`;
+
 CREATE TABLE `out_deals` (
   `deal_id` STRING(1024) NOT NULL,
   `deal_deleted` INT64,
@@ -56,7 +60,8 @@ CREATE TABLE `out_deals` (
   `activities_count` INT64,
   `email_messages_count` INT64,
   `lost_reason` STRING(1024)
-)
+);
+
 INSERT INTO `out_deals`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.deal_id'), '"') AS `deal_id`,
@@ -81,12 +86,14 @@ SELECT
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.activities_count'), '"'), '') AS `activities_count`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.email_messages_count'), '"'), '') AS `email_messages_count`,
   TRIM(JSON_EXTRACT(`obj`, '$.lost_reason'), '"') AS `lost_reason`
-FROM `deals_tmp`
+FROM `deals_tmp`;
+
 /* organizations table */
 CREATE TABLE `organizations_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `organizations`
+FROM `organizations`;
+
 CREATE TABLE `out_organizations` (
   `organization_id` STRING(1024) NOT NULL,
   `org_name` STRING(1024),
@@ -96,7 +103,8 @@ CREATE TABLE `out_organizations` (
   `org_address_country` STRING(255),
   `org_address_postal_code` STRING(255),
   `org_add_date` DATE
-)
+);
+
 INSERT INTO `out_organizations`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.organization_id'), '"') AS `organization_id`,
@@ -107,55 +115,64 @@ SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.org_address_country'), '"') AS `org_address_country`,
   TRIM(JSON_EXTRACT(`obj`, '$.org_address_postal_code'), '"') AS `org_address_postal_code`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.org_add_date'), '"'), '') AS `org_add_date`
-FROM `organizations_tmp`
+FROM `organizations_tmp`;
+
 /* persons table */
 CREATE TABLE `persons_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `persons`
+FROM `persons`;
+
 CREATE TABLE `out_persons` (
   `contact_id` STRING(255) NOT NULL,
   `contact_name` STRING(255),
   `org_id` STRING(255),
   `add_time` DATETIME
-)
+);
+
 INSERT INTO `out_persons`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.contact_id'), '"') AS `contact_id`,
   TRIM(JSON_EXTRACT(`obj`, '$.contact_name'), '"') AS `contact_name`,
   TRIM(JSON_EXTRACT(`obj`, '$.org_id'), '"') AS `org_id`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.add_time'), '"'), '') AS `add_time`
-FROM `persons_tmp`
+FROM `persons_tmp`;
+
 /* person emails table */
 CREATE TABLE `person_emails_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `person_emails`
+FROM `person_emails`;
+
 CREATE TABLE `out_person_emails` (
   `contact_id` STRING(255) NOT NULL,
   `label` STRING(255) NOT NULL,
   `value` STRING(255),
   `primary` INT64
-)
+);
+
 INSERT INTO `out_person_emails`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.contact_id'), '"') AS `contact_id`,
   TRIM(JSON_EXTRACT(`obj`, '$.label'), '"') AS `label`,
   TRIM(JSON_EXTRACT(`obj`, '$.value'), '"') AS `value`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.primary'), '"'), '') AS `primary`
-FROM `person_emails_tmp`
+FROM `person_emails_tmp`;
+
 /* pipelines table */
 CREATE TABLE `pipelines_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `pipelines`
+FROM `pipelines`;
+
 CREATE TABLE `out_pipelines` (
   `pipeline_id` STRING(1024) NOT NULL,
   `pipeline_name` STRING(255),
   `url_title` STRING(255),
   `order_nr` INT64,
   `active` INT64
-)
+);
+
 INSERT INTO `out_pipelines`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.pipeline_id'), '"') AS `pipeline_id`,
@@ -163,12 +180,14 @@ SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.url_title'), '"') AS `url_title`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.order_nr'), '"'), '') AS `order_nr`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.active'), '"'), '') AS `active`
-FROM `pipelines_tmp`
+FROM `pipelines_tmp`;
+
 /* stages table */
 CREATE TABLE `stages_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `stages`
+FROM `stages`;
+
 CREATE TABLE `out_stages` (
   `stage_id` STRING(1024) NOT NULL,
   `order_nr` INT64,
@@ -177,7 +196,8 @@ CREATE TABLE `out_stages` (
   `pipeline_id` STRING(1024),
   `deal_probability` INT64,
   `add_time` DATETIME
-)
+);
+
 INSERT INTO `out_stages`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.stage_id'), '"') AS `stage_id`,
@@ -187,20 +207,23 @@ SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.pipeline_id'), '"') AS `pipeline_id`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.deal_probability'), '"'), '') AS `deal_probability`,
   NULLIF(TRIM(JSON_EXTRACT(`obj`, '$.add_time'), '"'), '') AS `add_time`
-FROM `stages_tmp`
+FROM `stages_tmp`;
+
 /* users table */
 CREATE TABLE `users_tmp` AS
 SELECT
   STAR_MAP(*) AS `obj`
-FROM `users`
+FROM `users`;
+
 CREATE TABLE `out_users` (
   `owner_id` STRING(1024) NOT NULL,
   `owner_name` STRING(255),
   `owner_email` STRING(255)
-)
+);
+
 INSERT INTO `out_users`
 SELECT
   TRIM(JSON_EXTRACT(`obj`, '$.owner_id'), '"') AS `owner_id`,
   TRIM(JSON_EXTRACT(`obj`, '$.owner_name'), '"') AS `owner_name`,
   TRIM(JSON_EXTRACT(`obj`, '$.owner_email'), '"') AS `owner_email`
-FROM `users_tmp`
+FROM `users_tmp`;

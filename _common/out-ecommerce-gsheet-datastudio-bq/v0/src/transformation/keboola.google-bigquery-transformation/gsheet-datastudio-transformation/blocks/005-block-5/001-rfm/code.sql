@@ -51,4 +51,4 @@ WHERE
     SELECT
       COUNT(*)
     FROM `bdmRfm`
-  ) = 0
+  ) = 0;

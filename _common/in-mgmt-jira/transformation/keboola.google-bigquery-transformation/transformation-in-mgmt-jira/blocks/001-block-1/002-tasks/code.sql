@@ -14,7 +14,8 @@ CREATE TABLE `out_task` (
   `assignee_type` STRING,
   `completed` BOOL,
   `is_subtask` BOOL
-)
+);
+
 INSERT INTO `out_task`
 SELECT DISTINCT
   i.`id` AS `task_id`,
@@ -39,14 +40,16 @@ FROM `issues` AS i
 LEFT JOIN `projects` AS p
   ON i.`project_key` = p.`key`
 LEFT JOIN `users` AS u
-  ON i.`reporter_account_id` = u.`account_id`
+  ON i.`reporter_account_id` = u.`account_id`;
+
 /* creates table with details in custom field of every task */
 CREATE TABLE `out_task_custom_field` (
   `task_custom_field_id` STRING NOT NULL,
   `task_id` STRING,
   `task_custom_field` STRING,
   `task_custom_field_value` STRING
-)
+);
+
 INSERT INTO `out_task_custom_field`
 SELECT
   CONCAT(i.`id`, json.key) AS `task_custom_field_id`,
@@ -55,7 +58,8 @@ SELECT
   CAST(json.value AS STRING) AS `task_custom_field_value`
 FROM `issues` AS i, TABLE(EXPLODE(PARSE_JSON(`custom_fields`))) AS json
 WHERE
-  NOT json.value LIKE '' AND NOT json.value LIKE '[]' AND NOT json.value LIKE '{}'
+  NOT json.value LIKE '' AND NOT json.value LIKE '[]' AND NOT json.value LIKE '{}';
+
 /* create task_event table */
 CREATE TABLE `out_task_event` (
   `task_event_id` STRING NOT NULL,
@@ -67,7 +71,8 @@ CREATE TABLE `out_task_event` (
   `event_type` STRING,
   `event` STRING,
   `event_text` STRING
-)
+);
+
 INSERT INTO `out_task_event`
 SELECT
   c.`id` AS `task_event_id`,
@@ -83,26 +88,30 @@ FROM `issues-changelogs` AS c
 LEFT JOIN `users` AS u
   ON u.`account_id` = c.`author_account_id`
 LEFT JOIN `issues` AS i
-  ON i.`id` = c.`issue_id`
+  ON i.`id` = c.`issue_id`;
+
 /* create task_tag table */
 CREATE TABLE `out_task_tag` (
   `task_id` STRING NOT NULL,
   `tag` STRING NOT NULL
-)
+);
+
 INSERT INTO `out_task_tag`
 SELECT DISTINCT
   `id` AS `task_id`,
   `labels` AS `tag`
 FROM `issues` AS i
 WHERE
-  `labels` <> '[]'
+  `labels` <> '[]';
+
 /* create join table of users and tasks */
 CREATE TABLE `out_task_user` (
   `user_id` STRING NOT NULL,
   `task_id` STRING NOT NULL
-)
+);
+
 INSERT INTO `out_task_user`
 SELECT
   i.`reporter_account_id` AS `user_id`,
   i.`id` AS `task_id`
-FROM `issues` AS i
+FROM `issues` AS i;

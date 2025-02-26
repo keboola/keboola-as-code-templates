@@ -14,15 +14,18 @@ SELECT
   `boolean`,
   `text`,
   `url`
-FROM `responses_answers`
+FROM `responses_answers`;
+
 CREATE TABLE `responses_pivoted` AS
 SELECT
   *
 FROM `pivot_prep`
-UNPIVOT(response FOR type IN (`choice_label`, `choice_other`, `choices_label`, `choices_other`, `date`, `email`, `file_url`, `number`, `boolean`, `text`, `url`))
+UNPIVOT(response FOR type IN (`choice_label`, `choice_other`, `choices_label`, `choices_other`, `date`, `email`, `file_url`, `number`, `boolean`, `text`, `url`));
+
 DELETE FROM `responses_pivoted`
 WHERE
-  RESPONSE = ''
+  RESPONSE = '';
+
 CREATE TABLE `out_responses` (
   `response_id` STRING NOT NULL,
   `session_id` STRING,
@@ -35,7 +38,8 @@ CREATE TABLE `out_responses` (
   `response_text` STRING,
   `type_pivot` STRING,
   `field_type` STRING
-)
+);
+
 INSERT INTO `out_responses`
 SELECT DISTINCT
   ra.`responses_pk` || '_' || ra.`field_id` AS `response_id`, /*    r."response_id"||'_'|| --Unique ID for the response. Note that response_id values are unique per form but are not unique globally. */ /*    ra."field_id" --The unique id of the form field the answer refers to */ /*    AS "response_id" */
@@ -56,7 +60,8 @@ LEFT JOIN `responses` AS r
 LEFT JOIN `responses_pivoted` AS rap
   ON ra.`field_id` = rap.`field_id` AND ra.`responses_pk` = rap.`responses_pk`
 LEFT JOIN `out_answer_option` AS oao
-  ON ra.`field_id` = oao.`question_id` AND rap.`RESPONSE` = oao.`choice_text`
+  ON ra.`field_id` = oao.`question_id` AND rap.`RESPONSE` = oao.`choice_text`;
+
 /* referential integrity clean-up: */
 DELETE FROM `out_responses`
 WHERE
@@ -64,4 +69,4 @@ WHERE
     SELECT
       `answer_option_id`
     FROM `out_answer_option`
-  )
+  );

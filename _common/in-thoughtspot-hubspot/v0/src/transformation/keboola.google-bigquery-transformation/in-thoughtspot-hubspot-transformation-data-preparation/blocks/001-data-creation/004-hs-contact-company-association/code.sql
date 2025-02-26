@@ -4,4 +4,4 @@ SELECT DISTINCT
   `canonical_vid` AS CONTACT_ID,
   `associatedcompanyid` AS COMPANY_ID,
   `lifecyclestage` AS TYPE
-FROM `contacts`
+FROM `contacts`;

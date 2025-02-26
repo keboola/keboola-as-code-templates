@@ -13,7 +13,8 @@ SELECT
   O.`customer_id`
 FROM `order` AS O
 JOIN `last_order` AS LO
-  ON LO.`id` = O.`id`
+  ON LO.`id` = O.`id`;
+
 /* BDM_CUSTOMERS */
 CREATE TABLE `bdm_customers` (
   CUSTOMER_ID STRING(255),
@@ -30,7 +31,8 @@ CREATE TABLE `bdm_customers` (
   TOTAL_SPEND FLOAT64,
   VERIFIED_EMAIL BOOL,
   STATE STRING(255)
-)
+);
+
 INSERT INTO `bdm_customers`
 SELECT
   C.`id` AS CUSTOMER_ID,
@@ -49,7 +51,8 @@ SELECT
   C.`state` AS STATE
 FROM `customer` AS C
 LEFT JOIN `last_shipping_address` AS LS
-  ON LS.`customer_id` = C.`id`
+  ON LS.`customer_id` = C.`id`;
+
 /* - try to match customers based on email */
 CREATE OR REPLACE TABLE `customer_ids` AS
 SELECT DISTINCT
@@ -59,12 +62,14 @@ FROM `order` AS O
 JOIN `bdm_customers` AS C
   ON O.`email` = C.CUSTOMER_EMAIL
 QUALIFY
-  ROW_NUMBER() OVER (PARTITION BY `email` ORDER BY C.CUSTOMER_ID NULLS LAST) = 1
+  ROW_NUMBER() OVER (PARTITION BY `email` ORDER BY C.CUSTOMER_ID NULLS LAST) = 1;
+
 /* UPDATE ORDERS */
 UPDATE `bdm_orders` AS O SET O.CUSTOMER_ID = C.CUSTOMER_ID
 FROM `customer_ids` AS C
 WHERE
-  O.ORDER_CUSTOMER_EMAIL = C.`email`
+  O.ORDER_CUSTOMER_EMAIL = C.`email`;
+
 CREATE TABLE `order_customer_categories` AS
 SELECT
   O.ORDER_ID,
@@ -134,20 +139,24 @@ WHERE
   ORDER_CUSTOMER_EMAIL <> ''
 ORDER BY
   ORDER_CUSTOMER_EMAIL NULLS LAST,
-  ORDER_DATE NULLS LAST
+  ORDER_DATE NULLS LAST;
+
 UPDATE `order_customer_categories` SET DIFF = 0
 WHERE
-  DIFF IS NULL
+  DIFF IS NULL;
+
 /* - UPDATE CUSTOMER CATEGORIES AT THE TIME OF TRANSACTION */
 UPDATE `bdm_orders` AS O SET O.CUSTOMER_REGULARITY_TYPE = C.CATEGORY_BY_ORDER_COUNT
 FROM `order_customer_categories` AS C
 WHERE
-  O.ORDER_ID = C.ORDER_ID
+  O.ORDER_ID = C.ORDER_ID;
+
 UPDATE `bdm_orders` AS O SET O.DAYS_SINCE_PREVIOUS_ORDER = C.DIFF
 FROM `order_customer_categories` AS C
 WHERE
-  O.ORDER_ID = C.ORDER_ID
+  O.ORDER_ID = C.ORDER_ID;
+
 UPDATE `bdm_orders` AS O SET O.IS_FIRST_PURCHASE = TRUE
 FROM `order_customer_categories` AS C
 WHERE
-  O.ORDER_ID = C.ORDER_ID AND C.ORDER_COUNT_ROLL = 1
+  O.ORDER_ID = C.ORDER_ID AND C.ORDER_COUNT_ROLL = 1;

@@ -21,7 +21,8 @@ CREATE TABLE `ga4_page_behaviour` (
   `userEngagementDuration` FLOAT64,
   `averageSessionDuration` FLOAT64,
   `eventCount` INT64
-)
+);
+
 INSERT INTO `ga4_page_behaviour`
 SELECT
   `id`, /* dimensions */
@@ -46,4 +47,4 @@ SELECT
   `userEngagementDuration`,
   `averageSessionDuration`,
   `eventCount`
-FROM `raw_landing_page_statistics`
+FROM `raw_landing_page_statistics`;

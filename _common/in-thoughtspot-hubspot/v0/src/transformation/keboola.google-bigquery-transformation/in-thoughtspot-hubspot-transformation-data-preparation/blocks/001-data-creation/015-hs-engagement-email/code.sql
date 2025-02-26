@@ -10,4 +10,4 @@ SELECT DISTINCT
   '' AS STATUS, /* "status" */
   '' AS FROM_FIRST_NAME, /* "from_first_name" */
   '' AS FROM_LAST_NAME /* "from_last_name" */
-FROM `emails`
+FROM `emails`;

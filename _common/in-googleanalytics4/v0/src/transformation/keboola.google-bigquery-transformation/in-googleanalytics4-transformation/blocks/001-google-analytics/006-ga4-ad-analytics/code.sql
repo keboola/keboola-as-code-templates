@@ -16,7 +16,8 @@ CREATE TABLE `ga4_ad_analytics` (
   `conversions` INT64,
   `activeUsers` INT64,
   `screenPageViews` INT64
-)
+);
+
 INSERT INTO `ga4_ad_analytics`
 SELECT
   `id`, /* dimensions */
@@ -36,4 +37,4 @@ SELECT
   `conversions`,
   `activeUsers`,
   `screenPageViews`
-FROM `raw_ad_analytics`
+FROM `raw_ad_analytics`;

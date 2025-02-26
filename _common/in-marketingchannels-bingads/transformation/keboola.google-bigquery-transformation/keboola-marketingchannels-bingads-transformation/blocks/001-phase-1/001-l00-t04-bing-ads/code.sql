@@ -12,14 +12,16 @@ SELECT
   a.`Spend` AS `costs`
 FROM `Bing_Ads_campaignperformance` AS a
 INNER JOIN `Bing_Ads_campaigns` AS b
-  ON a.`CampaignId` = b.`Id`
+  ON a.`CampaignId` = b.`Id`;
+
 /* output table grouping */
 CREATE TABLE `out_bingads` (
   `bing_id` STRING(1024) NOT NULL,
   `impressions` INT64,
   `clicks` INT64,
   `costs` FLOAT64
-)
+);
+
 INSERT INTO `out_bingads`
 SELECT
   COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`currency`, '') || '*' || COALESCE(`account_id`, '') AS `bing_id`,
@@ -34,4 +36,4 @@ GROUP BY
   `campaign`,
   `domain`,
   `currency`,
-  `account_id`
+  `account_id`;

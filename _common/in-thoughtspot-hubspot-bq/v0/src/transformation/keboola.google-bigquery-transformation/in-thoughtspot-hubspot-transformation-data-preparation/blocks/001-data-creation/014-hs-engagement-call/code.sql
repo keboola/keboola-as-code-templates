@@ -5,4 +5,4 @@ SELECT DISTINCT
   `disposition` AS DISPOSITION,
   `title` AS TITLE,
   `engagement_id` AS ENGAGEMENT_ID
-FROM `calls`
+FROM `calls`;

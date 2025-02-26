@@ -7,7 +7,8 @@ CREATE TABLE `out_contact` (
   `date_created` DATE,
   `lead_source` STRING(255),
   `lead_converted` STRING(255)
-)
+);
+
 INSERT INTO `out_contact`
 SELECT
   `canonical_vid` || '_contact' AS `contact_id`,
@@ -30,7 +31,8 @@ SELECT
   NULLIF(CAST(`createdate` AS STRING), '') AS `date_created`,
   `email_source` AS `lead_source`,
   IF(`associatedcompanyid` <> '', 'Yes', 'No') AS `lead_converted`
-FROM `contacts`
+FROM `contacts`;
+
 /* fake row to keep referential integrity if child tables are missing existing contact ids */
 INSERT INTO `out_contact` (
   `contact_id`,
@@ -42,4 +44,4 @@ INSERT INTO `out_contact` (
   `lead_converted`
 )
 VALUES
-  ('0', 'Unknown', '', 'Lead', NULL, '', 'No')
+  ('0', 'Unknown', '', 'Lead', NULL, '', 'No');

@@ -28,4 +28,4 @@ FROM `bdmProducts` AS `bdmP`
 LEFT JOIN `bdmOrderLinesMargin` AS `bdmOLM`
   ON `bdmP`.`PRODUCT_ID` = `bdmOLM`.`ORDER_LINE_PRODUCT_ID`
 ORDER BY
-  `bdmP`.`PRODUCT_ID` DESC NULLS FIRST
+  `bdmP`.`PRODUCT_ID` DESC NULLS FIRST;

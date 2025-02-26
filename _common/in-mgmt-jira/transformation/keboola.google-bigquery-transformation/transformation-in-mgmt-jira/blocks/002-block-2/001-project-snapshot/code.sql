@@ -1,11 +1,13 @@
 /* PROJECT SNAPSHOTS */ /* snapshot project table to be able to track progress in time */ /* this table is an auxiliary table which will be used for creating final snapshot table later on */ /* set timezone to UTC (change accordingly) */
 ALTER SESSION
-    SET TIMEZONE = 'UTC'
+    SET TIMEZONE = 'UTC';
+
 CREATE TABLE `tmp1_project_snapshot` AS
 SELECT
   CAST(CURRENT_DATE AS STRING) AS `snapshot_date`,
   `op`.*
-FROM `out_project` AS `op`
+FROM `out_project` AS `op`;
+
 /* create temporary table for additional calculations */ /* add previous values of due date, owner and status, so we can define if there has been any change */ /* don't snapshot already archived projects */
 CREATE TABLE `tmp2_project_snapshot` AS
 SELECT
@@ -22,7 +24,8 @@ SELECT
   COALESCE(LAG(`owner`) OVER (PARTITION BY `project_id` ORDER BY `snapshot_date`), '') AS `previous_owner`
 FROM `tmp1_project_snapshot`
 WHERE
-  `archived` = 'false'
+  `archived` = 'false';
+
 /* add partition column to tmp table for assigning number of day in the previous status and other possible calculations */ /* marking last day of month/quarter last snapshot for reporting */
 CREATE TABLE `tmp3_project_snapshot` AS
 SELECT
@@ -71,7 +74,8 @@ LEFT JOIN (
     OR NOT `m`.`max_date` IS NULL
 ) AS `lq`
   ON `t`.`project_id` = `lq`.`project_id`
-  AND `t`.`snapshot_date` = `lq`.`snapshot_date`
+  AND `t`.`snapshot_date` = `lq`.`snapshot_date`;
+
 /* create project snapshot table */ /* define if there has been change of status, owner or due date */ /* adding number of days in previous stage */ /* iff project is moved more than once to some status, it always assign number of all days in that previous particular status */
 CREATE TABLE `out_project_snapshot` (
   `project_id` STRING NOT NULL,
@@ -92,7 +96,8 @@ CREATE TABLE `out_project_snapshot` (
   `last_snapshot` BOOL,
   `last_day_of_month` BOOL,
   `last_day_of_quarter` BOOL
-)
+);
+
 INSERT INTO `out_project_snapshot`
 SELECT
   `o`.`project_id`,
@@ -129,4 +134,4 @@ LEFT JOIN (
     4
 ) AS `d`
   ON `o`.`project_id` = `d`.`project_id`
-  AND `o`.`continuous_status_partition` = `d`.`following_partition`
+  AND `o`.`continuous_status_partition` = `d`.`following_partition`;

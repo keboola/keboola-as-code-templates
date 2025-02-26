@@ -15,7 +15,8 @@ CREATE TABLE `ga_traffic_source` (
   `ga_sessionDuration` FLOAT64,
   `ga_pageviews` INT64,
   `ga_organicSearches` INT64
-)
+);
+
 INSERT INTO `ga_traffic_source`
 SELECT
   `id` AS `id_TBE`, /* dimensions */
@@ -34,4 +35,4 @@ SELECT
   `sessionDuration` AS `ga_sessionDuration`,
   `pageviews` AS `ga_pageviews`,
   `organicSearches` AS `ga_organicSearches`
-FROM `raw_traffic_source`
+FROM `raw_traffic_source`;

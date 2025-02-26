@@ -8,4 +8,4 @@ SELECT DISTINCT
   `stageId` AS ID,
   `label` AS LABEL,
   `closedWon` AS IS_CLOSED
-FROM `pipeline_stages`
+FROM `pipeline_stages`;

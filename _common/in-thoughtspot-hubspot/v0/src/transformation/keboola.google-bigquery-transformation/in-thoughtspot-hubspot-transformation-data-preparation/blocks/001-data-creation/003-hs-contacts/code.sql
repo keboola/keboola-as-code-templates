@@ -59,4 +59,4 @@ SELECT DISTINCT
   `hs_lifecyclestage_customer_date` AS HS_LIFECYCLESTAGE_CUSTOMER_DATE,
   `hs_lifecyclestage_salesqualifiedlead_date` AS HS_LIFECYCLESTAGE_SALESQUALIFIEDLEAD_DATE,
   `hs_lifecyclestage_evangelist_date` AS HS_LIFECYCLESTAGE_EVANGELIST_DATE
-FROM `contacts`
+FROM `contacts`;

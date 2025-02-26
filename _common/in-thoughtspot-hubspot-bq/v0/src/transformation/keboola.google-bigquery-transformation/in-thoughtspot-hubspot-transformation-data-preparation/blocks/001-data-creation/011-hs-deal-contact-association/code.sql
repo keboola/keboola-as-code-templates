@@ -3,4 +3,4 @@ CREATE TABLE HS_DEAL_CONTACT_ASSOCIATION AS
 SELECT DISTINCT
   `dealId` AS DEAL_ID,
   `contact_vid` AS CONTACT_ID
-FROM `deals_contacts_list`
+FROM `deals_contacts_list`;

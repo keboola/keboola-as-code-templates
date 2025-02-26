@@ -91,9 +91,17 @@ class SQLTranspiler:
             # Create target directory if it doesn't exist
             target_file.parent.mkdir(parents=True, exist_ok=True)
             
+            # Process each statement to ensure it ends with a semicolon
+            processed_statements = []
+            for statement in transpiled:
+                # Remove any existing trailing semicolons and whitespace
+                statement = statement.rstrip().rstrip(';')
+                # Add a single semicolon
+                processed_statements.append(statement + ';')
+            
             # Write transpiled SQL - join multiple statements with newlines
             with open(target_file, 'w') as f:
-                f.write('\n'.join(transpiled))
+                f.write('\n\n'.join(processed_statements))
                 
         except Exception as e:
             print(f"Error transpiling {source_file}: {str(e)}")

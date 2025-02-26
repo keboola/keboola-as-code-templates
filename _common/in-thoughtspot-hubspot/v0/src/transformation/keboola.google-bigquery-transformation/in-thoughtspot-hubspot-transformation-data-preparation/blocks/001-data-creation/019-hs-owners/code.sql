@@ -7,4 +7,4 @@ SELECT DISTINCT
   `lastName` AS LAST_NAME,
   `userIdIncludingInactive` AS USER_ID,
   CASE WHEN `isActive` = 'True' THEN 'False' ELSE 'True' END AS ARCHIVED
-FROM `owners`
+FROM `owners`;

@@ -12,7 +12,8 @@ GROUP BY
   1,
   2,
   3,
-  4
+  4;
+
 /* bdm_orders table */
 CREATE TABLE `bdm_orders` (
   ORDER_ID STRING NOT NULL,
@@ -38,7 +39,8 @@ CREATE TABLE `bdm_orders` (
   ORDER_TOTAL_PRICE_WITHOUT_TAXES FLOAT64,
   ORDER_TOTAL_PRICE_TAXES FLOAT64,
   CUSTOMER_ID STRING
-)
+);
+
 INSERT INTO `bdm_orders`
 SELECT DISTINCT
   O.`id` AS ORDER_ID,
@@ -75,7 +77,8 @@ LEFT JOIN (
   GROUP BY
     `customer_id`
 ) AS m
-  ON o.`customer_id` = m.`customer_id`
+  ON o.`customer_id` = m.`customer_id`;
+
 /* BDM_ORDER_LINES */
 CREATE TABLE `bdm_order_lines` (
   ORDER_ID STRING,
@@ -91,7 +94,8 @@ CREATE TABLE `bdm_order_lines` (
   ORDER_LINE_TAXES_RATE FLOAT64,
   LINE_PURCHASE_PRICE FLOAT64,
   AVG_ORDER_LINE_MARGIN FLOAT64
-)
+);
+
 INSERT INTO `bdm_order_lines`
 SELECT
   OL.`id` AS ORDER_LINE_ID,
@@ -121,4 +125,4 @@ SELECT
   NULL AS AVG_ORDER_LINE_MARGIN
 FROM `order` AS O
 LEFT JOIN `order_line_items` AS OL
-  ON O.`id` = OL.`order_id`
+  ON O.`id` = OL.`order_id`;

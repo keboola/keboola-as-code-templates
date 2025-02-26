@@ -27,4 +27,4 @@ FROM `marketing_email_statistics`, Table(
       ', '
     )
   )
-) AS F
+) AS F;

@@ -9,7 +9,8 @@ CREATE TABLE `ga4_event` (
   `totalUsers` INT64,
   `activeUsers` INT64,
   `newUsers` INT64
-)
+);
+
 INSERT INTO `ga4_event`
 SELECT
   `id`, /* dimensions */
@@ -22,4 +23,4 @@ SELECT
   `totalUsers`,
   `activeUsers`,
   `newUsers`
-FROM `raw_event`
+FROM `raw_event`;

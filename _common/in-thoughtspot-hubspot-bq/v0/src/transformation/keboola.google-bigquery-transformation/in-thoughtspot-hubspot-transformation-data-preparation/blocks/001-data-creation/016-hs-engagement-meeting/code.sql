@@ -9,4 +9,4 @@ SELECT DISTINCT
   '' AS ENGAGEMENT_ID, /* "engagement_id" */
   '' AS MEETING_OUTCOME, /* "meeting_outcome" */
   '' AS LOCATION /* "location" */
-FROM `meetings`
+FROM `meetings`;

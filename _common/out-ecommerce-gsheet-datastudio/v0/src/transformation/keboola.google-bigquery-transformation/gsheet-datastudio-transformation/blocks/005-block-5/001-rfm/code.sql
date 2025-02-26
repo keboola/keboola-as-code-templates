@@ -1,4 +1,5 @@
-ALTER TABLE `bdmRfm` DROP COLUMN `_timestamp`
+ALTER TABLE `bdmRfm` DROP COLUMN `_timestamp`;
+
 CREATE TABLE `bdmRfmEnrich` AS
 (
   SELECT
@@ -51,4 +52,4 @@ WHERE
     SELECT
       COUNT(*)
     FROM `bdmRfm`
-  ) = 0
+  ) = 0;

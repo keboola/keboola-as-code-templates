@@ -66,4 +66,4 @@ ALTER TABLE `bdmOrderLinesEnrich` ADD COLUMN `ORDER_STATUS` STRING
 UPDATE `bdmOrderLinesEnrich` AS ol SET ol.`ORDER_STATUS` = o.`ORDER_STATUS`
 FROM `bdmOrders` AS o
 WHERE
-  ol.`ORDER_ID` = o.`ORDER_ID`
+  ol.`ORDER_ID` = o.`ORDER_ID`;

@@ -4,18 +4,23 @@ CREATE OR REPLACE TABLE days AS
   SELECT
     CURRENT_DATE - INTERVAL '2' YEAR AS date2years,
     DATE_DIFF(CURRENT_DATE, CURRENT_DATE - INTERVAL '2' YEAR, DAY) AS days
-)
-SET M_REVENUE_MONTHS = -24
-SET R_MONTHS = -24
+);
+
+SET M_REVENUE_MONTHS = -24;
+
+SET R_MONTHS = -24;
+
 SET DAYS = (
   SELECT
     days
   FROM days
-)
+);
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */ /* - 2 YEAR SNAPSHOT: create a calendar and filling it up with the customer */ /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */ /* - CLEANUP ORDERS TO INCLUDE ONLY SUCCESSFUL */
 DELETE FROM `bdm_orders`
 WHERE
-  CAST(IS_SUCCESSFUL AS BOOL) = FALSE AND ORDER_CUSTOMER_EMAIL = ''
+  CAST(IS_SUCCESSFUL AS BOOL) = FALSE AND ORDER_CUSTOMER_EMAIL = '';
+
 CREATE OR REPLACE TABLE CALENDAR AS
 SELECT
   DATE_ADD((
@@ -23,7 +28,8 @@ SELECT
       date2years
     FROM days
   ), INTERVAL (SEQ4()) DAY) AS SNAPSHOT_DATE
-FROM TABLE(GENERATOR(ROWCOUNT => @DAYS))
+FROM TABLE(GENERATOR(ROWCOUNT => @DAYS));
+
 CREATE OR REPLACE TEMPORARY TABLE CALENDAR_DAILY AS
 (
   SELECT
@@ -43,7 +49,8 @@ CREATE OR REPLACE TEMPORARY TABLE CALENDAR_DAILY AS
   ) AS CLIENT
   WHERE
     CAST(SNAPSHOT_DATE AS DATE) < CURRENT_DATE
-)
+);
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */ /* - RFM */ /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 CREATE OR REPLACE TABLE RFM_TEMPORARY AS
 WITH SC AS (
@@ -104,7 +111,8 @@ SELECT
   LEAD(SEGMENT_NR) OVER (PARTITION BY S.CUSTOMER_ID ORDER BY S.SNAPSHOT_DATE DESC) AS PRE_SEG_NUMBER_1
 FROM SC AS S
 LEFT JOIN MAPPING_SEGMENT_RFM AS MAP
-  ON S.FINAL_SCORE = MAP.SCORE
+  ON S.FINAL_SCORE = MAP.SCORE;
+
 CREATE OR REPLACE TABLE `rfm` AS
 SELECT
   CUSTOMER_ID,
@@ -123,9 +131,12 @@ SELECT
   CURRENT_DATE - CAST(SNAPSHOT_DATE AS DATE) AS TIME_AS,
   FIRST_SUCCEEDED_TRANSACTION_DATE,
   LAST_SUCCEEDED_TRANSACTION_DATE
-FROM RFM_TEMPORARY AS RFM
-ALTER TABLE `rfm` ADD COLUMN actual_state BOOL /* - Adding info about actual status */
-UPDATE `rfm` SET actual_state = FALSE
+FROM RFM_TEMPORARY AS RFM;
+
+ALTER TABLE `rfm` ADD COLUMN actual_state BOOL /* - Adding info about actual status */;
+
+UPDATE `rfm` SET actual_state = FALSE;
+
 UPDATE `rfm` SET actual_state = CASE WHEN NOT act.customer_id IS NULL THEN TRUE ELSE FALSE END
 FROM (
   SELECT
@@ -151,7 +162,8 @@ FROM (
 WHERE
   act.customer_id = `rfm`.customer_id
   AND act.max_date = `rfm`.snapshot_date
-  AND act.segment = `rfm`.segment_nr
+  AND act.segment = `rfm`.segment_nr;
+
 DELETE FROM `rfm`
 WHERE
-  actual_state <> TRUE
+  actual_state <> TRUE;

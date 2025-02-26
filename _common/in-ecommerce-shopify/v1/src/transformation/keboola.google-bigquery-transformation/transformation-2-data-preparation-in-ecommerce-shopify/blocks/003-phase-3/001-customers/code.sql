@@ -13,7 +13,8 @@ SELECT
   O.`customer_id`
 FROM `order` AS O
 JOIN `last_order` AS LO
-  ON LO.`id` = O.`id`
+  ON LO.`id` = O.`id`;
+
 /* BDM_CUSTOMERS */
 CREATE TABLE `bdm_customers` (
   CUSTOMER_ID STRING NOT NULL,
@@ -37,7 +38,8 @@ CREATE TABLE `bdm_customers` (
   SEGMENT_NR INT64,
   FIRST_SUCCEEDED_TRANSACTION_DATE DATE,
   LAST_SUCCEEDED_TRANSACTION_DATE DATE
-)
+);
+
 INSERT INTO `bdm_customers`
 SELECT
   C.`id` AS CUSTOMER_ID,
@@ -70,7 +72,8 @@ FROM `customer` AS C
 LEFT JOIN `last_shipping_address` AS LS
   ON LS.`customer_id` = C.`id`
 LEFT JOIN `rfm` AS rfm
-  ON C.`id` = rfm.CUSTOMER_ID
+  ON C.`id` = rfm.CUSTOMER_ID;
+
 /* - try to match customers based on email */
 CREATE OR REPLACE TABLE `customer_ids` AS
 SELECT DISTINCT
@@ -80,9 +83,10 @@ FROM `order` AS O
 JOIN `bdm_customers` AS C
   ON O.`email` = C.CUSTOMER_EMAIL
 QUALIFY
-  ROW_NUMBER() OVER (PARTITION BY `email` ORDER BY C.CUSTOMER_ID NULLS LAST) = 1
+  ROW_NUMBER() OVER (PARTITION BY `email` ORDER BY C.CUSTOMER_ID NULLS LAST) = 1;
+
 /* UPDATE ORDERS */
 UPDATE `bdm_orders` AS O SET O.CUSTOMER_ID = C.CUSTOMER_ID
 FROM `customer_ids` AS C
 WHERE
-  O.ORDER_CUSTOMER_EMAIL = C.`EMAIL`
+  O.ORDER_CUSTOMER_EMAIL = C.`EMAIL`;

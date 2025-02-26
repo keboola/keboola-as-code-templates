@@ -3,7 +3,8 @@ CREATE OR REPLACE TABLE `data_quality_check` (
   ENTITY STRING,
   ERROR_TYPE STRING,
   DESCRIPTION STRING
-)
+);
+
 INSERT INTO `data_quality_check` (
   DATA_SOURCE,
   ENTITY,
@@ -53,7 +54,8 @@ WHERE
       1
     HAVING
       COUNT(1) > 1
-  )
+  );
+
 INSERT INTO `data_quality_check` (
   DATA_SOURCE,
   ENTITY,
@@ -79,4 +81,4 @@ WHERE
       S2.`inventory_item_id`
     HAVING
       COUNT(1) > 1
-  )
+  );

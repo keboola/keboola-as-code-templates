@@ -4,4 +4,4 @@ SELECT DISTINCT
   `pipelineId` AS ID,
   `label` AS LABEL,
   CASE WHEN `active` = 'True' THEN 'False' ELSE 'True' END AS ARCHIVED
-FROM `pipelines`
+FROM `pipelines`;

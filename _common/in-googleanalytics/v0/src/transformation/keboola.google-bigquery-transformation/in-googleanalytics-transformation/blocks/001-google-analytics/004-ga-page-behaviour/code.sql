@@ -15,7 +15,8 @@ CREATE TABLE `ga_page_behaviour` (
   `ga_timeOnPage` FLOAT64,
   `ga_exits` INT64,
   `ga_pageValue` FLOAT64
-)
+);
+
 INSERT INTO `ga_page_behaviour`
 SELECT
   `id` AS `id_TBE`, /* dimensions */
@@ -34,4 +35,4 @@ SELECT
   NULLIF(`timeOnPage`, '') AS `ga_timeOnPage`,
   NULLIF(`exits`, '') AS `ga_exits`,
   NULLIF(`pageValue`, '') AS `ga_pageValue`
-FROM `raw_page_behaviour`
+FROM `raw_page_behaviour`;

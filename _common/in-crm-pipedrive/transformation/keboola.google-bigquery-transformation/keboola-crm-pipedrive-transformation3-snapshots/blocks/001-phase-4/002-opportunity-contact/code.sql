@@ -5,7 +5,8 @@ CREATE TABLE `out_opportunity_contact` (
   `contact_id` STRING(2000),
   `is_primary_contact` STRING(255),
   `role` STRING(255)
-)
+);
+
 INSERT INTO `out_opportunity_contact`
 SELECT
   `o`.`opportunity_id` || '-' || `c`.`contact_id` AS `opportunity_contact_id`,
@@ -17,4 +18,4 @@ FROM `deals` AS `d`
 INNER JOIN `opportunity_ri` AS `o`
   ON `d`.`deal_id` = `o`.`opportunity_id`
 INNER JOIN `contact_ri` AS `c`
-  ON `d`.`person_id` = `c`.`contact_id`
+  ON `d`.`person_id` = `c`.`contact_id`;

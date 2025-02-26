@@ -5,7 +5,8 @@ CREATE TABLE `out_opportunity_contact` (
   `contact_id` STRING(2000),
   `is_primary_contact` STRING(255),
   `role` STRING(255)
-)
+);
+
 INSERT INTO `out_opportunity_contact`
 SELECT
   `o`.`opportunity_id` || '-' || `c`.`contact_id` AS `opportunity_contact_id`,
@@ -19,4 +20,4 @@ INNER JOIN `out_opportunity` AS `o`
 INNER JOIN `out_contact` AS `c`
   ON `r`.`ContactId` = `c`.`contact_id`
 WHERE
-  LOWER(`r`.`IsDeleted`) = 'false'
+  LOWER(`r`.`IsDeleted`) = 'false';

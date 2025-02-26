@@ -1,15 +1,19 @@
-SET M_REVENUE_MONTHS = -3
-SET R_MONTHS = -6
+SET M_REVENUE_MONTHS = -3;
+
+SET R_MONTHS = -6;
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */ /* - 2 YEAR SNAPSHOT: create a calendar and filling it up with the customer */ /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */ /* - CLEANUP ORDERS TO INCLUDE ONLY SUCESSFUL */
 DELETE FROM `bdm_orders`
 WHERE
-  CAST(IS_SUCESSFUL AS BOOL) = FALSE AND ORDER_CUSTOMER_EMAIL = ''
+  CAST(IS_SUCESSFUL AS BOOL) = FALSE AND ORDER_CUSTOMER_EMAIL = '';
+
 CREATE OR REPLACE TABLE CALENDAR AS
 (
   SELECT
     DATE_ADD(DATE_ADD(CURRENT_DATE, INTERVAL -1 YEAR), INTERVAL (SEQ4()) DAY) AS SNAPSHOT_DATE
   FROM TABLE(GENERATOR(ROWCOUNT => 2 * 365))
-)
+);
+
 CREATE OR REPLACE TEMPORARY TABLE CALENDAR_DAILY AS
 (
   SELECT
@@ -21,7 +25,8 @@ CREATE OR REPLACE TEMPORARY TABLE CALENDAR_DAILY AS
       C.CUSTOMER_ID AS CUSTOMER_ID
     FROM `bdm_orders` AS C
   ) AS CLIENT
-)
+);
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */ /* - RFM */ /* -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 CREATE OR REPLACE TABLE RFM_TEMPORARY AS
 WITH SC AS (
@@ -82,7 +87,8 @@ SELECT
   LEAD(SEGMENT_NR) OVER (PARTITION BY S.CUSTOMER_ID ORDER BY S.SNAPSHOT_DATE DESC) AS PRE_SEG_NUMBER_1
 FROM SC AS S
 LEFT JOIN MAPPING_SEGMENT_RFM AS MAP
-  ON S.FINAL_SCORE = MAP.SCORE
+  ON S.FINAL_SCORE = MAP.SCORE;
+
 CREATE OR REPLACE TABLE RFM_FINAL AS
 WITH RFM AS (
   SELECT
@@ -113,4 +119,4 @@ SELECT
     CURRENT_DATE - SNAPSHOT_DATE
   ) AS TIME_AS,
   FIRST_SUCCEEDED_TRANSACTION_DATE
-FROM RFM
+FROM RFM;

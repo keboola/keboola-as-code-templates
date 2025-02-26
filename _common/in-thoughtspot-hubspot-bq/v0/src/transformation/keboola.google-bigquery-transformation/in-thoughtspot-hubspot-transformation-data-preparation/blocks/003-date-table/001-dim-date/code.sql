@@ -237,4 +237,4 @@ FROM (
     `MIN_DATE` <> '' AND `MAX_DATE` <> ''
 ), table(generator(rowcount => 10000)) AS x
 QUALIFY
-  i < 1 + end_date - start_date
+  i < 1 + end_date - start_date;

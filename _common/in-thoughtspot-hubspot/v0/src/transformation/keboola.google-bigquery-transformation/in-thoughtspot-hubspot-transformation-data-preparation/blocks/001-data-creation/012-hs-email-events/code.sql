@@ -28,4 +28,4 @@ SELECT DISTINCT
   e.`causedBy_id` AS CAUSED_BY_ID
 FROM `email_events` AS e
 LEFT JOIN `emails` AS ee
-  ON 1 = 1 /* e."created" = ee."created" AND e."recipient" = ee."recipient"; */
+  ON 1 = 1 /* e."created" = ee."created" AND e."recipient" = ee."recipient"; */;

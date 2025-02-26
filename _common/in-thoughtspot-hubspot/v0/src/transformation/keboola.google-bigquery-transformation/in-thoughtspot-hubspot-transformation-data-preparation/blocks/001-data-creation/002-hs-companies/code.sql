@@ -21,4 +21,4 @@ SELECT DISTINCT
   `hs_analytics_last_visit_timestamp` AS HS_ANALYTICS_LAST_VISIT_TIMESTAMP,
   `hs_analytics_num_visits` AS HS_ANALYTICS_NUM_VISITS,
   `lifecyclestage` AS LIFECYCLESTAGE
-FROM `companies`
+FROM `companies`;

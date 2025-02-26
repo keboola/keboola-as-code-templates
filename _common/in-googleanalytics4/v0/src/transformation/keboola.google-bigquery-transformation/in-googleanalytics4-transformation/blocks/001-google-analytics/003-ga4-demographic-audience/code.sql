@@ -18,7 +18,8 @@ CREATE TABLE `ga4_demographic_audience` (
   `averageSessionDuration` FLOAT64,
   `screenPageViews` INT64,
   `eventCount` INT64
-)
+);
+
 INSERT INTO `ga4_demographic_audience`
 SELECT
   `id`, /* dimensions */
@@ -40,4 +41,4 @@ SELECT
   `averageSessionDuration`,
   `screenPageViews`,
   `eventCount`
-FROM `raw_demographic`
+FROM `raw_demographic`;

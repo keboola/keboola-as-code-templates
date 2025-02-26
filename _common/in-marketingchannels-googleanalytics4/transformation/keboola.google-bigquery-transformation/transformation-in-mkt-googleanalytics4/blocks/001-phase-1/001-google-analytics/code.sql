@@ -5,7 +5,8 @@ CREATE TABLE `out_ga4_traffic` (
   `sessions_return` INT64,
   `pageviews` INT64,
   `bounces` INT64
-)
+);
+
 INSERT INTO `out_ga4_traffic`
 SELECT
   COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`account_id`, '') || '*' || COALESCE(`keyword`, '') || '*' || COALESCE(`ad_group`, '') AS `ga_traffic_id`,
@@ -41,12 +42,14 @@ GROUP BY
   `domain`,
   `account_id`,
   `keyword`,
-  `ad_group`
+  `ad_group`;
+
 /* transaction detail */
 CREATE TABLE `out_ga4_transactions` (
   `ga_transactions_id` STRING(1024) NOT NULL,
   `item_quantity` INT64
-)
+);
+
 INSERT INTO `out_ga4_transactions`
 SELECT
   COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`account_id`, '') || '*' || COALESCE(`keyword`, '') || '*' || COALESCE(`ad_group`, '') || '*' || COALESCE(`transaction_id`, '') AS `ga_transactions_id`,
@@ -76,4 +79,4 @@ GROUP BY
   `account_id`,
   `keyword`,
   `ad_group`,
-  `transaction_id`
+  `transaction_id`;

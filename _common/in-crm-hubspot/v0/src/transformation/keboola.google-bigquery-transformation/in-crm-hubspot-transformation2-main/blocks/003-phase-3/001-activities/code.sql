@@ -7,7 +7,8 @@ CREATE TABLE `out_activity` (
   `activity` STRING(2000),
   `activity_date` DATETIME,
   `activity_duration_m` FLOAT64
-)
+);
+
 INSERT INTO `out_activity`
 SELECT
   `a`.`engagement_id` AS `activity_id`,
@@ -37,4 +38,4 @@ LEFT JOIN `out_employee` AS `e`
 WHERE
   (
     NOT `c`.`contact_id` IS NULL OR NOT `o`.`opportunity_id` IS NULL
-  )
+  );

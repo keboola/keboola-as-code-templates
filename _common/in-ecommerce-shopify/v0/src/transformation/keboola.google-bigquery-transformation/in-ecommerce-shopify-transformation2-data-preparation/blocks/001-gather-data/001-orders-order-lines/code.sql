@@ -13,7 +13,8 @@ GROUP BY
   1,
   2,
   3,
-  4
+  4;
+
 CREATE TABLE `bdm_orders` (
   ORDER_ID STRING(255) NOT NULL,
   ORDER_DATE DATETIME,
@@ -42,7 +43,8 @@ CREATE TABLE `bdm_orders` (
   CUSTOMER_ID STRING(255),
   CUSTOMER_REGULARITY_TYPE STRING(255),
   DAYS_SINCE_PREVIOUS_ORDER INT64
-)
+);
+
 INSERT INTO `bdm_orders`
 SELECT DISTINCT
   O.`id` AS ORDER_ID,
@@ -82,7 +84,8 @@ SELECT DISTINCT
   CAST(0 AS INT64) AS DAYS_SINCE_PREVIOUS_ORDER
 FROM `order` AS O
 LEFT JOIN `order_fulfillments` AS OFU
-  ON O.`id` = OFU.`order_id`
+  ON O.`id` = OFU.`order_id`;
+
 /* BDM_ORDER_LINES */
 CREATE TABLE `bdm_order_lines` (
   ORDER_ID STRING(255),
@@ -98,7 +101,8 @@ CREATE TABLE `bdm_order_lines` (
   ORDER_LINE_PRICE_TAXES FLOAT64,
   ORDER_LINE_TAXES_RATE FLOAT64,
   LINE_PURCHASE_PRICE FLOAT64
-)
+);
+
 INSERT INTO `bdm_order_lines`
 SELECT
   O.`id` AS ORDER_ID,
@@ -132,12 +136,14 @@ LEFT JOIN `line_item_tax_lines` AS LITL
 LEFT JOIN `product_variant` AS PV
   ON LI.`variant_id` = PV.`id`
 LEFT JOIN `inventory_items` AS II
-  ON PV.`inventory_item_id` = II.`id`
+  ON PV.`inventory_item_id` = II.`id`;
+
 /* - Get billing and shipping details */
 CREATE TABLE `bdm_shipping_type` (
   SHIPPING_TYPE_ID STRING(255) NOT NULL,
   NAME STRING(255)
-)
+);
+
 INSERT INTO `bdm_shipping_type`
 SELECT
   ROW_NUMBER() OVER (ORDER BY NAME NULLS LAST) AS SHIPPING_TYPE_ID,
@@ -146,7 +152,8 @@ FROM (
   SELECT DISTINCT
     SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS NAME
   FROM `order`
-) AS t
+) AS t;
+
 /* payment_details__credit_card_company is mostly unavailable - we are still working on this part of template.
 CREATE OR REPLACE TABLE "bdm_billing_type" 
 AS
@@ -175,27 +182,32 @@ AS
 CREATE TABLE `bdm_billing_type` (
   BILLING_TYPE_ID STRING(255) NOT NULL,
   NAME STRING(255)
-)
+);
+
 INSERT INTO `bdm_billing_type`
 SELECT
   1 AS BILLING_TYPE_ID,
-  'Billing Types not specified' AS NAME
+  'Billing Types not specified' AS NAME;
+
 /* - assign shipping, billing to order level */
 CREATE TABLE `order_billing_types` AS
 SELECT DISTINCT
   `id` AS ORDER_ID,
   'Specify billing types in payment_details__credit_card_company' AS BILLING_TYPE
-FROM `order`
+FROM `order`;
+
 CREATE TABLE `order_shipping_types` AS
 SELECT DISTINCT
   `id` AS ORDER_ID,
   SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS SHIPPING_TYPE
-FROM `order`
+FROM `order`;
+
 UPDATE `bdm_orders` AS O SET O.SHIPPING_TYPE = ST.SHIPPING_TYPE
 FROM `order_shipping_types` AS ST
 WHERE
-  O.ORDER_ID = ST.ORDER_ID
+  O.ORDER_ID = ST.ORDER_ID;
+
 UPDATE `bdm_orders` AS O SET O.BILLING_TYPE = ST.BILLING_TYPE
 FROM `order_billing_types` AS ST
 WHERE
-  O.ORDER_ID = ST.ORDER_ID
+  O.ORDER_ID = ST.ORDER_ID;

@@ -13,7 +13,8 @@ GROUP BY
   1,
   2,
   3,
-  4
+  4;
+
 CREATE OR REPLACE TABLE `bdm_orders` AS
 SELECT DISTINCT
   O.`id` AS ORDER_ID,
@@ -53,7 +54,8 @@ SELECT DISTINCT
   CAST(0 AS INT64) AS DAYS_SINCE_PREVIOUS_ORDER
 FROM `order` AS O
 LEFT JOIN `order_fulfillments` AS OFU
-  ON O.`id` = OFU.`order_id`
+  ON O.`id` = OFU.`order_id`;
+
 /* BDM_ORDER_LINES */
 CREATE OR REPLACE TABLE `bdm_order_lines` AS
 SELECT
@@ -88,7 +90,8 @@ LEFT JOIN `line_item_tax_lines` AS LITL
 LEFT JOIN `product_variant` AS PV
   ON LI.`variant_id` = PV.`id`
 LEFT JOIN `inventory_items` AS II
-  ON PV.`inventory_item_id` = II.`id`
+  ON PV.`inventory_item_id` = II.`id`;
+
 /* - Get billing and shipping details */
 CREATE OR REPLACE TABLE `bdm_shipping_type` AS
 SELECT
@@ -98,7 +101,8 @@ FROM (
   SELECT DISTINCT
     SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS NAME
   FROM `order`
-) AS t
+) AS t;
+
 /* payment_details__credit_card_company is mostly unavailable - we are still working on this part of template.
 CREATE OR REPLACE TABLE "bdm_billing_type" 
 AS
@@ -127,23 +131,27 @@ AS
 CREATE OR REPLACE TABLE `bdm_billing_type` AS
 SELECT
   1 AS BILLING_TYPE_ID,
-  'Billing Types not specified' AS NAME
+  'Billing Types not specified' AS NAME;
+
 /* - assign shipping, billing to order level */
 CREATE TABLE `order_billing_types` AS
 SELECT DISTINCT
   `id` AS ORDER_ID,
   'Specify billing types in payment_details__credit_card_company' AS BILLING_TYPE
-FROM `order`
+FROM `order`;
+
 CREATE TABLE `order_shipping_types` AS
 SELECT DISTINCT
   `id` AS ORDER_ID,
   SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS SHIPPING_TYPE
-FROM `order`
+FROM `order`;
+
 UPDATE `bdm_orders` AS O SET O.SHIPPING_TYPE = ST.SHIPPING_TYPE
 FROM `order_shipping_types` AS ST
 WHERE
-  O.ORDER_ID = ST.ORDER_ID
+  O.ORDER_ID = ST.ORDER_ID;
+
 UPDATE `bdm_orders` AS O SET O.BILLING_TYPE = ST.BILLING_TYPE
 FROM `order_billing_types` AS ST
 WHERE
-  O.ORDER_ID = ST.ORDER_ID
+  O.ORDER_ID = ST.ORDER_ID;

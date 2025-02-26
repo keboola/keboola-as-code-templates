@@ -7,7 +7,8 @@ CREATE TABLE `out_contact` (
   `date_created` STRING(255),
   `lead_source` STRING(255),
   `lead_converted` STRING(255)
-)
+);
+
 INSERT INTO `out_contact`
 SELECT
   `p`.`contact_id` AS `contact_id`,
@@ -26,7 +27,8 @@ LEFT JOIN (
   WHERE
     `primary` = '1'
 ) AS `e`
-  ON `p`.`contact_id` = `e`.`contact_id`
+  ON `p`.`contact_id` = `e`.`contact_id`;
+
 /* fake row to keep referential integrity if child tables are missing existing contact ids */
 INSERT INTO `out_contact` (
   `contact_id`,
@@ -38,4 +40,4 @@ INSERT INTO `out_contact` (
   `lead_converted`
 )
 VALUES
-  ('0', 'Unknown', '', 'Lead', '', '', 'No')
+  ('0', 'Unknown', '', 'Lead', '', '', 'No');

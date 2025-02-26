@@ -16,7 +16,8 @@ CREATE TABLE `ga_ad_analytics` (
   `ga_bounces` INT64,
   `ga_users` INT64,
   `ga_pageviews` INT64
-)
+);
+
 INSERT INTO `ga_ad_analytics`
 SELECT
   `id` AS `id_TBE`, /* dimensions */
@@ -36,4 +37,4 @@ SELECT
   `bounces` AS `ga_bounces`,
   `users` AS `ga_users`,
   `pageviews` AS `ga_pageviews`
-FROM `raw_ad_analytics`
+FROM `raw_ad_analytics`;

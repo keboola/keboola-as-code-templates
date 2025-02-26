@@ -7,7 +7,8 @@ CREATE TABLE `out_contact` (
   `date_created` DATE,
   `lead_source` STRING(255),
   `lead_converted` STRING(255)
-)
+);
+
 INSERT INTO `out_contact`
 SELECT
   `Id` AS `contact_id`,
@@ -32,7 +33,8 @@ SELECT
   IF(`IsConverted` = 'false', 'No', 'Yes') AS `lead_converted`
 FROM `lead`
 WHERE
-  LOWER(`IsDeleted`) = 'false'
+  LOWER(`IsDeleted`) = 'false';
+
 /* fake row to keep referential integrity if child tables are missing existing contact ids */
 INSERT INTO `out_contact` (
   `contact_id`,
@@ -44,4 +46,4 @@ INSERT INTO `out_contact` (
   `lead_converted`
 )
 VALUES
-  ('0', 'Unknown', '', 'Lead', NULL, '', 'No')
+  ('0', 'Unknown', '', 'Lead', NULL, '', 'No');

@@ -7,7 +7,8 @@ CREATE TABLE `bdm_marketing_campaign_costs` (
   `IMPRESSIONS` INT64,
   `CLICKS` INT64,
   `COST` FLOAT64
-)
+);
+
 INSERT INTO `bdm_marketing_campaign_costs`
 SELECT
   `segmentsDate` || '-' || 'GoogleAds' || '-' || `campaignName` AS `MARKETING_CAMPAIGN_COSTS_ID`,
@@ -22,7 +23,8 @@ GROUP BY
   1,
   2,
   3,
-  4
+  4;
+
 /* GoogleAds campaigns source data grouped by month */
 CREATE TABLE `bdm_marketing_campaign_costs_monthly` (
   `MARKETING_CAMPAIGN_COSTS_ID` STRING NOT NULL,
@@ -32,7 +34,8 @@ CREATE TABLE `bdm_marketing_campaign_costs_monthly` (
   `IMPRESSIONS` INT64,
   `CLICKS` INT64,
   `COST` FLOAT64
-)
+);
+
 INSERT INTO `bdm_marketing_campaign_costs_monthly`
 SELECT
   LEFT(`segmentsDate`, 7) || '-01-' || 'GoogleAds' || '-' || `campaignName` AS `MARKETING_CAMPAIGN_COSTS_ID`,
@@ -47,4 +50,4 @@ GROUP BY
   1,
   2,
   3,
-  4
+  4;

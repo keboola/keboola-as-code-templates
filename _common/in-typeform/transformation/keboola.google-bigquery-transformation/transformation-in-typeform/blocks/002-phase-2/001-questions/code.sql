@@ -9,7 +9,8 @@ CREATE TABLE `out_question` (
   `question_family` STRING,
   `question_subtype` STRING,
   `question_is_visible` STRING
-)
+);
+
 INSERT INTO `out_question`
 SELECT
   ff.`fields_id` AS `question_id`,
@@ -26,7 +27,8 @@ LEFT JOIN `form` AS f
   ON f.`id` = ff.`form_pk`
 /* Questions Properties /includes all the setup details/ */
 LEFT JOIN `form_fields_properties` AS ffp
-  ON ffp.`form_fields_pk` = ff.`form_fields_properties`
+  ON ffp.`form_fields_pk` = ff.`form_fields_properties`;
+
 /* referential integrity clean-up: */
 DELETE FROM `out_question`
 WHERE
@@ -34,4 +36,4 @@ WHERE
     SELECT
       `survey_id`
     FROM `out_survey`
-  )
+  );

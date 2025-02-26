@@ -4,4 +4,4 @@ SELECT DISTINCT
   `engagement_id` AS ID,
   `engagement_createdAt` AS CREATED_AT,
   `engagement_createdBy` AS CREATED_BY
-FROM `activities`
+FROM `activities`;

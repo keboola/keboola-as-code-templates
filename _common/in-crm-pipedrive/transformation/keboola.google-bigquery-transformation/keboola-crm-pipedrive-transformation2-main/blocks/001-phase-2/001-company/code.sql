@@ -4,7 +4,8 @@ CREATE TABLE `out_company` (
   `company` STRING(255),
   `website` STRING(255),
   `date_created` DATE
-)
+);
+
 /* cast timestamp to date */
 INSERT INTO `out_company`
 SELECT DISTINCT
@@ -12,7 +13,8 @@ SELECT DISTINCT
   `org_name` AS `company`,
   '' AS `website`,
   CAST(IF(`org_add_date` = '', NULL, CAST(`org_add_date` AS DATE)) AS STRING) AS `date_created`
-FROM `organizations`
+FROM `organizations`;
+
 /* fake row to keep referential integrity if child tables are missing existing company ids */
 INSERT INTO `out_company` (
   `company_id`,
@@ -21,4 +23,4 @@ INSERT INTO `out_company` (
   `date_created`
 )
 VALUES
-  ('0', 'Unknown', '', NULL)
+  ('0', 'Unknown', '', NULL);

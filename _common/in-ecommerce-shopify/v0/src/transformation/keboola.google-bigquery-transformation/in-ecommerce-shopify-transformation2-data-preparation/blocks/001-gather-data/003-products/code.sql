@@ -19,7 +19,8 @@ CREATE TABLE `bdm_products` (
   CATEGORY_TEXT STRING(255),
   PRODUCT_URL STRING(1024),
   IS_DELETED BOOL
-)
+);
+
 INSERT INTO `bdm_products`
 SELECT
   P.`id` AS PRODUCT_ID,
@@ -43,7 +44,8 @@ SELECT
   'false' AS IS_DELETED
 FROM `product_variant` AS PV
 LEFT JOIN `product` AS P
-  ON P.`id` = PV.`product_id`
+  ON P.`id` = PV.`product_id`;
+
 /* - ADD missing / deleted items */
 CREATE OR REPLACE TABLE `deleted_products` AS
 SELECT DISTINCT
@@ -57,7 +59,8 @@ WHERE
   P.`id` IS NULL
 GROUP BY
   1,
-  2
+  2;
+
 INSERT INTO `bdm_products`
 SELECT
   DP.PRODUCT_ID AS PRODUCT_ID,
@@ -81,8 +84,9 @@ SELECT
   'true' AS IS_DELETED
 FROM `deleted_products` AS DP
 QUALIFY
-  ROW_NUMBER() OVER (PARTITION BY DP.PRODUCT_ID ORDER BY DP.PRODUCT_TYPE NULLS LAST) = 1
+  ROW_NUMBER() OVER (PARTITION BY DP.PRODUCT_ID ORDER BY DP.PRODUCT_TYPE NULLS LAST) = 1;
+
 /* some do not have code */
 UPDATE `bdm_products` SET PRODUCT_ID = 'N/A'
 WHERE
-  PRODUCT_ID = ''
+  PRODUCT_ID = '';

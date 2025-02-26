@@ -16,7 +16,8 @@ CREATE TABLE `out_opportunity` (
   `currency` STRING(255),
   `lead_source` STRING(255),
   `probability` FLOAT64
-)
+);
+
 INSERT INTO `out_opportunity`
 SELECT
   `d`.`deal_id` AS `opportunity_id`,
@@ -45,10 +46,12 @@ LEFT JOIN `stages` AS `s`
 LEFT JOIN `out_employee` AS `e`
   ON `d`.`owner_id` = `e`.`employee_id`
 WHERE
-  `deal_deleted` = ''
+  `deal_deleted` = '';
+
 /* set timezone to UTC (!!!CHANGE ACCORDINGLY TO YOUR REGION!!!) */
 ALTER SESSION
-    SET TIMEZONE = 'UTC'
+    SET TIMEZONE = 'UTC';
+
 /* create snapshot of the output table to track changes throughout time */ /* snapshot will be used in another transformation where it will be adjusted for a better final analysis */
 CREATE TABLE `out_opportunity_snapshot` (
   `snapshot_date` DATE NOT NULL,
@@ -68,12 +71,14 @@ CREATE TABLE `out_opportunity_snapshot` (
   `currency` STRING(255),
   `lead_source` STRING(255),
   `probability` FLOAT64
-)
+);
+
 INSERT INTO `out_opportunity_snapshot`
 SELECT
   CURRENT_DATE AS `snapshot_date`,
   `o`.*
-FROM `out_opportunity` AS `o`
+FROM `out_opportunity` AS `o`;
+
 /* fake row to keep referential integrity if child tables are missing existing opportunity ids */ /* adding row after snapshot, so we're not unnecessary snapshoting it */
 INSERT INTO `out_opportunity` (
   `opportunity_id`,
@@ -89,4 +94,4 @@ INSERT INTO `out_opportunity` (
   `currency`
 )
 VALUES
-  ('0', '0', '0', 'Unknown', 'No', 'No', '', '', '0', '0.0', 'USD')
+  ('0', '0', '0', 'Unknown', 'No', 'No', '', '', '0', '0.0', 'USD');

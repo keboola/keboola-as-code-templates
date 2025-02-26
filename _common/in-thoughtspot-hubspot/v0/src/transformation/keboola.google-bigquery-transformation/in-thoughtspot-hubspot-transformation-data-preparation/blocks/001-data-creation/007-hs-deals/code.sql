@@ -22,4 +22,4 @@ SELECT DISTINCT
   `pipeline` AS PIPELINE,
   `hs_lastmodifieddate` AS HS_LASTMODIFIEDDATE,
   `hs_date_entered_closedwon` AS HS_DATE_ENTERED_CLOSEDWON
-FROM `deals`
+FROM `deals`;

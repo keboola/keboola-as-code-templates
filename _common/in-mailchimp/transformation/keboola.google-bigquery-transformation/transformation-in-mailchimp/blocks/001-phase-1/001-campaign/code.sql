@@ -17,7 +17,8 @@ CREATE TABLE `campaign_out` (
   `campaign_ecommerce_total_orders` INT64,
   `campaign_ecommerce_total_spent` INT64,
   `campaign_ecommerce_total_revenue` INT64
-)
+);
+
 INSERT INTO `campaign_out`
 SELECT
   `id` AS `campaign_id`,
@@ -37,4 +38,4 @@ SELECT
   NULLIF(`report_summary_ecommerce_total_orders`, '') AS `campaign_ecommerce_total_orders`,
   NULLIF(`report_summary_ecommerce_total_spent`, '') AS `campaign_ecommerce_total_spent`,
   NULLIF(`report_summary_ecommerce_total_revenue`, '') AS `campaign_ecommerce_total_revenue`
-FROM `campaigns`
+FROM `campaigns`;

@@ -15,21 +15,24 @@ SELECT
   `bounces`
 FROM `out_ga4_traffic` AS t1
 LEFT JOIN `accounts` AS t2
-  ON SPLIT_PART(t1.`ga_traffic_id`, '*', 6) = `account_id`
+  ON SPLIT_PART(t1.`ga_traffic_id`, '*', 6) = `account_id`;
+
 /* table with relationships between ("keyword" ,"ad_group") and ga traffic data */
 CREATE TABLE `out_keyword_ad_group` (
   `keyword_id` STRING(1024) NOT NULL,
   `online_marketing_traffic_id` STRING(1024),
   `keyword` STRING(255),
   `ad_group` STRING(255)
-)
+);
+
 INSERT INTO `out_keyword_ad_group`
 SELECT DISTINCT
   COALESCE(`account_name`, '') || '*' || COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`keyword`, '') || '*' || COALESCE(`ad_group`, '') AS `keyword_id`,
   COALESCE(`account_name`, '') || '*' || COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') AS `online_marketing_traffic_id`,
   `keyword`,
   `ad_group`
-FROM `tmp_ga4_pre`
+FROM `tmp_ga4_pre`;
+
 /* sum ga metrics */
 CREATE OR REPLACE VIEW `tmp_ga4` AS
 SELECT
@@ -45,7 +48,8 @@ GROUP BY
   `source`,
   `medium`,
   `campaign`,
-  `domain`
+  `domain`;
+
 /* merge ga information and costs */
 CREATE TABLE `tmp_marketing` AS
 SELECT
@@ -60,7 +64,8 @@ SELECT
   COALESCE(t2.`bounces`, 0) AS `bounces`
 FROM `online_marketing` AS t1
 FULL OUTER JOIN `tmp_ga4` AS t2
-  ON t1.`online_marketing_traffic_id` = t2.`id`
+  ON t1.`online_marketing_traffic_id` = t2.`id`;
+
 /* final traffic table */
 CREATE TABLE `out_marketing` (
   `online_marketing_traffic_id` STRING(1024) NOT NULL,
@@ -78,7 +83,8 @@ CREATE TABLE `out_marketing` (
   `sessions_return` INT64,
   `pageviews` INT64,
   `bounces` INT64
-)
+);
+
 INSERT INTO `out_marketing`
 SELECT
   `id` AS `online_marketing_traffic_id`,
@@ -112,7 +118,8 @@ FROM (
     NOT `id` IS NULL
   GROUP BY
     `id`
-)
+);
+
 /* final transaction table */
 CREATE TABLE `out_marketing_transactions` (
   `online_marketing_transactions_id` STRING(1024) NOT NULL,
@@ -125,7 +132,8 @@ CREATE TABLE `out_marketing_transactions` (
   `domain` STRING(255),
   `transaction_id` STRING(255),
   `item_quantity` INT64
-)
+);
+
 INSERT INTO `out_marketing_transactions`
 SELECT
   COALESCE(`account_name`, '') || '*' || COALESCE(`date`, '') || '*' || COALESCE(`source`, '') || '*' || COALESCE(`medium`, '') || '*' || COALESCE(`campaign`, '') || '*' || COALESCE(`domain`, '') || '*' || COALESCE(`transaction_id`, '') AS `online_marketing_transactions_id`,
@@ -160,4 +168,4 @@ GROUP BY
   `medium`,
   `campaign`,
   `domain`,
-  `transaction_id`
+  `transaction_id`;

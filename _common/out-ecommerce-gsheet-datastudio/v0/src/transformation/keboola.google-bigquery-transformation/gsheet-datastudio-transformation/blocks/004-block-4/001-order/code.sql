@@ -34,4 +34,4 @@ SELECT
     WHERE
       `bdmO`.`ORDER_ID` = `bdmOLE`.`ORDER_ID`
   ) AS `ORDER_MARGIN_WITH_VAT`
-FROM `bdmOrders` AS `bdmO`
+FROM `bdmOrders` AS `bdmO`;
