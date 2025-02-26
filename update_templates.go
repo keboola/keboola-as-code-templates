@@ -59,7 +59,7 @@ func (tu *TemplateUpdater) processOrchestratorFiles(path string) error {
 	for _, srcPath := range snowflakePaths {
 		// Create bigquery version path by replacing snowflake with bigquery in the folder name
 		srcBase := filepath.Base(srcPath)
-		destBase := strings.ReplaceAll(srcBase, "snowflake", "bigquery")
+		destBase := strings.ReplaceAll(srcBase, "snowflake", "google-bigquery")
 		destPath := filepath.Join(filepath.Dir(srcPath), destBase)
 
 		// Skip if destination already exists

@@ -1,4 +1,3 @@
-
 {
   isIgnored: HasProjectBackend("snowflake") == false,
-}  
+}

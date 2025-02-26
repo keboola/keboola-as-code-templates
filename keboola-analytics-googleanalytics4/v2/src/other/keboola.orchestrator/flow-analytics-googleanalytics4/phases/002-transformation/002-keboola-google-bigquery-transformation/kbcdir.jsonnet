@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("gsc-domain") == false && HasProjectBackend("bigquery") == false,
+  isIgnored: InputIsAvailable("gsc-domain") == false || HasProjectBackend("bigquery") == false,
 }

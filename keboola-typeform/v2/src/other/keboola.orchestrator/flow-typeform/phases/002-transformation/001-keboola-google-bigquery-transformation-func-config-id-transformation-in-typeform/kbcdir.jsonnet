@@ -1,4 +1,3 @@
-
 {
   isIgnored: HasProjectBackend("bigquery") == false,
-}  
+}
