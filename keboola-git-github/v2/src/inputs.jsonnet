@@ -20,23 +20,23 @@ local postgresql = import "/<common>/out-git-postgresql/v0/src/inputs.jsonnet";
       ]
     },
     {   
-      description: "Snowflake Transformations",
+      description: "Transformations",
       required: "all",
       steps: [
-{
+        {
           icon: "component:keboola.snowflake-transformation",
-          backend: "snowflake",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",  
           inputs: [],
         },
-{
+        {
           icon: "component:keboola.google-bigquery-transformation",
-          backend: "bigquery",
           name: "BigQuery SQL",
           description: "Transformations",
+          backend: "bigquery",
           inputs: [],
-        }
+        },
       ]
     },
     {

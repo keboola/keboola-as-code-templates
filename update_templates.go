@@ -338,7 +338,9 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 		if strings.Contains(line, `description: "Snowflake transformations"`) {
 			descriptionLines = append(descriptionLines, i)
 		}
-		if inSteps && strings.Contains(line, `icon: "component:keboola.snowflake-transformation"`) {
+		if inSteps && strings.Contains(line, `icon: "component:keboola.snowflake-transformation"`) &&
+			!strings.Contains(contentStr[i:], `icon: "component:keboola.google-bigquery-transformation"`) {
+			// Only process snowflake blocks that don't already have a bigquery counterpart
 			blockStart := i - 1 // Start from the line with opening brace
 			var blockLines []string
 			var curlyBraceCount int
@@ -366,11 +368,18 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 	for i := len(stepBlocks) - 1; i >= 0; i-- {
 		originalBlock := stepBlocks[i]
 
-		// Add backend field to the original block after the icon field
-		snowflakeBlock := strings.Replace(originalBlock,
-			`icon: "component:keboola.snowflake-transformation"`,
-			`icon: "component:keboola.snowflake-transformation",
+		// Check if backend field already exists
+		hasBackendField := strings.Contains(originalBlock, `backend: "snowflake"`)
+
+		// Create snowflake block with backend field if needed
+		snowflakeBlock := originalBlock
+		if !hasBackendField {
+			snowflakeBlock = strings.Replace(originalBlock,
+				`icon: "component:keboola.snowflake-transformation"`,
+				`icon: "component:keboola.snowflake-transformation",
           backend: "snowflake"`, 1)
+		}
+
 		// Remove any trailing comma from the snowflake block
 		snowflakeBlock = strings.TrimRight(strings.TrimSpace(snowflakeBlock), ",")
 
@@ -381,27 +390,40 @@ func (tu *TemplateUpdater) processInputsFile(path string) error {
 		bigqueryBlock = strings.Replace(bigqueryBlock,
 			`name: "Snowflake SQL"`,
 			`name: "BigQuery SQL"`, 1)
-		bigqueryBlock = strings.Replace(bigqueryBlock,
-			`backend: "snowflake"`,
-			`backend: "bigquery"`, 1)
+
+		// Replace backend field or add it if needed
+		if hasBackendField {
+			bigqueryBlock = strings.Replace(bigqueryBlock,
+				`backend: "snowflake"`,
+				`backend: "bigquery"`, 1)
+		} else {
+			bigqueryBlock = strings.Replace(bigqueryBlock,
+				`backend: "snowflake"`,
+				`backend: "bigquery"`, 1)
+		}
 
 		// Replace the original block with both blocks, ensuring proper comma separation
 		replacement := fmt.Sprintf("%s,\n%s", snowflakeBlock, bigqueryBlock)
-
 		contentStr = strings.Replace(contentStr, originalBlock, replacement, 1)
 	}
 
-	// Update step group descriptions
-	for i := len(descriptionLines) - 1; i >= 0; i-- {
-		contentStr = strings.Replace(contentStr,
-			`description: "Snowflake transformations"`,
-			`description: "SQL Transformations"`, 1)
+	// Update step group descriptions only if we made changes
+	if len(stepBlocks) > 0 {
+		for i := len(descriptionLines) - 1; i >= 0; i-- {
+			contentStr = strings.Replace(contentStr,
+				`description: "Snowflake transformations"`,
+				`description: "SQL Transformations"`, 1)
+		}
 	}
 
-	// Write the modified content back to the file
-	err = os.WriteFile(path, []byte(contentStr), 0644)
-	if err != nil {
-		return fmt.Errorf("failed to write file %s: %w", path, err)
+	// Only write changes if we made any modifications
+	if len(stepBlocks) > 0 {
+		// Write the modified content back to the file
+		err = os.WriteFile(path, []byte(contentStr), 0644)
+		if err != nil {
+			return fmt.Errorf("failed to write file %s: %w", path, err)
+		}
+		fmt.Printf("Updated inputs file: %s\n", path)
 	}
 
 	return nil
@@ -762,7 +784,7 @@ func (tu *TemplateUpdater) CleanupLatestVersions() error {
 
 	// Process each template
 	for i, template := range repo.Templates {
-		if len(template.Versions) <= 2 {
+		if len(template.Versions) <= 1 {
 			continue // Skip if there's only two versions or no versions
 		}
 

@@ -25,16 +25,16 @@ local postgresql = import"/<common>/out-crm-postgresql/v0/src/inputs.jsonnet";
       steps: [
 {
           icon: "component:keboola.snowflake-transformation",
-          backend: "snowflake",
           name: "Snowflake SQL",
           description: "Transformations",
+          backend: "snowflake",
           inputs: [],
         },
 {
           icon: "component:keboola.google-bigquery-transformation",
-          backend: "bigquery",
           name: "BigQuery SQL",
           description: "Transformations",
+          backend: "bigquery",
           inputs: [],
         }
       ]

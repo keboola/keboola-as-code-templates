@@ -47,23 +47,23 @@ local postgresql = import "/<common>/out-marketingchannels-postgresql/v2/inputs.
       ]
     },
     {
-      description: "SQL Transformations",
+      description: "Transformations",
       required: "all",
       steps: [
-{
-          icon: "component:keboola.snowflake-transformation",
+        {
           backend: "snowflake",
+          icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformations",
           inputs: [],
         },
-{
-          icon: "component:keboola.google-bigquery-transformation",
+        {
           backend: "bigquery",
+          icon: "component:keboola.google-bigquery-transformation",
           name: "BigQuery SQL",
           description: "Transformations",
           inputs: [],
-        }
+        },
       ]
     },
     {

@@ -830,7 +830,8 @@
       "description": "Aggregate all your Google Analytics (GA4) data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "requirements": {
         "backends": [
-          "snowflake", "bigquery"
+          "snowflake",
+          "bigquery"
         ],
         "components": [
           "keboola.ex-google-analytics-v4",
@@ -2637,7 +2638,8 @@
       "description": "Experience a Streamlit web app with interactive widgets and optimized performance, showcasing caching for fast data loading and a user-friendly interface.",
       "requirements": {
         "backends": [
-          "snowflake", "bigquery"
+          "snowflake",
+          "bigquery"
         ],
         "components": null,
         "features": [
