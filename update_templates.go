@@ -762,8 +762,8 @@ func (tu *TemplateUpdater) CleanupLatestVersions() error {
 
 	// Process each template
 	for i, template := range repo.Templates {
-		if len(template.Versions) <= 1 {
-			continue // Skip if there's only one version or no versions
+		if len(template.Versions) <= 2 {
+			continue // Skip if there's only two versions or no versions
 		}
 
 		// Get the latest version
