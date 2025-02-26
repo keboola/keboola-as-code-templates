@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("oauth-googleads") == false && HasProjectBackend("bigquery") == false,
+  isIgnored: InputIsAvailable("oauth-googleads") == false || HasProjectBackend("bigquery") == false,
 }

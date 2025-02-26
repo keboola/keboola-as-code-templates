@@ -599,7 +599,7 @@ func (tu *TemplateUpdater) duplicateStandaloneTransformationsInDir(dirPath strin
 
 				data = []byte(strings.ReplaceAll(string(data),
 					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false`, inputParam),
-					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false && HasProjectBackend("bigquery") == false`, inputParam),
+					fmt.Sprintf(`isIgnored: InputIsAvailable("%s") == false || HasProjectBackend("bigquery") == false`, inputParam),
 				))
 			}
 

@@ -1,3 +1,3 @@
 {
-  isIgnored: InputIsAvailable("ex-bingads-account-id") == false && HasProjectBackend("bigquery") == false,
+  isIgnored: InputIsAvailable("ex-bingads-account-id") == false || HasProjectBackend("bigquery") == false,
 }
