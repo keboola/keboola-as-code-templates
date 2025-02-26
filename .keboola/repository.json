@@ -830,7 +830,7 @@
       "description": "Aggregate all your Google Analytics (GA4) data and transform it into even more powerful customer insights and smarter marketing strategies.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "keboola.ex-google-analytics-v4",
