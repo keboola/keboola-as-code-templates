@@ -1,3 +1,3 @@
 {
-  componentId: "keboola.snowflake-transformation",
+  componentId: "keboola.google-bigquery-transformation",
 }

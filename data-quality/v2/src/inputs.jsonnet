@@ -26,7 +26,7 @@
 {
           icon: "component:keboola.google-bigquery-transformation",
           backend: "bigquery",
-          name: "Snowflake transformation",
+          name: "BigQuery transformation",
           description: "Data Quality Core - Full Example",
           inputs: [],
         }
@@ -46,7 +46,7 @@
 {
           icon: "component:keboola.google-bigquery-transformation",
           backend: "bigquery",
-          name: "Snowflake transformation",
+          name: "BigQuery transformation",
           description: "Data Quality Core - ABORT/FAIL Example",
           inputs: [],
         }

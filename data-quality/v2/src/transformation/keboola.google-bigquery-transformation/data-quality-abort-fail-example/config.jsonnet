@@ -38,5 +38,5 @@
       ]
     }
   },
-  shared_code_path: "_shared/keboola.snowflake-transformation"
+  shared_code_path: "_shared/keboola.google-bigquery-transformation"
 }
