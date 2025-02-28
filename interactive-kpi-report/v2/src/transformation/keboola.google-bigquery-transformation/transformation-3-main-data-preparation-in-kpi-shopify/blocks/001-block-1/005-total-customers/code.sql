@@ -1,13 +1,13 @@
 CREATE TABLE `total_customers` AS
 WITH total_customers AS (
   SELECT
-    CAST(`updated_at` AS DATE) AS `date`,
+    DATE(TIMESTAMP(`updated_at`)) AS `date`,
     'Total Customers' AS `kpi_name`,
     COUNT(*) AS `actual_value`,
     'number' AS `type`
   FROM `customer`
   GROUP BY
-    CAST(`updated_at` AS DATE)
+    DATE(TIMESTAMP(`updated_at`))
 )
 SELECT
   tc.`date`,
@@ -17,4 +17,4 @@ SELECT
   tc.`type`
 FROM total_customers AS tc
 LEFT JOIN `plan_daily` AS p
-  ON tc.`kpi_name` = p.`metric_name` AND tc.`date` = p.`date`;
+  ON tc.`kpi_name` = p.`metric_name` AND tc.`date` = CAST(p.`date` AS DATE);

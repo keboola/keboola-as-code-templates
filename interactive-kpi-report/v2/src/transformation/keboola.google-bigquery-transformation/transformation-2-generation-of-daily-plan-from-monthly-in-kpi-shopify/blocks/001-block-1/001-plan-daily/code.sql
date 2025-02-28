@@ -1,11 +1,10 @@
 CREATE TABLE date_series AS
 SELECT
-  CAST('2018-12-31' AS DATE) + ROW_NUMBER() OVER (ORDER BY 0 NULLS LAST) AS date,
+  date AS date,
   EXTRACT(year FROM date) AS year,
   EXTRACT(month FROM date) AS month
-FROM TABLE(generator(rowcount => 366 * (
-  YEAR(CURRENT_DATE) - 2017
-)));
+FROM
+  UNNEST(GENERATE_DATE_ARRAY('2018-12-31', DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY))) AS date;
 
 CREATE TABLE `out_plan_daily` AS
 WITH days AS (
@@ -15,7 +14,7 @@ WITH days AS (
     ds.month
   FROM date_series AS ds
   FULL OUTER JOIN `plan_monthly` AS p
-    ON ds.year = p.`year` AND ds.month = p.`month`
+  	ON CAST(ds.year AS STRING) = CAST(p.year AS STRING) AND CAST(ds.month AS STRING) = CAST(p.month AS STRING)
   WHERE
     NOT `metric_name` IS NULL
   GROUP BY
@@ -23,13 +22,13 @@ WITH days AS (
     ds.month
 ), plan_value_monthly AS (
   SELECT
-    `year`,
-    `month`,
-    ROUND(`plan_value` / `days`, 2) AS `plan_value`,
+    d.`year`,
+    d.`month`,
+  	ROUND(CAST(plan_value AS FLOAT64) / days, 2) AS plan_value,
     `metric_name`
   FROM `plan_monthly` AS p
   INNER JOIN days AS d
-    ON d.year = p.`year` AND d.month = p.`month`
+		ON CAST(d.year AS STRING) = CAST(p.year AS STRING) AND CAST(d.month AS STRING) = CAST(p.month AS STRING)
 )
 SELECT
   ds.date AS `date`,
@@ -37,6 +36,6 @@ SELECT
   `metric_name`
 FROM date_series AS ds
 FULL OUTER JOIN plan_value_monthly AS p
-  ON ds.year = p.`year` AND ds.month = p.`month`
+	ON CAST(ds.year AS STRING) = CAST(p.year AS STRING) AND CAST(ds.month AS STRING) = CAST(p.month AS STRING)
 WHERE
   NOT `metric_name` IS NULL;
