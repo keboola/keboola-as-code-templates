@@ -12,7 +12,7 @@ SELECT DISTINCT
   `organization_id` AS `company_id`,
   `org_name` AS `company`,
   '' AS `website`,
-  CAST(IF(`org_add_date` = '', NULL, CAST(`org_add_date` AS DATE)) AS STRING) AS `date_created`
+  CAST(NULLIF(`org_add_date`,'') AS DATE) AS `date_created`
 FROM `organizations`;
 
 /* fake row to keep referential integrity if child tables are missing existing company ids */
