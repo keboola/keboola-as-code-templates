@@ -15,7 +15,7 @@ SELECT
   `Name` AS `contact`,
   `Email` AS `email`,
   'Contact' AS `contact_type`,
-  IF(`CreatedDate` = '', NULL, CAST(`CreatedDate` AS DATE)) AS `date_created`,
+	IF(`CreatedDate` = '', NULL, CAST(FORMAT_TIMESTAMP('%Y-%m-%d', TIMESTAMP(`CreatedDate`)) AS DATE)) AS `date_created`,
   `LeadSource` AS `lead_source`,
   'Is Contact' AS `lead_converted`
 FROM `contact`
@@ -28,7 +28,7 @@ SELECT
   `Name` AS `contact`,
   `Email` AS `email`,
   'Lead' AS `contact_type`,
-  IF(`CreatedDate` = '', NULL, CAST(`CreatedDate` AS DATE)) AS `date_created`,
+	IF(`CreatedDate` = '', NULL, CAST(FORMAT_TIMESTAMP('%Y-%m-%d', TIMESTAMP(`CreatedDate`)) AS DATE)) AS `date_created`,
   `LeadSource` AS `lead_source`,
   IF(`IsConverted` = 'false', 'No', 'Yes') AS `lead_converted`
 FROM `lead`

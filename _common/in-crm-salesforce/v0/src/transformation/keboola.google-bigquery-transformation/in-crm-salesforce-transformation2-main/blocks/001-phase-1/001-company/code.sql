@@ -11,7 +11,7 @@ SELECT DISTINCT
   `Id` AS `company_id`,
   `Name` AS `company`,
   `Website` AS `website`,
-  IF(`CreatedDate` = '', NULL, CAST(`CreatedDate` AS DATE)) AS `date_created`
+  IF(`CreatedDate` = '', NULL, CAST(FORMAT_TIMESTAMP('%Y-%m-%d', TIMESTAMP(`CreatedDate`)) AS DATE)) AS `date_created`
 FROM `account`
 WHERE
   LOWER(`IsDeleted`) = 'false';

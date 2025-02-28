@@ -16,8 +16,8 @@ SELECT
   COALESCE(`c`.`contact_id`, '0') AS `contact_id`,
   COALESCE(`o`.`opportunity_id`, '0') AS `opportunity_id`,
   `a`.`Subject` AS `activity`,
-  replace(SPLIT_PART(`a`.`ActivityDateTime`, '.', 1), 'T', ' ') AS `activity_date`,
-  `a`.`DurationInMinutes` AS `activity_duration_m`
+	CAST(REPLACE(SPLIT(`a`.`ActivityDateTime`, '.')[OFFSET(0)], 'T', ' ') AS DATETIME) AS `activity_date`,
+	`a`.`DurationInMinutes` AS `activity_duration_m`
 FROM `event` AS `a`
 LEFT JOIN `out_contact` AS `c`
   ON `a`.`WhoId` = `c`.`contact_id`
