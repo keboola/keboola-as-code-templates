@@ -12,7 +12,7 @@ SELECT
   CAST(CAST((
     `date`
   ) AS STRING) AS DATE) AS `gsc_date`,
-  to_decimal(AVG(`position`)) AS `gsc_average_ranking`
+  AVG(CAST(`position` AS FLOAT64)) AS `gsc_average_ranking`
 FROM `raw_search_console`
 GROUP BY
   `page`,

@@ -6,7 +6,7 @@ CREATE TABLE `ga4_page_behaviour` (
   `pagePath` STRING(2000),
   `landingPage` STRING(2000),
   `landingpagePlusQueryString` STRING(2000),
-  `pageTitle` STRING(255),
+  `pageTitle` STRING(500),
   `country` STRING(255),
   `deviceCategory` STRING(255),
   `language` STRING(255),
@@ -25,9 +25,10 @@ CREATE TABLE `ga4_page_behaviour` (
 
 INSERT INTO `ga4_page_behaviour`
 SELECT
-  `id`, /* dimensions */
+  `id`, 
+  /* dimensions */
   `idProperty`,
-  `date`,
+  CAST(`date` AS DATE) AS `date`,
   `hostName`,
   `pagePath`,
   `landingPage`,
@@ -35,16 +36,17 @@ SELECT
   `pageTitle`,
   `country`,
   `deviceCategory`,
-  `language`, /* metrics */
-  `sessions`,
-  `engagedSessions`,
+  `language`, 
+  /* metrics */
+  CAST(`sessions` AS INT64) AS `sessions`,
+  CAST(`engagedSessions` AS INT64) `engagedSessions`,
   CAST(`sessions` AS INT64) - CAST(`engagedSessions` AS INT64) AS `bounces`,
-  `activeUsers`,
-  `newUsers`,
-  `totalUsers`,
-  `screenPageViews`,
-  `conversions`,
-  `userEngagementDuration`,
-  `averageSessionDuration`,
-  `eventCount`
+  CAST(`activeUsers` AS INT64) AS `activeUsers`,
+  CAST(`newUsers` AS INT64) AS `newUsers`,
+  CAST(`totalUsers` AS INT64) AS `totalUsers`,
+  CAST(`screenPageViews` AS INT64) AS `screenPageViews`,
+  CAST(`conversions` AS INT64) AS `conversions`,
+  CAST(`userEngagementDuration` AS FLOAT64) AS `userEngagementDuration`,
+  CAST(`averageSessionDuration` AS FLOAT64) AS `averageSessionDuration`,
+  CAST(`eventCount` AS INT64) AS `eventCount`
 FROM `raw_landing_page_statistics`;

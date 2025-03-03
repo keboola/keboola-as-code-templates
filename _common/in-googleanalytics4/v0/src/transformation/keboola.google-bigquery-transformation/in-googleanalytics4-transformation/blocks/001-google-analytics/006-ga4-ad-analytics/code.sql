@@ -22,19 +22,19 @@ INSERT INTO `ga4_ad_analytics`
 SELECT
   `id`, /* dimensions */
   `idProperty`,
-  `date`,
+  CAST(`date` AS DATE) AS `date`,
   `sessionGoogleAdsAdGroupName` AS `adGroup`,
   `sessionGoogleAdsAdNetworkType` AS `adNetworkType`,
   `sessionGoogleAdsCampaignName` AS `campaign`, /* metrics */
-  `advertiserAdImpressions` AS `adImpressions`,
-  `advertiserAdClicks` AS `adClicks`,
-  `advertiserAdCost` AS `adCost`,
-  `advertiserAdCostPerClick` AS `adCPC`,
-  `averagePurchaseRevenue`,
-  `sessions`,
-  `engagedSessions`,
+  CAST(`advertiserAdImpressions` AS INT64) AS `adImpressions`,
+  CAST(`advertiserAdClicks` AS INT64) AS `adClicks`,
+  CAST(`advertiserAdCost` AS FLOAT64) AS `adCost`,
+  CAST(`advertiserAdCostPerClick` AS FLOAT64) AS `adCPC`,
+  CAST(`averagePurchaseRevenue` AS FLOAT64) AS `averagePurchaseRevenue`,
+	CAST(`sessions` AS INT64) AS `sessions`,
+  CAST(`engagedSessions` AS INT64) AS `engagedSessions`,
   CAST(`sessions` AS INT64) - CAST(`engagedSessions` AS INT64) AS `bounces`,
-  `conversions`,
-  `activeUsers`,
-  `screenPageViews`
+  CAST(`conversions` AS INT64) AS `conversions`,
+  CAST(`activeUsers` AS INT64) AS `activeUsers`,
+  CAST(`screenPageViews` AS INT64) AS `screenPageViews`
 FROM `raw_ad_analytics`;

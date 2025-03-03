@@ -16,17 +16,19 @@ CREATE TABLE `ga4_audience` (
 
 INSERT INTO `ga4_audience`
 SELECT
-  `id`, /* dimensions */
+  `id`, 
+  /* dimensions */
   `idProperty`,
-  `date`,
+  CAST(`date` AS DATE) AS `date`,
   `audienceId`,
-  `audienceName`, /* metrics */
-  `activeUsers`,
-  `newUsers`,
-  `totalUsers`,
-  `sessions`,
-  `engagedSessions`,
-  `screenPageViews`,
-  `averageSessionDuration`,
-  `userEngagementDuration`
+  `audienceName`, 
+  /* metrics */
+  CAST(`activeUsers` AS INT64) AS `activeUsers`,
+  CAST(`newUsers` AS INT64) AS `newUsers`,
+  CAST(`totalUsers` AS INT64) AS `totalUsers`,
+	CAST(`sessions` AS INT64) AS `sessions`,
+  CAST(`engagedSessions` AS INT64) `engagedSessions`,
+  CAST(`screenPageViews` AS INT64) AS `screenPageViews`,
+  CAST(`averageSessionDuration` AS FLOAT64) AS `averageSessionDuration`,  
+  CAST(`userEngagementDuration` AS FLOAT64) AS `userEngagementDuration`
 FROM `raw_audience`;

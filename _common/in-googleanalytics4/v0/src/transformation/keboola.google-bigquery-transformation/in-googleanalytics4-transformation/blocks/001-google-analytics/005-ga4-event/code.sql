@@ -13,14 +13,16 @@ CREATE TABLE `ga4_event` (
 
 INSERT INTO `ga4_event`
 SELECT
-  `id`, /* dimensions */
+  `id`, 
+  /* dimensions */
   `idProperty`,
-  `date`,
+  CAST(`date` AS DATE) AS `date`,
   `eventName`,
-  IF(`isConversionEvent` = TRUE, TRUE, FALSE) AS `isConversionEvent`, /* metrics */
-  `eventCount`,
-  `eventValue`,
-  `totalUsers`,
-  `activeUsers`,
-  `newUsers`
+  CAST(IF(`isConversionEvent` = 'true', TRUE, FALSE) AS BOOL) AS `isConversionEvent`, 
+  /* metrics */
+  CAST(`eventCount` AS INT64) AS `eventCount`,
+	CAST(ROUND(CAST(`eventValue` AS FLOAT64), 0) AS INT64) AS `eventValue`,
+  CAST(`totalUsers` AS INT64) AS `totalUsers`,
+  CAST(`activeUsers` AS INT64) AS `activeUsers`,
+  CAST(`newUsers` AS INT64) AS `newUsers`
 FROM `raw_event`;

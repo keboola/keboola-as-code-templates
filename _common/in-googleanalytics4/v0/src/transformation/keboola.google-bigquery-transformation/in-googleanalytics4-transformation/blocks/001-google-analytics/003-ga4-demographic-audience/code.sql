@@ -22,23 +22,25 @@ CREATE TABLE `ga4_demographic_audience` (
 
 INSERT INTO `ga4_demographic_audience`
 SELECT
-  `id`, /* dimensions */
+  `id`, 
+  /* dimensions */
   `idProperty`,
-  `date`,
+  CAST(`date` AS DATE) AS `date`,
   `userAgeBracket`,
   `userGender`,
   `language`,
   `sessionDefaultChannelGrouping` AS `channelGrouping`,
-  `newVsReturning` AS `userType`, /* metrics */
-  `sessions`,
-  `engagedSessions`,
+  `newVsReturning` AS `userType`, 
+  /* metrics */
+  CAST(`sessions` AS INT64) AS `sessions`,
+  CAST(`engagedSessions` AS INT64) AS `engagedSessions`,
   CAST(`sessions` AS INT64) - CAST(`engagedSessions` AS INT64) AS `bounces`,
-  `activeUsers`,
-  `newUsers`,
-  `totalUsers`,
-  `conversions`,
-  `userEngagementDuration`,
-  `averageSessionDuration`,
-  `screenPageViews`,
-  `eventCount`
+  CAST(`activeUsers` AS INT64) AS `activeUsers`,
+  CAST(`newUsers` AS INT64) AS `newUsers`,
+  CAST(`totalUsers` AS INT64) AS `totalUsers`,
+  CAST(`conversions` AS INT64) AS `conversions`,
+  CAST(`userEngagementDuration` AS FLOAT64) AS `userEngagementDuration`,
+  CAST(`averageSessionDuration` AS FLOAT64) AS `averageSessionDuration`,
+  CAST(`screenPageViews` AS INT64) AS `screenPageViews`,
+  CAST(`eventCount` AS INT64) AS `eventCount`
 FROM `raw_demographic`;

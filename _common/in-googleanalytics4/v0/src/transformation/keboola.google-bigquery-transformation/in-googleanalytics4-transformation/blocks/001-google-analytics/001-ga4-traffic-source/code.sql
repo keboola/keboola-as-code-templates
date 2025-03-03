@@ -24,21 +24,21 @@ INSERT INTO `ga4_traffic_source`
 SELECT
   `id`, /* dimensions */
   `idProperty`,
-  `date`,
+  CAST(`date` AS DATE) AS `date`,
   `sessionCampaignName` AS `campaign`,
   `sessionMedium` AS `medium`,
   `sessionSource` AS `source`,
   `newVsReturning` AS `userType`,
   `sessionDefaultChannelGrouping` AS `channelGrouping`, /* metrics */
-  `sessions`,
-  `engagedSessions`,
+  CAST(`sessions` AS INT64) `sessions`,
+  CAST(`engagedSessions` AS INT64) AS `engagedSessions`,
   CAST(`sessions` AS INT64) - CAST(`engagedSessions` AS INT64) AS `bounces`,
-  `activeUsers`,
-  `newUsers`,
-  `totalUsers`,
-  `userEngagementDuration`,
-  `averageSessionDuration`,
-  `screenPageViews`,
-  `conversions`,
-  `eventCount`
+  CAST(`activeUsers` AS INT64) AS `activeUsers`,
+  CAST(`newUsers` AS INT64) AS `newUsers`,
+  CAST(`totalUsers` AS INT64) AS `totalUsers`,
+  CAST(`userEngagementDuration` AS FLOAT64) AS `userEngagementDuration`,
+  CAST(`averageSessionDuration` AS FLOAT64) AS `averageSessionDuration`,
+  CAST(`screenPageViews` AS INT64) AS `screenPageViews`,
+  CAST(`conversions` AS INT64) AS `conversions`,
+  CAST(`eventCount` AS INT64) AS `eventCount`
 FROM `raw_traffic_acquisition`;
