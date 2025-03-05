@@ -23,18 +23,18 @@ SELECT DISTINCT
   OP.`product_id` AS PRODUCT_ID,
   IF(P.UNITS_SOLD_LAST_MONTH IS NULL, 0, P.UNITS_SOLD_LAST_MONTH) AS UNITS_SOLD_LAST_MONTH,
   IF(T.AVERAGE_UNITS_PER_DAY IS NULL, 0, T.AVERAGE_UNITS_PER_DAY) AS AVG_SOLD_UNITS_PER_DAY,
-  IF(SUM(OP.`quantity`) IS NULL, 0, SUM(OP.`quantity`)) AS TOTAL_UNITS_SOLD
+  IF(SUM(CAST(OP.`quantity` AS INT64)) IS NULL, 0, SUM(CAST(OP.`quantity` AS INT64))) AS TOTAL_UNITS_SOLD
 FROM `order_products` AS OP
 LEFT JOIN (
   SELECT
     `product_id`,
-    SUM(`quantity`) AS UNITS_SOLD_LAST_MONTH
+    SUM(CAST(`quantity` AS INT64)) AS UNITS_SOLD_LAST_MONTH
   FROM `order_products` AS op
   LEFT JOIN `orders` AS o
     ON op.`order_id` = o.`id`
   WHERE
-    CAST(`date_created` AS DATE) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '30' DAY
-    AND CAST(`date_created` AS DATE) <= CURRENT_DATE
+    DATE(PARSE_TIMESTAMP('%a, %d %b %Y %H:%M:%S %z', `date_created`)) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '30' DAY
+    AND DATE(PARSE_TIMESTAMP('%a, %d %b %Y %H:%M:%S %z', `date_created`)) <= CURRENT_DATE
   GROUP BY
     1
 ) AS P
@@ -42,14 +42,14 @@ LEFT JOIN (
 LEFT JOIN (
   SELECT
     `product_id`,
-    SUM(`quantity`) AS UNITS_SOLD_LAST_90DAYS,
-    SUM(`quantity`) / 90 AS AVERAGE_UNITS_PER_DAY
+    SUM(CAST(`quantity` AS INT64)) AS UNITS_SOLD_LAST_90DAYS,
+    SUM(CAST(`quantity` AS INT64)) / 90 AS AVERAGE_UNITS_PER_DAY
   FROM `order_products` AS op
   LEFT JOIN `orders` AS o
     ON op.`order_id` = o.`id`
   WHERE
-    CAST(`date_created` AS DATE) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '90' DAY
-    AND CAST(`date_created` AS DATE) <= CURRENT_DATE
+    DATE(PARSE_TIMESTAMP('%a, %d %b %Y %H:%M:%S %z', `date_created`)) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '90' DAY
+    AND DATE(PARSE_TIMESTAMP('%a, %d %b %Y %H:%M:%S %z', `date_created`)) <= CURRENT_DATE
   GROUP BY
     1
 ) AS T
@@ -59,7 +59,7 @@ GROUP BY
   2,
   3;
 
-INSERT INTO `bdm_products`
+INSERT INTO  `bdm_products`
 SELECT DISTINCT
   P.`id` AS PRODUCT_ID,
   P.`id` AS PRODUCT_CODE,
@@ -67,23 +67,23 @@ SELECT DISTINCT
   CAST('' AS STRING) AS PRODUCT_MANUFACTURER,
   P.`type` AS PRODUCT_TYPE,
   P.`sku` AS PRODUCT_EAN,
-  IF(P.`price` = '', 0, P.`price`) AS PRODUCT_PRICE,
-  IF(P.`sale_price` = '', 0, P.`sale_price`) AS PRODUCT_STANDARD_PRICE,
-  IF(P.`cost_price` = '', 0, P.`cost_price`) AS PRODUCT_PURCHASE_PRICE,
-  IF(P.`inventory_level` = '', NULL, `inventory_level`) AS PRODUCT_STOCK_AMOUNT,
+  IF(P.`price` = '', 0, CAST(P.`price` AS FLOAT64)) AS PRODUCT_PRICE,
+  IF(P.`sale_price` = '', 0, CAST(P.`sale_price` AS FLOAT64)) AS PRODUCT_STANDARD_PRICE,
+  IF(P.`cost_price` = '', 0, CAST(P.`cost_price` AS FLOAT64)) AS PRODUCT_PURCHASE_PRICE,
+  IF(P.`inventory_level` = '', NULL, CAST(`inventory_level` AS INT64)) AS PRODUCT_STOCK_AMOUNT,
   `custom_url_url` AS PRODUCT_URL,
   PT.TOTAL_UNITS_SOLD AS TOTAL_UNITS_SOLD,
   PT.UNITS_SOLD_LAST_MONTH AS UNITS_SOLD_LAST_MONTH,
   PT.AVG_SOLD_UNITS_PER_DAY AS AVG_SOLD_UNITS_PER_DAY,
   IF(
     PT.AVG_SOLD_UNITS_PER_DAY = 0
-    AND NOT IF(P.`inventory_level` = '', NULL, `inventory_level`) IS NULL,
+    AND NOT IF(P.`inventory_level` = '', NULL, CAST(`inventory_level` AS FLOAT64)) IS NULL,
     0,
-    IF(P.`inventory_level` = '', NULL, `inventory_level`) / PT.AVG_SOLD_UNITS_PER_DAY
+    IF(P.`inventory_level` = '', NULL, CAST(`inventory_level` AS FLOAT64)) / PT.AVG_SOLD_UNITS_PER_DAY
   ) AS STOCK_REFILL,
   FALSE AS IS_DELETED
-FROM `products` AS P
-LEFT JOIN `tmp_product_totals` AS PT
+FROM  `products` AS P
+LEFT JOIN  `tmp_product_totals` AS PT
   ON P.`id` = PT.PRODUCT_ID;
 
 /* - ADD missing / deleted items */

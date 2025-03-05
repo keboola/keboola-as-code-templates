@@ -1,3 +1,4 @@
+
 /* calculate last billing address from orders table, it is used as an address in the cusotmers table, in another table the address is not present */
 CREATE OR REPLACE TABLE `last_billing_address` AS
 WITH `last_order` AS (
@@ -47,7 +48,7 @@ CREATE OR REPLACE TABLE `tmp_customer_order_count_value` AS
   SELECT
     `customer_id` AS CUSTOMER_ID,
     COUNT(DISTINCT `id`) AS ORDERS_COUNT,
-    SUM(`total_inc_tax`) AS TOTAL_SPEND
+    SUM(CAST(`total_inc_tax` AS FLOAT64)) AS TOTAL_SPEND
   FROM `orders`
   GROUP BY
     1
@@ -58,7 +59,7 @@ CREATE OR REPLACE TABLE `tmp_customers` AS
 (
   SELECT
     `id` AS CUSTOMER_ID,
-    SHA224(`email`) AS CUSTOMER_EMAIL_HASH,
+  	TO_HEX(SHA256(C.`email`)) AS CUSTOMER_EMAIL_HASH,
     `email` AS CUSTOMER_EMAIL,
     lba.`billing_address_city` AS CUSTOMER_BILLING_CITY,
     lba.`billing_address_country` AS CUSTOMER_BILLING_COUNTRY,
@@ -90,11 +91,11 @@ SELECT
   tmpc.ORDERS_COUNT_TOTAL,
   tmpc.TOTAL_SPEND,
   tmpc.AVG_ORDER_VALUE,
-  R_SCORE AS RECENCY_SCORE,
+  CAST(R_SCORE AS STRING) AS RECENCY_SCORE,
   R_RAW AS DAYS_SINCE_LAST_ORDER,
-  F_SCORE AS FREQUENCY_SCORE,
+  CAST(F_SCORE AS STRING) AS FREQUENCY_SCORE,
   F_RAW AS ORDERS_COUNT_RFM,
-  M_SCORE AS MONETARY_SCORE,
+  CAST(M_SCORE AS STRING) AS MONETARY_SCORE,
   M_RAW AS SUM_REVENUE,
   FINAL_SCORE AS FINAL_SCORE,
   SEGMENT AS SEGMENT,
