@@ -29,23 +29,23 @@ CREATE TABLE `bdm_orders` (
 INSERT INTO `bdm_orders`
 SELECT DISTINCT
   O.`id` AS ORDER_ID,
-  CAST(O.`created_at` AS DATE) AS ORDER_DATE,
+  DATE(PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', O.`created_at`))  AS ORDER_DATE,
   OFU.`status` AS ORDER_STATUS,
   IF(OFU.`status` = 'success', TRUE, FALSE) AS IS_SUCCESSFUL,
-  CASE WHEN CAST(O.`created_at` AS DATE) = `min_order_date` THEN TRUE ELSE FALSE END AS IS_FIRST_PURCHASE,
+  CASE WHEN DATE(PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', O.`created_at`)) = `min_order_date` THEN TRUE ELSE FALSE END AS IS_FIRST_PURCHASE,
   O.`currency` AS ORDER_CURRENCY,
   O.`contact_email` AS ORDER_CUSTOMER_EMAIL,
   O.`note` AS ORDER_REMARK,
   IF(O.`contact_email` = '', NULL, O.`referring_site`) AS REFERER, /* If email is empty it is order made directly by cashier */
-  JSON_EXTRACT(PARSE_URL(O.`referring_site`), '$.host') AS CHANNEL,
+  NET.HOST(O.`referring_site`) AS CHANNEL,
   CASE
-    WHEN CONTAINS_SUBSTR(CHANNEL, 'google')
+    WHEN CONTAINS_SUBSTR(NET.HOST(O.`referring_site`), 'google')
     THEN 'Google'
-    WHEN CONTAINS_SUBSTR(CHANNEL, 'seznam')
+    WHEN CONTAINS_SUBSTR(NET.HOST(O.`referring_site`), 'seznam')
     THEN 'Seznam'
-    WHEN CONTAINS_SUBSTR(CHANNEL, 'facebook')
+    WHEN CONTAINS_SUBSTR(NET.HOST(O.`referring_site`), 'facebook')
     THEN 'Facebook'
-    ELSE CHANNEL
+    ELSE NET.HOST(O.`referring_site`)
   END AS SOURCE,
   O.`billing_address__city` AS BILLING_CITY,
   O.`billing_address__country` AS BILLING_COUNTRY,
@@ -54,10 +54,10 @@ SELECT DISTINCT
   O.`shipping_address__country` AS SHIPPING_COUNTRY,
   O.`shipping_address__zip` AS SHIPPING_ZIP,
   CAST('' AS STRING) AS BILLING_TYPE,
-  SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS SHIPPING_TYPE,
-  O.`total_price` AS ORDER_TOTAL_PRICE_WITH_TAXES,
-  O.`total_price` - O.`total_tax` AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
-  O.`total_tax` AS ORDER_TOTAL_PRICE_TAXES,
+  SPLIT(SPLIT(`shipping_lines`, "'code': '")[SAFE_OFFSET(1)], "', 'delivery_category")[SAFE_OFFSET(0)] AS SHIPPING_TYPE,
+  CAST(O.`total_price` AS FLOAT64) AS ORDER_TOTAL_PRICE_WITH_TAXES,
+  CAST(O.`total_price` AS FLOAT64) - CAST(O.`total_tax` AS FLOAT64) AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
+  CAST(O.`total_tax` AS FLOAT64) AS ORDER_TOTAL_PRICE_TAXES,
   O.`customer_id` AS CUSTOMER_ID
 FROM `order` AS O
 LEFT JOIN `order_fulfillments` AS OFU
@@ -65,7 +65,7 @@ LEFT JOIN `order_fulfillments` AS OFU
 LEFT JOIN (
   SELECT
     `customer_id`,
-    MIN(CAST(`created_at` AS DATE)) AS `min_order_date`
+    MIN(DATE(PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', `created_at`))) AS `min_order_date`
   FROM `order`
   GROUP BY
     `customer_id`
@@ -89,31 +89,28 @@ CREATE TABLE `bdm_order_lines` (
   AVG_ORDER_LINE_MARGIN FLOAT64
 );
 
-INSERT INTO `bdm_order_lines`
+CREATE TABLE `tmp_order_lines` AS
 SELECT
   O.`id` AS ORDER_ID,
   LI.`id` AS ORDER_LINE_ID,
-  CAST(O.`created_at` AS DATE) AS ORDER_DATE,
+  DATE(PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', O.`created_at`))AS ORDER_DATE,
   LI.`product_id` AS ORDER_LINE_PRODUCT_ID,
   LI.`name` AS ITEMNAME,
-  ODA.`value` AS DISCOUNT_PERCENT,
-  CASE WHEN LI.`quantity` = '' THEN 0 ELSE LI.`quantity` END AS ORDER_LINE_AMOUNT,
-  CASE WHEN LI.`price` = '' THEN 0 ELSE LI.`price` END AS ORDER_LINE_PRICE_WITH_TAXES,
+  CAST(ODA.`value` AS FLOAT64) AS DISCOUNT_PERCENT,
+  CASE WHEN LI.`quantity` = '' THEN 0.0 ELSE CAST(LI.`quantity` AS FLOAT64) END AS ORDER_LINE_AMOUNT,
+  CASE WHEN LI.`price` = '' THEN 0.0 ELSE CAST(LI.`price` AS FLOAT64) END AS ORDER_LINE_PRICE_WITH_TAXES,
   CASE
     WHEN LI.`price` = '' AND LITL.`price` = ''
-    THEN 0
+    THEN 0.0
     WHEN LI.`price` <> '' AND LITL.`price` = ''
-    THEN LI.`price`
+    THEN CAST(LI.`price` AS FLOAT64)
     WHEN LI.`price` = '' AND LITL.`price` <> ''
-    THEN -LITL.`price`
-    ELSE LI.`price` - LITL.`price`
+    THEN -CAST(LITL.`price` AS FLOAT64)
+    ELSE CAST(LI.`price` AS FLOAT64) - CAST(LITL.`price` AS FLOAT64)
   END AS ORDER_LINE_PRICE_WITHOUT_TAXES,
-  CASE WHEN LITL.`price` = '' THEN 0 ELSE LITL.`price` END AS ORDER_LINE_PRICE_TAXES,
-  CASE WHEN LITL.`rate` = '' THEN 0 ELSE LITL.`rate` END AS ORDER_LINE_TAXES_RATE,
-  CASE WHEN II.`cost` = '' THEN 0 ELSE II.`cost` END AS LINE_PURCHASE_PRICE,
-  (
-    ORDER_LINE_PRICE_WITH_TAXES - LINE_PURCHASE_PRICE
-  ) / ORDER_LINE_AMOUNT AS AVG_ORDER_LINE_MARGIN
+  CASE WHEN LITL.`price` = '' THEN 0.0 ELSE CAST(LITL.`price` AS FLOAT64) END AS ORDER_LINE_PRICE_TAXES,
+  CASE WHEN LITL.`rate` = '' THEN 0.0 ELSE CAST(LITL.`rate` AS FLOAT64) END AS ORDER_LINE_TAXES_RATE,
+  CASE WHEN II.`cost` = '' THEN 0.0 ELSE CAST(II.`cost` AS FLOAT64) END AS LINE_PURCHASE_PRICE
 FROM `line_item` AS LI
 LEFT JOIN `order` AS O
   ON O.`id` = LI.`order_id`
@@ -124,4 +121,23 @@ LEFT JOIN `line_item_tax_lines` AS LITL
 LEFT JOIN `product_variant` AS PV
   ON LI.`variant_id` = PV.`id`
 LEFT JOIN `inventory_items` AS II
-  ON PV.`inventory_item_id` = II.`id`;
+  ON PV.`inventory_item_id` = II.`id`
+;
+
+INSERT INTO `bdm_order_lines`
+SELECT
+  ORDER_ID,
+  ORDER_LINE_ID,
+  ORDER_DATE,
+  ORDER_LINE_PRODUCT_ID,
+  ITEMNAME,
+  DISCOUNT_PERCENT,
+  ORDER_LINE_AMOUNT,
+  ORDER_LINE_PRICE_WITH_TAXES,
+  ORDER_LINE_PRICE_WITHOUT_TAXES,
+  ORDER_LINE_PRICE_TAXES,
+  ORDER_LINE_TAXES_RATE,
+  LINE_PURCHASE_PRICE,
+	(CAST(ORDER_LINE_PRICE_WITH_TAXES AS FLOAT64) - CAST(LINE_PURCHASE_PRICE AS FLOAT64)) / ORDER_LINE_AMOUNT AS AVG_ORDER_LINE_MARGIN
+ FROM `tmp_order_lines`
+;

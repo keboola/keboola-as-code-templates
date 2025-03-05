@@ -23,18 +23,18 @@ SELECT DISTINCT
   OP.`product_id` AS PRODUCT_ID,
   IF(P.UNITS_SOLD_LAST_MONTH IS NULL, 0, P.UNITS_SOLD_LAST_MONTH) AS UNITS_SOLD_LAST_MONTH,
   IF(T.AVERAGE_UNITS_PER_DAY IS NULL, 0, T.AVERAGE_UNITS_PER_DAY) AS AVG_SOLD_UNITS_PER_DAY,
-  IF(SUM(OP.`quantity`) IS NULL, 0, SUM(OP.`quantity`)) AS TOTAL_UNITS_SOLD
+  IF(SUM(CAST(OP.`quantity` AS INT64)) IS NULL, 0, SUM(CAST(OP.`quantity` AS INT64))) AS TOTAL_UNITS_SOLD
 FROM `line_item` AS OP
 LEFT JOIN (
   SELECT
     `product_id`,
-    SUM(`quantity`) AS UNITS_SOLD_LAST_MONTH
+    SUM(CAST(`quantity` AS INT64)) AS UNITS_SOLD_LAST_MONTH
   FROM `line_item` AS op
   LEFT JOIN `order` AS o
     ON op.`order_id` = o.`id`
   WHERE
-    CAST(`created_at` AS DATE) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '30' DAY
-    AND CAST(`created_at` AS DATE) <= CURRENT_DATE
+    DATE(TIMESTAMP(`created_at`)) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '30' DAY
+    AND DATE(TIMESTAMP(`created_at`)) <= CURRENT_DATE
   GROUP BY
     1
 ) AS P
@@ -42,14 +42,14 @@ LEFT JOIN (
 LEFT JOIN (
   SELECT
     `product_id`,
-    SUM(`quantity`) AS UNITS_SOLD_LAST_90DAYS,
-    SUM(`quantity`) / 90 AS AVERAGE_UNITS_PER_DAY
+    SUM(CAST(`quantity` AS INT64)) AS UNITS_SOLD_LAST_90DAYS,
+    SUM(CAST(`quantity` AS INT64)) / 90 AS AVERAGE_UNITS_PER_DAY
   FROM `line_item` AS op
   LEFT JOIN `order` AS o
     ON op.`order_id` = o.`id`
   WHERE
-    CAST(`created_at` AS DATE) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '90' DAY
-    AND CAST(`created_at` AS DATE) <= CURRENT_DATE
+    DATE(TIMESTAMP(`created_at`)) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '90' DAY
+    AND DATE(TIMESTAMP(`created_at`)) <= CURRENT_DATE
   GROUP BY
     1
 ) AS T
@@ -63,9 +63,9 @@ GROUP BY
 CREATE OR REPLACE TABLE `product_variant_totals` AS
 SELECT
   p.`id` AS PRODUCT_ID,
-  AVG(IF(pv.`price` = '', NULL, pv.`price`)) AS PRICE,
-  SUM(pv.`inventory_quantity`) AS PRODUCT_STOCK_AMOUNT,
-  AVG(IF(ii.`cost` = '', NULL, ii.`cost`)) AS PRODUCT_PURCHASE_PRICE
+  AVG(IF(pv.`price` = '', NULL, CAST(pv.`price` AS FLOAT64))) AS PRICE,
+  SUM(CAST(pv.`inventory_quantity` AS INT64)) AS PRODUCT_STOCK_AMOUNT,
+  AVG(IF(ii.`cost` = '', NULL, CAST(ii.`cost` AS FLOAT64))) AS PRODUCT_PURCHASE_PRICE
 FROM `product` AS p
 LEFT JOIN `product_variant` AS pv
   ON p.`id` = pv.`product_id`
@@ -135,7 +135,7 @@ SELECT
   NULL AS UNITS_SOLD_LAST_MONTH,
   NULL AS AVG_SOLD_UNITS_PER_DAY,
   NULL AS STOCK_REFILL,
-  'true' AS IS_DELETED
+  true AS IS_DELETED
 FROM `deleted_products` AS DP
 QUALIFY
   ROW_NUMBER() OVER (PARTITION BY DP.PRODUCT_ID ORDER BY DP.PRODUCT_TYPE NULLS LAST) = 1;
