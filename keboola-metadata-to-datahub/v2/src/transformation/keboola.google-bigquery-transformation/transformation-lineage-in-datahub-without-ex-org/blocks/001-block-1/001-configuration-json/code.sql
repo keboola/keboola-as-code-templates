@@ -1,0 +1,28 @@
+CREATE OR REPLACE TABLE `configuration_json` AS
+SELECT
+  `id`,
+  `region`,
+  `project_id`,
+  `name`,
+  `created`,
+  `creator_token_id`,
+  `creator_token_description`,
+  `component_id`,
+  `component_name`,
+  `component_type`,
+  `version`,
+  `is_deleted`,
+  `current_version_created`,
+  `current_version_creator_token_id`,
+  `current_version_creator_token_description`,
+  `current_version_change_description`,
+  `description`,
+  `configuration`,
+  `rows`,
+  configs.seq AS config_seq,
+  configs.key AS config_key,
+  configs.path AS config_path,
+  configs.index AS config_index,
+  configs.value AS config_value,
+  configs.this AS config_this
+FROM `configurations` AS c, LATERAL EXPLODE(PARSE_JSON(c.`configuration`), recursive => TRUE, outer => TRUE) AS configs;

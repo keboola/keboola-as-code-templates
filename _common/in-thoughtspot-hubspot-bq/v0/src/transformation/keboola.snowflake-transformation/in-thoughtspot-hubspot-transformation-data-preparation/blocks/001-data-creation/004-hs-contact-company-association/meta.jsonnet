@@ -1,0 +1,3 @@
+{
+  name: "HS_CONTACT_COMPANY_ASSOCIATION",
+}
