@@ -544,7 +544,7 @@
       "description": "Aggregate all your Pipedrive data to get more qualified leads and grow your business. Focus on actions that close deals.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "keboola.ex-pipedrive",
@@ -592,7 +592,7 @@
       "description": "Aggregate all your Salesforce data to better connect with your existing and potential customers and partners.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "kds-team.ex-salesforce-v2",
@@ -2141,7 +2141,7 @@
       "description": "Elevate marketing with AI: Shopify data for personalized SMS campaigns via Twilio.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "kds-team.ex-shopify",
@@ -2193,7 +2193,7 @@
       "description": "Real-time KPI insights, alerts & action for data-driven decisions.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "kds-team.ex-shopify",
@@ -2469,7 +2469,7 @@
       "description": "Aggregate all your Shopify, WooCommerce, or BigCommerce data to gain comprehensive insights into product inventory, customer behavior, and sales performance.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "keboola.wr-db-pgsql",
