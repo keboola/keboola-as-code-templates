@@ -1,0 +1,133 @@
+{
+  "parameters": {
+    "dbName": "PROJECT",
+    "incremental": true,
+    "items": [
+      {
+        "dbName": "PROJECT_ID",
+        "default": "",
+        "name": "project_id",
+        "nullable": false,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "PROJECT",
+        "default": "",
+        "name": "project",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "CREATED_AT",
+        "default": "",
+        "name": "created_at",
+        "nullable": true,
+        "size": "",
+        "type": "datetime"
+      },
+      {
+        "dbName": "DUE_DATE",
+        "default": "",
+        "name": "due_date",
+        "nullable": true,
+        "size": "",
+        "type": "datetime"
+      },
+      {
+        "dbName": "WORKSPACE",
+        "default": "",
+        "name": "workspace",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "URL",
+        "default": "",
+        "name": "url",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "OWNER",
+        "default": "",
+        "name": "owner",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "OWNER_TYPE",
+        "default": "",
+        "name": "owner_type",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "STATUS",
+        "default": "",
+        "name": "status",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "STATUS_TEXT",
+        "default": "",
+        "name": "status_text",
+        "nullable": true,
+        "size": "1024",
+        "type": "string"
+      },
+      {
+        "dbName": "ARCHIVED",
+        "default": "",
+        "name": "archived",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      },
+      {
+        "dbName": "PUBLIC",
+        "default": "",
+        "name": "public",
+        "nullable": true,
+        "size": "255",
+        "type": "string"
+      }
+    ],
+    "primaryKey": [
+      "PROJECT_ID"
+    ],
+    "tableId": "out.c-projectmgmt-bdm-instance.project"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "project_id",
+            "project",
+            "created_at",
+            "due_date",
+            "workspace",
+            "url",
+            "owner",
+            "owner_type",
+            "status",
+            "status_text",
+            "archived",
+            "public"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.project.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  parameters: Input("oauth-facebookads-accounts") + {
+    queries: [
+      {
+        id: 85632,
+        type: "nested-query",
+        name: "ads",
+        query: {
+          path: "ads",
+          fields: "id,name,adset_id",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+      {
+        id: 42438,
+        type: "nested-query",
+        name: "campaigns",
+        query: {
+          path: "campaigns",
+          fields: "id,name,account_id",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+      {
+        id: 13828,
+        type: "nested-query",
+        name: "adsets",
+        query: {
+          path: "adsets",
+          fields: "id,name,campaign_id",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+      {
+        id: 34092,
+        type: "nested-query",
+        name: "campaigns_insights",
+        query: {
+          path: "campaigns",
+          fields: "insights.date_preset(last_28d).time_increment(1){account_id,account_name,campaign_id,campaign_name,impressions,clicks,spend,reach}",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+      {
+        id: 21668,
+        type: "nested-query",
+        name: "campaigns_insights_type",
+        query: {
+          path: "campaigns",
+          fields: "insights.action_breakdowns(action_type).date_preset(last_28d).time_increment(1){account_id,account_name,campaign_id,campaign_name,actions}",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+      {
+        id: 4853,
+        type: "nested-query",
+        name: "campaigns_insights_reaction",
+        query: {
+          path: "campaigns",
+          fields: "insights.action_breakdowns(action_reaction).date_preset(last_28d).time_increment(1){account_id,account_name,campaign_id,campaign_name,actions}",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+      {
+        id: 38955,
+        type: "nested-query",
+        name: "ads_insights",
+        query: {
+          path: "",
+          fields: "insights.level(ad).action_breakdowns(action_type).date_preset(last_month).time_increment(1){ad_id,ad_name,impressions,reach,clicks,spend,estimated_ad_recall_rate}",
+          limit: "100",
+          ids: "",
+          since: Input("ex-facebook-ads-since"),
+          until: Input("ex-facebook-ads-until"),
+        },
+      },
+    ],
+  },
+  authorization: {
+    oauth_api: Input("oauth-facebookads"),
+  },
+}

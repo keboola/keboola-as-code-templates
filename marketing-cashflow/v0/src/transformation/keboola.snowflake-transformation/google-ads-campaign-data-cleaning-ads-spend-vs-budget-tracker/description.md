@@ -1,0 +1,1 @@
+This transformation performs several operations. It creates a table called `google` with 25 columns and inserts data into it from the `google_ads`, `google_campaign`, and `google_customer` tables. The data is filtered to only include records with a `segmentsDate` greater than `2023-01-01`.

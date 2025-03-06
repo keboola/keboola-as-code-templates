@@ -1,0 +1,42 @@
+Update `@README.md` with the latest information about available templates.
+
+1️⃣ **Summarize Template Creation Guide**  
+- Extract a **concise summary** from `@templates`.  
+- Add this summary at the **beginning** of `README.md` under a section titled **"How to Create a Template"**.  
+
+2️⃣ **Document Available Templates**  
+- Open `@repository.json`.  
+- Extract **only templates where `deprecated: false`**.  
+- For each template, append an entry in the `README.md` under **"Available Templates"**, including:  
+  - **Name:** (`name`)  
+  - **Description:** (`desc`)  
+  - **Backend Support:** (`backend`)  
+  - **Included Components:** (`components`)  
+  - **Template Version:** (`version`)  
+  - **Folder Location:** (`id`)  
+
+3️⃣ **Format the README for Clarity**  
+- Use **Markdown best practices** (`## Headings`, `- Bullet points`, `**Bold text**`).  
+- Append this information under a section titled **"Available Templates"** at the end of `README.md`.  
+
+4️⃣ **Add an Explanation for Placeholders**  
+- At the **end of the file**, insert a note explaining that:  
+  - **`<keboola.wr-snowflake>` is a placeholder** for a **Snowflake Writer on a specific stack**.  
+
+⚡ **Example Output in `README.md`:**  
+```md
+## How to Create a Template
+[Summary extracted from @templates]
+
+## Available Templates
+### Template: Example Template Name
+- **Description:** [Extracted from `desc`]
+- **Backend Support:** [Extracted from `backend`]
+- **Included Components:** [Extracted from `components`]
+- **Version:** [Extracted from `version`]
+- **Folder Location:** `[id]`
+
+---
+
+### Important Notes
+- `<keboola.wr-snowflake>` is a **placeholder** for a **Snowflake Writer** on a specific stack.
