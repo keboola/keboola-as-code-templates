@@ -1,4 +1,4 @@
-CREATE TABLE `bdm_products` (
+CREATE OR REPLACE TABLE `bdm_products` (
   PRODUCT_ID STRING NOT NULL,
   PRODUCT_CODE STRING,
   PRODUCT_NAME STRING,
@@ -23,18 +23,18 @@ SELECT DISTINCT
   OP.`product_id` AS PRODUCT_ID,
   IF(P.UNITS_SOLD_LAST_MONTH IS NULL, 0, P.UNITS_SOLD_LAST_MONTH) AS UNITS_SOLD_LAST_MONTH,
   IF(T.AVERAGE_UNITS_PER_DAY IS NULL, 0, T.AVERAGE_UNITS_PER_DAY) AS AVG_SOLD_UNITS_PER_DAY,
-  IF(SUM(OP.`quantity`) IS NULL, 0, SUM(OP.`quantity`)) AS TOTAL_UNITS_SOLD
+  IF(SUM(CAST(OP.`quantity` AS INT64)) IS NULL, 0, SUM(CAST(OP.`quantity` AS INT64))) AS TOTAL_UNITS_SOLD
 FROM `order_line_items` AS OP
 LEFT JOIN (
   SELECT
     `product_id`,
-    SUM(`quantity`) AS UNITS_SOLD_LAST_MONTH
+    SUM(CAST(`quantity` AS INT64)) AS UNITS_SOLD_LAST_MONTH
   FROM `order_line_items` AS op
   LEFT JOIN `order` AS o
     ON op.`order_id` = o.`id`
   WHERE
-    CAST(`date_created` AS DATE) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '30' DAY
-    AND CAST(`date_created` AS DATE) <= CURRENT_DATE
+    DATE(TIMESTAMP(`date_created`)) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '30' DAY
+    AND DATE(TIMESTAMP(`date_created`)) <= CURRENT_DATE
   GROUP BY
     1
 ) AS P
@@ -42,14 +42,14 @@ LEFT JOIN (
 LEFT JOIN (
   SELECT
     `product_id`,
-    SUM(`quantity`) AS UNITS_SOLD_LAST_90DAYS,
-    SUM(`quantity`) / 90 AS AVERAGE_UNITS_PER_DAY
+    SUM(CAST(`quantity` AS INT64)) AS UNITS_SOLD_LAST_90DAYS,
+    SUM(CAST(`quantity` AS INT64)) / 90 AS AVERAGE_UNITS_PER_DAY
   FROM `order_line_items` AS op
   LEFT JOIN `order` AS o
     ON op.`order_id` = o.`id`
   WHERE
-    CAST(`date_created` AS DATE) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '90' DAY
-    AND CAST(`date_created` AS DATE) <= CURRENT_DATE
+    DATE(TIMESTAMP(`date_created`)) >= TIMESTAMP_TRUNC(CURRENT_DATE, DAY) - INTERVAL '90' DAY
+    AND DATE(TIMESTAMP(`date_created`)) <= CURRENT_DATE
   GROUP BY
     1
 ) AS T
@@ -67,20 +67,21 @@ SELECT
   CAST('' AS STRING) AS PRODUCT_MANUFACTURER,
   P.`type` AS PRODUCT_TYPE,
   P.`sku` AS PRODUCT_EAN,
-  IF(P.`price` = '', 0, P.`price`) AS PRODUCT_PRICE,
-  IF(P.`regular_price` = '', 0, P.`regular_price`) AS PRODUCT_STANDARD_PRICE,
+  IF(P.`price` = '', 0, CAST(P.`price` AS FLOAT64)) AS PRODUCT_PRICE,
+  IF(P.`regular_price` = '', 0, CAST(P.`regular_price` AS FLOAT64)) AS PRODUCT_STANDARD_PRICE,
   NULL AS PRODUCT_PURCHASE_PRICE,
-  IF(P.`stock_quantity` = '', 0, `stock_quantity`) AS PRODUCT_STOCK_AMOUNT,
+  IF(P.`stock_quantity` = '', 0, CAST(`stock_quantity` AS INT64)) AS PRODUCT_STOCK_AMOUNT,
   IF(P.`permalink` = '', P.`external_url`, P.`permalink`) AS PRODUCT_URL,
   PT.TOTAL_UNITS_SOLD AS TOTAL_UNITS_SOLD,
   PT.UNITS_SOLD_LAST_MONTH AS UNITS_SOLD_LAST_MONTH,
   PT.AVG_SOLD_UNITS_PER_DAY AS AVG_SOLD_UNITS_PER_DAY,
   IF(
     PT.AVG_SOLD_UNITS_PER_DAY = 0
-    AND NOT IF(P.`stock_quantity` = '', 0, `stock_quantity`) IS NULL,
+    AND NOT IF(P.`stock_quantity` = '', 0, CAST(P.`stock_quantity` AS INT64)) IS NULL,
     0,
-    IF(P.`stock_quantity` = '', 0, `stock_quantity`) / PT.AVG_SOLD_UNITS_PER_DAY
-  ) AS STOCK_REFILL,
+    IF(P.`stock_quantity` = '', 0, CAST(P.`stock_quantity` AS INT64)) 
+    / CAST(PT.AVG_SOLD_UNITS_PER_DAY AS INT64)
+) AS STOCK_REFILL,
   FALSE AS IS_DELETED
 FROM `product` AS P
 LEFT JOIN `product_totals` AS PT

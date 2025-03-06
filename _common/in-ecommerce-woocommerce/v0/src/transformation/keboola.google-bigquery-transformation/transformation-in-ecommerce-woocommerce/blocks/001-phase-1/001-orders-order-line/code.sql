@@ -1,11 +1,12 @@
+
 CREATE OR REPLACE TABLE `order_totals` AS
 SELECT
   O.`id` AS ORDER_ID,
   O.`total` AS ORDER_LINE_PRICE_WITH_TAXES,
-  O.`total` - O.`total_tax` AS ORDER_LINE_PRICE_WITHOUT_TAXES,
+  CAST(O.`total` AS FLOAT64) - CAST(O.`total_tax` AS FLOAT64) AS ORDER_LINE_PRICE_WITHOUT_TAXES,
   O.`total_tax` AS ORDER_LINE_PRICE_TAXES,
-  AVG(O.`total_tax` / (
-    O.`total` - O.`total_tax`
+  AVG(CAST(O.`total_tax` AS FLOAT64) / (
+    CAST(O.`total` AS FLOAT64) - CAST(O.`total_tax` AS FLOAT64)
   )) AS ORDER_LINE_TAXES_RATE
 FROM `order` AS O
 GROUP BY
@@ -15,7 +16,7 @@ GROUP BY
   4;
 
 /* bdm_orders table */
-CREATE TABLE `bdm_orders` (
+CREATE OR REPLACE TABLE `bdm_orders` (
   ORDER_ID STRING NOT NULL,
   ORDER_DATE DATE,
   ORDER_STATUS STRING,
@@ -44,10 +45,10 @@ CREATE TABLE `bdm_orders` (
 INSERT INTO `bdm_orders`
 SELECT DISTINCT
   O.`id` AS ORDER_ID,
-  CAST(O.`date_created` AS DATE) AS ORDER_DATE,
+  DATE(TIMESTAMP(O.`date_created`)) AS ORDER_DATE,
   O.`status` AS ORDER_STATUS,
   IF(O.`status` = 'completed', TRUE, FALSE) AS IS_SUCCESSFUL,
-  CASE WHEN O.`date_created` = `min_order_date` THEN TRUE ELSE FALSE END AS IS_FIRST_PURCHASE,
+  CASE WHEN DATE(TIMESTAMP(O.`date_created`)) = `min_order_date` THEN TRUE ELSE FALSE END AS IS_FIRST_PURCHASE,
   O.`currency` AS ORDER_CURRENCY,
   IF(O.`billing__email` = '', C.`email`, O.`billing__email`) AS ORDER_CUSTOMER_EMAIL,
   O.`customer_note` AS ORDER_REMARK,
@@ -62,9 +63,9 @@ SELECT DISTINCT
   O.`shipping__postcode` AS SHIPPING_ZIP,
   O.`payment_method` AS BILLING_TYPE,
   CAST('' AS STRING) AS SHIPPING_TYPE,
-  O.`total` AS ORDER_TOTAL_PRICE_WITH_TAXES,
-  O.`total` - O.`total_tax` AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
-  O.`total_tax` AS ORDER_TOTAL_PRICE_TAXES,
+  CAST(O.`total` AS FLOAT64) AS ORDER_TOTAL_PRICE_WITH_TAXES,
+  CAST(O.`total` AS FLOAT64) - CAST(O.`total_tax` AS FLOAT64) AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
+  CAST(O.`total_tax` AS FLOAT64) AS ORDER_TOTAL_PRICE_TAXES,
   O.`customer_id` AS CUSTOMER_ID
 FROM `order` AS O
 LEFT JOIN `customer` AS C
@@ -72,7 +73,7 @@ LEFT JOIN `customer` AS C
 LEFT JOIN (
   SELECT
     `customer_id`,
-    MIN(`date_created`) AS `min_order_date`
+    MIN(DATE(TIMESTAMP(`date_created`))) AS `min_order_date`
   FROM `order`
   GROUP BY
     `customer_id`
@@ -100,25 +101,26 @@ INSERT INTO `bdm_order_lines`
 SELECT
   OL.`id` AS ORDER_LINE_ID,
   OL.`order_id` AS ORDER_ID,
-  CAST(O.`date_created` AS DATE) AS ORDER_DATE,
+  DATE(TIMESTAMP(O.`date_created`)) AS ORDER_DATE,
   OL.`product_id` AS ORDER_LINE_PRODUCT_ID,
   OL.`name` AS ITEMNAME,
   (
     (
-      OL.`subtotal` - OL.`total`
-    ) / OL.`subtotal`
+      CAST(OL.`subtotal` AS FLOAT64) - CAST(OL.`total` AS FLOAT64)
+    ) / CAST(OL.`subtotal` AS FLOAT64)
   ) AS DISCOUNT_PERCENT,
-  CASE WHEN OL.`quantity` = '' THEN 0 ELSE OL.`quantity` END AS ORDER_LINE_AMOUNT,
-  CASE WHEN OL.`total` = '' THEN 0 ELSE OL.`total` END AS ORDER_LINE_PRICE_WITH_TAXES,
-  OL.`total` - OL.`total_tax` AS ORDER_LINE_PRICE_WITHOUT_TAXES,
-  CASE WHEN OL.`total_tax` = '' THEN 0 ELSE OL.`total_tax` END AS ORDER_LINE_PRICE_TAXES,
+  CASE WHEN OL.`quantity` = '' THEN 0 ELSE CAST(OL.`quantity` AS INT64) END AS ORDER_LINE_AMOUNT,
+  CASE WHEN OL.`total` = '' THEN 0 ELSE CAST(OL.`total` AS FLOAT64)
+  END AS ORDER_LINE_PRICE_WITH_TAXES,
+  CAST(OL.`total` AS FLOAT64) - CAST(OL.`total_tax` AS FLOAT64) AS ORDER_LINE_PRICE_WITHOUT_TAXES,
+  CASE WHEN OL.`total_tax` = '' THEN 0 ELSE CAST(OL.`total_tax` AS FLOAT64) END AS ORDER_LINE_PRICE_TAXES,
   IF(
     (
-      OL.`total` - OL.`total_tax`
+      CAST(OL.`total` AS FLOAT64) - CAST(OL.`total_tax` AS FLOAT64)
     ) = 0 AND NOT OL.`total_tax` IS NULL,
     0,
-    OL.`total_tax` / (
-      OL.`total` - OL.`total_tax`
+    CAST(OL.`total_tax` AS FLOAT64) / (
+      CAST(OL.`total` AS FLOAT64) - CAST(OL.`total_tax` AS FLOAT64)
     )
   ) AS ORDER_LINE_TAXES_RATE,
   NULL AS LINE_PURCHASE_PRICE,
