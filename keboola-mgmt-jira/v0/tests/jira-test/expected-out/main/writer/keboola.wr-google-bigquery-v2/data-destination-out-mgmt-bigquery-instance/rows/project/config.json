@@ -1,0 +1,98 @@
+{
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "PROJECT",
+        "incremental": true,
+        "items": [
+          {
+            "dbName": "PROJECT_ID",
+            "name": "project_id",
+            "type": "STRING"
+          },
+          {
+            "dbName": "PROJECT",
+            "name": "project",
+            "type": "STRING"
+          },
+          {
+            "dbName": "CREATED_AT",
+            "name": "created_at",
+            "type": "STRING"
+          },
+          {
+            "dbName": "DUE_DATE",
+            "name": "due_date",
+            "type": "STRING"
+          },
+          {
+            "dbName": "WORKSPACE",
+            "name": "workspace",
+            "type": "STRING"
+          },
+          {
+            "dbName": "URL",
+            "name": "url",
+            "type": "STRING"
+          },
+          {
+            "dbName": "OWNER",
+            "name": "owner",
+            "type": "STRING"
+          },
+          {
+            "dbName": "OWNER_TYPE",
+            "name": "owner_type",
+            "type": "STRING"
+          },
+          {
+            "dbName": "STATUS",
+            "name": "status",
+            "type": "STRING"
+          },
+          {
+            "dbName": "STATUS_TEXT",
+            "name": "status_text",
+            "type": "STRING"
+          },
+          {
+            "dbName": "ARCHIVED",
+            "name": "archived",
+            "type": "STRING"
+          },
+          {
+            "dbName": "PUBLIC",
+            "name": "public",
+            "type": "STRING"
+          }
+        ],
+        "tableId": "out.c-projectmgmt-bdm-instance.project"
+      }
+    ]
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "changed_since": "adaptive",
+          "columns": [
+            "project_id",
+            "project",
+            "created_at",
+            "due_date",
+            "workspace",
+            "url",
+            "owner",
+            "owner_type",
+            "status",
+            "status_text",
+            "archived",
+            "public"
+          ],
+          "destination": "out.c-projectmgmt-bdm-instance.project.csv",
+          "source": "out.c-projectmgmt-bdm-instance.project"
+        }
+      ]
+    }
+  }
+}

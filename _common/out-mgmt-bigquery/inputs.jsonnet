@@ -28,8 +28,7 @@
     name: "Private Key ID",
     description: "Add your service account private key ID.",
     type: "string",
-    kind: "input",
-    default: "Private key id",
+    kind: "hidden",
   },
   {
     id: "wr-google-bigquery-v2-service-account-project-id",
