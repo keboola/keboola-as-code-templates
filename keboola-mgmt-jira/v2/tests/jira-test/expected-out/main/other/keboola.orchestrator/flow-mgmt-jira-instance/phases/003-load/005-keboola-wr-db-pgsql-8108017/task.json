@@ -1,9 +1,0 @@
-{
-  "name": "keboola.wr-db-pgsql-8108017",
-  "enabled": true,
-  "continueOnFailure": false,
-  "task": {
-    "mode": "run",
-    "configPath": "writer/keboola.wr-db-pgsql/data-destination-out-mgmt-postgresql-instance"
-  }
-}
