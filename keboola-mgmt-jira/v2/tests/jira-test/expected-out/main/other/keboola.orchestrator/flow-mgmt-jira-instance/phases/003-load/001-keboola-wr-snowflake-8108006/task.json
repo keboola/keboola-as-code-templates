@@ -1,9 +1,0 @@
-{
-  "name": "keboola.wr-snowflake-8108006",
-  "enabled": true,
-  "continueOnFailure": false,
-  "task": {
-    "mode": "run",
-    "configPath": "writer/keboola.wr-db-snowflake-gcs-s3/data-destination-out-mgmt-snowflake-instance"
-  }
-}
