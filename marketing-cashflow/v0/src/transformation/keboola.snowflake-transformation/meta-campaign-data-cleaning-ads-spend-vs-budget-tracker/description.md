@@ -1,0 +1,1 @@
+This transformation performs several operations. It creates a table called `meta` with 26 columns and inserts data into it from input tables. The data is incrementally inserted into the `ads_insight_fact` table by selecting values from the other tables and performing calculations on them.

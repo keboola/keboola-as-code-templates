@@ -18,5 +18,11 @@
       path: "transformation/keboola.snowflake-transformation/transformation-in-mailchimp",
       rows: [],
     },
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("transformation-in-mailchimp-bq"),
+      path: "transformation/keboola.google-bigquery-transformation/transformation-in-mailchim-bq",
+      rows: [],
+    },
   ],
 }

@@ -1,0 +1,3 @@
+{
+  name: "campaign_budget",
+}
