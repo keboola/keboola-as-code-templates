@@ -2525,12 +2525,10 @@
         "backends": [
           "snowflake"
         ],
-        "components": [
-          "kds-team.wr-oracle-custom"
-        ],
-        "features": null
+        "components": null,
+        "features": "csas-templates"
       },
-      "deprecated": true,
+      "path": "csas-template-merge",
       "categories": [
         "Other"
       ],
@@ -2541,7 +2539,8 @@
           "stable": false,
           "components": [
             "keboola.snowflake-transformation"
-          ]
+          ],
+          "path": "v0"
         },
         {
           "version": "1.0.0",
@@ -2549,7 +2548,8 @@
           "stable": false,
           "components": [
             "keboola.snowflake-transformation"
-          ]
+          ],
+          "path": "v1"
         }
       ]
     },
@@ -2561,12 +2561,10 @@
         "backends": [
           "snowflake"
         ],
-        "components": [
-          "kds-team.wr-oracle-custom"
-        ],
-        "features": null
+        "components": null,
+        "features": "csas-templates"
       },
-      "deprecated": true,
+      "path": "csas-template-scd",
       "categories": [
         "Other"
       ],
@@ -2577,7 +2575,8 @@
           "stable": false,
           "components": [
             "keboola.snowflake-transformation"
-          ]
+          ],
+          "path": "v0"
         },
         {
           "version": "1.0.0",
@@ -2585,7 +2584,8 @@
           "stable": false,
           "components": [
             "keboola.snowflake-transformation"
-          ]
+          ],
+          "path": "v1"
         }
       ]
     },
