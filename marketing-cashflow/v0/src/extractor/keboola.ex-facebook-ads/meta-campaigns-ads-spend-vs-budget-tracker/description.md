@@ -1,0 +1,1 @@
+This configuration retrieves data from the Facebook Ads platform. The query retrieves data from the `ads`, `campaigns`, `adsets`, `campaigns_insights`, `campaigns_insights_type`, `campaigns_insights_reaction`, and `ads_insights` paths.

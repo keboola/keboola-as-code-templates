@@ -12,5 +12,11 @@
       path: "transformation/keboola.snowflake-transformation/transformation-in-typeform",
       rows: [],
     },
+    {
+      componentId: "keboola.google-bigquery-transformation",
+      id: ConfigId("transformation-in-typeform-bq"),
+      path: "transformation/keboola.google-bigquery-transformation/transformation-in-typeform-bq",
+      rows: [],
+    },
   ],
 }

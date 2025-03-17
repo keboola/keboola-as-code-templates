@@ -1,0 +1,3 @@
+{
+  name: "MARKETING_CAMPAIGN_SENT_DATE",
+}
