@@ -2525,10 +2525,8 @@
         "backends": [
           "snowflake"
         ],
-        "components": [
-          "kds-team.wr-oracle-custom"
-        ],
-        "features": null
+        "components": null,
+        "features": ["csas-templates"]
       },
       "path": "csas-template-merge",
       "categories": [
@@ -2563,10 +2561,8 @@
         "backends": [
           "snowflake"
         ],
-        "components": [
-          "kds-team.wr-oracle-custom"
-        ],
-        "features": null
+        "components": null,
+        "features": ["csas-templates"]
       },
       "path": "csas-template-scd",
       "categories": [
