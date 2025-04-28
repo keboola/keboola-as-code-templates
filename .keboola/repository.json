@@ -929,9 +929,7 @@
           "keboola.wr-google-bigquery-v2",
           "keboola.wr-db-pgsql"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "keboola-marketingchannels",
       "categories": [
@@ -955,23 +953,6 @@
             "keboola.data-apps"
           ],
           "path": "v3"
-        },
-        {
-          "version": "4.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-bing-ads",
-            "leochan.ex-linkedin",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "<keboola.wr-snowflake>",
-            "keboola.wr-db-pgsql",
-            "keboola.data-apps"
-          ],
-          "path": "v4"
         }
       ]
     },
@@ -2064,9 +2045,7 @@
         "components": [
           "kds-team.ex-shopify"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "snowpark-streamlit",
       "categories": [
@@ -2109,9 +2088,7 @@
           "snowflake",
           "bigquery"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Data Apps"
@@ -2148,9 +2125,7 @@
           "kds-team.app-generative-ai",
           "kds-team.wr-twilio"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "ai-campaign-executer",
       "categories": [
@@ -2199,9 +2174,7 @@
           "kds-team.ex-shopify",
           "kds-team.wr-generic"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "interactive-kpi-report",
       "categories": [
@@ -2252,9 +2225,7 @@
           "kds-team.ex-tiktok-ads",
           "leochan.ex-linkedin"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Data Apps",
@@ -2307,9 +2278,7 @@
           "keboola.ex-google-analytics-v4",
           "keboola.ex-google-bigquery-v2"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "ua-and-ga4-comparison",
       "categories": [
@@ -2354,9 +2323,7 @@
         "backends": [
           "snowflake"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Data Apps",
@@ -2389,9 +2356,7 @@
         "backends": [
           "snowflake"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "kai-sql-bot",
       "categories": [
@@ -2432,9 +2397,7 @@
           "kds-team.ex-confluence",
           "kds-team.wr-pinecone"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Artificial Intelligence",
@@ -2599,9 +2562,7 @@
           "snowflake",
           "bigquery"
         ],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "keboola-data-editor",
       "categories": [
@@ -2638,9 +2599,7 @@
           "bigquery"
         ],
         "components": null,
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "hello-world",
       "categories": [
@@ -2712,9 +2671,7 @@
       "description": "Generate responses for reviews on different platforms.",
       "deprecated": true,
       "requirements": {
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Data Apps",
@@ -2748,9 +2705,7 @@
       "deprecated": true,
       "requirements": {
         "backends": [],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Data Apps",
@@ -2782,9 +2737,7 @@
       "deprecated": false,
       "requirements": {
         "backends": [],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "path": "resume-analyzer",
       "categories": [
@@ -2821,9 +2774,7 @@
       "deprecated": true,
       "requirements": {
         "backends": [],
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": null
       },
       "categories": [
         "Data Apps",
