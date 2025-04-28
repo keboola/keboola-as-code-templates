@@ -1,1 +1,0 @@
-This flow is used for first deployment of the Interactive Keboola Sheets App.
