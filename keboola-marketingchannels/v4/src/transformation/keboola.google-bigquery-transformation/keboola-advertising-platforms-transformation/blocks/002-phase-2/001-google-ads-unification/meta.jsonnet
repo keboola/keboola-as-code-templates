@@ -1,3 +1,0 @@
-{
-  name: "Google Ads Unification",
-}
