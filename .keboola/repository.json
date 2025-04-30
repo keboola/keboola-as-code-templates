@@ -520,19 +520,6 @@
       ],
       "versions": [
         {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-pipedrive",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "<keboola.wr-snowflake>",
-            "keboola.wr-db-pgsql"
-          ],
-          "path": "v0"
-        },
-        {
           "version": "2.0.0",
           "description": "",
           "stable": false,
@@ -567,19 +554,6 @@
         "CRM"
       ],
       "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-salesforce-v2",
-            "keboola.wr-google-sheets",
-            "keboola.wr-google-bigquery-v2",
-            "<keboola.wr-snowflake>",
-            "keboola.wr-db-pgsql"
-          ],
-          "path": "v0"
-        },
         {
           "version": "2.0.0",
           "description": "",
