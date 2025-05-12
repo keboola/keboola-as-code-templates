@@ -1,0 +1,3 @@
+{
+  name: "Storage Inputs & Outputs",
+}

@@ -1,0 +1,3 @@
+{
+  name: "Opportunity & auxiliary snapshot",
+}

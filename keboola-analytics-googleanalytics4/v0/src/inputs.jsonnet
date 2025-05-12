@@ -42,6 +42,7 @@ local postgresql = import "/<common>/out-googleanalytics4-postgresql/src/inputs.
           icon: "component:keboola.snowflake-transformation",
           name: "Snowflake SQL",
           description: "Transformation",
+          backend: "snowflake",
           inputs: [],
         },
       ]

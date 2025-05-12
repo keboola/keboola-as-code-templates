@@ -1,0 +1,1 @@
+Combine budget plans and actual expenditures from various campaigns across different platforms using interactive Data App. This app allows you to monitor campaign spending effortlessly and filter expenses by clients. Moreover, you can conveniently adjust the budget allocated for each campaign, ensuring optimal resource allocation and enhanced campaign performance.

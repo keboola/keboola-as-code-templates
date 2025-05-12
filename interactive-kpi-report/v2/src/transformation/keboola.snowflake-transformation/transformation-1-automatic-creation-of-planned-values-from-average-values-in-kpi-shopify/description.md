@@ -1,0 +1,1 @@
+This transformation replaces the planned monthly values with averages. To customize the monthly plans, disable this transformation in the flow and insert your own table with monthly plans using the same structure.
