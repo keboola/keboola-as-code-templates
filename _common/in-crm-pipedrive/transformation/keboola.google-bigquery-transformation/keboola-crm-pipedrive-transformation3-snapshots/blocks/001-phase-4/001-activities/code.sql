@@ -5,7 +5,7 @@ CREATE TABLE `out_activity` (
   `contact_id` STRING(2000),
   `opportunity_id` STRING(2000),
   `activity` STRING(2000),
-  `activity_date` DATETIME,
+  `activity_date` TIMESTAMP,
   `activity_duration_m` STRING(255)
 );
 
@@ -16,7 +16,7 @@ SELECT
   COALESCE(`c`.`contact_id`, '0') AS `contact_id`,
   COALESCE(`o`.`opportunity_id`, '0') AS `opportunity_id`,
   IF(LENGTH(`a`.`subject`) > 1028, LEFT(`a`.`subject`, 1025) || '...', `a`.`subject`) AS `activity`,
-  CAST(TO_TIMESTAMP_NTZ(`a`.`due_date`) AS STRING) AS `activity_date`,
+  TIMESTAMP(`a`.`due_date`) AS `activity_date`,
   '' AS `activity_duration_m`
 FROM `activities` AS `a`
 LEFT JOIN `contact` AS `c`

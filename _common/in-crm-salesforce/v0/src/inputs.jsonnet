@@ -5,7 +5,7 @@
     description: "Specify the version of API you want to extract data from.",
     type: "string",
     kind: "input",
-    default: "42.0"
+    default: "52.0"
   },
   {
     id: "ex-salesforce-v2-username",

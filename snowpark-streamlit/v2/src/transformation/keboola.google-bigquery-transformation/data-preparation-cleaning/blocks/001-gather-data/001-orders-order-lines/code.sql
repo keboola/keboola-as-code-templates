@@ -1,19 +1,14 @@
 /* BDM_ORDERS */
-CREATE OR REPLACE TABLE `order_totals` AS
-SELECT
-  O.`id` AS ORDER_ID,
-  O.`total_price` AS ORDER_LINE_PRICE_WITH_TAXES,
-  O.`total_price` - O.`total_tax` AS ORDER_LINE_PRICE_WITHOUT_TAXES,
-  O.`total_tax` AS ORDER_LINE_PRICE_TAXES,
-  AVG(OTL.`rate`) AS ORDER_LINE_TAXES_RATE
-FROM `order` AS O
-LEFT JOIN `order_tax_lines` AS OTL
-  ON O.`id` = OTL.`order_id`
-GROUP BY
-  1,
-  2,
-  3,
-  4;
+CREATE OR REPLACE TABLE `order_totals` AS 
+SELECT 
+  O.`id` AS ORDER_ID, 
+  CAST(O.`total_price` AS FLOAT64) AS ORDER_LINE_PRICE_WITH_TAXES, 
+  CAST(O.`total_price` AS FLOAT64) - CAST(O.`total_tax` AS FLOAT64) AS ORDER_LINE_PRICE_WITHOUT_TAXES, 
+  CAST(O.`total_tax` AS FLOAT64) AS ORDER_LINE_PRICE_TAXES, 
+  AVG(CAST(OTL.rate AS FLOAT64)) AS ORDER_LINE_TAXES_RATE
+FROM `order` AS O 
+LEFT JOIN `order_tax_lines` AS OTL ON O.`id` = OTL.`order_id` 
+GROUP BY 1, 2, 3, 4;
 
 CREATE OR REPLACE TABLE `bdm_orders` AS
 SELECT DISTINCT
@@ -28,15 +23,15 @@ SELECT DISTINCT
   OFU.`tracking_number` AS ORDER_PACKAGE_NUMBER,
   O.`total_weight` AS ORDER_WEIGHT,
   IF(O.`contact_email` = '', NULL, O.`referring_site`) AS REFERER, /* If email is empty it is order made directly by cashier */
-  JSON_EXTRACT(PARSE_URL(O.`referring_site`), '$.host') AS CHANNEL,
+  REGEXP_EXTRACT(O.`referring_site`, r'https?:\/\/([^\/]+)') AS CHANNEL,
   CASE
-    WHEN CONTAINS_SUBSTR(CHANNEL, 'google')
+    WHEN CONTAINS_SUBSTR(O.`referring_site`, 'google')
     THEN 'Google'
-    WHEN CONTAINS_SUBSTR(CHANNEL, 'seznam')
+    WHEN CONTAINS_SUBSTR(O.`referring_site`, 'seznam')
     THEN 'Seznam'
-    WHEN CONTAINS_SUBSTR(CHANNEL, 'facebook')
+    WHEN CONTAINS_SUBSTR(O.`referring_site`, 'facebook')
     THEN 'Facebook'
-    ELSE CHANNEL
+    ELSE REGEXP_EXTRACT(O.`referring_site`, r'https?:\/\/([^\/]+)') 
   END AS SOURCE,
   O.`billing_address__city` AS BILLING_CITY,
   O.`billing_address__country` AS BILLING_COUNTRY,
@@ -47,7 +42,7 @@ SELECT DISTINCT
   CAST('' AS STRING) AS BILLING_TYPE,
   CAST('' AS STRING) AS SHIPPING_TYPE,
   O.`total_price` AS ORDER_TOTAL_PRICE_WITH_TAXES,
-  O.`total_price` - O.`total_tax` AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
+  CAST(O.`total_price` AS FLOAT64) - CAST(O.`total_tax` AS FLOAT64) AS ORDER_TOTAL_PRICE_WITHOUT_TAXES,
   O.`total_tax` AS ORDER_TOTAL_PRICE_TAXES,
   CAST('' AS STRING) AS CUSTOMER_ID,
   CAST('' AS STRING) AS CUSTOMER_REGULARITY_TYPE,
@@ -66,20 +61,20 @@ SELECT
   LI.`name` AS ITEMNAME,
   '' AS ORDER_ITEM_TYPE,
   ODA.`value` AS DISCOUNT_PERCENT,
-  CASE WHEN LI.`quantity` = '' THEN 0 ELSE LI.`quantity` END AS ORDER_LINE_AMOUNT,
-  CASE WHEN LI.`price` = '' THEN 0 ELSE LI.`price` END AS ORDER_LINE_PRICE_WITH_TAXES,
+  CASE WHEN LI.`quantity` = '' THEN 0 ELSE CAST(LI.`quantity` AS FLOAT64) END AS ORDER_LINE_AMOUNT,
+  CASE WHEN LI.`price` = '' THEN 0 ELSE CAST(LI.`price` AS FLOAT64) END AS ORDER_LINE_PRICE_WITH_TAXES,
   CASE
     WHEN LI.`price` = '' AND LITL.`price` = ''
     THEN 0
     WHEN LI.`price` <> '' AND LITL.`price` = ''
-    THEN LI.`price`
+    THEN CAST(LI.`price` AS FLOAT64)
     WHEN LI.`price` = '' AND LITL.`price` <> ''
-    THEN -LITL.`price`
-    ELSE LI.`price` - LITL.`price`
+    THEN -CAST(LITL.`price` AS FLOAT64)
+    ELSE CAST(LI.`price` AS FLOAT64) - CAST(LITL.`price` AS FLOAT64)
   END AS ORDER_LINE_PRICE_WITHOUT_TAXES,
-  CASE WHEN LITL.`price` = '' THEN 0 ELSE LITL.`price` END AS ORDER_LINE_PRICE_TAXES,
-  CASE WHEN LITL.`rate` = '' THEN 0 ELSE LITL.`rate` END AS ORDER_LINE_TAXES_RATE,
-  CASE WHEN II.`cost` = '' THEN 0 ELSE II.`cost` END AS LINE_PURCHASE_PRICE
+  CASE WHEN LITL.`price` = '' THEN 0 ELSE CAST(LITL.`price` AS FLOAT64) END AS ORDER_LINE_PRICE_TAXES,
+  CASE WHEN LITL.`rate` = '' THEN 0 ELSE CAST(LITL.`rate` AS FLOAT64) END AS ORDER_LINE_TAXES_RATE,
+  CASE WHEN II.`cost` = '' THEN 0 ELSE CAST(II.`cost` AS FLOAT64) END AS LINE_PURCHASE_PRICE
 FROM `line_item` AS LI
 LEFT JOIN `order` AS O
   ON O.`id` = LI.`order_id`
@@ -95,12 +90,16 @@ LEFT JOIN `inventory_items` AS II
 /* - Get billing and shipping details */
 CREATE OR REPLACE TABLE `bdm_shipping_type` AS
 SELECT
-  ROW_NUMBER() OVER (ORDER BY NAME NULLS LAST) AS SHIPPING_TYPE_ID,
+  ROW_NUMBER() OVER (PARTITION BY NAME) AS SHIPPING_TYPE_ID,
   NAME
 FROM (
-  SELECT DISTINCT
-    SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS NAME
-  FROM `order`
+	SELECT DISTINCT
+  IF(
+    REGEXP_CONTAINS(`shipping_lines`, r"'code': '"),
+    SPLIT(`shipping_lines`, "'code': '")[SAFE_OFFSET(1)],
+    'Unknown'
+  ) AS NAME
+	FROM `order`
 ) AS t;
 
 /* payment_details__credit_card_company is mostly unavailable - we are still working on this part of template.
@@ -134,17 +133,18 @@ SELECT
   'Billing Types not specified' AS NAME;
 
 /* - assign shipping, billing to order level */
-CREATE TABLE `order_billing_types` AS
+CREATE OR REPLACE TABLE `order_billing_types` AS
 SELECT DISTINCT
   `id` AS ORDER_ID,
   'Specify billing types in payment_details__credit_card_company' AS BILLING_TYPE
 FROM `order`;
 
-CREATE TABLE `order_shipping_types` AS
+CREATE OR REPLACE TABLE `order_shipping_types` AS
 SELECT DISTINCT
   `id` AS ORDER_ID,
-  SPLIT_PART(SPLIT_PART(`shipping_lines`, '\'code\': \'', 2), '\', \'delivery_category', 1) AS SHIPPING_TYPE
+  IFNULL(SPLIT(shipping_lines, "'code': '")[SAFE_OFFSET(1)], 'Unknown') AS SHIPPING_TYPE
 FROM `order`;
+
 
 UPDATE `bdm_orders` AS O SET O.SHIPPING_TYPE = ST.SHIPPING_TYPE
 FROM `order_shipping_types` AS ST
