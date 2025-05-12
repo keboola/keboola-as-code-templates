@@ -434,10 +434,9 @@
       "id": "social-media-engagement-template",
       "name": "Social Media Engagement",
       "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
-      "requirements": {
-        "backends": [
-          "snowflake"
-        ],
+      "requirements":
+        {
+        "backends": ["snowflake","bigquery"],
         "components": [
           "keboola.ex-facebook",
           "keboola.ex-instagram",
