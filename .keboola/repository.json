@@ -2517,6 +2517,9 @@
         "components": ["kds-team.app-custom-python"],
         "features": null
       },
+      "categories": [
+        "BQ Tablemaker"
+      ],
       "path": "keboola-bq-timepartioned-table",
       "versions": [
         {
