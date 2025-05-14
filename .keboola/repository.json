@@ -2508,6 +2508,28 @@
           ]
         }
       ]
+    },
+    {
+      "id": "keboola-bq-timepartioned-table",
+      "name": "Create BQ Time Partitioned Table",
+      "description": "Create a BigQuery backend table with time partitioning.",
+      "requirements": {
+        "backends": ["bigquery"],
+        "components": ["kds-team.app-custom-python"],
+        "features": null
+      },
+      "path": "keboola-bq-timepartioned-table",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.app-custom-python"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
