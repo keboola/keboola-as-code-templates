@@ -1,0 +1,1 @@
+Creates a time partitioned table for BigQuery backend projects. The created table must only contain Primary Key column (not nullable), and the colmnn that will be used for time partitioning (DATE or TIMESTAMP). After creation, new columns can be added and values inserted. 
