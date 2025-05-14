@@ -154,7 +154,7 @@
       "deprecated": true,
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "kds-team.ex-shopify",
@@ -170,20 +170,6 @@
         "ThoughtSpot"
       ],
       "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-shopify",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-sklik",
-            "keboola.wr-thoughtspot",
-            "keboola.wr-google-bigquery-v2",
-            "<keboola.wr-snowflake>"
-          ]
-        },
         {
           "version": "2.0.0",
           "description": "",
@@ -273,7 +259,7 @@
       "description": "Let's check the aggregations of Shopify DEMO DATA and see actionable insights for inventory optimization, product category performance, measurement of sales campaign effectiveness.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "kds-team.ex-shopify",
@@ -287,19 +273,6 @@
         "Tutorials"
       ],
       "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-shopify",
-            "keboola.ex-facebook-ads",
-            "keboola.ex-google-ads",
-            "keboola.ex-sklik",
-            "<keboola.wr-snowflake>"
-          ],
-          "path": "v1"
-        },
         {
           "version": "2.0.0",
           "description": "",
@@ -395,10 +368,9 @@
       "id": "social-media-engagement-template",
       "name": "Social Media Engagement",
       "description": "Get your aggregated engagement data about your posts and your pages from different social networks.",
-      "requirements": {
-        "backends": [
-          "snowflake"
-        ],
+      "requirements":
+        {
+        "backends": ["snowflake","bigquery"],
         "components": [
           "keboola.ex-facebook",
           "keboola.ex-instagram",
@@ -431,23 +403,6 @@
             "kds-team.ex-linkedin-pages"
           ],
           "path": "v1"
-        },
-        {
-          "version": "3.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.ex-facebook",
-            "keboola.ex-instagram",
-            "keboola.ex-youtube",
-            "keboola.wr-db-mysql",
-            "keboola.wr-db-pgsql",
-            "keboola.wr-google-sheets",
-            "<keboola.wr-snowflake>",
-            "keboola.wr-google-bigquery-v2",
-            "kds-team.ex-linkedin-pages"
-          ],
-          "path": "v3"
         }
       ]
     },
@@ -471,19 +426,6 @@
         "CRM"
       ],
       "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "kds-team.ex-hubspot-crm",
-            "keboola.wr-google-bigquery-v2",
-            "keboola.wr-google-sheets",
-            "<keboola.wr-snowflake>",
-            "keboola.wr-db-pgsql"
-          ],
-          "path": "v0"
-        },
         {
           "version": "2.0.0",
           "description": "",
@@ -2104,7 +2046,7 @@
       "description": "Download and integrate data from Universal Analytics, Google Analytics 4 API, and Google Analytics raw data in BigQuery and compare these data in data app.",
       "requirements": {
         "backends": [
-          "snowflake"
+          "snowflake", "bigquery"
         ],
         "components": [
           "keboola.ex-google-analytics-v4",
@@ -2118,19 +2060,6 @@
         "Marketing"
       ],
       "versions": [
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.data-apps",
-            "keboola.ex-google-analytics-v4",
-            "keboola.ex-google-analytics-v4",
-            "keboola.ex-google-bigquery-v2",
-            "keboola.snowflake-transformation"
-          ],
-          "path": "v0"
-        },
         {
           "version": "2.0.0",
           "description": "",
@@ -2414,15 +2343,6 @@
             "keboola.data-apps"
           ],
           "path": "v0"
-        },
-        {
-          "version": "1.0.0",
-          "description": "",
-          "stable": false,
-          "components": [
-            "keboola.data-apps"
-          ],
-          "path": "v1"
         }
       ]
     },
@@ -2585,6 +2505,28 @@
           "components": [
             "keboola.data-apps"
           ]
+        }
+      ]
+    },
+    {
+      "id": "keboola-bq-timepartioned-table",
+      "name": "Create BQ Time Partitioned Table",
+      "description": "Create a BigQuery backend table with time partitioning.",
+      "requirements": {
+        "backends": ["bigquery"],
+        "components": ["kds-team.app-custom-python"],
+        "features": null
+      },
+      "path": "keboola-bq-timepartioned-table",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "kds-team.app-custom-python"
+          ],
+          "path": "v0"
         }
       ]
     }

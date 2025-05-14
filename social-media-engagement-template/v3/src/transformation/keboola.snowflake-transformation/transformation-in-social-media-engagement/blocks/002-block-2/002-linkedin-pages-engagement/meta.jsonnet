@@ -1,3 +1,0 @@
-{
-  name: "LinkedIn Pages Engagement",
-}
