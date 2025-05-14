@@ -2,6 +2,7 @@
 .idea
 .DS_Store
 .gitkeep
+.github/workflows/*
 
 # Environment
 .env
