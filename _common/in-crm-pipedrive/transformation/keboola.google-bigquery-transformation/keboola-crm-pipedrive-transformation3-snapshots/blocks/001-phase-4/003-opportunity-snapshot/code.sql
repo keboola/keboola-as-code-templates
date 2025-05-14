@@ -58,24 +58,24 @@ CREATE TABLE `out_opportunity_snapshot` (
 INSERT INTO `out_opportunity_snapshot`
 SELECT
   `s`.`opportunity_id`,
-  `s`.`snapshot_date`,
+	CAST(`s`.`snapshot_date` AS DATE) as `snapshot_date`,
   `s`.`employee_id`,
   `s`.`company_id`,
   `s`.`pipeline`,
   `s`.`previous_pipeline`,
   IF(`s`.`pipeline` <> `s`.`previous_pipeline`, 'Yes', 'No') AS `pipeline_change`,
   `s`.`stage`,
-  `s`.`stage_order`,
+	CAST(`s`.`stage_order` AS INT64) AS `stage_order`,
   `s`.`previous_stage`,
-  `s`.`previous_stage_order`,
+	CAST(`s`.`previous_stage_order` AS INT64) AS `previous_stage_order`,
   IF(`s`.`stage` <> `s`.`previous_stage`, 'Yes', 'No') AS `stage_change`,
-  `s`.`opportunity_value`,
-  `s`.`previous_opportunity_value`,
+  CAST(`s`.`opportunity_value` AS FLOAT64) AS `opportunity_value`,
+  CAST(`s`.`previous_opportunity_value` AS FLOAT64) AS `previous_opportunity_value`,
   IF(`s`.`opportunity_value` <> `s`.`previous_opportunity_value`, 'Yes', 'No') AS `opportunity_value_change`,
-  `s`.`probability`,
-  `s`.`previous_probability`,
+  CAST(`s`.`probability` AS FLOAT64) AS `probability`,
+  CAST(`s`.`previous_probability` AS FLOAT64) AS `previous_probability`,
   IF(`s`.`probability` <> `s`.`previous_probability`, 'Yes', 'No') AS `probability_change`,
-  IF(`m`.`max_date_in_month` IS NULL, 'false', 'true') AS `max_date_in_month`
+  CAST(IF(`m`.`max_date_in_month` IS NULL, 'false', 'true') AS BOOL) AS `max_date_in_month`
 FROM `opportunity_snapshot_tmp` AS `s`
 LEFT JOIN (
   SELECT
