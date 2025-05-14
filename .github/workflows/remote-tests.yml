@@ -1,66 +1,137 @@
-# name: "Remote tests"
-# on:
-  # pull_request:
-  # schedule:
+name: "Remote tests"
+on:
+  pull_request:
+  schedule:
     # Run every 3 days at 00:00 UTC
-    # - cron: '0 0 */3 * *'
-  # workflow_call:
-# 
-# jobs:
-  # remote-tests:
+    - cron: '0 0 */3 * *'
+  workflow_call:
+
+jobs:
+  remote-tests:
     # Only run scheduled jobs on dev/beta/main branches
-    # if: github.event_name != 'schedule' || (github.event_name == 'schedule' && (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/main'))
-    # name: remote tests
-    # runs-on: ubuntu-latest
-    # steps:
-      # Checkout repository
-      # - name: Checkout code
-        # uses: actions/checkout@v4
-# 
-      # - name: Download keboola CLI
-        # id: kbc_download_latest_release
-        # uses: robinraju/release-downloader@v1.11
-        # with:
-          # repository: 'keboola/keboola-as-code'
-          # latest: true
-          # fileName: '*_linux_amd64.zip'
-# 
-      # - name: Install keboola CLI
-        # run: |
-          # mkdir "${{ runner.temp }}/kbc"
-          # latest_tag=${{steps.kbc_download_latest_release.outputs.tag_name}}
-          # latest_version=${latest_tag:1}
-          # 
-          # release_zip="keboola-cli_${latest_version}_linux_amd64.zip"
-          # if [ ! -f "$release_zip" ]; then
-          # echo "Could not download keboola-cli_${latest_version}_linux_amd64.zip from the latest release."
-          # exit 1
-          # fi
-          # 
+    if: github.event_name != 'schedule' || (github.event_name == 'schedule' && (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/main'))
+    name: remote tests
+    runs-on: ubuntu-latest
+    steps:
+          # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download keboola CLI
+        id: kbc_download_latest_release
+        uses: robinraju/release-downloader@v1.11
+        with:
+          repository: 'keboola/keboola-as-code'
+          latest: true
+          fileName: '*_linux_amd64.zip'
+
+      - name: Install keboola CLI
+        run: |
+          mkdir "${{ runner.temp }}/kbc"
+          latest_tag=${{steps.kbc_download_latest_release.outputs.tag_name}}
+          latest_version=${latest_tag:1}
+          
+          release_zip="keboola-cli_${latest_version}_linux_amd64.zip"
+          if [ ! -f "$release_zip" ]; then
+          echo "Could not download keboola-cli_${latest_version}_linux_amd64.zip from the latest release."
+          exit 1
+          fi
+          
           # Unzip the CLI binary
-          # release_bin="/usr/local/bin/kbc"
-          # unzip "$release_zip" -d /usr/local/bin
-          # chmod +x "$release_bin"
-          # echo "Keboola as Code CLI installed: $release_bin"
-          # kbc --version
-        # shell: bash
-# 
-      # - name: Set TEST_KBC_PROJECTS_FILE entries
-        # uses: ./.github/actions/export-kbc-projects
-        # with:
-          # secrets: ${{ toJSON(secrets) }}
-# 
-      # - name: Run tests
-        # run: |
-          # set -eo pipefail
-          # kbc template test run --remote-only
-        # shell: bash
-        # env:
-          # TEST_KBC_PROJECTS_FILE: '${{ github.workspace }}/${{ vars.TEST_KBC_PROJECTS_FILE }}'
-          # KBC_SECRET_TOKEN: ${{ secrets.KBC_SECRET_TOKEN }}
-          # KBC_SECRET_BIGQUERY_PRIVATE_KEY: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY }}
-          # KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID }}
-          # KBC_SECRET_POSTGRES_PASSWORD: ${{ secrets.KBC_SECRET_POSTGRES_PASSWORD }}
-          # KBC_SECRET_POSTGRES_DB_USER: ${{ secrets.KBC_SECRET_POSTGRES_DB_USER }}
-          # KBC_SECRET_SNOWFLAKE_PASSWORD: ${{ secrets.KBC_SECRET_SNOWFLAKE_PASSWORD }}
-          # KBC_SECRET_SNOWFLAKE_DB_USER: ${{ secrets.KBC_SECRET_SNOWFLAKE_DB_USER }} 
+          release_bin="/usr/local/bin/kbc"
+          unzip "$release_zip" -d /usr/local/bin
+          chmod +x "$release_bin"
+          echo "Keboola as Code CLI installed: $release_bin"
+          kbc --version
+        shell: bash
+
+      - name: Set TEST_KBC_PROJECTS_FILE entries
+        uses: ./.github/actions/export-kbc-projects
+        with:
+          secrets: ${{ toJSON(secrets) }}
+
+      - name: Run tests
+        run: |
+          set -eo pipefail
+
+          # Create logs directory
+          mkdir -p logs
+
+          # Run template tests in parallel and redirect output to log files
+          kbc template test run --remote-only ai-campaign-executer > logs/ai-campaign-executer.log 2>&1 &
+          kbc template test run --remote-only confluence-chatbot > logs/confluence-chatbot.log 2>&1 &
+          kbc template test run --remote-only csas-template-merge > logs/csas-template-merge.log 2>&1 &
+          kbc template test run --remote-only csas-template-scd > logs/csas-template-scd.log 2>&1 &
+          kbc template test run --remote-only data-quality > logs/data-quality.log 2>&1 &
+          kbc template test run --remote-only hello-world > logs/hello-world.log 2>&1 &
+          kbc template test run --remote-only interactive-keboola-sheets > logs/interactive-keboola-sheets.log 2>&1 &
+          kbc template test run --remote-only interactive-kpi-report > logs/interactive-kpi-report.log 2>&1 &
+          kbc template test run --remote-only kai-promptlab > logs/kai-promptlab.log 2>&1 &
+          kbc template test run --remote-only kai-sql-bot > logs/kai-sql-bot.log 2>&1 &
+          kbc template test run --remote-only keboola-analytics-googleanalytics4 > logs/keboola-analytics-googleanalytics4.log 2>&1 &
+          kbc template test run --remote-only keboola-analytics-universalanalytics > logs/keboola-analytics-universalanalytics.log 2>&1 &
+          kbc template test run --remote-only keboola-crm-hubspot > logs/keboola-crm-hubspot.log 2>&1 &
+          kbc template test run --remote-only keboola-crm-pipedrive > logs/keboola-crm-pipedrive.log 2>&1 &
+          kbc template test run --remote-only keboola-crm-salesforce > logs/keboola-crm-salesforce.log 2>&1 &
+          kbc template test run --remote-only keboola-data-editor > logs/keboola-data-editor.log 2>&1 &
+          kbc template test run --remote-only keboola-dbt-tutorial > logs/keboola-dbt-tutorial.log 2>&1 &
+          kbc template test run --remote-only keboola-ecommerce > logs/keboola-ecommerce.log 2>&1 &
+          kbc template test run --remote-only keboola-ecommerce-shopify > logs/keboola-ecommerce-shopify.log 2>&1 &
+          kbc template test run --remote-only keboola-git-github > logs/keboola-git-github.log 2>&1 &
+          kbc template test run --remote-only keboola-mailchimp > logs/keboola-mailchimp.log 2>&1 &
+          kbc template test run --remote-only keboola-marketingchannels > logs/keboola-marketingchannels.log 2>&1 &
+          kbc template test run --remote-only keboola-metadata-to-datahub > logs/keboola-metadata-to-datahub.log 2>&1 &
+          kbc template test run --remote-only keboola-mgmt-asana > logs/keboola-mgmt-asana.log 2>&1 &
+          kbc template test run --remote-only keboola-mgmt-jira > logs/keboola-mgmt-jira.log 2>&1 &
+          kbc template test run --remote-only keboola-typeform > logs/keboola-typeform.log 2>&1 &
+          kbc template test run --remote-only marketing-cashflow > logs/marketing-cashflow.log 2>&1 &
+          kbc template test run --remote-only newsletters-data-app > logs/newsletters-data-app.log 2>&1 &
+          kbc template test run --remote-only resume-analyzer > logs/resume-analyzer.log 2>&1 &
+          kbc template test run --remote-only review-app-template > logs/review-app-template.log 2>&1 &
+          kbc template test run --remote-only rlhf-data-app > logs/rlhf-data-app.log 2>&1 &
+          kbc template test run --remote-only snowflake-security-checkup > logs/snowflake-security-checkup.log 2>&1 &
+          kbc template test run --remote-only snowflake-virtual-hands-on-lab > logs/snowflake-virtual-hands-on-lab.log 2>&1 &
+          kbc template test run --remote-only snowpark-streamlit > logs/snowpark-streamlit.log 2>&1 &
+          kbc template test run --remote-only social-media-engagement-template > logs/social-media-engagement-template.log 2>&1 &
+          kbc template test run --remote-only thoughtspot-analytics-googleanalytics > logs/thoughtspot-analytics-googleanalytics.log 2>&1 &
+          kbc template test run --remote-only thoughtspot-crm-hubspot > logs/thoughtspot-crm-hubspot.log 2>&1 &
+          kbc template test run --remote-only thoughtspot-ecommerce-shopify > logs/thoughtspot-ecommerce-shopify.log 2>&1 &
+          kbc template test run --remote-only ua-and-ga4-comparison > logs/ua-and-ga4-comparison.log 2>&1 &
+
+          # Wait for all background jobs to complete
+          wait
+
+          # Create a summary of test results
+          echo "Test Results Summary:" > logs/summary.log
+          for log in logs/*.log; do
+            if [ "$log" != "logs/summary.log" ]; then
+              template_name=$(basename "$log" .log)
+              error_output=$(grep -A 5 "Error:" "$log" || true)
+              if [ -n "$error_output" ]; then
+                echo "❌ $template_name: Failed" >> logs/summary.log
+                echo "--- Error details ---" >> logs/summary.log
+                echo "$error_output" >> logs/summary.log
+                echo "-------------------" >> logs/summary.log
+              else
+                echo "✅ $template_name: Passed" >> logs/summary.log
+              fi
+            fi
+          done
+        shell: bash
+        env:
+          TEST_KBC_PROJECTS_FILE: '${{ github.workspace }}/${{ vars.TEST_KBC_PROJECTS_FILE }}'
+          KBC_SECRET_TOKEN: ${{ secrets.KBC_SECRET_TOKEN }}
+          KBC_SECRET_BIGQUERY_PRIVATE_KEY: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY }}
+          KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID: ${{ secrets.KBC_SECRET_BIGQUERY_PRIVATE_KEY_ID }}
+          KBC_SECRET_POSTGRES_PASSWORD: ${{ secrets.KBC_SECRET_POSTGRES_PASSWORD }}
+          KBC_SECRET_POSTGRES_DB_USER: ${{ secrets.KBC_SECRET_POSTGRES_DB_USER }}
+          KBC_SECRET_SNOWFLAKE_PASSWORD: ${{ secrets.KBC_SECRET_SNOWFLAKE_PASSWORD }}
+          KBC_SECRET_SNOWFLAKE_DB_USER: ${{ secrets.KBC_SECRET_SNOWFLAKE_DB_USER }} 
+
+      - name: Upload test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs
+          path: logs/
+          retention-days: 14
