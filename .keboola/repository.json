@@ -2541,9 +2541,7 @@
       "requirements": {
         "backends": ["snowflake", "bigquery"],
         "components": null,
-        "features": [
-          "sandboxes-data-apps"
-        ]
+        "features": []
       },
       "categories": ["Data Apps"],
       "path": "duck-db-sql-data-app",
