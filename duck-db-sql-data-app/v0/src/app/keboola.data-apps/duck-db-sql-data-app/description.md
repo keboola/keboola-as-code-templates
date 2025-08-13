@@ -1,0 +1,1 @@
+Set up input mapping before deploying the app.

@@ -2533,6 +2533,31 @@
           "path": "v0"
         }
       ]
+    },
+    {
+      "id": "duck-db-sql-data-app",
+      "name": "DuckDB SQL Data App",
+      "description": "An application providing a workspace to help prepare DuckDB SQL transformations.",
+      "requirements": {
+        "backends": ["snowflake", "bigquery"],
+        "components": null,
+        "features": [
+          "sandboxes-data-apps"
+        ]
+      },
+      "categories": ["Data Apps"],
+      "path": "duck-db-sql-data-app",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps"
+          ],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
