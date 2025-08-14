@@ -2556,6 +2556,32 @@
           "path": "v0"
         }
       ]
+    },
+        {
+      "id": "data-profiling",
+      "name": "Data Profiling",
+      "description": "Analyze data, detect quality issues, and highlight risks to support confident business decisions.",
+      "requirements": {
+        "backends": [
+          "snowflake",
+          "bigquery"
+        ],
+        "components": null,
+        "features": null
+      },
+      "categories": [
+        "Data Quality"
+      ],
+      "path": "data-profiling",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": ["keboola.python-transformation-v2"],
+          "path": "v0"
+        }
+      ]
     }
   ]
 }
