@@ -1,0 +1,6 @@
+{
+  parameters: {
+    tasks: [],
+    phases: [],
+  },
+}
