@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "author": {
+    "name": "Example Author",
+    "url": "https://example.com"
+  },
+  "templates": [
+    {
+      "id": "marketing-dashboard",
+      "name": "Marketing Dashboard",
+      "description": "Use data from your Shoptet, GA4 and Meta Ads to generate a simple, straight forward dashboard",
+      "requirements": {
+        "backends": null,
+        "components": null,
+        "features": null
+      },
+      "path": "marketing-dashboard",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "description": "",
+          "stable": false,
+          "components": [
+            "keboola.data-apps",
+            "keboola.ex-facebook-ads",
+            "keboola.ex-google-analytics-v4",
+            "keboola.orchestrator",
+            "keboola.python-transformation-v2",
+            "kds-team.ex-shoptet-permalink"
+          ],
+          "path": "v0"
+        }
+      ]
+    }
+  ]
+}
