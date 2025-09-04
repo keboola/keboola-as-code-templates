@@ -1,4 +1,4 @@
 {
-  name: "Template_Marketing_metrics",
+  name: "Marketing Metrics Transformation",
   isDisabled: false,
 }

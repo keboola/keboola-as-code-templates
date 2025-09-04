@@ -1,4 +1,4 @@
 {
-  name: "Template_Meta",
+  name: "Meta Ads Costs",
   isDisabled: false,
 }
