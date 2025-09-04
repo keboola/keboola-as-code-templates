@@ -65,7 +65,7 @@
           dialogDescription: "Connect with Google Analytics and sync data from it.",
           inputs: [
             {
-              id: "oauth-googleanalytics",
+              id: "oauth-googleanalytics4",
               name: "Open Authentication",
               description: "Authorization for Google Analytics",
               type: "object",
@@ -74,7 +74,7 @@
               rules: "required",
             },
             {
-              id: "oauth-googleanalytics-profiles",
+              id: "oauth-googleanalytics-profiles4",
               name: "Google Accounts",
               description: "Select accounts for Google Analytics",
               type: "object",
