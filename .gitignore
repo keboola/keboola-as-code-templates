@@ -8,3 +8,4 @@
 .env
 /projects.json
 /inputs.json
+.env.local
