@@ -2540,9 +2540,13 @@
       "description": "Use data from your Shoptet, GA4 and Meta Ads to generate a simple, straight forward dashboard",
       "requirements": {
         "backends": null,
-        "components": null,
-        "features": null
+        "components": null
       },
+      "categories": [
+        "Marketing",
+        "E-commerce",
+        "data apps"
+      ],
       "path": "ads-shoptet-template/marketing-dashboard",
       "versions": [
         {
