@@ -2,7 +2,7 @@
   parameters: {
     base_url: Input("ex-shoptet-permalink-base-url"),
     additional_data: [],
-    customers_url: Input("ex-shoptet-permalink-customers-url"),
+    customers_url: "",
     stock_url: "",
     delimiter: ";",
     src_charset: "windows-1250",
