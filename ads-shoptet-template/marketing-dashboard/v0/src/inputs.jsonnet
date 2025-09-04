@@ -181,7 +181,6 @@
           icon: "component:keboola.python-transformation-v2",
           name: "Python",
           description: "Transformation",
-          backend: "python",
           inputs: [],
         },
       ],
