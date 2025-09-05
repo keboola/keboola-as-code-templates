@@ -2546,12 +2546,12 @@
       "categories": [
         "Marketing",
         "E-commerce",
-        "data apps"
+        "Data Apps"
       ],
       "path": "ads-shoptet-template/marketing-dashboard",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [

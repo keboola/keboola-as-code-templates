@@ -1,4 +1,4 @@
 {
-  name: "Marketing Dashboard",
+  name: "Shoptet Ads & Sales Performance Dashboard",
   isDisabled: false,
 }

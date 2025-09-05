@@ -1,4 +1,4 @@
 {
-  name: "Template_GA",
+  name: "Google Ads Costs",
   isDisabled: false,
 }

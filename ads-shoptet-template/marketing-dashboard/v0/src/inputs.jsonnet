@@ -65,7 +65,7 @@
           dialogDescription: "Connect with Google Analytics and sync data from it.",
           inputs: [
             {
-              id: "oauth-googleanalytics",
+              id: "oauth-googleanalytics4",
               name: "Open Authentication",
               description: "Authorization for Google Analytics",
               type: "object",
@@ -74,12 +74,12 @@
               rules: "required",
             },
             {
-              id: "oauth-googleanalytics-profiles",
+              id: "oauth-googleanalytics-profiles4",
               name: "Google Accounts",
               description: "Select accounts for Google Analytics",
               type: "object",
               kind: "oauthAccounts",
-              oauthInputId: "oauth-googleanalytics",
+              oauthInputId: "oauth-googleanalytics4",
               rules: "required",
             },
             {
@@ -193,8 +193,8 @@
           icon: "component:keboola.data-apps",
           name: "Data App",
           description: "Configure Data App",
-          dialogName: "Marketing Dashboard",
-          dialogDescription: "Launch the marketing dashboard app.",
+          dialogName: "Shoptet Ads & Sales Performance Dashboard",
+          dialogDescription: "Launch the Shoptet Ads & Sales Performance dashboard.",
           inputs: [],
         },
       ],

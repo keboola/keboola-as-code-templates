@@ -1,4 +1,4 @@
 {
-  name: "Template_Shoptet",
+  name: "Shoptet Orders & Products",
   isDisabled: false,
 }
