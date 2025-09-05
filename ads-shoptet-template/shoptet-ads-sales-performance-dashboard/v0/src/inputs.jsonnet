@@ -79,7 +79,7 @@
               description: "Select accounts for Google Analytics",
               type: "object",
               kind: "oauthAccounts",
-              oauthInputId: "oauth-googleanalytics",
+              oauthInputId: "oauth-googleanalytics4",
               rules: "required",
             },
             {
