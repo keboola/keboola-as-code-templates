@@ -1,23 +1,23 @@
 {
   "version": 2,
   "author": {
-    "name": "Example Author",
-    "url": "https://example.com"
+    "name": "Keboola",
+    "url": "https://keboola.com"
   },
   "templates": [
     {
-      "id": "marketing-dashboard",
-      "name": "Marketing Dashboard",
+      "id": "shoptet-ads-sales-performance-dashboard",
+      "name": "Shoptet Ads & Sales Performance Dashboard",
       "description": "Use data from your Shoptet, GA4 and Meta Ads to generate a simple, straight forward dashboard",
       "requirements": {
         "backends": null,
         "components": null,
         "features": null
       },
-      "path": "marketing-dashboard",
+      "path": "shoptet-ads-sales-performance-dashboard",
       "versions": [
         {
-          "version": "0.0.1",
+          "version": "1.0.0",
           "description": "",
           "stable": false,
           "components": [
