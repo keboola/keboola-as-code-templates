@@ -2551,7 +2551,7 @@
       "path": "ads-shoptet-template/marketing-dashboard",
       "versions": [
         {
-          "version": "1.0.0",
+          "version": "0.0.1",
           "description": "",
           "stable": false,
           "components": [
