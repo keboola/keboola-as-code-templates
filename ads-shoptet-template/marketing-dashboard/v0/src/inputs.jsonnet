@@ -193,7 +193,7 @@
           icon: "component:keboola.data-apps",
           name: "Data App",
           description: "Configure Data App",
-          dialogName: "Shoptet Ads & Sales Performance Dashboard",
+          dialogName: "Ads & Sales dashboard",
           dialogDescription: "Launch the Shoptet Ads & Sales Performance dashboard.",
           inputs: [],
         },

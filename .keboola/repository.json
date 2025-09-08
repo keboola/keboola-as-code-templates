@@ -2536,7 +2536,7 @@
     },
     {
       "id": "marketing-dashboard",
-      "name": "Marketing Dashboard",
+      "name": "Shoptet Ads & Sales Dashboard",
       "description": "Use data from your Shoptet, GA4 and Meta Ads to generate a simple, straight forward dashboard",
       "requirements": {
         "backends": null,
@@ -2551,7 +2551,7 @@
       "path": "ads-shoptet-template/marketing-dashboard",
       "versions": [
         {
-          "version": "1.0.0",
+          "version": "0.0.1",
           "description": "",
           "stable": false,
           "components": [
