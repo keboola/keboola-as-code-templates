@@ -13,7 +13,6 @@
         entrypoint: "app.py",
       },
     },
-    id: "31996171",
   },
   authorization: {
     app_proxy: {

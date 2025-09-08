@@ -3,7 +3,6 @@
     oauth_api: Input("oauth-facebookads"),
   },
   parameters: Input("oauth-facebookads-accounts") + {
-    accounts: {},
     "api-version": "v22.0",
     queries: [
       {
